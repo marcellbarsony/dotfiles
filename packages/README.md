@@ -5,5 +5,5 @@ pacman -Q
 
 List explicitly installed packages
 ```  
-  $ pacman -Qe
+pacman -Qe
 ```
