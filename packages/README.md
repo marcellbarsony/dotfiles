@@ -1,7 +1,9 @@
 List installed packages
-  
-  $ pacman -Q
+```
+pacman -Q
+```
 
 List explicitly installed packages
-  
+```  
   $ pacman -Qe
+```
