@@ -15,8 +15,13 @@ Linux dotfiles
 ```
 /etc/systemd/logind.conf
 ```
+
 **Polybar**
 ```
 ~/.config/polybar/config
 ```
 
+**Picom**
+```
+/etc/xdg/picom.conf
+```
