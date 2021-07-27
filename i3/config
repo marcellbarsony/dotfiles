@@ -239,6 +239,7 @@ exec $virtualbox
 exec spotify
 exec $note
 exec $code
-exec compton
+exec picom
 
 ###---Monitors---###
+
