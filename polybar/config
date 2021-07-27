@@ -18,7 +18,7 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/example]
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = ${env:MONITOR:}
 width = 100%
 height = 20
 ;offset-x = 1%
@@ -81,7 +81,7 @@ label = %title:0:30:...%
 
 
 [module/xkeyboard]
-type = internal/xkeyboard
+;type = internal/xkeyboard
 blacklist-0 = num lock
 
 format-prefix = "  "
@@ -120,7 +120,7 @@ index-sort = true
 wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
-;pin-workspaces = true
+pin-workspaces = true
 
 ws-icon-0 = 1;
 ws-icon-1 = 2;
@@ -129,11 +129,11 @@ ws-icon-3 = 4;
 ws-icon-4 = 5;
 ws-icon-5 = 6;
 ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-8 = 9;
-ws-icon-9 = 10;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
 
-;icons: https://fontawesome.com/v5/cheatsheet/free/solid
+;icons: https://fontawesome.com/v5/cheatsheet/
 
 label-mode-padding = 2
 label-mode-foreground = #000
@@ -356,18 +356,20 @@ format-charging-margin = ${margin.for-modules}
 format-discharging-margin = ${margin.for-modules}
 format-full-margin = ${margin.for-modules}
 
-format-full-prefix = " "
+format-full-prefix = " "
 
-ramp-capacity-0 = 10
-ramp-capacity-1 = 20
-ramp-capacity-2 = 30
-ramp-capacity-3 = 40
-ramp-capacity-4 = 50
-ramp-capacity-5 = 60
-ramp-capacity-6 = 70
-ramp-capacity-7 = 80
-ramp-capacity-8 = 90
-ramp-capacity-9 = 100
+ramp-capacity-0 = 0  
+ramp-capacity-1 = 1  
+ramp-capacity-2 = 2  
+ramp-capacity-3 = 3 
+ramp-capacity-4 = 4  
+ramp-capacity-5 = 5 
+ramp-capacity-6 = 6 
+ramp-capacity-7 = 7 
+ramp-capacity-8 = 8 
+ramp-capacity-9 = 9 
+ramp-capacity-10 = 10 
+
 
 ramp-capacity-0-foreground = ${colors.adapta-red}
 ramp-capacity-1-foreground = ${colors.adapta-red}
@@ -375,17 +377,15 @@ ramp-capacity-2-foreground = ${colors.adapta-red}
 ramp-capacity-3-foreground = ${colors.adapta-red}
 ramp-capacity-4-foreground = ${colors.adapta-yellow}
 ramp-capacity-5-foreground = ${colors.adapta-yellow}
-ramp-capacity-foreground   = ${colors.fg}
+ramp-capacity-6-foreground = #ff0000
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
-animation-charging-5 = 
-animation-charging-6 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
 animation-charging-foreground = ${colors.fg}
-animation-charging-framerate = 750
+animation-charging-framerate = 1000
 
 [module/temperature]
 type = internal/temperature
@@ -438,3 +438,67 @@ margin-top = 5
 margin-bottom = 5
 
 ; vim:ft=dosini
+
+
+
+
+
+
+
+[bar/example2]
+monitor = ${env:MONITOR:}
+width = 100%
+height = 20
+;offset-x = 1%
+;offset-y = 1%
+radius = 1.0
+fixed-center = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = #f00
+
+border-size = 0
+border-color = #00000000
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 2
+module-margin-right = 2
+
+separator = |
+
+font-0 = fixed:pixelsize=10;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+font-3 = Font Awesome 5 Free:pixelsize=12;2
+font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
+font-5 = Font Awesome 5 Brands:pixelsize=12;2
+
+modules-left = i3
+modules-center = xwindow
+modules-right = 
+
+tray-position = right
+tray-padding = 2
+;tray-background = #0063ff
+
+;wm-restack = generic
+;wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+enable-ipc = true
