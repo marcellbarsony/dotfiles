@@ -1,5 +1,5 @@
-# linux
-Linux dotfiles
+# Linux dotfiles
+
 
 **Arandr**
 ```
