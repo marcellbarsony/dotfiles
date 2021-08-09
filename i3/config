@@ -242,4 +242,3 @@ exec $code
 exec picom
 
 ###---Monitors---###
-
