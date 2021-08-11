@@ -11,6 +11,11 @@
 ~/.config/i3/config
 ```
 
+**lightdm**
+```
+/etc/lightdm/lightdm.conf
+```
+
 **logind**
 ```
 /etc/systemd/logind.conf
