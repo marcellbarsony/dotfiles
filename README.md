@@ -30,7 +30,7 @@
 ~/.config/polybar/config
 ```
 
-**Xinit*
+**Xinit**
 ```
 /etc/X11/xinit/xinitrc
 ```
