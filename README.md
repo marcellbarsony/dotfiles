@@ -34,3 +34,8 @@
 ```
 /etc/X11/xinit/xinitrc
 ```
+
+**ZSH**
+```
+~/.zshrc
+```
