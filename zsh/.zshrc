@@ -17,9 +17,21 @@ zstyle ':vcs_info:git:*' formats 'branch %b' # Format
 setopt PROMPT_SUBST
 RPROMPT=\$vcs_info_msg_0_ # Prompt
 
-# Colors & Prompt
+# Colors
 autoload -U colors && colors
-PS1="%B%{$fg[white]%}[%{$fg[green]%}%n%{$fg[white]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[white]%}]%{$reset_color%}$%b "
+
+# Prompt
+
+#bracket1='%B%{$fg[white]%}[%'
+user='%B%{$fg[yellow]%}%n%'
+at='%B%{$fg[green]%}@%'
+host='%B%{$fg[blue]%}%M'
+pwd='%{$fg[magenta]%}%~%'
+#bracket2='%B%{$fg[white]%}]%'
+privilege='%{$reset_color%}$%b '
+
+PS1="${bracket1} ${user} ${at} ${host} ${pwd} ${bracket2} ${privilege}"
+
 
 # Autocomplete
 autoload -U compinit
