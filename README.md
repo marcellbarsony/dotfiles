@@ -20,13 +20,17 @@
 ```
 /etc/systemd/logind.conf
 ```
+**Picom**
+```
+/etc/xdg/picom.conf
+```
 
 **Polybar**
 ```
 ~/.config/polybar/config
 ```
 
-**Picom**
+**Xinit**
 ```
-/etc/xdg/picom.conf
+/etc/X11/xinit/xinitrc
 ```
