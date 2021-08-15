@@ -28,10 +28,9 @@ at='%B%{$fg[green]%}@%'
 host='%B%{$fg[blue]%}%M'
 pwd='%{$fg[magenta]%}%~%'
 #bracket2='%B%{$fg[white]%}]%'
-privilege='%{$reset_color%}$%b '
+#privilege='%{$reset_color%}$%b '
 
 PS1="${bracket1} ${user} ${at} ${host} ${pwd} ${bracket2} ${privilege}"
-
 
 # Autocomplete
 autoload -U compinit
