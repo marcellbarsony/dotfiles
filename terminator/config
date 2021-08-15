@@ -16,6 +16,7 @@
     font = Source Code Pro 11
     foreground_color = "#ffffff"
     show_titlebar = False
+    scrollbar_position = hidden
     use_system_font = False
 [layouts]
   [[default]]
@@ -25,4 +26,5 @@
     [[[child1]]]
       type = Terminal
       parent = window0
+      profile = default
 [plugins]
