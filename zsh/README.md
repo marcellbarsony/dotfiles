@@ -1,5 +1,12 @@
 # ZSH dotfiles
 
+**Sourcing**
+
+The ZSH config files are sourced to the below path in .zshenv
+```
+~/.config/zsh/.zshrc
+```
+
 
 **ZSH config**
 ```
@@ -11,9 +18,9 @@
 ~/.zsh_history
 ```
 
-**ZSH profile**
+**ZSH environmental variables**
 ```
-~/.zprofile
+~/.zshenv
 ```
 
 **ZSH wizard**
