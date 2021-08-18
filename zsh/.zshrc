@@ -1,5 +1,5 @@
 # History
-HISTFILE=~/.zsh_history
+HISTFILE=~/.config/zsh/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 
@@ -19,18 +19,20 @@ RPROMPT=\$vcs_info_msg_0_ # Prompt
 
 # Colors
 autoload -U colors && colors
+# https://i.stack.imgur.com/UQVe5.png
 
 # Prompt
 
 #bracket1='%B%{$fg[white]%}[%'
-user='%B%{$fg[yellow]%}%n%'
-at='%B%{$fg[green]%}@%'
-host='%B%{$fg[blue]%}%M'
-pwd='%{$fg[magenta]%}%~%'
+user='%B%{%F{057}%}%n%'
+at='%B%{%F{092}%}@%'
+host='%B%{%F{128}%}%M'
+pwd='%{%F{025}%}%~'
 #bracket2='%B%{$fg[white]%}]%'
 #privilege='%{$reset_color%}$%b '
+chevron='%B%{$fg[blue]%}>%'
 
-PS1="${bracket1} ${user} ${at} ${host} ${pwd} ${bracket2} ${privilege}"
+PS1="${bracket1} ${user} ${at} ${host} ${pwd} ${chevron} ${bracket2} ${privilege}"
 
 # Autocomplete
 autoload -U compinit
@@ -72,6 +74,17 @@ zle -N zle-line-init
 # Cursor
 echo -ne '\e[5 q' # Beam cursor on startup
 preexec() { echo -ne '\e[5 q' ;} # Beam cursor for new prompt
+
+# Highlights
+typeset -A ZSH_HIGHLIGHT_STYLES
+
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+
+ZSH_HIGHLIGHT_STYLES[alias]='fg=blue'
+ZSH_HIGHLIGHT_STYLES[cursor]='fg=magenta'
+ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
+ZSH_HIGHLIGHT_STYLES[globbing]='fg=cyan'
+ZSH_HIGHLIGHT_STYLES[path_pathseparator]='fg=226'
 
 # Load zsh-syntax-highlighting (should be last)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
