@@ -178,7 +178,7 @@ label-song-maxlen = 25
 label-song-ellipsis = true
 
 [module/xbacklight]
-type = internal/xbacklight
+;type = internal/xbacklight
 
 format = <label> <bar>
 label = BL
@@ -195,9 +195,9 @@ bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}
 
 [module/backlight-acpi]
-inherit = module/xbacklight
-type = internal/backlight
-card = intel_backlight
+;inherit = module/xbacklight
+;type = internal/backlight
+;card = intel_backlight
 
 [module/cpu]
 type = internal/cpu
