@@ -1,65 +1,58 @@
 --
--- xmonad example config file.
---
--- A template showing all available configuration hooks,
--- and how to override the defaults in your own xmonad.hs conf file.
---
--- Normally, you'd only override those defaults you care about.
+-- Last edited: 29/8/2021
 --
 
+
+-- IMPORTS
 import XMonad
 import Data.Monoid
 import System.Exit
-
+import XMonad.Hooks.ManageDocks
+import XMonad.Util.Run
+import XMonad.Util.SpawnOnce
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
--- The preferred terminal program, which is used in a binding below and by
--- certain contrib modules.
---
-myTerminal      = "xterm"
 
--- Whether focus follows the mouse pointer.
+-- TERMINAL
+myTerminal = "terminator"
+
+
+-- FOCUS ON MOUSE
 myFocusFollowsMouse :: Bool
 myFocusFollowsMouse = True
 
--- Whether clicking on a window to focus also passes the click to the window
+
+-- FOCUS ON CLICK
 myClickJustFocuses :: Bool
 myClickJustFocuses = False
 
--- Width of the window border in pixels.
---
-myBorderWidth   = 1
 
--- modMask lets you specify which modkey you want to use. The default
--- is mod1Mask ("left alt").  You may also consider using mod3Mask
--- ("right alt"), which does not conflict with emacs keybindings. The
--- "windows key" is usually mod4Mask.
---
-myModMask       = mod1Mask
+-- WINDOW BORDER WIDTH
+myBorderWidth = 1
 
--- The default number of workspaces (virtual screens) and their names.
--- By default we use numeric strings, but any string may be used as a
--- workspace name. The number of workspaces is determined by the length
--- of this list.
---
--- A tagging example:
---
+
+-- MOD KEY
+-- Left ALT (mod1Mask), Right ALT (mod3Mask), Super (mod4Mask);
+myModMask = mod4Mask
+
+
+-- WORKSPACES
+-- Tagging example:
 -- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
---
 myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
 
--- Border colors for unfocused and focused windows, respectively.
---
-myNormalBorderColor  = "#dddddd"
-myFocusedBorderColor = "#ff0000"
+
+-- WINDOW BORDER COLORS
+myNormalBorderColor = "#DDDDDD"
+myFocusedBorderColor = "#00BBFF"
 
 ------------------------------------------------------------------------
--- Key bindings. Add, modify or remove key bindings here.
---
+-- KEY BINDINGS
+
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
-    -- launch a terminal
+    -- launch terminal
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
     -- launch dmenu
@@ -69,7 +62,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
 
     -- close focused window
-    , ((modm .|. shiftMask, xK_c     ), kill)
+    , ((modm .|. shiftMask, xK_q     ), kill)
 
      -- Rotate through the available layout algorithms
     , ((modm,               xK_space ), sendMessage NextLayout)
@@ -123,7 +116,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- , ((modm              , xK_b     ), sendMessage ToggleStruts)
 
     -- Quit xmonad
-    , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))
+    , ((modm .|. shiftMask, xK_c     ), io (exitWith ExitSuccess))
 
     -- Restart xmonad
     , ((modm              , xK_q     ), spawn "xmonad --recompile; xmonad --restart")
@@ -152,8 +145,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
 
 ------------------------------------------------------------------------
--- Mouse bindings: default actions bound to mouse events
---
+-- Mouse bindings
+
 myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- mod-button1, Set the window to floating mode and move by dragging
@@ -171,7 +164,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
     ]
 
 ------------------------------------------------------------------------
--- Layouts:
+-- Layouts
 
 -- You can specify and transform your layouts by modifying these values.
 -- If you change layout bindings be sure to use 'mod-shift-space' after
@@ -181,7 +174,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = tiled ||| Mirror tiled ||| Full
+myLayout = avoidStruts (tiled ||| Mirror tiled ||| Full)
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio
@@ -196,7 +189,7 @@ myLayout = tiled ||| Mirror tiled ||| Full
      delta   = 3/100
 
 ------------------------------------------------------------------------
--- Window rules:
+-- Window rules
 
 -- Execute arbitrary actions and WindowSet manipulations when managing
 -- a new window. You can use this to, for example, always float a
@@ -238,19 +231,21 @@ myLogHook = return ()
 ------------------------------------------------------------------------
 -- Startup hook
 
--- Perform an arbitrary action each time xmonad starts or is restarted
--- with mod-q.  Used by, e.g., XMonad.Layout.PerWorkspace to initialize
+-- Used by, e.g., XMonad.Layout.PerWorkspace to initialize
 -- per-workspace layout choices.
---
--- By default, do nothing.
-myStartupHook = return ()
+
+myStartupHook = do
+        spawnOnce "terminator &"
+        spawnOnce "feh feh --bg-fill /home/marci/Downloads/poly.jpg &"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
 
 -- Run xmonad with the settings you specify. No need to modify this.
 --
-main = xmonad defaults
+main = do
+    xmproc <- spawnPipe "xmobar -x 0 /home/marci/.xmobarrc"
+    xmonad $ docks defaults
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
