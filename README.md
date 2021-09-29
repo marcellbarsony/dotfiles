@@ -1,5 +1,10 @@
 # Linux dotfiles
 
+## Documentation
+
+For the documentation please visit the [Wiki page](https://github.com/marcellbarsony/linux/wiki "Wiki - Marci's Arch config").
+
+***
 
 **Arandr**
 ```
