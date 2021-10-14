@@ -41,6 +41,9 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)
 
+# Vim
+export EDITOR=vim
+
 # VI mode
 bindkey -v
 export KEYTIMEOUT=1
