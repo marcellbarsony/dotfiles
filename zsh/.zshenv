@@ -1,10 +1,10 @@
 # Paths
-export ZDOTDIR=$HOME/.config/zsh
-export HISTFILE=$HOME/.config/zsh
+export ZDOTDIR=$HOME/dotfiles/zsh/
+export HISTFILE=$HOME/dotfiles/zsh/
 
 # Default Programs
-export TERMINAL="Terminator"
+export TERMINAL="st"
+export EDITOR="vim"
+export VISUAL="vim"
 export BROWSER="Firefox"
-export EDITOR="Nano"
-
-
+export WM="dwm"
