@@ -2,7 +2,7 @@
 neofetch
 
 # History
-HISTFILE=~/.config/zsh/.zsh_history
+HISTFILE=~/dotfiles/zsh/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 
@@ -91,6 +91,9 @@ ZSH_HIGHLIGHT_STYLES[cursor]='fg=magenta'
 ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
 ZSH_HIGHLIGHT_STYLES[globbing]='fg=cyan'
 ZSH_HIGHLIGHT_STYLES[path_pathseparator]='fg=226'
+
+# Source modules
+for f in ~/dotfiles/zsh/zmodules/*; do source "$f"; done
 
 # Load zsh-syntax-highlighting (should be last)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
