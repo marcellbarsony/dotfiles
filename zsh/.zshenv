@@ -1,6 +1,7 @@
 # Paths
 export ZDOTDIR=$HOME/dotfiles/zsh/
 export HISTFILE=$HOME/dotfiles/zsh/
+export XINITRC=$HOME/dotfiles/xorg/
 
 # Default Programs
 export TERMINAL="st"
