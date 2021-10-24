@@ -1,6 +1,3 @@
-# Flex on Reddit
-neofetch
-
 # History
 HISTFILE=~/dotfiles/zsh/.zsh_history
 HISTSIZE=1000
