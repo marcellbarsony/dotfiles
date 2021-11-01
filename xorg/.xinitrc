@@ -5,4 +5,5 @@
 
 xrdb -load ~/dotfiles/xorg/xresources &
 xmodmap ~/dotfiles/xorg/xmodmap &
+exec slstatus &
 exec dwm
