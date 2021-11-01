@@ -33,12 +33,14 @@ chevron='%B%{$fg[blue]%}>%'
 
 PS1="${bracket1} ${user} ${at} ${host} ${pwd} ${chevron} ${bracket2} ${privilege}"
 
+source ~/.config/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
 # Autocomplete
-autoload -U compinit
-zstyle ':completion:*' menu select
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots) # Include hidden files
+#autoload -U compinit
+#zstyle ':completion:*' menu select
+#zmodload zsh/complist
+#compinit
+#_comp_options+=(globdots) # Include hidden files
 
 # VI mode
 bindkey -v
