@@ -1,5 +1,5 @@
 # History
-HISTFILE=~/dotfiles/zsh/.zsh_history
+HISTFILE=~/.config/zsh/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 
@@ -33,7 +33,8 @@ chevron='%B%{$fg[blue]%}>%'
 
 PS1="${bracket1} ${user} ${at} ${host} ${pwd} ${chevron} ${bracket2} ${privilege}"
 
-source ~/.config/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+# Autocomplete
+# source ~/.config/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # Autocomplete
 #autoload -U compinit
@@ -95,7 +96,7 @@ ZSH_HIGHLIGHT_STYLES[path_pathseparator]='fg=226'
 for f in ~/dotfiles/zsh/zmodules/*; do source "$f"; done
 
 # Source zmodules if existent
-# [ -f "$HOME/dotfiles/zsh/zmodules" ] && source "$HOME/dotfiles/zmodules"
+# [ -f "$HOME/.config/zsh/zmodules" ] && soure "$HOME/.config/zmodules"
 
 # Load zsh-syntax-highlighting (should be last)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
