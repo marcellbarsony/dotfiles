@@ -21,6 +21,12 @@ RPROMPT=\$vcs_info_msg_0_ # Prompt
 # https://i.stack.imgur.com/UQVe5.png
 autoload -U colors && colors
 
+# Pywal - Terminal
+cat ~/.cache/wal/sequences &)
+
+# Pywal - TTY
+source ~/.cache/wal/colors-tty.sh
+
 # Prompt
 #bracket1='%B%{$fg[white]%}[%'
 user='%B%{%F{057}%}%n%'

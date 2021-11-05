@@ -9,3 +9,7 @@ export EDITOR="vim"
 export VISUAL="vim"
 export BROWSER="Firefox"
 export WM="dwm"
+
+# Bitwarden CLI
+export BW_SESSION="+anWiLgXWYDeypuh8tCovDz5kJZVkARxwtQxiaaQWN8g0Oask23uaQiq7ySJs533YwqeMn6TGBZCv/pDXWfHFQ=="
+
