@@ -1,3 +1,6 @@
 zsh/.zsh_history
 zsh/.zcompdump
 pulse/
+dconf
+pavucontrol.ini
+Bitwarden CLI/data.json
