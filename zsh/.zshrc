@@ -99,7 +99,7 @@ ZSH_HIGHLIGHT_STYLES[globbing]='fg=cyan'
 ZSH_HIGHLIGHT_STYLES[path_pathseparator]='fg=226'
 
 # Source modules
-for f in ~/dotfiles/zsh/zmodules/*; do source "$f"; done
+for f in ~/.config/zsh/zmodules/*; do source "$f"; done
 
 # Source zmodules if existent
 # [ -f "$HOME/.config/zsh/zmodules" ] && soure "$HOME/.config/zmodules"
