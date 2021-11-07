@@ -22,7 +22,7 @@ RPROMPT=\$vcs_info_msg_0_ # Prompt
 autoload -U colors && colors
 
 # Pywal - Terminal
-cat ~/.cache/wal/sequences &)
+(cat ~/.cache/wal/sequences &)
 
 # Pywal - TTY
 source ~/.cache/wal/colors-tty.sh
@@ -43,11 +43,11 @@ PS1="${bracket1} ${user} ${at} ${host} ${pwd} ${chevron} ${bracket2} ${privilege
 # source ~/.config/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # Autocomplete
-#autoload -U compinit
-#zstyle ':completion:*' menu select
-#zmodload zsh/complist
-#compinit
-#_comp_options+=(globdots) # Include hidden files
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots) # Include hidden files
 
 # VI mode
 bindkey -v
