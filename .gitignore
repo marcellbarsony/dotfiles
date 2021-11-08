@@ -1,6 +1,7 @@
 zsh/.zsh_history
 zsh/.zcompdump
 pulse/
-dconf
+dconf/user
 pavucontrol.ini
 Bitwarden CLI/data.json
+bpytop/error.log
