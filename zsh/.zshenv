@@ -4,7 +4,7 @@ export HISTFILE=$HOME/.config/zsh/
 export XINITRC=$HOME/.config/xorg/
 
 # Default Programs
-export TERMINAL="st"
+export TERMINAL="alacritty"
 export EDITOR="vim"
 export VISUAL="vim"
 export BROWSER="Firefox"
