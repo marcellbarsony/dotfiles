@@ -1,0 +1,9 @@
+[2021-11-08 20:46:46.167] [exthost] [info] Extension host with pid 22494 started
+[2021-11-08 20:46:46.230] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2021-11-08 20:46:46.236] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*', root cause: vscode.github
+[2021-11-08 20:46:46.248] [exthost] [info] ExtensionService#_doActivateExtension RobbOwen.synthwave-vscode, startup: true, activationEvent: '*'
+[2021-11-08 20:46:46.293] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2021-11-08 20:46:46.311] [exthost] [info] Eager extensions activated
+[2021-11-08 20:46:46.313] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2021-11-08 20:46:50.240] [exthost] [info] extension host terminating: renderer closed the socket
+[2021-11-08 20:46:51.243] [exthost] [info] Extension host with pid 22494 exiting with code 0
