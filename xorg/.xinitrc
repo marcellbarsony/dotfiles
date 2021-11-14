@@ -8,6 +8,6 @@
 wal -R # Restore last colorscheme
 xrdb -load ~/.config/xorg/xresources &
 xmodmap ~/.config/xorg/xmodmap &
-exec unclutter &
+exec unclutter --timeout 3 &
 exec slstatus &
 exec dwm
