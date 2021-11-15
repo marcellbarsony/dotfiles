@@ -1,9 +1,13 @@
-zsh/.zsh_history
-zsh/.zcompdump
-pulse/
-dconf/
-VSCodium/
-pavucontrol.ini
+@joplin/
 Bitwarden CLI/data.json
 bpytop/error.log
-
+configstore/
+dconf/
+!joplin-desktop/
+joplin-desktop/*
+!joplin-desktop/settings.json
+pavucontrol.ini
+pulse/
+VSCodium/
+zsh/.zcompdump
+zsh/.zsh_history
