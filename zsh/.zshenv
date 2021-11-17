@@ -14,6 +14,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export ZDOTDIR="$HOME/.config/zsh/"
 export HISTFILE"=$HOME/.config/zsh/"
 export XINITRC="$HOME/.config/xorg/"
+export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 
 # Disable files
