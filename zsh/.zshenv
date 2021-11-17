@@ -14,7 +14,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export ZDOTDIR="$HOME/.config/zsh/"
 export HISTFILE"=$HOME/.config/zsh/"
 export XINITRC="$HOME/.config/xorg/"
-export CARGO_HOME="$HOME/.local/share/cargo"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
 
 # Disable files
 export LESSHISTFILE=-
