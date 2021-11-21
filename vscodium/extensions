@@ -1,0 +1,8 @@
+# Synthwave '84
+code --install-extension robbowen.synthwave-vscode
+# Vim
+code --install-extension vscodevim.vim 
+# Prettier
+code --install-extension esbenp.prettier-vscode
+# Bracket pair colorizer
+code --install-extension coenraads.bracket-pair-colorizer
