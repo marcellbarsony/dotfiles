@@ -1,10 +1,13 @@
 #!/bin/sh
 
 # Compositor
-picom --experimental-backends &
+#picom --experimental-backends &
 
 # Xresources
 xrdb -load ~/.config/xorg/xresources &
+
+# Wallpaper
+xwallpaper --screen 0 --maximize $HOME/Downloads/synthwave.jpg &
 
 # Xmodmap
 xmodmap ~/.config/xorg/xmodmap &
