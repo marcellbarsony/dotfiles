@@ -1,6 +1,7 @@
 @joplin/
 Bitwarden CLI/data.json
 bpytop/error.log
+cargo/
 configstore/
 dconf/
 !joplin-desktop/
