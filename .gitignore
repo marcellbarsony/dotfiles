@@ -10,6 +10,5 @@ joplin-desktop/*
 pavucontrol.ini
 pulse/
 rbw/
-VSCodium/
 zsh/.zcompdump
 zsh/.zsh_history
