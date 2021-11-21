@@ -6,7 +6,7 @@
 # feh --bg-scale ~/Downloads/arch.jpg &
 
 #wal -R # Restore last colorscheme
-#picom --experimental-backends &
+picom --experimental-backends &
 xrdb -load ~/.config/xorg/xresources &
 xmodmap ~/.config/xorg/xmodmap &
 exec unclutter --timeout 3 &
