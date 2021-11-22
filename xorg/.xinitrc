@@ -3,13 +3,13 @@
 # Compositor
 #picom --experimental-backends &
 
-# Xresources
-xrdb -load ~/.config/xorg/xresources &
-
 # Wallpaper
 xwallpaper --screen 0 --maximize $HOME/Downloads/synthwave.jpg &
 
-# Xmodmap
+# X11 - Xresources
+xrdb -load ~/.config/xorg/xresources &
+
+# X11 - Xmodmap
 xmodmap ~/.config/xorg/xmodmap &
 
 # Unclutter
