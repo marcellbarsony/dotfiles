@@ -21,23 +21,24 @@ RPROMPT=\$vcs_info_msg_0_ # Prompt
 # https://i.stack.imgur.com/UQVe5.png
 autoload -U colors && colors
 
-# Pywal - Terminal
-#(cat ~/.cache/wal/sequences &)
-
-# Pywal - TTY
-#source ~/.cache/wal/colors-tty.sh
+# Fonts
+#powerline-daemon -q
+#. /usr/share/powerline/bindings/zsh/powerline.zsh
 
 # Prompt
+autoload -U promptinit; promptinit
+prompt spaceship
+
 #bracket1='%B%{$fg[white]%}[%'
-user='%B%{%F{057}%}%n%'
-at='%B%{%F{092}%}@%'
-host='%B%{%F{128}%}%M'
-pwd='%{%F{025}%}%~'
+#user='%B%{%F{057}%}%n%'
+#at='%B%{%F{092}%}@%'
+#host='%B%{%F{128}%}%M'
+#pwd='%{%F{025}%}%~'
 #bracket2='%B%{$fg[white]%}]%'
 #privilege='%{$reset_color%}$%b '
-chevron='%B%{$fg[blue]%}>%'
+#chevron='%B%{$fg[blue]%}>%'
 
-PS1="${bracket1} ${user} ${at} ${host} ${pwd} ${chevron} ${bracket2} ${privilege}"
+#PS1="${bracket1} ${user} ${at} ${host} ${pwd} ${chevron} ${bracket2} ${privilege}"
 
 # Autocomplete
 # source ~/.config/zsh-autocomplete/zsh-autocomplete.plugin.zsh
