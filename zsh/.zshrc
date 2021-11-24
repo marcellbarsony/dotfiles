@@ -47,8 +47,8 @@ SAVEHIST=1000
 autoload -U promptinit; promptinit
 prompt spaceship
 
-SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_PROMPT_SEPARATE_LINE=false
+for s in ~/.config/zsh/spaceship/*; do source "$s"; done
+
 SPACESHIP_PROMPT_FIRST_PREFIX_SHOW=false
 SPACESHIP_PROMPT_PREFIXES_SHOW=true
 SPACESHIP_PROMPT_SUFFIXES_SHOW=true
