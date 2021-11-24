@@ -1,8 +1,3 @@
-# History
-HISTFILE=~/.config/zsh/.zsh_history
-HISTSIZE=1000
-SAVEHIST=1000
-
 # Autocomplete
 autoload -U compinit
 zstyle ':completion:*' menu select
@@ -43,11 +38,17 @@ ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
 ZSH_HIGHLIGHT_STYLES[globbing]='fg=cyan'
 ZSH_HIGHLIGHT_STYLES[path_pathseparator]='fg=226'
 
+# History
+HISTFILE=~/.config/zsh/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+
 # Prompt (Spaceship)
 autoload -U promptinit; promptinit
 prompt spaceship
 
 # Prompt (Starship)
+# eval "$(starship init zsh)"
 
 # Source zmodules
 for f in ~/.config/zsh/zmodules/*; do source "$f"; done
