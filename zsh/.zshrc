@@ -43,11 +43,24 @@ HISTFILE=~/.config/zsh/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 
-# Prompt (Spaceship)
+# Prompt - Spaceship
 autoload -U promptinit; promptinit
 prompt spaceship
 
-# Prompt (Starship)
+SPACESHIP_PROMPT_ADD_NEWLINE=false
+SPACESHIP_PROMPT_SEPARATE_LINE=false
+SPACESHIP_PROMPT_FIRST_PREFIX_SHOW=false
+SPACESHIP_PROMPT_PREFIXES_SHOW=true
+SPACESHIP_PROMPT_SUFFIXES_SHOW=true
+SPACESHIP_PROMPT_DEFAULT_PREFIX='via '
+SPACESHIP_PROMPT_DEFAULT_SUFFIX=" "
+
+SPACESHIP_USER_SHOW="always"
+
+SPACESHIP_HOST_SHOW="always"
+
+
+# Prompt - Starship
 # eval "$(starship init zsh)"
 
 # Source zmodules

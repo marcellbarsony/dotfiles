@@ -1,71 +1,35 @@
-# Configuration for Alacritty, the GPU enhanced terminal emulator.
-
-# Any items in the `env` entry below will be added as
-# environment variables. Some entries may override variables
-# set by alacritty itself.
+# Environment variables
 env:
-  # TERM variable
-  #
-  # This value is used to set the `$TERM` environment variable for
-  # each instance of Alacritty. If it is not present, alacritty will
-  # check the local terminfo database and use `alacritty` if it is
-  # available, otherwise `xterm-256color` is used.
   TERM: alacritty
 
+# Window
 window:
-  # Window dimensions (changes require restart)
-  #
-  # Specified in number of columns/lines, not pixels.
-  # If both are `0`, this setting is ignored.
-  #dimensions:
+  # Window dimensions
   #  columns: 0
   #  lines: 0
 
-  # Window position (changes require restart)
-  #
-  # Specified in number of pixels.
-  # If the position is not set, the window manager will handle the placement.
-  #position:
+  # Window position
   #  x: 0
   #  y: 0
 
-  # Window padding (changes require restart)
-  #
-  # Blank space added around the window in pixels. This padding is scaled
-  # by DPI and the specified value is always added at both opposing sides.
+  # Window padding
   padding:
     x: 6
     y: 6
 
-  # Spread additional padding evenly around the terminal content.
+  # Spread additional padding evenly around the terminal content
   dynamic_padding: false
 
   # Window decorations
-  #
-  # Values for `decorations`:
-  #     - full: Borders and title bar
-  #     - none: Neither borders nor title bar
-  #
-  # Values for `decorations` (macOS only):
-  #     - transparent: Title bar, transparent background and title bar buttons
-  #     - buttonless: Title bar, transparent background, but no title bar buttons
   #decorations: full
 
-  # Startup Mode (changes require restart)
-  #
-  # Values for `startup_mode`:
-  #   - Windowed
-  #   - Maximized
-  #   - Fullscreen
-  #
-  # Values for `startup_mode` (macOS only):
-  #   - SimpleFullscreen
+  # Startup Mode
   #startup_mode: Windowed
 
   # Window title
   title: Alacritty
 
-  # Window class (Linux/BSD only):
+  # Window class
   class:
     # Application instance name
     instance: Alacritty
@@ -73,43 +37,28 @@ window:
     general: Alacritty
 
   # GTK theme variant (Linux/BSD only)
-  #
-  # Override the variant of the GTK theme. Commonly supported values are `dark` and `light`.
-  # Set this to `None` to use the default theme variant.
   #gtk_theme_variant: None
 
 scrolling:
-  # Maximum number of lines in the scrollback buffer.
-  # Specifying '0' will disable scrolling.
   history: 5000
 
-  # Number of lines the viewport will move for every line scrolled when
-  # scrollback is enabled (history > 0).
+  # Number of lines the viewport will move for every line scrolled when scrollback is enabled (history > 0).
   #multiplier: 3
 
   # Scroll to the bottom when new text is written to the terminal.
   #auto_scroll: false
 
 # Spaces per Tab (changes require restart)
-#
-# This setting defines the width of a tab in cells.
-#
-# Some applications, like Emacs, rely on knowing about the width of a tab.
-# To prevent unexpected behavior in these applications, it's also required to
-# change the `it` value in terminfo when altering this setting.
 #tabspaces: 8
 
-# Font configuration
+# Font
 font:
-  # Normal (roman) font face
+  # Normal (roman)
   normal:
     # Font family
-    #
-    # Default:
-    #   - (macOS) Menlo
-    #   - (Linux/BSD) monospace
-    #   - (Windows) Consolas
     family: Source Code Pro
+    # family: Go Mono for Powerline
+    # family: monospace
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
     # family: Hack
@@ -119,15 +68,12 @@ font:
     # family: TerminessTTF Nerd Font
     # family: Mononoki Nerd Font
 
-    # The `style` can be specified to pick a specific face.
+    # Font style
     style: Regular
 
-  # Bold font face
+  # Bold
   bold:
     # Font family
-    #
-    # If the bold family is not specified, it will fall back to the
-    # value specified for the normal font.
     family: Source Code Pro
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
@@ -138,15 +84,12 @@ font:
     # family: TerminessTTF Nerd Font
     # family: Mononoki Nerd Font
 
-    # The `style` can be specified to pick a specific face.
+    # Font style
     style: Bold
 
-  # Italic font face
+  # Italic
   italic:
     # Font family
-    #
-    # If the italic family is not specified, it will fall back to the
-    # value specified for the normal font.
     family: Source Code Pro
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
@@ -157,15 +100,12 @@ font:
     # family: TerminessTTF Nerd Font
     # family: Mononoki Nerd Font
 
-    # The `style` can be specified to pick a specific face.
+    # Font style
     style: Italic
 
-  # Bold italic font face
+  # Bold italic
   bold_italic:
     # Font family
-    #
-    # If the bold italic family is not specified, it will fall back to the
-    # value specified for the normal font.
     family: Source Code Pro
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
@@ -176,46 +116,26 @@ font:
     # family: TerminessTTF Nerd Font
     # family: Mononoki Nerd Font
 
-    # The `style` can be specified to pick a specific face.
+    # Font style
     style: Bold Italic
 
   # Point size
   size: 12.0
 
-  # Offset is the extra space around each character. `offset.y` can be thought of
-  # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
+  # Offset - Character
   offset:
-    x: 0
-    y: 1
+    x: 1 # Letter spacing
+    y: 0 # Line spacing
 
-  # Glyph offset determines the locations of the glyphs within their cells with
-  # the default being at the bottom. Increasing `x` moves the glyph to the right,
-  # increasing `y` moves the glyph upwards.
-  #glyph_offset:
+  # Offset - Glyph
   #  x: 0
   #  y: 0
 
-  # Thin stroke font rendering (macOS only)
-  #
-  # Thin strokes are suitable for retina displays, but for non-retina screens
-  # it is recommended to set `use_thin_strokes` to `false`
-  #
-  # macOS >= 10.14.x:
-  #
-  # If the font quality on non-retina display looks bad then set
-  # `use_thin_strokes` to `true` and enable font smoothing by running the
-  # following command:
-  #   `defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO`
-  #
-  # This is a global setting and will require a log out or restart to take
-  # effect.
-  #use_thin_strokes: true
-
-# If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors: true
+# Bold is bright
+draw_bold_text_with_bright_colors: false
 
 #######################################
-##      START OF COLOR SCHEMES       ##
+##          COLOR SCHEMES            ##
 #######################################
 schemes:
   ### Dracula ###
@@ -527,10 +447,10 @@ schemes:
       cyan:    '#54ced6'
       white:   '#282a2e'
 
-######################################################################
-## SET THEME: Choose ONE color scheme from those in the above list. ##
-## ###################################################################
-# Available themes are:
+########################
+## Choose color theme ##
+########################
+
 # *doom-one
 # *dracula
 # *gruvbox-dark
@@ -590,51 +510,27 @@ background_opacity: 1
 # Allow terminal applications to change Alacritty's window title.
 #dynamic_title: true
 
-#cursor:
-  # Cursor style
-  #
+# Cursor style
   # Values for `style`:
   #   - ▇ Block
   #   - _ Underline
   #   - | Beam
   #style: Block
 
-  # If this is `true`, the cursor will be rendered as a hollow box when the
-  # window is not focused.
+  # Render cursor as hollow box when window is not focused
   #unfocused_hollow: true
 
-# Live config reload (changes require restart)
+# Live config reload
 #live_config_reload: true
 
 # Shell
-#
-# You can set `shell.program` to the path of your favorite shell, e.g. `/bin/fish`.
-# Entries in `shell.args` are passed unmodified as arguments to the shell.
-#
-# Default:
-#   - (macOS) /bin/bash --login
-#   - (Linux/BSD) user login shell
-#   - (Windows) powershell
 #shell:
 #  program: /bin/bash
 #  args:
 #    - --login
 
 # Startup directory
-#
-# Directory the shell is started in. If this is unset, or `None`, the working
-# directory of the parent process will be used.
 #working_directory: None
-
-# WinPTY backend (Windows only)
-#
-# Alacritty defaults to using the newer ConPTY backend if it is available,
-# since it resolves a lot of bugs and is quite a bit faster. If it is not
-# available, the the WinPTY backend will be used instead.
-#
-# Setting this option to `true` makes Alacritty use the legacy WinPTY backend,
-# even if the ConPTY backend is available.
-#winpty_backend: false
 
 # Send ESC (\x1b) before characters when alt is pressed.
 #alt_send_esc: true
@@ -665,43 +561,23 @@ background_opacity: 1
 
 #mouse:
   # Click settings
-  #
-  # The `double_click` and `triple_click` settings control the time
-  # alacritty should wait for accepting multiple clicks as one double
-  # or triple click.
   #double_click: { threshold: 300 }
   #triple_click: { threshold: 300 }
 
-  # If this is `true`, the cursor is temporarily hidden when typing.
+  # Hide cursor when typing
   #hide_when_typing: false
 
   #url:
     # URL launcher
-    #
-    # This program is executed when clicking on a text which is recognized as a URL.
-    # The URL is always added to the command as the last parameter.
-    #
-    # When set to `None`, URL launching will be disabled completely.
-    #
-    # Default:
-    #   - (macOS) open
-    #   - (Linux/BSD) xdg-open
-    #   - (Windows) explorer
     #launcher:
     #  program: xdg-open
     #  args: []
 
-    # URL modifiers
-    #
-    # These are the modifiers that need to be held down for opening URLs when clicking
-    # on them. The available modifiers are documented in the key binding section.
+    # URL mod key
     #modifiers: None
 
 # Mouse bindings
-#
-# Mouse bindings are specified as a list of objects, much like the key
-# bindings further below.
-#
+
 # Each mouse binding will specify a:
 #
 # - `mouse`:
@@ -778,9 +654,6 @@ background_opacity: 1
 #   - ClearLogNotice
 #   - ReceiveChar
 #   - None
-#
-#   (macOS only):
-#   - ToggleSimpleFullscreen: Enters fullscreen without occupying another space
 #
 # - `command`: Fork and execute a specified command plus arguments
 #
