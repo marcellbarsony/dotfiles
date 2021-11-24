@@ -49,17 +49,6 @@ prompt spaceship
 
 for s in ~/.config/zsh/spaceship/*; do source "$s"; done
 
-SPACESHIP_PROMPT_FIRST_PREFIX_SHOW=false
-SPACESHIP_PROMPT_PREFIXES_SHOW=true
-SPACESHIP_PROMPT_SUFFIXES_SHOW=true
-SPACESHIP_PROMPT_DEFAULT_PREFIX='via '
-SPACESHIP_PROMPT_DEFAULT_SUFFIX=" "
-
-SPACESHIP_USER_SHOW="always"
-
-SPACESHIP_HOST_SHOW="always"
-
-
 # Prompt - Starship
 # eval "$(starship init zsh)"
 
