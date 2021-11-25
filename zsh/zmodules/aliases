@@ -1,3 +1,4 @@
+alias c='clear'
 alias g='git'
+alias l='ls -la'
 alias v='vim'
-alias ls='ls -la'
