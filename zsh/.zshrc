@@ -50,7 +50,7 @@ SAVEHIST=1000
 #for s in ~/.config/zsh/spaceship/*; do source "$s"; done
 
 # Prompt - Starship
- eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 
 # Source zmodules
 for f in ~/.config/zsh/zmodules/*; do source "$f"; done
