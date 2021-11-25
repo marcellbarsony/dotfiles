@@ -18,6 +18,7 @@ export XINITRC="$HOME/.config/xorg/"
 # export GIT_CONFIG="#$XDG_CONFIG_HOME/git/config"
 export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export STARSHIP_CONFIG=~/.config/zsh/starship/config.toml
 
 # Disable files
 export LESSHISTFILE=-
