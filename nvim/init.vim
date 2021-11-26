@@ -16,11 +16,19 @@ set nocompatible
 set mouse=a                     " Enable mouse
 set ignorecase                  " Case sensitive matching
 set smartcase                   " Smart case matching
-set encoding=UTF-8              " Encoding
+set encoding=UTF-8              " Encodingi
 set number relativenumber       " Relative numbers
 set showmatch                   " Show matching brackets
 set clipboard+=unnamedplus      " Use system keybard (unnamedplus/unnamed)
 
+" Indentation
+set autoindent
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+
+" Highlight
 highlight Comment cterm=italic
 "highlight CursorLine ctermbg=Blue cterm=NONE
 "highlight CursorLineNr ctermbg=Black cterm=bold ctermfg=Green
@@ -29,12 +37,6 @@ highlight Comment cterm=italic
 " Colors
 "set termguicolors
 "colorscheme codedark
-
-" Tab settings
-set expandtab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
 
 "set cursorline
 "set cursorcolumn
