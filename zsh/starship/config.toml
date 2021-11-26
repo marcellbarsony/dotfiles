@@ -73,11 +73,11 @@ $character"""
 #"""
 
 # Prompt
-# add_newline = false
+add_newline = true
 
 # Line Break
 [line_break]
-#disabled = true
+disabled = true
 
 # Command duration
 [cmd_duration]
