@@ -3,6 +3,7 @@ alias c='clear'
 alias l='ls -la --color=auto'
 alias ls='ls --color=auto'
 alias v='nvim'
+alias vim='nvim'
 
 # Git
 alias g='git'
