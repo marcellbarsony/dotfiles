@@ -73,17 +73,17 @@ $character"""
 #"""
 
 # Prompt
-add_newline = true
+  add_newline = true
 
 # Line Break
 [line_break]
-#disabled = true
+  #disabled = true
 
 # Command duration
 [cmd_duration]
-#min_time = 2_000
-#disabled = false
+  #min_time = 2_000
+  #disabled = false
 
 # Git Branch
 [git_branch]
-always_show_remote = true
+  always_show_remote = true
