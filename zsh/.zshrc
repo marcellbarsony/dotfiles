@@ -1,9 +1,9 @@
 # Autocomplete
-  #autoload -U compinit
-  #zstyle ':completion:*' menu select
-  #zmodload zsh/complist
-  #compinit -i
-  #_comp_options+=(globdots) # Include hidden files
+  autoload -U compinit
+  zstyle ':completion:*' menu select
+  zmodload zsh/complist
+  compinit -i
+  _comp_options+=(globdots) # Include hidden files
 
 # Beep
   unsetopt beep
@@ -49,11 +49,11 @@
   #for s in ~/.config/zsh/spaceship/*; do source "$s"; done
 
 # Prompt - Starship
-  eval "$(starship init zsh)"
+   eval "$(starship init zsh)"
 
 # Source zmodules
-   # Aliases
-   for f in ~/.config/zsh/zmodules/*; do source "$f"; done
+  # Aliases
+  for f in ~/.config/zsh/zmodules/*; do source "$f"; done
 
 # VI mode
   bindkey -v
@@ -64,11 +64,11 @@
   bindkey '^e' edit-command-line # Ctrl+E
 
 # VIM - Tab complete menu bindings
-  #bindkey -M menuselect 'h' vi-backward-char
-  #bindkey -M menuselect 'k' vi-up-line-or-history
-  #bindkey -M menuselect 'l' vi-forward-char
-  #bindkey -M menuselect 'j' vi-down-line-or-history
-  #bindkey -v '^?' backward-delete-char
+  bindkey -M menuselect 'h' vi-backward-char
+  bindkey -M menuselect 'k' vi-up-line-or-history
+  bindkey -M menuselect 'l' vi-forward-char
+  bindkey -M menuselect 'j' vi-down-line-or-history
+  bindkey -v '^?' backward-delete-char
 
 # VIM - VI mode cursor
   function zle-keymap-select {
@@ -96,9 +96,6 @@
 
 # Autocomplete
 # source ~/.config/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-
-# Source zmodules if existent
-# [ -f "$HOME/.config/zsh/zmodules" ] && soure "$HOME/.config/zmodules"
 
 # ZSH prompt
 #bracket1='%B%{$fg[white]%}[%'
