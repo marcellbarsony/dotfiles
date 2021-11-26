@@ -21,7 +21,7 @@ export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export STARSHIP_CONFIG=~/.config/zsh/starship/config.toml
 
 # Fix zsh prompt issue
-export LC_TYPE=en_US-UTF-8
+export LC_CTYPE=en_US.UTF-8
 
 # Disable files
 export LESSHISTFILE=-
