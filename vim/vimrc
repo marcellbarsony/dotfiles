@@ -7,16 +7,24 @@ autocmd InsertEnter * norm zz
 " Remove trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
-" Enable spell checking
+" Spell check
 map <leader>s :setlocal spell! spelllang=en_us<CR>
 
 " Basic settings
-set mouse=a
 syntax on
-set ignorecase
-set smartcase
-set encoding=utf-8
-set number relativenumber
+set nocompatible
+set mouse=a                     " Enable mouse
+set ignorecase                  " Case sensitive matching
+set smartcase                   " Smart case matching
+set encoding=UTF-8              " Encoding
+set number relativenumber       " Relative numbers
+set showmatch                   " Show matching brackets
+set clipboard+=unnamedplus      " Use system keybard (unnamedplus/unnamed)
+
+highlight Comment cterm=italic
+"highlight CursorLine ctermbg=Blue cterm=NONE
+"highlight CursorLineNr ctermbg=Black cterm=bold ctermfg=Green
+"highlight LineNR ctermbg=black cterm=bold ctermfg=Green
 
 " Colors
 "set termguicolors
