@@ -1,7 +1,7 @@
 # Default programs
 export TERMINAL="alacritty"
-export EDITOR="vim"
-export VISUAL="vim"
+export EDITOR="nvim"
+export VISUAL="nvim"
 export BROWSER="Firefox"
 export WM="dwm"
 
