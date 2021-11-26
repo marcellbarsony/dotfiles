@@ -1,7 +1,9 @@
-alias ..='cd ..'
 alias c='clear'
 alias l='ls -la --color=auto'
 alias ls='ls --color=auto'
+
+# Navigation
+alias ..='cd ..'
 
 # NeoVim
 alias v='nvim'
