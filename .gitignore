@@ -6,6 +6,7 @@ bpytop/error.log
 cargo/
 configstore/
 dconf/
+gh/
 joplin-desktop/*
 pavucontrol.ini
 pulse/
