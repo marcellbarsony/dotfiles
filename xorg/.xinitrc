@@ -1,16 +1,19 @@
 #!/bin/sh
 
+# Monitor
+zsh /home/marci/.config/xorg/xrandr/marci_home.sh
+
 # Compositor
-#picom --experimental-backends &
+picom --experimental-backends &
 
 # Wallpaper
-xwallpaper --screen 0 --maximize $HOME/Downloads/synthwave.jpg &
+xwallpaper --screen 0 --maximize $HOME/Downloads/synthwave.jpg
 
 # X11 - Xresources
-xrdb -load ~/.config/xorg/xresources &
+#xrdb -load ~/.config/xorg/xresources &
 
 # X11 - Xmodmap
-xmodmap ~/.config/xorg/xmodmap &
+#xmodmap ~/.config/xorg/xmodmap &
 
 # Unclutter
 exec unclutter --timeout 3 &
