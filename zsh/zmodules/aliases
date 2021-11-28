@@ -1,6 +1,9 @@
 alias c='clear'
-alias l='ls -la --color=auto'
+alias l='ls -laF --color=auto'
 alias ls='ls --color=auto'
+alias mv='mv -i'
+alias rm='rm -i'
+
 
 # Navigation
 alias ..='cd ..'
@@ -8,6 +11,7 @@ alias ..='cd ..'
 # NeoVim
 alias v='nvim'
 alias nv='nvim'
+alias vim='nvim'
 
 # Git
 alias g='git'
