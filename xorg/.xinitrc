@@ -19,7 +19,8 @@ xwallpaper --screen 0 --maximize $HOME/Downloads/synthwave.jpg
 exec unclutter --timeout 3 &
 
 # Status bar
-exec slstatus &
+#exec slstatus &
+exec polybar example &
 
 # Window manager
-exec dwm
+exec leftwm
