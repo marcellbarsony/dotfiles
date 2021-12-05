@@ -20,7 +20,7 @@ exec unclutter --timeout 3 &
 
 # Status bar
 #exec slstatus &
-exec polybar example &
+#exec polybar example &
 
 # Window manager
 exec leftwm
