@@ -1,0 +1,6 @@
+#!/bin/bash
+
+killall -q lemonbar
+killall -q lemonconfig
+
+lemonconfig | lemonbar -p -g 1920x32+0+0 -F "#FFFFFFF" -B "#FF222222" -U "#268bd2" | $SHELL
