@@ -9,34 +9,40 @@ disable_current_tag_swap = false
 focus_behaviour = "Sloppy"
 focus_new_windows = true
 
+# dmenu
 [[keybind]]
 command = "Execute"
 value = "dmenu_run"
 modifier = ["modkey"]
 key = "d"
 
+# Alacritty
 [[keybind]]
 command = "Execute"
 value = "alacritty"
 modifier = ["modkey"]
 key = "Return"
 
+# Close window
 [[keybind]]
 command = "CloseWindow"
 modifier = ["modkey"]
 key = "q"
 
+# Soft reload
 [[keybind]]
 command = "SoftReload"
 modifier = ["modkey", "Shift"]
 key = "r"
 
+# Exit
 [[keybind]]
 command = "Execute"
 value = "loginctl kill-session $XDG_SESSION_ID"
 modifier = ["modkey", "Shift"]
 key = "q"
 
+# Slock
 [[keybind]]
 command = "Execute"
 value = "slock"
@@ -48,6 +54,7 @@ command = "MoveToLastWorkspace"
 modifier = ["modkey", "Shift"]
 key = "w"
 
+# Swap tags
 [[keybind]]
 command = "SwapTags"
 modifier = ["modkey"]
@@ -68,25 +75,30 @@ command = "MoveWindowTop"
 modifier = ["modkey", "Shift"]
 key = "Return"
 
+# Fucus window - Up
 [[keybind]]
 command = "FocusWindowUp"
 modifier = ["modkey"]
 key = "k"
 
+# Focus window - Down
 [[keybind]]
 command = "FocusWindowDown"
 modifier = ["modkey"]
 key = "j"
 
+# Layout - Next
 [[keybind]]
 command = "NextLayout"
 modifier = ["modkey", "Control"]
 key = "k"
 
+# Layout - Previous
 [[keybind]]
 command = "PreviousLayout"
 modifier = ["modkey", "Control"]
 key = "j"
+
 
 [[keybind]]
 command = "FocusWorkspaceNext"
