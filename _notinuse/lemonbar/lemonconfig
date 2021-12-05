@@ -1,0 +1,22 @@
+#!/bin/bash
+
+Clock(){
+  DATE=$(date "+%d/%m/%y")
+  TIME=$(date "+%I:%M:%S")
+
+  Format "${DATE} ${TIME}"
+}
+
+World(){
+  echo "Hello world"
+}
+
+Update() {
+echo -e "%{r}${DATE}"
+}
+
+while true; do
+  Update
+  sleep 5s &
+  wait
+done
