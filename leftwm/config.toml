@@ -49,6 +49,7 @@ value = "slock"
 modifier = ["modkey", "Control"]
 key = "l"
 
+# Move to last workspace
 [[keybind]]
 command = "MoveToLastWorkspace"
 modifier = ["modkey", "Shift"]
@@ -60,16 +61,19 @@ command = "SwapTags"
 modifier = ["modkey"]
 key = "w"
 
+# Move window - Up
 [[keybind]]
 command = "MoveWindowUp"
 modifier = ["modkey", "Shift"]
 key = "k"
 
+# Move window - Down
 [[keybind]]
 command = "MoveWindowDown"
 modifier = ["modkey", "Shift"]
 key = "j"
 
+# Move window - Top
 [[keybind]]
 command = "MoveWindowTop"
 modifier = ["modkey", "Shift"]
@@ -99,57 +103,67 @@ command = "PreviousLayout"
 modifier = ["modkey", "Control"]
 key = "j"
 
-
+# Focus Workspace - Next
 [[keybind]]
 command = "FocusWorkspaceNext"
 modifier = ["modkey"]
 key = "l"
 
+# Focus Workspace - Previous
 [[keybind]]
 command = "FocusWorkspacePrevious"
 modifier = ["modkey"]
 key = "h"
 
+# Move window - Up
 [[keybind]]
 command = "MoveWindowUp"
 modifier = ["modkey", "Shift"]
 key = "Up"
 
+# Move window - Down
 [[keybind]]
 command = "MoveWindowDown"
 modifier = ["modkey", "Shift"]
 key = "Down"
 
+# Focus window - Up
 [[keybind]]
 command = "FocusWindowUp"
 modifier = ["modkey"]
 key = "Up"
 
+# Focus window - Down
 [[keybind]]
 command = "FocusWindowDown"
 modifier = ["modkey"]
 key = "Down"
 
+# Layout - Next
 [[keybind]]
 command = "NextLayout"
 modifier = ["modkey", "Control"]
 key = "Up"
 
+# Layout - Previous
 [[keybind]]
 command = "PreviousLayout"
 modifier = ["modkey", "Control"]
 key = "Down"
 
+# Focus Workspace - Next
 [[keybind]]
 command = "FocusWorkspaceNext"
 modifier = ["modkey"]
 key = "Right"
 
+# Focus Workspace - Previous
 [[keybind]]
 command = "FocusWorkspacePrevious"
 modifier = ["modkey"]
 key = "Left"
 
+# Go to tag
 [[keybind]]
 command = "GotoTag"
 value = "1"
@@ -204,6 +218,7 @@ value = "9"
 modifier = ["modkey"]
 key = "9"
 
+# Move to tag
 [[keybind]]
 command = "MoveToTag"
 value = "1"
