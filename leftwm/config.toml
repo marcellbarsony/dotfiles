@@ -22,14 +22,6 @@ disable_current_tag_swap = true
 focus_behaviour = "Sloppy"
 focus_new_windows = true
 
-### TERMINAL ###
-
-[[keybind]]
-command = "Execute"
-value = "alacritty"
-modifier = ["modkey"]
-key = "Return"
-
 ### DMENU ###
 
 [[keybind]]
@@ -38,7 +30,15 @@ value = "dmenu_run"
 modifier = ["modkey"]
 key = "d"
 
-### CLOSE & EXIT ###
+### TERMINAL ###
+
+[[keybind]]
+command = "Execute"
+value = "alacritty"
+modifier = ["modkey"]
+key = "Return"
+
+### EXIT & CLOSE ###
 
 [[keybind]]
 command = "CloseWindow"
@@ -64,20 +64,7 @@ command = "MoveToLastWorkspace"
 modifier = ["modkey", "Shift"]
 key = "w"
 
-### LAYOUT ###
-
-[[keybind]]
-command = "NextLayout"
-modifier = ["modkey", "Control"]
-key = "k"
-
-[[keybind]]
-command = "PreviousLayout"
-modifier = ["modkey", "Control"]
-key = "j"
-
-### SWAP TAGS ###
-
+# Swap tags
 [[keybind]]
 command = "SwapTags"
 modifier = ["modkey"]
@@ -123,8 +110,20 @@ key = "j"
 
 [[keybind]]
 command = "MoveWindowTop"
-modifier = ["modkey", "Shift"]
+modifier = ["modkey", "Shift" ]
 key = "Return"
+
+### LAYOUT ###
+
+[[keybind]]
+command = "NextLayout"
+modifier = ["modkey", "Control"]
+key = "k"
+
+[[keybind]]
+command = "PreviousLayout"
+modifier = ["modkey", "Control"]
+key = "j"
 
 ### WORKSPACE - Focus ###
 
@@ -261,11 +260,3 @@ command = "MoveToTag"
 value = "9"
 modifier = ["modkey", "Shift"]
 key = "9"
-
-### Suckless - Slock ###
-
-[[keybind]]
-command = "Execute"
-value = "slock"
-modifier = ["modkey", "Control"]
-key = "s"
