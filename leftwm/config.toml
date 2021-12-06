@@ -64,6 +64,18 @@ command = "MoveToLastWorkspace"
 modifier = ["modkey", "Shift"]
 key = "w"
 
+### LAYOUT ###
+
+[[keybind]]
+command = "NextLayout"
+modifier = ["modkey", "Control"]
+key = "k"
+
+[[keybind]]
+command = "PreviousLayout"
+modifier = ["modkey", "Control"]
+key = "j"
+
 ### SWAP TAGS ###
 
 [[keybind]]
@@ -71,7 +83,33 @@ command = "SwapTags"
 modifier = ["modkey"]
 key = "w"
 
-### MOVE WINDOW ###
+### WINDOW - Width ###
+
+[[keybind]]
+command = "IncreaseMainWidth"
+value = "5"
+modifier = ["modkey", "Control"]
+key = "l"
+
+[[keybind]]
+command = "DecreaseMainWidth"
+value = "5"
+modifier = ["modkey", "Control"]
+key = "h"
+
+### WINDOW - Focus ###
+
+[[keybind]]
+command = "FocusWindowUp"
+modifier = ["modkey"]
+key = "k"
+
+[[keybind]]
+command = "FocusWindowDown"
+modifier = ["modkey"]
+key = "j"
+
+### WINDOW - Move ###
 
 [[keybind]]
 command = "MoveWindowUp"
@@ -88,31 +126,7 @@ command = "MoveWindowTop"
 modifier = ["modkey", "Shift"]
 key = "Return"
 
-### FOCUS WINDOW ###
-
-[[keybind]]
-command = "FocusWindowUp"
-modifier = ["modkey"]
-key = "k"
-
-[[keybind]]
-command = "FocusWindowDown"
-modifier = ["modkey"]
-key = "j"
-
-### LAYOUT ###
-
-[[keybind]]
-command = "NextLayout"
-modifier = ["modkey", "Control"]
-key = "k"
-
-[[keybind]]
-command = "PreviousLayout"
-modifier = ["modkey", "Control"]
-key = "j"
-
-### FOCUS WORKSPACE ###
+### WORKSPACE - Focus ###
 
 [[keybind]]
 command = "FocusWorkspaceNext"
@@ -124,19 +138,17 @@ command = "FocusWorkspacePrevious"
 modifier = ["modkey"]
 key = "h"
 
-### MAIN WIDTH ###
+### WORKSPACE - Move window ###
 
 [[keybind]]
-command = "IncreaseMainWidth"
-value = "5"
-modifier = ["modkey"]
-key = "a"
+command = "MoveWindowToNextWorkspace"
+modifier = ["modkey", "Shift"]
+key = "l"
 
 [[keybind]]
-command = "DecreaseMainWidth"
-value = "5"
-modifier = ["modkey"]
-key = "z"
+command = "MoveWindowToPreviousWorkspace"
+modifier = ["modkey", "Shift"]
+key = "h"
 
 ### GO TO TAG ###
 
@@ -256,4 +268,4 @@ key = "9"
 command = "Execute"
 value = "slock"
 modifier = ["modkey", "Control"]
-key = "l"
+key = "s"
