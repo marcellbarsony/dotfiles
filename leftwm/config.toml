@@ -149,6 +149,13 @@ command = "MoveWindowToPreviousWorkspace"
 modifier = ["modkey", "Shift"]
 key = "h"
 
+### FULL SCREEN ###
+
+[[keybind]]
+command = "ToggleFullScreen"
+modifier = ["modkey"]
+key = "f"
+
 ### GO TO TAG ###
 
 [[keybind]]
