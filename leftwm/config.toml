@@ -8,7 +8,7 @@ layouts = [
   "GridHorizontal",
   "EvenVertical",
   "CenterMain",
-  "CenterMainBalanced",
+  "CenterMainBalanced"
 ]
 layout_mode = "Workspace"
 scratchpad = []
