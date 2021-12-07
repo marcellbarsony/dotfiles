@@ -6,7 +6,7 @@ layouts = [
   "MainAndVertStack",
   "MainAndHorizontalStack",
   "GridHorizontal",
-  "EvenVertical",
+  "EvenHorizontal",
   "CenterMain",
   "CenterMainBalanced"
 ]
