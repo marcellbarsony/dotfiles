@@ -1,7 +1,7 @@
 modkey = "Mod4"
 mousekey = "Mod4"
 workspaces = []
-tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 layouts = [
   "MainAndVertStack",
   "MainAndHorizontalStack",
@@ -58,24 +58,18 @@ command = "MoveToLastWorkspace"
 modifier = ["modkey", "Shift"]
 key = "w"
 
-# Swap tags
-[[keybind]]
-command = "SwapTags"
-modifier = ["modkey"]
-key = "w"
-
 ### WINDOW - Width ###
 
 [[keybind]]
 command = "IncreaseMainWidth"
 value = "5"
-modifier = ["modkey", "Control"]
+modifier = ["Mod1"]
 key = "l"
 
 [[keybind]]
 command = "DecreaseMainWidth"
 value = "5"
-modifier = ["modkey", "Control"]
+modifier = ["Mod1"]
 key = "h"
 
 ### WINDOW - Focus ###
@@ -119,6 +113,29 @@ command = "PreviousLayout"
 modifier = ["modkey", "Control"]
 key = "j"
 
+[[keybind]]
+command = "RotateTag"
+modifier = ["modkey"]
+key = "z"
+
+### TAG - Focus ###
+
+[[keybind]]
+command = "FocusNextTag"
+modifier = ["modkey", "Control"]
+key = "l"
+
+[[keybind]]
+command = "FocusPreviousTag"
+modifier = ["modkey", "Control"]
+key = "h"
+
+# Swap tags
+[[keybind]]
+command = "SwapTags"
+modifier = ["modkey"]
+key = "w"
+
 ### WORKSPACE - Focus ###
 
 [[keybind]]
@@ -142,6 +159,13 @@ key = "l"
 command = "MoveWindowToPreviousWorkspace"
 modifier = ["modkey", "Shift"]
 key = "h"
+
+### FLOATING ###
+
+[[keybind]]
+command = "FloatingToTile"
+modifier = ["modkey", "Shift"]
+key = "t"
 
 ### FULL SCREEN ###
 
@@ -261,3 +285,18 @@ command = "MoveToTag"
 value = "9"
 modifier = ["modkey", "Shift"]
 key = "9"
+
+### SCRATCHPAD ###
+
+#[[scratchpad]]
+#name = "Alacritty"
+#value = "alacritty"
+#x = 860
+#y = 390
+#height = 300
+
+#[[keybind]]
+#command = "ToggleScratchPad"
+#value = "Alacritty"
+#modifier = ["modkey"]
+#key = "v"
