@@ -1,9 +1,15 @@
+# Coreutils
 alias c='clear'
-alias l='ls -laF --color=auto'
-alias ls='ls --color=auto'
+alias ls='ls -laF --color=auto'
 alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
+
+# Exa
+alias exa='exa -lahB --all --color-scale'
+
+# Lsd
+alias l='lsd -laF'
 
 # Navigation
 alias ..='cd ..'
