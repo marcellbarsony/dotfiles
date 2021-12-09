@@ -1,0 +1,65 @@
+# == Classic ==
+classic: false
+
+# == Blocks ==
+blocks:
+  - permission
+  - user
+  - group
+  - size
+  - date
+  - name
+
+# == Color ==
+color:
+  when: always
+  theme: colortheme
+
+# == Date ==
+date: '+%a %d %b %Y %X'
+
+# == Dereference ==
+dereference: false
+
+# == Display ==
+display: all
+
+# == Icons ==
+icons:
+  when: auto
+  theme: fancy
+  separator: " "
+
+# == Ignore Globs ==
+# ignore-globs:
+#   - .git
+
+# == Indicators ==
+indicators: false
+
+# == Layout ==
+layout: grid
+
+# == Recursion ==
+recursion:
+  enabled: false
+  # depth: 3
+
+# == Size ==
+size: default
+
+# == Sorting ==
+sorting:
+  column: name
+  reverse: false
+  dir-grouping: none
+
+# == No Symlink ==
+no-symlink: false
+
+# == Total size ==
+total-size: false
+
+# == Symlink arrow ==
+symlink-arrow: ⇒
+
