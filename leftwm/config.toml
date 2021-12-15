@@ -11,7 +11,7 @@ layouts = [
   "CenterMainBalanced"
 ]
 layout_mode = "Workspace"
-scratchpad = []
+#scratchpad = []
 disable_current_tag_swap = true
 focus_behaviour = "Sloppy"
 focus_new_windows = true
@@ -31,6 +31,22 @@ command = "Execute"
 value = "alacritty"
 modifier = ["modkey"]
 key = "Return"
+
+### SCRATCHPAD ###
+
+[[scratchpad]]
+name = "Alacritty"
+value = "alacritty"
+x = 320
+y = 180
+height = 720
+width = 1280
+
+[[keybind]]
+command = "ToggleScratchPad"
+value = "Alacritty"
+modifier = ["modkey"]
+key = "v"
 
 ### EXIT & CLOSE ###
 
@@ -83,6 +99,12 @@ key = "k"
 command = "FocusWindowDown"
 modifier = ["modkey"]
 key = "j"
+
+[[keybind]]
+command = "FocusWindowTop"
+modifier = ["modkey"]
+value = "false"
+key = "m"
 
 ### WINDOW - Move ###
 
@@ -286,17 +308,3 @@ value = "9"
 modifier = ["modkey", "Shift"]
 key = "9"
 
-### SCRATCHPAD ###
-
-#[[scratchpad]]
-#name = "Alacritty"
-#value = "alacritty"
-#x = 860
-#y = 390
-#height = 300
-
-#[[keybind]]
-#command = "ToggleScratchPad"
-#value = "Alacritty"
-#modifier = ["modkey"]
-#key = "v"
