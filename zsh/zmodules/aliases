@@ -18,6 +18,9 @@ alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 
+# Neofetch
+alias nf='neofetch'
+
 # NeoVim
 alias v='nvim'
 alias nv='nvim'
