@@ -1,7 +1,7 @@
 " Leader key
 let mapleader=" "
 
-" Vertically center document - Insert mode
+" Center document vertically - Insert mode
 autocmd InsertEnter * norm zz
 
 " Remove trailing whitespace on save
@@ -11,7 +11,8 @@ autocmd BufWritePre * %s/\s\+$//e
 map <leader>s :setlocal spell! spelllang=en_us<CR>
 
 " Basic settings
-syntax on
+syntax enable
+filetype plugin on
 set nocompatible
 set mouse=a                     " Enable mouse
 set ignorecase                  " Case sensitive matching
@@ -40,12 +41,20 @@ set termguicolors
 
 " Cursor
 set cursorline
-"set cursorcolumn
+set cursorcolumn
 highlight CursorLine ctermbg=Yellow cterm=bold guibg=#101010
-"highlight CursorColumn ctermbg=Yellow cterm=bold guibg=#2b2b2b
+highlight CursorColumn ctermbg=Yellow cterm=bold guibg=#0A0A0A
 
 " Autocompletion
 set wildmode=longest,list,full
 
 " Fix splitting
 set splitbelow splitright
+
+" How to do 90% of what plugins do (with just Vim)
+" https://www.youtube.com/watch?v=XA2WjJbmmoM
+" Finding files
+set path+=**
+set wildmenu
+" Tag jumping
+command! MakeTags !ctags -R .
