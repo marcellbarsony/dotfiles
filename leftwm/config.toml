@@ -53,7 +53,7 @@ key = "v"
 [[keybind]]
 command = "CloseWindow"
 modifier = ["modkey"]
-key = "q"
+key = "x"
 
 [[keybind]]
 command = "Execute"
