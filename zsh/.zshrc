@@ -3,6 +3,7 @@
   zstyle ':autocomplete:*' min-input 2
   zstyle ':autocomplete:*' ignored-input '..##'
   zstyle ':autocomplete:*' widget-style menu-select
+  zstyle ':autocomplete:*' insert-unambiguous yes
 
 # Beep
   unsetopt beep
