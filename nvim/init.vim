@@ -1,14 +1,8 @@
 " Leader key
 let mapleader=" "
 
-" Center document vertically - Insert mode
-autocmd InsertEnter * norm zz
-
-" Remove trailing whitespace on save
-autocmd BufWritePre * %s/\s\+$//e
-
-" Spell check
-map <leader>s :setlocal spell! spelllang=en_us<CR>
+" Autocompletion
+set wildmode=longest,list,full
 
 " Basic settings
 syntax enable
@@ -22,18 +16,8 @@ set number relativenumber       " Relative numbers
 set showmatch                   " Show matching brackets
 set clipboard+=unnamedplus      " Use system clipboard (unnamedplus/unnamed)
 
-" Indentation
-set autoindent
-set expandtab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
-
-" Highlight
-highlight Comment cterm=italic
-"highlight CursorLine ctermbg=Blue cterm=NONE
-"highlight CursorLineNr ctermbg=Black cterm=bold ctermfg=Green
-"highlight LineNR ctermbg=black cterm=bold ctermfg=Green
+" Center document vertically - Insert mode
+autocmd InsertEnter * norm zz
 
 " Colors
 set termguicolors
@@ -45,15 +29,33 @@ set cursorcolumn
 highlight CursorLine ctermbg=Yellow cterm=bold guibg=#191A2F
 highlight CursorColumn ctermbg=Yellow cterm=bold guibg=#191A2F
 
-" Fix indenting visual block
+:set guicursor=n-v-c:block,i-ci-ve:hor25,r-cr:hor20,o:hor50,a:blinkwait1000-blinkoff1000-blinkon1000-Cursor/lCursor
+
+" Fix indenting in VB mode
 vmap < <gv
 vmap > >gv
 
-" Autocompletion
-set wildmode=longest,list,full
-
 " Fix splitting
 set splitbelow splitright
+
+" Highlight
+highlight Comment cterm=italic
+"highlight CursorLine ctermbg=Blue cterm=NONE
+"highlight CursorLineNr ctermbg=Black cterm=bold ctermfg=Green
+"highlight LineNR ctermbg=black cterm=bold ctermfg=Green
+
+" Indentation
+set autoindent
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+
+" Remove trailing whitespace on save
+autocmd BufWritePre * %s/\s\+$//e
+
+" Spell check
+map <leader>s :setlocal spell! spelllang=en_us<CR>
 
 " How to do 90% of what plugins do (with just Vim)
 " https://www.youtube.com/watch?v=XA2WjJbmmoM
