@@ -1,9 +1,9 @@
 # Autocomplete
   source ~/.local/src/zsh-autocomplete/zsh-autocomplete.plugin.zsh
   zstyle ':autocomplete:*' min-input 2
-  zstyle ':autocomplete:*' ignored-input '..##'
   zstyle ':autocomplete:*' widget-style menu-select
   zstyle ':autocomplete:*' insert-unambiguous yes
+  zstyle ':autocomplete:*' ignored-input '..'
 
 # Beep
   unsetopt beep
