@@ -28,10 +28,12 @@ alias vim='nvim'
 
 # Git
 alias g='git'
-alias gs='git status'
+alias gst='git status'
+alias gstat='git status'
 alias ga='git add'
 alias gp='git push'
 alias gc='git commit -m'
+alias gcl='git clone'
 
 # Pacman & Paru
 alias pacsyu='sudo pacman -Syu'
