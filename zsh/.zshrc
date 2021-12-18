@@ -15,12 +15,6 @@
 # https://i.stack.imgur.com/UQVe5.png
   autoload -U colors && colors
 
-# Cursor
-# Beam on startup
-  echo -ne '\e[5 q'
-# Beam for new prompt
-  preexec() { echo -ne '\e[5 q' ;}
-
 # Git
   autoload -U vcs_info
   precmd() { vcs_info }
@@ -55,9 +49,10 @@
   bindkey -v
   export KEYTIMEOUT=1
 
-# VIM - Edit line in Vim
-  autoload edit-command-line; zle -N edit-command-line
-  bindkey '^e' edit-command-line # Ctrl+E
+# VIM - Edit line in Vim (Ctrl+E)
+  autoload edit-command-line
+  zle -N edit-command-line
+  bindkey '^e' edit-command-line
 
 # VIM - Tab complete menu bindings
   bindkey -v '^?' backward-delete-char
@@ -76,28 +71,28 @@
          [[ ${KEYMAP} == viins ]] ||
          [[ ${KEYMAP} = '' ]] ||
          [[ $1 = 'beam' ]]; then
-      echo -ne '\e[5 q'
+      echo -ne '\e[3 q'
     fi
   }
+
   zle -N zle-keymap-select
-  zle-line-init() {
-# initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
-      zle -K viins
-      echo -ne "\e[5 q"
-  }
   zle -N zle-line-init
+  zle-line-init() {
+      echo -ne "\e[3 q"
+  }
+
+  preexec() {
+    echo -ne '\e[3 q'
+  }
+
+  # 0 - Block (blinking)
+  # 1 - Block (blinking, default)
+  # 2 - Block (static)
+  # 3 - Underline (blinking)
+  # 4 - Underline (static)
+  # 5 - Bar (blinking)
+  # 6 - Bar (static)
 
 # Load zsh-syntax-highlighting (should be last)
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
-# Not In Use
-
-# Autosuggestions
-# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-#
-# Autocomplete
-#  autoload -U compinit
-#  zstyle ':completion:*' menu select
-#  zmodload zsh/complist
-#  compinit -i
-#  _comp_options+=(globdots) # Include hidden files
