@@ -42,8 +42,12 @@ set termguicolors
 " Cursor
 set cursorline
 set cursorcolumn
-highlight CursorLine ctermbg=Yellow cterm=bold guibg=#101010
-highlight CursorColumn ctermbg=Yellow cterm=bold guibg=#0A0A0A
+highlight CursorLine ctermbg=Yellow cterm=bold guibg=#191A2F
+highlight CursorColumn ctermbg=Yellow cterm=bold guibg=#191A2F
+
+" Fix indenting visual block
+vmap < <gv
+vmap > >gv
 
 " Autocompletion
 set wildmode=longest,list,full
