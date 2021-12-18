@@ -7,7 +7,7 @@ zsh /home/marci/.config/xorg/xrandr/marci_home.sh
 picom --experimental-backends &
 
 # Wallpaper
-xwallpaper --screen 0 --maximize $HOME/Downloads/synthwave.jpg
+xwallpaper --screen 0 --maximize $HOME/Downloads/Wallpapers/4K/Synthwave/4k_cyberpunk_city.jpg
 
 # X11 - Xresources
 #xrdb -load ~/.config/xorg/xresources &
@@ -17,10 +17,6 @@ xwallpaper --screen 0 --maximize $HOME/Downloads/synthwave.jpg
 
 # Unclutter
 exec unclutter --timeout 3 &
-
-# Status bar
-#exec slstatus &
-#exec polybar example &
 
 # Window manager
 exec leftwm
