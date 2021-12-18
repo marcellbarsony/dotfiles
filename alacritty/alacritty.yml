@@ -142,16 +142,16 @@ schemes:
     # Default colors
     primary:
       background: '0x101327'
-      foreground: '0xE9E1FA'
+      foreground: '0xEAEAFA'
 
     # Normal colors
     normal:
       black:   '0x32344a'
-      red:     '0xf7768e'
+      red:     '0xF87689'
       green:   '0x9ece6a'
       yellow:  '0xe0af68'
       blue:    '0x7aa2f7'
-      magenta: '0xad8ee6'
+      magenta: '0xbd9ef6'
       cyan:    '0x449dab'
       white:   '0x9699a8'
 
