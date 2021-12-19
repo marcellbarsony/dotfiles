@@ -22,11 +22,13 @@ set viminfofile=$XDG_CONFIG_HOME/nvim/viminfo
 
 # Cargo
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export PATH=/home/marci/.local/share/cargo/bin:$PATH
 #path+=('$HOME/.local/bin')
 #path+=('$HOME/.local/share/cargo/bin')
 #export PATH
 
-export PATH=/home/marci/.local/share/cargo/bin:$PATH
+# Scripts
+export PATH=$HOME/.config/dmenu_rs:$PATH
 
 # Fix zsh prompt issue
 export LC_CTYPE=en_US.UTF-8
