@@ -16,13 +16,20 @@ disable_current_tag_swap = true
 focus_behaviour = "Sloppy"
 focus_new_windows = true
 
-### DMENU ###
+### DMENU-RS ###
 
 [[keybind]]
 command = "Execute"
-value = "dmenu_run"
+value = "dmenu_run --nb \"#111111\" --nf \"#FFFFFF\" --sb \"#F242FF\" --sf \"#000000\" --render_minheight 28 --render_flex --insensitive"
 modifier = ["modkey"]
 key = "d"
+
+# Wallpaper
+[[keybind]]
+command = "Execute"
+value = "wallpaper"
+modifier = ["modkey"]
+key = "g"
 
 ### TERMINAL ###
 
@@ -31,6 +38,14 @@ command = "Execute"
 value = "alacritty"
 modifier = ["modkey"]
 key = "Return"
+
+### BROWSER ###
+
+[[keybind]]
+command = "Execute"
+value = "librewolf"
+modifier = ["modkey"]
+key = "b"
 
 ### SCRATCHPAD ###
 
@@ -48,18 +63,18 @@ value = "Alacritty"
 modifier = ["modkey"]
 key = "v"
 
-### EXIT & CLOSE ###
+### POWER MENU & EXIT ###
+
+[[keybind]]
+command = "Execute"
+value = "powermenu"
+modifier = ["modkey"]
+key = "q"
 
 [[keybind]]
 command = "CloseWindow"
 modifier = ["modkey"]
 key = "x"
-
-[[keybind]]
-command = "Execute"
-value = "loginctl kill-session $XDG_SESSION_ID"
-modifier = ["modkey", "Shift"]
-key = "q"
 
 ### RELOAD ###
 
