@@ -1,0 +1,47 @@
+#!/bin/sh
+
+# Set random wallpaper
+
+# Variables
+prompt="Wallpaper"
+wpdir="$HOME/Downloads/Wallpapers"
+scenario2="echo Next wallpaper"
+
+# dmenu-rs theme
+nb="#111111"
+nf="#FFFFFF"
+sb="#F243FF"
+sf="#000000"
+px=28
+
+select=$(printf "Random\nNext" | dmenu -i --nb $nb --nf $nf --sb $sb --sf $sf --render_minheight $px -p "$prompt")
+
+if [ "$select" = "Random" ]; then
+
+  # Array content
+  arr=( $(find $wpdir* -type f) )
+
+  # Print array content
+  echo ${arr[*]}
+
+  # Count array length
+  arrlength=${#arr[*]}
+  echo $arrlength
+
+  # Random number based on $arrlength
+  rndm=$((1 + $RANDOM % $arrlength))
+  echo $rndm
+
+  # Select array element based on random number
+  wall=${arr[$rndm]}
+  echo "The wallpaper path is: $wall"
+
+  # Set wallpaper
+  xwallpaper --screen 0 --maximize $wall
+
+  elif [ "$select" = "Next" ]; then
+    $scenario2
+  else
+    echo "Wallpaper terminated" && exit 1
+fi
+
