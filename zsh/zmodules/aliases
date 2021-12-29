@@ -9,8 +9,8 @@ alias cp='cp -i'
 alias exa='exa -lahB --all --color-scale'
 
 # Folders
-alias home='cd $HOME && l'
-alias cfg='cd $HOME/.config && l'
+alias home='clear && cd $HOME && l'
+alias cfg='clear && cd $HOME/.config && l'
 
 # Lsd
 alias l='lsd -laF'
