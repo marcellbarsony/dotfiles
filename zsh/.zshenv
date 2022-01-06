@@ -2,8 +2,8 @@
 export TERMINAL="alacritty"
 export EDITOR="nvim"
 export VISUAL="nvim"
-export BROWSER="Firefox"
-export WM="dwm"
+export BROWSER="Librewolf"
+export WM="leftwm"
 
 # XDG paths
 export XDG_CONFIG_HOME="$HOME/.config"
