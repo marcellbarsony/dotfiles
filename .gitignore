@@ -30,6 +30,7 @@ rbw/
 
 ### Spotify ###
 spotify-tui/client.yml
+spotify-tui/.spotify_token_cache.json
 spotifyd/spotifyd.conf
 
 ### VS Codium ###
