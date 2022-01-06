@@ -1,18 +1,40 @@
+### Bitwarden CLI ###
+Bitwarden CLI/data.json
+
+### Bpytop ###
+bpytop/error.log
+
+### Cargo ###
+cargo/
+
+### Configstore ###
+configstore/
+
+### Dconf ###
+dconf/
+
+### GitHub ###
+gh/
+
+### Joplin
 !joplin-desktop/
 !joplin-desktop/settings.json
 @joplin/
-Bitwarden CLI/data.json
-bpytop/error.log
-cargo/
-configstore/
-dconf/
-gh/
 joplin-desktop/*
+
+### Pulse Audio ###
 pavucontrol.ini
-pulse/
+
+### Rust Bitwarden ###
 rbw/
+
+### Spotify ###
 spotify-tui/client.yml
 spotifyd/spotifyd.conf
+
+### VS Codium ###
 VSCodium/
+
+### ZSH ###
 zsh/.zcompdump
 zsh/.zsh_history
