@@ -12,6 +12,9 @@ alias exa='exa -lahB --all --color-scale'
 alias home='clear && cd $HOME && l'
 alias cfg='clear && cd $HOME/.config && l'
 
+# Grep
+alias grep='grep --color=auto'
+
 # Lsd
 alias l='lsd -laF'
 
@@ -44,5 +47,6 @@ alias gcl='git clone'
 alias pacsyu='sudo pacman -Syu'
 alias parusy='sudo pary -Sy'
 
-# Grep
-alias grep='grep --color=auto'
+# Spotify
+alias spotify='spt'
+
