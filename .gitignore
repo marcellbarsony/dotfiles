@@ -11,6 +11,8 @@ joplin-desktop/*
 pavucontrol.ini
 pulse/
 rbw/
+spotify-tui/client.yml
+spotifyd/spotifyd.conf
 VSCodium/
 zsh/.zcompdump
 zsh/.zsh_history
