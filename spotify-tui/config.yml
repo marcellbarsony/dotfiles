@@ -41,14 +41,11 @@ behavior:
 
 keybindings:
   # Key stroke can be used if it only uses two keys:
-  # ctrl-q works,
-  # ctrl-alt-q doesn't.
   back: "ctrl-q"
 
   jump_to_album: "a"
 
-  # Shift modifiers use a capital letter (also applies with other modifier keys
-  # like ctrl-A)
+  # Shift modifiers use a capital letter (also applies with other modifier keys, like ctrl-A)
   jump_to_artist_album: "A"
 
   manage_devices: "d"
