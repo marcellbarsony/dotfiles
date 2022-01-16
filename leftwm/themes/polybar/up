@@ -16,7 +16,10 @@ elif [ -x "$(command -v compton)" ]; then
 fi
 
 # Set the theme.toml config
-echo "LoadTheme $SCRIPTPATH/theme.toml" > $XDG_RUNTIME_DIR/leftwm/commands.pipe
+#Issue #652 - https://github.com/leftwm/leftwm/issues/652
+#echo "LoadTheme $SCRIPTPATH/theme.toml" > $XDG_RUNTIME_DIR/leftwm/commands.pipe
+leftwm command "LoadTheme $HOME/.config/leftwm/themes/current/theme.toml"
+
 
 # Set background
 if [ -x "$(command -v feh)" ]; then
