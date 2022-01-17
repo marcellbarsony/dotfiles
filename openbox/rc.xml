@@ -68,10 +68,10 @@
 </theme>
 
 <desktops>
-  <number>4</number>
+  <number>9</number>
   <firstdesk>1</firstdesk>
   <names>
-    <name>desktop 2</name>
+    <name>desktop 1</name>
   </names>
   <popupTime>875</popupTime>
 </desktops>
@@ -109,50 +109,65 @@
 <keyboard>
   <chainQuitKey>C-g</chainQuitKey>
 
-  <keybind key="C-A-Left">
+  <keybind key="W-C-h">
     <action name="GoToDesktop"><to>left</to><wrap>no</wrap></action>
   </keybind>
-  <keybind key="C-A-Right">
+  <keybind key="W-C-l">
     <action name="GoToDesktop"><to>right</to><wrap>no</wrap></action>
   </keybind>
-  <keybind key="C-A-Up">
+  <keybind key="W-C-k">
     <action name="GoToDesktop"><to>up</to><wrap>no</wrap></action>
   </keybind>
-  <keybind key="C-A-Down">
+  <keybind key="W-C-j">
     <action name="GoToDesktop"><to>down</to><wrap>no</wrap></action>
   </keybind>
-  <keybind key="S-A-Left">
+  <keybind key="W-S-h">
     <action name="SendToDesktop"><to>left</to><wrap>no</wrap></action>
   </keybind>
-  <keybind key="S-A-Right">
+  <keybind key="W-S-l">
     <action name="SendToDesktop"><to>right</to><wrap>no</wrap></action>
   </keybind>
-  <keybind key="S-A-Up">
+  <keybind key="W-S-k">
     <action name="SendToDesktop"><to>up</to><wrap>no</wrap></action>
   </keybind>
-  <keybind key="S-A-Down">
+  <keybind key="W-S-j">
     <action name="SendToDesktop"><to>down</to><wrap>no</wrap></action>
   </keybind>
-  <keybind key="W-F1">
+  <keybind key="W-1">
     <action name="GoToDesktop"><to>1</to></action>
   </keybind>
-  <keybind key="W-F2">
+  <keybind key="W-2">
     <action name="GoToDesktop"><to>2</to></action>
   </keybind>
-  <keybind key="W-F3">
+  <keybind key="W-3">
     <action name="GoToDesktop"><to>3</to></action>
   </keybind>
-  <keybind key="W-F4">
+  <keybind key="W-4">
     <action name="GoToDesktop"><to>4</to></action>
   </keybind>
-  <keybind key="W-d">
+  <keybind key="W-5">
+    <action name="GoToDesktop"><to>5</to></action>
+  </keybind>
+  <keybind key="W-6">
+    <action name="GoToDesktop"><to>6</to></action>
+  </keybind>
+  <keybind key="W-7">
+    <action name="GoToDesktop"><to>7</to></action>
+  </keybind>
+  <keybind key="W-8">
+    <action name="GoToDesktop"><to>8</to></action>
+  </keybind>
+  <keybind key="W-9">
+    <action name="GoToDesktop"><to>9</to></action>
+  </keybind>
+  <keybind key="W-z">
     <action name="ToggleShowDesktop"/>
   </keybind>
 
-  <keybind key="A-F4">
+  <keybind key="W-x">
     <action name="Close"/>
   </keybind>
-  <keybind key="A-Escape">
+  <keybind key="W-a">
     <action name="Lower"/>
     <action name="FocusToBottom"/>
     <action name="Unfocus"/>
@@ -161,7 +176,7 @@
     <action name="ShowMenu"><menu>client-menu</menu></action>
   </keybind>
 
-  <keybind key="A-Tab">
+  <keybind key="W-w">
     <action name="NextWindow">
       <finalactions>
         <action name="Focus"/>
@@ -179,7 +194,7 @@
       </finalactions>
     </action>
   </keybind>
-  <keybind key="C-A-Tab">
+  <keybind key="A-Tab">
     <action name="NextWindow">
       <panels>yes</panels><desktop>yes</desktop>
       <finalactions>
@@ -190,34 +205,52 @@
     </action>
   </keybind>
 
-  <keybind key="W-S-Right">
+  <keybind key="W-l">
     <action name="DirectionalCycleWindows">
       <direction>right</direction>
     </action>
   </keybind>
-  <keybind key="W-S-Left">
+  <keybind key="W-h">
     <action name="DirectionalCycleWindows">
       <direction>left</direction>
     </action>
   </keybind>
-  <keybind key="W-S-Up">
+  <keybind key="W-k">
     <action name="DirectionalCycleWindows">
       <direction>up</direction>
     </action>
   </keybind>
-  <keybind key="W-S-Down">
+  <keybind key="W-j">
     <action name="DirectionalCycleWindows">
       <direction>down</direction>
     </action>
   </keybind>
 
-  <keybind key="W-e">
+  <keybind key="W-Return">
     <action name="Execute">
       <startupnotify>
         <enabled>true</enabled>
-        <name>Konqueror</name>
+        <name>alacritty</name>
       </startupnotify>
-      <command>kfmclient openProfile filemanagement</command>
+      <command>alacritty</command>
+    </action>
+  </keybind>
+  <keybind key="W-d">
+    <action name="Execute">
+      <startupnotify>
+        <enabled>true</enabled>
+        <name>dmenu-rs</name>
+      </startupnotify>
+      <command>dmenu_run</command>
+    </action>
+  </keybind>
+  <keybind key="W-b">
+    <action name="Execute">
+      <startupnotify>
+        <enabled>true</enabled>
+        <name>LibreWolf</name>
+      </startupnotify>
+      <command>librewolf</command>
     </action>
   </keybind>
 </keyboard>
