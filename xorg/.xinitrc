@@ -19,4 +19,5 @@ xwallpaper --screen 0 --maximize $HOME/Downloads/Wallpapers/4K/Synthwave/4k_cybe
 exec unclutter --timeout 3 &
 
 # Window manager
-exec leftwm
+exec openbox-session
+# exec lefwm

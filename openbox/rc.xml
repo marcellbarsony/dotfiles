@@ -241,7 +241,7 @@
         <enabled>true</enabled>
         <name>dmenu-rs</name>
       </startupnotify>
-      <command>dmenu_run</command>
+      <command>dmenu_run --nb "#111111" --nf "#FFFFFF" --sb "#F242FF" --sf "#000000" --render_minheight 28 --render_flex --insensitive</command>
     </action>
   </keybind>
   <keybind key="W-b">
