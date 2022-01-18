@@ -2,29 +2,6 @@
 
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
 
-<menu id="apps-accessories-menu" label="Accessories">
-  <item label="Calculator">
-    <action name="Execute">
-      <command>gnome-calculator</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-</menu>
-
-<menu id="apps-editors-menu" label="Editors">
-  <item label="nVim">
-    <action name="Execute">
-      <command>nvim</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-        <wmclass>nVim</wmclass>
-      </startupnotify>
-    </action>
-  </item>
-</menu>
-
 <menu id="apps-term-menu" label="Terminals">
   <item label="Alacritty">
     <action name="Execute">
@@ -42,47 +19,15 @@
       <command>librewolf</command>
       <startupnotify>
         <enabled>yes</enabled>
-        <wmclass>librewolf</wmclass>
       </startupnotify>
     </action>
   </item>
 </menu>
 
-<menu id="apps-office-menu" label="Office">
-  <item label="OpenOffice Base">
+<menu id="apps-ccna-menu" label="CCNA">
+  <item label="PacketTracer">
     <action name="Execute">
-      <command>ooffice -base</command>
-    </action>
-  </item>
-</menu>
-
-<menu id="apps-multimedia-menu" label="Multimedia">
-  <item label="MPlayer">
-    <action name="Execute">
-      <command>gmplayer</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-        <wmclass>MPlayer</wmclass>
-      </startupnotify>
-    </action>
-  </item>
-</menu>
-
-<menu id="apps-fileman-menu" label="File Managers">
-  <item label="Nautilus">
-    <action name="Execute">
-      <command>nautilus --no-desktop --browser</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-</menu>
-
-<menu id="apps-graphics-menu" label="Graphics">
-  <item label="Gimp">
-    <action name="Execute">
-      <command>gimp</command>
+      <command>packettracer</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -105,14 +50,9 @@
 
 <menu id="root-menu" label="Openbox 3">
   <separator label="Applications" />
-  <menu id="apps-accessories-menu"/>
-  <menu id="apps-editors-menu"/>
-  <menu id="apps-graphics-menu"/>
-  <menu id="apps-net-menu"/>
-  <menu id="apps-office-menu"/>
-  <menu id="apps-multimedia-menu"/>
   <menu id="apps-term-menu"/>
-  <menu id="apps-fileman-menu"/>
+  <menu id="apps-net-menu"/>
+  <menu id="apps-ccna-menu"/>
   <separator label="System" />
   <menu id="system-menu"/>
   <separator />

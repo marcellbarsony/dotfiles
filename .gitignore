@@ -25,6 +25,9 @@ joplin-desktop/*
 ### Pulse Audio ###
 pavucontrol.ini
 
+### QtProject
+QtProject.conf
+
 ### Rust Bitwarden ###
 rbw/
 

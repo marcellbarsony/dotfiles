@@ -25,10 +25,10 @@
 </placement>
 
 <theme>
-  <name>Clearlooks</name>
+  <name>openbox1</name>
   <titleLayout>NLIMC</titleLayout>
-  <keepBorder>yes</keepBorder>
-  <animateIconify>yes</animateIconify>
+  <keepBorder>no</keepBorder>
+  <animateIconify>no</animateIconify>
   <font place="ActiveWindow">
     <name>sans</name>
     <size>8</size>
@@ -87,10 +87,10 @@
 </resize>
 
 <margins>
-  <top>0</top>
-  <bottom>0</bottom>
-  <left>0</left>
-  <right>0</right>
+  <top>10</top>
+  <bottom>45</bottom>
+  <left>10</left>
+  <right>10</right>
 </margins>
 
 <dock>
