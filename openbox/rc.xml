@@ -26,7 +26,7 @@
 
 <theme>
   <name>openbox1</name>
-  <titleLayout>NLIMC</titleLayout>
+  <titleLayout>IMC</titleLayout>
   <keepBorder>no</keepBorder>
   <animateIconify>no</animateIconify>
   <font place="ActiveWindow">
@@ -95,10 +95,10 @@
 </resize>
 
 <margins>
-  <top>10</top>
-  <bottom>45</bottom>
-  <left>10</left>
-  <right>10</right>
+  <top>22</top>
+  <bottom>22</bottom>
+  <left>0</left>
+  <right>0</right>
 </margins>
 
 <dock>

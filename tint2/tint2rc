@@ -60,9 +60,9 @@ border_color_pressed = #000000 100
 #-------------------------------------
 # Panel
 panel_items = ST
-panel_size = 100% 30
+panel_size = 100% 22
 panel_margin = 0 0
-panel_padding = 3 3
+panel_padding = 0 0
 panel_background_id = 1
 wm_menu = 1
 panel_dock = 0
@@ -101,16 +101,16 @@ taskbar_name_font_color = #e3e3e3 100
 taskbar_name_active_font_color = #ffffff 100
 taskbar_distribute_size = 0
 taskbar_sort_order = none
-task_align = center
+task_align = left
 
 #-------------------------------------
 # Task
 task_text = 1
 task_icon = 0
-task_centered = 1
+task_centered = 0
 urgent_nb_of_blink = 100000
-task_maximum_size = 150 35
-task_padding = 2 2 4
+task_maximum_size = 200 35
+task_padding = 5 4
 task_tooltip = 0
 task_thumbnail = 0
 task_thumbnail_size = 210

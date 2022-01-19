@@ -1,6 +1,6 @@
 [colors]
 background = #272E32
-background-alt = #373B41
+background-alt = #74AC67
 foreground = #EEEEEE
 primary = #74AC67
 secondary = #649C57
@@ -10,7 +10,7 @@ disabled = #707880
 [bar/example]
 monitor = ${env:MONITOR:}
 width = 100%
-height = 2.5%
+height = 22
 radius = 0
 
 background = ${colors.background}
@@ -19,7 +19,10 @@ foreground = ${colors.foreground}
 line-size = 2
 
 border-size = 0
-border-color = #00000000
+border-color = #000000
+
+border-bottom-size = 2
+border-bottom-color = #74AC67
 
 padding-left = 0
 padding-right = 0
@@ -129,7 +132,7 @@ label-disconnected = %{F#F0C674}%ifname%%{F#707880} disconnected
 [module/wlan]
 inherit = network-base
 interface-type = wireless
-label-connected = %{F#F0C674}%ifname%%{F-} %essid%%
+label-connected = %{F#F0C674}%ifname%%{F-} %essid%
 
 [module/eth]
 inherit = network-base
