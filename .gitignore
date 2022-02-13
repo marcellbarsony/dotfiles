@@ -39,6 +39,14 @@ spotifyd/spotifyd.conf
 ### VS Codium ###
 VSCodium/
 
+### Wireshark
+wireshark/decode_as_entries
+wireshark/expert_severity
+wireshark/language
+wireshark/profiles/
+wireshark/recent
+wireshark/recent_common
+
 ### ZSH ###
 zsh/.zcompdump
 zsh/.zsh_history
