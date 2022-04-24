@@ -31,7 +31,7 @@ spotify-tui/.spotify_token_cache.json
 spotifyd/spotifyd.conf
 
 ### VS Codium ###
-vscodium/
+# vscodium/
 
 ### Wireshark
 wireshark/decode_as_entries
