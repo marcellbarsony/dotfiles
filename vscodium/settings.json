@@ -1,17 +1,15 @@
 {
-// DIFF Editor
-  "diffeditor.renderSideBySide": false,
-
-  "diffeditor.wordWrap": "on",
+  // DIFF Editor
+  "diffEditor.renderSideBySide": true,
+  "diffEditor.wordWrap": "on",
 
   // Editor
-
   "editor.acceptSuggestionOnEnter": "off",
 
   // Screen Reader
   "editor.accessibilitySupport": "off",
 
-  // Auto Closing
+  // Auto Cloing
   "editor.autoClosingDelete": "auto",
   "editor.autoClosingOvertype": "auto",
   "editor.autoClosingQuotes": "languageDefined",
@@ -22,7 +20,8 @@
   // Auto Surround
   "editor.autoSurround": "languageDefined",
 
-  // Use `workbench.colorCustomizations` to override the bracket highlight colors
+  // Bracket Pair Colorization
+  // Controls whether bracket pair colorization is enabled or not. Use `workbench.colorCustomizations` to override the bracket highlight colors.
   "editor.bracketPairColorization.enabled": true,
 
   // Cursor
@@ -126,430 +125,128 @@
   // Sticky Tab Stops
   "editor.stickyTabStops": false,
 
-  // Suggestion
-    "editor.suggest": {
-    "filterGraceful": true,
-    "insertMode": "insert",
-    "localityBonus": false,
-    "preview": false,
-    "shareSuggestSelections": false,
-    "showClasses": true,
-    "showColors": true,
-    "showConstants": true,
-    "showConstructors": true,
-    "showCustomcolors": true,
-    "showDeprecated": true,
-    "showEnumMembers": true,
-    "showEnums": true,
-    "showEvents": true,
-    "showFields": true,
-    "showFiles": true,
-    "showFolders": true,
-    "showFunctions": true,
-    "showIcons": true,
-    "showInlineDetails": true,
-    "showInterfaces": true,
-    "showIssues": true,
-    "showKeywords": true,
-    "editor.suggest.showMethods": true,
-    "showModules": true,
-    "showOperators": true,
-    "showProperties": true,
-    "showReferences": true,
-    "showSnippets": true,
-    "showStatusBar": false,
-    "showStructs": true,
-    "showTypeParameters": true,
-    "showUnits": true,
-    "showUsers": true,
-    "showValues": true,
-    "showVariables": true,
-    "showWords": true,
-    "snippetsPreventQuickSuggestions": true
-    },
+  // Controls whether suggestions should automatically show up while typing.
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "on",
+    "strings": "on"
+  },
 
-  // Suggestion
-  "editor.suggestFontSize": 0,
-  "editor.suggestLineHeight": 0,
-  "editor.suggestOnTriggerCharacters": true,
-  "editor.suggestSelection": "first",
+  // Suggestions
+  "editor.suggest.filterGraceful": true,
+  "editor.suggest.insertMode": "insert",
+  "editor.suggest.localityBonus": false,
+  "editor.suggest.preview": false,
+  "editor.suggest.shareSuggestSelections": false,
+  "editor.suggest.showClasses": true,
+  "editor.suggest.showColors": true,
+  "editor.suggest.showConstants": true,
+  "editor.suggest.showConstructors": true,
+  "editor.suggest.showCustomcolors": true,
+  "editor.suggest.showDeprecated": true,
+  "editor.suggest.showEnumMembers": true,
+  "editor.suggest.showEnums": true,
+  "editor.suggest.showEvents": true,
+  "editor.suggest.showIssues": true,
+  "editor.suggest.showKeywords": true,
+  "editor.suggest.showMethods": true,
+  "editor.suggest.showModules": true,
+  "editor.suggest.showOperators": true,
+  "editor.suggest.showProperties": true,
+  "editor.suggest.showReferences": true,
+  "editor.suggest.showSnippets": true,
+  "editor.suggest.showStatusBar": false,
+  "editor.suggest.showStructs": true,
+  "editor.suggest.showTypeParameters": true,
+  "editor.suggest.showUnits": true,
+  "editor.suggest.showUsers": true,
+  "editor.suggest.showValues": true,
+  "editor.suggest.showVariables": true,
+  "editor.suggest.showWords": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": true,
+
 
   // Tab
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
 
-  // Override editor syntax colors from the current color theme
+  // Color Customization Override
   "editor.tokenColorCustomizations": {},
 
-  // Trim Auto Whitespace
-  "editor.trimAutoWhitespace": true,
+  // Line Wrap
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 200,
+  "editor.wrappingIndent": "indent",
 
-  // Folded Line - Clicking on the empty content after a folded line will unfold the line
-  "editor.unfoldOnClickAfterEndOfLine": false,
+  // SCM
+  "scm.alwaysShowActions": true,
+  "scm.alwaysShowRepositories": true,
+  "scm.defaultViewMode": "tree",
+  "scm.diffDecorations": "gutter",
+  "scm.providerCountBadge": "visible",
+  "scm.showActionButton": false,
 
-  // Unicode Hihglight
-    "editor.unicodeHighlight": {
-    "allowedCharacters": {},
-    "allowedLocales": {
-      "_os": true,
-      "_vscode": true
-      },
-    "ambiguousCharacters": true,
-    "includeComments": "inUntrustedWorkspace",
-    "includeStrings": true,
-    "invisibleCharacters": true,
-    "nonBasicASCII": "inUntrustedWorkspace"
-    },
+// Workbench
 
-  // Unusual line terminators
-  "editor.unusualLineTerminators": "prompt",
-
-  // Tab Stops
-  "editor.useTabStops": true,
-
-  // Word-based Suggestions
-  "editor.wordBasedSuggestions": true,
-
-  // Word-based Suggestions Mode
-  "editor.wordBasedSuggestionsMode": "matchingDocuments",
-
-  // Word Separators
-  "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
-
-  // Word Wrap
-  //  - off: Lines will never wrap.
-  //  - on: Lines will wrap at the viewport width.
-  //  - wordWrapColumn: Lines will wrap at `editor.wordWrapColumn`.
-  //  - bounded: Lines will wrap at the minimum of viewport and `editor.wordWrapColumn`.
-  "editor.wordWrap": "on",
-
-  // Word Wrap Column
-  // When `editor.wordWrap` is `wordWrapColumn` or `bounded`.
-  "editor.wordWrapColumn": 80,
-
-  // Word Wrap Identation
-  //  - none: No indentation. Wrapped lines begin at column 1.
-  //  - same: Wrapped lines get the same indentation as the parent.
-  //  - indent: Wrapped lines get +1 indentation toward the parent.
-  //  - deepIndent: Wrapped lines get +2 indentation toward the parent.
-  "editor.wrappingIndent": "same",
-
-  // Word Wrap Strategy
-  //  - simple: Assumes that all characters are of the same width.
-  //This is a fast algorithm that works correctly for monospace fonts and certain scripts (like Latin characters) where glyphs are of equal width.
-  //  - advanced: Delegates wrapping points computation to the browser.
-  // This is a slow algorithm, that might cause freezes for large files, but it works correctly in all cases.
-  "editor.wrappingStrategy": "simple",
-
-// SCM
-  "scm": {
-  // Inline Actions
-  "alwaysShowActions": true,
-
-  // Repositories
-  "alwaysShowRepositories": true,
-
-  // Reveal and select files when opening them
-  "autoReveal": true,
-
-  // Count badge
-  "countBadge": "all",
-
-  // View mode
-  "defaultViewMode": "tree",
-
-  // Sort mode
-  "defaultViewSortKey": "path",
-
-  // DIFF Decorations
-  "diffDecorations": "gutter",
-
-  // Gutter Decorations
-  "diffDecorationsGutterAction": "diff",
-
-  // DIFF gutter decorator
-  "diffDecorationsGutterVisibility": "always",
-
-  // DIFF gutter decoration width
-  // 1px - 5px
-  "diffDecorationsGutterWidth": 3,
-
-  // DIFF gutter decoration ignore whitespace
-  "diffDecorationsIgnoreTrimWhitespace": "false",
-
-  // Input Font Family
-  "inputFontFamily": "default",
-
-  // Input Font Size
-  "inputFontSize": 13,
-
-  // Provider Header Badges
-  "providerCountBadge": "visible",
-
-  // Repositories count
-  "repositories.visible": 10,
-
-  // Action button
-  "showActionButton": false
-  },
-
-  // Security
-  "security.workspace.trust": {
-  "banner": "untilDismissed",
-
-  // Empty Workspace
-  "emptyWindow": true,
-
-  // Workspace Trust
-  "enabled": true,
-
-  // Workspace Trust - Startup prompt
-  "startupPrompt": "once",
-
-  // Workspace Trust - Untrusted files
-  "untrustedFiles": "prompt"
-  },
-
-  // Workbench
-
-  // Activity Bar - Click Behavior
-  "workbench.activityBar.iconClickBehavior": "toggle",
-
-  // Activity Bar - Visible
-  "workbench.activityBar.visible": true,
-
-  // Color Theme - Override
+  // Overrides Colors
   "workbench.colorCustomizations": {},
+  "workbench.colorTheme": "Default Dark+",
 
-  // Color Theme
-  "workbench.colorTheme": "Visual Studio Dark",
-
-  // Command Palette - History
-  "workbench.commandPalette.history": 50,
-
-  // Command Palette - Preserve input
-  "workbench.commandPalette.preserveInput": false,
-
-  // If an editor matching one of the listed types is opened as the first in an editor group and more than one group is open, the group is automatically locked. Locked groups will only be used for opening editors when explicitly chosen by user gesture (e.g. drag and drop), but not by default. Consequently the active editor in a locked group is less likely to be replaced accidentally with a different editor.
-  "workbench.editor.autoLockGroups": {
-    "default": false,
-    "workbench.input.interactive": false,
-    "interactive": false,
-    "workbench.editorinputs.searchEditorInput": false,
-    "imagePreview.previewEditor": false,
-    "vscode.markdown.preview.editor": false,
-    "jsProfileVisualizer.cpuprofile.table": false,
-    "jsProfileVisualizer.heapprofile.table": false,
-    "terminalEditor": true,
-    "jupyter-notebook": false,
-    "mainThreadWebview-markdown.preview": false
-  },
-
-  // Workbench - The default editor for files detected as binary
-  "defaultBinaryEditor": "",
-
-  // Workbench - Preview Editor
-  "workbench.editor.enablePreview": true,
-
-  // Workbench - Preview Editor from code navigation
-  "workbench.editor.enablePreviewFromCodeNavigation": false,
-
-  // Workbench - Preview Editor from Quick Open
+  // Workbench Editor
+  "workbench.editor.closeOnFileDelete": true,
+  "workbench.editor.defaultBinaryEditor": "",
   "workbench.editor.enablePreviewFromQuickOpen": false,
-
-  // Workbench - Focus editor after close
   "workbench.editor.focusRecentEditorAfterClose": false,
-
-  // Workbench - Tab Top Border with unsaved changes
   "workbench.editor.highlightModifiedTabs": true,
 
-  // Workbench - Editor history in language detection
-  "workbench.editor.historyBasedLanguageDetection": true,
+// Workbench Editor Limit
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.perEditorGroup": true,
+  "workbench.editor.limit.value": 10,
 
-  // Workbench - Tab Label format
-  "workbench.editor.labelFormat": "default",
-
-    // Workbench - Language Detection
-  "languageDetection": true,
-
-  // Editor Limit
-  "limit": {
-  // Editor limit
-  "enabled": true,
-
-  // Editor limit per group
-  "perEditorGroup": true,
-
-  // Editor limit count
-  "value": 10
-  },
-
-  // Mouse - 'Back' and 'Forward'
+  // Hisotry Navigation
   "workbench.editor.mouseBackForwardToNavigate": true,
-
-  // History navigation scope for commands 'Back' and 'Forward'
   "workbench.editor.navigationScope": "default",
 
-  // New editor positioning
+  // Open
   "workbench.editor.openPositioning": "right",
-
-  // New editor direction
   "workbench.editor.openSideBySideDirection": "right",
-
-  // Pinned Tab sizing
-  "workbench.editor.pinnedTabSizing": "compact",
-
-  // Editor restore view state
   "workbench.editor.restoreViewState": true,
-
-  // Reveal editor if open
   "workbench.editor.revealIfOpen": true,
 
-  // Scroll to switch tabs
-  // Shift + Mouse scrolling
-  "workbench.editor.scrollToSwitchTabs": false,
-
-  // Preserve and share editor view state
-  "workbench.editor.sharedViewState": false,
-
-  // Tab Icons
-  "workbench.editor.showIcons": true,
-
-  // Show Tabs
-  "workbench.editor.showTabs": true,
-
-  // Layout default split
-  "workbench.editor.splitInGroupLayout": "horizontal",
-
-  // Layout drag and drop
-  "workbench.editor.splitOnDragAndDrop": true,
-
-  // Editor group sizing
-  "workbench.editor.splitSizing": "distribute",
-
-  // Editor close button
+// Tab
   "workbench.editor.tabCloseButton": "left",
-
-  // Editor tab sizing
-  "workbench.editor.tabSizing": "fit",
-
-  // Editor tab scrollbar
-  // Controls the height of the scrollbars used for tabs and breadcrumbs in the editor title area.
+  "workbench.editor.pinnedTabSizing": "compact",
+  "workbench.editor.tabSizing": "shrink",
   "workbench.editor.titleScrollbarSizing": "large",
-
-  // Untitled hint
   "workbench.editor.untitled.hint": "hidden",
-
-  // Untitled label format
   "workbench.editor.untitled.labelFormat": "name",
-
-
-  // Controls whether tabs should be wrapped over multiple lines when exceeding available space or whether a scrollbar should appear instead. This value is ignored when `workbench.editor.showTabs` is disabled.
   "workbench.editor.wrapTabs": false,
 
-  // Workbench - Editor global patterns
+  // Editor Associations
   "workbench.editorAssociations": {},
-
-  // Workbench - External URI opener (http, https)
   "workbench.externalUriOpeners": {},
 
-  // Workbench - Font aliasing
-  "workbench.fontAliasing": "default",
-
-  // Workbench - Hover delay (ms)
-  "workbench.hover.delay": 500,
-
-  // Workbench - Icon theme
-  "workbench.iconTheme": "vs-seti",
-
-  // Workbench List - Keyboard navigation
-  "workbench.list.automaticKeyboardNavigation": true,
-
-  // Workbench List - Scrolling speed multiplier (Alt)
-  "workbench.list.fastScrollSensitivity": 5,
-
-  // Workbench List - Horizontal scrolling
-  "workbench.list.horizontalScrolling": false,
-
-  // Workbench List - Keyboard navigation for lists and trees
-  "workbench.list.keyboardNavigation": "highlight",
-
-  // Workbench List - Mouse scroll sensitivity multiplier for `deltaX` and `deltaY`
-  "workbench.list.mouseWheelScrollSensitivity": 1,
-
-  // Workbench List - Multi selection with mouse
-  "workbench.list.multiSelectModifier": "ctrlCmd",
-
-  // Open tree items
-  "workbench.list.openMode": "singleClick",
-
-  // Smooth scrolling (lists and trees)
-  "workbench.list.smoothScrolling": false,
-
-  // Local file history
-  "workbench.localHistory.enabled": true,
-
-  // Local history exclusion
-  "workbench.localHistory.exclude": {},
-
-  // Local history limit
-  "workbench.localHistory.maxFileEntries": 50,
-
-  // Local history file size (KB)
-  "workbench.localHistory.maxFileSize": 256,
-
-  // Local history merge period
-  "workbench.localHistory.mergePeriod": 10,
-
-  // Default location
+  // Panel
   "workbench.panel.defaultLocation": "bottom",
+  "workbench.panel.opensMaximized": "preserve",
 
-  // Maximize
-  "workbench.panel.opensMaximized": "never",
-
-  // Workbench - Color theme [Dark]
+  // Workbench Color Theme
   "workbench.preferredDarkColorTheme": "Default Dark+",
-
-  // Workbench - Color theme [High Contrast]
   "workbench.preferredHighContrastColorTheme": "Default High Contrast",
-
-  // Workbench - Color theme [High Contrast - Light]
   "workbench.preferredHighContrastLightColorTheme": "Default High Contrast Light",
-
-  // Workbench - Color theme [Light]
   "workbench.preferredLightColorTheme": "Default Light+",
 
-  // Workbench - Product icon theme
+  // Product Icon Theme
   "workbench.productIconTheme": "Default",
 
-  // Quick Open - Close on focus lost
-  "workbench.quickOpen.closeOnFocusLost": true,
+  // Reduced Animation
+  "workbench.reduceMotion": "on",
 
-  // Quick Open - Preserve input
-  "workbench.quickOpen.preserveInput": false,
-
-  // Workbench - Reduced animations
-  "workbench.reduceMotion": "auto",
-
-  // SASH - Hover feedback
-  "workbench.sash.hoverDelay": 300,
-
-  // SASH - Feedback area (px)
-  "workbench.sash.size": 4,
-
-  // Workbench Settings - Editor
+  // Settings Editor
   "workbench.settings.editor": "json",
 
-  // Workbench Settings - Natural Language Search
-  "workbench.settings.enableNaturalLanguageSearch": true,
-  "workbench.settings.openDefaultKeybindings": false,
-  "workbench.settings.openDefaultSettings": false,
-  "workbench.settings.settingsSearchTocBehavior": "filter",
-  "workbench.settings.useSplitJSON": false,
-  "workbench.sideBar.location": "left",
-  "workbench.startupEditor": "welcomePage",
-  "workbench.statusBar.visible": true,
-  "workbench.tips.enabled": true,
+  // Tree
   "workbench.tree.expandMode": "singleClick",
   "workbench.tree.indent": 15,
   "workbench.tree.renderIndentGuides": "always",
@@ -557,2360 +254,813 @@
   "workbench.view.alwaysShowHeaderActions": true,
   "workbench.welcomePage.walkthroughs.openOnInstall": true,
 
-  // Window
-
-  // Auto Detect Color Scheme
+// Window
   "window.autoDetectColorScheme": false,
-
-  // Auto Detect High Contrast
   "window.autoDetectHighContrast": false,
-
-  // Click through inactive
   "window.clickThroughInactive": true,
-
-  // Close window with last editor
   "window.closeWhenEmpty": false,
-
-  // Focus menu bar with `Alt`
   "window.customMenuBarAltFocus": true,
-
-  // Dialog window appearance
   "window.dialogStyle": "native",
-
-  // Close with double click on icon
   "window.doubleClickIconToClose": false,
-
-  // MacOS native full screen
   "window.nativeFullScreen": true,
-
-  // MacOS Sierra native tabs
   "window.nativeTabs": false,
-
-  // Menu bar shortcut (Alt + key)
   "window.enableMenuBarMnemonics": true,
-
-  // Menu bar
   "window.menuBarVisibility": "classic",
-
-  // New Window dimensions
   "window.newWindowDimensions": "maximized",
-
-  // Files in new window
   "window.openFilesInNewWindow": "off",
-
-  // Folders in new window
   "window.openFoldersInNewWindow": "default",
-
-  // New window without arguments
   "window.openWithoutArgumentsInNewWindow": "on",
-
-  // Restore Full Screen mode
   "window.restoreFullscreen": false,
-
-  // Restore windows
   "window.restoreWindows": "all",
-
-  // Title
   "window.title": "${appName}",
-
-  // Title bar style
   "window.titleBarStyle": "custom",
-
-  // Title separator
   "window.titleSeparator": " - ",
-
-  // Zoom level
   "window.zoomLevel": 0,
 
 // Files
-  "files": {
-  // Associations to languages
-  "associations": {},
-
-  // Encoding auto guess
-  "autoGuessEncoding": false,
-
-  // Save editors with unsaved changes
-  //  - off: An editor with changes is never automatically saved.
-  //  - afterDelay: An editor with changes is automatically saved after the configured `files.autoSaveDelay`.
-  //  - onFocusChange: An editor with changes is automatically saved when the editor loses focus.
-  //  - onWindowChange: An editor with changes is automatically saved when the window loses focus.
-  "autoSave": "off",
-
-  // Save delay (ms)
-  "autoSaveDelay": 1000,
-
-  // Language identifier default
-  "defaultLanguage": "",
-
-  // Enable OS trash
-  "enableTrash": false,
-
-  // Default enconding
-  "encoding": "utf8",
-
-  // EOL character
-  //  - \n:   LF
-  //  - \r\n: CRLF
-  //  - auto: Uses operating system specific end of line character.
-  "eol": "auto",
-
-  // Exclusions (global)
-  "exclude": {
+  "files.associations": {},
+  "files.autoGuessEncoding": false,
+  "files.autoSave": "off",
+  "files.autoSaveDelay": 1000,
+  "files.defaultLanguage": "${activeEditorLanguage}",
+  "files.enableTrash": false,
+  "files.encoding": "utf8",
+  "files.eol": "auto",
+  "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true,
     "**/Thumbs.db": true
-    },
-
-  // Hot Exit
-  //  - off: Disable Hot Exit.
-  //    A prompt will show when attempting to close a window with editors that have unsaved changes.
-  //  - onExit: Hot Exit will be triggered when the last window is closed on Windows/Linux or when the `workbench.action.quit` command is triggered (command palette, keybinding, menu). All windows without folders opened will be restored upon next launch.
-  //  - onExitAndWindowClose: Hot Exit will be triggered when the last window is closed on Windows/Linux or when the `workbench.action.quit` command is triggered (command palette, keybinding, menu), and also for any window with a folder opened regardless of whether it's the last window.
-  //    All windows without folders opened will be restored upon next launch.
-  //    A list of previously opened windows with unsaved files can be accessed via `File > Open Recent > More...`
-  "hotExit": "off",
-
-  // Final new line
-  "insertFinalNewline": true,
-
-  // Memory when trying to open large files
-  "maxMemoryForLargeFilesMB": 4096,
-
-  // Participants timeout
-  "participants.timeout": 60000,
-
-  // Restore undo stack
-  "restoreUndoStack": true,
-
-  // Save conflict resolution
-  //  - askUser: Will refuse to save and ask for resolving the save conflict manually.
-  //  - overwriteFileOnDisk: Will resolve the save conflict by overwriting the file on disk with the changes in the editor.
-  "saveConflictResolution": "askUser",
-
-  // Enable simple file dialog
-  "simpleDialog.enable": false,
-
-  // Trim final new lines
-  "trimFinalNewlines": true,
-
-  // Trim trailing whitespace
-  "trimTrailingWhitespace": true,
-
-  // Exclude from watching
-  "watcherExclude": {
+  },
+  "files.hotExit": "off",
+  "files.insertFinalNewline": true,
+  "files.maxMemoryForLargeFilesMB": 4096,
+  "files.participants.timeout": 60000,
+  "files.restoreUndoStack": true,
+  "files.saveConflictResolution": "askUser",
+  "files.simpleDialog.enable": false,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "files.watcherExclude": {
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
     "**/node_modules/*/**": true,
     "**/.hg/store/**": true
-    },
-
-  // Extra paths to watch for changes
-  "watcherInclude": []
-  },
-
-// Screencast Mode
-  "screencastMode": {
-  // Font size
-  "fontSize": 56,
-
-  // Keyboard overlay timeout (ms)
-  "keyboardOverlayTimeout": 800,
-
-  // Shortcut display
-  //  - keys: Keys.
-  //  - command: Command title.
-  //  - commandWithGroup: Command title prefixed by its group.
-  //  - commandAndKeys: Command title and keys.
-  //  - commandWithGroupAndKeys: Command title and keys, with the command prefixed by its group.
-  "keyboardShortcutsFormat": "commandAndKeys",
-
-  // Mouse indicator color
-  "mouseIndicatorColor": "#FF0000",
-
-  // Mouse indicator size (px)
-  "mouseIndicatorSize": 20,
-
-  // Keyboard shortcuts only
-  "onlyKeyboardShortcuts": false,
-
-  // Vertical offset
-  "verticalOffset": 20
   },
 
 // Zen Mode
-  "zenMode": {
-  // Centered Layout
-  "centerLayout": false,
+  "zenMode.centerLayout": false,
+  "zenMode.fullScreen": true,
+  "zenMode.hideActivityBar": true,
+  "zenMode.hideLineNumbers": true,
+  "zenMode.hideStatusBar": true,
+  "zenMode.hideTabs": true,
+  "zenMode.restore": true,
+  "zenMode.silentNotifications": true,
 
-  // Full Screen mode
-  "fullScreen": true,
-
-  // Hide activity bar
-  "hideActivityBar": false,
-
-  // Hide line numbers
-  "hideLineNumbers": true,
-
-  // Hide status bar
-  "hideStatusBar": true,
-
-  // Hide tabs
-  "hideTabs": true,
-
-  // Restore window to Zen mode
-  "restore": true,
-
-  // Silent notifications
-  "silentNotifications": true
-  },
-
-// File Explorer
-  "explorer": {
-  // Reveal files automatically
-  //  - true: Files will be revealed and selected.
-  //  - false: Files will not be revealed and selected.
-  //  - focusNoScroll: Files will not be scrolled into view, but will still be focused.
-  "autoReveal": true,
-
-  // Compact folders
-  "compactFolders": true,
-
-  // Confirm delete
-  "confirmDelete": true,
-
-  // Drag and Drop
-  "confirmDragAndDrop": true,
-
-  // Confirm undo
-  //  - verbose: Explorer will prompt before all undo operations.
-  //  - default: Explorer will prompt before destructive undo operations.
-  //  - light: Explorer will not prompt before undo operations when focused.
-  "confirmUndo": "default",
-
-  // Path separation
-  //  - /: Use slash as path separation character.
-  //  - \: Use backslash as path separation character.
-  //  - auto: Uses operating system specific path separation character.
-  "copyRelativePathSeparator": "auto",
-
-  // File decoration badges
-  "decorations.badges": true,
-
-  // File decoration colors
-  "decorations.colors": true,
-
-  // Drag and Drop
-  "enableDragAndDrop": true,
-
-  // Undo
-  "enableUndo": true,
-
-  // Expand single folder workspaces
-  "expandSingleFolderWorkspaces": true,
-
-  // Incremental naming
-  //  - simple: Appends the word "copy" at the end of the duplicated name potentially followed by a number
-  //  - smart: Adds a number at the end of the duplicated name. If some number is already part of the name, tries to increase that number
-  "incrementalNaming": "smart",
-
-  // Open Editors sort order
-  // Controls the sorting order of editors in the Open Editors pane.
-  //  - editorOrder: Editors are ordered in the same order editor tabs are shown.
-  //  - alphabetical: Editors are ordered alphabetically by tab name inside each editor group.
-  //  - fullPath: Editors are ordered alphabetically by full path inside each editor group.
-  "openEditors.sortOrder": "alphabetical",
-
-  // Open Editors visible
-  "openEditors.visible": 9,
-
-  // Sort order
-  //  - default: Files and folders are sorted by their names. Folders are displayed before files.
-  //  - mixed: Files and folders are sorted by their names. Files are interwoven with folders.
-  //  - filesFirst: Files and folders are sorted by their names. Files are displayed before folders.
-  //  - type: Files and folders are grouped by extension type then sorted by their names. Folders are displayed before files.
-  //  - modified: Files and folders are sorted by last modified date in descending order. Folders are displayed before files.
-  "sortOrder": "default",
-
-  // Sort order (lexicographic)
-  //  - default: Uppercase and lowercase names are mixed together.
-  //  - upper: Uppercase names are grouped together before lowercase names.
-  //  - lower: Lowercase names are grouped together before uppercase names.
-  //  - unicode: Names are sorted in Unicode order.
-  "sortOrderLexicographicOptions": "default"
-  },
+  // File Explorer
+  "explorer.autoReveal": true,
+  "explorer.compactFolders": true,
+  "explorer.confirmDelete": true,
+  "explorer.confirmDragAndDrop": true,
+  "explorer.confirmUndo": "default",
+  "explorer.copyRelativePathSeparator": "auto",
+  "explorer.decorations.badges": true,
+  "explorer.decorations.colors": true,
+  "explorer.enableDragAndDrop": true,
+  "explorer.enableUndo": true,
+  "explorer.expandSingleFolderWorkspaces": true,
+  "explorer.incrementalNaming": "smart",
+  "explorer.openEditors.sortOrder": "alphabetical",
+  "explorer.openEditors.visible": 9,
+  "explorer.sortOrder": "default",
+  "explorer.sortOrderLexicographicOptions": "default",
 
 // Search
-  "search": {
-  // Action position
-  //  - auto: Position the actionbar to the right when the search view is narrow, and immediately after the content when the search view is wide.
-  //  - right: Always position the actionbar to the right.
-  "actionsPosition": "auto",
-
-  // Collapse results
-  //  - auto: Files with less than 10 results are expanded. Others are collapsed.
-  //  - alwaysCollapse
-  //  - alwaysExpand
-  "collapseResults": "alwaysExpand",
-
-  // Excluding global patterns
-  "exclude": {
+  "search.actionsPosition": "auto",
+  "search.collapseResults": "alwaysExpand",
+  "search.exclude": {
     "**/node_modules": true,
     "**/bower_components": true,
     "**/*.code-search": true
-    },
-
-  // Follow symlinks
-  "followSymlinks": true,
-
-  // MacOS shared find clipboard
-  "globalFindClipboard": false,
-
-  // Mode
-  //  - view: Search in the search view, either in the panel or sidebar.
-  //  - reuseEditor: Search in an existing search editor if present, otherwise in a new search editor.
-  //  - newEditor: Search in a new search editor.
-  "mode": "view",
-
-  // Filter sort order
-  //  - default: History entries are sorted by relevance based on the filter value used.
-  //  - recency: History entries are sorted by recency.
-  "quickOpen.history.filterSortOrder": "default",
-
-  // Include history
-  "quickOpen.includeHistory": true,
-
-  // Include symbols
-  "quickOpen.includeSymbols": false,
-
-  // Context lines
-  "searchEditor.defaultNumberOfContextLines": 3,
-
-  // Double click behaviour
-  //  - selectWord: Double clicking selects the word under the cursor.
-  //  - goToLocation: Double clicking opens the result in the active editor group.
-  //  - openLocationToSide: Double clicking opens the result in the editor group to the side, creating one if it does not yet exist.
-  "searchEditor.doubleClickBehaviour": "goToLocation",
-
-  // Reuse prior search configuration
-  "searchEditor.reusePriorSearchConfiguration": false,
-
-  // Search on type
-  "searchOnType": true,
-
-  // Search on type bounce period (ms)
-  "searchOnTypeDebouncePeriod": 300,
-
-  // Search seed on content focus
-  "seedOnFocus": true,
-
-  // Search seed from cursor
-  "seedWithNearestWord": true,
-
-  // Line numbers
-  "showLineNumbers": false,
-
-  // SmartCase
-  "smartCase": false,
-
-  // Sorting results
-  //  - default: Results are sorted by folder and file names, in alphabetical order.
-  //  - fileNames: Results are sorted by file names ignoring folder order, in alphabetical order.
-  //  - type: Results are sorted by file extensions, in alphabetical order.
-  //  - modified: Results are sorted by file last modified date, in descending order.
-  //  - countDescending: Results are sorted by count per file, in descending order.
-  //  - countAscending: Results are sorted by count per file, in ascending order.
-  "sortOrder": "default",
-
-  // Use global `.gitignore` and `.ignore`
-  "useGlobalIgnoreFiles": false,
-
-  // Use `.gitignore` and `.ignore`
-  "useIgnoreFiles": true,
-
-  // Use `.gitignore` and `.ignore` in parent directories
-  "useParentIgnoreFiles": false,
-
-  // Replace preview
-  "useReplacePreview": true
   },
+  "search.followSymlinks": true,
+  "search.globalFindClipboard": false,
+  "search.mode": "view",
+  "search.searchEditor.defaultNumberOfContextLines": 3,
+  "search.searchEditor.doubleClickBehaviour": "goToLocation",
+  "search.searchEditor.reusePriorSearchConfiguration": false,
+  "search.searchOnType": true,
+  "search.searchOnTypeDebouncePeriod": 300,
+  "search.seedOnFocus": true,
+  "search.seedWithNearestWord": true,
+  "search.showLineNumbers": false,
+  "search.smartCase": false,
+  "search.sortOrder": "default",
+  "search.useGlobalIgnoreFiles": false,
+  "search.useIgnoreFiles": true,
+  "search.useParentIgnoreFiles": false,
+  "search.useReplacePreview": true,
 
-// HTTP Proxy
-  "http": {
-  // Proxy
-  "proxy": "",
+  // Quick Open
+  "search.quickOpen.history.filterSortOrder": "default",
+  "search.quickOpen.includeHistory": true,
+  "search.quickOpen.includeSymbols": false,
 
-  // Proxy authorization
-  "proxyAuthorization": null,
+// HTTP
+  "http.proxy": "",
+  "http.proxyAuthorization": null,
+  "http.proxyStrictSSL": true,
+  "http.proxySupport": "override",
+  "http.systemCertificates": true,
 
-  // Proxy server certificate against CAs
-  "proxyStrictSSL": true,
-
-  // Proxy support
-  //  - off: Disable proxy support for extensions.
-  //  - on: Enable proxy support for extensions.
-  //  - fallback: Enable proxy support for extensions, fall back to request options, when no proxy found.
-  //  - override: Enable proxy support for extensions, override request options.
-  "proxySupport": "override",
-
-  // Load CA system certificates
-  "systemCertificates": true
-  },
 
 // Keyboard
-  "keyboard": {
-  // Dispatching logic
-  "dispatch": "code",
-
-  // MacOS touchbar buttons
-  "touchbar.enabled": true,
-
-  // Touchbar identifier exclusion
-  "touchbar.ignored": []
-  },
+  "keyboard.dispatch": "code",
+  "keyboard.touchbar.enabled": true,
+  "keyboard.touchbar.ignored": [],
 
 // Update
-  "update": {
-  // Background update (Windows)
-  "enableWindowsBackgroundUpdates": true,
-
-  // Mode
-  //  - none: Disable updates.
-  //  - manual: Disable automatic background update checks and update manually.
-  //  - start: Disable automatic background update checks and check for updates only on startup.
-  //  - default: Enable automatic update checks.
-  "mode": "default",
-
-  // Release Notes
-  "showReleaseNotes": true
-  },
+  "update.enableWindowsBackgroundUpdates": true,
+  "update.mode": "default",
+  "update.showReleaseNotes": true,
 
 // Debug
-
-  // Breakpoint everywhere
   "debug.allowBreakpointsEverywhere": true,
-
-  // Controls whether to confirm when the window closes if there are active debug sessions.
-  //  - never: Never confirm.
-  //  - always: Always confirm if there are debug sessions.
   "debug.confirmOnExit": "never",
-
-  // Controls whether suggestions should be accepted on Enter in the Debug Console. Enter is also used to evaluate whatever is typed in the Debug Console.
   "debug.console.acceptSuggestionOnEnter": "off",
-
-  // Controls if the debug console should be automatically closed when the debug session ends.
   "debug.console.closeOnEnd": false,
-
-  // Controls if the debug console should collapse identical lines and show a number of occurrences with a badge.
   "debug.console.collapseIdenticalLines": true,
-
-  // Controls the font family in the debug console.
   "debug.console.fontFamily": "default",
-
-  // Controls the font size in pixels in the debug console.
   "debug.console.fontSize": 14,
-
-  // Controls if the debug console should suggest previously typed input.
   "debug.console.historySuggestions": true,
-
-  // Controls the line height in pixels in the debug console. Use 0 to compute the line height from the font size.
   "debug.console.lineHeight": 0,
-
-  // Controls if the lines should wrap in the debug console.
   "debug.console.wordWrap": true,
-
-  // Show Source Code in Disassembly View.
   "debug.disassemblyView.showSourceCode": true,
-
-  // Controls whether the workbench window should be focused when the debugger breaks.
   "debug.focusWindowOnBreak": true,
-
-  // Show variable values inline in editor while debugging.
-  //  - true: Always show variable values inline in editor while debugging.
-  //  - false: Never show variable values inline in editor while debugging.
-  //  - auto: Show variable values inline in editor while debugging when the language supports inline value locations.
   "debug.inlineValues": "auto",
-
-  // Controls when the internal debug console should open.
   "debug.internalConsoleOptions": "openOnFirstSessionStart",
-
-  // Controls what to do when errors are encountered after running a preLaunchTask.
-  //  - debugAnyway: Ignore task errors and start debugging.
-  //  - showErrors: Show the Problems view and do not start debugging.
-  //  - prompt: Prompt user.
-  //  - abort: Cancel debugging.
   "debug.onTaskErrors": "prompt",
-
-  // Controls when the debug view should open.
   "debug.openDebug": "openOnDebugBreak",
-
-  // Automatically open the explorer view at the end of a debug session.
   "debug.openExplorerOnEnd": false,
-
-  // Controls what editors to save before starting a debug session.
-  //  - allEditorsInActiveGroup: Save all editors in the active group before starting a debug session.
-  //  - nonUntitledEditorsInActiveGroup: Save all editors in the active group except untitled ones before starting a debug session.
-  //  - none: Don't save any editors before starting a debug session.
   "debug.saveBeforeStart": "allEditorsInActiveGroup",
-
-  // Controls whether breakpoints should be shown in the overview ruler.
   "debug.showBreakpointsInOverviewRuler": false,
-
-  // Controls whether inline breakpoints candidate decorations should be shown in the editor while debugging.
   "debug.showInlineBreakpointCandidates": true,
-
-  // Controls when the debug status bar should be visible.
-  //  - never: Never show debug in status bar
-  //  - always: Always show debug in status bar
-  //  - onFirstSessionStart: Show debug in status bar only after debug was started for the first time
   "debug.showInStatusBar": "onFirstSessionStart",
-
-  // Controls whether the debug sub-sessions are shown in the debug tool bar. When this setting is false the stop command on a sub-session will also stop the parent session.
   "debug.showSubSessionsInToolBar": false,
-
-  // Before starting a new debug session in an integrated or external terminal, clear the terminal.
   "debug.terminal.clearBeforeReusing": false,
-
-  // Controls the location of the debug toolbar. Either `floating` in all views, `docked` in the debug view, or `hidden`.
   "debug.toolBarLocation": "floating",
-
-  // Global debug launch configuration. Should be used as an alternative to 'launch.json' that is shared across workspaces.
   "launch": {
     "configurations": [],
     "compounds": []
   },
 
 // HTML
-  "html": {
-  // Enable/disable autoclosing of HTML tags.
-  "autoClosingTags": true,
-
-  // Enable/disable auto creation of quotes for HTML attribute assignment. The type of quotes can be configured by `html.completion.attributeDefaultValue`.
-  "autoCreateQuotes": true,
-
-  // Controls the default value for attributes when completion is accepted.
-  //  - doublequotes: Attribute value is set to "".
-  //  - singlequotes: Attribute value is set to ''.
-  //  - empty: Attribute value is not set.
-  "completion.attributeDefaultValue": "doublequotes",
-
-  // A list of relative file paths pointing to JSON files following the custom data format.
-  // VS Code loads custom data on startup to enhance its HTML support for the custom HTML tags, attributes and attribute values you specify in the JSON files.
-  // The file paths are relative to workspace and only workspace folder settings are considered.
-  "customData": [],
-
-  // HTML Format
-    "format": {
-    // List of tags, comma separated, where the content shouldn't be reformatted. `null` defaults to the `pre` tag.
-    "contentUnformatted": "pre,code,textarea",
-
-    // Enable/disable default HTML formatter.
-    "enable": true,
-
-    // End with a newline.
-    "endWithNewline": false,
-
-    // List of tags, comma separated, that should have an extra newline before them. `null` defaults to `"head, body, /html"`.
-    "extraLiners": "head, body, /html",
-
-    // Format and indent ``.
-    "indentHandlebars": false,
-
-    // Indent `<head>` and `<body>` sections.
-    "indentInnerHtml": false,
-
-    // Maximum number of line breaks to be preserved in one chunk. Use `null` for unlimited.
-    "maxPreserveNewLines": null,
-
-    // Controls whether existing line breaks before elements should be preserved. Only works before elements, not inside tags or for text.
-    "preserveNewLines": true,
-
-    // Honor django, erb, handlebars and php templating language tags.
-    "templating": false,
-
-    // List of tags, comma separated, that shouldn't be reformatted.
-    "unformatted": "wbr",
-
-    // Keep text content together between this string.
-    "unformattedContentDelimiter": "",
-
-    // Wrap attributes.
-    //  - auto: Wrap attributes only when line length is exceeded.
-    //  - force: Wrap each attribute except first.
-    //  - force-aligned: Wrap each attribute except first and keep aligned.
-    //  - force-expand-multiline: Wrap each attribute.
-    //  - aligned-multiple: Wrap when line length is exceeded, align attributes vertically.
-    //  - preserve: Preserve wrapping of attributes.
-    //  - preserve-aligned: Preserve wrapping of attributes but align.
-    "wrapAttributes": "auto",
-
-    // Indent wrapped attributes to after N characters. Use `null` to use the default indent size. Ignored if `html.format.wrapAttributes` is set to 'aligned'.
-    "wrapAttributesIndentSize": null,
-
-    // Maximum amount of characters per line (0 = disable).
-    "wrapLineLength": 120
-    },
-
-  // HTML Hover
-  "hover": {
-  // Show tag and attribute documentation in hover.
-  "documentation": true,
-
-  // Show references to MDN in hover.
-  "references": true
-    },
-
-  // Controls whether the built-in HTML language support suggests HTML5 tags, properties and values.
-  "suggest.html5": true,
-
-  // Traces the communication between VS Code and the HTML language server.
-  "trace.server": "off",
-
-  // Controls whether the built-in HTML language support validates embedded scripts.
-  "validate.scripts": true,
-
-  // Controls whether the built-in HTML language support validates embedded styles.
-  "validate.styles": true
-  },
+  "html.autoClosingTags": true,
+  "html.autoCreateQuotes": true,
+  "html.completion.attributeDefaultValue": "doublequotes",
+  "html.customData": [],
+  "html.format.contentUnformatted": "pre,code,textarea",
+  "html.format.enable": true,
+  "html.format.endWithNewline": true,
+  "html.format.extraLiners": "head, body, /html",
+  "html.format.indentHandlebars": true,
+  "html.format.indentInnerHtml": false,
+  "html.format.maxPreserveNewLines": null,
+  "html.format.preserveNewLines": true,
+  "html.format.templating": false,
+  "html.format.unformatted": "wbr",
+  "html.format.unformattedContentDelimiter": "",
+  "html.format.wrapAttributes": "auto",
+  "html.format.wrapAttributesIndentSize": null,
+  "html.format.wrapLineLength": 0,
+  "html.hover.documentation": true,
+  "html.hover.references": true,
+  "html.suggest.html5": true,
+  "html.trace.server": "off",
+  "html.validate.scripts": true,
+  "html.validate.styles": true,
 
 // JSON
-  "json": {
-  // Enable/disable default JSON formatter
-  "format.enable": true,
-
-  // The maximum number of outline symbols and folding regions computed (limited for performance reasons).
-  "maxItemsComputed": 5000,
-
-  // When enabled, JSON schemas can be fetched from http and https locations.
-  "schemaDownload.enable": true,
-
-  // Associate schemas to JSON files in the current project.
-  "schemas": [],
-
-  // Traces the communication between VS Code and the JSON language server.
-  "trace.server": "off"
-  },
+  "json.format.enable": true,
+  "json.maxItemsComputed": 5000,
+  "json.schemaDownload.enable": true,
+  "json.schemas": [],
+  "json.trace.server": "off",
 
 // Markdown
-  "markdown": {
-  // Controls where links in Markdown files should be opened.
-  //  - currentGroup: Open links in the active editor group.
-  //  - beside: Open links beside the active editor.
-  "links.openLocation": "currentGroup",
-
-  // Markdown Preview
-  "preview": {
-    // Sets how line-breaks are rendered in the Markdown preview. Setting it to 'true' creates a <br> for newlines inside paragraphs.
-    "breaks": false,
-
-    // Double click in the Markdown preview to switch to the editor.
-    "doubleClickToSwitchToEditor": true,
-
-    // Controls the font family used in the Markdown preview.
-    "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
-
-    // Controls the font size in pixels used in the Markdown preview.
-    "fontSize": 14,
-
-    // Controls the line height used in the Markdown preview. This number is relative to the font size.
-    "lineHeight": 1.6,
-
-    // Enable or disable conversion of URL-like text to links in the Markdown preview.
-    "linkify": true,
-
-    // Mark the current editor selection in the Markdown preview.
-    "markEditorSelection": true,
-
-    // Controls how links to other Markdown files in the Markdown preview should be opened.
-    //  - inPreview: Try to open links in the Markdown preview.
-    //  - inEditor: Try to open links in the editor.
-    "openMarkdownLinks": "inPreview",
-
-    // When a Markdown preview is scrolled, update the view of the editor.
-    "scrollEditorWithPreview": true,
-
-    // When a Markdown editor is scrolled, update the view of the preview.
-    "scrollPreviewWithEditor": true,
-
-    // Enable or disable some language-neutral replacement and quotes beautification in the Markdown preview.
-    "typographer": false
-    },
-
-  // A list of URLs or local paths to CSS style sheets to use from the Markdown preview. Relative paths are interpreted relative to the folder open in the Explorer. If there is no open folder, they are interpreted relative to the location of the Markdown file. All '\' need to be written as '\\'.
-  "styles": [],
-
-  // Enable/disable path suggestions for markdown links
-  "suggest.paths.enabled": true,
-
-  // Enable debug logging for the Markdown extension.
-  "trace": "off"
-  },
+  "markdown.links.openLocation": "currentGroup",
+  "markdown.preview.breaks": true,
+  "markdown.preview.doubleClickToSwitchToEditor": true,
+  "markdown.preview.fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
+  "markdown.preview.fontSize": 16,
+  "markdown.preview.lineHeight": 1.5,
+  "markdown.preview.linkify": true,
+  "markdown.preview.markEditorSelection": true,
+  "markdown.preview.openMarkdownLinks": "inPreview",
+  "markdown.preview.scrollEditorWithPreview": true,
+  "markdown.preview.scrollPreviewWithEditor": true,
+  "markdown.preview.typographer": true,
+  "markdown.styles": [],
+  "markdown.suggest.paths.enabled": true,
+  "markdown.trace": "off",
 
 // PHP
-  "php": {
-  // Controls whether the built-in PHP language suggestions are enabled. The support suggests PHP globals and variables.
-  "suggest.basic": true,
 
-  // Enable/disable built-in PHP validation.
-  "validate.enable": true,
-
-  // Points to the PHP executable.
-  "validate.executablePath": null,
-
-  // Whether the linter is run on save or on type.
-  "validate.run": "onSave"
-  },
-
-// JavaScript
-  "javascript": {
-  // Enable/disable automatic closing of JSX tags.
-  "autoClosingTags": true,
-
-  // JavaScript Format
-  "format": {
-    // Enable/disable default JavaScript formatter.
-    "enable": true,
-
-    // Defines space handling after a comma delimiter.
-    "insertSpaceAfterCommaDelimiter": true,
-
-    // Defines space handling after the constructor keyword.
-    "insertSpaceAfterConstructor": false,
-
-    // Defines space handling after function keyword for anonymous functions.
-    "insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
-
-    // Defines space handling after keywords in a control flow statement.
-    "insertSpaceAfterKeywordsInControlFlowStatements": true,
-
-    // Defines space handling after opening and before closing empty braces.
-    "insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": true,
-
-    // Defines space handling after opening and before closing JSX expression braces.
-    "insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": false,
-
-    // Defines space handling after opening and before closing non-empty braces.
-    "insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
-
-    // Defines space handling after opening and before closing non-empty brackets.
-    "insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
-
-    // Defines space handling after opening and before closing non-empty parenthesis.
-    "insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
-
-    // Defines space handling after opening and before closing template string braces.
-    "insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": false,
-
-    // Defines space handling after a semicolon in a for statement.
-    "insertSpaceAfterSemicolonInForStatements": true,
-
-    // Defines space handling after a binary operator.
-    "insertSpaceBeforeAndAfterBinaryOperators": true,
-
-    // Defines space handling before function argument parentheses.
-    "insertSpaceBeforeFunctionParenthesis": false,
-
-    // Defines whether an open brace is put onto a new line for control blocks or not.
-    "placeOpenBraceOnNewLineForControlBlocks": false,
-
-    // Defines whether an open brace is put onto a new line for functions or not.
-    "placeOpenBraceOnNewLineForFunctions": false,
-
-    // Defines handling of optional semicolons. Requires using TypeScript 3.7 or newer in the workspace.
-    //  - ignore: Don't insert or remove any semicolons.
-    //  - insert: Insert semicolons at statement ends.
-    //  - remove: Remove unnecessary semicolons.
-    "semicolons": "ignore"
-    },
-
-  // JavaScript Inlay Hints
-  "inlayHints": {
-    // Enable/disable inlay hints for member values in enum declarations:
-    "enumMemberValues.enabled": false,
-
-    // Enable/disable inlay hints for implicit return types on function signatures:
-    "functionLikeReturnTypes.enabled": false,
-
-    // Enable/disable inlay hints for parameter names:
-    "parameterNames.enabled": "none",
-
-    // Suppress parameter name hints on arguments whose text is identical to the parameter name.
-    "parameterNames.suppressWhenArgumentMatchesName": true,
-
-    // Enable/disable inlay hints for implicit parameter types:
-    "parameterTypes.enabled": false,
-
-    // Enable/disable inlay hints for implicit types on property declarations:
-    "propertyDeclarationTypes.enabled": false,
-
-    // Enable/disable inlay hints for implicit variable types:
-    "variableTypes.enabled": false
-    },
-
-  // JavaScript Preferences
-  "preferences": {
-    // Preferred path style for auto imports.
-    //  - shortest: Prefers a non-relative import only if one is available that has fewer path segments than a relative import.
-    //  - relative: Prefers a relative path to the imported file location.
-    //  - non-relative: Prefers a non-relative import based on the `baseUrl` or `paths` configured in your `jsconfig.json` / `tsconfig.json`.
-    //  - project-relative: Prefers a non-relative import only if the relative import path would leave the package or project directory. Requires using TypeScript 4.2+ in the workspace.
-    "importModuleSpecifier": "shortest",
-
-    // Preferred path ending for auto imports. Requires using TypeScript 4.5+ in the workspace.
-    //  - auto: Use project settings to select a default.
-    //  - minimal: Shorten `./component/index.js` to `./component`.
-    //  - index: Shorten `./component/index.js` to `./component/index`.
-    //  - js: Do not shorten path endings; include the `.js` extension.
-    "importModuleSpecifierEnding": "auto",
-
-    // Preferred style for JSX attribute completions.
-    //  - auto: Insert `={}` or `=""` after attribute names based on the prop type. See `javascript.preferences.quoteStyle` to control the type of quotes used for string attributes.
-    //  - braces: Insert `={}` after attribute names.
-    //  - none: Only insert attribute names.
-    "jsxAttributeCompletionStyle": "auto",
-
-    // Preferred quote style to use for Quick Fixes.
-    //  - auto: Infer quote type from existing code
-    //  - single: Always use single quotes: `'`
-    //  - double: Always use double quotes: `"`
-    "quoteStyle": "auto",
-
-    // The setting 'typescript.preferences.renameShorthandProperties' has been deprecated in favor of 'typescript.preferences.useAliasesForRenames'
-    // Enable/disable introducing aliases for object shorthand properties during renames. Requires using TypeScript 3.4 or newer in the workspace.
-    "renameShorthandProperties": true,
-
-    // Enable/disable introducing aliases for object shorthand properties during renames. Requires using TypeScript 3.4 or newer in the workspace.
-    "useAliasesForRenames": true
-    },
-
-  // JavaScript References CodeLens
-  "referencesCodeLens": {
-    // Enable/disable references CodeLens in JavaScript files.
-    "referencesCodeLens.enabled": false,
-
-    // Enable/disable references CodeLens on all functions in JavaScript files.
-    "referencesCodeLens.showOnAllFunctions": false
-    },
-
-  // JavaScript Suggest
-  "suggest": {
-    // Enable/disable auto import suggestions.
-    "autoImports": true,
-
-    // Enable/disable snippet completions for class members.
-    "classMemberSnippets.enabled": true,
-
-    // Complete functions with their parameter signature.
-    "completeFunctionCalls": false,
-
-    // Enable/disable suggestion to complete JSDoc comments.
-    "completeJSDocs": true,
-
-    // Enabled/disable autocomplete suggestions.
-    "enabled": true,
-
-    // Enable/disable showing completions on potentially undefined values that insert an optional chain call. Requires TS 3.7+ and strict null checks to be enabled.
-    "includeAutomaticOptionalChainCompletions": true,
-
-    // Enable/disable auto-import-style completions on partially-typed import statements. Requires using TypeScript 4.3+ in the workspace.
-    "includeCompletionsForImportStatements": true,
-
-    // Enable/disable generating `@returns` annotations for JSDoc templates. Requires using TypeScript 4.2+ in the workspace.
-    "jsdoc.generateReturns": true,
-
-    // Enable/disable including unique names from the file in JavaScript suggestions. Note that name suggestions are always disabled in JavaScript code that is semantically checked using `@ts-check` or `checkJs`.
-    "names": true,
-
-    // Enable/disable suggestions for paths in import statements and require calls.
-    "paths": true
-    },
-
-  // Enable/disable suggestion diagnostics for JavaScript files in the editor.
-  "suggestionActions.enabled": true,
-
-  // Enable/disable automatic updating of import paths when you rename or move a file in VS Code.
-  //  - prompt: Prompt on each rename.
-  //  - always: Always update paths automatically.
-  //  - never: Never rename paths and don't prompt.
-  "updateImportsOnFileMove.enabled": "prompt",
-
-  // Enable/disable JavaScript validation.
-  "validate.enable": true
-  },
-
-// JavaScript / TypeScript
-  "js/ts": {
-  // Enable/disable semantic checking of JavaScript files. Existing `jsconfig.json` or `tsconfig.json` files override this setting.
-  "implicitProjectConfig.checkJs": false,
-
-  // Sets the module system for the program.
-  "implicitProjectConfig.module": "ESNext",
-
-  // Enable/disable strict function types in JavaScript and TypeScript files that are not part of a project. Existing `jsconfig.json` or `tsconfig.json` files override this setting.
-  "implicitProjectConfig.strictFunctionTypes": true,
-
-  // Enable/disable strict null checks in JavaScript and TypeScript files that are not part of a project. Existing `jsconfig.json` or `tsconfig.json` files override this setting.
-  "implicitProjectConfig.strictNullChecks": false,
-
-  // Set target JavaScript language version for emitted JavaScript and include library declarations.
-  "implicitProjectConfig.target": "ES2020"
-  },
-
-// Typescript
-"typescript": {
-  // Enable/disable automatic closing of JSX tags.
-  "autoClosingTags": true,
-
-  // Check if npm is installed for Automatic Type Acquisition.
-  "check.npmIsInstalled": true,
-
-  // Disables automatic type acquisition. Automatic type acquisition fetches `@types` packages from npm to improve IntelliSense for external libraries.
-  "disableAutomaticTypeAcquisition": false,
-
-  // Enables prompting of users to use the TypeScript version configured in the workspace for Intellisense.
-  "enablePromptUseWorkspaceTsdk": false,
-
-  // Typescript Format
-  "format": {
-    // Enable/disable default TypeScript formatter.
-    "enable": true,
-
-    // Defines space handling after a comma delimiter.
-    "insertSpaceAfterCommaDelimiter": true,
-
-    // Defines space handling after the constructor keyword.
-    "insertSpaceAfterConstructor": false,
-
-    // Defines space handling after function keyword for anonymous functions.
-    "insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
-
-    // Defines space handling after keywords in a control flow statement.
-    "insertSpaceAfterKeywordsInControlFlowStatements": true,
-
-    // Defines space handling after opening and before closing empty braces.
-    "insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": true,
-
-    // Defines space handling after opening and before closing JSX expression braces.
-    "insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": false,
-
-    // Defines space handling after opening and before closing non-empty braces.
-    "insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
-
-    // Defines space handling after opening and before closing non-empty brackets.
-    "insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
-
-    // Defines space handling after opening and before closing non-empty parenthesis.
-    "insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
-
-    // Defines space handling after opening and before closing template string braces.
-    "insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": false,
-
-    // Defines space handling after a semicolon in a for statement.
-    "insertSpaceAfterSemicolonInForStatements": true,
-
-    // Defines space handling after type assertions in TypeScript.
-    "insertSpaceAfterTypeAssertion": false,
-
-    // Defines space handling after a binary operator.
-    "insertSpaceBeforeAndAfterBinaryOperators": true,
-
-    // Defines space handling before function argument parentheses.
-    "insertSpaceBeforeFunctionParenthesis": false,
-
-    // Defines whether an open brace is put onto a new line for control blocks or not.
-    "placeOpenBraceOnNewLineForControlBlocks": false,
-
-    // Defines whether an open brace is put onto a new line for functions or not.
-    "placeOpenBraceOnNewLineForFunctions": false,
-
-    // Defines handling of optional semicolons. Requires using TypeScript 3.7 or newer in the workspace.
-    //  - ignore: Don't insert or remove any semicolons.
-    //  - insert: Insert semicolons at statement ends.
-    //  - remove: Remove unnecessary semicolons.
-    "semicolons": "ignore"
-    },
-
-  // Enable/disable implementations CodeLens. This CodeLens shows the implementers of an interface.
-  "implementationsCodeLens.enabled": false,
-
-  // Typescript Inlay Hints
-  "inlayHints": {
-    // Enable/disable inlay hints for member values in enum declarations:
-    "enumMemberValues.enabled": false,
-
-    // Enable/disable inlay hints for implicit return types on function signatures:
-    "functionLikeReturnTypes.enabled": false,
-
-    // Enable/disable inlay hints for parameter names:
-    "parameterNames.enabled": "none",
-
-    // Suppress parameter name hints on arguments whose text is identical to the parameter name.
-    "parameterNames.suppressWhenArgumentMatchesName": true,
-
-    // Enable/disable inlay hints for implicit parameter types:
-    "parameterTypes.enabled": false,
-
-    // Enable/disable inlay hints for implicit types on property declarations:
-    "propertyDeclarationTypes.enabled": false,
-
-    // Enable/disable inlay hints for implicit variable types:
-    "variableTypes.enabled": false
-    },
-
-  // Sets the locale used to report JavaScript and TypeScript errors. Defaults to use VS Code's locale.
-  "locale": "",
-
-  // Specifies the path to the npm executable used for Automatic Type Acquisition.
-  "npm": "",
-
-  // Typescript Preferences
-  "preferences": {
-    // Preferred path style for auto imports.
-    //  - shortest: Prefers a non-relative import only if one is available that has fewer path segments than a relative import.
-    //  - relative: Prefers a relative path to the imported file location.
-    //  - non-relative: Prefers a non-relative import based on the `baseUrl` or `paths` configured in your `jsconfig.json` / `tsconfig.json`.
-    //  - project-relative: Prefers a non-relative import only if the relative import path would leave the package or project directory. Requires using TypeScript 4.2+ in the workspace.
-    "importModuleSpecifier": "shortest",
-
-    // Preferred path ending for auto imports.
-    //  - auto: Use project settings to select a default.
-    //  - minimal: Shorten `./component/index.js` to `./component`.
-    //  - index: Shorten `./component/index.js` to `./component/index`.
-    //  - js: Do not shorten path endings; include the `.js` extension.
-    "importModuleSpecifierEnding": "auto",
-
-    // Enable/disable searching `package.json` dependencies for available auto imports.
-    //  - auto: Search dependencies based on estimated performance impact.
-    //  - on: Always search dependencies.
-    //  - off: Never search dependencies.
-    "includePackageJsonAutoImports": "auto",
-
-    // Preferred style for JSX attribute completions.
-    //  - auto: Insert `={}` or `=""` after attribute names based on the prop type.
-    //  - braces: Insert `={}` after attribute names.
-    //  - none: Only insert attribute names.
-    "jsxAttributeCompletionStyle": "auto",
-
-    // Preferred quote style to use for Quick Fixes.
-    //  - auto: Infer quote type from existing code
-    //  - single: Always use single quotes: `'`
-    //  - double: Always use double quotes: `"`
-    "quoteStyle": "auto",
-
-    // Enable/disable introducing aliases for object shorthand properties during renames. Requires using TypeScript 3.4 or newer in the workspace.
-    "useAliasesForRenames": true
-    },
-
-  // Typescript CodeLens
-  "referencesCodeLens": {
-    // Enable/disable references CodeLens in TypeScript files.
-    "enabled": false,
-
-    // Enable/disable references CodeLens on all functions in TypeScript files.
-    "showOnAllFunctions": false
-    },
-
-  // Report style checks as warnings.
-  "reportStyleChecksAsWarnings": true,
-
-  // Typescript Suggest
-  "suggest": {
-    // Enable/disable auto import suggestions.
-    "suggest.autoImports": true,
-
-    // Enable/disable snippet completions for class members.
-    "suggest.classMemberSnippets.enabled": true,
-
-    // Complete functions with their parameter signature.
-    "suggest.completeFunctionCalls": false,
-
-    // Enable/disable suggestion to complete JSDoc comments.
-    "suggest.completeJSDocs": true,
-
-    // Enabled/disable autocomplete suggestions.
-    "suggest.enabled": true,
-
-    // Enable/disable showing completions on potentially undefined values that insert an optional chain call. Requires TS 3.7+ and strict null checks to be enabled.
-    "suggest.includeAutomaticOptionalChainCompletions": true,
-
-    // Enable/disable auto-import-style completions on partially-typed import statements. Requires using TypeScript 4.3+ in the workspace.
-    "suggest.includeCompletionsForImportStatements": true,
-
-    // Enable/disable snippet completions from TS Server. Requires using TypeScript 4.3+ in the workspace.
-    "suggest.includeCompletionsWithSnippetText": true,
-
-    // Enable/disable generating `@returns` annotations for JSDoc templates. Requires using TypeScript 4.2+ in the workspace.
-    "suggest.jsdoc.generateReturns": true,
-
-    // Enable/disable suggestions for paths in import statements and require calls.
-    "suggest.paths": true
-    },
-
-  // Enable/disable suggestion diagnostics for TypeScript files in the editor.
-  "suggestionActions.enabled": true,
-
-  // Controls auto detection of tsc tasks.
-  //  - on: Create both build and watch tasks.
-  //  - off: Disable this feature.
-  //  - build: Only create single run compile tasks.
-  //  - watch: Only create compile and watch tasks.
-  "tsc.autoDetect": "on",
-
-  // Specifies the folder path to the tsserver and `lib*.d.ts` files under a TypeScript install to use for IntelliSense, for example: `./node_modules/typescript/lib`.
-  // - When specified as a user setting, the TypeScript version from `typescript.tsdk` automatically replaces the built-in TypeScript version.
-  // - When specified as a workspace setting, `typescript.tsdk` allows you to switch to use that workspace version of TypeScript for IntelliSense with the `TypeScript: Select TypeScript version` command.
-  "tsdk": "",
-
-  // Typescript Server
-  "tsserver": {
-    // Enables tracing TS server performance to a directory. These trace files can be used to diagnose TS Server performance issues. The log may contain file paths, source code, and other potentially sensitive information from your project.
-    "enableTracing": false,
-
-    // Enables logging of the TS server to a file. This log can be used to diagnose TS Server issues. The log may contain file paths, source code, and other potentially sensitive information from your project.
-    "log": "off",
-
-    // The maximum amount of memory (in MB) to allocate to the TypeScript server process.
-    "maxTsServerMemory": 3072,
-
-    // Additional paths to discover TypeScript Language Service plugins.
-    "pluginPaths": [],
-
-    // Enables tracing of messages sent to the TS server. This trace can be used to diagnose TS Server issues. The trace may contain file paths, source code, and other potentially sensitive information from your project.
-    "trace": "off",
-
-    // Controls if TypeScript launches a dedicated server to more quickly handle syntax related operations, such as computing code folding.
-    //  - always: Use a lighter weight syntax server to handle all IntelliSense operations. This syntax server can only provide IntelliSense for opened files.
-    //  - never: Don't use a dedicated syntax server. Use a single server to handle all IntelliSense operations.
-    //  - auto: Spawn both a full server and a lighter weight server dedicated to syntax operations. The syntax server is used to speed up syntax operations and provide IntelliSense while projects are loading.
-    "useSyntaxServer": "auto",
-
-    // Configure which watching strategies should be used to keep track of files and directories. Requires using TypeScript 3.8+ in the workspace.
-    "watchOptions": {}
-    },
-
-  // Enable/disable automatic updating of import paths when you rename or move a file in VS Code.
-  //  - prompt: Prompt on each rename.
-  //  - always: Always update paths automatically.
-  //  - never: Never rename paths and don't prompt.
-  "updateImportsOnFileMove.enabled": "prompt",
-
-  // Enable/disable TypeScript validation.
-  "validate.enable": true,
-
-  // Controls which files are searched by go to symbol in workspace.
-  //  - allOpenProjects: Search all open JavaScript or TypeScript projects for symbols. Requires using TypeScript 3.9 or newer in the workspace.
-  //  - currentProject: Only search for symbols in the current JavaScript or TypeScript project.
-  "workspaceSymbols.scope": "allOpenProjects"
-  },
+  "php.suggest.basic": true,
+  "php.validate.enable": true,
+  "php.validate.executablePath": null,
+  "php.validate.run": "onSave",
+
+  // TypeScript
+  "javascript.autoClosingTags": true,
+  "javascript.format.enable": true,
+  "javascript.format.insertSpaceAfterCommaDelimiter": true,
+  "javascript.format.insertSpaceAfterConstructor": false,
+  "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
+  "javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": false,
+  "javascript.format.insertSpaceAfterSemicolonInForStatements": true,
+  "javascript.format.insertSpaceBeforeAndAfterBinaryOperators": true,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
+  "javascript.format.placeOpenBraceOnNewLineForControlBlocks": false,
+  "javascript.format.placeOpenBraceOnNewLineForFunctions": false,
+  "javascript.format.semicolons": "ignore",
+  "javascript.inlayHints.enumMemberValues.enabled": false,
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": false,
+  "javascript.inlayHints.parameterNames.enabled": "none",
+  "javascript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": true,
+  "javascript.inlayHints.parameterTypes.enabled": false,
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": false,
+  "javascript.inlayHints.variableTypes.enabled": false,
+  "javascript.preferences.importModuleSpecifier": "shortest",
+  "javascript.preferences.importModuleSpecifierEnding": "auto",
+  "javascript.preferences.jsxAttributeCompletionStyle": "auto",
+  "javascript.preferences.quoteStyle": "auto",
+  "javascript.preferences.renameShorthandProperties": true,
+  "javascript.preferences.useAliasesForRenames": true,
+  "javascript.referencesCodeLens.enabled": false,
+  "javascript.referencesCodeLens.showOnAllFunctions": false,
+  "javascript.suggest.autoImports": true,
+  "javascript.suggest.classMemberSnippets.enabled": true,
+  "javascript.suggest.completeFunctionCalls": false,
+  "javascript.suggest.completeJSDocs": true,
+  "javascript.suggest.enabled": true,
+  "javascript.suggest.includeAutomaticOptionalChainCompletions": true,
+  "javascript.suggest.includeCompletionsForImportStatements": true,
+  "javascript.suggest.jsdoc.generateReturns": true,
+  "javascript.suggest.names": true,
+  "javascript.suggest.paths": true,
+  "javascript.suggestionActions.enabled": true,
+  "javascript.updateImportsOnFileMove.enabled": "prompt",
+  "javascript.validate.enable": true,
+  "js/ts.implicitProjectConfig.checkJs": false,
+  "js/ts.implicitProjectConfig.module": "ESNext",
+  "js/ts.implicitProjectConfig.strictFunctionTypes": true,
+  "js/ts.implicitProjectConfig.strictNullChecks": false,
+  "js/ts.implicitProjectConfig.target": "ES2020",
+  "typescript.autoClosingTags": true,
+  "typescript.check.npmIsInstalled": true,
+  "typescript.disableAutomaticTypeAcquisition": false,
+  "typescript.enablePromptUseWorkspaceTsdk": false,
+  "typescript.format.enable": true,
+  "typescript.format.insertSpaceAfterCommaDelimiter": true,
+  "typescript.format.insertSpaceAfterConstructor": false,
+  "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
+  "typescript.format.insertSpaceAfterKeywordsInControlFlowStatements": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": false,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": false,
+  "typescript.format.insertSpaceAfterSemicolonInForStatements": true,
+  "typescript.format.insertSpaceAfterTypeAssertion": false,
+  "typescript.format.insertSpaceBeforeAndAfterBinaryOperators": true,
+  "typescript.format.insertSpaceBeforeFunctionParenthesis": false,
+  "typescript.format.placeOpenBraceOnNewLineForControlBlocks": false,
+  "typescript.format.placeOpenBraceOnNewLineForFunctions": false,
+  "typescript.format.semicolons": "ignore",
+  "typescript.implementationsCodeLens.enabled": false,
+  "typescript.inlayHints.enumMemberValues.enabled": false,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": false,
+  "typescript.inlayHints.parameterNames.enabled": "none",
+  "typescript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": true,
+  "typescript.inlayHints.parameterTypes.enabled": false,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": false,
+  "typescript.inlayHints.variableTypes.enabled": false,
+  "typescript.locale": "",
+  "typescript.npm": "",
+  "typescript.preferences.importModuleSpecifier": "shortest",
+  "typescript.preferences.importModuleSpecifierEnding": "auto",
+  "typescript.preferences.includePackageJsonAutoImports": "auto",
+  "typescript.preferences.jsxAttributeCompletionStyle": "auto",
+  "typescript.preferences.quoteStyle": "auto",
+  "typescript.preferences.useAliasesForRenames": true,
+  "typescript.referencesCodeLens.enabled": false,
+  "typescript.referencesCodeLens.showOnAllFunctions": false,
+  "typescript.reportStyleChecksAsWarnings": true,
+  "typescript.suggest.autoImports": true,
+  "typescript.suggest.classMemberSnippets.enabled": true,
+  "typescript.suggest.completeFunctionCalls": false,
+  "typescript.suggest.completeJSDocs": true,
+  "typescript.suggest.enabled": true,
+  "typescript.suggest.includeAutomaticOptionalChainCompletions": true,
+  "typescript.suggest.includeCompletionsForImportStatements": true,
+  "typescript.suggest.includeCompletionsWithSnippetText": true,
+  "typescript.suggest.jsdoc.generateReturns": true,
+  "typescript.suggest.paths": true,
+  "typescript.suggestionActions.enabled": true,
+  "typescript.tsc.autoDetect": "on",
+  "typescript.tsdk": "",
+  "typescript.tsserver.enableTracing": false,
+  "typescript.tsserver.log": "off",
+  "typescript.tsserver.maxTsServerMemory": 3072,
+  "typescript.tsserver.pluginPaths": [],
+  "typescript.tsserver.trace": "off",
+  "typescript.tsserver.useSyntaxServer": "auto",
+  "typescript.tsserver.watchOptions": {},
+  "typescript.updateImportsOnFileMove.enabled": "prompt",
+  "typescript.validate.enable": true,
+  "typescript.workspaceSymbols.scope": "allOpenProjects",
 
   // Testing
-  "testing": {
-  // Configures when the error Peek view is automatically opened.
-  //  - failureAnywhere: Open automatically no matter where the failure is.
-  //  - failureInVisibleDocument: Open automatically when a test fails in a visible document.
-  //  - never: Never automatically open.
-  "automaticallyOpenPeekView": "failureInVisibleDocument",
 
-  // Controls whether to automatically open the Peek view during auto-run mode.
-  "automaticallyOpenPeekViewDuringAutoRun": false,
-
-  // How long to wait, in milliseconds, after a test is marked as outdated and starting a new run.
-  "autoRun.delay": 1000,
-
-  // Controls which tests are automatically run.
-  //  - all: Automatically runs all discovered test when auto-run is toggled. Reruns individual tests when they are changed.
-  //  - rerun: Reruns individual tests when they are changed. Will not automatically run any tests that have not been already executed.
-  "autoRun.mode": "all",
-
-  // Controls the action to take when left-clicking on a test decoration in the gutter.
-  //  - run: Run the test.
-  //  - debug: Debug the test.
-  //  - contextMenu: Open the context menu for more options.
-  "defaultGutterClickAction": "run",
-
-  // Controls whether the running test should be followed in the Test Explorer view.
-  "followRunningTest": true,
-
-  // Controls whether test decorations are shown in the editor gutter.
-  "gutterEnabled": true,
-
-  // Controls when the testing view should open.
-  //  - neverOpen: Never automatically open the testing view
-  //  - openOnTestStart: Open the testing view when tests start
-  //  - openOnTestFailure: Open the testing view on any test failure
-  "openTesting": "openOnTestStart",
-
-  // Control whether save all dirty editors before running a test.
-  "saveBeforeTest": true
-  },
-
-  // CSS
-  "css": {
-  "completion": {
-    // Insert semicolon at end of line when completing CSS properties.
-    "completion.completePropertyWithSemicolon": true,
-
-    // By default, VS Code triggers property value completion after selecting a CSS property. Use this setting to disable this behavior.
-    "completion.triggerPropertyValueCompletion": true
-    },
-
-  // A list of relative file paths pointing to JSON files following the custom data format.
-  // VS Code loads custom data on startup to enhance its CSS support for the custom CSS properties, at directives, pseudo classes and pseudo elements you specify in the JSON files.
-  // The file paths are relative to workspace and only workspace folder settings are considered.
-  "customData": [],
-
-  // Format
-  "format": {
-    // Enable/disable default CSS formatter.
-    "enable": true,
-
-    // Separate rulesets by a blank line.
-    "newlineBetweenRules": true,
-
-    // Separate selectors with a newline.
-    "newlineBetweenSelectors": true,
-
-    // Ensure a space character around selector separators '>', '+', '~' (e.g. `a > b`).
-    "spaceAroundSelectorSeparator": false
-    },
-
-  // Hover
-  "hover": {
-    // Show tag and attribute documentation in CSS hovers.
-    "hover.documentation": true,
-
-    // Show references to MDN in CSS hovers.
-    "hover.references": true
-    },
-
-  // Lint
-    "lint": {
-    // Invalid number of parameters.
-    "argumentsInColorFunction": "error",
-
-    // Do not use `width` or `height` when using `padding` or `border`.
-    "boxModel": "ignore",
-
-    // When using a vendor-specific prefix make sure to also include all other vendor-specific properties.
-    "compatibleVendorPrefixes": "ignore",
-
-    // Do not use duplicate style definitions.
-    "duplicateProperties": "ignore",
-
-    // Do not use empty rulesets.
-    "emptyRules": "warning",
-
-    // Avoid using `float`. Floats lead to fragile CSS that is easy to break if one aspect of the layout changes.
-    "float": "ignore",
-
-    // `@font-face` rule must define `src` and `font-family` properties.
-    "fontFaceProperties": "warning",
-
-    // Hex colors must consist of three or six hex numbers.
-    "hexColorLength": "error",
-
-    // Selectors should not contain IDs because these rules are too tightly coupled with the HTML.
-    "idSelector": "ignore",
-
-    // IE hacks are only necessary when supporting IE7 and older.
-    "ieHack": "ignore",
-
-    // Avoid using `!important`. It is an indication that the specificity of the entire CSS has gotten out of control and needs to be refactored.
-    "important": "ignore",
-
-    // Import statements do not load in parallel.
-    "importStatement": "ignore",
-
-    // Property is ignored due to the display. E.g. with `display: inline`, the `width`, `height`, `margin-top`, `margin-bottom`, and `float` properties have no effect.
-    "propertyIgnoredDueToDisplay": "warning",
-
-    // The universal selector (`*`) is known to be slow.
-    "universalSelector": "ignore",
-
-    // Unknown at-rule.
-    "unknownAtRules": "warning",
-
-    // Unknown property.
-    "unknownProperties": "warning",
-
-    // Unknown vendor specific property.
-    "unknownVendorSpecificProperties": "ignore",
-
-    // A list of properties that are not validated against the `unknownProperties` rule.
-    "validProperties": [],
-
-    // When using a vendor-specific prefix, also include the standard property.
-    "vendorPrefix": "warning",
-
-    // No unit for zero needed.
-    "zeroUnits": "ignore"
-    },
-
-    // Traces the communication between VS Code and the CSS language server.
-    "trace.server": "off",
-
-    // Enables or disables all validations.
-    "validate": true
-  },
-
-  // LESS
-  "less": {
-  // Completion
-  "completion": {
-    // Insert semicolon at end of line when completing CSS properties.
-    "completePropertyWithSemicolon": true,
-
-    // By default, VS Code triggers property value completion after selecting a CSS property. Use this setting to disable this behavior.
-    "triggerPropertyValueCompletion": true
-    },
-
-  // Format
-  "format": {
-    // Enable/disable default LESS formatter.
-    "enable": true,
-
-    // Separate rulesets by a blank line.
-    "newlineBetweenRules": true,
-
-    // Separate selectors with a newline.
-    "newlineBetweenSelectors": true,
-
-    // Ensure a space character around selector separators '>', '+', '~' (e.g. `a > b`).
-    "spaceAroundSelectorSeparator": false
-    },
-
-  // Hover
-  "hover": {
-    // Show tag and attribute documentation in LESS hovers.
-    "hover.documentation": true,
-
-    // Show references to MDN in LESS hovers.
-    "hover.references": true
-    },
-
-  // Lint
-  "lint": {
-    // Invalid number of parameters.
-    "argumentsInColorFunction": "error",
-
-    // Do not use `width` or `height` when using `padding` or `border`.
-    "boxModel": "ignore",
-
-    // When using a vendor-specific prefix make sure to also include all other vendor-specific properties.
-    "compatibleVendorPrefixes": "ignore",
-
-    // Do not use duplicate style definitions.
-    "duplicateProperties": "ignore",
-
-    // Do not use empty rulesets.
-    "emptyRules": "warning",
-
-    // Avoid using `float`. Floats lead to fragile CSS that is easy to break if one aspect of the layout changes.
-    "float": "ignore",
-
-    // `@font-face` rule must define `src` and `font-family` properties.
-    "fontFaceProperties": "warning",
-
-    // Hex colors must consist of three or six hex numbers.
-    "hexColorLength": "error",
-
-    // Selectors should not contain IDs because these rules are too tightly coupled with the HTML.
-    "idSelector": "ignore",
-
-    // IE hacks are only necessary when supporting IE7 and older.
-    "ieHack": "ignore",
-
-    // Avoid using `!important`. It is an indication that the specificity of the entire CSS has gotten out of control and needs to be refactored.
-    "important": "ignore",
-
-    // Import statements do not load in parallel.
-    "importStatement": "ignore",
-
-    // Property is ignored due to the display. E.g. with `display: inline`, the `width`, `height`, `margin-top`, `margin-bottom`, and `float` properties have no effect.
-    "propertyIgnoredDueToDisplay": "warning",
-
-    // The universal selector (`*`) is known to be slow.
-    "universalSelector": "ignore",
-
-    // Unknown at-rule.
-    "unknownAtRules": "warning",
-
-    // Unknown property.
-    "unknownProperties": "warning",
-
-    // Unknown vendor specific property.
-    "unknownVendorSpecificProperties": "ignore",
-
-    // A list of properties that are not validated against the `unknownProperties` rule.
-    "validProperties": [],
-
-    // When using a vendor-specific prefix, also include the standard property.
-    "vendorPrefix": "warning",
-
-    // No unit for zero needed.
-    "zeroUnits": "ignore"
-    },
-
-  // Enables or disables all validations.
-  "validate": true
-  },
-
-// SCSS (Sass)
-  "scss": {
-  // SCSS Completion
-  "completion": {
-    // Insert semicolon at end of line when completing CSS properties.
-    "completion.completePropertyWithSemicolon": true,
-
-    // By default, VS Code triggers property value completion after selecting a CSS property. Use this setting to disable this behavior.
-    "completion.triggerPropertyValueCompletion": true
-  },
-
-  // SCSS Format
-  "format": {
-    // Enable/disable default SCSS formatter.
-    "enable": true,
-
-    // Separate rulesets by a blank line.
-    "newlineBetweenRules": true,
-
-    // Separate selectors with a newline.
-    "newlineBetweenSelectors": true,
-
-    // Ensure a space character around selector separators '>', '+', '~' (e.g. `a > b`).
-    "spaceAroundSelectorSeparator": false
-    },
-
-  // SCSS Hover
-  "hover": {
-    // Show tag and attribute documentation in SCSS hovers.
-    "hover.documentation": true,
-
-    // Show references to MDN in SCSS hovers.
-    "hover.references": true
-    },
-
-  // SCSS Lint
-  "lint": {
-    // Invalid number of parameters.
-    "argumentsInColorFunction": "error",
-
-    // Do not use `width` or `height` when using `padding` or `border`.
-    "boxModel": "ignore",
-
-    // When using a vendor-specific prefix make sure to also include all other vendor-specific properties.
-    "compatibleVendorPrefixes": "ignore",
-
-    // Do not use duplicate style definitions.
-    "duplicateProperties": "ignore",
-
-    // Do not use empty rulesets.
-    "emptyRules": "warning",
-
-    // Avoid using `float`. Floats lead to fragile CSS that is easy to break if one aspect of the layout changes.
-    "float": "ignore",
-
-    // `@font-face` rule must define `src` and `font-family` properties.
-    "fontFaceProperties": "warning",
-
-    // Hex colors must consist of three or six hex numbers.
-    "hexColorLength": "error",
-
-    // Selectors should not contain IDs because these rules are too tightly coupled with the HTML.
-    "idSelector": "ignore",
-
-    // IE hacks are only necessary when supporting IE7 and older.
-    "ieHack": "ignore",
-
-    // Avoid using `!important`. It is an indication that the specificity of the entire CSS has gotten out of control and needs to be refactored.
-    "important": "ignore",
-
-    // Import statements do not load in parallel.
-    "importStatement": "ignore",
-
-    // Property is ignored due to the display. E.g. with `display: inline`, the `width`, `height`, `margin-top`, `margin-bottom`, and `float` properties have no effect.
-    "propertyIgnoredDueToDisplay": "warning",
-
-    // The universal selector (`*`) is known to be slow.
-    "universalSelector": "ignore",
-
-    // Unknown at-rule.
-    "unknownAtRules": "warning",
-
-    // Unknown property.
-    "unknownProperties": "warning",
-
-    // Unknown vendor specific property.
-    "unknownVendorSpecificProperties": "ignore",
-
-    // A list of properties that are not validated against the `unknownProperties` rule.
-    "validProperties": [],
-
-    // When using a vendor-specific prefix, also include the standard property.
-    "vendorPrefix": "warning",
-
-    // No unit for zero needed.
-    "zeroUnits": "ignore"
-    },
-
-  // Enables or disables all validations.
-  "validate": true
-  },
-
-// Extensions
-"extension": {
-  // When enabled, automatically checks extensions for updates. If an extension has an update, it is marked as outdated in the Extensions view. The updates are fetched from a Microsoft online service.
-  "autoCheckUpdates": true,
-
-  // Controls the automatic update behavior of extensions. The updates are fetched from a Microsoft online service.
-  //  - true: Download and install updates automatically for all extensions.
-  //  - onlyEnabledExtensions: Download and install updates automatically only for enabled extensions. Disabled extensions will not be updated automatically.
-  //  - false: Extensions are not automatically updated.
-  "autoUpdate": true,
-
-  // When enabled, editors with extension details will be automatically closed upon navigating away from the Extensions View.
-  "closeExtensionDetailsOnViewChange": false,
-
-  // When an extension is listed here, a confirmation prompt will not be shown when that extension handles a URI.
-  "confirmedUriHandlerExtensionIds": [],
-
-  // When enabled, the notifications for extension recommendations will not be shown.
-  "ignoreRecommendations": false,
-
-  // Override the untrusted workspace support of an extension. Extensions using `true` will always be enabled. Extensions using `limited` will always be enabled, and the extension will hide functionality that requires trust. Extensions using `false` will only be enabled only when the workspace is trusted.
-  "supportUntrustedWorkspaces": {},
-
-  // Override the virtual workspaces support of an extension.
-  "supportVirtualWorkspaces": {
+  "testing.automaticallyOpenPeekView": "failureAnywhere",
+  "testing.automaticallyOpenPeekViewDuringAutoRun": false,
+  "testing.autoRun.delay": 1000,
+  "testing.autoRun.mode": "all",
+  "testing.defaultGutterClickAction": "run",
+  "testing.followRunningTest": true,
+  "testing.gutterEnabled": true,
+  "testing.openTesting": "openOnTestStart",
+  "testing.saveBeforeTest": true,
+
+// CSS
+  "css.completion.completePropertyWithSemicolon": true,
+  "css.completion.triggerPropertyValueCompletion": true,
+  "css.customData": [],
+  "css.format.enable": true,
+  "css.format.newlineBetweenRules": true,
+  "css.format.newlineBetweenSelectors": true,
+  "css.format.spaceAroundSelectorSeparator": true,
+  "css.hover.documentation": true,
+  "css.hover.references": true,
+  "css.lint.argumentsInColorFunction": "error",
+  "css.lint.boxModel": "ignore",
+  "css.lint.compatibleVendorPrefixes": "ignore",
+  "css.lint.duplicateProperties": "ignore",
+  "css.lint.emptyRules": "warning",
+  "css.lint.float": "ignore",
+  "css.lint.fontFaceProperties": "warning",
+  "css.lint.hexColorLength": "error",
+  "css.lint.idSelector": "ignore",
+  "css.lint.ieHack": "ignore",
+  "css.lint.important": "ignore",
+  "css.lint.importStatement": "ignore",
+  "css.lint.propertyIgnoredDueToDisplay": "warning",
+  "css.lint.universalSelector": "ignore",
+  "css.lint.unknownAtRules": "warning",
+  "css.lint.unknownProperties": "warning",
+  "css.lint.unknownVendorSpecificProperties": "ignore",
+  "css.lint.validProperties": [],
+  "css.lint.vendorPrefix": "warning",
+  "css.lint.zeroUnits": "ignore",
+  "css.trace.server": "off",
+  "css.validate": true,
+
+// LESS
+  "less.completion.completePropertyWithSemicolon": true,
+  "less.completion.triggerPropertyValueCompletion": true,
+  "less.format.enable": true,
+  "less.format.newlineBetweenRules": true,
+  "less.format.newlineBetweenSelectors": true,
+  "less.format.spaceAroundSelectorSeparator": true,
+  "less.hover.documentation": true,
+  "less.hover.references": true,
+  "less.lint.argumentsInColorFunction": "error",
+  "less.lint.boxModel": "ignore",
+  "less.lint.compatibleVendorPrefixes": "ignore",
+  "less.lint.duplicateProperties": "ignore",
+  "less.lint.emptyRules": "warning",
+  "less.lint.float": "ignore",
+  "less.lint.fontFaceProperties": "warning",
+  "less.lint.hexColorLength": "error",
+  "less.lint.idSelector": "ignore",
+  "less.lint.ieHack": "ignore",
+  "less.lint.important": "ignore",
+  "less.lint.importStatement": "ignore",
+  "less.lint.propertyIgnoredDueToDisplay": "warning",
+  "less.lint.universalSelector": "ignore",
+  "less.lint.unknownAtRules": "warning",
+  "less.lint.unknownProperties": "warning",
+  "less.lint.unknownVendorSpecificProperties": "ignore",
+  "less.lint.validProperties": [],
+  "less.lint.vendorPrefix": "warning",
+  "less.lint.zeroUnits": "ignore",
+  "less.validate": true,
+
+  // SCSS (Sass)
+
+  "scss.completion.completePropertyWithSemicolon": true,
+  "scss.completion.triggerPropertyValueCompletion": true,
+  "scss.format.enable": true,
+  "scss.format.newlineBetweenRules": true,
+  "scss.format.newlineBetweenSelectors": true,
+  "scss.format.spaceAroundSelectorSeparator": true,
+  "scss.hover.documentation": true,
+  "scss.hover.references": true,
+  "scss.lint.argumentsInColorFunction": "error",
+  "scss.lint.boxModel": "ignore",
+  "scss.lint.compatibleVendorPrefixes": "ignore",
+  "scss.lint.duplicateProperties": "ignore",
+  "scss.lint.emptyRules": "warning",
+  "scss.lint.float": "ignore",
+  "scss.lint.fontFaceProperties": "warning",
+  "scss.lint.hexColorLength": "error",
+  "scss.lint.idSelector": "ignore",
+  "scss.lint.ieHack": "ignore",
+  "scss.lint.important": "ignore",
+  "scss.lint.importStatement": "ignore",
+  "scss.lint.propertyIgnoredDueToDisplay": "warning",
+  "scss.lint.universalSelector": "ignore",
+  "scss.lint.unknownAtRules": "warning",
+  "scss.lint.unknownProperties": "warning",
+  "scss.lint.unknownVendorSpecificProperties": "ignore",
+  "scss.lint.validProperties": [],
+  "scss.lint.vendorPrefix": "warning",
+  "scss.lint.zeroUnits": "ignore",
+  "scss.validate": true,
+
+  // Extensions
+  "extensions.autoCheckUpdates": true,
+  "extensions.autoUpdate": true,
+  "extensions.closeExtensionDetailsOnViewChange": false,
+  "extensions.confirmedUriHandlerExtensionIds": [],
+  "extensions.ignoreRecommendations": false,
+  "extensions.supportUntrustedWorkspaces": {},
+  "extensions.supportVirtualWorkspaces": {
     "pub.name": false
-    }
   },
 
 // Output
-  // Enable/disable the ability of smart scrolling in the output view. Smart scrolling allows you to lock scrolling automatically when you click in the output view and unlocks when you click in the last line.
   "output.smartScroll.enabled": true,
 
-  // Settings Sync
-  "settingsSync": {
-  // List of extensions to be ignored while synchronizing. The identifier of an extension is always `${publisher}.${name}`. For example: `vscode.csharp`.
-  "ignoredExtensions": [],
+// Settings Sync
+  "settingsSync.ignoredExtensions": [],
+  "settingsSync.ignoredSettings": [],
+  "settingsSync.keybindingsPerPlatform": true,
 
-  // Configure settings to be ignored while synchronizing.
-  "ignoredSettings": [],
-
-  // Synchronize keybindings for each platform.
-  "keybindingsPerPlatform": true
-  },
-
-  // Notebooks
+// Notebooks
 
   // Controls whether code cells in the interactive window are collapsed by default.
   "interactiveWindow.collapseCellInputCode": "fromEditor",
-
-// Notebook
-  "notebook": {
   // When enabled notebook breadcrumbs contain code cells.
-  "breadcrumbs.showCodeCells": true,
-
+  "notebook.breadcrumbs.showCodeCells": true,
   // Controls where the focus indicator is rendered, either along the cell borders or on the left gutter.
-  "cellFocusIndicator": "gutter",
-
+  "notebook.cellFocusIndicator": "gutter",
   // Where the cell toolbar should be shown, or whether it should be hidden.
-  "cellToolbarLocation": {
+  "notebook.cellToolbarLocation": {
     "default": "right"
   },
 
   // Whether the cell toolbar should appear on hover or click.
-  "cellToolbarVisibility": "click",
+  "notebook.cellToolbarVisibility": "click",
 
   // Control whether the notebook editor should be rendered in a compact form. For example, when turned on, it will decrease the left margin width.
-  "compactView": true,
+  "notebook.compactView": true,
 
   // Control whether outputs action should be rendered in the output toolbar.
-  "consolidatedOutputButton": true,
+  "notebook.consolidatedOutputButton": true,
 
   // Control whether extra actions are shown in a dropdown next to the run button.
-  "consolidatedRunButton": false,
+  "notebook.consolidatedRunButton": false,
 
-  // Notebook DIFF
-  "diff": {
-    // Whether to use the enhanced text diff editor for notebook.
-    "enablePreview": true,
+  // Whether to use the enhanced text diff editor for notebook.
+  "notebook.diff.enablePreview": true,
 
-    // Hide Metadata Differences
-    "ignoreMetadata": false,
+  // Hide Metadata Differences
+  "notebook.diff.ignoreMetadata": false,
 
-    // Hide Outputs Differences
-    "ignoreOutputs": false
-    },
+  // Hide Outputs Differences
+  "notebook.diff.ignoreOutputs": false,
 
   // Priority list for output mime types
-  "displayOrder": [],
+  "notebook.displayOrder": [],
 
   // Control whether the notebook editor should allow moving cells through drag and drop.
-  "dragAndDropEnabled": true,
+  "notebook.dragAndDropEnabled": true,
 
   // Settings for code editors used in notebooks. This can be used to customize most editor.* settings.
-  "editorOptionsCustomizations": {},
+  "notebook.editorOptionsCustomizations": {},
 
   // Control whether to render a global toolbar inside the notebook editor.
-  "globalToolbar": true,
+  "notebook.globalToolbar": true,
 
   // Control whether the actions on the notebook toolbar should render label or not.
-  "globalToolbarShowLabel": "always",
+  "notebook.globalToolbarShowLabel": "always",
 
   // Control where the insert cell actions should appear.
   //  - betweenCells: A toolbar that appears on hover between cells.
   //  - notebookToolbar: The toolbar at the top of the notebook editor.
   //  - both: Both toolbars.
   //  - hidden: The insert actions don't appear anywhere.
-  "insertToolbarLocation": "both",
+  "notebook.insertToolbarLocation": "both",
 
   // Controls the display of line numbers in the cell editor.
-  "lineNumbers": "off",
+  "notebook.lineNumbers": "off",
 
   // Controls the font size in pixels of rendered markup in notebooks. When set to `0`, 120% of `editor.fontSize` is used.
-  "markup.fontSize": 0,
+  "notebook.markup.fontSize": 0,
 
   // When enabled cursor can navigate to the next/previous cell when the current cursor in the cell editor is at the first/last line.
-  "navigation.allowNavigateToSurroundingCells": true,
+  "notebook.navigation.allowNavigateToSurroundingCells": true,
 
   // When enabled notebook outline shows code cells.
-  "outline.showCodeCells": false,
+  "notebook.outline.showCodeCells": false,
 
   // Control how many lines of text in a text output is rendered.
-  "output.textLineLimit": 30,
+  "notebook.output.textLineLimit": 30,
 
   // Whether the cell status bar should be shown.
   //  - hidden: The cell Status bar is always hidden.
   //  - visible: The cell Status bar is always visible.
   //  - visibleAfterExecute: The cell Status bar is hidden until the cell has executed. Then it becomes visible to show the execution status.
-  "showCellStatusBar": "visible",
+  "notebook.showCellStatusBar": "visible",
 
   // Controls when the Markdown header folding arrow is shown.
   //  - always: The folding controls are always visible.
   //  - mouseover: The folding controls are visible only on mouseover.
-  "showFoldingControls": "mouseover",
+  "notebook.showFoldingControls": "mouseover",
 
   // Whether to use separate undo/redo stack for each cell.
-  "undoRedoPerCell": true
-  },
+  "notebook.undoRedoPerCell": true,
 
 // Terminal
-"terminal": {
-  // When opening a file from the Explorer in a terminal, determines what kind of terminal will be launched
-  //  - integrated: Use VS Code's integrated terminal.
-  //  - external: Use the configured external terminal.
-  "explorerKind": "integrated",
+  "terminal.explorerKind": "integrated",
 
   // External Terminal
-  "external": {
-    // Customizes which terminal to run on Linux.
-    "linuxExec": "xterm",
-
-    // Customizes which terminal application to run on macOS.
-    "osxExec": "Terminal.app",
-
-    // Customizes which terminal to run on Windows.
-    "windowsExec": "C:\\Windows\\System32\\cmd.exe"
-    },
+  "terminal.external.linuxExec": "xterm",
+  "terminal.external.osxExec": "Terminal.app",
+  "terminal.external.windowsExec": "C:\\Windows\\System32\\cmd.exe",
 
   // Integrated Terminal
-  "integrated": {
-    // Whether or not to allow chord keybindings in the terminal. Note that when this is true and the keystroke results in a chord it will bypass `terminal.integrated.commandsToSkipShell`, setting this to false is particularly useful when you want ctrl+k to go to your shell (not VS Code).
-    "allowChords": true,
-
-    // Whether to allow menubar mnemonics (eg. alt+f) to trigger the open of the menubar. Note that this will cause all alt keystrokes to skip the shell when true. This does nothing on macOS.
-    "allowMnemonics": false,
-
-    // If enabled, alt/option + click will reposition the prompt cursor to underneath the mouse when `editor.multiCursorModifier` is set to `'alt'` (the default value). This may not work reliably depending on your shell.
-    "altClickMovesCursor": true,
-
-    // The terminal profile to use on Linux for automation-related terminal usage like tasks and debug. This setting will currently be ignored if #terminal.integrated.automationShell.linux# is set.
-    "automationProfile.linux": null,
-
-    // The terminal profile to use on macOS for automation-related terminal usage like tasks and debug. This setting will currently be ignored if #terminal.integrated.automationShell.osx# is set.
-    "automationProfile.osx": null,
-
-    // The terminal profile to use for automation-related terminal usage like tasks and debug. This setting will currently be ignored if #terminal.integrated.automationShell.windows# is set.
-    "automationProfile.windows": null,
-
-    // A set of messages that when encountered in the terminal will be automatically responded to. Provided the message is specific enough, this can help automate away common responses.
-    "autoReplies": {},
-
-    // The number of milliseconds to show the bell within a terminal tab when triggered.
-    "bellDuration": 1000,
-
-    // A set of command IDs whose keybindings will not be sent to the shell but instead always be handled by VS Code. This allows keybindings that would normally be consumed by the shell to act instead the same as when the terminal is not focused, for example `Ctrl+P` to launch Quick Open.
-    "commandsToSkipShell": [],
-
-    // Controls whether to confirm when the window closes if there are active terminal sessions.
-    //  - never: Never confirm.
-    //  - always: Always confirm if there are terminals.
-    //  - hasChildProcesses: Confirm if there are any terminals that have child processes.
-    "confirmOnExit": "never",
-
-    // Controls whether to confirm killing terminals when they have child processes. When set to editor, terminals in the editor area will be marked as changed when they have child processes. Note that child process detection may not work well for shells like Git Bash which don't run their processes as child processes of the shell.
-    //  - never: Never confirm.
-    //  - editor: Confirm if the terminal is in the editor.
-    //  - panel: Confirm if the terminal is in the panel.
-    //  - always: Confirm if the terminal is either in the editor or panel.
-    "confirmOnKill": "editor",
-
-    // Controls whether text selected in the terminal will be copied to the clipboard.
-    "copyOnSelection": false,
-
-    // Controls whether the terminal cursor blinks.
-    "cursorBlinking": false,
-
-    // Controls the style of terminal cursor.
-    "cursorStyle": "block",
-
-    // Controls the width of the cursor when `terminal.integrated.cursorStyle` is set to `line`.
-    "cursorWidth": 1,
-
-    // Whether to draw custom glyphs for block element and box drawing characters instead of using the font, which typically yields better rendering with continuous lines. Note that this doesn't work with the DOM renderer.
-    "customGlyphs": true,
-
-    // An explicit start path where the terminal will be launched, this is used as the current working directory (cwd) for the shell process. This may be particularly useful in workspace settings if the root directory is not a convenient cwd.
-    "cwd": "",
-
-    // Controls where newly created terminals will appear.
-    //  - editor: Create terminals in the editor
-    //  - view: Create terminals in the terminal view
-    "defaultLocation": "view",
-
-    // The default profile used on Linux. This setting will currently be ignored if either `terminal.integrated.shell.linux` or `terminal.integrated.shellArgs.linux` are set.
-    "defaultProfile.linux": null,
-
-    // The default profile used on macOS. This setting will currently be ignored if either `terminal.integrated.shell.osx` or `terminal.integrated.shellArgs.osx` are set.
-    "defaultProfile.osx": null,
-
-    // The default profile used on Windows. This setting will currently be ignored if either `terminal.integrated.shell.windows` or `terminal.integrated.shellArgs.windows` are set.
-    "defaultProfile.windows": null,
-
-    // Controls whether to detect and set the `$LANG` environment variable to a UTF-8 compliant option since VS Code's terminal only supports UTF-8 encoded data coming from the shell.
-    //  - auto: Set the `$LANG` environment variable if the existing variable does not exist or it does not end in `'.UTF-8'`.
-    //  - off: Do not set the `$LANG` environment variable.
-    //  - on: Always set the `$LANG` environment variable.
-    "detectLocale": "auto",
-
-    // Controls whether bold text in the terminal will always use the "bright" ANSI color variant.
-    "drawBoldTextInBrightColors": true,
-
-    // Controls whether the terminal bell is enabled, this shows up as a visual bell next to the terminal's name.
-    "enableBell": false,
-
-    // Whether to enable file links in the terminal. Links can be slow when working on a network drive in particular because each file link is verified against the file system. Changing this will take effect only in new terminals.
-    "enableFileLinks": true,
-
-    // Show a warning dialog when pasting multiple lines into the terminal. The dialog does not show when:
-    // - Bracketed paste mode is enabled (the shell supports multi-line paste natively)
-    // - The paste is handled by the shell's readline (in the case of pwsh)
-    "enableMultiLinePasteWarning": true,
-
-    // Persist terminal sessions for the workspace across window reloads.
-    "enablePersistentSessions": true,
-
-    // Object with environment variables that will be added to the VS Code process to be used by the terminal on Linux. Set to `null` to delete the environment variable.
-    "env.linux": {},
-
-    // Object with environment variables that will be added to the VS Code process to be used by the terminal on macOS. Set to `null` to delete the environment variable.
-    "env.osx": {},
-
-    // Object with environment variables that will be added to the VS Code process to be used by the terminal on Windows. Set to `null` to delete the environment variable.
-    "env.windows": {},
-
-    // Whether to display the environment changes indicator on each terminal which explains whether extensions have made, or want to make changes to the terminal's environment.
-    //  - off: Disable the indicator.
-    //  - on: Enable the indicator.
-    //  - warnonly: Only show the warning indicator when a terminal's environment is 'stale', not the information indicator that shows a terminal has had its environment modified by an extension.
-    "environmentChangesIndicator": "warnonly",
-
-    // Whether to relaunch terminals automatically if extension want to contribute to their environment and have not been interacted with yet.
-    "environmentChangesRelaunch": true,
-
-    // Scrolling speed multiplier when pressing `Alt`.
-    "fastScrollSensitivity": 5,
-
-    // Controls the font family of the terminal, this defaults to `editor.fontFamily`'s value.
-    "fontFamily": "",
-
-    // Controls the font size in pixels of the terminal.
-    "fontSize": 14,
-
-    // The font weight to use within the terminal for non-bold text. Accepts "normal" and "bold" keywords or numbers between 1 and 1000.
-    "fontWeight": "normal",
-
-    // The font weight to use within the terminal for bold text. Accepts "normal" and "bold" keywords or numbers between 1 and 1000.
-    "fontWeightBold": "bold",
-
-    // Controls whether the terminal will leverage the GPU to do its rendering.
-    //  - auto: Let VS Code detect which renderer will give the best experience.
-    //  - on: Enable GPU acceleration within the terminal.
-    //  - off: Disable GPU acceleration within the terminal.
-    //  - canvas: Use the fallback canvas renderer within the terminal. This uses a 2d context instead of webgl and may be better on some systems.
-    "gpuAcceleration": "auto",
-
-    // A set of process names to ignore when using the `terminal.integrated.confirmOnKill` setting.
-    "ignoreProcessNames": [],
-
-    // Whether new shells should inherit their environment from VS Code, which may source a login shell to ensure $PATH and other development variables are initialized. This has no effect on Windows.
-    "inheritEnv": true,
-
-    // Controls the letter spacing of the terminal, this is an integer value which represents the amount of additional pixels to add between characters.
-    "letterSpacing": 0,
-
-    // Controls the line height of the terminal, this number is multiplied by the terminal font size to get the actual line-height in pixels.
-    "lineHeight": 1,
-
-    // When local echo should be enabled. This will override `terminal.integrated.localEchoLatencyThreshold`
-    //  - on: Always enabled
-    //  - off: Always disabled
-    //  - auto: Enabled only for remote workspaces
-    "localEchoEnabled": "auto",
-
-    // Local echo will be disabled when any of these program names are found in the terminal title.
-    "localEchoExcludePrograms": ["vim", "vi", "nano", "tmux"],
-
-    // Length of network delay, in milliseconds, where local edits will be echoed on the terminal without waiting for server acknowledgement. If '0', local echo will always be on, and if '-1' it will be disabled.
-    "localEchoLatencyThreshold": 30,
-
-    // Terminal style of locally echoed text; either a font style or an RGB color.
-    "localEchoStyle": "dim",
-
-    // Controls whether to force selection when using Option+click on macOS. This will force a regular (line) selection and disallow the use of column selection mode. This enables copying and pasting using the regular terminal selection, for example, when mouse mode is enabled in tmux.
-    "macOptionClickForcesSelection": false,
-
-    // Controls whether to treat the option key as the meta key in the terminal on macOS.
-    "macOptionIsMeta": false,
-
-    // When set the foreground color of each cell will change to try meet the contrast ratio specified. Example values:
-    //
-    // - 1: The default, do nothing.
-    // - 4.5: WCAG AA compliance (minimum).
-    // - 7: WCAG AAA compliance (enhanced).
-    // - 21: White on black or black on white.
-    "minimumContrastRatio": 4.5,
-
-    // A multiplier to be used on the `deltaY` of mouse wheel scroll events.
-    "mouseWheelScrollSensitivity": 1,
-
-    // When the terminal process must be shutdown (for example, on window or application close), this determines when the previous terminal session contents should be restored and processes be recreated when the workspace is next opened.
-    //  - onExit: Revive the processes after the last window is closed on Windows/Linux or when the `workbench.action.quit` command is triggered (command palette, keybinding, menu).
-    //  - onExitAndWindowClose: Revive the processes after the last window is closed on Windows/Linux or when the `workbench.action.quit` command is triggered (command palette, keybinding, menu), or when the window is closed.
-    //  - never: Never restore the terminal buffers or recreate the process.
-    "persistentSessionReviveProcess": "onExit",
-
-    // Controls the maximum amount of lines that will be restored when reconnecting to a persistent terminal session. Increasing this will restore more lines of scrollback at the cost of more memory and increase the time it takes to connect to terminals on start up. This setting requires a restart to take effect and should be set to a value less than or equal to `terminal.integrated.scrollback`.
-    "persistentSessionScrollback": 100,
-
-    // The Linux profiles to present when creating a new terminal via the terminal dropdown. When set, these will override the default detected profiles. They are comprised of a `path` and optional `args`.
-    "profiles.linux": {},
-
-    // The macOS profiles to present when creating a new terminal via the terminal dropdown. When set, these will override the default detected profiles. They are comprised of a `path` and optional `args`.
-    "profiles.osx": {},
-
-    // The Windows profiles to present when creating a new terminal via the terminal dropdown. Set to null to exclude them, use the `source` property to use the default detected configuration. Or, set the `path` and optional `args`.
-    "profiles.windows": {},
-
-    // Controls how terminal reacts to right click.
-    //  - default: Show the context menu.
-    //  - copyPaste: Copy when there is a selection, otherwise paste.
-    //  - paste: Paste on right click.
-    //  - selectWord: Select the word under the cursor and show the context menu.
-    //  - nothing: Do nothing and pass event to terminal.
-    "rightClickBehavior": "copyPaste",
-
-    // Controls the maximum amount of lines the terminal keeps in its buffer.
-    "scrollback": 1000,
-
-    // Dispatches most keybindings to the terminal instead of the workbench, overriding `terminal.integrated.commandsToSkipShell`, which can be used alternatively for fine tuning.
-    "sendKeybindingsToShell": false,
-
-    // Controls whether to show the alert "The terminal process terminated with exit code" when exit code is non-zero.
-    "showExitAlert": true,
-
-    // Whether to show hovers for links in the terminal output.
-    "showLinkHover": true,
-
-    // Controls the working directory a split terminal starts with.
-    //  - workspaceRoot: A new split terminal will use the workspace root as the working directory. In a multi-root workspace a choice for which root folder to use is offered.
-    //  - initial: A new split terminal will use the working directory that the parent terminal started with.
-    //  - inherited: On macOS and Linux, a new split terminal will use the working directory of the parent terminal. On Windows, this behaves the same as initial.
-    "splitCwd": "inherited",
-
-    // Integrated Terminal Tabs
-    "tabs": {
-      // Controls the terminal description, which appears to the right of the title. Variables are substituted based on the context:
-      // - `${cwd}`: the terminal's current working directory
-      // - `${cwdFolder}`: the terminal's current working directory, displayed for multi-root workspaces or in a single root workspace when the value differs from the initial working directory.
-      // - `${workspaceFolder}`: the workspace in which the terminal was launched
-      // - `${local}`: indicates a local terminal in a remote workspace
-      // - `${process}`: the name of the terminal process
-      // - `${separator}`: a conditional separator (" - ") that only shows when surrounded by variables with values or static text.
-      // - `${sequence}`: the name provided to xterm.js by the process
-      // - `${task}`: indicates this terminal is associated with a task
-      "description": "${task}${separator}${local}${separator}${cwdFolder}",
-
-      // Controls whether terminal tab statuses support animation (eg. in progress tasks).
-      "enableAnimation": true,
-
-      // Controls whether terminal tabs display as a list to the side of the terminal. When this is disabled a dropdown will display instead.
-      "enabled": true,
-
-      // Controls whether focusing the terminal of a tab happens on double or single click.
-      //  - singleClick: Focus the terminal when clicking a terminal tab
-      //  - doubleClick: Focus the terminal when double clicking a terminal tab
-      "focusMode": "doubleClick",
-
-      // Controls whether the terminal tabs view will hide under certain conditions.
-      //  - never: Never hide the terminal tabs view
-      //  - singleTerminal: Hide the terminal tabs view when there is only a single terminal opened
-      //  - singleGroup: Hide the terminal tabs view when there is only a single terminal group opened
-      "hideCondition": "singleTerminal",
-
-      // Controls the location of the terminal tabs, either to the left or right of the actual terminal(s).
-      //  - left: Show the terminal tabs view to the left of the terminal
-      //  - right: Show the terminal tabs view to the right of the terminal
-      "location": "right",
-
-      // Separator used by `terminal.integrated.tabs.title` and `terminal.integrated.tabs.title`.
-      "separator": " - ",
-
-      // Controls whether terminal split and kill buttons are displays next to the new terminal button.
-      //  - always: Always show the actions
-      //  - singleTerminal: Show the actions when it is the only terminal opened
-      //  - singleTerminalOrNarrow: Show the actions when it is the only terminal opened or when the tabs view is in its narrow textless state
-      //  - never: Never show the actions
-      "showActions": "singleTerminalOrNarrow",
-
-      // Shows the active terminal information in the view, this is particularly useful when the title within the tabs aren't visible.
-      //  - always: Always show the active terminal
-      //  - singleTerminal: Show the active terminal when it is the only terminal opened
-      //  - singleTerminalOrNarrow: Show the active terminal when it is the only terminal opened or when the tabs view is in its narrow textless state
-      //  - never: Never show the active terminal
-      "showActiveTerminal": "singleTerminalOrNarrow",
-
-      // Controls the terminal title. Variables are substituted based on the context:
-      // - `${cwd}`: the terminal's current working directory
-      // - `${cwdFolder}`: the terminal's current working directory, displayed for multi-root workspaces or in a single root workspace when the value differs from the initial working directory.
-      // - `${workspaceFolder}`: the workspace in which the terminal was launched
-      // - `${local}`: indicates a local terminal in a remote workspace
-      // - `${process}`: the name of the terminal process
-      // - `${separator}`: a conditional separator (" - ") that only shows when surrounded by variables with values or static text.
-      // - `${sequence}`: the name provided to xterm.js by the process
-      // - `${task}`: indicates this terminal is associated with a task
-      "title": "${process}"
-      },
-
-    // Controls what version of Unicode to use when evaluating the width of characters in the terminal. If you experience emoji or other wide characters not taking up the right amount of space or backspace either deleting too much or too little then you may want to try tweaking this setting.
-    //  - 6: Version 6 of Unicode, this is an older version which should work better on older systems.
-    //  - 11: Version 11 of Unicode, this version provides better support on modern systems that use modern versions of Unicode.
-    "unicodeVersion": "11",
-
-    // Controls whether or not WSL distros are shown in the terminal dropdown
-    "useWslProfiles": true,
-
-    // Whether to use ConPTY for Windows terminal process communication (requires Windows 10 build number 18309+). Winpty will be used if this is false.
-    "windowsEnableConpty": true,
-
-    // A string containing all characters to be considered word separators by the double click to select word feature.
-    "wordSeparators": " ()[]{}',\"`─‘’"
-    }
-  },
-
-// Tasks
-"tasks": {
-  // Controls enablement of `provideTasks` for all task provider extension. If the Tasks: Run Task command is slow, disabling auto detect for task providers may help. Individual extensions may also provide settings that disable auto detection.
-  "autoDetect": "on",
-
-  // Configures whether to show the problem matcher prompt when running a task. Set to `true` to never prompt, or use a dictionary of task types to turn off prompting only for specific task types.
-  "problemMatchers.neverPrompt": false,
-
-  // QuickOpen
-  "quickOpen": {
-    // Controls whether to show the task detail for tasks that have a detail in task quick picks, such as Run Task.
-    "quickOpen.detail": true,
-
-    // Controls the number of recent items tracked in task quick open dialog.
-    "quickOpen.history": 30,
-
-    // Causes the Tasks: Run Task command to use the slower "show all" behavior instead of the faster two level picker where tasks are grouped by provider.
-    "quickOpen.showAll": false,
-
-    // Controls whether the task quick pick is skipped when there is only one task to pick from.
-    "quickOpen.skip": false
-    },
-
-  // Save all dirty editors before running a task.
-  //  - always: Always saves all editors before running.
-  //  - never: Never saves editors before running.
-  //  - prompt: Prompts whether to save editors before running.
-  "saveBeforeRun": "always",
-
-  // Configures whether a warning is shown when a provider is slow
-  "slowProviderWarning": true
-  },
-
-// Problems
-"problems": {
-  // Controls whether Problems view should automatically reveal files when opening them.
-  "autoReveal": true,
-
-  // Show Errors & Warnings on files and folder.
-  "decorations.enabled": true,
-
-  // When enabled shows the current problem in the status bar.
-  "showCurrentInStatus": false,
-
-  // Controls the order in which problems are navigated.
-  //  - severity: Navigate problems ordered by severity
-  //  - position: Navigate problems ordered by position
-  "sortOrder": "severity"
-  },
-
-// Breadcrumb Navigation
-"bradcrumbs": {
-  // Enable/disable navigation breadcrumbs.
-  "enabled": true,
-
-  // Controls whether and how file paths are shown in the breadcrumbs view.
-  //  - on: Show the file path in the breadcrumbs view.
-  //  - off: Do not show the file path in the breadcrumbs view.
-  //  - last: Only show the last element of the file path in the breadcrumbs view.
-  "filePath": "last",
-
-  // Render breadcrumb items with icons.
-  "icons": true,
-
-  // When enabled breadcrumbs show `array`-symbols.
-  "showArrays": true,
-
-  // When enabled breadcrumbs show `boolean`-symbols.
-  "showBooleans": true,
-
-  // When enabled breadcrumbs show `class`-symbols.
-  "showClasses": true,
-
-  // When enabled breadcrumbs show `constant`-symbols.
-  "showConstants": true,
-
-  // When enabled breadcrumbs show `constructor`-symbols.
-  "showConstructors": true,
-
-  // When enabled breadcrumbs show `enumMember`-symbols.
-  "showEnumMembers": true,
-
-  // When enabled breadcrumbs show `enum`-symbols.
-  "showEnums": true,
-
-  // When enabled breadcrumbs show `event`-symbols.
-  "showEvents": true,
-
-  // When enabled breadcrumbs show `field`-symbols.
-  "showFields": true,
-
-  // When enabled breadcrumbs show `file`-symbols.
-  "showFiles": true,
-
-  // When enabled breadcrumbs show `function`-symbols.
-  "showFunctions": true,
-
-  // When enabled breadcrumbs show `interface`-symbols.
-  "showInterfaces": true,
-
-  // When enabled breadcrumbs show `key`-symbols.
-  "showKeys": true,
-
-  // When enabled breadcrumbs show `method`-symbols.
-  "showMethods": true,
-
-  // When enabled breadcrumbs show `module`-symbols.
-  "showModules": true,
-
-  // When enabled breadcrumbs show `namespace`-symbols.
-  "showNamespaces": true,
-
-  // When enabled breadcrumbs show `null`-symbols.
-  "showNull": true,
-
-  // When enabled breadcrumbs show `number`-symbols.
-  "showNumbers": true,
-
-  // When enabled breadcrumbs show `object`-symbols.
-  "showObjects": true,
-
-  // When enabled breadcrumbs show `operator`-symbols.
-  "showOperators": true,
-
-  // When enabled breadcrumbs show `package`-symbols.
-  "showPackages": true,
-
-  // When enabled breadcrumbs show `property`-symbols.
-  "showProperties": true,
-
-  // When enabled breadcrumbs show `string`-symbols.
-  "showStrings": true,
-
-  // When enabled breadcrumbs show `struct`-symbols.
-  "showStructs": true,
-
-  // When enabled breadcrumbs show `typeParameter`-symbols.
-  "showTypeParameters": true,
-
-  // When enabled breadcrumbs show `variable`-symbols.
-  "showVariables": true,
-
-  // Controls whether and how symbols are shown in the breadcrumbs view.
-  //  - on: Show all symbols in the breadcrumbs view.
-  //  - off: Do not show symbols in the breadcrumbs view.
-  //  - last: Only show the current symbol in the breadcrumbs view.
-  "symbolPath": "on",
-
-  // Controls how symbols are sorted in the breadcrumbs outline view.
-  //  - position: Show symbol outline in file position order.
-  //  - name: Show symbol outline in alphabetical order.
-  //  - type: Show symbol outline in symbol type order.
-  "symbolSortOrder": "position"
-  },
+  "terminal.integrated.allowChords": true,
+  "terminal.integrated.allowMnemonics": false,
+  "terminal.integrated.altClickMovesCursor": true,
+  "terminal.integrated.automationProfile.linux": null,
+  "terminal.integrated.automationProfile.osx": null,
+  "terminal.integrated.automationProfile.windows": null,
+  "terminal.integrated.autoReplies": {},
+  "terminal.integrated.bellDuration": 1000,
+  "terminal.integrated.commandsToSkipShell": [],
+  "terminal.integrated.confirmOnExit": "hasChildProcesses",
+  "terminal.integrated.confirmOnKill": "editor",
+  "terminal.integrated.copyOnSelection": false,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "block",
+  "terminal.integrated.cursorWidth": 1,
+  "terminal.integrated.customGlyphs": true,
+  "terminal.integrated.cwd": "",
+  "terminal.integrated.defaultLocation": "view",
+  "terminal.integrated.defaultProfile.linux": null,
+  "terminal.integrated.defaultProfile.osx": null,
+  "terminal.integrated.defaultProfile.windows": null,
+  "terminal.integrated.detectLocale": "auto",
+  "terminal.integrated.drawBoldTextInBrightColors": true,
+  "terminal.integrated.enableBell": false,
+  "terminal.integrated.enableFileLinks": true,
+  "terminal.integrated.enableMultiLinePasteWarning": true,
+  "terminal.integrated.enablePersistentSessions": true,
+  "terminal.integrated.env.linux": {},
+  "terminal.integrated.env.osx": {},
+  "terminal.integrated.env.windows": {},
+  "terminal.integrated.environmentChangesIndicator": "warnonly",
+  "terminal.integrated.environmentChangesRelaunch": true,
+  "terminal.integrated.fastScrollSensitivity": 5,
+  "terminal.integrated.fontFamily": "",
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontWeight": "normal",
+  "terminal.integrated.fontWeightBold": "bold",
+  "terminal.integrated.gpuAcceleration": "auto",
+  "terminal.integrated.ignoreProcessNames": [],
+  "terminal.integrated.inheritEnv": true,
+  "terminal.integrated.letterSpacing": 0,
+  "terminal.integrated.lineHeight": 1,
+  "terminal.integrated.localEchoEnabled": "auto",
+  "terminal.integrated.localEchoExcludePrograms": ["vim", "vi", "nano", "tmux"],
+  "terminal.integrated.localEchoLatencyThreshold": 30,
+  "terminal.integrated.localEchoStyle": "dim",
+  "terminal.integrated.macOptionClickForcesSelection": false,
+  "terminal.integrated.macOptionIsMeta": false,
+  "terminal.integrated.minimumContrastRatio": 4.5,
+  "terminal.integrated.mouseWheelScrollSensitivity": 1,
+  "terminal.integrated.persistentSessionReviveProcess": "onExit",
+  "terminal.integrated.persistentSessionScrollback": 100,
+  "terminal.integrated.profiles.linux": {},
+  "terminal.integrated.profiles.osx": {},
+  "terminal.integrated.profiles.windows": {},
+  "terminal.integrated.rightClickBehavior": "copyPaste",
+  "terminal.integrated.scrollback": 1000,
+  "terminal.integrated.sendKeybindingsToShell": false,
+  "terminal.integrated.showExitAlert": true,
+  "terminal.integrated.showLinkHover": true,
+  "terminal.integrated.splitCwd": "workspaceRoot",
+  // Controls the terminal description, which appears to the right of the title. Variables are substituted based on the context:
+  // - `${cwd}`: the terminal's current working directory
+  // - `${cwdFolder}`: the terminal's current working directory, displayed for multi-root workspaces or in a single root workspace when the value differs from the initial working directory.
+  // - `${workspaceFolder}`: the workspace in which the terminal was launched
+  // - `${local}`: indicates a local terminal in a remote workspace
+  // - `${process}`: the name of the terminal process
+  // - `${separator}`: a conditional separator (" - ") that only shows when surrounded by variables with values or static text.
+  // - `${sequence}`: the name provided to xterm.js by the process
+  // - `${task}`: indicates this terminal is associated with a task
+  "terminal.integrated.tabs.description": "${task}${separator}${local}${separator}${cwdFolder}",
+  "terminal.integrated.tabs.enableAnimation": true,
+  "terminal.integrated.tabs.enabled": true,
+  "terminal.integrated.tabs.focusMode": "doubleClick",
+  "terminal.integrated.tabs.hideCondition": "never",
+  "terminal.integrated.tabs.location": "right",
+  "terminal.integrated.tabs.separator": " - ",
+  "terminal.integrated.tabs.showActions": "always",
+  "terminal.integrated.tabs.showActiveTerminal": "always",
+  "terminal.integrated.tabs.title": "${process}",
+  "terminal.integrated.unicodeVersion": "11",
+  "terminal.integrated.useWslProfiles": true,
+  "terminal.integrated.windowsEnableConpty": true,
+  "terminal.integrated.wordSeparators": " ()[]{}',\"`─‘’",
+
+  // Tasks
+
+  "task.autoDetect": "on",
+  "task.problemMatchers.neverPrompt": false,
+  "task.quickOpen.detail": true,
+  "task.quickOpen.history": 30,
+  "task.quickOpen.showAll": false,
+  "task.quickOpen.skip": false,
+  "task.saveBeforeRun": "always",
+  "task.slowProviderWarning": true,
+
+  // Problems
+
+  "problems.autoReveal": true,
+  "problems.decorations.enabled": true,
+  "problems.showCurrentInStatus": true,
+  "problems.sortOrder": "severity",
+
+  // Breadcrumb Navigation
+  "breadcrumbs.enabled": true,
+  "breadcrumbs.filePath": "last",
+  "breadcrumbs.icons": true,
+  "breadcrumbs.showArrays": true,
+  "breadcrumbs.showBooleans": true,
+  "breadcrumbs.showClasses": true,
+  "breadcrumbs.showConstants": true,
+  "breadcrumbs.showConstructors": true,
+  "breadcrumbs.showEnumMembers": true,
+  "breadcrumbs.showEnums": true,
+  "breadcrumbs.showEvents": true,
+  "breadcrumbs.showFields": true,
+  "breadcrumbs.showFiles": true,
+  "breadcrumbs.showFunctions": true,
+  "breadcrumbs.showInterfaces": true,
+  "breadcrumbs.showKeys": true,
+  "breadcrumbs.showMethods": true,
+  "breadcrumbs.showModules": true,
+  "breadcrumbs.showNamespaces": true,
+  "breadcrumbs.showNull": true,
+  "breadcrumbs.showNumbers": true,
+  "breadcrumbs.showObjects": true,
+  "breadcrumbs.showOperators": true,
+  "breadcrumbs.showPackages": true,
+  "breadcrumbs.showProperties": true,
+  "breadcrumbs.showStrings": true,
+  "breadcrumbs.showStructs": true,
+  "breadcrumbs.showTypeParameters": true,
+  "breadcrumbs.showVariables": true,
+  "breadcrumbs.symbolPath": "on",
+  "breadcrumbs.symbolSortOrder": "position",
 
 // Telemetry
-"telemetry": {
-  // Telemetry - Crash Reporter
-  // If this setting is false, no telemetry will be sent regardless of the new setting's value. Deprecated due to being combined into the `telemetry.telemetryLevel` setting.
-  // Enable crash reports to be collected.
-  "enableCrashReporter": false,
-
-  // Telemetry
-  // If this setting is false, no telemetry will be sent regardless of the new setting's value. Deprecated in favor of the `telemetry.telemetryLevel` setting.
-  // Enable diagnostic data to be collected.
-  "enableTelemetry": false,
-
-  // Telemetry - Level
-  //  - all: Sends usage data, errors, and crash reports.
-  //  - error: Sends general error telemetry and crash reports.
-  //  - crash: Sends OS level crash reports.
-  //  - off: Disables all product telemetry.
-  "telemetryLevel": "off"
-  },
+  "telemetry.telemetryLevel": "off",
 
 // Outline
-"outline": {
-  // Render Outline Elements with Icons.
-  "icons": true,
-
-  // Outline Problems
-  "problems": {
-    // Use badges for Errors & Warnings.
-    "badges": true,
-
-    // Use colors for Errors & Warnings.
-    "colors": true,
-
-    // Show Errors & Warnings on Outline Elements.
-    "enabled": true
-    },
-
-  // When enabled outline shows `array`-symbols.
-  "showArrays": true,
-
-  // When enabled outline shows `boolean`-symbols.
-  "showBooleans": true,
-
-  // When enabled outline shows `class`-symbols.
-  "showClasses": true,
-
-  // When enabled outline shows `constant`-symbols.
-  "showConstants": true,
-
-  // When enabled outline shows `constructor`-symbols.
-  "showConstructors": true,
-
-  // When enabled outline shows `enumMember`-symbols.
-  "showEnumMembers": true,
-
-  // When enabled outline shows `enum`-symbols.
-  "showEnums": true,
-
-  // When enabled outline shows `event`-symbols.
-  "showEvents": true,
-
-  // When enabled outline shows `field`-symbols.
-  "showFields": true,
-
-  // When enabled outline shows `file`-symbols.
-  "showFiles": true,
-
-  // When enabled outline shows `function`-symbols.
-  "showFunctions": true,
-
-  // When enabled outline shows `interface`-symbols.
-  "showInterfaces": true,
-
-  // When enabled outline shows `key`-symbols.
-  "showKeys": true,
-
-  // When enabled outline shows `method`-symbols.
-  "showMethods": true,
-
-  // When enabled outline shows `module`-symbols.
-  "showModules": true,
-
-  // When enabled outline shows `namespace`-symbols.
-  "showNamespaces": true,
-
-  // When enabled outline shows `null`-symbols.
-  "showNull": true,
-
-  // When enabled outline shows `number`-symbols.
-  "showNumbers": true,
-
-  // When enabled outline shows `object`-symbols.
-  "showObjects": true,
-
-  // When enabled outline shows `operator`-symbols.
-  "showOperators": true,
-
-  // When enabled outline shows `package`-symbols.
-  "showPackages": true,
-
-  // When enabled outline shows `property`-symbols.
-  "showProperties": true,
-
-  // When enabled outline shows `string`-symbols.
-  "showStrings": true,
-
-  // When enabled outline shows `struct`-symbols.
-  "showStructs": true,
-
-  // When enabled outline shows `typeParameter`-symbols.
-  "showTypeParameters": true,
-
-  // When enabled outline shows `variable`-symbols.
-  "showVariables": true
-  },
+  "outline.icons": true,
+  "outline.problems.badges": true,
+  "outline.problems.colors": true,
+  "outline.problems.enabled": true,
+  "outline.showArrays": true,
+  "outline.showBooleans": true,
+  "outline.showClasses": true,
+  "outline.showConstants": true,
+  "outline.showConstructors": true,
+  "outline.showEnumMembers": true,
+  "outline.showEnums": true,
+  "outline.showEvents": true,
+  "outline.showFields": true,
+  "outline.showFiles": true,
+  "outline.showFunctions": true,
+  "outline.showInterfaces": true,
+  "outline.showKeys": true,
+  "outline.showMethods": true,
+  "outline.showModules": true,
+  "outline.showNamespaces": true,
+  "outline.showNull": true,
+  "outline.showNumbers": true,
+  "outline.showObjects": true,
+  "outline.showOperators": true,
+  "outline.showPackages": true,
+  "outline.showProperties": true,
+  "outline.showStrings": true,
+  "outline.showStructs": true,
+  "outline.showTypeParameters": true,
+  "outline.showVariables": true,
 
 // Timeline
-"timeline": {
+
   // An array of Timeline sources that should be excluded from the Timeline view.
-  "excludeSources": null,
+  "timeline.excludeSources": null,
 
   // The number of items to show in the Timeline view by default and when loading more items. Setting to `null` (the default) will automatically choose a page size based on the visible area of the Timeline view.
-  "pageSize": null
-  },
+  "timeline.pageSize": null,
 
   // Default Configuration Overrides
-
-  // Configure settings to be overridden for the css language.
   "[css]": {
     "editor.suggest.insertMode": "replace"
   },
-
-  // Configure settings to be overridden for the dockercompose language.
   "[dockercompose]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
     "editor.autoIndent": "advanced"
   },
-
-  // Configure settings to be overridden for the dockerfile language.
   "[dockerfile]": {
     "editor.quickSuggestions": {
       "strings": true
     }
   },
-
-  // Configure settings to be overridden for the git-commit language.
   "[git-commit]": {
     "editor.rulers": [72],
     "workbench.editor.restoreViewState": false
   },
-
-  // Configure settings to be overridden for the git-rebase language.
   "[git-rebase]": {
     "workbench.editor.restoreViewState": false
   },
-
-  // Configure settings to be overridden for the go language.
   "[go]": {
     "editor.insertSpaces": false
   },
-
-  // Configure settings to be overridden for the handlebars language.
   "[handlebars]": {
     "editor.suggest.insertMode": "replace"
   },
-
-  // Configure settings to be overridden for the html language.
   "[html]": {
     "editor.suggest.insertMode": "replace"
   },
-
-  // Configure settings to be overridden for the javascript language.
   "[javascript]": {
     "editor.maxTokenizationLineLength": 2500
   },
-
-  // Configure settings to be overridden for the json language.
   "[json]": {
     "editor.quickSuggestions": {
       "strings": true
     },
     "editor.suggest.insertMode": "replace"
   },
-
-  // Configure settings to be overridden for the jsonc language.
   "[jsonc]": {
     "editor.quickSuggestions": {
       "strings": true
     },
     "editor.suggest.insertMode": "replace"
   },
-
-  // Configure settings to be overridden for the less language.
   "[less]": {
     "editor.suggest.insertMode": "replace"
   },
-
-  // Configure settings to be overridden for the makefile language.
   "[makefile]": {
     "editor.insertSpaces": false
   },
-
-  // Configure settings to be overridden for the markdown language.
   "[markdown]": {
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "editor.unicodeHighlight.invisibleCharacters": false,
     "editor.wordWrap": "on",
     "editor.quickSuggestions": false
   },
-
-  // Configure settings to be overridden for the plaintext language.
   "[plaintext]": {
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "editor.unicodeHighlight.invisibleCharacters": false
   },
-
-  // Configure settings to be overridden for the scss language.
   "[scss]": {
     "editor.suggest.insertMode": "replace"
   },
-
-  // Configure settings to be overridden for the search-result language.
   "[search-result]": {
     "editor.lineNumbers": "off"
   },
-
-  // Configure settings to be overridden for the shellscript language.
   "[shellscript]": {
     "files.eol": "\n"
   },
-
-  // Configure settings to be overridden for the yaml language.
   "[yaml]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
@@ -2918,494 +1068,159 @@
   },
 
 // Audio Cues
-  "audioCues": {
-  // Plays a sound when the active line has a breakpoint.
-  //  - auto: Enable audio cue when a screen reader is attached.
-  //  - on: Enable audio cue.
-  //  - off: Disable audio cue.
-  "lineHasBreakpoint": "auto",
-
-  // Plays a sound when the active line has an error.
-  //  - auto: Enable audio cue when a screen reader is attached.
-  //  - on: Enable audio cue.
-  //  - off: Disable audio cue.
-  "lineHasError": "auto",
-
-  // Plays a sound when the active line has a folded area that can be unfolded.
-  //  - auto: Enable audio cue when a screen reader is attached.
-  //  - on: Enable audio cue.
-  //  - off: Disable audio cue.
-  "lineHasFoldedArea": "auto",
-
-  // Plays a sound when the active line has an inline suggestion.
-  //  - auto: Enable audio cue when a screen reader is attached.
-  //  - on: Enable audio cue.
-  //  - off: Disable audio cue.
-  "lineHasInlineSuggestion": "auto",
-
-  // Plays a sound when the active line has a warning.
-  //  - auto: Enable audio cue when a screen reader is attached.
-  //  - on: Enable audio cue.
-  //  - off: Disable audio cue.
-  "lineHasWarning": "off",
-
-  // Plays a sound when trying to read a line with inlay hints that has no inlay hints.
-  //  - auto: Enable audio cue when a screen reader is attached.
-  //  - on: Enable audio cue.
-  //  - off: Disable audio cue.
-  "noInlayHints": "auto",
-
-  // Plays a sound when the debugger stopped on a breakpoint.
-  //  - auto: Enable audio cue when a screen reader is attached.
-  //  - on: Enable audio cue.
-  //  - off: Disable audio cue.
-  "onDebugBreak": "auto",
-
-  // The volume of the audio cues in percent (0-100).
-  "volume": 50
-  },
+  "audioCues.lineHasBreakpoint": "off",
+  "audioCues.lineHasError": "off",
+  "audioCues.lineHasFoldedArea": "off",
+  "audioCues.lineHasInlineSuggestion": "off",
+  "audioCues.lineHasWarning": "off",
+  "audioCues.noInlayHints": "off",
+  "audioCues.onDebugBreak": "off",
+  "audioCues.volume": 50,
 
 // Remote
-  "remote": {
-  // When enabled, new running processes are detected and ports that they listen on are automatically forwarded. Disabling this setting will not prevent all ports from being forwarded. Even when disabled, extensions will still be able to cause ports to be forwarded, and opening some URLs will still cause ports to forwarded.
-  "autoForwardPorts": true,
-
-  // Sets the source from which ports are automatically forwarded when `remote.autoForwardPorts` is true. On Windows and Mac remotes, the `process` option has no effect and `output` will be used. Requires a reload to take effect.
-  //  - process: Ports will be automatically forwarded when discovered by watching for processes that are started and include a port.
-  //  - output: Ports will be automatically forwarded when discovered by reading terminal and debug output. Not all processes that use ports will print to the integrated terminal or debug console, so some ports will be missed. Ports forwarded based on output will not be "un-forwarded" until reload or until the port is closed by the user in the Ports view.
-  "autoForwardPortsSource": "process",
-
-  // When enabled extensions are downloaded locally and installed on remote.
-  "downloadExtensionsLocally": false,
-
-  // Override the kind of an extension. `ui` extensions are installed and run on the local machine while `workspace` extensions are run on the remote. By overriding an extension's default kind using this setting, you specify if that extension should be installed and enabled locally or remotely.
-  "extensionKind": {
+  "remote.autoForwardPorts": true,
+  "remote.autoForwardPortsSource": "process",
+  "remote.downloadExtensionsLocally": false,
+  "remote.extensionKind": {
     "pub.name": ["ui"]
   },
-
-  // Specifies the local host name that will be used for port forwarding.
-  "localPortHost": "localhost",
-
-  // Set default properties that are applied to all ports that don't get properties from the setting `remote.portsAttributes`.
-  "otherPortsAttributes": {},
-
-  // Set properties that are applied when a specific port number is forwarded.
-  "portsAttributes": {},
-
-  // Restores the ports you forwarded in a workspace.
-  "restoreForwardedPorts": true
-  },
+  "remote.localPortHost": "localhost",
+  "remote.otherPortsAttributes": {},
+  "remote.portsAttributes": {},
+  "remote.restoreForwardedPorts": true,
 
 // Emmet
-  "emmet": {
-  // An array of languages where Emmet abbreviations should not be expanded.
-  "excludeLanguages": ["markdown"],
-
-  // An array of paths, where each path can contain Emmet syntaxProfiles and/or snippet files.
-  // In case of conflicts, the profiles/snippets of later paths will override those of earlier paths.
-  "extensionsPath": [],
-
-  // Enable Emmet abbreviations in languages that are not supported by default. Add a mapping here between the language and Emmet supported language.
-  //  For example: `{"vue-html": "html", "javascript": "javascriptreact"}`
-  "includeLanguages": {},
-
-  // When set to `false`, the whole file is parsed to determine if current position is valid for expanding Emmet abbreviations. When set to `true`, only the content around the current position in CSS/SCSS/Less files is parsed.
-  "optimizeStylesheetParsing": true,
-
-  // Preferences used to modify behavior of some actions and resolvers of Emmet.
-  "preferences": {},
-
-  // Shows possible Emmet abbreviations as suggestions. Not applicable in stylesheets or when emmet.showExpandedAbbreviation is set to `"never"`.
-  "showAbbreviationSuggestions": true,
-
-  // Shows expanded Emmet abbreviations as suggestions.
-  // The option `"inMarkupAndStylesheetFilesOnly"` applies to html, haml, jade, slim, xml, xsl, css, scss, sass, less and stylus.
-  // The option `"always"` applies to all parts of the file regardless of markup/css.
-  "showExpandedAbbreviation": "always",
-
-  // If `true`, then Emmet suggestions will show up as snippets allowing you to order them as per `editor.snippetSuggestions` setting.
-  "showSuggestionsAsSnippets": false,
-
-  // Define profile for specified syntax or use your own profile with specific rules.
-  "syntaxProfiles": {},
-
-  // When enabled, Emmet abbreviations are expanded when pressing TAB.
-  "triggerExpansionOnTab": false,
-
-  // Variables to be used in Emmet snippets.
-  "variables": {}
-  },
+  "emmet.excludeLanguages": ["markdown"],
+  "emmet.extensionsPath": [],
+  "emmet.includeLanguages": {},
+  "emmet.optimizeStylesheetParsing": true,
+  "emmet.preferences": {},
+  "emmet.showAbbreviationSuggestions": true,
+  "emmet.showExpandedAbbreviation": "always",
+  "emmet.showSuggestionsAsSnippets": false,
+  "emmet.syntaxProfiles": {},
+  "emmet.triggerExpansionOnTab": false,
+  "emmet.variables": {},
 
 // Git
-  "git": {
-  // Controls whether force push (with or without lease) is enabled.
-  "allowForcePush": false,
-
-  // Controls whether commits without running pre-commit and commit-msg hooks are allowed.
-  "allowNoVerifyCommit": false,
-
-  // Always show the Staged Changes resource group.
-  "alwaysShowStagedChangesResourceGroup": false,
-
-  // Controls the signoff flag for all commits.
-  "alwaysSignOff": false,
-
-  // When set to true, commits will automatically be fetched from the default remote of the current Git repository. Setting to `all` will fetch from all remotes.
-  "autofetch": false,
-
-  // Duration in seconds between each automatic git fetch, when `git.autofetch` is enabled.
-  "autofetchPeriod": 180,
-
-  // Whether auto refreshing is enabled.
-  "autorefresh": true,
-
-  // Configures when repositories should be automatically detected.
-  //  - true: Scan for both subfolders of the current opened folder and parent folders of open files.
-  //  - false: Disable automatic repository scanning.
-  //  - subFolders: Scan for subfolders of the currently opened folder.
-  //  - openEditors: Scan for parent folders of open files.
-  "autoRepositoryDetection": true,
-
-  // Stash any changes before pulling and restore them after successful pull.
-  "autoStash": false,
-
-  // Controls the sort order for branches.
-  "branchSortOrder": "committerdate",
-
-  // A regular expression to validate new branch names.
-  "branchValidationRegex": "",
-
-  // The character to replace whitespace in new branch names.
-  "branchWhitespaceChar": "-",
-
-  // Controls what type of git refs are listed when running `Checkout to...`.
-  //  - local: Local branches
-  //  - tags: Tags
-  //  - remote: Remote branches
-  "checkoutType": ["local", "remote", "tags"],
-
-  // Controls whether the diff editor should be automatically closed when changes are stashed, committed, discarded, staged, or unstaged.
-  "closeDiffOnOperation": false,
-
-  // List of git commands (ex: commit, push) that would have their `stdout` logged to the git output. If the git command has a client-side hook configured, the client-side hook's `stdout` will also be logged to the git output.
-  "commandsToLog": [],
-
-  // Always confirm the creation of empty commits for the 'Git: Commit Empty' command.
-  "confirmEmptyCommits": true,
-
-  // Controls whether to ask for confirmation before force-pushing.
-  "confirmForcePush": true,
-
-  // Controls whether to ask for confirmation before committing without verification.
-  "confirmNoVerifyCommit": true,
-
-  // Confirm before synchronizing git repositories.
-  "confirmSync": true,
-
-  // Controls the Git count badge.
-  //  - all: Count all changes.
-  //  - tracked: Count only tracked changes.
-  //  - off: Turn off counter.
-  "countBadge": "all",
-
-  // Controls whether Git contributes colors and badges to the Explorer and the Open Editors view.
-  "decorations.enabled": true,
-
-  // The default location to clone a git repository.
-  "defaultCloneDirectory": null,
-
-  // Controls whether to automatically detect git submodules.
-  "detectSubmodules": true,
-
-  // Controls the limit of git submodules detected.
-  "detectSubmodulesLimit": 10,
-
-  // Enables commit signing with GPG or X.509.
-  "enableCommitSigning": false,
-
-  // Whether git is enabled.
-  "enabled": true,
-
-  // Commit all changes when there are no staged changes.
-  "enableSmartCommit": false,
-
-  // Controls whether the Git Sync command appears in the status bar.
-  "enableStatusBarSync": true,
-
-  // When enabled, fetch all branches when pulling. Otherwise, fetch just the current one.
-  "fetchOnPull": false,
-
-  // Follow push all tags when running the sync command.
-  "followTagsWhenSync": false,
-
-  // List of git repositories to ignore.
-  "ignoredRepositories": [],
-
-  // Ignores the legacy Git warning.
-  "ignoreLegacyWarning": false,
-
-  // Ignores the warning when there are too many changes in a repository.
-  "ignoreLimitWarning": false,
-
-  // Ignores the warning when Git is missing.
-  "ignoreMissingGitWarning": false,
-
-  // Ignores the warning when it looks like the branch might have been rebased when pulling.
-  "ignoreRebaseWarning": false,
-
-  // Ignore modifications to submodules in the file tree.
-  "ignoreSubmodules": false,
-
-  // Ignores the warning when Git 2.25 - 2.26 is installed on Windows.
-  "ignoreWindowsGit27Warning": false,
-
-  // Controls when to show commit message input validation.
-  "inputValidation": "warn",
-
-  // Controls the commit message length threshold for showing a warning.
-  "inputValidationLength": 72,
-
-  // Controls the commit message subject length threshold for showing a warning. Unset it to inherit the value of `config.inputValidationLength`.
-  "inputValidationSubjectLength": 50,
-
-  // Controls whether to open a repository automatically after cloning.
-  //  - always: Always open in current window.
-  //  - alwaysNewWindow: Always open in a new window.
-  //  - whenNoFolderOpen: Only open in current window when no folder is opened.
-  //  - prompt: Always prompt for action.
-  "openAfterClone": "prompt",
-
-  // Controls whether the diff editor should be opened when clicking a change. Otherwise the regular editor will be opened.
-  "openDiffOnClick": true,
-
-  // Path and filename of the git executable, e.g. `C:\Program Files\Git\bin\git.exe` (Windows). This can also be an array of string values containing multiple paths to look up.
-  "path": null,
-
-  // Runs a git command after a successful commit.
-  //  - none: Don't run any command after a commit.
-  //  - push: Run 'Git Push' after a successful commit.
-  //  - sync: Run 'Git Sync' after a successful commit.
-  "postCommitCommand": "none",
-
-  // Controls whether Git should check for unsaved files before committing.
-  //  - always: Check for any unsaved files.
-  //  - staged: Check only for unsaved staged files.
-  //  - never: Disable this check.
-  "promptToSaveFilesBeforeCommit": "always",
-
-  // Controls whether Git should check for unsaved files before stashing changes.
-  //  - always: Check for any unsaved files.
-  //  - staged: Check only for unsaved staged files.
-  //  - never: Disable this check.
-  "promptToSaveFilesBeforeStash": "always",
-
-  // Prune when fetching.
-  "pruneOnFetch": false,
-
-  // Fetch all tags when pulling.
-  "pullTags": true,
-
-  // Force git to use rebase when running the sync command.
-  "rebaseWhenSync": false,
-
-  // List of folders that are ignored while scanning for Git repositories when `git.autoRepositoryDetection` is set to `true` or `subFolders`.
-  "repositoryScanIgnoredFolders": ["node_modules"],
-
-  // Controls the depth used when scanning workspace folders for Git repositories when `git.autoRepositoryDetection` is set to `true` or `subFolders`. Can be set to `-1` for no limit.
-  "repositoryScanMaxDepth": 1,
-
-  // Controls whether to require explicit Git user configuration or allow Git to guess if missing.
-  "requireGitUserConfig": true,
-
-  // List of paths to search for git repositories in.
-  "scanRepositories": [],
-
-  // Controls whether to show the commit input in the Git source control panel.
-  "showCommitInput": true,
-
-  // Controls whether to show an inline Open File action in the Git changes view.
-  "showInlineOpenFileAction": true,
-
-  // Controls whether git actions should show progress.
-  "showProgress": true,
-
-  // Controls whether to show a notification when a push is successful.
-  "showPushSuccessNotification": false,
-
-  // Controls whether to show an action button to sync or publish, if there are unpublished commits.
-  //  - always: Always shows the action button, if there are unpublished commits.
-  //  - whenEmpty: Only shows the action button if there are no other changes and there are unpublished commits.
-  //  - never: Never shows the action button.
-  "showUnpublishedCommitsButton": "whenEmpty",
-
-  // Control which changes are automatically staged by Smart Commit.
-  //  - all: Automatically stage all changes.
-  //  - tracked: Automatically stage tracked changes only.
-  "smartCommitChanges": "all",
-
-  // Controls how to limit the number of changes that can be parsed from Git status command. Can be set to 0 for no limit.
-  "statusLimit": 10000,
-
-  // Suggests to enable smart commit (commit all changes when there are no staged changes).
-  "suggestSmartCommit": true,
-
-  // Controls whether a notification comes up when running the Sync action, which allows the user to cancel the operation.
-  "supportCancellation": false,
-
-  // Controls whether to enable VS Code to be the authentication handler for git processes spawned in the integrated terminal. Note: terminals need to be restarted to pick up a change in this setting.
-  "terminalAuthentication": true,
-
-  // Controls which date to use for items in the Timeline view.
-  //  - committed: Use the committed date
-  //  - authored: Use the authored date
-  "timeline.date": "committed",
-
-  // Controls whether to show the commit author in the Timeline view.
-  "timeline.showAuthor": true,
-
-  // Controls how untracked changes behave.
-  //  - mixed: All changes, tracked and untracked, appear together and behave equally.
-  //  - separate: Untracked changes appear separately in the Source Control view. They are also excluded from several actions.
-  //  - hidden: Untracked changes are hidden and excluded from several actions.
-  "untrackedChanges": "mixed",
-
-  // Controls whether to use the message from the commit input box as the default stash message.
-  "useCommitInputAsStashMessage": false,
-
-  // Controls whether force pushing uses the safer force-with-lease variant.
-  "useForcePushWithLease": true,
-
-  // Controls whether GIT_ASKPASS should be overwritten to use the integrated version.
-  "useIntegratedAskPass": true
-  },
-
-// GitHub
-
-  // Controls whether to enable automatic GitHub authentication for git commands within VS Code.
+  "git.allowForcePush": false,
+  "git.allowNoVerifyCommit": false,
+  "git.alwaysShowStagedChangesResourceGroup": false,
+  "git.alwaysSignOff": false,
+  "git.autofetch": false,
+  "git.autofetchPeriod": 180,
+  "git.autorefresh": true,
+  "git.autoRepositoryDetection": true,
+  "git.autoStash": false,
+  "git.branchSortOrder": "committerdate",
+  "git.branchValidationRegex": "",
+  "git.branchWhitespaceChar": "-",
+  "git.checkoutType": ["local", "remote", "tags"],
+  "git.closeDiffOnOperation": false,
+  "git.commandsToLog": [],
+  "git.confirmEmptyCommits": true,
+  "git.confirmForcePush": true,
+  "git.confirmNoVerifyCommit": true,
+  "git.confirmSync": true,
+  "git.countBadge": "all",
+  "git.decorations.enabled": true,
+  "git.defaultCloneDirectory": null,
+  "git.detectSubmodules": true,
+  "git.detectSubmodulesLimit": 10,
+  "git.enableCommitSigning": false,
+  "git.enabled": true,
+  "git.enableSmartCommit": false,
+  "git.enableStatusBarSync": true,
+  "git.fetchOnPull": false,
+  "git.followTagsWhenSync": false,
+  "git.ignoredRepositories": [],
+  "git.ignoreLegacyWarning": false,
+  "git.ignoreLimitWarning": false,
+  "git.ignoreMissingGitWarning": false,
+  "git.ignoreRebaseWarning": false,
+  "git.ignoreSubmodules": false,
+  "git.ignoreWindowsGit27Warning": false,
+  "git.inputValidation": "warn",
+  "git.inputValidationLength": 72,
+  "git.inputValidationSubjectLength": 50,
+  "git.openAfterClone": "prompt",
+  "git.openDiffOnClick": true,
+  "git.path": null,
+  "git.postCommitCommand": "push",
+  "git.promptToSaveFilesBeforeCommit": "always",
+  "git.promptToSaveFilesBeforeStash": "always",
+  "git.pruneOnFetch": false,
+  "git.pullTags": true,
+  "git.rebaseWhenSync": false,
+  "git.repositoryScanIgnoredFolders": ["node_modules"],
+  "git.repositoryScanMaxDepth": 1,
+  "git.requireGitUserConfig": true,
+  "git.scanRepositories": [],
+  "git.showCommitInput": true,
+  "git.showInlineOpenFileAction": true,
+  "git.showProgress": true,
+  "git.showPushSuccessNotification": false,
+  "git.showUnpublishedCommitsButton": "whenEmpty",
+  "git.smartCommitChanges": "all",
+  "git.statusLimit": 10000,
+  "git.suggestSmartCommit": true,
+  "git.supportCancellation": false,
+  "git.terminalAuthentication": true,
+  "git.timeline.date": "committed",
+  "git.timeline.showAuthor": true,
+  "git.untrackedChanges": "mixed",
+  "git.useCommitInputAsStashMessage": false,
+  "git.useForcePushWithLease": true,
+  "git.useIntegratedAskPass": true,
   "github.gitAuthentication": true,
-
-  // URI of your GitHub Enterprise Instance
   "github-enterprise.uri": "",
 
 // Grunt
-  // Controls enablement of Grunt task detection. Grunt task detection can cause files in any open workspace to be executed.
   "grunt.autoDetect": "off",
 
 // Gulp
-  // Controls enablement of Gulp task detection. Gulp task detection can cause files in any open workspace to be executed.
   "gulp.autoDetect": "off",
 
 // Jake
-  // Controls enablement of Jake task detection. Jake task detection can cause files in any open workspace to be executed.
   "jake.autoDetect": "off",
 
 // Merge Conflict
-  "merge-conflict": {
-  // Whether to automatically navigate to the next merge conflict after resolving a merge conflict.
-  "autoNavigateNextConflict.enabled": false,
-
-  // Create a CodeLens for merge conflict blocks within editor.
-  "codeLens.enabled": true,
-
-  // Create decorators for merge conflict blocks within editor.
-  "decorators.enabled": true,
-
-  // Controls where the diff view should be opened when comparing changes in merge conflicts.
-  //  - Current: Open the diff view in the current editor group.
-  //  - Beside: Open the diff view next to the current editor group.
-  //  - Below: Open the diff view below the current editor group.
-  "diffViewPosition": "Current"
-  },
+  "merge-conflict.autoNavigateNextConflict.enabled": false,
+  "merge-conflict.codeLens.enabled": true,
+  "merge-conflict.decorators.enabled": true,
+  "merge-conflict.diffViewPosition": "Current",
 
 // JavaScript Debugger
-  "debug.javascript": {
-    // Configures which processes to automatically attach and debug when `debug.node.autoAttach` is on. A Node process launched with the `--inspect` flag will always be attached to, regardless of this setting.
-    //  - always: Auto attach to every Node.js process launched in the terminal.
-    //  - smart: Auto attach when running scripts that aren't in a node_modules folder.
-    //  - onlyWithFlag: Only auto attach when the `--inspect` is given.
-    //  - disabled: Auto attach is disabled and not shown in status bar.
-    "autoAttachFilter": "disabled",
-
-    // Configures glob patterns for determining when to attach in "smart" `debug.javascript.autoAttachFilter` mode. `$KNOWN_TOOLS$` is replaced with a list of names of common test and code runners.
-    "autoAttachSmartPattern": [
-      "${workspaceFolder}/**",
-      "!**/node_modules/**",
-      "**/$KNOWN_TOOLS$/**"
-    ],
-
-    // When debugging a remote web app, configures whether to automatically tunnel the remote server to your local machine.
-    "automaticallyTunnelRemoteServer": true,
-
-    // Whether to stop when conditional breakpoints throw an error.
-    "breakOnConditionalError": false,
-
-    // Where a "Run" and "Debug" code lens should be shown in your npm scripts. It may be on "all", scripts, on "top" of the script section, or "never".
-    "codelens.npmScripts": "top",
-
-    // Options used when debugging open links clicked from inside the JavaScript Debug Terminal. Can be set to "off" to disable this behavior, or "always" to enable debugging in all terminals.
-    "debugByLinkOptions": "on",
-
-    // The default `runtimeExecutable` used for launch configurations, if unspecified. This can be used to config custom paths to Node.js or browser installations.
-    "defaultRuntimeExecutable": {
-      "pwa-node": "node"
-    },
-
-    // Default options used when debugging a process through the `Debug: Attach to Node.js Process` command.
-    "pickAndAttachOptions": {},
-
-    // Request options to use when loading resources, such as source maps, in the debugger. You may need to configure this if your sourcemaps require authentication or use a self-signed certificate, for instance. Options are used to create a request using the `got`library.
-    // A common case to disable certificate verification can be done by passing `{ "https": { "rejectUnauthorized": false } }`.
-    "resourceRequestOptions": {},
-
-    // Whether to suggest pretty printing JavaScript code that looks minified when you step into it.
-    "suggestPrettyPrinting": true,
-
-    // Default launch options for the JavaScript debug terminal and npm scripts.
-    "terminalOptions": {},
-
-    // Configures whether sourcemapped file where the original file can't be read will automatically be unmapped. If this is false (default), a prompt is shown.
-    "unmapMissingSources": false
+  "debug.javascript.autoAttachFilter": "disabled",
+  "debug.javascript.autoAttachSmartPattern": [
+    "${workspaceFolder}/**",
+    "!**/node_modules/**",
+    "**/$KNOWN_TOOLS$/**"
+  ],
+  "debug.javascript.automaticallyTunnelRemoteServer": true,
+  "debug.javascript.breakOnConditionalError": false,
+  "debug.javascript.codelens.npmScripts": "top",
+  "debug.javascript.debugByLinkOptions": "on",
+  "debug.javascript.defaultRuntimeExecutable": {
+    "pwa-node": "node"
   },
+  "debug.javascript.pickAndAttachOptions": {},
+  "debug.javascript.resourceRequestOptions": {},
+  "debug.javascript.suggestPrettyPrinting": true,
+  "debug.javascript.terminalOptions": {},
+  "debug.javascript.unmapMissingSources": false,
 
-  // References Search View
-
-  // Controls whether 'Peek References' or 'Find References' is invoked when selecting CodeLens references.
-  //  - peek: Show references in peek editor.
-  //  - view: Show references in separate view.
+// References Search View
   "references.preferredLocation": "peek",
 
 // Npm
-  "npm": {
-    // Controls whether npm scripts should be automatically detected.
-    "autoDetect": "on",
-
-    // Enable running npm scripts contained in a folder from the Explorer context menu.
-    "enableRunFromFolder": false,
-
-    // The NPM Script Explorer is now available in 'Views' menu in the Explorer in all folders.
-    // Enable an explorer view for npm scripts when there is no top-level 'package.json' file.
-    "enableScriptExplorer": false,
-
-    // Configure glob patterns for folders that should be excluded from automatic script detection.
-    "exclude": "",
-
-    // Fetch data from https://registry.npmjs.org and https://registry.bower.io to provide auto-completion and information on hover features on npm dependencies.
-    "fetchOnlinePackageInfo": true,
-
-    // The package manager used to run scripts.
-    //  - auto: Auto-detect which package manager to use for running scripts based on lock files and installed package managers.
-    //  - npm: Use npm as the package manager for running scripts.
-    //  - yarn: Use yarn as the package manager for running scripts.
-    //  - pnpm: Use pnpm as the package manager for running scripts.
-    "packageManager": "auto",
-
-    // Run npm commands with the `--silent` option.
-    "runSilent": false,
-
-    // The default click action used in the npm scripts explorer: `open` or `run`, the default is `open`.
-    "scriptExplorerAction": "open",
-
-    // An array of regular expressions that indicate which scripts should be excluded from the NPM Scripts view.
-    "scriptExplorerExclude": []
-  }
+  "npm.autoDetect": "on",
+  "npm.enableRunFromFolder": false,
+  "npm.enableScriptExplorer": false,
+  "npm.exclude": "",
+  "npm.fetchOnlinePackageInfo": true,
+  "npm.packageManager": "auto",
+  "npm.runSilent": false,
+  "npm.scriptExplorerAction": "open",
+  "npm.scriptExplorerExclude": []
 }
