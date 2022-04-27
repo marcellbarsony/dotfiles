@@ -1,15 +1,21 @@
 {
   // DIFF Editor
+  "diffEditor.codeLens": false,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.maxComputationTime": 5000,
+  "diffEditor.renderIndicators": true,
   "diffEditor.renderSideBySide": true,
   "diffEditor.wordWrap": "on",
 
   // Editor
+  "editor.acceptSuggestionOnCommitCharacter": true,
   "editor.acceptSuggestionOnEnter": "off",
 
   // Screen Reader
   "editor.accessibilitySupport": "off",
 
   // Auto Cloing
+  "editor.autoClosingBrackets": "languageDefined",
   "editor.autoClosingDelete": "auto",
   "editor.autoClosingOvertype": "auto",
   "editor.autoClosingQuotes": "languageDefined",
@@ -23,34 +29,121 @@
   // Bracket Pair Colorization
   // Controls whether bracket pair colorization is enabled or not. Use `workbench.colorCustomizations` to override the bracket highlight colors.
   "editor.bracketPairColorization.enabled": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
+
+  // On Save
+  "editor.codeActionsOnSave": {},
+
+  // Code Lens
+  "editor.codeLens": true,
+  "editor.codeLensFontFamily": "",
+  "editor.codeLensFontSize": 0,
+
+  // Color Decorators
+  "editor.colorDecorators": true,
+
+  // Column Selection
+  "editor.columnSelection": false,
+
+  // Comments
+  "editor.comments.ignoreEmptyLines": true,
+  "editor.comments.insertSpace": true,
+
+  // Copy With Syntax Highlighting
+  "editor.copyWithSyntaxHighlighting": true,
 
   // Cursor
   "editor.cursorBlinking": "phase",
+  "editor.cursorStyle": "underline",
   "editor.cursorSmoothCaretAnimation": true,
-  "editor.cursorSurroundingLines": 10,
+  "editor.cursorSurroundingLines": 12,
   "editor.cursorWidth": 2,
-  "editor.hideCursorInOverviewRuler": false,
+  "editor.hideCursorInOverviewRuler": true,
+
+  // Formatter
+  "editor.defaultFormatter": null,
 
   // Go to Definition
   "editor.definitionLinkOpensInPeek": true,
 
+  // Indentation
+  "editor.detectIndentation": true,
+
+  // Drag and Drop
+  "editor.dragAndDrop": true,
+
+  // Empty Selection Copy
+  "editor.emptySelectionClipboard": true,
+
+  // Fast Scroll
+  "editor.fastScrollSensitivity": 5,
+
+  // Find
+  "editor.find.addExtraSpaceOnTop": true,
+  "editor.find.autoFindInSelection": "never",
+  "editor.find.cursorMoveOnType": true,
+  "editor.find.globalFindClipboard": false,
+  "editor.find.loop": true,
+  "editor.find.seedSearchStringFromSelection": "always",
+
   // Code Folding
+  "editor.folding": true,
   "editor.foldingHighlight": true,
   "editor.foldingImportsByDefault": true,
+  "editor.foldingStrategy": "auto",
 
   // Font
   "editor.fontFamily": "Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
+  "editor.fontWeight": "normal",
+
+  // Format
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": false,
+  "editor.formatOnSaveMode": "file",
+  "editor.formatOnType": false,
+
+  // Glyph Margin
+  "editor.glyphMargin": true,
+
+  // Go To Location
+  "editor.gotoLocation.alternativeDeclarationCommand": "editor.action.goToReferences",
+  "editor.gotoLocation.alternativeDefinitionCommand": "editor.action.goToReferences",
+  "editor.gotoLocation.alternativeImplementationCommand": "",
+  "editor.gotoLocation.alternativeReferenceCommand": "",
+  "editor.gotoLocation.alternativeTypeDefinitionCommand": "editor.action.goToReferences",
+  "editor.gotoLocation.multipleDeclarations": "peek",
+  "editor.gotoLocation.multipleDefinitions": "peek",
+  "editor.gotoLocation.multipleImplementations": "peek",
+  "editor.gotoLocation.multipleReferences": "peek",
+  "editor.gotoLocation.multipleTypeDefinitions": "peek",
 
   // Guides
-    "editor.guides.bracketPairs": true,
+  "editor.guides.bracketPairs": true,
+  "editor.guides.bracketPairsHorizontal": "active",
+  "editor.guides.highlightActiveBracketPair": true,
+  "editor.guides.highlightActiveIndentation": true,
+  "editor.guides.indentation": true,
 
-  // Inline Suggest
+  // Hover
+  "editor.hover.above": true,
+  "editor.hover.delay": 300,
+  "editor.hover.enabled": true,
+  "editor.hover.sticky": true,
+
+  // Inlah Hints & Suggest
+  "editor.inlayHints.enabled": true,
+  "editor.inlayHints.fontFamily": "",
+  "editor.inlayHints.fontSize": 0,
   "editor.inlineSuggest.enabled": true,
 
   // Insert spaces
   "editor.insertSpaces": true,
+
+  // Language Brackets
+  "editor.language.brackets": [],
+  "editor.language.colorizedBracketPairs": [],
 
   // Letter Spacing
   "editor.letterSpacing": 0,
@@ -64,13 +157,65 @@
 
   // Minimap
   "editor.minimap.enabled": false,
-  "editor.minimap.maxColumn": 180,
+  "editor.minimap.maxColumn": 70,
+  "editor.minimap.size": "fill",
   "editor.minimap.renderCharacters": false,
   "editor.minimap.scale": 1,
+  "editor.minimap.showSlider": "mouseover",
+  "editor.minimap.side": "right",
+
+  // Overview Ruler
+  "editor.occurrencesHighlight": false,
+  "editor.overviewRulerBorder": false,
 
   // Mouse Wheel
   "editor.mouseWheelScrollSensitivity": 1,
   "editor.mouseWheelZoom": true,
+
+  // Multi Cursor
+  "editor.multiCursorModifier": "alt",
+  "editor.multiCursorPaste": "spread",
+
+  // Padding
+  "editor.padding.bottom": 0,
+  "editor.padding.top": 0,
+
+  // Parameter Hints
+  "editor.parameterHints.cycle": false,
+  "editor.parameterHints.enabled": true,
+
+  // Peek Widget
+  "editor.peekWidgetDefaultFocus": "tree",
+
+  // Quick Suggestions
+  "editor.quickSuggestionsDelay": 10,
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "off"
+  },
+
+  // Rename
+  "editor.rename.enablePreview": true,
+
+  // Control Characters
+  "editor.renderControlCharacters": true,
+
+  // Render Final New Line
+  "editor.renderFinalNewline": true,
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   // Line Highlight
   "editor.renderLineHighlight": "all",
@@ -81,11 +226,11 @@
   // Selection
   "editor.roundedSelection": false,
 
-  // Horizontal Scrollbar
+// Scrollbar
   "editor.scrollbar.horizontal": "auto",
   "editor.scrollbar.horizontalScrollbarSize": 12,
   "editor.scrollbar.scrollByPage": false,
-  "editor.scrollbar.vertical": "visible",
+  "editor.scrollbar.vertical": "auto",
   "editor.scrollbar.verticalScrollbarSize": 18,
   "editor.scrollBeyondLastColumn": 5,
   "editor.scrollBeyondLastLine": true,
@@ -125,13 +270,6 @@
   // Sticky Tab Stops
   "editor.stickyTabStops": false,
 
-  // Controls whether suggestions should automatically show up while typing.
-  "editor.quickSuggestions": {
-    "other": "on",
-    "comments": "on",
-    "strings": "on"
-  },
-
   // Suggestions
   "editor.suggest.filterGraceful": true,
   "editor.suggest.insertMode": "insert",
@@ -165,7 +303,6 @@
   "editor.suggest.showWords": true,
   "editor.suggest.snippetsPreventQuickSuggestions": true,
 
-
   // Tab
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
@@ -189,12 +326,13 @@
 // Workbench
 
   // Overrides Colors
-  "workbench.colorCustomizations": {},
+  "workbench.colorCustomizations": {
+  },
   "workbench.colorTheme": "Default Dark+",
 
   // Workbench Editor
   "workbench.editor.closeOnFileDelete": true,
-  "workbench.editor.defaultBinaryEditor": "",
+  "workbench.editor.defaultBinaryEditor": "default",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.focusRecentEditorAfterClose": false,
   "workbench.editor.highlightModifiedTabs": true,
@@ -504,7 +642,6 @@
   "javascript.preferences.importModuleSpecifierEnding": "auto",
   "javascript.preferences.jsxAttributeCompletionStyle": "auto",
   "javascript.preferences.quoteStyle": "auto",
-  "javascript.preferences.renameShorthandProperties": true,
   "javascript.preferences.useAliasesForRenames": true,
   "javascript.referencesCodeLens.enabled": false,
   "javascript.referencesCodeLens.showOnAllFunctions": false,
@@ -556,7 +693,7 @@
   "typescript.inlayHints.parameterTypes.enabled": false,
   "typescript.inlayHints.propertyDeclarationTypes.enabled": false,
   "typescript.inlayHints.variableTypes.enabled": false,
-  "typescript.locale": "",
+  "typescript.locale": "en",
   "typescript.npm": "",
   "typescript.preferences.importModuleSpecifier": "shortest",
   "typescript.preferences.importModuleSpecifierEnding": "auto",
@@ -699,7 +836,7 @@
   "scss.lint.zeroUnits": "ignore",
   "scss.validate": true,
 
-  // Extensions
+// Extensions
   "extensions.autoCheckUpdates": true,
   "extensions.autoUpdate": true,
   "extensions.closeExtensionDetailsOnViewChange": false,
@@ -712,106 +849,47 @@
 
 // Output
   "output.smartScroll.enabled": true,
-
-// Settings Sync
-  "settingsSync.ignoredExtensions": [],
   "settingsSync.ignoredSettings": [],
   "settingsSync.keybindingsPerPlatform": true,
 
 // Notebooks
-
-  // Controls whether code cells in the interactive window are collapsed by default.
   "interactiveWindow.collapseCellInputCode": "fromEditor",
-  // When enabled notebook breadcrumbs contain code cells.
   "notebook.breadcrumbs.showCodeCells": true,
-  // Controls where the focus indicator is rendered, either along the cell borders or on the left gutter.
   "notebook.cellFocusIndicator": "gutter",
-  // Where the cell toolbar should be shown, or whether it should be hidden.
   "notebook.cellToolbarLocation": {
     "default": "right"
   },
-
-  // Whether the cell toolbar should appear on hover or click.
   "notebook.cellToolbarVisibility": "click",
-
-  // Control whether the notebook editor should be rendered in a compact form. For example, when turned on, it will decrease the left margin width.
   "notebook.compactView": true,
-
-  // Control whether outputs action should be rendered in the output toolbar.
   "notebook.consolidatedOutputButton": true,
-
-  // Control whether extra actions are shown in a dropdown next to the run button.
   "notebook.consolidatedRunButton": false,
-
-  // Whether to use the enhanced text diff editor for notebook.
   "notebook.diff.enablePreview": true,
-
-  // Hide Metadata Differences
   "notebook.diff.ignoreMetadata": false,
-
-  // Hide Outputs Differences
   "notebook.diff.ignoreOutputs": false,
-
-  // Priority list for output mime types
   "notebook.displayOrder": [],
-
-  // Control whether the notebook editor should allow moving cells through drag and drop.
   "notebook.dragAndDropEnabled": true,
-
-  // Settings for code editors used in notebooks. This can be used to customize most editor.* settings.
   "notebook.editorOptionsCustomizations": {},
-
-  // Control whether to render a global toolbar inside the notebook editor.
   "notebook.globalToolbar": true,
-
-  // Control whether the actions on the notebook toolbar should render label or not.
   "notebook.globalToolbarShowLabel": "always",
-
-  // Control where the insert cell actions should appear.
-  //  - betweenCells: A toolbar that appears on hover between cells.
-  //  - notebookToolbar: The toolbar at the top of the notebook editor.
-  //  - both: Both toolbars.
-  //  - hidden: The insert actions don't appear anywhere.
   "notebook.insertToolbarLocation": "both",
-
-  // Controls the display of line numbers in the cell editor.
   "notebook.lineNumbers": "off",
-
-  // Controls the font size in pixels of rendered markup in notebooks. When set to `0`, 120% of `editor.fontSize` is used.
   "notebook.markup.fontSize": 0,
-
-  // When enabled cursor can navigate to the next/previous cell when the current cursor in the cell editor is at the first/last line.
   "notebook.navigation.allowNavigateToSurroundingCells": true,
-
-  // When enabled notebook outline shows code cells.
   "notebook.outline.showCodeCells": false,
-
-  // Control how many lines of text in a text output is rendered.
   "notebook.output.textLineLimit": 30,
-
-  // Whether the cell status bar should be shown.
-  //  - hidden: The cell Status bar is always hidden.
-  //  - visible: The cell Status bar is always visible.
-  //  - visibleAfterExecute: The cell Status bar is hidden until the cell has executed. Then it becomes visible to show the execution status.
   "notebook.showCellStatusBar": "visible",
-
-  // Controls when the Markdown header folding arrow is shown.
-  //  - always: The folding controls are always visible.
-  //  - mouseover: The folding controls are visible only on mouseover.
   "notebook.showFoldingControls": "mouseover",
-
-  // Whether to use separate undo/redo stack for each cell.
   "notebook.undoRedoPerCell": true,
 
 // Terminal
   "terminal.explorerKind": "integrated",
 
-  // External Terminal
-  "terminal.external.linuxExec": "xterm",
+  // External
+  "terminal.external.linuxExec": "alacritty",
   "terminal.external.osxExec": "Terminal.app",
   "terminal.external.windowsExec": "C:\\Windows\\System32\\cmd.exe",
 
-  // Integrated Terminal
+  // Integrated
   "terminal.integrated.allowChords": true,
   "terminal.integrated.allowMnemonics": false,
   "terminal.integrated.altClickMovesCursor": true,
@@ -825,14 +903,14 @@
   "terminal.integrated.confirmOnKill": "editor",
   "terminal.integrated.copyOnSelection": false,
   "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.cursorStyle": "block",
+  "terminal.integrated.cursorStyle": "underline",
   "terminal.integrated.cursorWidth": 1,
   "terminal.integrated.customGlyphs": true,
   "terminal.integrated.cwd": "",
   "terminal.integrated.defaultLocation": "view",
   "terminal.integrated.defaultProfile.linux": null,
   "terminal.integrated.defaultProfile.osx": null,
-  "terminal.integrated.defaultProfile.windows": null,
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.detectLocale": "auto",
   "terminal.integrated.drawBoldTextInBrightColors": true,
   "terminal.integrated.enableBell": false,
@@ -887,7 +965,7 @@
   "terminal.integrated.tabs.enabled": true,
   "terminal.integrated.tabs.focusMode": "doubleClick",
   "terminal.integrated.tabs.hideCondition": "never",
-  "terminal.integrated.tabs.location": "right",
+  "terminal.integrated.tabs.location": "left",
   "terminal.integrated.tabs.separator": " - ",
   "terminal.integrated.tabs.showActions": "always",
   "terminal.integrated.tabs.showActiveTerminal": "always",
@@ -1216,7 +1294,6 @@
 // Npm
   "npm.autoDetect": "on",
   "npm.enableRunFromFolder": false,
-  "npm.enableScriptExplorer": false,
   "npm.exclude": "",
   "npm.fetchOnlinePackageInfo": true,
   "npm.packageManager": "auto",
