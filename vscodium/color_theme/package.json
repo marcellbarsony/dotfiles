@@ -1,0 +1,21 @@
+{
+    "name": "dark",
+    "displayName": "dark",
+    "description": "dark",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.66.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "dark",
+                "uiTheme": "vs-dark",
+                "path": "./themes/dark-color-theme.json"
+            }
+        ]
+    }
+}
