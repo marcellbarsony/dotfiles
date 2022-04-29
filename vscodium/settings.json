@@ -27,7 +27,6 @@
   "editor.autoSurround": "languageDefined",
 
   // Bracket Pair Colorization
-  // Controls whether bracket pair colorization is enabled or not. Use `workbench.colorCustomizations` to override the bracket highlight colors.
   "editor.bracketPairColorization.enabled": true,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
 
@@ -204,27 +203,18 @@
   // Render Final New Line
   "editor.renderFinalNewline": true,
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   // Line Highlight
   "editor.renderLineHighlight": "all",
+  "editor.renderLineHighlightOnlyWhenFocus": false,
 
   // Whitespace
   "editor.renderWhitespace": "boundary",
 
   // Selection
   "editor.roundedSelection": false,
+
+  // Editor rulers
+  "editor.rulers": [],
 
 // Scrollbar
   "editor.scrollbar.horizontal": "auto",
@@ -302,6 +292,10 @@
   "editor.suggest.showVariables": true,
   "editor.suggest.showWords": true,
   "editor.suggest.snippetsPreventQuickSuggestions": true,
+  "editor.suggestFontSize": 0,
+  "editor.suggestLineHeight": 0,
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.suggestSelection": "first",
 
   // Tab
   "editor.tabCompletion": "on",
@@ -314,35 +308,118 @@
   "editor.wordWrap": "bounded",
   "editor.wordWrapColumn": 200,
   "editor.wrappingIndent": "indent",
+  "editor.wrappingStrategy": "simple",
+
+  // Trim Whitespace
+  "editor.trimAutoWhitespace": true,
+
+  // Unidocde Highlight
+  "editor.unfoldOnClickAfterEndOfLine": false,
+  "editor.unicodeHighlight.allowedCharacters": {},
+  "editor.unicodeHighlight.allowedLocales": {
+    "_os": true,
+    "_vscode": true
+  },
+  "editor.unicodeHighlight.ambiguousCharacters": true,
+  "editor.unicodeHighlight.includeComments": "inUntrustedWorkspace",
+  "editor.unicodeHighlight.includeStrings": true,
+  "editor.unicodeHighlight.invisibleCharacters": true,
+  "editor.unicodeHighlight.nonBasicASCII": "inUntrustedWorkspace",
+
+  // Line Terminators
+  "editor.unusualLineTerminators": "prompt",
+
+  // Tab Stops
+  "editor.useTabStops": true,
+
+  // Word-Based Suggestions
+  "editor.wordBasedSuggestions": true,
+  "editor.wordBasedSuggestionsMode": "matchingDocuments",
+  "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
 
   // SCM
   "scm.alwaysShowActions": true,
   "scm.alwaysShowRepositories": true,
   "scm.defaultViewMode": "tree",
+  "scm.defaultViewSortKey": "path",
   "scm.diffDecorations": "gutter",
+  "scm.diffDecorationsGutterAction": "diff",
+  "scm.diffDecorationsGutterVisibility": "always",
+  "scm.diffDecorationsGutterWidth": 3,
+  "scm.diffDecorationsIgnoreTrimWhitespace": "false",
+  "scm.inputFontFamily": "default",
+  "scm.inputFontSize": 13,
   "scm.providerCountBadge": "visible",
+  "scm.repositories.visible": 10,
   "scm.showActionButton": false,
+  "scm.countBadge": "all",
 
 // Workbench
+
+  // Security
+  "security.workspace.trust.banner": "untilDismissed",
+  "security.workspace.trust.emptyWindow": true,
+  "security.workspace.trust.enabled": true,
+  "security.workspace.trust.startupPrompt": "once",
+  "security.workspace.trust.untrustedFiles": "prompt",
+
+  // Activity Bar
+  "workbench.activityBar.iconClickBehavior": "toggle",
+  "workbench.activityBar.visible": true,
 
   // Overrides Colors
   "workbench.colorCustomizations": {
   },
   "workbench.colorTheme": "Default Dark+",
 
+  // Command Palette
+  "workbench.commandPalette.history": 50,
+  "workbench.commandPalette.preserveInput": false,
+
+  // Auto Lock Group
+  "workbench.editor.autoLockGroups": {
+    "default": false,
+    "workbench.input.interactive": false,
+    "interactive": false,
+    "workbench.editorinputs.searchEditorInput": false,
+    "imagePreview.previewEditor": false,
+    "vscode.markdown.preview.editor": false,
+    "jsProfileVisualizer.cpuprofile.table": false,
+    "jsProfileVisualizer.heapprofile.table": false,
+    "terminalEditor": true,
+    "jupyter-notebook": false,
+    "mainThreadWebview-markdown.preview": false
+  },
+
   // Workbench Editor
+  "workbench.editor.centeredLayoutAutoResize": true,
+  "workbench.editor.closeEmptyGroups": true,
   "workbench.editor.closeOnFileDelete": true,
+  "workbench.editor.decorations.badges": true,
+  "workbench.editor.decorations.colors": true,
   "workbench.editor.defaultBinaryEditor": "default",
+  "workbench.editor.enablePreview": true,
+  "workbench.editor.enablePreviewFromCodeNavigation": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
-  "workbench.editor.focusRecentEditorAfterClose": false,
-  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.focusRecentEditorAfterClose": true,
+  "workbench.editor.highlightModifiedTabs": false,
+  "workbench.editor.historyBasedLanguageDetection": true,
+  "workbench.editor.labelFormat": "default",
+  "workbench.editor.languageDetection": true,
+  "workbench.editor.sharedViewState": false,
+  "workbench.editor.showIcons": true,
+  "workbench.editor.showTabs": true,
+  "workbench.editor.splitInGroupLayout": "horizontal",
+  "workbench.editor.splitOnDragAndDrop": true,
+  "workbench.editor.splitSizing": "distribute",
+
 
 // Workbench Editor Limit
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.perEditorGroup": true,
   "workbench.editor.limit.value": 10,
 
-  // Hisotry Navigation
+  // History Navigation
   "workbench.editor.mouseBackForwardToNavigate": true,
   "workbench.editor.navigationScope": "default",
 
@@ -360,10 +437,37 @@
   "workbench.editor.untitled.hint": "hidden",
   "workbench.editor.untitled.labelFormat": "name",
   "workbench.editor.wrapTabs": false,
+  "workbench.editor.scrollToSwitchTabs": false,
 
   // Editor Associations
   "workbench.editorAssociations": {},
   "workbench.externalUriOpeners": {},
+
+  // Font
+  "workbench.fontAliasing": "default",
+
+  // Hover
+  "workbench.hover.delay": 500,
+
+  // Icon Theme
+  "workbench.iconTheme": "vs-seti",
+
+  // List
+  "workbench.list.automaticKeyboardNavigation": true,
+  "workbench.list.fastScrollSensitivity": 5,
+  "workbench.list.horizontalScrolling": false,
+  "workbench.list.keyboardNavigation": "highlight",
+  "workbench.list.mouseWheelScrollSensitivity": 1,
+  "workbench.list.multiSelectModifier": "ctrlCmd",
+  "workbench.list.openMode": "singleClick",
+  "workbench.list.smoothScrolling": false,
+
+  // Local History
+  "workbench.localHistory.enabled": true,
+  "workbench.localHistory.exclude": {},
+  "workbench.localHistory.maxFileEntries": 50,
+  "workbench.localHistory.maxFileSize": 256,
+  "workbench.localHistory.mergePeriod": 10,
 
   // Panel
   "workbench.panel.defaultLocation": "bottom",
@@ -375,22 +479,51 @@
   "workbench.preferredHighContrastLightColorTheme": "Default High Contrast Light",
   "workbench.preferredLightColorTheme": "Default Light+",
 
+  // Workbench Quick Open
+  "workbench.quickOpen.closeOnFocusLost": true,
+  "workbench.quickOpen.preserveInput": false,
+
   // Product Icon Theme
   "workbench.productIconTheme": "Default",
 
   // Reduced Animation
   "workbench.reduceMotion": "on",
 
+  // Sash
+  "workbench.sash.size": 4,
+
   // Settings Editor
   "workbench.settings.editor": "json",
+  "workbench.settings.enableNaturalLanguageSearch": true,
+  "workbench.settings.openDefaultKeybindings": false,
+  "workbench.settings.openDefaultSettings": false,
+  "workbench.settings.settingsSearchTocBehavior": "filter",
+  "workbench.settings.useSplitJSON": false,
+
+  // Sidebar
+  "workbench.sideBar.location": "left",
+
+  // Startup Editor
+  "workbench.startupEditor": "welcomePage",
+  "workbench.welcomePage.walkthroughs.openOnInstall": true,
+
+  // Status Bar
+  "workbench.statusBar.visible": true,
+
+  // Tips
+  "workbench.tips.enabled": true,
 
   // Tree
   "workbench.tree.expandMode": "singleClick",
   "workbench.tree.indent": 15,
   "workbench.tree.renderIndentGuides": "always",
+
+
+  // Trusted Domains
   "workbench.trustedDomains.promptInTrustedWorkspace": false,
+
+  // Header Actions
   "workbench.view.alwaysShowHeaderActions": true,
-  "workbench.welcomePage.walkthroughs.openOnInstall": true,
 
 // Window
   "window.autoDetectColorScheme": false,
@@ -448,6 +581,15 @@
     "**/.hg/store/**": true
   },
 
+// Screencast Mode
+  "screencastMode.fontSize": 56,
+  "screencastMode.keyboardOverlayTimeout": 800,
+  "screencastMode.keyboardShortcutsFormat": "commandAndKeys",
+  "screencastMode.mouseIndicatorColor": "#FF0000",
+  "screencastMode.mouseIndicatorSize": 20,
+  "screencastMode.onlyKeyboardShortcuts": false,
+  "screencastMode.verticalOffset": 20,
+
 // Zen Mode
   "zenMode.centerLayout": false,
   "zenMode.fullScreen": true,
@@ -487,6 +629,9 @@
   "search.followSymlinks": true,
   "search.globalFindClipboard": false,
   "search.mode": "view",
+  "search.quickOpen.history.filterSortOrder": "default",
+  "search.quickOpen.includeHistory": true,
+  "search.quickOpen.includeSymbols": false,
   "search.searchEditor.defaultNumberOfContextLines": 3,
   "search.searchEditor.doubleClickBehaviour": "goToLocation",
   "search.searchEditor.reusePriorSearchConfiguration": false,
@@ -501,11 +646,6 @@
   "search.useIgnoreFiles": true,
   "search.useParentIgnoreFiles": false,
   "search.useReplacePreview": true,
-
-  // Quick Open
-  "search.quickOpen.history.filterSortOrder": "default",
-  "search.quickOpen.includeHistory": true,
-  "search.quickOpen.includeSymbols": false,
 
 // HTTP
   "http.proxy": "",
@@ -908,8 +1048,8 @@
   "terminal.integrated.customGlyphs": true,
   "terminal.integrated.cwd": "",
   "terminal.integrated.defaultLocation": "view",
-  "terminal.integrated.defaultProfile.linux": null,
-  "terminal.integrated.defaultProfile.osx": null,
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.detectLocale": "auto",
   "terminal.integrated.drawBoldTextInBrightColors": true,
@@ -922,7 +1062,7 @@
   "terminal.integrated.env.windows": {},
   "terminal.integrated.environmentChangesIndicator": "warnonly",
   "terminal.integrated.environmentChangesRelaunch": true,
-  "terminal.integrated.fastScrollSensitivity": 5,
+  "terminal.integrated.fastScrollSensitivity": 2,
   "terminal.integrated.fontFamily": "",
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.fontWeight": "normal",
@@ -951,15 +1091,6 @@
   "terminal.integrated.showExitAlert": true,
   "terminal.integrated.showLinkHover": true,
   "terminal.integrated.splitCwd": "workspaceRoot",
-  // Controls the terminal description, which appears to the right of the title. Variables are substituted based on the context:
-  // - `${cwd}`: the terminal's current working directory
-  // - `${cwdFolder}`: the terminal's current working directory, displayed for multi-root workspaces or in a single root workspace when the value differs from the initial working directory.
-  // - `${workspaceFolder}`: the workspace in which the terminal was launched
-  // - `${local}`: indicates a local terminal in a remote workspace
-  // - `${process}`: the name of the terminal process
-  // - `${separator}`: a conditional separator (" - ") that only shows when surrounded by variables with values or static text.
-  // - `${sequence}`: the name provided to xterm.js by the process
-  // - `${task}`: indicates this terminal is associated with a task
   "terminal.integrated.tabs.description": "${task}${separator}${local}${separator}${cwdFolder}",
   "terminal.integrated.tabs.enableAnimation": true,
   "terminal.integrated.tabs.enabled": true,
@@ -1063,13 +1194,8 @@
 
 // Timeline
 
-  // An array of Timeline sources that should be excluded from the Timeline view.
   "timeline.excludeSources": null,
-
-  // The number of items to show in the Timeline view by default and when loading more items. Setting to `null` (the default) will automatically choose a page size based on the visible area of the Timeline view.
   "timeline.pageSize": null,
-
-  // Default Configuration Overrides
   "[css]": {
     "editor.suggest.insertMode": "replace"
   },
