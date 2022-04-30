@@ -3,8 +3,13 @@
     "displayName": "dark",
     "description": "dark",
     "version": "0.0.1",
+    "publisher": "marcellbarsony",
     "engines": {
         "vscode": "^1.66.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/marcellbarsony/dotfiles.git"
     },
     "categories": [
         "Themes"
