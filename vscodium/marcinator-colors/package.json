@@ -4,6 +4,7 @@
     "description": "The Marcinator's color themes",
     "version": "0.0.1",
     "publisher": "marcellbarsony",
+    "icon": "./assets/icon.png",
     "engines": {
         "vscode": "^1.66.0"
     },
