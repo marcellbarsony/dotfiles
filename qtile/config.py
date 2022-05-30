@@ -21,13 +21,16 @@ keys = [
 
     # Toggle layouts
     Key([mod], "Tab", lazy.next_layout(), desc="Next layout"),
-    #Key([mod], "Tab", lazy.prev_layout(), desc="Prev layout"),
+    Key([mod, "shift"], "Tab", lazy.prev_layout(), desc="Prev layout"),
 
-    # Floating
+    # Full screen & Floating
+    Key([mod], "f", lazy.window.toggle_fullscreen(), desc='Fullscreen'),
     Key([mod, "shift"], "f", lazy.window.toggle_floating(), desc='Floating'),
 
-    # Full screen
-    Key([mod], "f", lazy.window.toggle_fullscreen(), desc='Fullscreen'),
+    # Groups
+    Key([mod, "control"], "k", lazy.screen.next_group(), desc="Next group"),
+    Key([mod, "control"], "j", lazy.screen.prev_group(), desc="Prev group"),
+    Key([mod], "w", lazy.screen.toggle_group(), desc="Toggle last group"),
 
     # Kill & Reload
     Key([mod], "q", lazy.window.kill(), desc="Kill window"),
@@ -37,12 +40,18 @@ keys = [
     # Screen
     Key([mod, "control"], "l", lazy.next_screen(), desc='Move focus to next monitor'),
     Key([mod, "control"], "h", lazy.prev_screen(), desc='Move focus to prev monitor'),
+    #Key([mod], "t", lazy.to_screen(0)),
+    #Key([mod], "u", lazy.to_screen(1)),
 
     # Spawn
     Key([mod], "d", lazy.spawn("dmenu_run"), desc="Spawn dmenu"),
-
-    # Spawn cmd
     Key([mod], "r", lazy.spawncmd(), desc="Spawn command via prompt widget"),
+
+    # Test
+    #Key([mod, "control"], "t", lazy.group.next_window(), desc='Next window'),
+
+    # Wallpaper
+    #Key([mod], "h", lazy.screen.set_wallpaper(path, mode='fill/stretch'), desc="Set wallpaper"),
 
     # Windows - Focus
     Key([mod], "h", lazy.layout.left(), desc="Focus left"),
@@ -64,9 +73,6 @@ keys = [
     Key([mod1], "k", lazy.layout.grow_up(), desc="Grow up"),
     Key([mod1], "n", lazy.layout.normalize(), desc="Reset sizes"),
 
-    # Workspaces
-    Key([mod, "control"], "k", lazy.screen.next_group(), desc="Next workspace"),
-    Key([mod, "control"], "j", lazy.screen.prev_group(), desc="Prev workspace"),
 
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
