@@ -8,6 +8,7 @@ from libqtile.utils import guess_terminal
 # Variables
 
 mod = "mod4"
+mod1 = "mod1"
 browser= "firefox"
 terminal = "alacritty"
 
@@ -22,16 +23,20 @@ keys = [
     Key([mod], "Tab", lazy.next_layout(), desc="Next layout"),
     #Key([mod], "Tab", lazy.prev_layout(), desc="Prev layout"),
 
-    # Kill
-    Key([mod], "q", lazy.window.kill(), desc="Kill window"),
-    Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown"),
+    # Floating
+    Key([mod, "shift"], "f", lazy.window.toggle_floating(), desc='Floating'),
 
-    # Reload config
-    Key([mod, "control"], "r", lazy.reload_config(), desc="Reload config"),
+    # Full screen
+    Key([mod], "f", lazy.window.toggle_fullscreen(), desc='Fullscreen'),
+
+    # Kill & Reload
+    Key([mod], "q", lazy.window.kill(), desc="Kill window"),
+    Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
+    Key([mod, "control"], "r", lazy.reload_config(), desc="Reload Qtile"),
 
     # Screen
-    Key([mod], "period", lazy.next_screen(), desc='Move focus to next monitor'),
-    Key([mod], "comma", lazy.prev_screen(), desc='Move focus to prev monitor'),
+    Key([mod, "control"], "l", lazy.next_screen(), desc='Move focus to next monitor'),
+    Key([mod, "control"], "h", lazy.prev_screen(), desc='Move focus to prev monitor'),
 
     # Spawn
     Key([mod], "d", lazy.spawn("dmenu_run"), desc="Spawn dmenu"),
@@ -53,20 +58,19 @@ keys = [
     Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move up"),
 
     # Windows - Resize
-    Key([mod, "control"], "h", lazy.layout.grow_left(), desc="Grow left"),
-    Key([mod, "control"], "l", lazy.layout.grow_right(), desc="Grow right"),
-    Key([mod, "control"], "j", lazy.layout.grow_down(), desc="Grow down"),
-    Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow up"),
-    Key([mod, "control"], "n", lazy.layout.normalize(), desc="Reset sizes"),
+    Key([mod1], "h", lazy.layout.grow_left(), desc="Grow left"),
+    Key([mod1], "l", lazy.layout.grow_right(), desc="Grow right"),
+    Key([mod1], "j", lazy.layout.grow_down(), desc="Grow down"),
+    Key([mod1], "k", lazy.layout.grow_up(), desc="Grow up"),
+    Key([mod1], "n", lazy.layout.normalize(), desc="Reset sizes"),
 
     # Workspaces
-    Key([mod, "mod1"], "l", lazy.screen.next_group(), desc="Next workspace"),
-    Key([mod, "mod1"], "h", lazy.screen.prev_group(), desc="Prev workspace"),
+    Key([mod, "control"], "k", lazy.screen.next_group(), desc="Next workspace"),
+    Key([mod, "control"], "j", lazy.screen.prev_group(), desc="Prev workspace"),
 
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
-    # Unsplit = 1 window displayed, like Max layout, but still with
-    # multiple stack panes
+    # Unsplit = 1 window displayed, like Max layout, but still with multiple stack panes
     Key(
         [mod, "shift"], "Return", lazy.layout.toggle_split(), desc="Toggle between split and unsplit sides of stack",
     ),
