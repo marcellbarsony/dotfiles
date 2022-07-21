@@ -23,6 +23,10 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
   File "/usr/lib/python3.10/site-packages/libqtile/backend/wayland/__init__.py", line 2, in <module>
     from libqtile.backend.wayland.inputs import InputConfig  # noqa: F401
-  File "/usr/lib/python3.10/site-packages/libqtile/backend/wayland/inputs.py", line 26, in <module>
-    from wlroots import ffi, lib
-ModuleNotFoundError: No module named 'wlroots'
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/wayland/inputs.py", line 27, in <module>
+    from wlroots.wlr_types import input_device
+  File "/usr/lib/python3.10/site-packages/wlroots/wlr_types/__init__.py", line 4, in <module>
+    from .cursor import Cursor  # noqa: F401
+  File "/usr/lib/python3.10/site-packages/wlroots/wlr_types/cursor.py", line 9, in <module>
+    from .input_device import InputDevice, InputDeviceType
+ImportError: cannot import name 'InputDevice' from 'wlroots.wlr_types.input_device' (/usr/lib/python3.10/site-packages/wlroots/wlr_types/input_device.py)
