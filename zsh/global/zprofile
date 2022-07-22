@@ -1,4 +1,10 @@
 if [[ "$(tty)" = "/dev/tty1" ]]; then
+<<<<<<< HEAD
   startx ${XDG_CONFIG_HOME}/x11/.xinitrc
   # pgrep dwm || startx "$XDG_CONFIG_HOME/x11/.xinitrc
+=======
+  #qtile start -b wayland
+  #qtile start
+  startx ${HOME}/.config/xorg/.xinitrc
+>>>>>>> 2223c1950162d738cbd5cdf0fe99042c9eca8e48
 fi
