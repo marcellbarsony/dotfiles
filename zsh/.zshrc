@@ -10,10 +10,11 @@
 
 # Bind key
   bindkey -e
+  bindkey -s '^s' spotify-tui
 
 # Colors
-# https://i.stack.imgur.com/UQVe5.png
   autoload -U colors && colors
+  # https://i.stack.imgur.com/UQVe5.png
 
 # Git
   autoload -U vcs_info
@@ -42,57 +43,55 @@
   eval "$(starship init zsh)"
 
 # Source zmodules
-  # Aliases
   for f in ~/.config/zsh/zmodules/*; do source "$f"; done
 
 # VI mode
   bindkey -v
   export KEYTIMEOUT=1
 
-# VIM - Edit line in Vim (Ctrl+E)
-  autoload edit-command-line
-  zle -N edit-command-line
-  bindkey '^e' edit-command-line
+  # VIM - Edit line in Vim
+    autoload edit-command-line
+    zle -N edit-command-line
+    bindkey '^e' edit-command-line # (Ctrl + E)
 
-# VIM - Tab complete menu bindings
-  bindkey -v '^?' backward-delete-char
-  bindkey -M menuselect 'h' vi-backward-char
-  bindkey -M menuselect 'k' vi-up-line-or-history
-  bindkey -M menuselect 'l' vi-forward-char
-  bindkey -M menuselect 'j' vi-down-line-or-history
-  bindkey -M menuselect '\r' accept-line
+  # VIM - Tab complete menu bindings
+    bindkey -v '^?' backward-delete-char
+    bindkey -M menuselect 'h' vi-backward-char
+    bindkey -M menuselect 'k' vi-up-line-or-history
+    bindkey -M menuselect 'l' vi-forward-char
+    bindkey -M menuselect 'j' vi-down-line-or-history
+    bindkey -M menuselect '\r' accept-line
 
-# VIM - VI mode cursor
-  function zle-keymap-select {
-    if [[ ${KEYMAP} == vicmd ]] ||
-       [[ $1 = 'block' ]]; then
-      echo -ne '\e[1 q'
-    elif [[ ${KEYMAP} == main ]] ||
-         [[ ${KEYMAP} == viins ]] ||
-         [[ ${KEYMAP} = '' ]] ||
-         [[ $1 = 'beam' ]]; then
+  # VIM - VI mode cursor
+    function zle-keymap-select {
+      if [[ ${KEYMAP} == vicmd ]] ||
+        [[ $1 = 'block' ]]; then
+        echo -ne '\e[1 q'
+      elif [[ ${KEYMAP} == main ]] ||
+          [[ ${KEYMAP} == viins ]] ||
+          [[ ${KEYMAP} = '' ]] ||
+          [[ $1 = 'beam' ]]; then
+        echo -ne '\e[3 q'
+      fi
+    }
+
+    zle -N zle-keymap-select
+    zle -N zle-line-init
+    zle-line-init() {
+        echo -ne "\e[3 q"
+    }
+
+    preexec() {
       echo -ne '\e[3 q'
-    fi
-  }
+    }
 
-  zle -N zle-keymap-select
-  zle -N zle-line-init
-  zle-line-init() {
-      echo -ne "\e[3 q"
-  }
-
-  preexec() {
-    echo -ne '\e[3 q'
-  }
-
-  # 0 - Block (blinking)
-  # 1 - Block (blinking, default)
-  # 2 - Block (static)
-  # 3 - Underline (blinking)
-  # 4 - Underline (static)
-  # 5 - Bar (blinking)
-  # 6 - Bar (static)
+    # 0 - Block (blinking)
+    # 1 - Block (blinking, default)
+    # 2 - Block (static)
+    # 3 - Underline (blinking)
+    # 4 - Underline (static)
+    # 5 - Bar (blinking)
+    # 6 - Bar (static)
 
 # Load zsh-syntax-highlighting (should be last)
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-
