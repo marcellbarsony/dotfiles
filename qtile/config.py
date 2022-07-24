@@ -179,7 +179,7 @@ layouts = [
 
 # Mouse callbacks
 
-def open_bpytop():
+def open_sysmonitor():
     qtile.cmd_spawn('alacritty -e bpytop')
 
 # Widgets
@@ -232,29 +232,37 @@ screens = [
                     ]
                 ),
                 widget.Sep(),
+                # CPU
                 widget.CPU(
                     format='CPU {load_percent}%',
+                    mouse_callbacks = {'Button1': open_sysmonitor},
                     update_interval=10
                     ),
                 widget.Sep(),
+                # RAM
                 widget.Memory(
                     format='{MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}',
-                    mouse_callbacks = {'Button1': open_bpytop},
+                    mouse_callbacks = {'Button1': open_sysmonitor},
                     update_interval=10
                     ),
                 widget.Sep(),
+                # Crypto
                 widget.CryptoTicker(),
                 widget.Sep(),
+                # Active screen
                 widget.CurrentScreen(),
                 widget.Sep(),
+                # Battery
                 widget.Battery(
                     format='BAT: {percent:2.0%}'
                     ),
                 widget.Sep(),
+                # Time & Date
                 widget.Clock(
                     format="%b-%d %a %I:%M %p",
                     update_interval=60
                     ),
+                # System tray
                 widget.Systray(),
             ],
             26,

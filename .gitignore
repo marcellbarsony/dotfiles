@@ -1,42 +1,42 @@
-### Bitwarden CLI ###
+# Bitwarden CLI
 Bitwarden CLI/data.json
 
-### Bpytop ###
+# Bpytop
 bpytop/error.log
 
-### Cargo ###
+# Cargo
 cargo/
 
-### Configstore ###
+# Configstore
 configstore/
 
-### Dconf ###
+# Dconf
 dconf/
 
-### GitHub ###
+# GitHub
 gh/
 
-### Pulse Audio ###
+# Pulse Audio
 pavucontrol.ini
 
-### QtProject
+# Qtile
 qtile/__pycache__
 
-### QtProject
+# QtProject
 QtProject.conf
 
-### Rust Bitwarden ###
+# Rust Bitwarden
 rbw/
 
-### Spotify ###
+# Spotify
 spotify-tui/client.yml
 spotify-tui/.spotify_token_cache.json
 spotifyd/spotifyd.conf
 
-### VS Codium ###
+# VSCodium
 # vscodium/
 
-### Wireshark
+# Wireshark
 wireshark/decode_as_entries
 wireshark/expert_severity
 wireshark/language
@@ -44,6 +44,9 @@ wireshark/profiles/
 wireshark/recent
 wireshark/recent_common
 
-### ZSH ###
+# XDG
+user-dirs.dirs
+
+# ZSH
 zsh/.zcompdump
 zsh/.zsh_history
