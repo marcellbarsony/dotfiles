@@ -194,22 +194,65 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.GroupBox(),
+                widget.AGroupBox(),
+                widget.GroupBox(
+                    borderwidth=5,
+                    disable_drag=True,
+                    highlight_method='block',
+                    rounded=False
+                    ),
                 widget.CurrentLayout(),
                 widget.Prompt(),
                 widget.WindowName(),
-                widget.Chord(
-                    chords_colors={ "launch": ("#ff0000", "#ffffff"), },
-                    name_transform=lambda name: name.upper(),
+
+                #widget.ThermalSensor(),
+                #widget.TaskList(),
+                #widget.Net(),
+                #widget.CheckUpdates(),
+                #widget.Volume(),
+                widget.DF(),
+                widget.Sep(),
+                widget.WidgetBox(
+                    widgets=[
+                        widget.TextBox(
+                            button_location='left',
+                            text_closed='[Weather]',
+                            text_open='[open]'
+                            ),
+                        widget.OpenWeather(
+                            location='Budapest',
+                            format='{location_city}: {main_temp}°{units_temperature} - {weather_details} {icon}',
+                            update_interval=600
+                            ),
+                    ]
                 ),
-                widget.TextBox("default config", name="default"),
-                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
+                widget.Sep(),
+                widget.CPU(
+                    format='CPU {load_percent}%',
+                    update_interval=10
+                    ),
+                widget.Sep(),
+                widget.Memory(
+                    format='{MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}',
+                    update_interval=10
+                    ),
+                widget.Sep(),
+                widget.CryptoTicker(),
+                widget.Sep(),
+                widget.CurrentScreen(),
+                widget.Sep(),
+                widget.Battery(
+                    format='BAT: {percent:2.0%}'
+                    ),
+                widget.Sep(),
+                widget.Clock(
+                    format="%b-%d %a %I:%M %p",
+                    update_interval=60
+                    ),
                 widget.Systray(),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
-                #widget.QuickExit(),
             ],
-            24,
-            #border_width=[2, 0, 2, 0],  # Draw top and bottom borders
+            26,
+            border_width=[0, 2, 0, 2],  # Draw top and bottom borders
             #border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
     ),
