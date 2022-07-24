@@ -20,6 +20,9 @@ gh/
 pavucontrol.ini
 
 ### QtProject
+qtile/__pycache__
+
+### QtProject
 QtProject.conf
 
 ### Rust Bitwarden ###

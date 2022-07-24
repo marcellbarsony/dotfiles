@@ -1,6 +1,6 @@
 # Import
 
-from libqtile import bar, layout, widget
+from libqtile import qtile, bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
@@ -9,7 +9,7 @@ from libqtile.utils import guess_terminal
 
 mod = "mod4"
 mod1 = "mod1"
-browser= "firefox"
+browser= "librewolf"
 terminal = "alacritty"
 
 # Functions
@@ -46,27 +46,27 @@ def switch_screens(qtile):
 keys = [
 
     # Qtile
-    Key([mod], "q", lazy.window.kill(), desc="Kill window"),
-    Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown"),
+    Key([mod],            "q", lazy.window.kill(),   desc="Kill window"),
+    Key([mod, "control"], "q", lazy.shutdown(),      desc="Shutdown"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload"),
 
     # Spawn
-    Key([mod], "Return", lazy.spawn(terminal), desc="Spawn terminal"),
-    Key([mod], "d", lazy.spawn("dmenu_run"), desc="Spawn dmenu"),
-    Key([mod], "r", lazy.spawncmd(), desc="Spawn command prompt"),
+    Key([mod], "Return", lazy.spawn(terminal),       desc="Spawn terminal"),
+    Key([mod],      "d", lazy.spawn("dmenu_run"),    desc="Spawn dmenu"),
+    Key([mod],      "r", lazy.spawncmd(),            desc="Spawn command prompt"),
 
     # Full screen & Floating
-    Key([mod], "f", lazy.window.toggle_fullscreen(), desc='Fullscreen'),
-    Key([mod, "shift"], "f", lazy.window.toggle_floating(), desc='Floating'),
+    Key([mod],          "f", lazy.window.toggle_fullscreen(), desc='Fullscreen'),
+    Key([mod, "shift"], "f", lazy.window.toggle_floating(),   desc='Floating'),
 
     # Layouts
-    Key([mod], "Tab", lazy.next_layout(), desc="Next layout"),
+    Key([mod],          "Tab", lazy.next_layout(), desc="Next layout"),
     Key([mod, "shift"], "Tab", lazy.prev_layout(), desc="Prev layout"),
 
     # Groups
-    Key([mod, "mod1"], "j", lazy.screen.prev_group(), desc="Prev group"),
-    Key([mod, "mod1"], "k", lazy.screen.next_group(), desc="Next group"),
-    Key([mod], "b", lazy.screen.toggle_group(), desc="Toggle last group"),
+    Key([mod, "mod1"], "j", lazy.screen.prev_group(),   desc="Prev group"),
+    Key([mod, "mod1"], "k", lazy.screen.next_group(),   desc="Next group"),
+    Key([mod],         "b", lazy.screen.toggle_group(), desc="Toggle last group"),
 
     # Screen
     Key([mod, "control"], "h", lazy.prev_screen(), desc='Focus prev monitor'),
@@ -81,25 +81,25 @@ keys = [
         desc="Move & Focus next screen"
         ),
     Key([mod, "control"], "l", lazy.next_screen(), desc='Focus next monitor'),
-    Key([mod], "w", lazy.to_screen(0)),
-    Key([mod], "e", lazy.to_screen(1)),
-    Key([mod], "r", lazy.to_screen(2)),
-    Key([mod], "t", lazy.function(switch_screens)),
+    Key([mod],            "w", lazy.to_screen(0)),
+    Key([mod],            "e", lazy.to_screen(1)),
+    Key([mod],            "r", lazy.to_screen(2)),
+    Key([mod],            "t", lazy.function(switch_screens)),
 
     # Wallpaper
     #Key([mod], "h", lazy.screen.set_wallpaper(path, mode='fill/stretch'), desc="Set wallpaper"),
 
     # Windows - Focus
-    Key([mod], "h", lazy.layout.left(), desc="Focus left"),
-    Key([mod], "j", lazy.layout.down(), desc="Focus down"),
-    Key([mod], "k", lazy.layout.up(), desc="Focus up"),
-    Key([mod], "l", lazy.layout.right(), desc="Focus right"),
-    Key([mod], "space", lazy.layout.next(), desc="Focus other window"),
+    Key([mod],     "h", lazy.layout.left(),  desc="Focus left"),
+    Key([mod],     "j", lazy.layout.down(),  desc="Focus down"),
+    Key([mod],     "k", lazy.layout.up(),    desc="Focus up"),
+    Key([mod],     "l", lazy.layout.right(), desc="Focus right"),
+    Key([mod], "space", lazy.layout.next(),  desc="Focus other window"),
 
     # Windows - Move
-    Key([mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move left"),
-    Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move down"),
-    Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move up"),
+    Key([mod, "shift"], "h", lazy.layout.shuffle_left(),  desc="Move left"),
+    Key([mod, "shift"], "j", lazy.layout.shuffle_down(),  desc="Move down"),
+    Key([mod, "shift"], "k", lazy.layout.shuffle_up(),    desc="Move up"),
     Key([mod, "shift"], "l", lazy.layout.shuffle_right(), desc="Move right"),
 
     # Windows - Resize
@@ -177,6 +177,11 @@ layouts = [
     # layout.Zoomy(),
 ]
 
+# Mouse callbacks
+
+def open_bpytop():
+    qtile.cmd_spawn('alacritty -e bpytop')
+
 # Widgets
 
 widget_defaults = dict(
@@ -234,6 +239,7 @@ screens = [
                 widget.Sep(),
                 widget.Memory(
                     format='{MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}',
+                    mouse_callbacks = {'Button1': open_bpytop},
                     update_interval=10
                     ),
                 widget.Sep(),
