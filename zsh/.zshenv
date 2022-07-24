@@ -13,16 +13,18 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 
 # Paths
-export ZDOTDIR="$HOME/.config/zsh/"
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export HISTFILE="$XDG_STATE_HOME/zsh/history"
+export STARSHIP_CONFIG=~/.config/starship/config.toml
+export ZDOTDIR="$HOME/.config/zsh/"
 export XINITRC="$HOME/.config/x11/"
 # export GIT_CONFIG="#$XDG_CONFIG_HOME/git/config"
 # export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
-export STARSHIP_CONFIG=~/.config/starship/config.toml
-set viminfofile=$XDG_CONFIG_HOME/nvim/viminfo
+# set viminfofile=$XDG_CONFIG_HOME/nvim/viminfo
 
-# Cargo
+# Rust
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export PATH=/home/marci/.local/share/cargo/bin:$PATH
 #path+=('$HOME/.local/bin')
 #path+=('$HOME/.local/share/cargo/bin')

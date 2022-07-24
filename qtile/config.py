@@ -1,9 +1,8 @@
 # Import
 
-from libqtile import qtile, bar, layout, widget
+from libqtile        import qtile, bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
-from libqtile.lazy import lazy
-from libqtile.utils import guess_terminal
+from libqtile.lazy   import lazy
 
 # Variables
 
@@ -51,9 +50,9 @@ keys = [
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload"),
 
     # Spawn
-    Key([mod], "Return", lazy.spawn(terminal),       desc="Spawn terminal"),
-    Key([mod],      "d", lazy.spawn("dmenu_run"),    desc="Spawn dmenu"),
-    Key([mod],      "r", lazy.spawncmd(),            desc="Spawn command prompt"),
+    Key([mod], "Return", lazy.spawn(terminal),    desc="Spawn terminal"),
+    Key([mod],      "d", lazy.spawn("dmenu_run"), desc="Spawn dmenu"),
+    Key([mod],      "r", lazy.spawncmd(),         desc="Spawn command prompt"),
 
     # Full screen & Floating
     Key([mod],          "f", lazy.window.toggle_fullscreen(), desc='Fullscreen'),
@@ -70,20 +69,12 @@ keys = [
 
     # Screen
     Key([mod, "control"], "h", lazy.prev_screen(), desc='Focus prev monitor'),
-    Key([mod, "control"], "j",
-        lazy.function(window_to_previous_screen),
-        lazy.prev_screen(),
-        desc="Move & Focus prev screen"
-        ),
-    Key([mod, "control"], "k",
-        lazy.function(window_to_next_screen),
-        lazy.next_screen(),
-        desc="Move & Focus next screen"
-        ),
+    Key([mod, "control"], "j", lazy.function(window_to_previous_screen), lazy.prev_screen(), desc="Move & Focus prev screen"),
+    Key([mod, "control"], "k", lazy.function(window_to_next_screen),     lazy.next_screen(), desc="Move & Focus next screen"),
     Key([mod, "control"], "l", lazy.next_screen(), desc='Focus next monitor'),
-    Key([mod],            "w", lazy.to_screen(0)),
-    Key([mod],            "e", lazy.to_screen(1)),
-    Key([mod],            "r", lazy.to_screen(2)),
+    Key([mod],            "w", lazy.to_screen(0),  desc='Focus 1st monitor'),
+    Key([mod],            "e", lazy.to_screen(1),  desc='Focus 2nd monitor'),
+    Key([mod],            "r", lazy.to_screen(2),  desc='Focus 3rd monitor'),
     Key([mod],            "t", lazy.function(switch_screens)),
 
     # Wallpaper
@@ -142,10 +133,21 @@ keys = [
     ),
 ]
 
-# Workspaces
+# Workspaces [named]
+
+#group_names = 'WWW DEV SYS ETC'.split()
+#groups = [Group(name, layout='max') for name in group_names]
+
+#for i, name in enumerate(group_names):
+#    indx = str(i + 1)
+#    keys += [
+#        Key([mod], indx, lazy.group[name].toscreen()),
+#        Key([mod, 'shift'], indx, lazy.window.togroup(name))]
+
+
+# Workspaces [numbered]
 
 groups = [Group(i) for i in "123456789"]
-
 for i in groups:
     keys.extend(
         [

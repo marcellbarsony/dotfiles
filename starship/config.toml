@@ -7,6 +7,7 @@ $singularity\
 $kubernetes\
 $directory\
 $vcsh\
+$fill\
 $git_branch\
 $git_state\
 $git_metrics\
@@ -72,7 +73,7 @@ $character"""
 #$git_status\
 #"""
 
-# Prompt
+# New line
   add_newline = true
 
 # Line Break
@@ -87,3 +88,8 @@ $character"""
 # Git Branch
 [git_branch]
   always_show_remote = true
+
+# Fill
+[fill]
+symbol = " "
+

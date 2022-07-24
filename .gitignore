@@ -17,6 +17,7 @@ dconf/
 gh/
 
 # Pulse Audio
+pulse/
 pavucontrol.ini
 
 # Qtile
