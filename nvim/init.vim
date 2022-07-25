@@ -16,6 +16,12 @@ set number relativenumber       " Relative numbers
 set showmatch                   " Show matching brackets
 set clipboard+=unnamedplus      " Use system clipboard (unnamedplus/unnamed)
 
+set enc=utf-8
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf8,prc
+set guifont=Monaco:h11
+
+
 " Center document vertically - Insert mode
 autocmd InsertEnter * norm zz
 

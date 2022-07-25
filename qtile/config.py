@@ -48,9 +48,11 @@ keys = [
     Key([mod],            "q", lazy.window.kill(),   desc="Kill window"),
     Key([mod, "control"], "q", lazy.shutdown(),      desc="Shutdown"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload"),
+    Key([mod1],           "r", lazy.restart(),       desc="Restart"),
 
     # Spawn
     Key([mod], "Return", lazy.spawn(terminal),    desc="Spawn terminal"),
+    Key([mod],      "b", lazy.spawn(browser),     desc="Spawn broswer"),
     Key([mod],      "d", lazy.spawn("dmenu_run"), desc="Spawn dmenu"),
     Key([mod],      "r", lazy.spawncmd(),         desc="Spawn command prompt"),
 
@@ -65,7 +67,7 @@ keys = [
     # Groups
     Key([mod, "mod1"], "j", lazy.screen.prev_group(),   desc="Prev group"),
     Key([mod, "mod1"], "k", lazy.screen.next_group(),   desc="Next group"),
-    Key([mod],         "b", lazy.screen.toggle_group(), desc="Toggle last group"),
+    Key([mod, "mod1"], "b", lazy.screen.toggle_group(), desc="Toggle last group"),
 
     # Screen
     Key([mod, "control"], "h", lazy.prev_screen(), desc='Focus prev monitor'),
@@ -135,32 +137,32 @@ keys = [
 
 # Workspaces [named]
 
-#group_names = 'WWW DEV SYS ETC'.split()
-#groups = [Group(name, layout='max') for name in group_names]
+group_names = ' DEV SYS ETC'.split()
+groups = [Group(name, layout='max') for name in group_names]
 
-#for i, name in enumerate(group_names):
-#    indx = str(i + 1)
-#    keys += [
-#        Key([mod], indx, lazy.group[name].toscreen()),
-#        Key([mod, 'shift'], indx, lazy.window.togroup(name))]
+for i, name in enumerate(group_names):
+    indx = str(i + 1)
+    keys += [
+        Key([mod], indx, lazy.group[name].toscreen()),
+        Key([mod, 'shift'], indx, lazy.window.togroup(name))]
 
 
 # Workspaces [numbered]
 
-groups = [Group(i) for i in "123456789"]
-for i in groups:
-    keys.extend(
-        [
-            Key(
-                [mod], i.name, lazy.group[i.name].toscreen(),
-                desc="Switch to group {}".format(i.name),
-            ),
-            Key(
-                [mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True),
-                desc="Move window & switch to group {}".format(i.name),
-            ),
-        ]
-    )
+#groups = [Group(i) for i in "123456789"]
+#for i in groups:
+#    keys.extend(
+#        [
+#            Key(
+#                [mod], i.name, lazy.group[i.name].toscreen(),
+#                desc="Switch to group {}".format(i.name),
+#            ),
+#            Key(
+#                [mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True),
+#                desc="Move window & switch to group {}".format(i.name),
+#            ),
+#        ]
+#    )
 
 # Layouts
 
@@ -215,7 +217,6 @@ screens = [
                 #widget.ThermalSensor(),
                 #widget.TaskList(),
                 #widget.Net(),
-                #widget.CheckUpdates(),
                 #widget.Volume(),
                 widget.DF(),
                 widget.Sep(),
@@ -233,6 +234,13 @@ screens = [
                             ),
                     ]
                 ),
+                widget.Sep(),
+                widget.CheckUpdates(
+                    distro = 'Arch',
+                    display_format = "{updates} Updates",
+                    no_update_string = "No Updates",
+                    update_interval= 1800,
+                    ),
                 widget.Sep(),
                 # CPU
                 widget.CPU(
