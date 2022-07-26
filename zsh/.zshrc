@@ -81,10 +81,32 @@
 
 # Zsh-Autocomplete
   source ~/.local/src/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
+  zstyle ':autocomplete:*' default-context ''
+  zstyle ':autocomplete:*' min-delay 0.05
   zstyle ':autocomplete:*' min-input 2
-  zstyle ':autocomplete:*' widget-style menu-select
-  zstyle ':autocomplete:*' insert-unambiguous yes
   zstyle ':autocomplete:*' ignored-input '..'
+  zstyle ':autocomplete:*' list-lines 16
+  zstyle ':autocomplete:history-search:*' list-lines 16
+  zstyle ':autocomplete:history-incremental-search-*:*' list-lines 16
+  zstyle ':autocomplete:*' recent-dirs cdr
+  zstyle ':autocomplete:*' insert-unambiguous yes
+  zstyle ':autocomplete:*' widget-style menu-select
+  zstyle ':autocomplete:*' fzf-completion no
+  zstyle ':autocomplete:*' add-space executables aliases functions builtins reserved-words commands
+
+  # Up arrow:
+  bindkey '\e[A' up-line-or-search
+  bindkey '\eOA' up-line-or-search
+  # Down arrow:
+  bindkey '\e[B' down-line-or-select
+  bindkey '\eOB' down-line-or-select
+  # Control-Space:
+  bindkey '\0' list-expand
+
+  # Uncomment the following lines to disable live history search:
+  # zle -A {.,}history-incremental-search-forward
+  # zle -A {.,}history-incremental-search-backward
 
   bindkey -v '^?' backward-delete-char
   bindkey -M menuselect 'h' vi-backward-char
@@ -92,6 +114,8 @@
   bindkey -M menuselect 'l' vi-forward-char
   bindkey -M menuselect 'j' vi-down-line-or-history
   bindkey -M menuselect '\r' accept-line
+
+
 
 # Zsh-Autosuggestions
   source ~/.local/src/zsh-autosuggestions/zsh-autosuggestions.zsh
