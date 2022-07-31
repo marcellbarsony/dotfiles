@@ -11,6 +11,10 @@ mod1 = "mod1"
 browser= "librewolf"
 terminal = "alacritty"
 
+# Colors
+
+primary = '#0000AA'
+
 # Functions
 
 def window_to_prev_group(qtile):
@@ -87,7 +91,7 @@ keys = [
     Key([mod],     "j", lazy.layout.down(),  desc="Focus down"),
     Key([mod],     "k", lazy.layout.up(),    desc="Focus up"),
     Key([mod],     "l", lazy.layout.right(), desc="Focus right"),
-    Key([mod], "space", lazy.layout.next(),  desc="Focus other window"),
+    Key([mod], "space", lazy.layout.next(),  desc="Focus next window"),
 
     # Windows - Move
     Key([mod, "shift"], "h", lazy.layout.shuffle_left(),  desc="Move left"),
@@ -137,7 +141,7 @@ keys = [
 
 # Workspaces [named]
 
-group_names = ' DEV SYS ETC'.split()
+group_names = ' 1 2 3 4 5'.split()
 groups = [Group(name, layout='max') for name in group_names]
 
 for i, name in enumerate(group_names):
@@ -167,12 +171,29 @@ for i, name in enumerate(group_names):
 # Layouts
 
 layouts = [
-    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=2),
-    layout.Max(),
+    #layout.Max(),
+    layout.Columns(
+        border_focus = [primary],
+        border_focus_stack = [primary, primary],
+        border_normal = ['#222255'],
+        border_normal_stack = [primary],
+        border_on_single = False,
+        border_width = 2,
+        grow_amount = 10,
+        insert_position = 0,
+        ##margin = ["10", "5", "20", "40"]
+        margin = 3,
+        margin_on_single = 5,
+        num_columns = 2,
+        split = True,
+        wrap_focus_columns = True,
+        wrap_focus_rows = True,
+        wrap_focus_stacks = True,
+        ),
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
-    # layout.Matrix(),
-    # layout.MonadTall(),
+     layout.Matrix(),
+     layout.MonadTall(),
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
@@ -293,15 +314,16 @@ screens = [
                     chords_colors={ "launch": ("#ff0000", "#ffffff"), },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.TextBox("default config", name="default"),
-                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
-                widget.Systray(),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
-                #widget.QuickExit(),
+                # Time & Date
+                widget.Clock(
+                    format="%b-%d %a %I:%M %p",
+                    update_interval=60
+                    ),
+                # Quick exit
+                widget.QuickExit(),
             ],
             24,
-            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
+            border_width=[0, 2, 0, 2],  # Draw top and bottom borders
         ),
     ),
 ]
@@ -317,7 +339,7 @@ mouse = [
 # Configuration variables
 
 auto_fullscreen = True
-auto_minimize = True
+auto_minimize = False
 bring_front_click = False
 cursor_warp = False
 dgroups_key_binder = None
