@@ -1,5 +1,8 @@
 # Import
 
+import os
+import subprocess
+from libqtile        import hook
 from libqtile        import qtile, bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy   import lazy
@@ -10,6 +13,7 @@ mod = "mod4"
 mod1 = "mod1"
 browser= "librewolf"
 terminal = "alacritty"
+menu = "dmenu_run"
 
 # Colors
 
@@ -57,7 +61,7 @@ keys = [
     # Spawn
     Key([mod], "Return", lazy.spawn(terminal),    desc="Spawn terminal"),
     Key([mod],      "b", lazy.spawn(browser),     desc="Spawn broswer"),
-    Key([mod],      "d", lazy.spawn("dmenu_run"), desc="Spawn dmenu"),
+    Key([mod],      "d", lazy.spawn(menu),       desc="Spawn launch menu"),
     Key([mod],      "r", lazy.spawncmd(),         desc="Spawn command prompt"),
 
     # Full screen & Floating
@@ -86,50 +90,25 @@ keys = [
     # Wallpaper
     #Key([mod], "h", lazy.screen.set_wallpaper(path, mode='fill/stretch'), desc="Set wallpaper"),
 
-    # Windows - Focus
+    # Window - Focus
     Key([mod],     "h", lazy.layout.left(),  desc="Focus left"),
     Key([mod],     "j", lazy.layout.down(),  desc="Focus down"),
     Key([mod],     "k", lazy.layout.up(),    desc="Focus up"),
     Key([mod],     "l", lazy.layout.right(), desc="Focus right"),
     Key([mod], "space", lazy.layout.next(),  desc="Focus next window"),
 
-    # Windows - Move
+    # Window - Move
     Key([mod, "shift"], "h", lazy.layout.shuffle_left(),  desc="Move left"),
     Key([mod, "shift"], "j", lazy.layout.shuffle_down(),  desc="Move down"),
     Key([mod, "shift"], "k", lazy.layout.shuffle_up(),    desc="Move up"),
     Key([mod, "shift"], "l", lazy.layout.shuffle_right(), desc="Move right"),
 
-    # Windows - Resize
-    Key([mod1], "h",
-        lazy.layout.grow_left(),
-        lazy.layout.shrink(),
-        lazy.layout.decrease_ratio(),
-        lazy.layout.add(),
-        desc="Grow left"
-        ),
-    Key([mod1], "j",
-        lazy.layout.grow_down(),
-        lazy.layout.shrink(),
-        lazy.layout.increase_nmaster(),
-        desc="Grow down"
-        ),
-    Key([mod1], "k",
-        lazy.layout.grow_up(),
-        lazy.layout.grow(),
-        lazy.layout.decrease_nmaster(),
-        desc="Grow up"
-        ),
-    Key([mod1], "l",
-        lazy.layout.grow_right(),
-        lazy.layout.grow(),
-        lazy.layout.increase_ratio(),
-        lazy.layout.delete(),
-        desc="Grow right"
-        ),
-    Key([mod1], "n",
-        lazy.layout.normalize(),
-        desc="Reset sizes"
-        ),
+    # Window - Resize
+    Key([mod1], "h", lazy.layout.grow_left(), lazy.layout.shrink(), lazy.layout.decrease_ratio(), lazy.layout.add(), desc="Grow left"),
+    Key([mod1], "j", lazy.layout.grow_down(), lazy.layout.shrink(), lazy.layout.increase_nmaster(), desc="Grow down"),
+    Key([mod1], "k", lazy.layout.grow_up(), lazy.layout.grow(), lazy.layout.decrease_nmaster(), desc="Grow up"),
+    Key([mod1], "l", lazy.layout.grow_right(), lazy.layout.grow(), lazy.layout.increase_ratio(), lazy.layout.delete(), desc="Grow right"),
+    Key([mod1], "n", lazy.layout.normalize(), desc="Normalize"),
 
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
@@ -171,14 +150,16 @@ for i, name in enumerate(group_names):
 # Layouts
 
 layouts = [
-    #layout.Max(),
+    # Bsp
+    # layout.Bsp(),
+    # Columns
     layout.Columns(
         border_focus = [primary],
         border_focus_stack = [primary, primary],
         border_normal = ['#222255'],
         border_normal_stack = [primary],
         border_on_single = False,
-        border_width = 2,
+        border_width = 3,
         grow_amount = 10,
         insert_position = 0,
         ##margin = ["10", "5", "20", "40"]
@@ -190,16 +171,49 @@ layouts = [
         wrap_focus_rows = True,
         wrap_focus_stacks = True,
         ),
-    # layout.Stack(num_stacks=2),
-    # layout.Bsp(),
-     layout.Matrix(),
-     layout.MonadTall(),
+    # Floating
+    #layout.Floating(
+    #    border_focus = [primary],
+    #    border_normal = ['#222255'],
+    #    border_width = 3,
+    #    fullscreen_border_width = 3,
+    #    max_border_width = 3,
+    #    ),
+    # Max
+    layout.Max(
+        border_focus = [primary],
+        border_normal = [primary],
+        border_width = 3,
+        margin = 10,
+    ),
+    # Matrix
+    # layout.Matrix(),
+    # MonadTall
+    # layout.MonadTall(),
+    # MonadWide
     # layout.MonadWide(),
+    # RatioTile
     # layout.RatioTile(),
+    # Stack
+    # layout.Stack(
+    #    num_stacks=2
+    # ),
+    # Tile
     # layout.Tile(),
+    # TreeTab
     # layout.TreeTab(),
+    # VerticalTile
     # layout.VerticalTile(),
+    # Zoomy
     # layout.Zoomy(),
+]
+
+# Drag floating layouts
+
+mouse = [
+    Drag([mod], "Button1", lazy.window.set_position_floating(), start=lazy.window.get_position()),
+    Drag([mod], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size()),
+    Click([mod], "Button2", lazy.window.bring_to_front()),
 ]
 
 # Mouse callbacks
@@ -328,13 +342,12 @@ screens = [
     ),
 ]
 
-# Drag floating layouts
+# Hooks
 
-mouse = [
-    Drag([mod], "Button1", lazy.window.set_position_floating(), start=lazy.window.get_position()),
-    Drag([mod], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size()),
-    Click([mod], "Button2", lazy.window.bring_to_front()),
-]
+@hook.subscribe.startup_once
+def autostart():
+    home = os.path.expanduser('~/.config/qtile/autostart.sh')
+    subprocess.Popen([home])
 
 # Configuration variables
 
