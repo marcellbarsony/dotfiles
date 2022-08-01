@@ -180,32 +180,32 @@ layouts = [
     #    max_border_width = 3,
     #    ),
     # Max
-    layout.Max(
-        border_focus = [primary],
-        border_normal = [primary],
-        border_width = 3,
-        margin = 10,
-    ),
+    #layout.Max(
+    #    border_focus = [primary],
+    #    border_normal = [primary],
+    #    border_width = 3,
+    #    margin = 10,
+    #),
     # Matrix
-    # layout.Matrix(),
+    #layout.Matrix(),
     # MonadTall
-    # layout.MonadTall(),
+    #layout.MonadTall(),
     # MonadWide
-    # layout.MonadWide(),
+    #layout.MonadWide(),
     # RatioTile
-    # layout.RatioTile(),
+    #layout.RatioTile(),
     # Stack
-    # layout.Stack(
-    #    num_stacks=2
-    # ),
+    #layout.Stack(
+    #   num_stacks=2
+    #),
     # Tile
-    # layout.Tile(),
+    #layout.Tile(),
     # TreeTab
-    # layout.TreeTab(),
+    #layout.TreeTab(),
     # VerticalTile
-    # layout.VerticalTile(),
+    #layout.VerticalTile(),
     # Zoomy
-    # layout.Zoomy(),
+    #layout.Zoomy(),
 ]
 
 # Drag floating layouts
@@ -344,7 +344,7 @@ screens = [
 
 # Hooks
 
-@hook.subscribe.startup_once
+@hook.subscribe.startup
 def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.Popen([home])
