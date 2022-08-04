@@ -16,6 +16,10 @@ dconf/
 # GitHub
 gh/
 
+# NeoVim
+nvim/pack/plugins/start/
+nvim/pack/plugins/opt/
+
 # Pulse Audio
 pulse/
 pavucontrol.ini
