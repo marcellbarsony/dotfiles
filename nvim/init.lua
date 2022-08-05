@@ -1,5 +1,6 @@
 -- Vanilla Config
-require('numToStr.settings')
-require('numToStr.autocmd')
---require('numToStr.plugins')
-require('numToStr.keybinds')
+require('user.autocmd')
+require('user.keybinds')
+require('user.lsp')
+require('user.plugins')
+require('user.settings')
