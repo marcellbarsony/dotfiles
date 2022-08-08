@@ -1,4 +1,12 @@
 -- Nvim-cmp
+
+-- SuperTab
+local check_backspace = function()
+    local col = vim.fn.col "." - 1                                      -- Help SuperTab work better
+    return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
+end
+
+-- CMP setup
 local cmp = require'cmp'
 
   cmp.setup({

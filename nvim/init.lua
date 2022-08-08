@@ -1,10 +1,10 @@
--- Vanilla Config
+-- Config
 require('user.autocmd')
-require('user.colors')
 require('user.cmp')
+require('user.colors')
 require('user.coq')
-require('user.keys')
-require('user.options')
+require('user.keymaps')
 require('user.lsp')
+require('user.options')
 require('user.plugins')
 
