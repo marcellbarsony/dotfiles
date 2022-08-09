@@ -48,10 +48,10 @@ map('n', '<A-u>', ':vertical resize -2<CR>')        -- Resize left
 -- Reference: https://vim.fandom.com/wiki/Moving_lines_up_or_down
 map('n', '<leader>o', 'o<ESC>')                     -- Insert below current line
 map('n', '<leader>O', 'O<ESC>')                     -- Insert above current line
-map('n', '<C-J>', ':move .+1<CR>')                  -- Move Down
-map('n', '<C-K>', ':move .-2<CR>')                  -- Move Up
-map('x', '<C-J>', ":move '>+1<CR>gv=gv")            -- Move Down
-map('x', '<C-K>', ":move '<-2<CR>gv=gv")            -- Move Up
+map('n', '<C-j>', ':move .+1<CR>')                  -- Move Down
+map('n', '<C-k>', ':move .-2<CR>')                  -- Move Up
+map('x', '<C-j>', ":move '>+1<CR>gv=gv")            -- Move Down
+map('x', '<C-k>', ":move '<-2<CR>gv=gv")            -- Move Up
 
 -- Shell movements
 map('i', '<C-E>', '<ESC>A')
