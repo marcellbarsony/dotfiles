@@ -3,11 +3,11 @@
 # Monitor
 #zsh /home/marci/.config/x11/xrandr/marci_home.sh
 
+# Wallpaper
+xwallpaper --output VGA-1 --maximize $HOME/Documents/Wallpapers/4K/Synthwave/4k_cyberpunk_city.jpg
+
 # Compositor
 # picom --experimental-backends &
-
-# Wallpaper
-#xwallpaper --screen 0 --maximize $HOME/Downloads/Wallpapers/4K/Synthwave/4k_cyberpunk_city.jpg
 
 # X11 - Xresources
 #xrdb -load ~/.config/x11/xresources &
@@ -19,6 +19,6 @@
 exec unclutter --timeout 3 &
 
 # Window manager
+qtile start
 # exec openbox-session
 # exec lefwm
-qtile start
