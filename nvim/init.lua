@@ -6,6 +6,6 @@ require('user.coq')
 require('user.gitsigns')
 require('user.keymaps')
 require('user.lsp')
+require('user.nvim-tree')
 require('user.options')
-require('user.plugins')
 
