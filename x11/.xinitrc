@@ -8,6 +8,7 @@ xwallpaper --output VGA-1 --maximize $HOME/Documents/Wallpapers/4K/Synthwave/4k_
 
 # Compositor
 # picom --experimental-backends &
+picom -b &
 
 # X11 - Xresources
 #xrdb -load ~/.config/x11/xresources &
