@@ -12,7 +12,7 @@ from libqtile.lazy   import lazy
 mod = "mod4"
 mod1 = "mod1"
 browser= "librewolf"
-terminal = "alacritty"
+terminal = "kitty"
 menu = "dmenu_run"
 
 # Colors
