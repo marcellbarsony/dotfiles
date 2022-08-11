@@ -120,7 +120,8 @@ keys = [
 
 # Workspaces [named]
 
-group_names = ' 1 2 3 4 5'.split()
+#group_names = ' 1 2 3 4 5'.split()
+group_names = ' 一 二 三 四 五'.split()
 groups = [Group(name, layout='max') for name in group_names]
 
 for i, name in enumerate(group_names):
@@ -242,7 +243,7 @@ screens = [
                 widget.GroupBox(
                     borderwidth=5,
                     disable_drag=True,
-                    highlight_method='block',
+                    highlight_method='line',
                     rounded=False
                     ),
                 widget.CurrentLayout(),
