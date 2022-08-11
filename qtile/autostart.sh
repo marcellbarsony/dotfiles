@@ -6,4 +6,4 @@ run() {
     fi
 }
 
-run alacritty
+run kitty
