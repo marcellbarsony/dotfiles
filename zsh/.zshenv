@@ -15,6 +15,7 @@ export XDG_STATE_HOME="$HOME/.local/state"
 # Paths
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export HISTFILE="$XDG_STATE_HOME/zsh/history"
+export KITTY_CONFIG_DIRECTORY="$XDG_CONFIG_HOME/kitty"
 export STARSHIP_CONFIG=~/.config/starship/config.toml
 export ZDOTDIR="$HOME/.config/zsh/"
 export XINITRC="$HOME/.config/x11/"
