@@ -1,1 +1,2 @@
 -- Colors
+--source $HOME/.config/nvim/colors/onedark.vim
