@@ -239,11 +239,21 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.AGroupBox(),
-                widget.GroupBox(
-                    borderwidth=5,
+                widget.AGroupBox(
+                    borderwidth=3,
+                    center_aligne=True,
                     disable_drag=True,
                     highlight_method='line',
+                    margin=5,
+                    padding=0,
+                    rounded=False
+                    ),
+                widget.GroupBox(
+                    borderwidth=3,
+                    center_aligne=True,
+                    disable_drag=True,
+                    highlight_method='line',
+                    margin=3,
                     rounded=False
                     ),
                 widget.CurrentLayout(),
@@ -278,6 +288,9 @@ screens = [
                     update_interval= 1800,
                     ),
                 widget.Sep(),
+                # Crypto
+                widget.CryptoTicker(),
+                widget.Sep(),
                 # CPU
                 widget.CPU(
                     format='CPU {load_percent}%',
@@ -287,13 +300,11 @@ screens = [
                 widget.Sep(),
                 # RAM
                 widget.Memory(
-                    format='{MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}',
+                    #format='{MemUsed: .0f}{mm} /{MemTotal: .0f}{mm}',
+                    format='RAM {MemUsed:.0f}{mm}',
                     mouse_callbacks = {'Button1': open_sysmonitor},
                     update_interval=10
                     ),
-                widget.Sep(),
-                # Crypto
-                widget.CryptoTicker(),
                 widget.Sep(),
                 # Active screen
                 widget.CurrentScreen(),
@@ -312,8 +323,10 @@ screens = [
                 widget.Systray(),
             ],
             26,
-            border_width=[0, 2, 0, 2],  # Draw top and bottom borders
-            #border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
+            border_width=[0, 0, 0, 0],
+            border_color=["000000", "000000", "", "000000"],
+            background="#00000095",
+            margin = [3,5,0,5],
         ),
     ),
 

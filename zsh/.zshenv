@@ -32,7 +32,7 @@ export PATH=/home/marci/.local/share/cargo/bin:$PATH
 #export PATH
 
 # Scripts
-export PATH=$HOME/.config/dmenu_rs:$PATH
+export PATH=$HOME/.local/git/scripts:$PATH
 
 # Fix prompt issue
 export LC_CTYPE=en_US.UTF-8
