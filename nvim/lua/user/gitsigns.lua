@@ -9,7 +9,7 @@ require('gitsigns').setup {
     changedelete = {hl = 'GitSignsChange', text = '|>', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
   },
   signcolumn = true,                                -- Toggle:`:Gitsigns toggle_signs`
-  numhl      = false,                               -- Toggle:`:Gitsigns toggle_numhl`
+  numhl      = true,                               -- Toggle:`:Gitsigns toggle_numhl`
   linehl     = false,                               -- Toggle:`:Gitsigns toggle_linehl`
   word_diff  = false,                               -- Toggle:`:Gitsigns toggle_word_diff`
   watch_gitdir = {

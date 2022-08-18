@@ -15,10 +15,10 @@ require('bufferline').setup {
     show_buffer_icons = true,
     show_buffer_close_icons = true,
     show_close_icon = false,
-    indicator_icon = "▎",
+    indicator_icon = "",
     --indicator_icon = "│",
     close_icon = "",
-    -- close_icon = '',
+    --close_icon = '',
     buffer_close_icon = "",
     modified_icon = "●",
     left_trunc_marker = "",
@@ -27,7 +27,7 @@ require('bufferline').setup {
     -- Length
     max_name_length = 15,
     max_prefix_length = 15,                 -- prefix used when a buffer is de-duplicated
-    tab_size = 25,
+    tab_size = 20,
 
     -- Diagnostics
     diagnostics = "nvim_lsp",
@@ -43,9 +43,9 @@ require('bufferline').setup {
     always_show_bufferline = true,
     enforce_regular_tabs = true,
 
-
--- Highlights
     },
+
+  -- Highlights
   highlights = {
     fill = {
       guifg = { attribute = "fg", highlight = "#FF0000" },
