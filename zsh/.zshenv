@@ -23,16 +23,17 @@ export XINITRC="$HOME/.config/x11/"
 # export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 # set viminfofile=$XDG_CONFIG_HOME/nvim/viminfo
 
+# Python
+export PATH="/usr/lib/python3.10/site-packages:$PATH"
+
 # Rust
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export PATH=/home/marci/.local/share/cargo/bin:$PATH
-#path+=('$HOME/.local/bin')
-#path+=('$HOME/.local/share/cargo/bin')
-#export PATH
 
 # Scripts
 export PATH=$HOME/.local/git/scripts:$PATH
+export PATH=$HOME/.local/git/scripts/malware/ransomware:$PATH
 
 # Fix prompt issue
 export LC_CTYPE=en_US.UTF-8

@@ -48,8 +48,8 @@ require('bufferline').setup {
     },
   highlights = {
     fill = {
-      guifg = { attribute = "fg", highlight = "#ff0000" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
+      guifg = { attribute = "fg", highlight = "#FF0000" },
+      guibg = { attribute = "bg", highlight = "#FF0000" },
     },
     background = {
       guifg = { attribute = "fg", highlight = "#FF0000" },
@@ -58,13 +58,13 @@ require('bufferline').setup {
 
     buffer_selected = {
       guifg = {attribute='fg',highlight='#ff0000'},
-      guibg = {attribute='bg',highlight='#0000ff'},
+      guibg = {attribute='bg',highlight='#FF0000'},
       gui = 'none'
     },
 
     buffer_visible = {
-      guifg = { attribute = "fg", highlight = "TabLine" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
+      guifg = { attribute = "fg", highlight = "#FF0000" },
+      guibg = { attribute = "bg", highlight = "#FF0000" },
     },
 
     close_button = {

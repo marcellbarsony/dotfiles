@@ -293,7 +293,7 @@ screens = [
                 widget.Sep(),
                 # CPU
                 widget.CPU(
-                    format='CPU {load_percent}%',
+                    format='CPU: {load_percent}%',
                     mouse_callbacks = {'Button1': open_sysmonitor},
                     update_interval=10
                     ),
@@ -301,7 +301,7 @@ screens = [
                 # RAM
                 widget.Memory(
                     #format='{MemUsed: .0f}{mm} /{MemTotal: .0f}{mm}',
-                    format='RAM {MemUsed:.0f}{mm}',
+                    format='RAM: {MemUsed:.0f}{mm}',
                     mouse_callbacks = {'Button1': open_sysmonitor},
                     update_interval=10
                     ),
@@ -325,7 +325,7 @@ screens = [
             26,
             border_width=[0, 0, 0, 0],
             border_color=["000000", "000000", "", "000000"],
-            background="#00000095",
+            background="#00000099",
             margin = [3,5,0,5],
         ),
     ),

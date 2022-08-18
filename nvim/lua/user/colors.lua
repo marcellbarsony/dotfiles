@@ -1,2 +1,2 @@
 -- Colors
---source $HOME/.config/nvim/colors/onedark.vim
+vim.cmd[[colorscheme tokyonight]]

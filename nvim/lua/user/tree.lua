@@ -51,7 +51,7 @@ require("nvim-tree").setup {
         },
       },
       renderer = {
-        add_trailing = false,
+        add_trailing = true,
         group_empty = false,
         highlight_git = true,
         full_name = false,
