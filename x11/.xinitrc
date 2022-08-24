@@ -1,11 +1,14 @@
 #!/bin/sh
 
 # Compositor
-#picom --experimental-backends &
 picom -b &
+#picom --experimental-backends &
 
 # Monitor
 #zsh /home/marci/.config/x11/xrandr/marci_home.sh
+
+# Notification
+dunst &
 
 # Unclutter
 exec unclutter --timeout 3 &
@@ -20,4 +23,4 @@ xwallpaper --output VGA-1 --maximize $HOME/Documents/Wallpapers/4K/Synthwave/4k_
 # Window manager
 qtile start
 #exec openbox-session
-#exec lefwm
+#exec leftwm

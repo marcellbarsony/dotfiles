@@ -181,12 +181,12 @@ layouts = [
     #    max_border_width = 3,
     #    ),
     # Max
-    #layout.Max(
-    #    border_focus = [primary],
-    #    border_normal = [primary],
-    #    border_width = 3,
-    #    margin = 10,
-    #),
+    layout.Max(
+        border_focus = [primary],
+        border_normal = [primary],
+        border_width = 3,
+        margin = 10,
+    ),
     # Matrix
     #layout.Matrix(),
     # MonadTall
@@ -255,6 +255,11 @@ screens = [
                     highlight_method='line',
                     margin=3,
                     rounded=False
+                    ),
+                widget.CurrentLayoutIcon(
+                    fmt = '{}',
+                    padding = 5,
+                    scale = 0.70,
                     ),
                 widget.CurrentLayout(),
                 widget.Prompt(),
