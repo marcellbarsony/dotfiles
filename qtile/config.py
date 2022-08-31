@@ -13,7 +13,8 @@ mod = "mod4"
 mod1 = "mod1"
 browser= "librewolf"
 terminal = "kitty"
-menu = "dmenu_run"
+menu = "rofi -show drun"
+#menu = "dmenu_run"
 
 # Colors
 
@@ -153,6 +154,13 @@ for i, name in enumerate(group_names):
 layouts = [
     # Bsp
     # layout.Bsp(),
+    # Max
+    #layout.Max(
+    #    border_focus = '#FFFFFF',
+    #    border_normal = '#FFFFFF',
+    #    border_width = 3,
+    #    margin = [15, 15, 15, 15],
+    #),
     # Columns
     layout.Columns(
         border_focus = [primary],
@@ -180,13 +188,6 @@ layouts = [
     #    fullscreen_border_width = 3,
     #    max_border_width = 3,
     #    ),
-    # Max
-    layout.Max(
-        border_focus = [primary],
-        border_normal = [primary],
-        border_width = 3,
-        margin = 10,
-    ),
     # Matrix
     #layout.Matrix(),
     # MonadTall

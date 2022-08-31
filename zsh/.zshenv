@@ -25,6 +25,7 @@ export XINITRC="$HOME/.config/x11/"
 
 # Python
 export PATH="/usr/lib/python3.10/site-packages:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # Rust
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
