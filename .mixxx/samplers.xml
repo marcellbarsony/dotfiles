@@ -1,0 +1,19 @@
+<!DOCTYPE SamplerBank>
+<samplerbank>
+ <sampler group="[Sampler1]"/>
+ <sampler group="[Sampler2]"/>
+ <sampler group="[Sampler3]"/>
+ <sampler group="[Sampler4]"/>
+ <sampler group="[Sampler5]"/>
+ <sampler group="[Sampler6]"/>
+ <sampler group="[Sampler7]"/>
+ <sampler group="[Sampler8]"/>
+ <sampler group="[Sampler9]"/>
+ <sampler group="[Sampler10]"/>
+ <sampler group="[Sampler11]"/>
+ <sampler group="[Sampler12]"/>
+ <sampler group="[Sampler13]"/>
+ <sampler group="[Sampler14]"/>
+ <sampler group="[Sampler15]"/>
+ <sampler group="[Sampler16]"/>
+</samplerbank>

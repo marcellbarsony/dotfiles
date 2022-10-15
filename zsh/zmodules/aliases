@@ -44,8 +44,7 @@ alias gc='git commit -m'
 alias gcl='git clone'
 
 # Pacman & Paru
-alias pacsyu='sudo pacman -Syu'
-alias parusy='sudo pary -Sy'
+alias pacupdate='sudo pacman -Syu'
 
 # Spotify
 alias spotify='spt'

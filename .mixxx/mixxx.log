@@ -1,0 +1,511 @@
+Debug [Main]: SoundSourceProxy - Registering SoundSource providers
+Debug [Main]: SoundSourceProxy - Registering platform and fallback SoundSource providers
+Debug [Main]: SoundSourceProviderRegistry - Registering provider "FFmpeg"
+Info [Main]: SoundSourceFFmpeg - Disabling untested input formats: aa, aax, ac3, ace, acm, act, adf, adp, ads, adx, aea, afc, aix, alp, amr, amrnb, amrwb, anm, apc, ape, apm, apng, aptx, aptx_hd, aqtitle, argo_asf, argo_brp, argo_cvg, asf, asf_o, ass, ast, au, av1, avi, avisynth, avr, avs, avs2, avs3, bethsoftvid, bfi, bin, bink, binka, bit, bitpacked, bmv, bfstm, brstm, boa, c93, caf, cavsvideo, cdg, cdxl, cine, codec2, codec2raw, concat, dash, data, daud, dcstr, derf, dfa, dfpwm, dhav, dirac, dnxhd, dsf, dsicin, dss, dts, dtshd, dv, dvbsub, dvbtxt, dxa, ea, ea_cdata, eac3, epaf, ffmetadata, filmstrip, fits, flac, flic, flv, live_flv, 4xm, frm, fsb, fwse, g722, g723_1, g726, g726le, g729, gdv, genh, gif, gsm, gxf, h261, h263, h264, hca, hcom, hevc, hls, hnm, ico, idcin, idf, iff, ifv, ilbc, image2, image2pipe, alias_pix, brender_pix, imf, ingenient, ipmovie, ipu, ircam, iss, iv8, ivf, ivr, jacosub, jv, kux, kvag, lmlm4, loas, luodat, lrc, lvf, lxf, mca, mcc, matroska,webm, mgsts, microdvd, mjpeg, mjpeg_2000, mlp, mlv, mm, mmf, mods, moflex, mpc, mpc8, mpeg, mpegts, mpegtsraw, mpegvideo, mpjpeg, mpl2, mpsub, msf, msnwctcp, msp, mtaf, mtv, musx, mv, mvi, mxf, mxg, nc, nistsphere, nsp, nsv, nut, nuv, obu, ogg, oma, paf, alaw, mulaw, vidc, f64be, f64le, f32be, f32le, s32be, s32le, s24be, s24le, s16be, s16le, s8, u32be, u32le, u24be, u24le, u16be, u16le, u8, pjs, pmp, pp_bnk, pva, pvf, qcp, r3d, rawvideo, realtext, redspark, rl2, rm, roq, rpl, rsd, rso, rtp, rtsp, s337m, sami, sap, sbc, sbg, scc, scd, sdp, sdr2, sds, sdx, film_cpk, ser, sga, shn, siff, simbiosis_imx, sln, smk, smjpeg, smush, sol, sox, spdif, srt, psxstr, stl, subviewer1, subviewer, sup, svag, svs, swf, tak, tedcaptions, thp, 3dostr, tiertexseq, tmv, truehd, tta, txd, tty, ty, v210, v210x, vag, vc1, vc1test, vividas, vivo, vmd, vobsub, voc, vpk, vplayer, vqf, w64, wc3movie, webm_dash_manifest, webvtt, wsaud, wsd, wsvqa, wtv, wve, xa, xbin, xmv, xvag, xwma, yop, yuv4mpegpipe, bmp_pipe, cri_pipe, dds_pipe, dpx_pipe, exr_pipe, gem_pipe, gif_pipe, j2k_pipe, jpeg_pipe, jpegls_pipe, jpegxl_pipe, pam_pipe, pbm_pipe, pcx_pipe, pfm_pipe, pgmyuv_pipe, pgm_pipe, pgx_pipe, phm_pipe, photocd_pipe, pictor_pipe, png_pipe, ppm_pipe, psd_pipe, qdraw_pipe, qoi_pipe, sgi_pipe, svg_pipe, sunrast_pipe, tiff_pipe, vbn_pipe, webp_pipe, xbm_pipe, xpm_pipe, xwd_pipe, libmodplug
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "aac" for provider "FFmpeg" with priority 1 (lowest)
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "aif" for provider "FFmpeg" with priority 1 (lowest)
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "aiff" for provider "FFmpeg" with priority 1 (lowest)
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "m4v" for provider "FFmpeg" with priority 1 (lowest)
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "mov" for provider "FFmpeg" with priority 1 (lowest)
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "mp4" for provider "FFmpeg" with priority 1 (lowest)
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "m4a" for provider "FFmpeg" with priority 1 (lowest)
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "3gp" for provider "FFmpeg" with priority 1 (lowest)
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "3g2" for provider "FFmpeg" with priority 1 (lowest)
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "mj2" for provider "FFmpeg" with priority 1 (lowest)
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "mp3" for provider "FFmpeg" with priority 1 (lowest)
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "wav" for provider "FFmpeg" with priority 1 (lowest)
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "wv" for provider "FFmpeg" with priority 1 (lowest)
+Debug [Main]: SoundSourceProviderRegistry - Registering provider "MAD: MPEG Audio Decoder"
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "mp3" for provider "MAD: MPEG Audio Decoder" with priority 3 (default)
+Debug [Main]: SoundSourceProviderRegistry - Registering provider "MODPlug"
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "mod" for provider "MODPlug" with priority 3 (default)
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "med" for provider "MODPlug" with priority 3 (default)
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "okt" for provider "MODPlug" with priority 3 (default)
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "s3m" for provider "MODPlug" with priority 3 (default)
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "stm" for provider "MODPlug" with priority 3 (default)
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "xm" for provider "MODPlug" with priority 3 (default)
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "it" for provider "MODPlug" with priority 3 (default)
+Info [Main]: SoundSourceSndFile - Disabling OGG decoding for "libsndfile-1.1.0"
+Debug [Main]: SoundSourceProviderRegistry - Registering provider "libsndfile"
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "aif" for provider "libsndfile" with priority 3 (default)
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "aiff" for provider "libsndfile" with priority 3 (default)
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "caf" for provider "libsndfile" with priority 2 (lower)
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "flac" for provider "libsndfile" with priority 2 (lower)
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "wav" for provider "libsndfile" with priority 3 (default)
+Debug [Main]: SoundSourceProxy - Registering reference SoundSource providers
+Debug [Main]: SoundSourceProviderRegistry - Registering provider "Xiph.org libFLAC"
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "flac" for provider "Xiph.org libFLAC" with priority 4 (higher)
+Debug [Main]: SoundSourceProviderRegistry - Registering provider "Xiph.org OggVorbis"
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "ogg" for provider "Xiph.org OggVorbis" with priority 4 (higher)
+Debug [Main]: SoundSourceProviderRegistry - Registering provider "Xiph.org libopusfile"
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "opus" for provider "Xiph.org libopusfile" with priority 4 (higher)
+Debug [Main]: SoundSourceProviderRegistry - Registering provider "WavPack"
+Debug [Main]: SoundSourceProviderRegistry - Registering file extension "wv" for provider "WavPack" with priority 4 (higher)
+Debug [Main]: Mixxx 2.3.3 (git unknown; built on: Sep 13 2022 @ 20:08:40; flags: -pipe;-O3;-ffast-math;-funroll-loops;-fomit-frame-pointer;-mtune=generic;-Wall;-Wextra;$<$<COMPILE_LANGUAGE:CXX>:-Woverloaded-virtual>;-Wfloat-conversion;-Werror=return-type) is starting...
+Debug [Main]: Compile time library versions:
+Debug [Main]: Qt: 5.15.6
+Debug [Main]: libshout: 2.4.1
+Debug [Main]: PortAudio: 1246976 PortAudio V19.7.0-devel, revision unknown
+Debug [Main]: RubberBand: 3.0.0
+Debug [Main]: SoundTouch: 2.3.1
+Debug [Main]: TagLib: 1.12.0
+Debug [Main]: ChromaPrint: 1.5.1
+Debug [Main]: Vorbis: Xiph.Org libVorbis 1.3.7
+Debug [Main]: libsndfile: libsndfile-1.1.0
+Debug [Main]: FLAC: 1.4.1
+Debug [Main]: libmp3lame: 3.100
+Debug [Main]: QStandardPaths::writableLocation(HomeLocation): "/home/marci"
+Debug [Main]: QStandardPaths::writableLocation(DataLocation): "/home/marci/.local/share/Mixxx"
+Debug [Main]: QCoreApplication::applicationDirPath() "/usr/bin"
+Debug [Main]: Loading resources from  "/usr/share/mixxx/"
+Debug [Main]: Configuration file is at the current version "2.3.3"
+Info [Main]: BroadcastSettings - Found 1 profile(s)
+Debug [Main]: Loading resources from  "/usr/share/mixxx/"
+Debug [Main]: Found and will use default keyboard preset "/usr/share/mixxx/keyboard/C.kbd.cfg"
+Debug [Main]: "/usr/share/mixxx/keyboard/C.kbd.cfg"  not found, using en_US.kbd.cfg
+Debug [Main]: Loading resources from  "/usr/share/mixxx/"
+Debug [Main]: Skipping loading of translations because the 'C' locale is used.
+Debug [Main]: Loading resources from  "/usr/share/mixxx/"
+Debug [Main]: No fonts directory found in "/usr/share/mixxx/"
+Info [Main]: DbConnection - Available drivers for database connections: ("QIBASE", "QSQLITE", "QMARIADB", "QMYSQL", "QMYSQL3", "QODBC", "QODBC3", "QPSQL", "QPSQL7", "QTDS", "QTDS7")
+Info [Main]: DbConnectionPool - Cloned thread-local database connection "MIXXX-1" QSqlDatabase(driver="QSQLITE", database="file:///home/marci/.mixxx/mixxxdb.sqlite", host="", port=-1, user="mixxx", open=true)
+Info [Main]: MixxxMainWindow - Connecting to database
+Info [Main]: MixxxMainWindow - Initializing or upgrading database schema
+Info [Main]: SchemaManager - Database schema is up-to-date at version 32
+Debug [Main]: JACK client name set
+Debug [Main]: EngineNetworkStream - addWorker: worker added
+Debug [Main]: EngineNetworkStream - worker slots used: "1 out of 16"
+Debug [Main]: BroadcastManager - addConnection: created connection for profile "Connection 1"
+Info [Main]: GlobalTrackCache - Creating instance
+Info [Main]: TrackCollection - Connecting database
+Info [Main]: TrackCollectionManager - Starting library scanner thread
+Debug [LibraryScanner 1]: LibraryScanner - Entering thread
+Info [LibraryScanner 1]: DbConnectionPool - Cloned thread-local database connection "MIXXX-2" QSqlDatabase(driver="QSQLITE", database="file:///home/marci/.mixxx/mixxxdb.sqlite", host="", port=-1, user="mixxx", open=true)
+Debug [LibraryScanner 1]: LibraryScanner - Event loop starting
+Info [Main]: TrackCollection - Connecting track source
+Debug [Main]: Committing transaction on "MIXXX-1" result: true
+Debug [Main]: PlaylistTableModel(0x4a8331b3720) select() took 0 ms 0
+Debug [Main]: CrateFeature::rebuildChildModel() -1
+Debug [Main]: Default quick links: ("/home/marci/Documents/", "/home/marci/", "/home/marci/Downloads/", "/home/marci/")
+Debug [Main]: Appending Quick Link:  "Documents" --- "/home/marci/Documents/"
+Debug [Main]: Appending Quick Link:  "marci" --- "/home/marci/"
+Debug [Main]: Appending Quick Link:  "Downloads" --- "/home/marci/Downloads/"
+Debug [Main]: Appending Quick Link:  "marci" --- "/home/marci/"
+Debug [Main]: Committing transaction on "MIXXX-1" result: true
+Debug [Main]: Traktor Library Location=[ "/home/marci/collection.nml" ]
+Debug [Main]: Dropping Rekordbox table:  "rekordbox_playlist_tracks"
+Debug [Main]: Dropping Rekordbox table:  "rekordbox_playlists"
+Debug [Main]: Dropping Rekordbox table:  "rekordbox_library"
+Debug [Main]: Creating Rekordbox library table:  "rekordbox_library"
+Debug [Main]: Creating Rekordbox playlists table:  "rekordbox_playlists"
+Debug [Main]: Creating Rekordbox playlist tracks table:  "rekordbox_playlist_tracks"
+Debug [Main]: Committing transaction on "MIXXX-1" result: true
+Debug [Main]: Dropping Serato table:  "serato_playlist_tracks"
+Debug [Main]: Dropping Serato table:  "serato_playlists"
+Debug [Main]: Dropping Serato table:  "serato_library"
+Debug [Main]: Creating Serato library table:  "serato_library"
+Debug [Main]: Creating Serato playlists table:  "serato_playlists"
+Debug [Main]: Creating Serato playlist tracks table:  "serato_playlist_tracks"
+Debug [Main]: Committing transaction on "MIXXX-1" result: true
+Debug [Main]: Checking for access to user's library directories:
+Debug [Main]: Checking for access to "/home/marci/Documents" : true
+Debug [Main]: TrackAnalysisScheduler - Starting 1 worker threads. Priority:  normal
+Debug [AnalyzerThread 0 #1]: AnalyzerThread 0 - Running
+Debug [Main]: Creating ControllerManager
+Info [AnalyzerThread 0 #1]: DbConnectionPool - Cloned thread-local database connection "MIXXX-3" QSqlDatabase(driver="QSQLITE", database="file:///home/marci/.mixxx/mixxxdb.sqlite", host="", port=-1, user="mixxx", open=true)
+Debug [AnalyzerThread 0 #1]: AnalyzerThread - Activated 5 analyzers
+Debug [Controller]: ControllerManager:slotInitialize
+Debug [Controller]: Extension .midi.xml total 0 presets
+Debug [Controller]: Extension .hid.xml total 0 presets
+Debug [Controller]: Extension .bulk.xml total 0 presets
+Debug [Main]: Set root GL Context widget valid: QGLWidget(0x4a835498e60) true
+Debug [Main]: Created root GL Context valid: 0x6fbc40006020 true
+Debug [Main]: Root GL Context format:
+Debug [Main]: Double Buffering: true
+Debug [Main]: Swap interval: 0
+Debug [Main]: Depth buffer: true
+Debug [Main]: Direct rendering: true
+Debug [Main]: Has overlay: false
+Debug [Main]: RGBA: true
+Debug [Main]: Sample buffers: false
+Debug [Main]: Samples: -1
+Debug [Main]: Stencil buffers: true
+Debug [Main]: Stereo: false
+Debug [Main]: "openGLVersionFlags 0xff07f" "4.5 (Compatibility Profile) Mesa 22.1.7" "Mesa/X.org" "llvmpipe (LLVM 14.0.6, 256 bits)"
+Debug [Main]: DBus interface  org.freedesktop.ScreenSaver  not valid
+Debug [Main]: DBus interface  org.gnome.ScreenSaver  not valid
+Debug [Main]: DBus interface  org.kde.screensaver  not valid
+Debug [Main]: RLimit Cur  0
+Debug [Main]: RLimit Max  0
+Debug [Main]: ControllerManager::getControllerList
+Debug [Main]: Key plugin ID: ""
+Debug [Main]: LegacySkinParser loading skin: "/usr/share/mixxx/skins/LateNight"
+Debug [Main]: Skin is a >=1.12.0 style skin.
+Debug [Controller]: Extension .midi.xml total 127 presets
+Debug [Controller]: Extension .hid.xml total 13 presets
+Debug [Controller]: Extension .bulk.xml total 1 presets
+Debug [Main]: WSpinny(): Created QGLWidget, Context Valid: true Sharing: true
+Debug [Main]: WSpinny(): Created QGLWidget, Context Valid: true Sharing: true
+Debug [Main]: WSpinny(): Created QGLWidget, Context Valid: true Sharing: true
+Debug [Main]: WSpinny(): Created QGLWidget, Context Valid: true Sharing: true
+Debug [Main]: WSpinny(): Created QGLWidget, Context Valid: true Sharing: true
+Debug [Main]: WSpinny(): Created QGLWidget, Context Valid: true Sharing: true
+Debug [Main]: WSpinny(): Created QGLWidget, Context Valid: true Sharing: true
+Debug [Main]: WSpinny(): Created QGLWidget, Context Valid: true Sharing: true
+Debug [Main]: WSearchLineEdit - Background color: QColor(ARGB 1, 0, 0, 0)
+Debug [Main]: WTrackTableView::loadTrackModel() HiddenTableModel(0x4a846a45d60)
+Debug [Main]: HiddenTableModel(0x4a846a45d60) select() took 0 ms 0
+Debug [Main]: WTrackTableView::loadTrackModel() MissingTableModel(0x4a846ab9cd0)
+Debug [Main]: MissingTableModel(0x4a846ab9cd0) select() took 0 ms 0
+Debug [Main]: WTrackTableView::loadTrackModel() PlaylistTableModel(0x4a8331b3720)
+Debug [Main]: Recordings folder set to "/home/marci/Mixxx/Recordings"
+Debug [Main]: WTrackTableView::loadTrackModel() QSortFilterProxyModel(0x4a846bb4cf8)
+Debug [BrowseThread]: Append last  0
+Debug [BrowseThread]: Append last  0
+Debug [Main]: WTrackTableView::loadTrackModel() AnalysisLibraryTableModel(0x4a846c355a0)
+Debug [Main]: AnalysisLibraryTableModel(0x4a846c355a0) select() took 0 ms 0
+Debug [Main]: WaveformWidgetFactory::setWaveformWidget - waveform widget added in factory, index 0
+Debug [Main]: WaveformWidgetFactory::setWaveformWidget - waveform widget added in factory, index 1
+Debug [Main]: WaveformWidgetFactory::setWaveformWidget - waveform widget added in factory, index 2
+Debug [Main]: WaveformWidgetFactory::setWaveformWidget - waveform widget added in factory, index 3
+Debug [Main]: MixxxLibraryFeature::activate()
+Debug [Main]: WTrackTableView::loadTrackModel() LibraryTableModel(0x4a83533b030)
+Debug [Main]: LibraryTableModel(0x4a83533b030) select() took 0 ms 0
+Debug [Main]: trying to restore position
+Debug [Main]: Created QGLWidget. Context Valid: true Sharing: true
+Debug [Main]: Created QGLWidget. Context Valid: true Sharing: true
+Debug [Main]: Created QGLWidget. Context Valid: true Sharing: true
+Debug [Main]: Created QGLWidget. Context Valid: true Sharing: true
+Debug [Controller]: ControllerManager: Setting up devices
+Debug [Controller]: Scanning PortMIDI devices:
+Debug [Controller]: Scanning USB Bulk devices:
+Debug [Main]: BaseTrackPlayerImpl::slotLoadTrack "[Sampler1]" QObject(0x0)
+Debug [Controller]: Scanning HID devices:
+Debug [Main]: BaseTrackPlayerImpl::slotLoadTrack "[Sampler2]" QObject(0x0)
+Debug [Main]: BaseTrackPlayerImpl::slotLoadTrack "[Sampler3]" QObject(0x0)
+Debug [Controller]: Found "" "" "r256" S/N "" "Interface 0"
+Warning [Controller]: USB permissions problem (or device error.) Your account needs write access to USB HID controllers.
+Debug [Controller]: ControllerManager::getControllerList
+Debug [Controller]: Controller polling stopped.
+Debug [Main]: BaseTrackPlayerImpl::slotLoadTrack "[Sampler4]" QObject(0x0)
+Debug [Main]: BaseTrackPlayerImpl::slotLoadTrack "[Sampler5]" QObject(0x0)
+Debug [Main]: BaseTrackPlayerImpl::slotLoadTrack "[Sampler6]" QObject(0x0)
+Debug [Main]: BaseTrackPlayerImpl::slotLoadTrack "[Sampler7]" QObject(0x0)
+Debug [Main]: BaseTrackPlayerImpl::slotLoadTrack "[Sampler8]" QObject(0x0)
+Debug [Main]: BaseTrackPlayerImpl::slotLoadTrack "[Sampler9]" QObject(0x0)
+Debug [Main]: BaseTrackPlayerImpl::slotLoadTrack "[Sampler10]" QObject(0x0)
+Debug [Main]: BaseTrackPlayerImpl::slotLoadTrack "[Sampler11]" QObject(0x0)
+Debug [Main]: BaseTrackPlayerImpl::slotLoadTrack "[Sampler12]" QObject(0x0)
+Debug [Main]: BaseTrackPlayerImpl::slotLoadTrack "[Sampler13]" QObject(0x0)
+Debug [Main]: BaseTrackPlayerImpl::slotLoadTrack "[Sampler14]" QObject(0x0)
+Debug [Main]: BaseTrackPlayerImpl::slotLoadTrack "[Sampler15]" QObject(0x0)
+Debug [Main]: BaseTrackPlayerImpl::slotLoadTrack "[Sampler16]" QObject(0x0)
+Debug [Main]: SoundManager::setupDevices()
+Debug [Main]: SoundDevicePortAudio::open() "SoundDeviceId(Intel 82801AA-ICH: -, hw:0,0, 0)"
+Debug [Main]: framesPerBuffer: 1024
+Debug [Main]: Requested sample rate:  48000 Hz, latency: 21.3333 ms
+Debug [Main]: Output channels: 2 | Input channels: 0
+Debug [Main]: Opening stream with id 0
+Debug [Main]: Opened PortAudio stream successfully... starting
+Info [Main]: Enabling ALSA real-time scheduling
+Debug [Main]: PortAudio: Started stream successfully
+Debug [Main]:    Actual sample rate:  48000 Hz, latency: 21.3333 ms
+Debug [Main]: SoundDeviceNetwork - open: "Network stream"
+Debug [Main]: framesPerBuffer: 1024
+Debug [Main]: Requested sample rate:  48000 Hz, latency: 21333333 ns
+Debug [Main]: Using "Intel 82801AA-ICH: - (hw:0,0)" as output sound device clock reference
+Debug [Main]: 2 output sound devices opened
+Debug [Main]: 0 input sound devices opened
+Debug [Main]: Displaying main window
+Debug [Main]: Running Mixxx
+Debug []: SSE: Enabling denormals to zero mode
+Debug []: SSE: Enabling flush to zero mode
+Debug []: Denormals to zero mode is working
+Debug [Main]: GLWaveformRendererSignalShader::loadShaders
+Debug [Main]: GLWaveformRendererSignalShader::loadShaders
+Debug [Main]: GLWaveformRendererSignalShader::loadShaders
+Debug [Main]: GLWaveformRendererSignalShader::loadShaders
+Debug [Main]: BrowseFeature::onLazyChildExpandation  "/"   QVariant(QString, "/")
+Debug [Main]: BrowseFeature::onLazyChildExpandation  "usr"   QVariant(QString, "/usr/")
+Debug [Main]: BrowseFeature::onLazyChildExpandation  "home"   QVariant(QString, "/home/")
+Debug [Main]: BrowseFeature::onLazyChildExpandation  "marci"   QVariant(QString, "/home/marci/")
+Debug [Main]: BrowseFeature::onLazyChildExpandation  "Documents"   QVariant(QString, "/home/marci/Documents/")
+Debug [Main]: BrowseFeature::activateChild  "Documents"   QVariant(QString, "/home/marci/Documents/")
+Debug [Main]: WTrackTableView::loadTrackModel() QSortFilterProxyModel(0x4a83534ed38)
+Debug [Main]: trying to restore position
+Info [BrowseThread]: SeratoMarkers2 - Reading bpmlock state from 'Serato Markers2' tag data...
+Debug [BrowseThread]: Reading cues from 'Serato Markers2' tag data...
+Info [BrowseThread]: SeratoMarkers2 - Reading track color from 'Serato Markers2' tag data...
+Debug [BrowseThread]: Append last  1
+Debug [Main]: TrackDAO::getTrackId(): Track location not found in library: "/home/marci/Documents/GALA-Freed-from-desire.mp3"
+Info [Main]: SeratoMarkers2 - Reading bpmlock state from 'Serato Markers2' tag data...
+Debug [Main]: Reading cues from 'Serato Markers2' tag data...
+Info [Main]: SeratoMarkers2 - Reading track color from 'Serato Markers2' tag data...
+Debug [Main]: TrackDAO: Adding track QFileInfo(/home/marci/Documents/GALA-Freed-from-desire.mp3)
+Debug [Main]: BaseTrackCache(0x4a835344ef0) updateIndexWithQuery took 0 ms
+Debug [Main]: BaseTrackPlayerImpl::slotLoadTrack "[Channel1]" Track(0x4a84f4931d0)
+Debug [CachingReaderWorker 1]: SoundSourceMp3 - MP3 frame header | layer: 0 mode: 0 #channels: 1 #samples: 36 bitrate: 0 samplerate: 0 flags: "0x0000"
+Debug [CachingReaderWorker 1]: SoundSourceMp3 - MP3 frame header | layer: 3 mode: 2 #channels: 2 #samples: 36 bitrate: 128000 samplerate: 44100 flags: "0x00c8"
+Debug [CachingReaderWorker 1]: TrackMetadata - Modifying bitrate: SignalInfo{ channelCount: 2 sampleRate: 44100 Hz } -> 127 kbps
+Debug [CachingReaderWorker 1]: TrackMetadata - Modifying duration: 213000000000 ns -> 213968979591 ns
+Debug [Main]: TrackAnalysisScheduler - Resuming
+Debug [Main]: AnalyzerThread - Enqueueing next track 1
+Debug [AnalyzerThread 0 #1]: AnalyzerThread - Dequeued next track 1
+Debug [AnalyzerThread 0 #1]: AnalyzerThread - Analyzing QFileInfo(/home/marci/Documents/GALA-Freed-from-desire.mp3)
+Debug [AnalyzerThread 0 #1]: SoundSourceMp3 - MP3 frame header | layer: 0 mode: 0 #channels: 1 #samples: 36 bitrate: 0 samplerate: 0 flags: "0x0000"
+Debug [AnalyzerThread 0 #1]: SoundSourceMp3 - MP3 frame header | layer: 3 mode: 2 #channels: 2 #samples: 36 bitrate: 128000 samplerate: 44100 flags: "0x00c8"
+Debug [AnalyzerThread 0 #1]: AnalysisDAO fetched 0 analyses, 0 bytes for track 1 in 0 ms
+Debug [AnalyzerThread 0 #1]: AnalyzerBeats preference settings: 
+Plugin: "qm-tempotracker:0" 
+Fixed tempo assumption: true 
+Re-analyze when settings change: false 
+Re-analyze imported from other software: false 
+Fast analysis: false
+Debug [AnalyzerThread 0 #1]: input sample rate is  44100 , step size is  512
+Debug [AnalyzerThread 0 #1]: Beat calculation started with plugin "qm-tempotracker:0"
+Debug [AnalyzerThread 0 #1]: AnalyzerKey preference settings: 
+Plugin: "qm-keydetector:2" 
+Re-analyze when settings change: false 
+Fast analysis: false
+Debug [Main]: GLWaveformRendererSignalShader::loadShaders
+Debug [AnalyzerThread 0 #1]: Key calculation started with plugin "qm-keydetector:2"
+Debug [AnalyzerThread 0 #1]: Writing waveform from byte array: dataSize 188722 allSignalSize 188722 visualSampleRate 441 audioVisualRatio 100
+Debug [Main]: Committing transaction on "MIXXX-1" result: true
+Debug [AnalyzerThread 0 #1]: AnalysisDAO saved analysis 1 "1582134 (731725 compressed)" bytes for track 1 in 332 ms
+Debug [AnalyzerThread 0 #1]: Saved waveform analysis for trackId 1 analysisId 1
+Debug [AnalyzerThread 0 #1]: Writing waveform from byte array: dataSize 3842 allSignalSize 3842 visualSampleRate 8.97326 audioVisualRatio 4914.6
+Debug [AnalyzerThread 0 #1]: AnalysisDAO saved analysis 2 "32214 (15880 compressed)" bytes for track 1 in 9 ms
+Debug [AnalyzerThread 0 #1]: Saved waveform summary analysis for trackId 1 analysisId 2
+Debug [AnalyzerThread 0 #1]: AnalyzerWaveform - Waveform generation for track 1 done 4 s
+Debug [AnalyzerThread 0 #1]: ReplayGain 2.0 (libebur128) result is -5.23568 dB for QFileInfo(/home/marci/Documents/GALA-Freed-from-desire.mp3)
+Debug [AnalyzerThread 0 #1]: adjusting phase by -250.817
+Debug [AnalyzerThread 0 #1]: AnalyzerBeats plugin detected 461 beats. Average BPM: 128.972
+Debug [AnalyzerThread 0 #1]: Key Histogram
+Debug [AnalyzerThread 0 #1]: 1 : "C" 1.83147
+Debug [AnalyzerThread 0 #1]: 2 : "D♭" 1.48608
+Debug [AnalyzerThread 0 #1]: 6 : "F" 85.4494
+Debug [AnalyzerThread 0 #1]: 8 : "G" 5.20127
+Debug [AnalyzerThread 0 #1]: 11 : "B♭" 7.43039
+Debug [AnalyzerThread 0 #1]: 13 : "Cm" 1.48608
+Debug [AnalyzerThread 0 #1]: 15 : "Dm" 110.713
+Debug [Main]: dropEventFiles() true (QUrl("file:///home/marci/Documents/GALA-Freed-from-desire.mp3"))
+Debug [Main]: mimeData.hasText() true "library"
+Debug [Main]: dropEventFiles() true (QUrl("file:///home/marci/Documents/GALA-Freed-from-desire.mp3"))
+Debug [Main]: mimeData.hasText() true "library"
+Debug [Main]: BaseTrackPlayerImpl::slotLoadTrack "[Channel2]" Track(0x4a84f4931d0)
+Debug [CachingReaderWorker 2]: SoundSourceMp3 - MP3 frame header | layer: 0 mode: 0 #channels: 1 #samples: 36 bitrate: 0 samplerate: 0 flags: "0x0000"
+Debug [CachingReaderWorker 2]: SoundSourceMp3 - MP3 frame header | layer: 3 mode: 2 #channels: 2 #samples: 36 bitrate: 128000 samplerate: 44100 flags: "0x00c8"
+Debug [Main]: TrackAnalysisScheduler - Resuming
+Debug [Main]: AnalyzerThread - Enqueueing next track 1
+Debug [AnalyzerThread 0 #1]: AnalyzerThread - Dequeued next track 1
+Debug [AnalyzerThread 0 #1]: AnalyzerThread - Analyzing QFileInfo(/home/marci/Documents/GALA-Freed-from-desire.mp3)
+Debug [AnalyzerThread 0 #1]: SoundSourceMp3 - MP3 frame header | layer: 0 mode: 0 #channels: 1 #samples: 36 bitrate: 0 samplerate: 0 flags: "0x0000"
+Debug [AnalyzerThread 0 #1]: SoundSourceMp3 - MP3 frame header | layer: 3 mode: 2 #channels: 2 #samples: 36 bitrate: 128000 samplerate: 44100 flags: "0x00c8"
+Debug [AnalyzerThread 0 #1]: AnalyzerWaveform - loadStored - Stored waveform loaded
+Debug [AnalyzerThread 0 #1]: Skipping AnalyzerEbur128
+Debug [AnalyzerThread 0 #1]: AnalyzerBeats preference settings: 
+Plugin: "qm-tempotracker:0" 
+Fixed tempo assumption: true 
+Re-analyze when settings change: false 
+Re-analyze imported from other software: false 
+Fast analysis: false
+Debug [AnalyzerThread 0 #1]: AnalyzerKey preference settings: 
+Plugin: "qm-keydetector:2" 
+Re-analyze when settings change: false 
+Fast analysis: false
+Debug [AnalyzerThread 0 #1]: Keys version/sub-version unchanged since previous analysis. Not analyzing.
+Debug [AnalyzerThread 0 #1]: AnalyzerThread - Skipping track analysis because no analyzer initialized.
+Debug [Main]: GLWaveformRendererSignalShader::loadShaders
+Debug [Main]: guess the size of the window decoration
+Debug [Main]: WaveformWidgetFactory::setWidgetType - type already in use
+Debug [Main]: DlgPrefBroadcast - broadcastEnabledChanged() 1
+Debug [ShoutOutput 'Connection 1']: ShoutConnection - run: Starting thread
+Debug [ShoutOutput 'Connection 1']: ShoutConnection - processConnect
+Debug [ShoutOutput 'Connection 1']: ShoutConnection - "Connection 1" : updating from preferences
+Debug [ShoutOutput 'Connection 1']: ShoutConnection - Using server URL: QUrl("//:8000")
+Warning [ShoutOutput 'Connection 1']: Streaming error:  "Use a libshout version with  enabled"
+Warning [ShoutOutput 'Connection 1']: ShoutConnection - ShoutOutput::processConnect() returning false
+Warning [ShoutOutput 'Connection 1']: Streaming error:  "\n\nPlease check your connection to the Internet and verify that your username and password are correct."
+Debug [Main]: DlgPrefBroadcast - broadcastEnabledChanged() 0
+Debug [Main]: DlgPrefBroadcast - broadcastEnabledChanged() 2
+Warning [Main]: "EffectParameter(High)" WARNING: Value was outside of limits, clamped.
+Warning [Main]: "EffectParameter(High)" WARNING: Value was outside of limits, clamped.
+Warning [Main]: "EffectParameter(High)" WARNING: Value was outside of limits, clamped.
+Warning [Main]: "EffectParameter(Mid)" WARNING: Value was outside of limits, clamped.
+Warning [Main]: "EffectParameter(Mid)" WARNING: Value was outside of limits, clamped.
+Warning [Main]: "EffectParameter(Mid)" WARNING: Value was outside of limits, clamped.
+Warning [Main]: "EffectParameter(Low)" WARNING: Value was outside of limits, clamped.
+Warning [Main]: "EffectParameter(Low)" WARNING: Value was outside of limits, clamped.
+Warning [Main]: "EffectParameter(Low)" WARNING: Value was outside of limits, clamped.
+Warning [Main]: "EffectParameter(Low)" WARNING: Value was outside of limits, clamped.
+Warning [Main]: "EffectParameter(Low)" WARNING: Value was outside of limits, clamped.
+Warning [Main]: "EffectParameter(Low)" WARNING: Value was outside of limits, clamped.
+Warning [Main]: "EffectParameter(Low)" WARNING: Value was outside of limits, clamped.
+Warning [Main]: "EffectParameter(Low)" WARNING: Value was outside of limits, clamped.
+Warning [Main]: "EffectParameter(Low)" WARNING: Value was outside of limits, clamped.
+Warning [Main]: "EffectParameter(Low)" WARNING: Value was outside of limits, clamped.
+Warning [Main]: "EffectParameter(Low)" WARNING: Value was outside of limits, clamped.
+Warning [Main]: "EffectParameter(Low)" WARNING: Value was outside of limits, clamped.
+Warning [Main]: "EffectParameter(Low)" WARNING: Value was outside of limits, clamped.
+Debug [Main]: BaseTrackPlayerImpl::slotLoadTrack "[Channel2]" Track(0x4a84f4931d0)
+Debug [CachingReaderWorker 2]: SoundSourceMp3 - MP3 frame header | layer: 0 mode: 0 #channels: 1 #samples: 36 bitrate: 0 samplerate: 0 flags: "0x0000"
+Debug [CachingReaderWorker 2]: SoundSourceMp3 - MP3 frame header | layer: 3 mode: 2 #channels: 2 #samples: 36 bitrate: 128000 samplerate: 44100 flags: "0x00c8"
+Debug [Main]: TrackAnalysisScheduler - Resuming
+Debug [Main]: AnalyzerThread - Enqueueing next track 1
+Debug [AnalyzerThread 0 #1]: AnalyzerThread - Dequeued next track 1
+Debug [AnalyzerThread 0 #1]: AnalyzerThread - Analyzing QFileInfo(/home/marci/Documents/GALA-Freed-from-desire.mp3)
+Debug [AnalyzerThread 0 #1]: SoundSourceMp3 - MP3 frame header | layer: 0 mode: 0 #channels: 1 #samples: 36 bitrate: 0 samplerate: 0 flags: "0x0000"
+Debug [AnalyzerThread 0 #1]: SoundSourceMp3 - MP3 frame header | layer: 3 mode: 2 #channels: 2 #samples: 36 bitrate: 128000 samplerate: 44100 flags: "0x00c8"
+Debug [AnalyzerThread 0 #1]: AnalyzerWaveform - loadStored - Stored waveform loaded
+Debug [AnalyzerThread 0 #1]: Skipping AnalyzerEbur128
+Debug [AnalyzerThread 0 #1]: AnalyzerBeats preference settings: 
+Plugin: "qm-tempotracker:0" 
+Fixed tempo assumption: true 
+Re-analyze when settings change: false 
+Re-analyze imported from other software: false 
+Fast analysis: false
+Debug [AnalyzerThread 0 #1]: AnalyzerKey preference settings: 
+Plugin: "qm-keydetector:2" 
+Re-analyze when settings change: false 
+Fast analysis: false
+Debug [AnalyzerThread 0 #1]: Keys version/sub-version unchanged since previous analysis. Not analyzing.
+Debug [AnalyzerThread 0 #1]: AnalyzerThread - Skipping track analysis because no analyzer initialized.
+Debug [Main]: BaseTrackPlayerImpl::slotLoadTrack "[Channel2]" Track(0x4a84f4931d0)
+Debug [CachingReaderWorker 2]: SoundSourceMp3 - MP3 frame header | layer: 0 mode: 0 #channels: 1 #samples: 36 bitrate: 0 samplerate: 0 flags: "0x0000"
+Debug [CachingReaderWorker 2]: SoundSourceMp3 - MP3 frame header | layer: 3 mode: 2 #channels: 2 #samples: 36 bitrate: 128000 samplerate: 44100 flags: "0x00c8"
+Debug [Main]: TrackAnalysisScheduler - Resuming
+Debug [Main]: AnalyzerThread - Enqueueing next track 1
+Debug [AnalyzerThread 0 #1]: AnalyzerThread - Dequeued next track 1
+Debug [AnalyzerThread 0 #1]: AnalyzerThread - Analyzing QFileInfo(/home/marci/Documents/GALA-Freed-from-desire.mp3)
+Debug [AnalyzerThread 0 #1]: SoundSourceMp3 - MP3 frame header | layer: 0 mode: 0 #channels: 1 #samples: 36 bitrate: 0 samplerate: 0 flags: "0x0000"
+Debug [AnalyzerThread 0 #1]: SoundSourceMp3 - MP3 frame header | layer: 3 mode: 2 #channels: 2 #samples: 36 bitrate: 128000 samplerate: 44100 flags: "0x00c8"
+Debug [AnalyzerThread 0 #1]: AnalyzerWaveform - loadStored - Stored waveform loaded
+Debug [AnalyzerThread 0 #1]: Skipping AnalyzerEbur128
+Debug [AnalyzerThread 0 #1]: AnalyzerBeats preference settings: 
+Plugin: "qm-tempotracker:0" 
+Fixed tempo assumption: true 
+Re-analyze when settings change: false 
+Re-analyze imported from other software: false 
+Fast analysis: false
+Debug [AnalyzerThread 0 #1]: AnalyzerKey preference settings: 
+Plugin: "qm-keydetector:2" 
+Re-analyze when settings change: false 
+Fast analysis: false
+Debug [AnalyzerThread 0 #1]: Keys version/sub-version unchanged since previous analysis. Not analyzing.
+Debug [AnalyzerThread 0 #1]: AnalyzerThread - Skipping track analysis because no analyzer initialized.
+Debug [Main]: BaseTrackPlayerImpl::slotLoadTrack "[Channel2]" Track(0x4a84f4931d0)
+Debug [CachingReaderWorker 2]: SoundSourceMp3 - MP3 frame header | layer: 0 mode: 0 #channels: 1 #samples: 36 bitrate: 0 samplerate: 0 flags: "0x0000"
+Debug [CachingReaderWorker 2]: SoundSourceMp3 - MP3 frame header | layer: 3 mode: 2 #channels: 2 #samples: 36 bitrate: 128000 samplerate: 44100 flags: "0x00c8"
+Debug [Main]: TrackAnalysisScheduler - Resuming
+Debug [Main]: AnalyzerThread - Enqueueing next track 1
+Debug [AnalyzerThread 0 #1]: AnalyzerThread - Dequeued next track 1
+Debug [AnalyzerThread 0 #1]: AnalyzerThread - Analyzing QFileInfo(/home/marci/Documents/GALA-Freed-from-desire.mp3)
+Debug [AnalyzerThread 0 #1]: SoundSourceMp3 - MP3 frame header | layer: 0 mode: 0 #channels: 1 #samples: 36 bitrate: 0 samplerate: 0 flags: "0x0000"
+Debug [AnalyzerThread 0 #1]: SoundSourceMp3 - MP3 frame header | layer: 3 mode: 2 #channels: 2 #samples: 36 bitrate: 128000 samplerate: 44100 flags: "0x00c8"
+Debug [AnalyzerThread 0 #1]: AnalyzerWaveform - loadStored - Stored waveform loaded
+Debug [AnalyzerThread 0 #1]: Skipping AnalyzerEbur128
+Debug [AnalyzerThread 0 #1]: AnalyzerBeats preference settings: 
+Plugin: "qm-tempotracker:0" 
+Fixed tempo assumption: true 
+Re-analyze when settings change: false 
+Re-analyze imported from other software: false 
+Fast analysis: false
+Debug [AnalyzerThread 0 #1]: AnalyzerKey preference settings: 
+Plugin: "qm-keydetector:2" 
+Re-analyze when settings change: false 
+Fast analysis: false
+Debug [AnalyzerThread 0 #1]: Keys version/sub-version unchanged since previous analysis. Not analyzing.
+Debug [AnalyzerThread 0 #1]: AnalyzerThread - Skipping track analysis because no analyzer initialized.
+Debug [Main]: BaseTrackPlayerImpl::slotLoadTrack "[Channel2]" Track(0x4a84f4931d0)
+Debug [CachingReaderWorker 2]: SoundSourceMp3 - MP3 frame header | layer: 0 mode: 0 #channels: 1 #samples: 36 bitrate: 0 samplerate: 0 flags: "0x0000"
+Debug [CachingReaderWorker 2]: SoundSourceMp3 - MP3 frame header | layer: 3 mode: 2 #channels: 2 #samples: 36 bitrate: 128000 samplerate: 44100 flags: "0x00c8"
+Debug [Main]: TrackAnalysisScheduler - Resuming
+Debug [Main]: AnalyzerThread - Enqueueing next track 1
+Debug [AnalyzerThread 0 #1]: AnalyzerThread - Dequeued next track 1
+Debug [AnalyzerThread 0 #1]: AnalyzerThread - Analyzing QFileInfo(/home/marci/Documents/GALA-Freed-from-desire.mp3)
+Debug [AnalyzerThread 0 #1]: SoundSourceMp3 - MP3 frame header | layer: 0 mode: 0 #channels: 1 #samples: 36 bitrate: 0 samplerate: 0 flags: "0x0000"
+Debug [AnalyzerThread 0 #1]: SoundSourceMp3 - MP3 frame header | layer: 3 mode: 2 #channels: 2 #samples: 36 bitrate: 128000 samplerate: 44100 flags: "0x00c8"
+Debug [AnalyzerThread 0 #1]: AnalyzerWaveform - loadStored - Stored waveform loaded
+Debug [AnalyzerThread 0 #1]: Skipping AnalyzerEbur128
+Debug [AnalyzerThread 0 #1]: AnalyzerBeats preference settings: 
+Plugin: "qm-tempotracker:0" 
+Fixed tempo assumption: true 
+Re-analyze when settings change: false 
+Re-analyze imported from other software: false 
+Fast analysis: false
+Debug [AnalyzerThread 0 #1]: AnalyzerKey preference settings: 
+Plugin: "qm-keydetector:2" 
+Re-analyze when settings change: false 
+Fast analysis: false
+Debug [AnalyzerThread 0 #1]: Keys version/sub-version unchanged since previous analysis. Not analyzing.
+Debug [AnalyzerThread 0 #1]: AnalyzerThread - Skipping track analysis because no analyzer initialized.
+Debug [Main]: 0 ms stopping pending Library tasks
+Debug [Main]: Destroying MixxxMainWindow
+Debug [Main]: 0 ms saving configuration
+Debug [Main]: 2 ms deleting skin
+Warning [Main]: SettingsDAO - Failed to set "mixxx.db.model.prepare.header_state_pb" = QVariant(QString, "CggIARAAGAAgAAoRCAAQGRgBIAEqB3ByZXZpZXcKEggAEBkYAiACKghjb3ZlcmFydAoICAEQABgDIAMKFQgBEAAYBCAEKgt0aW1lc3BsYXllZAoWCAEQABgFIAUqDGFsYnVtX2FydGlzdAoQCAAQyAEYBiAGKgVhbGJ1bQoRCAAQyAEYByAHKgZhcnRpc3QKEAgAEMgBGAggCCoFdGl0bGUKDggBEAAYCSAJKgR5ZWFyChAIABBkGAogCioGcmF0aW5nChAIABDIARgLIAsqBWdlbnJlChIIARAAGAwgDCoIY29tcG9zZXIKEggBEAAYDSANKghncm91cGluZwoVCAEQABgOIA4qC3RyYWNrbnVtYmVyCg0IABAyGA8gDyoDa2V5CggIARAAGBAgEAoNCAAQZBgRIBEqA2JwbQoICAEQABgSIBIKEggAEDIYEyATKghkdXJhdGlvbgoRCAEQABgUIBQqB2JpdHJhdGUKFAgBEAAYFSAVKgpyZXBsYXlnYWluChIIARAAGBYgFioIZmlsZXR5cGUKGQgAEJYBGBcgFyoOZGF0ZXRpbWVfYWRkZWQKEggBEAAYGCAYKghsb2NhdGlvbgoICAEQABgZIBkKEggAEKwCGBogGioHY29tbWVudAoICAEQABgbIBsKDwgAEBkYHCAcKgVjb2xvcgoICAEQABgdIB0KCAgBEAAYHiAeCggIARAAGB8gHwoICAEQABggICAQARgHIAA=") QSqlError("8", "Unable to fetch row", "attempt to write a readonly database")
+Debug [Main]: ~DlgAutoDJ()
+Warning [Main]: SettingsDAO - Failed to set "mixxx.db.model.autodj.header_state_pb" = QVariant(QString, "CggIARAAGAAgAAoSCAAQHhgBIAEqCHBvc2l0aW9uChsIARAAGAIgAioRcGxfZGF0ZXRpbWVfYWRkZWQKEQgAEBkYAyADKgdwcmV2aWV3ChIIABAZGAQgBCoIY292ZXJhcnQKCAgBEAAYBSAFChUIARAAGAYgBioLdGltZXNwbGF5ZWQKFggBEAAYByAHKgxhbGJ1bV9hcnRpc3QKEAgAEMgBGAggCCoFYWxidW0KEQgAEMgBGAkgCSoGYXJ0aXN0ChAIABDIARgKIAoqBXRpdGxlCg4IARAAGAsgCyoEeWVhcgoQCAAQZBgMIAwqBnJhdGluZwoQCAAQyAEYDSANKgVnZW5yZQoSCAEQABgOIA4qCGNvbXBvc2VyChIIARAAGA8gDyoIZ3JvdXBpbmcKFQgBEAAYECAQKgt0cmFja251bWJlcgoNCAAQMhgRIBEqA2tleQoICAEQABgSIBIKDQgAEGQYEyATKgNicG0KCAgBEAAYFCAUChIIABAyGBUgFSoIZHVyYXRpb24KEQgBEAAYFiAWKgdiaXRyYXRlChQIARAAGBcgFyoKcmVwbGF5Z2FpbgoSCAEQABgYIBgqCGZpbGV0eXBlChkIABCWARgZIBkqDmRhdGV0aW1lX2FkZGVkChIIARAAGBogGioIbG9jYXRpb24KCAgBEAAYGyAbChIIABCsAhgcIBwqB2NvbW1lbnQKCAgBEAAYHSAdCg8IABAZGB4gHioFY29sb3IKCAgBEAAYHyAfCggIARAAGCAgIAoICAEQABghICEKCAgBEAAYIiAiEAA=") QSqlError("8", "Unable to fetch row", "attempt to write a readonly database")
+Warning [Main]: SettingsDAO - Failed to set "mixxx.db.model.missing.header_state_pb" = QVariant(QString, "CggIARAAGAAgAAoICAEQABgBIAEKFQgBEAAYAiACKgt0aW1lc3BsYXllZAoWCAEQABgDIAMqDGFsYnVtX2FydGlzdAoQCAAQyAEYBCAEKgVhbGJ1bQoRCAAQyAEYBSAFKgZhcnRpc3QKEAgAEMgBGAYgBioFdGl0bGUKDggBEAAYByAHKgR5ZWFyChAIABBkGAggCCoGcmF0aW5nChAIABDIARgJIAkqBWdlbnJlChIIARAAGAogCioIY29tcG9zZXIKEggBEAAYCyALKghncm91cGluZwoVCAEQABgMIAwqC3RyYWNrbnVtYmVyCg0IABAyGA0gDSoDa2V5CggIARAAGA4gDgoNCAAQZBgPIA8qA2JwbQoICAEQABgQIBAKEggAEDIYESARKghkdXJhdGlvbgoRCAEQABgSIBIqB2JpdHJhdGUKFAgBEAAYEyATKgpyZXBsYXlnYWluChIIARAAGBQgFCoIZmlsZXR5cGUKGQgAEJYBGBUgFSoOZGF0ZXRpbWVfYWRkZWQKEggBEAAYFiAWKghsb2NhdGlvbgoICAEQABgXIBcKEggAEKwCGBggGCoHY29tbWVudAoICAEQABgZIBkKDwgAEBkYGiAaKgVjb2xvcgoICAEQABgbIBsKCAgBEAAYHCAcCggIARAAGB0gHQoICAEQABgeIB4QARgFIAA=") QSqlError("8", "Unable to fetch row", "attempt to write a readonly database")
+Warning [Main]: SettingsDAO - Failed to set "mixxx.db.model.missing.header_state_pb" = QVariant(QString, "CggIARAAGAAgAAoICAEQABgBIAEKFQgBEAAYAiACKgt0aW1lc3BsYXllZAoWCAEQABgDIAMqDGFsYnVtX2FydGlzdAoQCAAQyAEYBCAEKgVhbGJ1bQoRCAAQyAEYBSAFKgZhcnRpc3QKEAgAEMgBGAYgBioFdGl0bGUKDggBEAAYByAHKgR5ZWFyChAIABBkGAggCCoGcmF0aW5nChAIABDIARgJIAkqBWdlbnJlChIIARAAGAogCioIY29tcG9zZXIKEggBEAAYCyALKghncm91cGluZwoVCAEQABgMIAwqC3RyYWNrbnVtYmVyCg0IABAyGA0gDSoDa2V5CggIARAAGA4gDgoNCAAQZBgPIA8qA2JwbQoICAEQABgQIBAKEggAEDIYESARKghkdXJhdGlvbgoRCAEQABgSIBIqB2JpdHJhdGUKFAgBEAAYEyATKgpyZXBsYXlnYWluChIIARAAGBQgFCoIZmlsZXR5cGUKGQgAEJYBGBUgFSoOZGF0ZXRpbWVfYWRkZWQKEggBEAAYFiAWKghsb2NhdGlvbgoICAEQABgXIBcKEggAEKwCGBggGCoHY29tbWVudAoICAEQABgZIBkKDwgAEBkYGiAaKgVjb2xvcgoICAEQABgbIBsKCAgBEAAYHCAcCggIARAAGB0gHQoICAEQABgeIB4QARgFIAA=") QSqlError("8", "Unable to fetch row", "attempt to write a readonly database")
+Warning [Main]: SettingsDAO - Failed to set "mixxx.db.model.browse.header_state_pb" = QVariant(QString, "CggIABBkGAAgAAoICAAQZBgBIAEKCAgAEGQYAiACCggIABBkGAMgAwoICAAQZBgEIAQKCAgBEAAYBSAFCggIARAAGAYgBgoICAAQZBgHIAcKCAgBEAAYCCAICggIABBkGAkgCQoICAAQZBgKIAoKCAgAEGQYCyALCggIABBkGAwgDAoICAAQZBgNIA0KCAgAEGQYDiAOCggIARAAGA8gDwoICAEQABgQIBAKCAgBEAAYESARCggIABBkGBIgEgoICAEQABgTIBMKCAgBEAAYFCAUEAEYACAB") QSqlError("8", "Unable to fetch row", "attempt to write a readonly database")
+Debug [Main]: 254 ms deleting menubar
+Debug [Main]: 268 ms deleting SoundManager
+Debug [Main]: 291 ms deleting ControllerManager
+Debug [Controller]: Controller polling stopped.
+Debug [Controller]: Deleting PortMIDI devices...
+Debug [Controller]: Deleting USB Bulk devices...
+Debug [Controller]: Deleting HID devices...
+Debug [Main]: 300 ms deleting VinylControlManager
+Debug [Main]: 301 ms deleting PlayerManager
+Debug [Main]: PlayerManager - Destroying
+Debug [Main]: TrackAnalysisScheduler - Stopping
+Debug [AnalyzerThread 0 #1]: AnalyzerWaveform - ~AnalyzerWaveform():
+Debug [AnalyzerThread 0 #1]: AnalyzerThread - Exiting worker thread
+Debug [AnalyzerThread 0 #1]: AnalyzerThread 0 - Exiting
+Debug [Main]: TrackAnalysisScheduler - Stopping
+Debug [Main]: 305 ms deleting Library
+Debug [Main]: Wait to finish browser background thread
+Debug [Main]: Browser background thread terminated!
+Debug [Main]: Dropping Rekordbox table:  "rekordbox_playlist_tracks"
+Warning [Main]: /usr/src/debug/mixxx-2.3.3/src/library/rekordbox/rekordboxfeature.cpp 157 FAILED QUERY [ "DROP TABLE IF EXISTS rekordbox_playlist_tracks" ] QSqlError("8", "Unable to fetch row", "attempt to write a readonly database")
+Debug [Main]: Dropping Rekordbox table:  "rekordbox_playlists"
+Warning [Main]: /usr/src/debug/mixxx-2.3.3/src/library/rekordbox/rekordboxfeature.cpp 157 FAILED QUERY [ "DROP TABLE IF EXISTS rekordbox_playlists" ] QSqlError("8", "Unable to fetch row", "attempt to write a readonly database")
+Debug [Main]: Dropping Rekordbox table:  "rekordbox_library"
+Warning [Main]: /usr/src/debug/mixxx-2.3.3/src/library/rekordbox/rekordboxfeature.cpp 157 FAILED QUERY [ "DROP TABLE IF EXISTS rekordbox_library" ] QSqlError("8", "Unable to fetch row", "attempt to write a readonly database")
+Debug [Main]: Committing transaction on "MIXXX-1" result: true
+Debug [Main]: Dropping Serato table:  "serato_playlist_tracks"
+Warning [Main]: /usr/src/debug/mixxx-2.3.3/src/library/serato/seratofeature.cpp 840 FAILED QUERY [ "DROP TABLE IF EXISTS serato_playlist_tracks" ] QSqlError("8", "Unable to fetch row", "attempt to write a readonly database")
+Debug [Main]: Dropping Serato table:  "serato_playlists"
+Warning [Main]: /usr/src/debug/mixxx-2.3.3/src/library/serato/seratofeature.cpp 840 FAILED QUERY [ "DROP TABLE IF EXISTS serato_playlists" ] QSqlError("8", "Unable to fetch row", "attempt to write a readonly database")
+Debug [Main]: Dropping Serato table:  "serato_library"
+Warning [Main]: /usr/src/debug/mixxx-2.3.3/src/library/serato/seratofeature.cpp 840 FAILED QUERY [ "DROP TABLE IF EXISTS serato_library" ] QSqlError("8", "Unable to fetch row", "attempt to write a readonly database")
+Debug [Main]: Committing transaction on "MIXXX-1" result: true
+Debug [Main]: 308 ms deleting RecordingManager
+Debug [Main]: Delete RecordingManager
+Debug [Main]: 308 ms deleting BroadcastManager
+Debug [Main]: DlgPrefBroadcast - broadcastEnabledChanged() 0
+Debug [Main]: 308 ms deleting EngineMaster
+Debug [Main]: TrackCollectionManager - Saving track "/home/marci/Documents/GALA-Freed-from-desire.mp3" in internal collection
+Debug [Main]: TrackDAO: Saving track 1 QFileInfo(/home/marci/Documents/GALA-Freed-from-desire.mp3)
+Debug [Main]: TrackDAO: Updating track in database 1 QFileInfo(/home/marci/Documents/GALA-Freed-from-desire.mp3)
+Warning [Main]: /usr/src/debug/mixxx-2.3.3/src/library/dao/trackdao.cpp 1479 FAILED QUERY [ "UPDATE library SET artist=:artist,title=:title,album=:album,album_artist=:album_artist,year=:year,genre=:genre,composer=:composer,grouping=:grouping,filetype=:filetype,tracknumber=:tracknumber,tracktotal=:tracktotal,color=:color,comment=:comment,url=:url,rating=:rating,key=:key,key_id=:key_id,cuepoint=:cuepoint,bpm=:bpm,replaygain=:replaygain,replaygain_peak=:replaygain_peak,timesplayed=:timesplayed,played=:played,header_parsed=:header_parsed,channels=:channels,bitrate=:bitrate,samplerate=:samplerate,bitrate=:bitrate,duration=:duration,beats_version=:beats_version,beats_sub_version=:beats_sub_version,beats=:beats,bpm_lock=:bpm_lock,keys_version=:keys_version,keys_sub_version=:keys_sub_version,keys=:keys,coverart_source=:coverart_source,coverart_type=:coverart_type,coverart_location=:coverart_location,coverart_hash=:coverart_hash WHERE id=:track_id" ] QSqlError("8", "Unable to fetch row", "attempt to write a readonly database")
+Debug [Main]: 349 ms deleting DlgPreferences
+Debug [Main]: 359 ms deleting EffectsManager
+Debug [Main]: 376 ms detaching all track collections
+Info [Main]: TrackCollectionManager - Stopping library scanner thread
+Debug [LibraryScanner 1]: LibraryScanner - Event loop stopped
+Warning [LibraryScanner 1]: QSqlDatabasePrivate::removeDatabase: connection 'MIXXX-2' is still in use, all queries will cease to work.
+Debug [LibraryScanner 1]: LibraryScanner - Exiting thread
+Info [Main]: TrackCollectionManager - Stopped library scanner thread
+Debug [Main]: ~TrackDAO()
+Info [Main]: TrackCollection - Disconnecting track source
+Info [Main]: TrackCollection - Disconnecting database
+Debug [Main]: TrackDAO::finish()
+Debug [Main]: Clearing played information for this session
+Debug [Main]: Cleaning LibraryHashes/track_locations tables.
+Info [Main]: GlobalTrackCache - Destroying instance
+Debug [Main]: ~TrackDAO()
+Debug [Main]: 379 ms closing database connection(s)
+Debug [Main]: 381 ms deleting SettingsManager
+Debug [Main]: Mixxx shutdown complete with code 0
