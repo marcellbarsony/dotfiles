@@ -275,63 +275,64 @@ screens = [
                 widget.WidgetBox(
                     widgets=[
                         widget.TextBox(
-                            button_location='left',
-                            text_closed='[Weather]',
-                            text_open='[open]'
+                            button_location = 'left',
+                            #text_closed = '[Weather]',
+                            text_closed = '[<]',
+                            #text_open = '[open]'
+                            text_open = '[>]'
                             ),
                         widget.OpenWeather(
-                            location='Budapest',
-                            format='{location_city}: {main_temp}°{units_temperature} - {weather_details} {icon}',
-                            update_interval=600
+                            location = 'Budapest',
+                            format = '{location_city}: {main_temp}°{units_temperature} - {weather_details} {icon}',
+                            update_interval = 600
                             ),
                     ]
                 ),
                 widget.Sep(),
                 widget.CheckUpdates(
-                    distro = 'Arch',
-                    display_format = "{updates} Updates",
-                    no_update_string = "No Updates",
-                    update_interval= 1800,
-                    ),
-                widget.Sep(),
-                # Crypto
-                widget.CryptoTicker(),
-                widget.Sep(),
-                # CPU
-                widget.CPU(
-                    format='CPU: {load_percent}%',
-                    mouse_callbacks = {'Button1': open_sysmonitor},
-                    update_interval=10
-                    ),
-                widget.Sep(),
-                # RAM
-                widget.Memory(
-                    #format='{MemUsed: .0f}{mm} /{MemTotal: .0f}{mm}',
-                    format='RAM: {MemUsed:.0f}{mm}',
-                    mouse_callbacks = {'Button1': open_sysmonitor},
-                    update_interval=10
+                    colour_have_updates = '22EE44',
+                    display_format = "{updates}",
+                    distro = 'Arch_Sup',
+                    initial_text = 'Checking updates...',
+                    no_update_string = "No updates",
+                    update_interval = 3600,
                     ),
                 widget.Sep(),
                 # Active screen
                 widget.CurrentScreen(),
                 widget.Sep(),
+                # CPU
+                widget.CPU(
+                    format = 'CPU: {load_percent}%',
+                    mouse_callbacks = {'Button1': open_sysmonitor},
+                    update_interval = 10
+                    ),
+                widget.Sep(),
+                # RAM
+                widget.Memory(
+                    #format='{MemUsed: .0f}{mm} /{MemTotal: .0f}{mm}',
+                    format = 'RAM: {MemUsed:.0f}{mm}',
+                    mouse_callbacks = {'Button1': open_sysmonitor},
+                    update_interval = 10
+                    ),
+                widget.Sep(),
                 # Battery
                 widget.Battery(
-                    format='BAT: {percent:2.0%}'
+                    format = 'BAT: {percent:2.0%}'
                     ),
                 widget.Sep(),
                 # Time & Date
                 widget.Clock(
-                    format="%b-%d %a %I:%M %p",
-                    update_interval=60
+                    format = '%I:%M %p',
+                    update_interval = 60
                     ),
                 # System tray
                 widget.Systray(),
             ],
             26,
-            border_width=[0, 0, 0, 0],
-            border_color=["000000", "000000", "", "000000"],
-            background="#00000099",
+            border_width = [0, 0, 0, 0],
+            border_color = ["000000", "000000", "", "000000"],
+            background = "#00000099",
             margin = [3,5,0,5],
         ),
     ),

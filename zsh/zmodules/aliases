@@ -1,5 +1,5 @@
 # Coreutils
-alias c='clear'
+alias cls='clear'
 alias ls='ls -laF --color=auto'
 alias mv='mv -i'
 alias rm='rm -i'
