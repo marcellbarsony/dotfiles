@@ -275,11 +275,7 @@ screens = [
                 widget.WidgetBox(
                     widgets=[
                         widget.TextBox(
-                            button_location = 'left',
-                            #text_closed = '[Weather]',
-                            text_closed = '[<]',
-                            #text_open = '[open]'
-                            text_open = '[>]'
+                            button_location = 'right',
                             ),
                         widget.OpenWeather(
                             location = 'Budapest',
