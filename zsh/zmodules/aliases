@@ -16,6 +16,9 @@ alias cfg='clear && cd $HOME/.config && l'
 # Grep
 alias grep='grep --color=auto'
 
+# Jekyll
+alias jekyll='bundle exec jekyll serve --livereload'
+
 # Lsd
 alias l='lsd -laF'
 

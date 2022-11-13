@@ -13,6 +13,9 @@ configstore/
 # Dconf
 dconf/
 
+# Flameshot
+flameshot/
+
 # GitHub
 gh/
 
