@@ -19,10 +19,6 @@ flameshot/
 # GitHub
 gh/
 
-# NeoVim
-nvim/pack/plugins/start/
-nvim/pack/plugins/opt/
-
 # Pulse Audio
 pulse/
 pavucontrol.ini
@@ -44,6 +40,9 @@ spotifyd/spotifyd.conf
 
 # VSCodium
 # vscodium/
+
+# wal
+wal/
 
 # Wireshark
 wireshark/decode_as_entries
