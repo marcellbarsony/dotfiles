@@ -52,7 +52,7 @@ local options = {
   updatetime = 200,
 
   -- Number of screen lines to keep above and below the cursor
-  scrolloff = 8,
+  scrolloff = 999,
 
   -- Better editor UI
   number = true,

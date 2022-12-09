@@ -1,4 +1,5 @@
 -- CMP
+-- https://github.com/hrsh7th/nvim-cmp
 
 -- Ultisnip + cmp-cmdline
     local t = function(str)

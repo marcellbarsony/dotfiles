@@ -1,4 +1,6 @@
--- LSP config
+-- nvim-lspconfig
+-- https://github.com/neovim/nvim-lspconfig
+-- Dependencies:
 
 -- Require servers
 local nvim_lsp = require('lspconfig')
