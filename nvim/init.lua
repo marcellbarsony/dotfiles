@@ -7,7 +7,8 @@ require('user.core.options')
 -- Plugins
 require('user.plugins.bufferline')
 require('user.plugins.cmp')
---require('user.plugins.gitsigns')
---require('user.plugins.lsp_lines')
-require('user.plugins.null-ls')
+require('user.plugins.gitsigns')
+require('user.plugins.lsp_lines')
+--require('user.plugins.null-ls')
 --require('user.plugins.nvim-tree')
+-- require Python snippets
