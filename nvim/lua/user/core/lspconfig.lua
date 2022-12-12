@@ -4,10 +4,17 @@
 
 -- Require servers
 local nvim_lsp = require('lspconfig')
-local servers = { 'pyright' }
+local servers = {
+  'pyright',
+  'pylsp',
+  --'sumneko_lua',
+}
 
 for _, lsp in ipairs(servers) do
-    nvim_lsp[lsp].setup{}
+  nvim_lsp[lsp].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+  }
 end
 
 -- Attach servers
@@ -22,7 +29,7 @@ vim.diagnostic.config({
     })
 
 -- Diagnostics symbols
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
@@ -32,7 +39,4 @@ for type, icon in pairs(signs) do
     --numhl = hl
     })
 end
-
-
-
 
