@@ -109,30 +109,46 @@ return packer.startup(function(use)
   use 'onsails/lspkind.nvim'
 
   -- CMP
-  use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/cmp-path'
+  use { 'hrsh7th/nvim-cmp',
+    requires = { 'quangnguyen30192/cmp-nvim-ultisnips', -- cmp-ultisnips
+      config = function()
+        -- optional call to setup (see customization section)
+        require('cmp_nvim_ultisnips').setup{}
+      end,
+    -- Enable filetype detection based on treesitter:
+    -- requires = { 'nvim-treesitter/nvim-treesitter' },
+    }
+  }
 
   -- CMP-LSP
   use 'hrsh7th/cmp-nvim-lsp'
 
   -- Snippets
-  use 'SirVer/ultisnips'
-  use 'quangnguyen30192/cmp-nvim-ultisnips'
+  use { 'SirVer/ultisnips', -- Snippet engine
+    requires = {{ 'honza/vim-snippets', rtp = '.' }}, -- Snippets
+    config = function()
+      vim.g.UltiSnipsExpandTrigger = '<Plug>(ultisnips_expand)'
+      vim.g.UltiSnipsJumpForwardTrigger = '<Plug>(ultisnips_jump_forward)'
+      vim.g.UltiSnipsJumpBackwardTrigger = '<Plug>(ultisnips_jump_backward)'
+      vim.g.UltiSnipsListSnippets = '<c-x><c-s>'
+      vim.g.UltiSnipsRemoveSelectModeMappings = 0
+    end
+  }
 
   -- LSP lines
-  use({
-    "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+  use({ 'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
     config = function()
-      require("lsp_lines").setup()
+      require('lsp_lines').setup()
     end,
   })
 
   -- Bootstrap
   -- Set up configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
-    require("packer").sync()
+    require('packer').sync()
   end
 
 end)
