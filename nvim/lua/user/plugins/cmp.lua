@@ -6,7 +6,7 @@ local cmp = require'cmp'
 local lspkind = require'lspkind'
 local lspconfig = require'lspconfig'
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
---local cmp_ultisnips_mapping = require'cmp_ultisnips_mapping'
+local cmp_ultisnips_mappings = require("cmp_nvim_ultisnips.mappings")
 
 -- SuperTab
 local check_backspace = function()
@@ -73,8 +73,24 @@ cmp.setup({
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.abort(),
-    ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept selected item. Set `false` to confirm explicitly selected items.
+    ['<CR>'] = cmp.mapping.confirm({ select = false }), -- Accept selected item. Set `false` to confirm explicitly selected items.
   }),
+
+  -- Mapping (cmp-nvim-ultisnips)
+  mapping = {
+    ["<Tab>"] = cmp.mapping(
+       function(fallback)
+         cmp_ultisnips_mappings.expand_or_jump_forwards(fallback)
+       end,
+       { "i", "s", --[[ "c" (to enable the mapping in command mode) ]] }
+    ),
+    ["<S-Tab>"] = cmp.mapping(
+       function(fallback)
+         cmp_ultisnips_mappings.jump_backwards(fallback)
+       end,
+       { "i", "s", --[[ "c" (to enable the mapping in command mode) ]] }
+    ),
+  },
 
   -- Sources
   sources = cmp.config.sources({

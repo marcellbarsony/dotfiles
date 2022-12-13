@@ -19,6 +19,9 @@ flameshot/
 # GitHub
 gh/
 
+# NeoVim
+neovim/plugin/
+
 # Pulse Audio
 pulse/
 pavucontrol.ini
