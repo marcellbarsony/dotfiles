@@ -1,4 +1,5 @@
 -- Packer
+-- https://github.com/wbthomason/packer.nvim
 
 -- Autocmd (compile plugins)
 vim.cmd([[
@@ -23,8 +24,8 @@ packer.init {
   --  snapshot_path = join_paths(stdpath 'cache', 'packer.nvim'), -- Default save directory for snapshots
   --  package_root   = util.join_paths(vim.fn.stdpath('data'), 'site', 'pack'),
   --  compile_path = util.join_paths(vim.fn.stdpath('config'), 'plugin', 'packer_compiled.lua'),
-  plugin_package = 'packer', -- The default package for plugins
-  max_jobs = nil, -- Limit the number of simultaneous jobs. nil means no limit
+  plugin_package = 'packer', -- Default package for plugins
+  max_jobs = nil, -- No. of simultaneous jobs. nil means no limit
   auto_clean = true, -- During sync(), remove unused plugins
   compile_on_sync = true, -- During sync(), run packer.compile()
   disable_commands = false, -- Disable creating commands
@@ -99,9 +100,6 @@ return packer.startup(function(use)
   -- Color theme
   use 'folke/tokyonight.nvim'
 
-  -- Gitsigns
-  use 'lewis6991/gitsigns.nvim'
-
   -- LSP
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
@@ -126,6 +124,16 @@ return packer.startup(function(use)
   -- CMP-LSP
   use 'hrsh7th/cmp-nvim-lsp'
 
+  -- LSP lines
+  use({ 'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
+    config = function()
+      require('lsp_lines').setup()
+    end,
+  })
+
+  -- Gitsigns
+  use 'lewis6991/gitsigns.nvim'
+
   -- Snippets
   use { 'SirVer/ultisnips', -- Snippet engine
     requires = {{ 'honza/vim-snippets', rtp = '.' }}, -- Snippets
@@ -137,13 +145,6 @@ return packer.startup(function(use)
       vim.g.UltiSnipsRemoveSelectModeMappings = 0
     end
   }
-
-  -- LSP lines
-  use({ 'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
-    config = function()
-      require('lsp_lines').setup()
-    end,
-  })
 
   -- Bootstrap
   -- Set up configuration after cloning packer.nvim

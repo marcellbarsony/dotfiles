@@ -78,10 +78,10 @@ cmp.setup({
 
   -- Sources
   sources = cmp.config.sources({
-      { name = 'ultisnips' }, -- For ultisnips users.
-      { name = 'nvim_lsp' },
-      { name = 'buffer' },
-    }),
+    { name = 'ultisnips' }, -- For ultisnips users.
+    { name = 'nvim_lsp' },
+    { name = 'buffer' },
+  }),
 
   -- Formatting
   formatting = {
@@ -143,6 +143,7 @@ local servers = {
   --'sumneko_lua',
 }
 
+-- Advertise server capabilities
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup{
     capabilities = capabilities

@@ -5,7 +5,7 @@ require("mason").setup({
 
   -- Pip
   pip = {
-    upgrade_ipi = false, -- Upgrade pip to the latest version in the virtual environment before installing packages.
+    upgrade_ipi = true, -- Upgrade pip to the latest version in the virtual environment before installing packages.
     install_args = {},
   },
 

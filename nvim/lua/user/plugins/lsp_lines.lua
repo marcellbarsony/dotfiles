@@ -4,10 +4,8 @@
 require("lsp_lines").setup()
 
 vim.diagnostic.config({
-  -- lsp_lines toggle
-  virtual_lines = true,
+  virtual_lines = true, -- lsp_lines toggle
   virtual_lines = { only_current_line = true },
-  -- redundancy
-  virtual_text = false,
+  virtual_text = false, -- Redundancy
 })
 
