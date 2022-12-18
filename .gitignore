@@ -20,7 +20,7 @@ flameshot/
 gh/
 
 # NeoVim
-neovim/plugin/
+nvim/plugin/
 
 # Pulse Audio
 pulse/

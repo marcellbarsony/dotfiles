@@ -38,10 +38,6 @@ local options = {
   --o.cinscopecls = 'public,protected,private',
   smartindent = false,
 
-  -- Map <leader> to space
-  --mapleader = ' ',
-  --maplocalleader = ' ',
-
   -- R/W
   autoread = true,
   autowrite = false,
@@ -54,17 +50,17 @@ local options = {
   -- Number of screen lines to keep above and below the cursor
   scrolloff = 999,
 
-  -- Better editor UI
+  -- Line number
   number = true,
-  numberwidth = 4,
+  numberwidth = 3,
   relativenumber = true,
 
   -- Better editing experience
   expandtab = true,
   wrap = true,
   textwidth = 300,
-  tabstop = 4,
-  shiftwidth = 0,
+  tabstop = 2,
+  shiftwidth = 2,
   softtabstop = -1, -- If negative, shiftwidth value is used
   list = true,
   listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂',
@@ -91,6 +87,9 @@ local options = {
 vim.opt.shortmess:append "c"
 
 -- Loop through options
-for k, v in pairs(options) do
-    vim.opt[k] = v
+for key, value in pairs(options) do
+    vim.opt[key] = value
 end
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1

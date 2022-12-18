@@ -11,10 +11,10 @@ require("tokyonight").setup({
     keywords = { italic = true },
     functions = {},
     variables = {},
-    sidebars = "dark", -- dark/transparent/normal)
+    sidebars = "transparent", -- dark/transparent/normal)
     floats = "dark", -- Floating windows (dark/transparent/normal)
   },
-  sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
+  sidebars = { "qf", "packer" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
   day_brightness = 0.5, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
   hide_inactive_statusline = false, -- Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.
   dim_inactive = true, -- dims inactive windows

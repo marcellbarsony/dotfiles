@@ -94,6 +94,7 @@ packer.init {
 
 -- Plugins
 return packer.startup(function(use)
+
   -- Packer
   use 'wbthomason/packer.nvim'
 
@@ -111,13 +112,11 @@ return packer.startup(function(use)
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/cmp-path'
   use { 'hrsh7th/nvim-cmp',
-    requires = { 'quangnguyen30192/cmp-nvim-ultisnips', -- cmp-ultisnips
+    requires = { 'quangnguyen30192/cmp-nvim-ultisnips',
       config = function()
         -- optional call to setup (see customization section)
         require('cmp_nvim_ultisnips').setup{}
       end,
-    -- Enable filetype detection based on treesitter:
-    -- requires = { 'nvim-treesitter/nvim-treesitter' },
     }
   }
 
@@ -144,6 +143,38 @@ return packer.startup(function(use)
       vim.g.UltiSnipsListSnippets = '<c-x><c-s>'
       vim.g.UltiSnipsRemoveSelectModeMappings = 0
     end
+  }
+
+  -- Telescope
+  use { 'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    requires = { {
+      'nvim-lua/plenary.nvim', -- Lua function library
+      'BurntSushi/ripgrep'
+    } }
+  }
+ 
+  -- Treesitter
+  use { 'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+    requires = { 'p00f/nvim-ts-rainbow' }
+  }
+
+  -- Nvim tree
+  use { 'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
+
+  -- Indent lines
+  use 'lukas-reineke/indent-blankline.nvim'
+
+  -- Bufferline
+  -- using packer.nvim
+  use { 'akinsho/bufferline.nvim',
+    tag = "v3.*",
+    requires = 'nvim-tree/nvim-web-devicons'
   }
 
   -- Bootstrap

@@ -7,8 +7,13 @@ require('user.core.options')
 
 -- Plugins
 require('user.plugins.cmp')
+require('user.plugins.bufferline')
 require('user.plugins.gitsigns')
+require('user.plugins.indent-blankline')
 require('user.plugins.lsp_lines')
 require('user.plugins.mason')
+require('user.plugins.nvim-tree')
 require('user.plugins.packer')
+require('user.plugins.telescope')
+require('user.plugins.treesitter')
 -- require Python snippets
