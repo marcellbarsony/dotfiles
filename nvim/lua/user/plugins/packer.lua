@@ -171,11 +171,13 @@ return packer.startup(function(use)
   use 'lukas-reineke/indent-blankline.nvim'
 
   -- Bufferline
-  -- using packer.nvim
   use { 'akinsho/bufferline.nvim',
     tag = "v3.*",
     requires = 'nvim-tree/nvim-web-devicons'
   }
+
+  -- Lspsaga
+  use { 'glepnir/lspsaga.nvim' }
 
   -- Bootstrap
   -- Set up configuration after cloning packer.nvim

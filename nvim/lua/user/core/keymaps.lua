@@ -21,17 +21,19 @@ vim.g.maplocalleader = "\\"
 
 -- Nvim core
 map('n', '<leader>r', ':so %<CR>') -- Reload
+map('n', '<leader>w', ':w<CR>') -- Save current
+map('n', '<leader>W', ':wall<CR>') -- Save all
+map('n', '<leader>wq', ':wq<CR>') -- Save & Quit
 map('n', '<leader>q', ':q!<CR>') -- Quit
+map('n', '<ESC>', '') -- Unmap <C-[> in normal mode
 
 -- Search
 map('n', '*', '*N') -- Fix *: don't move to next match
+map('n', '<leader>c', ':nohl<CR>') -- Clear highlighting
 --map('n', 'n', 'nzz') -- Fix n: keep cursor in center
 --map('n', 'N', 'Nzz') -- Fix N: keep cursor in center
-map('n', '<leader>c', ':nohl<CR>') -- Clear highlighting
 
 -- Buffers
-map('n', '<leader>w', ':update<CR>') -- Save current
-map('n', '<leader>W', ':wall<CR>') -- Save all
 map('n', '<C-]>', ':bn<CR>') -- Move to next
 map('n', '<C-[>', ':bp<CR>') -- Move to prev
 map('n', "<C-'>", ':b#<CR>') -- Move to last
@@ -46,7 +48,7 @@ map('n', '<C-l>', '<C-w>l') -- Move right
 --map('n', '<C-K', ':resize -2<CR>') -- Resize up
 --map('n', '<C-J>', ':resize +2<CR>') -- Resize down
 --map('n', '<C-H>', ':vertical resize -2<CR>') -- Resize left
---map('n', '<C-j', ':vertical resize +2<CR>') -- Resize right
+--map('n', '<C-J>', ':vertical resize +2<CR>') -- Resize right
 
 -- File manager
 --map('n', '<leader>t', ':Lex 30<CR>') -- Toggle Netrw
@@ -70,11 +72,8 @@ map('i', '<C-E>', '<ESC>A')
 map('o', 'A', ':<C-U>normal! mzggVG<CR>`z')
 map('x', 'A', ':<C-U>normal! ggVG<CR>')
 
--- INSERT --
-map('i', 'qq', '<Esc>') -- Escape
-
 -- VISUAL --
-map('v', "<", '<gv') -- Indent left
-map('v', ">", '>gv') -- Indent right
-map("x", "K", ":move '<-2<CR>gv-gv") -- Move block up
-map("x", "J", ":move '>+1<CR>gv-gv") -- Move block down
+map('v', '<', '<gv') -- Indent left
+map('v', '>', '>gv') -- Indent right
+map('x', 'K', ":move '<-2<CR>gv-gv") -- Move block up
+map('x', 'J', ":move '>+1<CR>gv-gv") -- Move block down
