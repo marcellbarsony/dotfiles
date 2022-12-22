@@ -19,8 +19,9 @@ flameshot/
 # GitHub
 gh/
 
-# NeoVim
+# Nvim
 nvim/plugin/
+nvim/lua/.luarc.json
 
 # Pulse Audio
 pulse/

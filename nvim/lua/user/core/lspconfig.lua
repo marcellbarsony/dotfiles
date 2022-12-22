@@ -5,9 +5,10 @@
 -- Require servers
 local nvim_lsp = require('lspconfig')
 local servers = {
+  'bashls',
   'pyright',
   'pylsp',
-  --'sumneko_lua',
+  'sumneko_lua',
 }
 
 for _, lsp in ipairs(servers) do

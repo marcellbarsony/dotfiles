@@ -1,4 +1,4 @@
--- CMP
+-- nvim-cmp
 -- https://github.com/hrsh7th/nvim-cmp
 
 -- Require
@@ -72,29 +72,24 @@ cmp.setup({
     entries = "custom", selection_rder = "near_cursor" -- custom/wildmenu/native
   },
 
-  -- Mapping (default)
---  mapping = cmp.mapping.preset.insert({
---    ['<C-Space>'] = cmp.mapping.complete(),
---    ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept selected item. Set `false` to confirm explicitly selected items.
---  }),
-
   -- Mapping (nvim-cmp ultisnips + cmp-cmdline)
   mapping = {
-    ['<CR>'] = cmp.mapping({
-      -- Accept currently selected item. Set to false to confirm excplicitly selected items only
-      i = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
-      -- When completion menu is visible select completion or expand snippet, else <CR>
-      -- i = cmp.mapping.confirm({ select = false }),
-      -- When completion menu is visible select completion only, don't accept line, else <CR>
-      c = function(fallback)
-        if cmp.visible() then
-          -- Accept selected item
-          cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false })
-        else
-          fallback()
-        end
-      end
-    }),
+    ['<CR>'] = cmp.mapping.confirm({ select = false }), -- Accept selected item. Set 'false' to confirm explicitly selected items.
+    -- ['<CR>'] = cmp.mapping({
+    --   -- Accept currently selected item. Set 'false' to confirm excplicitly selected items only
+    --   i = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false }),
+    --   -- When completion menu is visible select completion or expand snippet, else <CR>
+    --   -- i = cmp.mapping.confirm({ select = false }),
+    --   -- When completion menu is visible select completion only, don't accept line, else <CR>
+    --   c = function(fallback)
+    --     if cmp.visible() then
+    --       -- Accept selected item
+    --       cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false })
+    --     else
+    --       fallback()
+    --     end
+    --   end
+    -- }),
     ["<Tab>"] = cmp.mapping({
       c = function()
         if cmp.visible() then
@@ -188,6 +183,7 @@ cmp.setup({
     ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), {'i', 'c'}),
     ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), {'i', 'c'}),
     ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), {'i', 'c'}),
+    -- ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping({ i = cmp.mapping.close(), c = cmp.mapping.close() }),
 
       -- ... Additional configuration ...
@@ -197,9 +193,9 @@ cmp.setup({
 
   -- Sources
   sources = cmp.config.sources({
-    { name = 'ultisnips' }, -- For ultisnips users.
-    { name = 'nvim_lsp' },
-    { name = 'buffer' },
+    { name = 'ultisnips', max_item_count = 5 }, -- For ultisnips users.
+    { name = 'nvim_lsp', max_item_count = 5 },
+    { name = 'buffer', keyword_length = 3 , max_item_count = 3 },
   }),
 
   -- Formatting
@@ -257,9 +253,10 @@ cmp.setup.cmdline(':', {
 -- lspconfig setup
 local nvim_lsp = require('lspconfig')
 local servers = {
+  'bashls',
   'pyright',
   'pylsp',
-  --'sumneko_lua',
+  'sumneko_lua',
 }
 
 -- Advertise server capabilities

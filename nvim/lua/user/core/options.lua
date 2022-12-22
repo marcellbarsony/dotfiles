@@ -58,12 +58,13 @@ local options = {
   -- Better editing experience
   expandtab = true,
   wrap = true,
-  textwidth = 300,
+  textwidth = 100,
   tabstop = 2,
   shiftwidth = 2,
   softtabstop = -1, -- If negative, shiftwidth value is used
   list = true,
   listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂',
+  --virtualedit = all,
 
   -- Makes neovim and host OS clipboard play nicely with each other
   clipboard = 'unnamedplus',

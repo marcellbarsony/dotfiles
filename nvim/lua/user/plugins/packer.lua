@@ -1,7 +1,28 @@
 -- Packer
 -- https://github.com/wbthomason/packer.nvim
 
--- Autocmd (compile plugins)
+-- Variables
+local fn = vim.fn
+local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
+local packer = require("packer")
+
+-- Automatically install packer
+---@diagnostic disable-next-line: missing-parameter
+if fn.empty(fn.glob(install_path)) > 0 then
+  PACKER_BOOTSTRAP = fn.system {
+    "git",
+    "clone",
+    "--depth",
+    "1",
+    "https://github.com/wbthomason/packer.nvim",
+    install_path,
+  }
+  print "Installing Packer.nvim. Restart Neovim..."
+  vim.cmd [[packadd packer.nvim]]
+end
+
+-- Autocmd: compile plugins on write
+-- PackerSync / PackerCompile
 vim.cmd([[
   augroup packer_user_config
     autocmd!
@@ -9,13 +30,13 @@ vim.cmd([[
   augroup end
 ]])
 
-local packer = require("packer")
-
--- Protected call (no error)
---local status_ok, packer = pcall(require, "packer")
---if not status_ok then
---  return
---end
+-- Protected call
+local status_ok, packer = pcall(require, "packer")
+if not status_ok then
+  vim.notify('Packer.nvim failed to load')
+  vim.notify('Please check packer.lua')
+  return
+end
 
 -- Packer init
 packer.init {
@@ -88,7 +109,6 @@ packer.init {
   autoremove = false, -- Remove disabled or unused plugins without prompting the user
 }
 
-
 -- Required if packer is configured as `opt`
 --vim.cmd [[packadd packer.nvim]]
 
@@ -131,7 +151,7 @@ return packer.startup(function(use)
   })
 
   -- Gitsigns
-  use 'lewis6991/gitsigns.nvim'
+  use { 'lewis6991/gitsigns.nvim' }
 
   -- Snippets
   use { 'SirVer/ultisnips', -- Snippet engine
@@ -152,7 +172,7 @@ return packer.startup(function(use)
       'BurntSushi/ripgrep'
     } }
   }
- 
+
   -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
@@ -178,6 +198,9 @@ return packer.startup(function(use)
 
   -- Lspsaga
   use { 'glepnir/lspsaga.nvim' }
+
+  -- Startuptime [Vim Script]
+  use { 'dstein64/vim-startuptime' }
 
   -- Bootstrap
   -- Set up configuration after cloning packer.nvim
