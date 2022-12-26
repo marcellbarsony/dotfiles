@@ -1,5 +1,5 @@
 # Default programs
-export TERMINAL="alacritty"
+export TERMINAL="kitty"
 export EDITOR="nvim"
 export VISUAL="nvim"
 export BROWSER="Librewolf"
@@ -26,6 +26,9 @@ export XINITRC="$HOME/.config/x11/"
 # export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 # set viminfofile=$XDG_CONFIG_HOME/nvim/viminfo
 
+# NVM
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+
 # Python
 export PATH="/usr/lib/python3.10/site-packages:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
@@ -43,7 +46,7 @@ export PATH=/home/marci/.local/share/cargo/bin:$PATH
 export PATH=$HOME/.local/git/scripts:$PATH
 export PATH=$HOME/.local/git/scripts/malware/ransomware:$PATH
 
-# Fix prompt issue
+# Fix prompt
 export LC_CTYPE=en_US.UTF-8
 
 # Disable files
