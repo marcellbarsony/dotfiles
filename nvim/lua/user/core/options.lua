@@ -21,9 +21,20 @@ local options = {
   buflisted = true,
   buftype = '',
 
+  -- Buffer split
+  splitright = true,
+  splitbelow = true,
+
+  -- Cache
+  undofile = true,
+  swapfile = false,
+
   -- Colors
   background = 'dark',
   termguicolors = true,
+
+  -- Command history
+  history = 50,
 
   -- Command line
   cdhome = true,
@@ -44,18 +55,19 @@ local options = {
   autowriteall = false,
 
   -- Decrease update time
-  timeoutlen = 500,
+  timeoutlen = 500, -- Which-key.nvim
   updatetime = 200,
-
-  -- Number of screen lines to keep above and below the cursor
-  scrolloff = 999,
 
   -- Line number
   number = true,
   numberwidth = 3,
   relativenumber = true,
 
-  -- Better editing experience
+  -- Number of screen lines to keep above and below the cursor
+  scrolloff = 999,
+
+
+  -- Editing experience
   expandtab = true,
   wrap = true,
   textwidth = 100,
@@ -73,15 +85,8 @@ local options = {
   ignorecase = true,
   smartcase = true,
 
-  undofile = true,
-  swapfile = false,
-
-  -- Command line history
-  history = 50,
-
-  -- Buffer splitting
-  splitright = true,
-  splitbelow = true,
+  -- Statusline
+  laststatus = 3, -- Global
 
 }
 

@@ -82,7 +82,7 @@ saga.init_lsp_saga({
   },
   -- show outline
   show_outline = {
-    win_position = 'right',
+   win_position = 'right',
     --set special filetype win that outline window split.like NvimTree neotree
     -- defx, db_ui
     win_with = '',
@@ -112,10 +112,10 @@ end
 
 
 -- lspsaga
-map('n', 'gh', '<cmd>Lspsaga lsp_finder<CR>') -- Lsp finder
+map('n', '<leader>gh', '<cmd>Lspsaga lsp_finder<CR>') -- Lsp finder
 map('n', '<leader>ca', '<cmd>Lspsaga code_action<CR>') -- Code actions
 map('n', '<leader>r', '<cmd>Lspsaga rename<CR>') -- Rename variable
-map('n', 'gd', '<cmd>Lspsaga peek_definition<CR>') -- Go to definition
+map('n', '<leader>gd', '<cmd>Lspsaga peek_definition<CR>') -- Go to definition
 --map('n', '<leader>cd', '<cmd>Lspsaga show_line_diagnostics<CR>') -- Diagnostics (line)
 --map('n', '<leader>cd', '<cmd>Lspsaga show_cursor_diagnostics<CR>') -- Diagnostics (cursor)
 map('n', '<leader>a', '<cmd>Lspsaga outline<CR>') -- Project outline

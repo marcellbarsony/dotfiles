@@ -1,6 +1,10 @@
 -- Colorscheme
 -- https://github.com/folke/tokyonight.nvim
 
+-- Split separator line higlight group
+-- higlight WinSeparator guibg=None
+
+-- TokyoNight
 require("tokyonight").setup({
   style = "night", -- storm/moon/night/day
   light_style = "day", -- Light background theme

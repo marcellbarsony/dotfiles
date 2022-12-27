@@ -199,8 +199,14 @@ return packer.startup(function(use)
   -- Lspsaga
   use { 'glepnir/lspsaga.nvim' }
 
+  -- Null-ls
+  use 'jose-elias-alvarez/null-ls.nvim'
+
+  -- Which key
+  use 'folke/which-key.nvim'
+
   -- Startuptime [Vim Script]
-  use { 'dstein64/vim-startuptime' }
+  --use { 'dstein64/vim-startuptime' }
 
   -- Bootstrap
   -- Set up configuration after cloning packer.nvim

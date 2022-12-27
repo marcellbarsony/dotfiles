@@ -1,8 +1,8 @@
 -- Null-ls.nvim
+null_ls = require("null-ls")
 
--- Setup
-require("null-ls").setup({
-    sources = {
-        require("null-ls").builtins.formatting.black,
-    },
+null_ls.setup({
+  sources = {
+  
+  },
 })
