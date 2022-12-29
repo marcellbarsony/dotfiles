@@ -29,11 +29,11 @@ saga.init_lsp_saga({
   code_action_num_shortcut = true,
   -- same as nvim-lightbulb but async
   code_action_lightbulb = {
-      enable = true,
-      enable_in_insert = true,
+      enable = false,
+      enable_in_insert = false,
       cache_code_action = true,
       sign = true,
-      update_time = 300,
+      update_time = 250,
       sign_priority = 20,
       virtual_text = true,
   },
@@ -70,7 +70,7 @@ saga.init_lsp_saga({
   -- if in_cusomt = true you must set in_enable to false
   symbol_in_winbar = {
       in_custom = false,
-      enable = true,
+      enable = false, -- Toggle
       separator = '  ',
       show_file = true,
       -- define how to customize filename, eg: %:., %

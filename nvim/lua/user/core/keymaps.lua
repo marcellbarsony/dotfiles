@@ -16,16 +16,12 @@ end
 --  term_mode = "t",
 --  command_mode = "c",
 
-
-
 -- Leader
 map("n", "<Bslash>", "", { desc = 'LEADER'})
 vim.g.mapleader = "\\"
 vim.g.maplocalleader = "\\"
---map("n", "<C-Space>", "<cmd>WhichKey \\<leader><cr>")
---map("n", "<C-i>", "<C-i>")
 
----- Disable arrow keys
+-- Disable arrow keys
 map('', '<up>', '<nop>')
 map('', '<down>', '<nop>')
 map('', '<left>', '<nop>')
@@ -33,10 +29,10 @@ map('', '<right>', '<nop>')
 
 -- Nvim core
 map('n', '<leader>r', ':so %<CR>', { desc = 'Reload [BROKEN]'})
-map('n', '<leader>w', ':w<CR>', { desc = 'w'})
-map('n', '<leader>W', ':wall<CR>', { desc = 'wall'})
-map('n', '<leader>wq', ':wq<CR>', { desc = 'Quit'})
-map('n', '<leader>q', ':q!<CR>', { desc = 'q!'})
+map('n', '<leader>w', ':w<CR>', { desc = 'Write'})
+map('n', '<leader>wa', ':wall<CR>', { desc = 'Write all'})
+map('n', '<leader>wq', ':wq<CR>', { desc = 'Quit' })
+map('n', '<leader>q', ':q!<CR>', { desc = 'Quit' })
 map('n', '<ESC>', '', { desc = 'Unmap <C-[>'})
 
 -- Search

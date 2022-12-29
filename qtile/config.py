@@ -326,10 +326,10 @@ screens = [
                 widget.Systray(),
             ],
             26,
-            border_width = [0, 0, 0, 0],
-            border_color = ["000000", "000000", "", "000000"],
-            background = "#00000099",
-            margin = [3,5,0,5],
+            border_width=[0, 0, 0, 0],
+            border_color=["000000", "000000", "", "000000"],
+            background="#16161E",
+            margin=[3, 5, 0, 5],
         ),
     ),
 
@@ -355,6 +355,8 @@ screens = [
             ],
             24,
             border_width=[0, 2, 0, 2],  # Draw top and bottom borders
+            border_color=["000000", "000000", "", "000000"],
+            background="#16161E99",
         ),
     ),
 ]
