@@ -1,8 +1,11 @@
 -- Keymaps
-local options = { noremap = true, silent = true }
 
-local function map(m, k, v, d)
-  vim.keymap.set(m, k, v, d, options)
+local function map(mode, lhs, rhs, opts)
+  local options = { noremap = true, silent = true }
+  if opts then
+    options = vim.tbl_extend('force', options, opts)
+  end
+  vim.keymap.set(mode, lhs, rhs, options)
 end
 
 -- Modes
@@ -13,6 +16,8 @@ end
 --  term_mode = "t",
 --  command_mode = "c",
 
+
+
 -- Leader
 map("n", "<Bslash>", "", { desc = 'LEADER'})
 vim.g.mapleader = "\\"
@@ -20,17 +25,23 @@ vim.g.maplocalleader = "\\"
 --map("n", "<C-Space>", "<cmd>WhichKey \\<leader><cr>")
 --map("n", "<C-i>", "<C-i>")
 
+---- Disable arrow keys
+map('', '<up>', '<nop>')
+map('', '<down>', '<nop>')
+map('', '<left>', '<nop>')
+map('', '<right>', '<nop>')
+
 -- Nvim core
-map('n', '<leader>r', ':so %<CR>', { desc = 'Reload [BROKEN]'}) -- Reload
-map('n', '<leader>w', ':w<CR>', { desc = 'Write'}) -- Save current
-map('n', '<leader>W', ':wall<CR>', { desc = 'Write all'}) -- Save all
-map('n', '<leader>wq', ':wq<CR>', { desc = 'Write & Quit'}) -- Save & Quit
-map('n', '<leader>q', ':q!<CR>', { desc = 'Quit'}) -- Quit
---map('n', '<ESC>', '', { desc = 'Unmap <C-[>'}) -- Unmap <C-[> in normal mode
+map('n', '<leader>r', ':so %<CR>', { desc = 'Reload [BROKEN]'})
+map('n', '<leader>w', ':w<CR>', { desc = 'w'})
+map('n', '<leader>W', ':wall<CR>', { desc = 'wall'})
+map('n', '<leader>wq', ':wq<CR>', { desc = 'Quit'})
+map('n', '<leader>q', ':q!<CR>', { desc = 'q!'})
+map('n', '<ESC>', '', { desc = 'Unmap <C-[>'})
 
 -- Search
-map('n', '*', '*N', { desc = 'FIX' }) -- Fix *: don't move to next match
-map('n', '<leader>c', ':nohl<CR>', { desc = 'Highlight [Clear]' }) -- Clear highlighting
+map('n', '*', '*N', { desc = 'Find word' }) -- Fix *: don't move to next match
+map('n', '<leader>c', ':nohl<CR>', { desc = 'Nohl' }) -- Clear highlighting
 --map('n', 'n', 'nzz') -- Fix n: keep cursor in center
 --map('n', 'N', 'Nzz') -- Fix N: keep cursor in center
 
@@ -41,8 +52,8 @@ map('n', "<C-'>", ':b#<CR>', { desc = 'Buffer [To last]' }) -- Move to last
 map('n', "<C-q>", ':bdelete<CR>', { desc = 'Buffer [Delete]' }) -- Move to last
 
 -- Splits
-map('n', '<leader>v', ':vsplit<CR>', { desc = 'Split [Vertical]' }) -- Split Vertical
-map('n', '<leader>h', ':split<CR>' , { desc = 'Split [Horizontal]' }) -- Split Horizontal
+map('n', '<leader>sv', ':vsplit<CR>', { desc = 'Split [Vertical]' }) -- Split Vertical
+map('n', '<leader>sh', ':split<CR>' , { desc = 'Split [Horizontal]' }) -- Split Horizontal
 map('n', '<C-k>', '<C-w>k', { desc = 'Split [Up]' }) -- Move up
 map('n', '<C-j>', '<C-w>j', { desc = 'Split [Down]' }) -- Move down
 map('n', '<C-h>', '<C-w>h', { desc = 'Split [Left]' }) -- Move left
@@ -53,13 +64,18 @@ map('n', '<C-l>', '<C-w>l', { desc = 'Split [Right]' }) -- Move right
 --map('n', '<C-J>', ':vertical resize +2<CR>') -- Resize right
 
 -- File manager
---map('n', '<leader>t', ':Lex 30<CR>') -- Toggle Netrw
-map('n', '<leader>t', ':NvimTreeToggle<CR>', { desc = 'NvimTree' }) -- Toggle Nvim-tree.lua
+--map('n', '<leader>t', ':Lex 30<CR>', { desc = 'Netrw', silent = true })
+map('n', '<leader>t', ':NvimTreeToggle<CR>', { desc = 'NvimTree' })
+
+-- Gitsigns
+map('n', '<leader>uu', ':Gitsigns toggle_signs<CR>:Gitsigns toggle_numhl<CR>', { desc = 'Toggle' })
+map('n', '<leader>us', ':Gitsigns toggle_signs<CR>', { desc = 'Signs' })
+map('n', '<leader>un', ':Gitsigns toggle_numhl<CR>', { desc = 'Numhl' })
 
 -- Lines
 -- Reference: https://vim.fandom.com/wiki/Moving_lines_up_or_down
-map('n', '<leader>o', 'o<ESC>', { desc = 'Line [Insert Below]' })
-map('n', '<leader>O', 'O<ESC>', { desc = 'Line [Insert Above]' })
+map('n', '<leader>lb', 'o<ESC>', { desc = 'Line [Insert Below]' })
+map('n', '<leader>la', 'O<ESC>', { desc = 'Line [Insert Above]' })
 map('n', '<J>', ':move .+1<CR>', { desc = 'Line [Move Down]' })
 map('n', '<K>', ':move .-2<CR>', { desc = 'Line [Move Up]' })
 map('x', '<J>', ":move '>+1<CR>gv=gv", { desc = 'Block [Move Down]' })
@@ -70,9 +86,9 @@ map('i', '<C-A>', '<ESC>I', { desc = 'Shell movement' })
 map('i', '<C-E>', '<ESC>A', { desc = 'Shell movement' })
 
 -- System-wide clipboard
-map('n', '<leader>y', '\"+y', { desc = 'Yank [Global]' })
-map('v', '<leader>y', '\"+y', { desc = 'Yank [Global]' })
-map('n', '<leader>y', '\"+Y', { desc = 'Yank [Global]' })
+map('n', '<leader>y', '\"+y', { desc = 'Yank' })
+map('v', '<leader>y', '\"+y', { desc = 'Yank' })
+map('n', '<leader>y', '\"+Y', { desc = 'Yank' })
 
 -- Replace highlighted word
 --map('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])

@@ -55,7 +55,7 @@ local options = {
   autowriteall = false,
 
   -- Decrease update time
-  timeoutlen = 500, -- Which-key.nvim
+  timeoutlen = 250, -- Which-key.nvim
   updatetime = 200,
 
   -- Line number

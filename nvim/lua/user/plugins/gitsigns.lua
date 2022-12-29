@@ -14,8 +14,8 @@ require('gitsigns').setup {
   },
 
   -- Signcolumn
-  signcolumn = true, -- Toggle:`:Gitsigns toggle_signs`
-  numhl      = true, -- Toggle:`:Gitsigns toggle_numhl`
+  signcolumn = false, -- Toggle:`:Gitsigns toggle_signs`
+  numhl      = false, -- Toggle:`:Gitsigns toggle_numhl`
   linehl     = false, -- Toggle:`:Gitsigns toggle_linehl`
   word_diff  = false, -- Toggle:`:Gitsigns toggle_word_diff`
 
@@ -25,7 +25,7 @@ require('gitsigns').setup {
     follow_files = true
   },
 
-  attach_to_untracked = true,
+  attach_to_untracked = false,
   current_line_blame = true, -- Toggle: `:Gitsigns toggle_current_line_blame`
   current_line_blame_opts = {
     virt_text = true,

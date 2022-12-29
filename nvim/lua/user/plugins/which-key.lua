@@ -34,31 +34,31 @@
     },
     icons = {
       breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
-      separator = "➜", -- symbol used between a key and it's label
+      separator = "➜", -- symbol between key and label
       group = "", -- symbol prepended to a group
     },
     popup_mappings = {
-      scroll_down = '<c-d>', -- binding to scroll down inside the popup
-      scroll_up = '<c-u>', -- binding to scroll up inside the popup
+      scroll_down = '<c-j>',
+      scroll_up = '<c-k>',
     },
     window = {
-      border = "single", -- none, single, double, shadow
+      border = "none", -- none, single, double, shadow
       position = "bottom", -- bottom, top
-      margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
+      margin = { 0, 0, 0, 0 }, -- extra window margin [top, right, bottom, left]
       padding = { 1, 1, 1, 1 }, -- extra window padding [top, right, bottom, left]
       winblend = 0
     },
     layout = {
-      height = { min = 5, max = 200 }, -- min and max height of the columns
-      width = { min = 20, max = 200 }, -- min and max width of the columns
+      height = { min = 5, max = 20 }, -- min and max height of the columns
+      width = { min = 20, max = 100 }, -- min and max width of the columns
       spacing = 5, -- spacing between columns
       align = "center", -- align columns left, center or right
     },
     ignore_missing = false, -- enable this to hide mappings for which you didn't specify a label
     hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ "}, -- hide mapping boilerplate
-    show_help = true, -- show help message on the command line when the popup is visible
-    show_keys = true, -- show the currently pressed key and its label as a message in the command line
-    triggers = "auto", -- automatically setup triggers
+    show_help = false,
+    show_keys = true,
+    triggers = "auto",
     -- triggers = {"<leader>"} -- or specify a list manually
     triggers_blacklist = {
       -- list of mode / prefixes that should never be hooked by WhichKey
@@ -91,6 +91,11 @@ local opts = {
 local mappings = {
 
   -- Normal mode
+  ['['] = { name = "" },
+  [']'] = { name = "" },
+  g = { name = "Goto" },
+  v = { name = "VISUAL Mode" },
+  y = { name = "Yank" },
 
   -- Leader
   ["<leader>"] = {
@@ -98,7 +103,20 @@ local mappings = {
     -- Lspsaga
     g = {
       name = "Lspsaga",
-      d = { "Peek definition" },
+      a = { "Code action" },
+      d = { "Definition" },
+      f = { "Finder" },
+      k = { "Documentation" },
+      o = { "Outline" },
+      r = { "Rename" },
+      t = { "Terminal" },
+    },
+
+    -- Line
+    l = {
+      name = "Line",
+      a = { "Insert [Above]" },
+      b = { "Insert [Below]" },
     },
 
     -- Packer
@@ -110,6 +128,19 @@ local mappings = {
       S = { "<cmd>PackerStatus<cr>", "Status" },
       u = { "<cmd>PackerUpdate<cr>", "Update" },
     },
+
+    -- Split
+    s = {
+      name = "Split",
+      h = { "Horizontal" },
+      v = { "Vertical" },
+    },
+
+      -- Gitsigns
+    u = {
+      name = "Gitsigns",
+    },
+
 
   }
 }
