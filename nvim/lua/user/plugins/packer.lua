@@ -211,6 +211,9 @@ return packer.startup(function(use)
   --use 'feline-nvim/feline.nvim'
   --use 'windwp/windline.nvim'
 
+  -- Auto pair
+  use 'windwp/nvim-autopairs'
+
   -- Startuptime [Vim Script]
   --use { 'dstein64/vim-startuptime' }
 

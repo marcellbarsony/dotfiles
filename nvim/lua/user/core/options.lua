@@ -6,8 +6,6 @@ local options = {
   binary = false,
   breakindent = true,
   browsedir = 'current',
-  clipboard = '',
-
 
   -- Backup
   backup = false,
@@ -29,6 +27,9 @@ local options = {
   undofile = true,
   swapfile = false,
 
+  -- Clipboard
+  clipboard = 'unnamedplus',
+
   -- Colors
   background = 'dark',
   termguicolors = true,
@@ -49,14 +50,13 @@ local options = {
   --o.cinscopecls = 'public,protected,private',
   smartindent = false,
 
+  -- Mode
+  showmode = false,
+
   -- R/W
   autoread = true,
   autowrite = false,
   autowriteall = false,
-
-  -- Decrease update time
-  timeoutlen = 250, -- Which-key.nvim
-  updatetime = 200,
 
   -- Line number
   number = true,
@@ -78,15 +78,16 @@ local options = {
   listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂',
   --virtualedit = all,
 
-  -- Makes neovim and host OS clipboard play nicely with each other
-  clipboard = 'unnamedplus',
-
   -- Case insensitive searching UNLESS /C or capital in search
   ignorecase = true,
   smartcase = true,
 
   -- Statusline
   laststatus = 3, -- Global
+
+  -- Update time
+  timeoutlen = 250, -- Which-key.nvim
+  updatetime = 200,
 
 }
 
