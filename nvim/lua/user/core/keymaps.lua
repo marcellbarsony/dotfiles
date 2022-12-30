@@ -77,6 +77,9 @@ map('n', '<K>', ':move .-2<CR>', { desc = 'Line [Move Up]' })
 map('x', '<J>', ":move '>+1<CR>gv=gv", { desc = 'Block [Move Down]' })
 map('x', '<K>', ":move '<-2<CR>gv=gv", { desc = 'Block [Move Up]' })
 
+-- Lsp lines
+map('n', '<leader>d', require('lsp_lines').toggle, { desc = 'Diagnostics' })
+
 -- Shell movements
 map('i', '<C-A>', '<ESC>I', { desc = 'Shell movement' })
 map('i', '<C-E>', '<ESC>A', { desc = 'Shell movement' })

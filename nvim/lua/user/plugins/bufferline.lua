@@ -1,5 +1,7 @@
 -- Bufferline
 -- https://github.com/akinsho/bufferline.nvim
+-- :h bufferline-configuration
+
 
 require('bufferline').setup {
   options = {
@@ -13,7 +15,7 @@ require('bufferline').setup {
 
     -- Icons
     show_buffer_icons = true,
-    show_buffer_close_icons = true,
+    show_buffer_close_icons = false,
     show_close_icon = false,
     indicator = "│",
     close_icon = "",
@@ -33,14 +35,25 @@ require('bufferline').setup {
     diagnostics_update_in_insert = true,
     show_tab_indicators = false,
 
-    -- Offset
-    offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
+    -- Sidebar offset
+    offsets = {
+      {
+        filetype = "NvimTree",
+        text = "",
+        highlight = "Directory",
+        padding = 1,
+      }
+    },
+
     persist_buffer_sort = true,             -- whether or not custom sorted buffers should persist
     separator_style = "thin",               -- | "thick" | "thin" | { 'any', 'any' },
 
     -- Bufferline
     always_show_bufferline = true,
     enforce_regular_tabs = true,
+
+    -- Sorting
+    sort_by = "insert_at_end",
 
     },
 

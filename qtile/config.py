@@ -11,26 +11,29 @@ from libqtile.lazy   import lazy
 
 mod = "mod4"
 mod1 = "mod1"
-browser= "librewolf"
+browser = "librewolf"
 terminal = "kitty"
 menu = "rofi -show drun"
-#menu = "dmenu_run"
+# menu = "dmenu_run"
 
 # Colors
 
-primary = '#0000AA'
+primary = '#9A79E6'
 
 # Functions
+
 
 def window_to_prev_group(qtile):
     if qtile.currentWindow is not None:
         i = qtile.groups.index(qtile.currentGroup)
         qtile.currentWindow.togroup(qtile.groups[i - 1].name)
 
+
 def window_to_next_group(qtile):
     if qtile.currentWindow is not None:
         i = qtile.groups.index(qtile.currentGroup)
         qtile.currentWindow.togroup(qtile.groups[i + 1].name)
+
 
 def window_to_previous_screen(qtile):
     i = qtile.screens.index(qtile.current_screen)
@@ -38,11 +41,13 @@ def window_to_previous_screen(qtile):
         group = qtile.screens[i - 1].group.name
         qtile.current_window.togroup(group)
 
+
 def window_to_next_screen(qtile):
     i = qtile.screens.index(qtile.current_screen)
     if i + 1 != len(qtile.screens):
         group = qtile.screens[i + 1].group.name
         qtile.current_window.togroup(group)
+
 
 def switch_screens(qtile):
     i = qtile.screens.index(qtile.current_screen)
@@ -50,6 +55,7 @@ def switch_screens(qtile):
     qtile.current_screen.set_group(group)
 
 # Keys
+
 
 keys = [
 
@@ -121,7 +127,8 @@ keys = [
 
 # Workspaces [named]
 
-#group_names = ' 1 2 3 4 5'.split()
+
+# group_names = ' 1 2 3 4 5'.split()
 group_names = ' 一 二 三 四 五'.split()
 groups = [Group(name, layout='max') for name in group_names]
 
@@ -163,22 +170,22 @@ layouts = [
     #),
     # Columns
     layout.Columns(
-        border_focus = [primary],
-        border_focus_stack = [primary, primary],
-        border_normal = ['#222255'],
-        border_normal_stack = [primary],
-        border_on_single = False,
-        border_width = 3,
-        grow_amount = 10,
-        insert_position = 0,
-        ##margin = ["10", "5", "20", "40"]
-        margin = 3,
-        margin_on_single = 5,
-        num_columns = 2,
-        split = True,
-        wrap_focus_columns = True,
-        wrap_focus_rows = True,
-        wrap_focus_stacks = True,
+        border_focus=[primary],
+        border_focus_stack=[primary, primary],
+        border_normal=['#222255'],
+        border_normal_stack=[primary],
+        border_on_single=False,
+        border_width=3,
+        grow_amount=10,
+        insert_position=0,
+        ##margin=["10", "5", "20", "40"]
+        margin=3,
+        margin_on_single=5,
+        num_columns=2,
+        split=True,
+        wrap_focus_columns=True,
+        wrap_focus_rows=True,
+        wrap_focus_stacks=True,
         ),
     # Floating
     #layout.Floating(
@@ -212,6 +219,7 @@ layouts = [
 
 # Drag floating layouts
 
+
 mouse = [
     Drag([mod], "Button1", lazy.window.set_position_floating(), start=lazy.window.get_position()),
     Drag([mod], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size()),
@@ -220,10 +228,12 @@ mouse = [
 
 # Mouse callbacks
 
+
 def open_sysmonitor():
     qtile.cmd_spawn('alacritty -e bpytop')
 
 # Widgets
+
 
 widget_defaults = dict(
     font="sans",
@@ -238,92 +248,94 @@ screens = [
 
     # Screen 0: DP-1
     Screen(
-        top=bar.Bar(
-            [
-                widget.AGroupBox(
-                    borderwidth=3,
-                    center_aligne=True,
-                    disable_drag=True,
-                    highlight_method='line',
-                    margin=5,
-                    padding=0,
-                    rounded=False
-                    ),
-                widget.GroupBox(
-                    borderwidth=3,
-                    center_aligne=True,
-                    disable_drag=True,
-                    highlight_method='line',
-                    margin=3,
-                    rounded=False
-                    ),
-                widget.CurrentLayoutIcon(
-                    fmt = '{}',
-                    padding = 5,
-                    scale = 0.70,
-                    ),
-                widget.CurrentLayout(),
-                widget.Prompt(),
-                widget.WindowName(),
-
-                #widget.ThermalSensor(),
-                #widget.TaskList(),
-                #widget.Net(),
-                #widget.Volume(),
-                widget.DF(),
-                widget.Sep(),
-                widget.WidgetBox(
-                    widgets=[
-                        widget.TextBox(
-                            button_location = 'right',
-                            ),
-                        widget.OpenWeather(
-                            location = 'Budapest',
-                            format = '{location_city}: {main_temp}°{units_temperature} - {weather_details} {icon}',
-                            update_interval = 600
-                            ),
-                    ]
+        top=bar.Bar([
+            #widget.AGroupBox(
+            #    borderwidth=3,
+            #    center_aligne=True,
+            #    disable_drag=True,
+            #    highlight_method='line',
+            #    margin=5,
+            #    padding=0,
+            #    rounded=False
+            #    ),
+            widget.GroupBox(
+                active=primary,
+                borderwidth=3,
+                center_aligne=True,
+                disable_drag=True,
+                highlight_method='block',
+                highlight_color=['26262E', '26262E'],
+                foreground='ffffff',
+                margin=3,
+                rounded=False
                 ),
-                widget.Sep(),
-                widget.CheckUpdates(
-                    colour_have_updates = '22EE44',
-                    display_format = "{updates}",
-                    distro = 'Arch_Sup',
-                    initial_text = 'Checking updates...',
-                    no_update_string = "No updates",
-                    update_interval = 3600,
-                    ),
-                widget.Sep(),
-                # Active screen
-                widget.CurrentScreen(),
-                widget.Sep(),
-                # CPU
-                widget.CPU(
-                    format = 'CPU: {load_percent}%',
-                    mouse_callbacks = {'Button1': open_sysmonitor},
-                    update_interval = 10
-                    ),
-                widget.Sep(),
-                # RAM
-                widget.Memory(
-                    #format='{MemUsed: .0f}{mm} /{MemTotal: .0f}{mm}',
-                    format = 'RAM: {MemUsed:.0f}{mm}',
-                    mouse_callbacks = {'Button1': open_sysmonitor},
-                    update_interval = 10
-                    ),
-                widget.Sep(),
-                # Battery
-                widget.Battery(
-                    format = 'BAT: {percent:2.0%}'
-                    ),
-                widget.Sep(),
-                # Time & Date
-                widget.Clock(
-                    format = '%I:%M %p',
-                    update_interval = 60
-                    ),
-                # System tray
-                widget.Systray(),
+            widget.CurrentLayoutIcon(
+                fmt='{}',
+                padding=5,
+                scale=0.70,
+                ),
+            widget.CurrentLayout(),
+            widget.Prompt(),
+            widget.WindowName(),
+
+            # widget.ThermalSensor(),
+            # widget.TaskList(),
+            # widget.Net(),
+            # widget.Volume(),
+            widget.DF(),
+            widget.Sep(),
+            widget.WidgetBox(
+                widgets=[
+                    widget.TextBox(
+                        button_location='right',
+                        ),
+                    widget.OpenWeather(
+                        location='Budapest',
+                        format='{location_city}: {main_temp}°{units_temperature} - {weather_details} {icon}',
+                        update_interval=600
+                        ),
+                ]
+            ),
+            widget.Sep(),
+            widget.CheckUpdates(
+                colour_have_updates='22EE44',
+                display_format="{updates}",
+                distro='Arch_Sup',
+                initial_text='Checking updates...',
+                no_update_string="No updates",
+                update_interval=3600,
+                ),
+            widget.Sep(),
+            # Active screen
+            widget.CurrentScreen(),
+            widget.Sep(),
+            # CPU
+            widget.CPU(
+                format='CPU: {load_percent}%',
+                mouse_callbacks={'Button1': open_sysmonitor},
+                update_interval=10
+                ),
+            widget.Sep(),
+            # RAM
+            widget.Memory(
+                # format='{MemUsed: .0f}{mm} /{MemTotal: .0f}{mm}',
+                format='RAM: {MemUsed:.0f}{mm}',
+                mouse_callbacks={'Button1': open_sysmonitor},
+                update_interval=10
+                ),
+            widget.Sep(),
+            # Battery
+            widget.Battery(
+                format='BAT: {percent:2.0%}'
+                ),
+            widget.Sep(),
+            # Time & Date
+            widget.Clock(
+                format='%I:%M %p',
+                update_interval=60
+                ),
+            # System tray
+            widget.Systray(),
             ],
             26,
             border_width=[0, 0, 0, 0],
@@ -335,33 +347,34 @@ screens = [
 
     # Screen 1: HDMI-2
     Screen(
-        top=bar.Bar(
-            [
-                widget.CurrentLayout(),
-                widget.GroupBox(),
-                widget.Prompt(),
-                widget.WindowName(),
-                widget.Chord(
-                    chords_colors={ "launch": ("#ff0000", "#ffffff"), },
-                    name_transform=lambda name: name.upper(),
+        top=bar.Bar([
+            widget.CurrentLayout(),
+            widget.GroupBox(),
+            widget.Prompt(),
+            widget.WindowName(),
+            widget.Chord(
+                chords_colors={"launch": ("#ff0000", "#ffffff"), },
+                name_transform=lambda name: name.upper(),
+            ),
+            # Time & Date
+            widget.Clock(
+                format="%b-%d %a %I:%M %p",
+                update_interval=60
                 ),
-                # Time & Date
-                widget.Clock(
-                    format="%b-%d %a %I:%M %p",
-                    update_interval=60
-                    ),
-                # Quick exit
-                widget.QuickExit(),
+            # Quick exit
+            widget.QuickExit(),
             ],
-            24,
-            border_width=[0, 2, 0, 2],  # Draw top and bottom borders
+            26,
+            border_width=[0, 0, 0, 0],
             border_color=["000000", "000000", "", "000000"],
-            background="#16161E99",
+            background="#16161E",
+            margin=[3, 5, 0, 5],
         ),
     ),
 ]
 
 # Hooks
+
 
 @hook.subscribe.startup_once
 def autostart():
@@ -369,6 +382,7 @@ def autostart():
     subprocess.Popen([home])
 
 # Configuration variables
+
 
 auto_fullscreen = True
 auto_minimize = False

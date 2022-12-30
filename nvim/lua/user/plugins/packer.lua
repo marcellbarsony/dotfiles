@@ -205,6 +205,12 @@ return packer.startup(function(use)
   -- Which key
   use 'folke/which-key.nvim'
 
+  -- Status line
+  use 'nvim-lualine/lualine.nvim'
+  --use 'glepnir/galaxyline.nvim'
+  --use 'feline-nvim/feline.nvim'
+  --use 'windwp/windline.nvim'
+
   -- Startuptime [Vim Script]
   --use { 'dstein64/vim-startuptime' }
 
