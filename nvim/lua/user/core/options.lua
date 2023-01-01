@@ -1,3 +1,7 @@
+-- Options
+-- https://neovim.io/doc/user/options.html
+-- https://neovim.io/doc/user/quickref.html
+
 local options = {
 
   allowrevins = false,
@@ -42,6 +46,10 @@ local options = {
   --o.cedit = 'CTRL-F',
   cmdheight = 2,
 
+  -- Cursor
+  cursorcolumn = false,
+  cursorline = false,
+
   -- Indentation
   autoindent = false,
   cindent = true,
@@ -69,7 +77,7 @@ local options = {
 
   -- Editing experience
   expandtab = true,
-  wrap = true,
+  wrap = false,
   textwidth = 100,
   tabstop = 2,
   shiftwidth = 2,
@@ -98,5 +106,6 @@ for key, value in pairs(options) do
     vim.opt[key] = value
 end
 
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+-- Netrw
+--vim.g.loaded_netrw = 1
+--vim.g.loaded_netrwPlugin = 1

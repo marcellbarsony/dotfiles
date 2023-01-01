@@ -33,7 +33,6 @@ alias .5='cd ../../../../..'
 alias nf='neofetch'
 
 # NeoVim
-alias v='nvim'
 alias nv='nvim'
 alias vim='nvim'
 

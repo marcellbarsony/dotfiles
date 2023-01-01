@@ -101,6 +101,11 @@ local mappings = {
   ["<leader>"] = {
 
     -- Lspsaga
+    d = {
+      name = "DAP",
+    },
+
+    -- Lspsaga
     g = {
       name = "Lspsaga",
       a = { "Code action" },

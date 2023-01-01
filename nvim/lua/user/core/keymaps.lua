@@ -28,8 +28,9 @@ map('', '<left>', '<nop>')
 map('', '<right>', '<nop>')
 
 -- Nvim core
-map('n', '<leader>r', ':so %<CR>', { desc = 'Reload [BROKEN]'})
+--map('n', '<leader>r', ':so %<CR>', { desc = 'Reload [BROKEN]'})
 map('n', '<leader>w', ':w<CR>', { desc = 'Write'})
+map('n', '<leader>ww', ':w<CR>', { desc = 'Write current'})
 map('n', '<leader>wa', ':wall<CR>', { desc = 'Write all'})
 map('n', '<leader>wq', ':wq<CR>', { desc = 'Quit' })
 map('n', '<leader>q', ':q!<CR>', { desc = 'Quit' })
@@ -54,10 +55,10 @@ map('n', '<C-k>', '<C-w>k', { desc = 'Split [Up]' }) -- Move up
 map('n', '<C-j>', '<C-w>j', { desc = 'Split [Down]' }) -- Move down
 map('n', '<C-h>', '<C-w>h', { desc = 'Split [Left]' }) -- Move left
 map('n', '<C-l>', '<C-w>l', { desc = 'Split [Right]' }) -- Move right
---map('n', '<C-K', ':resize -2<CR>') -- Resize up
---map('n', '<C-J>', ':resize +2<CR>') -- Resize down
---map('n', '<C-H>', ':vertical resize -2<CR>') -- Resize left
---map('n', '<C-J>', ':vertical resize +2<CR>') -- Resize right
+map('n', '<C-A-k>', ':resize -2<CR>') -- Resize up
+map('n', '<C-A-j>', ':resize +2<CR>') -- Resize down
+map('n', '<C-A-h>', ':vertical resize -2<CR>') -- Resize left
+map('n', '<C-A-l>', ':vertical resize +2<CR>') -- Resize right
 
 -- File manager
 --map('n', '<leader>t', ':Lex 30<CR>', { desc = 'Netrw', silent = true })
@@ -78,7 +79,25 @@ map('x', '<J>', ":move '>+1<CR>gv=gv", { desc = 'Block [Move Down]' })
 map('x', '<K>', ":move '<-2<CR>gv=gv", { desc = 'Block [Move Up]' })
 
 -- Lsp lines
-map('n', '<leader>d', require('lsp_lines').toggle, { desc = 'Diagnostics' })
+map('n', '<leader>ld', require('lsp_lines').toggle, { desc = 'Diagnostics' })
+
+-- DAP
+-- :h dap-api
+-- :h dap-mappings
+map('n', '<leader>5', ":lua require'dap'.continue() <CR>", { desc = 'DAP [Continue]'} )
+map('n', '<leader>3', ":lua require'dap'.step_over() <CR>", { desc = 'DAP [Step over]'} )
+map('n', '<leader>2', ":lua require'dap'.step_into() <CR>", { desc = 'DAP [Step into]'} )
+map('n', '<leader>0', ":lua require'dap'.step_out() <CR>", { desc = 'DAP [Step out]'} )
+map('n', '<leader>b', ":lua require'dap'.toggle_breakpoint() <CR>", { desc = 'Breakpoint'} )
+map('n', '<leader>B', ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: ')) <CR>", { desc = 'Set breakpoint'} )
+map('n', '<leader>dr', ":lua require'dap'.repl.open()<CR>", { desc = 'Repl.Open' })
+map('n', '<leader>dp', ":lua require'dap'.set.breakpoint(nul, nul, vim.fn.input('Log point message: '))<CR>", { desc = 'Set breakpoint with log point message' })
+
+-- DAP-Python
+-- h: dap-python
+map('n', '<leader>dn', ":lua require('dap-python').test_method()<CR>", { desc = 'Py Test method' })
+map('n', '<leader>df', ":lua require('dap-python').test_class()<CR>", { desc = 'Py Test class' })
+map('n', '<leader>ds', ":lua require('dap-python').debug_selection()<CR>", { desc = 'Pyt debug selection' })
 
 -- Shell movements
 map('i', '<C-A>', '<ESC>I', { desc = 'Shell movement' })

@@ -214,7 +214,19 @@ return packer.startup(function(use)
   -- Auto pair
   use 'windwp/nvim-autopairs'
 
-  -- Startuptime [Vim Script]
+  -- Greeter
+  use 'goolord/alpha-nvim'
+
+  -- Debug (DAP)
+  use 'mfussenegger/nvim-dap'
+  use 'mfussenegger/nvim-dap-python' -- Python
+  use 'rcarriga/nvim-dap-ui' -- UI
+  use 'theHamsta/nvim-dap-virtual-text' -- Virtual text
+  use 'nvim-telescope/telescope-dap.nvim' -- Telescope
+
+  -- VIM Script
+
+  -- Startuptime
   --use { 'dstein64/vim-startuptime' }
 
   -- Bootstrap

@@ -43,7 +43,7 @@ spotify-tui/.spotify_token_cache.json
 spotifyd/spotifyd.conf
 
 # VSCodium
-# vscodium/
+VSCodium/
 
 # wal
 wal/
