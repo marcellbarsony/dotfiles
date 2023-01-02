@@ -26,7 +26,7 @@ require('gitsigns').setup {
   },
 
   attach_to_untracked = false,
-  current_line_blame = true, -- Toggle: `:Gitsigns toggle_current_line_blame`
+  current_line_blame = false, -- Toggle: `:Gitsigns toggle_current_line_blame`
   current_line_blame_opts = {
     virt_text = true,
     virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'

@@ -65,9 +65,10 @@ map('n', '<C-A-l>', ':vertical resize +2<CR>') -- Resize right
 map('n', '<leader>t', ':NvimTreeToggle<CR>', { desc = 'NvimTree' })
 
 -- Gitsigns
-map('n', '<leader>uu', ':Gitsigns toggle_signs<CR>:Gitsigns toggle_numhl<CR>', { desc = 'Toggle' })
+map('n', '<leader>uu', ':Gitsigns toggle_signs<CR>:Gitsigns toggle_numhl<CR>:Gitsigns toggle_current_line_blame<CR>', { desc = 'Toggle' })
 map('n', '<leader>us', ':Gitsigns toggle_signs<CR>', { desc = 'Signs' })
 map('n', '<leader>un', ':Gitsigns toggle_numhl<CR>', { desc = 'Numhl' })
+map('n', '<leader>ub', ':Gitsigns toggle_current_line_blame<CR>', { desc = 'Blame' })
 
 -- Lines
 -- Reference: https://vim.fandom.com/wiki/Moving_lines_up_or_down
@@ -95,9 +96,9 @@ map('n', '<leader>dp', ":lua require'dap'.set.breakpoint(nul, nul, vim.fn.input(
 
 -- DAP-Python
 -- h: dap-python
-map('n', '<leader>dn', ":lua require('dap-python').test_method()<CR>", { desc = 'Py Test method' })
-map('n', '<leader>df', ":lua require('dap-python').test_class()<CR>", { desc = 'Py Test class' })
-map('n', '<leader>ds', ":lua require('dap-python').debug_selection()<CR>", { desc = 'Pyt debug selection' })
+map('n', '<leader>dn', ":lua require('dap-python').test_method()<CR>", { desc = 'Py - Test method' })
+map('n', '<leader>df', ":lua require('dap-python').test_class()<CR>", { desc = 'Py - Test class' })
+map('n', '<leader>ds', ":lua require('dap-python').debug_selection()<CR>", { desc = 'Py - Debug selection' })
 
 -- Shell movements
 map('i', '<C-A>', '<ESC>I', { desc = 'Shell movement' })

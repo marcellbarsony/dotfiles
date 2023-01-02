@@ -28,7 +28,7 @@ require("dapui").setup({
   },
   -- Expand lines larger than the window
   -- Requires >= 0.7
-  expand_lines = vim.fn.has("nvim-0.7") == 1,
+  expand_lines = vim.fn.has("nvim-0.7") == 0,
   -- Layouts define sections of the screen to place windows.
   -- The position can be "left", "right", "top" or "bottom".
   -- The size specifies the height/width depending on position. It can be an Int
@@ -40,12 +40,12 @@ require("dapui").setup({
     {
       elements = {
       -- Elements can be strings or table with id and size keys.
-        { id = "scopes", size = 0.25 },
-        "breakpoints",
-        "stacks",
-        "watches",
+        { id = "scopes", size = 0.65 },
+        { id = "breakpoints", size = 0.15 },
+        { id = "stacks", size = 0.15 },
+        { id = "watches", size = 0.15 },
       },
-      size = 40, -- 40 columns
+      size = 55, -- Width (columns)
       position = "right",
     },
     {
@@ -53,7 +53,7 @@ require("dapui").setup({
         "repl",
         "console",
       },
-      size = 0.25, -- 25% of total lines
+      size = 0.20, -- % of total lines
       position = "bottom",
     },
   },
@@ -87,3 +87,16 @@ require("dapui").setup({
     max_value_lines = 100, -- Can be integer or nil.
   }
 })
+
+-- Event listeners
+local dap, dapui = require("dap"), require("dapui")
+
+dap.listeners.after.event_initialized["dapui_config"] = function()
+  dapui.open() -- Open with DAP
+end
+dap.listeners.before.event_terminated["dapui_config"] = function()
+  dapui.close() -- Close when DAP terminated
+end
+dap.listeners.before.event_exited["dapui_config"] = function()
+  dapui.close() -- Close on exit
+end
