@@ -217,12 +217,12 @@ return packer.startup(function(use)
   -- Greeter
   use 'goolord/alpha-nvim'
 
-  -- Debug (DAP)
+  -- DAP (Debug)
   use 'mfussenegger/nvim-dap'
   use 'mfussenegger/nvim-dap-python' -- Python
   use 'rcarriga/nvim-dap-ui' -- UI
-  use 'theHamsta/nvim-dap-virtual-text' -- Virtual text
   use 'nvim-telescope/telescope-dap.nvim' -- Telescope
+  --use 'theHamsta/nvim-dap-virtual-text' -- Virtual text
 
   -- VIM Script
 

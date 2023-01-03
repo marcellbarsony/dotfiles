@@ -49,8 +49,9 @@ map('n', "<C-'>", ':b#<CR>', { desc = 'Buffer [To last]' }) -- Move to last
 map('n', "<C-q>", ':bdelete<CR>', { desc = 'Buffer [Delete]' }) -- Move to last
 
 -- Splits
-map('n', '<leader>sv', ':vsplit<CR>', { desc = 'Split [Vertical]' }) -- Split Vertical
-map('n', '<leader>sh', ':split<CR>' , { desc = 'Split [Horizontal]' }) -- Split Horizontal
+map('n', '<leader>sv', ':vsplit<CR>', { desc = 'Vertical' }) -- Split Vertical
+map('n', '<leader>sh', ':split<CR>' , { desc = 'Horizontal' }) -- Split Horizontal
+map('n', '<leader>sw', '<C-w>x', { desc = 'Swap' }) -- Split swap
 map('n', '<C-k>', '<C-w>k', { desc = 'Split [Up]' }) -- Move up
 map('n', '<C-j>', '<C-w>j', { desc = 'Split [Down]' }) -- Move down
 map('n', '<C-h>', '<C-w>h', { desc = 'Split [Left]' }) -- Move left
@@ -91,8 +92,9 @@ map('n', '<leader>2', ":lua require'dap'.step_into() <CR>", { desc = 'DAP [Step 
 map('n', '<leader>0', ":lua require'dap'.step_out() <CR>", { desc = 'DAP [Step out]'} )
 map('n', '<leader>b', ":lua require'dap'.toggle_breakpoint() <CR>", { desc = 'Breakpoint'} )
 map('n', '<leader>B', ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: ')) <CR>", { desc = 'Set breakpoint'} )
-map('n', '<leader>dr', ":lua require'dap'.repl.open()<CR>", { desc = 'Repl.Open' })
 map('n', '<leader>dp', ":lua require'dap'.set.breakpoint(nul, nul, vim.fn.input('Log point message: '))<CR>", { desc = 'Set breakpoint with log point message' })
+map('n', '<leader>dr', ":lua require'dap'.repl.open()<CR>", { desc = 'Repl.Open' })
+map('n', '<leader>dl', ":lua require'dap'.run_last()<CR>", { desc = 'Run last' })
 
 -- DAP-Python
 -- h: dap-python

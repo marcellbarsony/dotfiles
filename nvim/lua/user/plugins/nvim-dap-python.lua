@@ -1,14 +1,21 @@
 -- Nvim DAP Python
 -- https://github.com/mfussenegger/nvim-dap-python
+-- :h dap-configuration
+
+-- Debugpy module
+local path='~/.virtualenvs/debugpy/bin/python'
 
 -- Adapter setup
-require('dap-python').setup('~/.virtualenvs/debugpy/bin/python')
+require('dap-python').setup(path)
 
   table.insert(require('dap').configurations.python, {
     type = 'python',
     request = 'launch',
-    name = 'Custom launch configuration',
+    name = 'DAP-Python',
     program = '${file}',
+    pythonPath = function()
+      return '/usr/bin/python'
+    end;
     -- ... more options, see https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings
 
 })

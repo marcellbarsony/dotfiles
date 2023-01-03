@@ -1,5 +1,8 @@
 -- Nvim DAP
 -- https://github.com/mfussenegger/nvim-dap/
+-- :help dap-mappings
+-- :help dap-api
+
 
 --local dap = require('dap')
 --
