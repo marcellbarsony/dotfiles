@@ -141,6 +141,13 @@ local mappings = {
       v = { "Vertical" },
     },
 
+    -- Telescope
+    f = {
+      name = "Telescope",
+      f = { "Find Files" },
+      v = { "Find" },
+    },
+
       -- Gitsigns
     u = {
       name = "Gitsigns",

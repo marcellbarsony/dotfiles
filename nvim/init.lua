@@ -6,6 +6,7 @@ require('user.core.keymaps')
 require('user.core.options')
 
 -- Plugins
+require('user.plugins.alpha-nvim')
 require('user.plugins.autopairs')
 require('user.plugins.bufferline')
 require('user.plugins.gitsigns')

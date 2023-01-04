@@ -214,7 +214,7 @@ return packer.startup(function(use)
   -- Auto pair
   use 'windwp/nvim-autopairs'
 
-  -- Greeter
+  -- Dashboard
   use 'goolord/alpha-nvim'
 
   -- DAP (Debug)

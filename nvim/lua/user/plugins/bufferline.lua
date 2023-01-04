@@ -39,8 +39,14 @@ require('bufferline').setup {
     offsets = {
       {
         filetype = "NvimTree",
-        text = "",
+        text = "NvimTree",
         highlight = "Directory",
+        padding = 1,
+      },
+      {
+        filetype = "packer",
+        text = "Packer",
+        highlight = "PanelHeading",
         padding = 1,
       }
     },
@@ -49,7 +55,7 @@ require('bufferline').setup {
     separator_style = "thin",               -- | "thick" | "thin" | { 'any', 'any' },
 
     -- Bufferline
-    always_show_bufferline = true,
+    always_show_bufferline = false,
     enforce_regular_tabs = true,
 
     -- Sorting

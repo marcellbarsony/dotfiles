@@ -10,6 +10,14 @@ local options = {
   binary = false,
   breakindent = true,
   browsedir = 'current',
+  conceallevel = 0,
+  list = true,
+  listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂',
+  showtabline = 1,
+  shiftwidth = 2,
+  textwidth = 100,
+  --virtualedit = all,
+  wrap = false,
 
   -- Backup
   backup = false,
@@ -31,6 +39,10 @@ local options = {
   undofile = true,
   swapfile = false,
 
+  -- Case sensitivity
+  ignorecase = true,
+  smartcase = true,
+
   -- Clipboard
   clipboard = 'unnamedplus',
 
@@ -49,6 +61,18 @@ local options = {
   -- Cursor
   cursorcolumn = false,
   cursorline = false,
+  scrolloff = 999,
+  sidescrolloff = 8,
+
+  -- Encoding
+  fileencoding = 'utf-8',
+
+  -- Fold
+  foldmethod = 'manual',
+  foldexpr = 'nvim_treesitter#foldexpr()',
+
+  -- Highlight
+  hlsearch = true,
 
   -- Indentation
   autoindent = false,
@@ -58,6 +82,12 @@ local options = {
   --o.cinscopecls = 'public,protected,private',
   smartindent = false,
 
+  -- Line number
+  number = true,
+  numberwidth = 3,
+  relativenumber = true,
+  signcolumn = 'yes',
+
   -- Mode
   showmode = false,
 
@@ -66,35 +96,16 @@ local options = {
   autowrite = false,
   autowriteall = false,
 
-  -- Line number
-  number = true,
-  numberwidth = 3,
-  relativenumber = true,
-
-  -- Number of screen lines to keep above and below the cursor
-  scrolloff = 999,
-
-
-  -- Editing experience
-  expandtab = true,
-  wrap = false,
-  textwidth = 100,
-  tabstop = 2,
-  shiftwidth = 2,
-  softtabstop = -1, -- If negative, shiftwidth value is used
-  list = true,
-  listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂',
-  --virtualedit = all,
-
-  -- Case insensitive searching UNLESS /C or capital in search
-  ignorecase = true,
-  smartcase = true,
-
   -- Statusline
-  laststatus = 3, -- Global
+  laststatus = 3,
 
-  -- Update time
-  timeoutlen = 250, -- Which-key.nvim
+  -- Tab
+  expandtab = true,
+  softtabstop = -1,
+  tabstop = 2,
+
+  -- Update
+  timeoutlen = 250, -- which-key.nvim
   updatetime = 200,
 
 }
