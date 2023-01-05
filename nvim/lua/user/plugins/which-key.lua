@@ -144,8 +144,6 @@ local mappings = {
     -- Telescope
     f = {
       name = "Telescope",
-      f = { "Find Files" },
-      v = { "Find" },
     },
 
       -- Gitsigns
