@@ -9,11 +9,11 @@ from libqtile.lazy import lazy
 
 # Variables
 
-mod = "mod4"
-mod1 = "mod1"
-browser = "librewolf"
-terminal = "kitty"
-menu = "rofi -show drun"  # dmenu_run
+mod = 'mod4'
+mod1 = 'mod1'
+browser = 'librewolf'
+terminal = 'kitty'
+menu = 'rofi -show drun'  # dmenu_run
 
 # Colors
 
@@ -104,7 +104,7 @@ keys = [
     Key([mod],      "r", lazy.spawncmd(),         desc="Spawn command prompt"),
 
     # Wallpaper
-    #Key([mod], "h", lazy.screen.set_wallpaper(path, mode='fill/stretch'), desc="Set wallpaper"),
+    # Key([mod], "h", lazy.screen.set_wallpaper(path, mode='fill/stretch'), desc="Set wallpaper"),
 
     # Window - ctions
     Key([mod],          "f", lazy.window.toggle_fullscreen(), desc='Fullscreen'),
@@ -182,12 +182,12 @@ layouts = [
     # Bsp
     # layout.Bsp(),
     # Max
-    #layout.Max(
+    # layout.Max(
     #    border_focus = '#FFFFFF',
     #    border_normal = '#FFFFFF',
     #    border_width = 3,
     #    margin = [15, 15, 15, 15],
-    #),
+    # ),
     # Columns
     layout.Columns(
         border_focus=[PRIMARY],
@@ -198,7 +198,7 @@ layouts = [
         border_width=3,
         grow_amount=10,
         insert_position=0,
-        ##margin=["10", "5", "20", "40"]
+        # margin=["10", "5", "20", "40"],
         margin=3,
         margin_on_single=5,
         num_columns=2,
@@ -216,31 +216,35 @@ layouts = [
     #     max_border_width = 3,
     #     ),
     # Matrix
-    #layout.Matrix(),
+    # layout.Matrix(),
     # MonadTall
-    #layout.MonadTall(),
+    # layout.MonadTall(),
     # MonadWide
-    #layout.MonadWide(),
+    # layout.MonadWide(),
     # RatioTile
-    #layout.RatioTile(),
+    # layout.RatioTile(),
     # Stack
-    #layout.Stack(
-    #   num_stacks=2
-    #),
+    # layout.Stack(
+    #    num_stacks=2
+    # ),
     # Tile
-    #layout.Tile(),
+    # layout.Tile(),
     # TreeTab
-    #layout.TreeTab(),
+    # layout.TreeTab(),
     # VerticalTile
-    #layout.VerticalTile(),
+    # layout.VerticalTile(),
     # Zoomy
-    #layout.Zoomy(),
+    # layout.Zoomy(),
 ]
 
 # Drag floating layouts
 mouse = [
-    Drag([mod], 'Button1', lazy.window.set_position_floating(), start=lazy.window.get_position()),
-    Drag([mod], 'Button3', lazy.window.set_size_floating(), start=lazy.window.get_size()),
+    Drag([mod], 'Button1',
+         lazy.window.set_position_floating(),
+         start=lazy.window.get_position()),
+    Drag([mod], 'Button3',
+         lazy.window.set_size_floating(),
+         start=lazy.window.get_size()),
     Click([mod], 'Button2', lazy.window.bring_to_front()),
 ]
 
@@ -304,8 +308,6 @@ screens = [
             # ),
             # widget.CurrentLayout(),
             # widget.Prompt(),
-
-            # MIDDLE
             # widget.Spacer(),
             widget.WindowName(
                 background=None,
@@ -323,30 +325,21 @@ screens = [
 
             # RIGHT
             widget.Spacer(),
-            # widget.ThermalSensor(),
-            # widget.TaskList(),
-            # widget.Net(),
-            # widget.Volume(),
             # Weather
             widget.WidgetBox(
+                button_location='left',
+                close_button_location='right',
+                text_closed='[w]',
+                text_opened='[x]',
                 widgets=[
-                    widget.TextBox(
-                        button_location='right',
-                        ),
                     widget.OpenWeather(
                         location='Budapest',
-                        format='{location_city}: {main_temp}°{units_temperature} - {weather_details} {icon}',
+                        format='{location_city} {main_temp}°{units_temperature} - {weather_details} {icon}',
+                        foreground=PRIMARY,
                         update_interval=600
                         ),
                 ]
             ),
-            # Weather
-            widget.OpenWeather(
-                location='Budapest',
-                format='{location_city}: {main_temp}°{units_temperature} {icon}',
-                foreground=PRIMARY,
-                update_interval=600
-                ),
             widget.Sep(
                 foreground=INACTIVE,
                 ),
@@ -480,7 +473,7 @@ screens = [
             # Time & Date
             widget.Clock(
                 foreground=PRIMARY,
-                format="%a %b-%d",
+                format='%a %b-%d',
                 update_interval=60
                 ),
             widget.Sep(
@@ -496,8 +489,8 @@ screens = [
             ],
             26,
             border_width=[0, 0, 0, 0],
-            border_color=["000000", "000000", "", "000000"],
-            background="#16161E",
+            border_color=['000000', '000000', '', '000000'],
+            background='#16161E',
             margin=[3, 5, 0, 5],
         ),
     ),
@@ -520,20 +513,20 @@ bring_front_click = False
 cursor_warp = False
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: list
-focus_on_window_activation = "smart"
+focus_on_window_activation = 'smart'
 follow_mouse_focus = False
 floating_layout = layout.Floating(
     float_rules=[
         # Run `xprop` to see the wm class and name
         *layout.Floating.default_float_rules,
-        Match(wm_class="confirmreset"),  # gitk
-        Match(wm_class="makebranch"),  # gitk
-        Match(wm_class="maketag"),  # gitk
-        Match(wm_class="ssh-askpass"),  # ssh-askpass
-        Match(title="branchdialog"),  # gitk
-        Match(title="pinentry"),  # GPG key password entry
+        Match(wm_class='confirmreset'),  # gitk
+        Match(wm_class='makebranch'),  # gitk
+        Match(wm_class='maketag'),  # gitk
+        Match(wm_class='ssh-askpass'),  # ssh-askpass
+        Match(title='branchdialog'),  # gitk
+        Match(title='pinentry'),  # GPG key password entry
     ]
 )
 reconfigure_screens = True
 wl_input_rules = None
-wmname = "LG3D"
+wmname = 'LG3D'
