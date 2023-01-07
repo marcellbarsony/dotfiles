@@ -2,10 +2,10 @@
 
 import os
 import subprocess
-from libqtile        import hook
-from libqtile        import qtile, bar, layout, widget
-from libqtile.config import Click, Drag, Group, Key, Match, Screen
-from libqtile.lazy   import lazy
+from libqtile import hook
+from libqtile import bar, layout, widget, qtile
+from libqtile.config import Click, Drag, DropDown, Group, Key, Match, ScratchPad, Screen
+from libqtile.lazy import lazy
 
 # Variables
 
@@ -13,12 +13,12 @@ mod = "mod4"
 mod1 = "mod1"
 browser = "librewolf"
 terminal = "kitty"
-menu = "rofi -show drun"
-# menu = "dmenu_run"
+menu = "rofi -show drun"  # dmenu_run
 
 # Colors
 
-primary = '#9A79E6'
+PRIMARY = '#9A79E6'
+INACTIVE = '#444444'
 
 # Functions
 
@@ -54,26 +54,20 @@ def switch_screens(qtile):
     group = qtile.screens[i - 1].group
     qtile.current_screen.set_group(group)
 
+
+def window_name(text):
+    """
+    TODO: Implement WindowName filter
+    """
+    valami_list = [" - Chromium", " - Firefox", " - LibreWolf"]
+    for string in valami_list:
+        text = text.replace(string, "")
+        return text
+
 # Keys
 
 
 keys = [
-
-    # Qtile
-    Key([mod],            "q", lazy.window.kill(),   desc="Kill window"),
-    Key([mod, "control"], "q", lazy.shutdown(),      desc="Shutdown"),
-    Key([mod, "control"], "r", lazy.reload_config(), desc="Reload"),
-    Key([mod1],           "r", lazy.restart(),       desc="Restart"),
-
-    # Spawn
-    Key([mod], "Return", lazy.spawn(terminal),    desc="Spawn terminal"),
-    Key([mod],      "b", lazy.spawn(browser),     desc="Spawn broswer"),
-    Key([mod],      "d", lazy.spawn(menu),       desc="Spawn launch menu"),
-    Key([mod],      "r", lazy.spawncmd(),         desc="Spawn command prompt"),
-
-    # Full screen & Floating
-    Key([mod],          "f", lazy.window.toggle_fullscreen(), desc='Fullscreen'),
-    Key([mod, "shift"], "f", lazy.window.toggle_floating(),   desc='Floating'),
 
     # Layouts
     Key([mod],          "Tab", lazy.next_layout(), desc="Next layout"),
@@ -83,6 +77,15 @@ keys = [
     Key([mod, "mod1"], "j", lazy.screen.prev_group(),   desc="Prev group"),
     Key([mod, "mod1"], "k", lazy.screen.next_group(),   desc="Next group"),
     Key([mod, "mod1"], "b", lazy.screen.toggle_group(), desc="Toggle last group"),
+
+    # Qtile
+    Key([mod],            "q", lazy.window.kill(),   desc="Kill window"),
+    Key([mod, "control"], "q", lazy.shutdown(),      desc="Shutdown"),
+    Key([mod, "control"], "r", lazy.reload_config(), desc="Reload"),
+    Key([mod1],           "r", lazy.restart(),       desc="Restart"),
+
+    # ScratchPad
+    Key(["control"], 'k', lazy.group['scratchpad'].dropdown_toggle('term')),
 
     # Screen
     Key([mod, "control"], "h", lazy.prev_screen(), desc='Focus prev monitor'),
@@ -94,8 +97,18 @@ keys = [
     Key([mod],            "r", lazy.to_screen(2),  desc='Focus 3rd monitor'),
     Key([mod],            "t", lazy.function(switch_screens)),
 
+    # Spawn
+    Key([mod], "Return", lazy.spawn(terminal),    desc="Spawn terminal"),
+    Key([mod],      "b", lazy.spawn(browser),     desc="Spawn broswer"),
+    Key([mod],      "d", lazy.spawn(menu),       desc="Spawn launch menu"),
+    Key([mod],      "r", lazy.spawncmd(),         desc="Spawn command prompt"),
+
     # Wallpaper
     #Key([mod], "h", lazy.screen.set_wallpaper(path, mode='fill/stretch'), desc="Set wallpaper"),
+
+    # Window - ctions
+    Key([mod],          "f", lazy.window.toggle_fullscreen(), desc='Fullscreen'),
+    Key([mod, "shift"], "f", lazy.window.toggle_floating(),   desc='Floating'),
 
     # Window - Focus
     Key([mod],     "h", lazy.layout.left(),  desc="Focus left"),
@@ -120,13 +133,11 @@ keys = [
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
     # Unsplit = 1 window displayed, like Max layout, but still with multiple stack panes
-    Key(
-        [mod, "shift"], "Return", lazy.layout.toggle_split(), desc="Toggle between split and unsplit sides of stack",
-    ),
+    Key([mod, "shift"], "Return", lazy.layout.toggle_split(), desc="Toggle between split and unsplit sides of stack"),
+
 ]
 
 # Workspaces [named]
-
 
 # group_names = ' 1 2 3 4 5'.split()
 group_names = ' 一 二 三 四 五'.split()
@@ -141,20 +152,29 @@ for i, name in enumerate(group_names):
 
 # Workspaces [numbered]
 
-#groups = [Group(i) for i in "123456789"]
-#for i in groups:
-#    keys.extend(
-#        [
-#            Key(
-#                [mod], i.name, lazy.group[i.name].toscreen(),
-#                desc="Switch to group {}".format(i.name),
-#            ),
-#            Key(
-#                [mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True),
-#                desc="Move window & switch to group {}".format(i.name),
-#            ),
-#        ]
-#    )
+# groups = [Group(i) for i in "123456789"]
+# for i in groups:
+#     keys.extend([
+#         Key(
+#             [mod], i.name, lazy.group[i.name].toscreen(),
+#             desc="Switch to group {}".format(i.name),
+#         ),
+#         Key(
+#             [mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True),
+#             desc="Move window & switch to group {}".format(i.name),
+#         ),
+#     ])
+
+# ScratchPad
+
+groups.append(
+     ScratchPad(
+         'scratchpad', [
+             DropDown('term', terminal),
+             ]
+         )
+     )
+
 
 # Layouts
 
@@ -170,10 +190,10 @@ layouts = [
     #),
     # Columns
     layout.Columns(
-        border_focus=[primary],
-        border_focus_stack=[primary, primary],
+        border_focus=[PRIMARY],
+        border_focus_stack=['#222255', PRIMARY],
         border_normal=['#222255'],
-        border_normal_stack=[primary],
+        border_normal_stack=['#222255'],
         border_on_single=False,
         border_width=3,
         grow_amount=10,
@@ -188,13 +208,13 @@ layouts = [
         wrap_focus_stacks=True,
         ),
     # Floating
-    #layout.Floating(
-    #    border_focus = [primary],
-    #    border_normal = ['#222255'],
-    #    border_width = 3,
-    #    fullscreen_border_width = 3,
-    #    max_border_width = 3,
-    #    ),
+    # layout.Floating(
+    #     border_focus = PRIMARY
+    #     border_normal = ['#222255'],
+    #     border_width = 3,
+    #     fullscreen_border_width = 3,
+    #     max_border_width = 3,
+    #     ),
     # Matrix
     #layout.Matrix(),
     # MonadTall
@@ -218,12 +238,10 @@ layouts = [
 ]
 
 # Drag floating layouts
-
-
 mouse = [
-    Drag([mod], "Button1", lazy.window.set_position_floating(), start=lazy.window.get_position()),
-    Drag([mod], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size()),
-    Click([mod], "Button2", lazy.window.bring_to_front()),
+    Drag([mod], 'Button1', lazy.window.set_position_floating(), start=lazy.window.get_position()),
+    Drag([mod], 'Button3', lazy.window.set_size_floating(), start=lazy.window.get_size()),
+    Click([mod], 'Button2', lazy.window.bring_to_front()),
 ]
 
 # Mouse callbacks
@@ -232,58 +250,84 @@ mouse = [
 def open_sysmonitor():
     qtile.cmd_spawn('alacritty -e bpytop')
 
+
 # Widgets
-
-
 widget_defaults = dict(
-    font="sans",
-    fontsize=12,
+    font='sans',
+    fontsize=13,
     padding=3,
 )
 extension_defaults = widget_defaults.copy()
 
 # Screens
-
 screens = [
 
     # Screen 0: DP-1
     Screen(
         top=bar.Bar([
-            #widget.AGroupBox(
-            #    borderwidth=3,
-            #    center_aligne=True,
-            #    disable_drag=True,
-            #    highlight_method='line',
-            #    margin=5,
-            #    padding=0,
-            #    rounded=False
-            #    ),
+            # LEFT
+            # widget.AGroupBox(
+            #     borderwidth=3,
+            #     center_aligne=True,
+            #     disable_drag=True,
+            #     highlight_method='line',
+            #     margin=5,
+            #     padding=0,
+            #     rounded=False
+            #     ),
             widget.GroupBox(
-                active=primary,
-                borderwidth=3,
-                center_aligne=True,
+                active='3A5AFF',
+                background=None,
+                borderwidth=5,
+                center_aligned=True,
                 disable_drag=True,
-                highlight_method='block',
-                highlight_color=['26262E', '26262E'],
-                foreground='ffffff',
+                fontshadow=None,
+                fontsize=15,
+                # foreground='FFFFFF',
+                hide_unused=False,
+                # highlight_color=['FFFFFF', 'FFFFFF'],
+                highlight_method='text',
+                inactive=INACTIVE,
                 margin=3,
-                rounded=False
+                # other_current_screen_border='FFFFFF',
+                # other_screen_border='FFFFFF',
+                rounded=False,
+                this_current_screen_border=PRIMARY,
+                this_screen_border='FFFFFF',
+                urgent_border='FF0000',
+                urgent_text='FF0000',
                 ),
-            widget.CurrentLayoutIcon(
-                fmt='{}',
-                padding=5,
-                scale=0.70,
-                ),
-            widget.CurrentLayout(),
-            widget.Prompt(),
-            widget.WindowName(),
+            # widget.CurrentLayoutIcon(
+            #     fmt='{}',
+            #     padding=5,
+            #     scale=0.70,
+            # ),
+            # widget.CurrentLayout(),
+            # widget.Prompt(),
 
+            # MIDDLE
+            # widget.Spacer(),
+            widget.WindowName(
+                background=None,
+                fontsize=14,
+                foreground=PRIMARY,
+                max_chars=500,
+                parse_text=window_name,
+                scroll=False,
+                scroll_delay=5,
+                scroll_interval=0.1,
+                scroll_repeat=True,
+                scroll_step=1,
+                # width=800,
+            ),
+
+            # RIGHT
+            widget.Spacer(),
             # widget.ThermalSensor(),
             # widget.TaskList(),
             # widget.Net(),
             # widget.Volume(),
-            widget.DF(),
-            widget.Sep(),
+            # Weather
             widget.WidgetBox(
                 widgets=[
                     widget.TextBox(
@@ -296,51 +340,82 @@ screens = [
                         ),
                 ]
             ),
-            widget.Sep(),
+            # Weather
+            widget.OpenWeather(
+                location='Budapest',
+                format='{location_city}: {main_temp}°{units_temperature} {icon}',
+                foreground=PRIMARY,
+                update_interval=600
+                ),
+            widget.Sep(
+                foreground=INACTIVE,
+                ),
+            # Updates
             widget.CheckUpdates(
                 colour_have_updates='22EE44',
-                display_format="{updates}",
+                colour_no_updates=PRIMARY,
+                display_format='{updates}',
                 distro='Arch_Sup',
                 initial_text='Checking updates...',
-                no_update_string="No updates",
+                foreground=PRIMARY,
+                no_update_string='No updates',
                 update_interval=3600,
                 ),
-            widget.Sep(),
+            widget.Sep(
+                foreground=INACTIVE,
+                ),
             # Active screen
-            widget.CurrentScreen(),
-            widget.Sep(),
+            widget.CurrentScreen(
+                active_color=PRIMARY,
+                active_text='A',
+                inactive_color=INACTIVE,
+                inactive_text='I'
+                ),
+            widget.Sep(
+                foreground=INACTIVE,
+                ),
             # CPU
             widget.CPU(
                 format='CPU: {load_percent}%',
+                foreground=PRIMARY,
                 mouse_callbacks={'Button1': open_sysmonitor},
                 update_interval=10
                 ),
-            widget.Sep(),
+            widget.Sep(
+                foreground=INACTIVE,
+                ),
             # RAM
             widget.Memory(
                 # format='{MemUsed: .0f}{mm} /{MemTotal: .0f}{mm}',
                 format='RAM: {MemUsed:.0f}{mm}',
+                foreground=PRIMARY,
                 mouse_callbacks={'Button1': open_sysmonitor},
                 update_interval=10
                 ),
-            widget.Sep(),
+            widget.Sep(
+                foreground=INACTIVE,
+                ),
             # Battery
             widget.Battery(
-                format='BAT: {percent:2.0%}'
+                format='BAT: {percent:2.0%}',
+                foreground=PRIMARY,
                 ),
-            widget.Sep(),
+            widget.Sep(
+                foreground=INACTIVE,
+                ),
             # Time & Date
             widget.Clock(
                 format='%I:%M %p',
-                update_interval=60
+                foreground=PRIMARY,
+                update_interval=60,
                 ),
             # System tray
             widget.Systray(),
             ],
             26,
             border_width=[0, 0, 0, 0],
-            border_color=["000000", "000000", "", "000000"],
-            background="#16161E",
+            border_color=['000000', '000000', '', '000000'],
+            background='#16161E',
             margin=[3, 5, 0, 5],
         ),
     ),
@@ -348,21 +423,76 @@ screens = [
     # Screen 1: HDMI-2
     Screen(
         top=bar.Bar([
-            widget.CurrentLayout(),
-            widget.GroupBox(),
+            # Layout
+            # widget.CurrentLayout(),
+            # Groups
+            widget.GroupBox(
+                active='3A5AFF',
+                background=None,
+                borderwidth=5,
+                center_aligned=True,
+                disable_drag=True,
+                fontshadow=None,
+                fontsize=15,
+                # foreground='FFFFFF',
+                hide_unused=False,
+                # highlight_color=['FFFFFF', 'FFFFFF'],
+                highlight_method='text',
+                inactive=INACTIVE,
+                margin=3,
+                # other_current_screen_border='FFFFFF',
+                # other_screen_border='FFFFFF',
+                rounded=False,
+                this_current_screen_border=PRIMARY,
+                this_screen_border='FFFFFF',
+                urgent_border='FF0000',
+                urgent_text='FF0000',
+                ),
+            # Prompt
             widget.Prompt(),
-            widget.WindowName(),
-            widget.Chord(
-                chords_colors={"launch": ("#ff0000", "#ffffff"), },
-                name_transform=lambda name: name.upper(),
+            # Window name
+            widget.WindowName(
+                background=None,
+                fontsize=14,
+                foreground=PRIMARY,
+                max_chars=500,
+                parse_text=window_name,
+                scroll=False,
+                scroll_delay=5,
+                scroll_interval=0.1,
+                scroll_repeat=True,
+                scroll_step=1,
+                # width=800,
             ),
+            # Key Chord
+            widget.Chord(
+                chords_colors={'launch': ('#ff0000', '#ffffff'), },
+                name_transform=lambda name: name.upper(),
+                ),
+            # Disk Free
+            widget.DF(
+                foreground=PRIMARY,
+                visible_on_warn=False,
+                ),
+            widget.Sep(
+                foreground=INACTIVE,
+                ),
             # Time & Date
             widget.Clock(
-                format="%b-%d %a %I:%M %p",
+                foreground=PRIMARY,
+                format="%a %b-%d",
                 update_interval=60
                 ),
+            widget.Sep(
+                foreground=INACTIVE,
+                ),
             # Quick exit
-            widget.QuickExit(),
+            widget.QuickExit(
+                countdown_format='[ {} seconds ]',
+                countdown_start=5,
+                default_text='[ Shutdown ]',
+                foreground=PRIMARY,
+                ),
             ],
             26,
             border_width=[0, 0, 0, 0],
