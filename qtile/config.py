@@ -6,6 +6,7 @@ from libqtile import hook
 from libqtile import bar, layout, widget, qtile
 from libqtile.config import Click, Drag, DropDown, Group, Key, Match, ScratchPad, Screen
 from libqtile.lazy import lazy
+from conf.widgets import Bar
 
 # Variables
 
@@ -18,6 +19,7 @@ menu = 'rofi -show drun'  # dmenu_run
 # Colors
 
 PRIMARY = '#9A79E6'
+SECONDARY = '#7AA2F7'
 INACTIVE = '#444444'
 
 # Functions
@@ -254,8 +256,9 @@ mouse = [
 def open_sysmonitor():
     qtile.cmd_spawn('alacritty -e bpytop')
 
-
 # Widgets
+
+
 widget_defaults = dict(
     font='sans',
     fontsize=13,
@@ -280,7 +283,7 @@ screens = [
             #     rounded=False
             #     ),
             widget.GroupBox(
-                active='3A5AFF',
+                active=PRIMARY,
                 background=None,
                 borderwidth=5,
                 center_aligned=True,
@@ -289,15 +292,15 @@ screens = [
                 fontsize=15,
                 # foreground='FFFFFF',
                 hide_unused=False,
-                # highlight_color=['FFFFFF', 'FFFFFF'],
-                highlight_method='text',
+                highlight_color=['030009', '4A2996'],
+                highlight_method='line',
                 inactive=INACTIVE,
                 margin=3,
                 # other_current_screen_border='FFFFFF',
                 # other_screen_border='FFFFFF',
                 rounded=False,
                 this_current_screen_border=PRIMARY,
-                this_screen_border='FFFFFF',
+                this_screen_border=PRIMARY,
                 urgent_border='FF0000',
                 urgent_text='FF0000',
                 ),
@@ -329,7 +332,9 @@ screens = [
             widget.WidgetBox(
                 button_location='left',
                 close_button_location='right',
-                text_closed='[w]',
+                foreground=PRIMARY,
+                # text_closed='☁',
+                text_closed='W',
                 text_opened='[x]',
                 widgets=[
                     widget.OpenWeather(
@@ -358,15 +363,15 @@ screens = [
                 foreground=INACTIVE,
                 ),
             # Active screen
-            widget.CurrentScreen(
-                active_color=PRIMARY,
-                active_text='A',
-                inactive_color=INACTIVE,
-                inactive_text='I'
-                ),
-            widget.Sep(
-                foreground=INACTIVE,
-                ),
+            # widget.CurrentScreen(
+            #     active_color=PRIMARY,
+            #     active_text='A',
+            #     inactive_color=INACTIVE,
+            #     inactive_text='I'
+            #     ),
+            # widget.Sep(
+            #     foreground=INACTIVE,
+            #     ),
             # CPU
             widget.CPU(
                 format='CPU: {load_percent}%',
@@ -379,7 +384,6 @@ screens = [
                 ),
             # RAM
             widget.Memory(
-                # format='{MemUsed: .0f}{mm} /{MemTotal: .0f}{mm}',
                 format='RAM: {MemUsed:.0f}{mm}',
                 foreground=PRIMARY,
                 mouse_callbacks={'Button1': open_sysmonitor},
@@ -388,10 +392,28 @@ screens = [
             widget.Sep(
                 foreground=INACTIVE,
                 ),
+            # Volume
+            widget.Volume(
+                foreground=PRIMARY,
+                ),
+            widget.Sep(
+                foreground=INACTIVE,
+                ),
+            # Wlan
+            # widget.Wlan(
+            #     foreground=PRIMARY,
+            #     # interface='enp0s3',
+
+            #     ),
+            # widget.Sep(
+            #     foreground=INACTIVE,
+            #     ),
             # Battery
             widget.Battery(
+                battery=0,
                 format='BAT: {percent:2.0%}',
                 foreground=PRIMARY,
+                update_interval=60,
                 ),
             widget.Sep(
                 foreground=INACTIVE,
@@ -407,7 +429,7 @@ screens = [
             ],
             26,
             border_width=[0, 0, 0, 0],
-            border_color=['000000', '000000', '', '000000'],
+            border_color=['000000', '000000', '000000', '000000'],
             background='#16161E',
             margin=[3, 5, 0, 5],
         ),
@@ -420,7 +442,7 @@ screens = [
             # widget.CurrentLayout(),
             # Groups
             widget.GroupBox(
-                active='3A5AFF',
+                active=PRIMARY,
                 background=None,
                 borderwidth=5,
                 center_aligned=True,
@@ -429,15 +451,15 @@ screens = [
                 fontsize=15,
                 # foreground='FFFFFF',
                 hide_unused=False,
-                # highlight_color=['FFFFFF', 'FFFFFF'],
-                highlight_method='text',
+                highlight_color=['030009', '4A2996'],
+                highlight_method='line',
                 inactive=INACTIVE,
                 margin=3,
-                # other_current_screen_border='FFFFFF',
-                # other_screen_border='FFFFFF',
+                # other_current_screen_border='FF0000',
+                # other_screen_border='FF0000',
                 rounded=False,
                 this_current_screen_border=PRIMARY,
-                this_screen_border='FFFFFF',
+                this_screen_border=PRIMARY,
                 urgent_border='FF0000',
                 urgent_text='FF0000',
                 ),
