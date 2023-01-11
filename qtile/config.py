@@ -6,7 +6,6 @@ from libqtile import hook
 from libqtile import bar, layout, widget, qtile
 from libqtile.config import Click, Drag, DropDown, Group, Key, Match, ScratchPad, Screen
 from libqtile.lazy import lazy
-from conf.widgets import Bar
 
 # Variables
 
@@ -168,7 +167,8 @@ for i, name in enumerate(group_names):
 #     ])
 
 # ScratchPad
-
+# TODO:
+# https://github.com/qtile/qtile-examples/blob/master/osimplex/scratchpad.py
 groups.append(
      ScratchPad(
          'scratchpad', [
@@ -200,7 +200,6 @@ layouts = [
         border_width=3,
         grow_amount=10,
         insert_position=0,
-        # margin=["10", "5", "20", "40"],
         margin=3,
         margin_on_single=5,
         num_columns=2,
@@ -269,19 +268,11 @@ extension_defaults = widget_defaults.copy()
 # Screens
 screens = [
 
-    # Screen 0: DP-1
+    # Screen 0 (DP-1)
     Screen(
         top=bar.Bar([
             # LEFT
-            # widget.AGroupBox(
-            #     borderwidth=3,
-            #     center_aligne=True,
-            #     disable_drag=True,
-            #     highlight_method='line',
-            #     margin=5,
-            #     padding=0,
-            #     rounded=False
-            #     ),
+            # Groups
             widget.GroupBox(
                 active=PRIMARY,
                 background=None,
@@ -290,12 +281,13 @@ screens = [
                 disable_drag=True,
                 fontshadow=None,
                 fontsize=15,
-                # foreground='FFFFFF',
+                # foreground='FF0000',
                 hide_unused=False,
                 highlight_color=['030009', '4A2996'],
                 highlight_method='line',
                 inactive=INACTIVE,
-                margin=3,
+                margin_x=0,
+                margin_y=3,
                 # other_current_screen_border='FFFFFF',
                 # other_screen_border='FFFFFF',
                 rounded=False,
@@ -304,14 +296,7 @@ screens = [
                 urgent_border='FF0000',
                 urgent_text='FF0000',
                 ),
-            # widget.CurrentLayoutIcon(
-            #     fmt='{}',
-            #     padding=5,
-            #     scale=0.70,
-            # ),
-            # widget.CurrentLayout(),
-            # widget.Prompt(),
-            # widget.Spacer(),
+            # Window name
             widget.WindowName(
                 background=None,
                 fontsize=14,
@@ -326,8 +311,10 @@ screens = [
                 # width=800,
             ),
 
-            # RIGHT
+            # Spacer
             widget.Spacer(),
+
+            # RIGHT
             # Weather
             widget.WidgetBox(
                 button_location='left',
@@ -362,16 +349,6 @@ screens = [
             widget.Sep(
                 foreground=INACTIVE,
                 ),
-            # Active screen
-            # widget.CurrentScreen(
-            #     active_color=PRIMARY,
-            #     active_text='A',
-            #     inactive_color=INACTIVE,
-            #     inactive_text='I'
-            #     ),
-            # widget.Sep(
-            #     foreground=INACTIVE,
-            #     ),
             # CPU
             widget.CPU(
                 format='CPU: {load_percent}%',
@@ -435,11 +412,10 @@ screens = [
         ),
     ),
 
-    # Screen 1: HDMI-2
+    # Screen 1 (HDMI-2)
     Screen(
         top=bar.Bar([
-            # Layout
-            # widget.CurrentLayout(),
+            # LEFT
             # Groups
             widget.GroupBox(
                 active=PRIMARY,
@@ -454,7 +430,8 @@ screens = [
                 highlight_color=['030009', '4A2996'],
                 highlight_method='line',
                 inactive=INACTIVE,
-                margin=3,
+                margin_x=0,
+                margin_y=3,
                 # other_current_screen_border='FF0000',
                 # other_screen_border='FF0000',
                 rounded=False,
@@ -479,11 +456,6 @@ screens = [
                 scroll_step=1,
                 # width=800,
             ),
-            # Key Chord
-            widget.Chord(
-                chords_colors={'launch': ('#ff0000', '#ffffff'), },
-                name_transform=lambda name: name.upper(),
-                ),
             # Disk Free
             widget.DF(
                 foreground=PRIMARY,
@@ -511,7 +483,7 @@ screens = [
             ],
             26,
             border_width=[0, 0, 0, 0],
-            border_color=['000000', '000000', '', '000000'],
+            border_color=['000000', '000000', '000000', '000000'],
             background='#16161E',
             margin=[3, 5, 0, 5],
         ),

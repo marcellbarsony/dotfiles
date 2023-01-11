@@ -21,7 +21,7 @@ require'nvim-treesitter.configs'.setup {
             return true
         end
     end,
-    -- VIM Regex highlighting
+    -- VIM Regex
     additional_vim_regex_highlighting = false,
   },
 
@@ -37,9 +37,7 @@ require'nvim-treesitter.configs'.setup {
     --colors = {
       -- Colors
     --},
-    
     --termcolors = {
     --}
-  }
-
+  },
 }

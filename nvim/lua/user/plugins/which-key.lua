@@ -1,4 +1,4 @@
--- Which key
+-- Which-key
 -- https://github.com/folke/which-key.nvim
 
 --local config = function()
@@ -124,6 +124,11 @@ local mappings = {
       b = { "Insert [Below]" },
     },
 
+    -- Null-ls
+    n = {
+      name = "Null-ls",
+    },
+
     -- Packer
     p = {
       name = "Packer",
@@ -142,7 +147,7 @@ local mappings = {
     },
 
     -- Telescope
-    f = {
+    t = {
       name = "Telescope",
     },
 

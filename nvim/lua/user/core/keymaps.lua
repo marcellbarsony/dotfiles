@@ -102,6 +102,9 @@ map('n', '<leader>dn', ":lua require('dap-python').test_method()<CR>", { desc = 
 map('n', '<leader>df', ":lua require('dap-python').test_class()<CR>", { desc = 'Py - Test class' })
 map('n', '<leader>ds', ":lua require('dap-python').debug_selection()<CR>", { desc = 'Py - Debug selection' })
 
+-- Null-ls
+map('n', '<leader>nf', ":lua vim.lsp.buf.formatting()<CR>", { desc = 'Format' }) -- Formatting
+
 -- Telescope
 map('n', '<leader>tx', ":Telescope<CR>", { desc = 'Telescope' })
 map('n', '<leader>tb', ":Telescope buffers<CR>", { desc = 'Buffers' })
@@ -113,6 +116,7 @@ map('n', '<leader>th', ":Telescope highlights<CR>", { desc = 'Highlights' })
 map('n', '<leader>tk', ":Telescope keymaps<CR>", { desc = 'Keymaps' })
 map('n', '<leader>tl', ":Telescope live_grep<CR>", { desc = 'Live grep' })
 map('n', '<leader>tm', ":Telescope man_pages<CR>", { desc = 'Man' })
+map('n', '<leader>tn', ":Telescope git_status<CR>", { desc = 'Git status' })
 map('n', '<leader>to', ":Telescope oldfiles<CR>", { desc = 'History' })
 map('n', '<leader>tp', ":Telescope pickers<CR>", { desc = 'Pickers' })
 map('n', '<leader>ts', ":Telescope search_history<CR>", { desc = 'Search history' })
