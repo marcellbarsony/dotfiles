@@ -29,6 +29,7 @@ pavucontrol.ini
 
 # Qtile
 qtile/__pycache__
+qtile/config/__pycache__
 
 # QtProject
 QtProject.conf
