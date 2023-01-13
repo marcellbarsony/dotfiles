@@ -128,17 +128,18 @@ return packer.startup(function(use)
   use 'onsails/lspkind.nvim'
 
   -- CMP
+  use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/cmp-path'
-  use { 'hrsh7th/nvim-cmp',
-    requires = { 'quangnguyen30192/cmp-nvim-ultisnips',
-      config = function()
-        -- optional call to setup (see customization section)
-        require('cmp_nvim_ultisnips').setup{}
-      end,
-    }
-  }
+--  use { 'hrsh7th/nvim-cmp',
+--    requires = { 'quangnguyen30192/cmp-nvim-ultisnips',
+--      config = function()
+--        -- optional call to setup (see customization section)
+--        require('cmp_nvim_ultisnips').setup{}
+--      end,
+--    }
+--  }
 
   -- CMP-LSP
   use 'hrsh7th/cmp-nvim-lsp'
@@ -154,16 +155,28 @@ return packer.startup(function(use)
   use { 'lewis6991/gitsigns.nvim' }
 
   -- Snippets
-  use { 'SirVer/ultisnips', -- Snippet engine
-    requires = {{ 'honza/vim-snippets', rtp = '.' }}, -- Snippets
-    config = function()
-      vim.g.UltiSnipsExpandTrigger = '<Plug>(ultisnips_expand)'
-      vim.g.UltiSnipsJumpForwardTrigger = '<Plug>(ultisnips_jump_forward)'
-      vim.g.UltiSnipsJumpBackwardTrigger = '<Plug>(ultisnips_jump_backward)'
-      vim.g.UltiSnipsListSnippets = '<c-x><c-s>'
-      vim.g.UltiSnipsRemoveSelectModeMappings = 0
-    end
+--  -- Ultisnips
+--  use { 'SirVer/ultisnips', -- Snippet engine
+--    requires = {{ 'honza/vim-snippets', rtp = '.' }}, -- Snippets
+--    config = function()
+--      vim.g.UltiSnipsExpandTrigger = '<Plug>(ultisnips_expand)'
+--      vim.g.UltiSnipsJumpForwardTrigger = '<Plug>(ultisnips_jump_forward)'
+--      vim.g.UltiSnipsJumpBackwardTrigger = '<Plug>(ultisnips_jump_backward)'
+--      vim.g.UltiSnipsListSnippets = '<c-x><c-s>'
+--      vim.g.UltiSnipsRemoveSelectModeMappings = 0
+--    end
+--  }
+  -- Luasnip
+  use { 'L3MON4D3/LuaSnip',
+    requires = {
+      'saadparwaiz1/cmp_luasnip',
+      --config = function()
+      --  require('config.snippets').setup{}
+      --end,
+      'marcellbarsony/snippets'
+    },
   }
+  use 'rafamadriz/friendly-snippets'
 
   -- Telescope
   use { 'nvim-telescope/telescope.nvim', tag = '0.1.0',

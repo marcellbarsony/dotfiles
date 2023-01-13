@@ -6,9 +6,10 @@ local cmp = require'cmp'
 local lspkind = require'lspkind'
 local lspconfig = require'lspconfig'
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-local cmp_ultisnips_mappings = require("cmp_nvim_ultisnips.mappings")
+local luasnip = require("luasnip") -- Luasnip
+--local cmp_ultisnips_mappings = require("cmp_nvim_ultisnips.mappings") -- Ultisnips
 
--- SuperTab
+-- SuperTab (check backspace)
 local check_backspace = function()
   local col = vim.fn.col "." - 1
   return col == 0 or vim.fn.getlin("."):sub(col, col):match "%s"
@@ -43,9 +44,17 @@ local kind_icons = {
   TypeParameter = ""
 }
 
+-- Ultisnips
 -- cmp-nvim-ultisnips mapping
-local t = function(str)
-    return vim.api.nvim_replace_termcodes(str, true, true, true)
+--local t = function(str)
+--    return vim.api.nvim_replace_termcodes(str, true, true, true)
+--end
+
+-- Luasnip (Tab)
+local has_words_before = function()
+  unpack = unpack or table.unpack
+  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+  return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
 -- CMP Setup
@@ -54,7 +63,8 @@ cmp.setup({
   -- Snippet
   snippet = {
     expand = function(args)
-      vim.fn["UltiSnips#Anon"](args.body) -- UltiSnips
+--      vim.fn["UltiSnips#Anon"](args.body) -- Ultisnips
+      require('luasnip').lsp_expand(args.body) -- Luasnip
     end,
   },
 
@@ -90,62 +100,91 @@ cmp.setup({
     --     end
     --   end
     -- }),
-    ["<Tab>"] = cmp.mapping({
-      c = function()
-        if cmp.visible() then
-          -- Insert next/prev entry
-          cmp.select_next_item({ behavior = cmp.SelectBehavior.Insert })
-        else
-          -- Start completion
-          cmp.complete()
-        end
-      end,
-      -- Snippet (jump forward)
-      i = function(fallback)
-         if cmp.visible() then
-           -- Insert next entry
-           cmp.select_next_item({ behavior = cmp.SelectBehavior.Insert })
-         elseif vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
-           -- Jump to next snippet tag
-           vim.api.nvim_feedkeys(t("<Plug>(ultisnips_jump_forward)"), 'm', true)
-         else
-           fallback()
-         end
-      end,
-      -- Snippet (jump forward)
-      s = function(fallback)
-        if vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
-          vim.api.nvim_feedkeys(t("<Plug>(ultisnips_jump_forward)"), 'm', true)
-        else
-          fallback()
-        end
+    
+    -- Luasnips
+    ["<Tab>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      -- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable() 
+      -- they way you will only jump inside the snippet region
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      elseif has_words_before() then
+        cmp.complete()
+      else
+        fallback()
       end
-      }),
-    ["<S-Tab>"] = cmp.mapping({
-      c = function()
-        if cmp.visible() then
-          cmp.select_prev_item({ behavior = cmp.SelectBehavior.Insert })
-        else
-          cmp.complete()
-        end
-      end,
-      i = function(fallback)
-        if cmp.visible() then
-          cmp.select_prev_item({ behavior = cmp.SelectBehavior.Insert })
-        elseif vim.fn["UltiSnips#CanJumpBackwards"]() == 1 then
-           return vim.api.nvim_feedkeys( t("<Plug>(ultisnips_jump_backward)"), 'm', true)
-        else
-           fallback()
-        end
-      end,
-      s = function(fallback)
-        if vim.fn["UltiSnips#CanJumpBackwards"]() == 1 then
-          return vim.api.nvim_feedkeys( t("<Plug>(ultisnips_jump_backward)"), 'm', true)
-        else
-          fallback()
-        end
+    end, { "i", "s" }),
+
+    ["<S-Tab>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      elseif luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
       end
-    }),
+    end, { "i", "s" }),
+
+--    -- Ultisnips
+--    ["<Tab>"] = cmp.mapping({
+--      c = function()
+--        if cmp.visible() then
+--          -- Insert next/prev entry
+--          cmp.select_next_item({ behavior = cmp.SelectBehavior.Insert })
+--        else
+--          -- Start completion
+--          cmp.complete()
+--        end
+--      end,
+--      -- Snippet (jump forward)
+--      i = function(fallback)
+--         if cmp.visible() then
+--           -- Insert next entry
+--           cmp.select_next_item({ behavior = cmp.SelectBehavior.Insert })
+--         elseif vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
+--           -- Jump to next snippet tag
+--           vim.api.nvim_feedkeys(t("<Plug>(ultisnips_jump_forward)"), 'm', true)
+--         else
+--           fallback()
+--         end
+--      end,
+--      -- Snippet (jump forward)
+--      s = function(fallback)
+--        if vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
+--          vim.api.nvim_feedkeys(t("<Plug>(ultisnips_jump_forward)"), 'm', true)
+--        else
+--          fallback()
+--        end
+--      end
+--      }),
+--    ["<S-Tab>"] = cmp.mapping({
+--      c = function()
+--        if cmp.visible() then
+--          cmp.select_prev_item({ behavior = cmp.SelectBehavior.Insert })
+--        else
+--          cmp.complete()
+--        end
+--      end,
+--      i = function(fallback)
+--        if cmp.visible() then
+--          cmp.select_prev_item({ behavior = cmp.SelectBehavior.Insert })
+--        elseif vim.fn["UltiSnips#CanJumpBackwards"]() == 1 then
+--           return vim.api.nvim_feedkeys( t("<Plug>(ultisnips_jump_backward)"), 'm', true)
+--        else
+--           fallback()
+--        end
+--      end,
+--      s = function(fallback)
+--        if vim.fn["UltiSnips#CanJumpBackwards"]() == 1 then
+--          return vim.api.nvim_feedkeys( t("<Plug>(ultisnips_jump_backward)"), 'm', true)
+--        else
+--          fallback()
+--        end
+--      end
+--    }),
+
+    -- CMP
     ['<Down>'] = cmp.mapping(cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }), {'i'}),
     ['<Up>'] = cmp.mapping(cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }), {'i'}),
     ['<C-j>'] = cmp.mapping({
@@ -193,7 +232,8 @@ cmp.setup({
 
   -- Sources
   sources = cmp.config.sources({
-    { name = 'ultisnips', max_item_count = 5 }, -- For ultisnips users.
+    { name = 'luasnip', max_item_count = 5 }, -- Luasnip
+--    { name = 'ultisnips', max_item_count = 5 }, -- Ultisnips
     { name = 'nvim_lsp', max_item_count = 5 },
     { name = 'buffer', keyword_length = 3 , max_item_count = 3 },
   }),
