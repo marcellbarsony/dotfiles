@@ -39,44 +39,44 @@
   for f in ~/.config/zsh/zmodules/*; do source "$f"; done
 
 # VI mode
-  bindkey -v
-  export KEYTIMEOUT=1
+bindkey -v
+export KEYTIMEOUT=1
 
   # VIM - Edit line
-    autoload edit-command-line
-    zle -N edit-command-line
-    bindkey '^e' edit-command-line # (Ctrl + E)
+  autoload edit-command-line
+  zle -N edit-command-line
+  bindkey '^e' edit-command-line # (Ctrl + E)
 
   # VIM - Cursor
-    function zle-keymap-select {
-      if [[ ${KEYMAP} == vicmd ]] ||
-        [[ $1 = 'block' ]]; then
-        echo -ne '\e[1 q'
-      elif [[ ${KEYMAP} == main ]] ||
-          [[ ${KEYMAP} == viins ]] ||
-          [[ ${KEYMAP} = '' ]] ||
-          [[ $1 = 'beam' ]]; then
-        echo -ne '\e[3 q'
-      fi
-    }
-
-    zle -N zle-keymap-select
-    zle -N zle-line-init
-    zle-line-init() {
-        echo -ne "\e[3 q"
-    }
-
-    preexec() {
+  function zle-keymap-select {
+    if [[ ${KEYMAP} == vicmd ]] ||
+      [[ $1 = 'block' ]]; then
+      echo -ne '\e[1 q'
+    elif [[ ${KEYMAP} == main ]] ||
+        [[ ${KEYMAP} == viins ]] ||
+        [[ ${KEYMAP} = '' ]] ||
+        [[ $1 = 'beam' ]]; then
       echo -ne '\e[3 q'
-    }
+    fi
+  }
 
-    # 0 - Block (blinking)
-    # 1 - Block (blinking, default)
-    # 2 - Block (static)
-    # 3 - Underline (blinking)
-    # 4 - Underline (static)
-    # 5 - Bar (blinking)
-    # 6 - Bar (static)
+  zle -N zle-keymap-select
+  zle -N zle-line-init
+  zle-line-init() {
+      echo -ne "\e[3 q"
+  }
+
+  preexec() {
+    echo -ne '\e[3 q'
+  }
+
+  # 0 - Block (blinking)
+  # 1 - Block (blinking, default)
+  # 2 - Block (static)
+  # 3 - Underline (blinking)
+  # 4 - Underline (static)
+  # 5 - Bar (blinking)
+  # 6 - Bar (static)
 
 
 # Zsh-Autocomplete

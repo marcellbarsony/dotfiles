@@ -173,7 +173,7 @@ return packer.startup(function(use)
       --config = function()
       --  require('config.snippets').setup{}
       --end,
-      'marcellbarsony/snippets'
+      'marcellbarsony/snippets' -- Custom
     },
   }
   use 'rafamadriz/friendly-snippets'
