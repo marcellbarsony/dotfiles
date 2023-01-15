@@ -35,20 +35,15 @@ end
 
 -- SNIPPETS --{{{
 ls.add_snippets("lua", {
-	s({ -- if
-    trig="if",
-    name="If statement",
-    dscr="Conditional statement",
-    docstring="Conditional statement:\n"..
-      "if [condition] then\n"..
-      "\taction\n" ..
-      "end"
-    }, {
-	  t({"if "}),
-	  i(1),
-	  t({" then", "\t"}),
-	  i(0),
-	  t({"", "end"})
-	}),
+  s( -- if
+    "if",
+    fmt("if {} then\n"..
+      "\t{}\n"..
+      "end\n{}", {
+      i(1, "condition"),
+      i(2, "pass"),
+      i(0),
+    })
+  ),
 })
 --}}}

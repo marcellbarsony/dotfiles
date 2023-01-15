@@ -25,44 +25,69 @@ local conds_expand = require("luasnip.extras.conditions.expand")
 --}}}
 
 -- FUNCTIONS --{{{
--- Time
-local function time()
-  local current_time = os.date("%H:%M")
-  return current_time
-end
 --}}}
 
 -- SNIPPETS --{{{
 ls.add_snippets("all", {
-	s({ -- Date
-    trig="date",
-    name="Date",
-    dscr="Current date" }, {
-		f(function()
-      return os.date("%D - %d-%m-%Y")
-    end)
-	}),
-	s({ -- Lorem sentence
-    trig="lorem-sentence",
-    name="Lorem",
-    dscr="Lorem sentence",
-    }, {
-		t("Lorem ipsum dolor sit amet, consectetur adipiscing elit."),
-	}),
-	s({ -- pwd
-    trig="pwd",
-    name="pwd",
-    dscr="Current working directory"
-    }, {
+  s( -- date
+    "date",
+    fmt("{}", {
+      c(1, {
+        f(function()
+          return os.date("%D")
+        end),
+        f(function()
+          return os.date("%d-%m-%Y")
+        end),
+        f(function()
+          return os.date("%d %B %Y")
+        end),
+        f(function()
+          return os.date("%Y %B %d")
+        end),
+      }),
+    })
+  ),
+  s( -- lorem
+    "lorem",
+    fmt("{}", {
+    c(1, {
+		  t{"Lorem ipsum dolor sit amet, consectetur adipiscing elit.", ""},
+		  t{"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "Proin nec condimentum massa. Quisque tempus tempus malesuada.",
+        "Vivamus justo leo, mattis vel viverra ac, mattis sit amet ex.",
+        "Maecenas vel scelerisque leo. Duis in congue urna. Praesent non est",
+        "et nunc feugiat porttitor id quis nisi. Maecenas et lacinia ex.",
+        "Donec mollis sapien accumsan elit aliquet dignissim eu volutpat massa.",
+        "Nulla tempor mi a consequat rutrum. Praesent vitae scelerisque augue.",
+        "Donec imperdiet lorem metus, id facilisis lectus fringilla a.",
+        "Vivamus egestas, nunc et fringilla egestas, velit dui finibus purus,",
+        "et congue odio felis quis elit. Nunc at risus velit. Proin ex mauris,",
+        "pellentesque eu sem nec, lobortis aliquam ligula.",
+      },
+    }),
+    })
+  ),
+  s( -- pwd
+    "pwd",
+    fmt("{}", {
 		f(function()
       return os.getenv("PWD")
     end)
-	}),
-	s({ -- Time
-    trig="time",
-    name="Time",
-    dscr="Current time" }, {
-		f(time),
-	}),
+    })
+  ),
+  s( -- time
+    "time",
+    fmt("{}", {
+    c(1, {
+		  f(function()
+        return os.date("%I:%M %p")
+      end),
+		  f(function()
+        return os.date("%H:%M")
+      end),
+      }),
+    })
+  ),
 })
 --}}}
