@@ -3,8 +3,8 @@
 
 local saga = require("lspsaga")
 
-saga.init_lsp_saga({
-  border_style = "single", -- Border style
+saga.setup({
+  border_style = "single",
   saga_winblend = 0, -- Opacity
   -- when cursor in saga window you config these to move
   move_in_saga = { prev = '<C-p>',next = '<C-n>'},
@@ -109,7 +109,6 @@ local options = { noremap = true, silent = true }
 local function map(m, k, v)
   vim.api.nvim_set_keymap(m, k, v, options )
 end
-
 
 -- lspsaga
 map('n', '<leader>gf', '<cmd>Lspsaga lsp_finder<CR>') -- Lsp finder
