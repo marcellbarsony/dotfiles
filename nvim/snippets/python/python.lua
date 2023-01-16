@@ -105,7 +105,7 @@ ls.add_snippets("python", {
   s( -- if
     "if",
     fmt("if {}:\n"..
-      "\t{}", {
+      "\t{}\n", {
       i(1, "condition"),
       i(2, "pass"),
     })
@@ -130,8 +130,12 @@ ls.add_snippets("python", {
   ),
   s( -- import
     "import",
-    fmt('import {}', {
-      i(1, "module"),
+    fmt('{}import {}', {
+      c(1, {
+        sn(nil, {i(1), t""}), -- 1st opt
+        sn(nil, {i(1), t"from ", i(2, "package"), t" "}) -- 2nd opt
+      }),
+      i(2, "module"),
     })
   ),
   s( -- shebang
