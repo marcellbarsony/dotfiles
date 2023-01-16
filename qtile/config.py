@@ -199,7 +199,7 @@ layouts = [
         border_width=2,
         grow_amount=10,
         insert_position=0,
-        margin=5,
+        margin=[3, 3, 3, 3],
         margin_on_single=5,
         num_columns=2,
         split=True,
@@ -407,7 +407,7 @@ screens = [
             border_width=[0, 0, 0, 0],
             border_color=['000000', '000000', '000000', '000000'],
             background='#16161E',
-            margin=[3, 5, 0, 5],
+            margin=[3, 3, 0, 3],
         ),
     ),
 
