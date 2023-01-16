@@ -41,7 +41,7 @@ ls.add_snippets("python", {
       '\t"""Docstring for {}"""\n\n'..
       '\tdef __init__(self, {}):\n'..
       '\t\t{}({}, self).__init__()\n' ..
-      '\t\tself.arg = {}'
+      '\t\tself.arg = {}{}'
       , {
       i(1, "ClassName"),
       i(2, "object"),
@@ -50,92 +50,109 @@ ls.add_snippets("python", {
       i(4, "super"),
       same(1),
       same(3),
+      i(0),
       }
     )
   ),
   s( -- elif
     "elif",
     fmt("elif {}:\n"..
-      "\t {}", {
+      "\t {}{}", {
       i(1, "expression"),
       i(2, "pass"),
+      i(0),
     })
   ),
   s( -- else
     "else",
     fmt("else:\n"..
-      "\t {}", {
+      "\t {}{}", {
       i(1, "pass"),
+      i(0),
     })
   ),
   s( -- for
     "for",
     fmt("for {} in {}:\n"..
-      "\t{}", {
+      "\t{}\n"..
+      "{}{}", {
       i(1, "value"),
       i(2, "iterable"),
       i(3, "pass"),
-    })
-  ),
-  s( -- for/else
-    "for/else",
-    fmt("for {} in {}:\n"..
-      "\t{}\n"..
-      "else:\n"..
-      "\t{}", {
-      i(1, "target_list"),
-      i(2, "expression_list"),
-      i(3, "pass"),
-      i(4, "pass"),
+      c(4, {
+        d(1, function() -- nothing
+          return sn(nil, {
+            i(1),
+            t({''}),
+          })
+        end),
+        d(1, function() -- else
+          return sn(nil, {
+            i(1),
+            t({"else:", "\t"}),
+            i(2, "pass"),
+            })
+        end),
+      }),
+      i(0),
     })
   ),
   s( --function (+async)
     "def",
     fmt("{} {}({}):\n"..
-      "\t{}", {
+      "\t{}{}", {
     c(1, {
       t{"def"},
       t{"async def"},
       }),
-      i(2, "fname"),
+      i(2, "name"),
       i(3, "arg"),
       i(4, "pass"),
-    })
-  ),
-  s( -- if
-    "if",
-    fmt("if {}:\n"..
-      "\t{}\n", {
-      i(1, "condition"),
-      i(2, "pass"),
-    })
-  ),
-  s( -- if/else
-    "if/else",
-    fmt("if {}:\n"..
-      "\t{}\n"..
-      "else:\n"..
-      "\t{}", {
-      i(1, "condition"),
-      i(2, "pass"),
-      i(3, "pass"),
+      i(0),
     })
   ),
   s( -- if-name 
     "if-name",
     fmt('if __name__ = "__main__":\n'..
-      "\t{}", {
+      "\t{}{}", {
       i(1, "main()"),
+      i(0),
     })
   ),
   s( -- import
     "import",
-    fmt('{}import {}', {
+    fmt('{}import {}{}', {
       c(1, {
         sn(nil, {i(1), t""}), -- 1st opt
         sn(nil, {i(1), t"from ", i(2, "package"), t" "}) -- 2nd opt
       }),
       i(2, "module"),
+      i(0),
+    })
+  ),
+  s( -- if/else
+    "if",
+    fmt('if {}:\n'..
+      '\t{}\n'..
+      '{}{}', {
+      i(1, "condition"),
+      i(2, "pass"),
+      c(3, {
+        d(1, function() -- nothing
+          return sn(nil, {
+            i(1),
+            t({''}),
+          })
+        end),
+        d(1, function() -- else
+          return sn(nil, {
+            i(1),
+            t({"else:", "\t"}),
+            i(2, "pass"),
+            })
+        end),
+      }),
+      i(0),
     })
   ),
   s( -- shebang
@@ -144,7 +161,7 @@ ls.add_snippets("python", {
       '"""\n'..
       "Author: {}\n"..
       "Date  : {}\n"..
-      '"""\n\n\n\n', {
+      '"""\n\n\n{}', {
       i(1, "Name"),
       c(2, {
         f(function()
@@ -160,22 +177,24 @@ ls.add_snippets("python", {
           return os.date("%Y %B %d")
         end),
       }),
+      i(0),
     })
   ),
   s( -- with
     "with",
     fmt("with {} as {}:\n" ..
-      "\t{}", {
+      "\t{}{}", {
       i(1, "expression"),
       i(2, "target"),
       i(3, "pass"),
+      i(0),
       }
     )
   ),
   s( -- with-context
     "with-context",
     fmt('with open({}, "{}") as {}:\n' ..
-      '\t{} = {}.{}()', {
+      '\t{} = {}.{}(){}', {
       i(1, "file"),
       c(2, {
         t{"wr"},
@@ -189,30 +208,34 @@ ls.add_snippets("python", {
       c(5, {
         t{"read"},
         t{"write"},
-        }),
-      }
-    )
-  ),
-  s( -- while
-    "while",
-    fmt("while {}:\n" ..
-      "\t{}", {
-      i(1, "condition"),
-      i(2, "pass"),
-      }
-    )
+      }),
+      i(0),
+    })
   ),
   s( -- while/else
-    "while/else",
+    "while",
     fmt("while {}:\n" ..
       "\t{}\n"..
-      "else:\n"..
-      "\t{}", {
-      i(1, "expression"),
+      "{}{}", {
+      i(1, "condition"),
       i(2, "pass"),
-      i(3, "pass"),
-      }
-    )
+      c(3, {
+        d(1, function() -- nothing
+          return sn(nil, {
+            i(1),
+            t({''}),
+          })
+        end),
+        d(1, function() -- else
+          return sn(nil, {
+            i(1),
+            t({"else:", "\t"}),
+            i(2, "pass"),
+            })
+        end),
+      }),
+      i(0),
+    })
   ),
 })
 --}}}
