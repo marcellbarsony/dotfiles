@@ -35,26 +35,17 @@ end
 
 -- SNIPPETS --{{{
 ls.add_snippets("python", {
-  s({ -- Socket creation
-    trig="socket",
-    name="Socket",
-    dscr="Socket initialization",
-    }, {
-    i(1, "s"),
-    t{" = socket.socket(socket.AF_INET, socket.SOCK_STREAM)", ""},
-  }),
-  s({ -- Connect
-    trig="socket-connect",
-    name="Socket",
-    dscr="Socket initialization",
-    }, {
-    i(1, "s"),
-    t{".connect(("},
-    i(2, "host_ip"),
-    t{", "},
-    i(3, "port"),
-    t{"))", ""},
-    i(0),
-  }),
+  s( -- Socket creation
+    "socket",
+    fmt('{} = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n'..
+      "{}.connect(({}, {}))\n"..
+      "{}", {
+      i(1, "s"),
+      same(1),
+      i(2, "target_ip"),
+      i(3, "target_port"),
+      i(0),
+    })
+  ),
 })
 --}}}

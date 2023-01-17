@@ -35,68 +35,99 @@ end
 
 -- SNIPPETS --{{{
 ls.add_snippets("python", {
-  s( -- try/except
+  s( -- try/except/else/finally
     "try",
     fmt("try:\n"..
       "\t{}\n"..
-      "except {} as {}:\n"..
-      "\t{} {}", {
+      "except {}{}\n"..
+      "\t{}\n"..
+      "{}{}", {
       i(1, "pass"),
-      i(2, "Exception"),
-      i(3, "e"),
-      i(4, "raise"),
-      same(3),
+      c(2, { -- Errors
+        t{"Exception"},
+        t{"NameError"},
+        t{"TypeError"},
+        t{"ValueError"},
+        }),
+      c(3, {
+        d(1, function() -- nothing
+          return sn(nil, {
+            i(1),
+            t({':'}),
+          })
+        end),
+        d(1, function() -- as err:
+          return sn(nil, {
+            i(1),
+            t({" as "}),
+            i(2, "err"),
+            t({":"}),
+            })
+        end),
+      }),
+      i(4, "Continue"),
+      c(5, {
+        d(1, function() -- nothing
+          return sn(nil, {
+            i(1),
+            t({''}),
+          })
+        end),
+        d(1, function() -- else
+          return sn(nil, {
+            i(1),
+            t({"else:", "\t"}),
+            i(2, "pass"),
+            })
+        end),
+        d(1, function() -- finally
+          return sn(nil, {
+            i(1),
+            t({"else:", "\t"}),
+            i(2, "pass"),
+            t({"", "finally:", "\t"}),
+            i(3, "pass"),
+            })
+        end),
+      }),
+      i(0),
     })
   ),
-  s( -- try/except/else
-    "try-e",
-    fmt("try:\n"..
-      "\t{}\n"..
-      "except {} as {}:\n"..
-      "\t{} {}\n"..
-      "else:\n"..
+  s( -- Except
+    "except",
+    fmt("except {}{}\n"..
       "\t{}", {
-      i(1, "pass"),
-      i(2, "Exception"),
-      i(3, "e"),
-      i(4, "raise"),
-      same(3),
-      i(5, "pass"),
+      c(1, { -- Errors
+        t{"Exception"},
+        t{"NameError"},
+        t{"TypeError"},
+        t{"ValueError"},
+      }),
+      c(2, {
+        d(1, function() -- nothing
+          return sn(nil, {
+            i(1),
+            t({':'}),
+          })
+        end),
+        d(1, function() -- as err:
+          return sn(nil, {
+            i(1),
+            t({" as "}),
+            i(2, "err"),
+            t({":"}),
+            })
+        end),
+      }),
+      i(3, "Continue")
     })
   ),
-  s( -- try/except/finally
-    "try-f",
-    fmt("try:\n"..
-      "\t{}\n"..
-      "except {} as {}:\n"..
-      "\t{} {}\n"..
-      "finally:\n"..
-      "\t{}", {
-      i(1, "pass"),
-      i(2, "Exception"),
-      i(3, "e"),
-      i(4, "raise"),
-      same(3),
-      i(5, "pass"),
-    })
-  ),
-  s( -- try/except/else/finally
-    "try-ef",
-    fmt("try:\n"..
-      "\t{}\n"..
-      "except {} as {}:\n"..
-      "\t{} {}\n"..
-      "else:\n"..
-      "\t{}\n"..
-      "finally:\n"..
-      "\t{}", {
-      i(1, "pass"),
-      i(2, "Exception"),
-      i(3, "e"),
-      i(4, "raise"),
-      same(3),
-      i(5, "pass"),
-      i(6, "pass"),
+  s( -- Finally
+    "finally",
+    fmt("finally:\n"..
+      "\t{}{}", {
+      i(1, "Continue"),
+      i(0)
     })
   ),
 })

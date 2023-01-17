@@ -1,5 +1,5 @@
 -- Python snippets
--- https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
+-- Docs: https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
 
 -- SHORTHANDS --{{{
 local ls = require("luasnip")
@@ -161,6 +161,7 @@ ls.add_snippets("python", {
       '"""\n'..
       "Author: {}\n"..
       "Date  : {}\n"..
+      "Desc  : {}\n"..
       '"""\n\n\n{}', {
       i(1, "Name"),
       c(2, {
@@ -177,6 +178,7 @@ ls.add_snippets("python", {
           return os.date("%Y %B %d")
         end),
       }),
+      i(3, "Description"),
       i(0),
     })
   ),
