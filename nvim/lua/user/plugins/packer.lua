@@ -173,10 +173,9 @@ return packer.startup(function(use)
       --config = function()
       --  require('config.snippets').setup{}
       --end,
-      'marcellbarsony/snippets' -- Custom
     },
   }
-  use 'rafamadriz/friendly-snippets'
+  --use 'rafamadriz/friendly-snippets'
 
   -- Telescope
   use { 'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -229,6 +228,10 @@ return packer.startup(function(use)
 
   -- Dashboard
   use 'goolord/alpha-nvim'
+
+  -- UFO (fold)
+  use {'kevinhwang91/nvim-ufo',
+    requires = 'kevinhwang91/promise-async'}
 
   -- DAP (Debug)
   use 'mfussenegger/nvim-dap'

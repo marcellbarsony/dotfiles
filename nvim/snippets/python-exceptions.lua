@@ -65,7 +65,7 @@ ls.add_snippets("python", {
             })
         end),
       }),
-      i(4, "Continue"),
+      i(4, "continue"),
       c(5, {
         d(1, function() -- nothing
           return sn(nil, {

@@ -13,6 +13,7 @@ local options = {
   conceallevel = 0,
   list = true,
   listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂',
+  more=true,
   showtabline = 1,
   shiftwidth = 2,
   textwidth = 100,
@@ -56,7 +57,7 @@ local options = {
   -- Command line
   cdhome = true,
   --o.cedit = 'CTRL-F',
-  cmdheight = 2,
+  cmdheight = 0,
 
   -- Cursor
   cursorcolumn = false,
@@ -70,6 +71,10 @@ local options = {
   -- Fold
   foldmethod = 'manual',
   foldexpr = 'nvim_treesitter#foldexpr()',
+  -- foldcolumn = '1', -- '0' is not bad
+  -- foldlevel = 99, -- Using ufo provider need a large value, feel free to decrease the value
+  -- foldlevelstart = 99,
+  -- foldenable = true,
 
   -- Highlight
   hlsearch = true,

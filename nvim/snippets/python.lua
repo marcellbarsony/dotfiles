@@ -57,7 +57,7 @@ ls.add_snippets("python", {
   s( -- elif
     "elif",
     fmt("elif {}:\n"..
-      "\t {}{}", {
+      "\t{}{}", {
       i(1, "expression"),
       i(2, "pass"),
       i(0),
@@ -66,7 +66,7 @@ ls.add_snippets("python", {
   s( -- else
     "else",
     fmt("else:\n"..
-      "\t {}{}", {
+      "\t{}{}", {
       i(1, "pass"),
       i(0),
     })
@@ -199,12 +199,13 @@ ls.add_snippets("python", {
       '\t{} = {}.{}(){}', {
       i(1, "file"),
       c(2, {
-        t{"wr"},
-        t{"w"},
-        t{"wb"},
         t{"r"},
+        t{"w"},
+        t{"rw"},
+        t{"wb"},
+        t{"rb"},
         }),
-      i(3, "var"),
+      i(3, "file"),
       i(4, "content"),
       same(3),
       c(5, {
