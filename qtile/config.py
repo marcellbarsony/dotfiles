@@ -2,8 +2,7 @@
 
 import os
 import subprocess
-from libqtile import hook
-from libqtile import bar, layout, widget, qtile
+from libqtile import bar, hook, layout, widget, qtile
 from libqtile.config import Click, Drag, DropDown, Group, Key, Match, ScratchPad, Screen
 from libqtile.lazy import lazy
 
@@ -86,7 +85,7 @@ keys = [
     Key([mod1],             "r", lazy.restart(),       desc="Restart"),
 
     # ScratchPad
-    Key([mod],              'k', lazy.group['scratchpad'].dropdown_toggle('term')),
+    Key([mod],              'i', lazy.group['scratchpad'].dropdown_toggle('term')),
 
     # Screen
     Key([mod, "control"],   "h", lazy.prev_screen(), desc='Focus prev monitor'),
@@ -138,20 +137,7 @@ keys = [
 
 ]
 
-# Workspaces [named]
-
-# group_names = ' 1 2 3 4 5'.split()
-group_names = ' 一 二 三 四 五'.split()
-groups = [Group(name, layout='max') for name in group_names]
-
-for i, name in enumerate(group_names):
-    indx = str(i + 1)
-    keys += [
-        Key([mod], indx, lazy.group[name].toscreen()),
-        Key([mod, 'shift'], indx, lazy.window.togroup(name))]
-
-
-# Workspaces [numbered]
+# Workspaces [numbered] (default)
 
 # groups = [Group(i) for i in "123456789"]
 # for i in groups:
@@ -166,16 +152,37 @@ for i, name in enumerate(group_names):
 #         ),
 #     ])
 
-# ScratchPad
-# TODO:
-# https://github.com/qtile/qtile-examples/blob/master/osimplex/scratchpad.py
+# Workspaces [named]
+
+# group_names = ' 1 2 3 4 5'.split()
+group_names = ' 一 二 三 四 五'.split()
+groups = [Group(name, layout='max') for name in group_names]
+
+for i, name in enumerate(group_names):
+    indx = str(i + 1)
+    keys += [
+        Key([mod], indx, lazy.group[name].toscreen()),
+        Key([mod, 'shift'], indx, lazy.window.togroup(name))]
+
+# Workspaces
+
+# groups = [
+#     Group(" 1 ", layout='Columns'),
+#     Group(" 2 ", layout='Columns'),
+#     Group(" 3 ", layout='Columns'),
+#     Group(" 4 ", layout='Columns'),
+#     Group(" 5 ", layout='Columns'),
+#     Group(" 6 ", layout='Columns'),
+#     Group(" 7 ", layout='Columns'),
+#     Group(" 8 ", layout='Columns'),
+#     Group(" 9 ", layout='Columns'),
+# ]
+
 groups.append(
-     ScratchPad(
-         'scratchpad', [
-             DropDown('term', terminal),
-             ]
-         )
-     )
+    ScratchPad("scratchpad", [
+        DropDown("term", "kitty", x=0.1, y=0.1, height=0.8, width=0.8, opacity=1,
+                warp_pointer=True, on_focus_lost_hide=False)]),
+)
 
 # Layouts
 
