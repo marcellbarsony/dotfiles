@@ -6,8 +6,8 @@ local fn = vim.fn
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 local packer = require("packer")
 
--- Automatically install packer
----@diagnostic disable-next-line: missing-parameter
+-- Packer auto install
+-- @diagnostic disable-next-line: missing-parameter
 if fn.empty(fn.glob(install_path)) > 0 then
   PACKER_BOOTSTRAP = fn.system {
     "git",
@@ -21,7 +21,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
   vim.cmd [[packadd packer.nvim]]
 end
 
--- Autocmd: compile plugins on write
+-- Autocmd (compile plugins on write)
 -- PackerSync / PackerCompile
 vim.cmd([[
   augroup packer_user_config
@@ -104,13 +104,10 @@ packer.init {
   log = { level = 'warn' }, -- The default print log level. One of: "trace", "debug", "info", "warn", "error", "fatal".
   profile = {
     enable = false,
-    threshold = 1, -- integer in milliseconds, plugins which load faster than this won't be shown in profile output
+    threshold = 1,
   },
-  autoremove = false, -- Remove disabled or unused plugins without prompting the user
+  autoremove = false, -- Remove disabled or unused plugins without prompting
 }
-
--- Required if packer is configured as `opt`
---vim.cmd [[packadd packer.nvim]]
 
 -- Plugins
 return packer.startup(function(use)
@@ -118,69 +115,87 @@ return packer.startup(function(use)
   -- Packer
   use 'wbthomason/packer.nvim'
 
+  -- Auto pair
+  use 'windwp/nvim-autopairs'
+
+  -- Bufferline
+  use { 'akinsho/bufferline.nvim',
+    tag = "v3.*",
+    requires = 'nvim-tree/nvim-web-devicons'
+  }
+
   -- Color theme
   use 'folke/tokyonight.nvim'
 
-  -- LSP
-  use 'williamboman/mason.nvim'
-  use 'williamboman/mason-lspconfig.nvim'
-  use 'neovim/nvim-lspconfig'
-  use 'onsails/lspkind.nvim'
+  -- Dashboard
+  use 'goolord/alpha-nvim'
 
   -- CMP
-  use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/cmp-path'
---  use { 'hrsh7th/nvim-cmp',
---    requires = { 'quangnguyen30192/cmp-nvim-ultisnips',
---      config = function()
---        -- optional call to setup (see customization section)
---        require('cmp_nvim_ultisnips').setup{}
---      end,
---    }
---  }
+  use { 'hrsh7th/nvim-cmp',
+    requires = {
+      'nvim-tree/nvim-web-devicons',
+      'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-cmdline',
+      'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-path',
+    },
+  }
 
-  -- CMP-LSP
-  use 'hrsh7th/cmp-nvim-lsp'
-
-  -- LSP lines
-  use({ 'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
-    config = function()
-      require('lsp_lines').setup()
-    end,
-  })
+  -- Fold (ufo)
+  -- use { 'kevinhwang91/nvim-ufo',
+  --   requires = 'kevinhwang91/promise-async'
+  -- }
 
   -- Gitsigns
   use { 'lewis6991/gitsigns.nvim' }
 
-  -- Snippets
---  -- Ultisnips
---  use { 'SirVer/ultisnips', -- Snippet engine
---    requires = {{ 'honza/vim-snippets', rtp = '.' }}, -- Snippets
---    config = function()
---      vim.g.UltiSnipsExpandTrigger = '<Plug>(ultisnips_expand)'
---      vim.g.UltiSnipsJumpForwardTrigger = '<Plug>(ultisnips_jump_forward)'
---      vim.g.UltiSnipsJumpBackwardTrigger = '<Plug>(ultisnips_jump_backward)'
---      vim.g.UltiSnipsListSnippets = '<c-x><c-s>'
---      vim.g.UltiSnipsRemoveSelectModeMappings = 0
---    end
---  }
-  -- Luasnip
+  -- Indent lines
+  use 'lukas-reineke/indent-blankline.nvim'
+
+  -- LSP
+  use { 'williamboman/mason.nvim',
+    requires = {
+      'neovim/nvim-lspconfig',
+      'onsails/lspkind.nvim',
+      'williamboman/mason-lspconfig.nvim',
+    },
+  }
+
+  -- LSP Lines
+  use 'https://git.sr.ht/~whynothugo/lsp_lines.nvim'
+
+  -- LSP Saga
+  use { 'glepnir/lspsaga.nvim' }
+
+  -- Nvim tree
+  use { 'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons',
+    },
+    tag = 'nightly'
+  }
+
+  -- Null-ls
+  use 'jose-elias-alvarez/null-ls.nvim'
+
+  -- Snippets [Luasnip]
   use { 'L3MON4D3/LuaSnip',
     requires = {
       'saadparwaiz1/cmp_luasnip',
-      --config = function()
-      --  require('config.snippets').setup{}
-      --end,
+      -- 'rafamadriz/friendly-snippets'
     },
   }
-  --use 'rafamadriz/friendly-snippets'
+
+  -- Status line
+  use 'nvim-lualine/lualine.nvim'
+  -- use 'glepnir/galaxyline.nvim'
+  -- use 'feline-nvim/feline.nvim'
+  -- use 'windwp/windline.nvim'
 
   -- Telescope
   use { 'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = { {
-      'nvim-lua/plenary.nvim', -- Lua function library
+      'nvim-lua/plenary.nvim', -- Lua library
       'BurntSushi/ripgrep'
     } }
   }
@@ -191,59 +206,47 @@ return packer.startup(function(use)
     requires = { 'p00f/nvim-ts-rainbow' }
   }
 
-  -- Nvim tree
-  use { 'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons', -- optional, for file icons
-    },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
-  }
-
-  -- Indent lines
-  use 'lukas-reineke/indent-blankline.nvim'
-
-  -- Bufferline
-  use { 'akinsho/bufferline.nvim',
-    tag = "v3.*",
-    requires = 'nvim-tree/nvim-web-devicons'
-  }
-
-  -- Lspsaga
-  use { 'glepnir/lspsaga.nvim' }
-
-  -- Null-ls
-  use 'jose-elias-alvarez/null-ls.nvim'
-
   -- Which key
   use 'folke/which-key.nvim'
 
-  -- Status line
-  use 'nvim-lualine/lualine.nvim'
-  --use 'glepnir/galaxyline.nvim'
-  --use 'feline-nvim/feline.nvim'
-  --use 'windwp/windline.nvim'
-
-  -- Auto pair
-  use 'windwp/nvim-autopairs'
-
-  -- Dashboard
-  use 'goolord/alpha-nvim'
-
-  -- UFO (fold)
-  use {'kevinhwang91/nvim-ufo',
-    requires = 'kevinhwang91/promise-async'}
-
   -- DAP (Debug)
-  use 'mfussenegger/nvim-dap'
-  use 'mfussenegger/nvim-dap-python' -- Python
-  use 'rcarriga/nvim-dap-ui' -- UI
-  use 'nvim-telescope/telescope-dap.nvim' -- Telescope
-  --use 'theHamsta/nvim-dap-virtual-text' -- Virtual text
+  use { 'mfussenegger/nvim-dap',
+    requires = {
+      'mfussenegger/nvim-dap-python', -- Python
+      'nvim-telescope/telescope-dap.nvim', -- Telescope
+      'rcarriga/nvim-dap-ui', -- UI
+      -- 'theHamsta/nvim-dap-virtual-text', -- Virtual text
+    }
+  }
 
-  -- VIM Script
+  -- VIM SCRIPT
 
   -- Startuptime
-  --use { 'dstein64/vim-startuptime' }
+  -- use { 'dstein64/vim-startuptime' }
+
+  -- NOT IN USE
+
+  -- CMP [Ultisnips]
+  -- use { 'hrsh7th/nvim-cmp',
+  --   requires = { 'quangnguyen30192/cmp-nvim-ultisnips',
+  --     config = function()
+  --       -- optional call to setup (see customization section)
+  --       require('cmp_nvim_ultisnips').setup{}
+  --     end,
+  --   }
+  -- }
+
+  -- Snippets [Ultisnips]
+  -- use { 'SirVer/ultisnips', -- Snippet engine
+  --   requires = {{ 'honza/vim-snippets', rtp = '.' }}, -- Snippets
+  --   config = function()
+  --     vim.g.UltiSnipsExpandTrigger = '<Plug>(ultisnips_expand)'
+  --     vim.g.UltiSnipsJumpForwardTrigger = '<Plug>(ultisnips_jump_forward)'
+  --     vim.g.UltiSnipsJumpBackwardTrigger = '<Plug>(ultisnips_jump_backward)'
+  --     vim.g.UltiSnipsListSnippets = '<c-x><c-s>'
+  --     vim.g.UltiSnipsRemoveSelectModeMappings = 0
+  --   end
+  -- }
 
   -- Bootstrap
   -- Set up configuration after cloning packer.nvim

@@ -178,6 +178,8 @@ for i, name in enumerate(group_names):
 #     Group(" 9 ", layout='Columns'),
 # ]
 
+# ScratchPad
+
 groups.append(
     ScratchPad("scratchpad", [
         DropDown("term", "kitty", x=0.1, y=0.1, height=0.8, width=0.8, opacity=1,
@@ -216,11 +218,11 @@ layouts = [
         ),
     # Floating
     # layout.Floating(
-    #     border_focus = PRIMARY
-    #     border_normal = ['#222255'],
-    #     border_width = 3,
-    #     fullscreen_border_width = 3,
-    #     max_border_width = 3,
+    #     border_focus=PRIMARY,
+    #     border_normal=['#222255'],
+    #     border_width=1,
+    #     fullscreen_border_width=3,
+    #     max_border_width=3,
     #     ),
     # Matrix
     # layout.Matrix(),
