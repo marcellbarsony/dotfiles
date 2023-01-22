@@ -19,7 +19,6 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export HISTFILE="$XDG_STATE_HOME/zsh/history"
 export KITTY_CONFIG_DIRECTORY="$XDG_CONFIG_HOME/kitty"
-export STARSHIP_CONFIG=~/.config/starship/config.toml
 export ZDOTDIR="$HOME/.config/zsh/"
 export XINITRC="$HOME/.config/x11/"
 # export GIT_CONFIG="#$XDG_CONFIG_HOME/git/config"
@@ -45,6 +44,13 @@ export PATH=/home/marci/.local/share/cargo/bin:$PATH
 # Scripts
 export PATH=$HOME/.local/git/scripts:$PATH
 export PATH=$HOME/.local/git/scripts/malware/ransomware:$PATH
+
+# Starship prompt
+# export STARSHIP_CONFIG=~/.config/starship/config.toml
+# export STARSHIP_CACHE=~/.config/starship
+
+# Spaceship prompt
+export SPACESHIP_CONFIG="$HOME/.config/spaceship/spaceship.zsh"
 
 # Fix prompt
 export LC_CTYPE=en_US.UTF-8

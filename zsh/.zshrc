@@ -32,8 +32,11 @@
   SAVEHIST=1000
   HISTFILE=~/.config/zsh/.zsh_history
 
-# Prompt - Starship
-  eval "$(starship init zsh)"
+# Prompt - Starship (Rust)
+# eval "$(starship init zsh)"
+
+# Prompt - Spaceship (Shell)
+source "$HOME/.local/src/spaceship/spaceship.zsh"
 
 # Source zmodules
   for f in ~/.config/zsh/zmodules/*; do source "$f"; done
