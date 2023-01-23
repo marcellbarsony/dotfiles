@@ -20,12 +20,22 @@
 # Highlights
   typeset -A ZSH_HIGHLIGHT_STYLES
 
-  ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
-  ZSH_HIGHLIGHT_STYLES[alias]='fg=blue'
+  ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern regexp cursor root line)
+  ZSH_HIGHLIGHT_STYLES[alias]='fg=magenta'
   ZSH_HIGHLIGHT_STYLES[cursor]='fg=magenta'
-  ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
-  ZSH_HIGHLIGHT_STYLES[globbing]='fg=cyan'
-  ZSH_HIGHLIGHT_STYLES[path_pathseparator]='fg=226'
+  ZSH_HIGHLIGHT_STYLES[path]='fg=blue'
+  ZSH_HIGHLIGHT_STYLES[path_pathseparator]='fg=magenta'
+  ZSH_HIGHLIGHT_STYLES[regexp]='fg=green'
+  # ZSH_HIGHLIGHT_STYLES[line]='fg=magenta'
+  # ZSH_HIGHLIGHT_STYLES[root]='fg=magenta'
+
+# Highlights (regexp)
+  # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/regexp.md
+  typeset -A ZSH_HIGHLIGHT_REGEXP
+  # ZSH_HIGHLIGHT_REGEXP+=('"*"' fg=magenta,bold) # Double quote
+  # ZSH_HIGHLIGHT_REGEXP+=("'*'" fg=magenta,bold) # Single quote
+  # ZSH_HIGHLIGHT_REGEXP+=("'.*" fg=red,bold)
+  ZSH_HIGHLIGHT_REGEXP+=("'.*'" fg=yellow,bold)
 
 # History
   HISTSIZE=1000
@@ -118,8 +128,6 @@ export KEYTIMEOUT=1
   bindkey -M menuselect 'j' vi-down-line-or-history
   bindkey -M menuselect '\r' accept-line
 
-
-
 # Zsh-Autosuggestions
   source ~/.local/src/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -128,5 +136,5 @@ export KEYTIMEOUT=1
 #  autoload -Uz compinit && compinit
 #  zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
-# Zsh-Syntax-highlighting
+# Zsh-Syntax-highlighting (source last)
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
