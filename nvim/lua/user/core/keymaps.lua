@@ -86,15 +86,16 @@ map('n', '<leader>ld', require('lsp_lines').toggle, { desc = 'Diagnostics' })
 -- DAP
 -- :h dap-api
 -- :h dap-mappings
-map('n', '<leader>5', ":lua require'dap'.continue() <CR>", { desc = 'DAP [Continue]'} )
-map('n', '<leader>3', ":lua require'dap'.step_over() <CR>", { desc = 'DAP [Step over]'} )
-map('n', '<leader>2', ":lua require'dap'.step_into() <CR>", { desc = 'DAP [Step into]'} )
-map('n', '<leader>0', ":lua require'dap'.step_out() <CR>", { desc = 'DAP [Step out]'} )
-map('n', '<leader>b', ":lua require'dap'.toggle_breakpoint() <CR>", { desc = 'Breakpoint'} )
-map('n', '<leader>B', ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: ')) <CR>", { desc = 'Set breakpoint'} )
+map('n', '<leader>5', ":lua require'dap'.continue()<CR>", { desc = 'DAP [Continue]'} )
+map('n', '<leader>3', ":lua require'dap'.step_over()<CR>", { desc = 'DAP [Step over]'} )
+map('n', '<leader>2', ":lua require'dap'.step_into()<CR>", { desc = 'DAP [Step into]'} )
+map('n', '<leader>0', ":lua require'dap'.step_out()<CR>", { desc = 'DAP [Step out]'} )
+map('n', '<leader>b', ":lua require'dap'.toggle_breakpoint()<CR>", { desc = 'Breakpoint'} )
+map('n', '<leader>B', ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", { desc = 'Set breakpoint'} )
 map('n', '<leader>dp', ":lua require'dap'.set.breakpoint(nul, nul, vim.fn.input('Log point message: '))<CR>", { desc = 'Set breakpoint with log point message' })
 map('n', '<leader>dr', ":lua require'dap'.repl.open()<CR>", { desc = 'Repl.Open' })
 map('n', '<leader>dl', ":lua require'dap'.run_last()<CR>", { desc = 'Run last' })
+map('n', '<leader>dm', ":lua require('dap-python').test_method()<CR>", { desc = 'Run method above'})
 
 -- DAP-Python
 -- h: dap-python

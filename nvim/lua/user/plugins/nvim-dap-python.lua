@@ -3,7 +3,7 @@
 -- :h dap-configuration
 
 -- Debugpy module
-local path='~/.virtualenvs/debugpy/bin/python'
+local path='~/.local/git/arch/debugpy/bin/python'
 
 -- Adapter setup
 require('dap-python').setup(path)
@@ -18,7 +18,7 @@ require('dap-python').setup(path)
     end;
     -- ... more options, see https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings
 
-})
+  })
 
 -- Test framework
 --require('dap-python').test_runner = 'pytest' -- [django/pytest/unittest]

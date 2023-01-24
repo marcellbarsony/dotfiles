@@ -196,7 +196,7 @@ return packer.startup(function(use)
   use { 'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = { {
       'nvim-lua/plenary.nvim', -- Lua library
-      'BurntSushi/ripgrep'
+      'BurntSushi/ripgrep' -- Live grep
     } }
   }
 
@@ -215,7 +215,7 @@ return packer.startup(function(use)
       'mfussenegger/nvim-dap-python', -- Python
       'nvim-telescope/telescope-dap.nvim', -- Telescope
       'rcarriga/nvim-dap-ui', -- UI
-      -- 'theHamsta/nvim-dap-virtual-text', -- Virtual text
+      'theHamsta/nvim-dap-virtual-text', -- Virtual text
     }
   }
 
