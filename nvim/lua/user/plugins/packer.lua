@@ -178,6 +178,9 @@ return packer.startup(function(use)
   -- Null-ls
   use 'jose-elias-alvarez/null-ls.nvim'
 
+  -- Py-lsp
+  use 'HallerPatrick/py_lsp.nvim'
+
   -- Snippets [Luasnip]
   use { 'L3MON4D3/LuaSnip',
     requires = {

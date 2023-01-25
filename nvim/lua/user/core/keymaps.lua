@@ -27,7 +27,7 @@ map('', '<down>', '<nop>')
 map('', '<left>', '<nop>')
 map('', '<right>', '<nop>')
 
--- Nvim core
+-- Core
 --map('n', '<leader>r', ':so %<CR>', { desc = 'Reload [BROKEN]'})
 map('n', '<leader>w', ':w<CR>', { desc = 'Write'})
 map('n', '<leader>ww', ':w<CR>', { desc = 'Write current'})
@@ -42,12 +42,6 @@ map('n', '<leader>c', ':nohl<CR>', { desc = 'Nohl' }) -- Clear highlighting
 --map('n', 'n', 'nzz') -- Fix n: keep cursor in center
 --map('n', 'N', 'Nzz') -- Fix N: keep cursor in center
 
--- Buffers
-map('n', '<C-]>', ':bn<CR>', { desc = 'Buffer [Next]' }) -- Move to next
-map('n', '<C-[>', ':bp<CR>', { desc = 'Buffer [Prev]' }) -- Move to prev
-map('n', "<C-'>", ':b#<CR>', { desc = 'Buffer [To last]' }) -- Move to last
-map('n', "<C-q>", ':bdelete<CR>', { desc = 'Buffer [Delete]' }) -- Move to last
-
 -- Splits
 map('n', '<leader>sv', ':vsplit<CR>', { desc = 'Vertical' }) -- Split Vertical
 map('n', '<leader>sh', ':split<CR>' , { desc = 'Horizontal' }) -- Split Horizontal
@@ -61,27 +55,11 @@ map('n', '<C-A-j>', ':resize +2<CR>') -- Resize down
 map('n', '<C-A-h>', ':vertical resize -2<CR>') -- Resize left
 map('n', '<C-A-l>', ':vertical resize +2<CR>') -- Resize right
 
--- File manager
---map('n', '<leader>t', ':Lex 30<CR>', { desc = 'Netrw', silent = true })
-map('n', 't', ':NvimTreeToggle<CR>', { desc = 'NvimTree' })
-
--- Gitsigns
-map('n', '<leader>uu', ':Gitsigns toggle_signs<CR>:Gitsigns toggle_numhl<CR>:Gitsigns toggle_current_line_blame<CR>', { desc = 'Toggle' })
-map('n', '<leader>us', ':Gitsigns toggle_signs<CR>', { desc = 'Signs' })
-map('n', '<leader>un', ':Gitsigns toggle_numhl<CR>', { desc = 'Numhl' })
-map('n', '<leader>ub', ':Gitsigns toggle_current_line_blame<CR>', { desc = 'Blame' })
-
--- Lines
--- Reference: https://vim.fandom.com/wiki/Moving_lines_up_or_down
-map('n', '<leader>lb', 'o<ESC>', { desc = 'Line [Insert Below]' })
-map('n', '<leader>la', 'O<ESC>', { desc = 'Line [Insert Above]' })
-map('n', '<J>', ':move .+1<CR>', { desc = 'Line [Move Down]' })
-map('n', '<K>', ':move .-2<CR>', { desc = 'Line [Move Up]' })
-map('x', '<J>', ":move '>+1<CR>gv=gv", { desc = 'Block [Move Down]' })
-map('x', '<K>', ":move '<-2<CR>gv=gv", { desc = 'Block [Move Up]' })
-
--- Lsp lines
-map('n', '<leader>ld', require('lsp_lines').toggle, { desc = 'Diagnostics' })
+-- Buffers
+map('n', '<C-]>', ':bn<CR>', { desc = 'Buffer [Next]' }) -- Move to next
+map('n', '<C-[>', ':bp<CR>', { desc = 'Buffer [Prev]' }) -- Move to prev
+map('n', "<C-'>", ':b#<CR>', { desc = 'Buffer [To last]' }) -- Move to last
+map('n', "<C-q>", ':bdelete<CR>', { desc = 'Buffer [Delete]' }) -- Move to last
 
 -- DAP
 -- :h dap-api
@@ -102,6 +80,41 @@ map('n', '<leader>dm', ":lua require('dap-python').test_method()<CR>", { desc = 
 map('n', '<leader>dn', ":lua require('dap-python').test_method()<CR>", { desc = 'Py - Test method' })
 map('n', '<leader>df', ":lua require('dap-python').test_class()<CR>", { desc = 'Py - Test class' })
 map('n', '<leader>ds', ":lua require('dap-python').debug_selection()<CR>", { desc = 'Py - Debug selection' })
+
+-- File manager
+--map('n', '<leader>t', ':Lex 30<CR>', { desc = 'Netrw', silent = true })
+map('n', 't', ':NvimTreeToggle<CR>', { desc = 'NvimTree' })
+
+-- Gitsigns
+map('n', '<leader>uu', ':Gitsigns toggle_signs<CR>:Gitsigns toggle_numhl<CR>:Gitsigns toggle_current_line_blame<CR>', { desc = 'Toggle' })
+map('n', '<leader>us', ':Gitsigns toggle_signs<CR>', { desc = 'Signs' })
+map('n', '<leader>un', ':Gitsigns toggle_numhl<CR>', { desc = 'Numhl' })
+map('n', '<leader>ub', ':Gitsigns toggle_current_line_blame<CR>', { desc = 'Blame' })
+
+-- Lines
+-- Reference: https://vim.fandom.com/wiki/Moving_lines_up_or_down
+map('n', '<leader>ib', 'o<ESC>', { desc = 'Line [Insert Below]' })
+map('n', '<leader>ia', 'O<ESC>', { desc = 'Line [Insert Above]' })
+map('n', '<J>', ':move .+1<CR>', { desc = 'Line [Move Down]' })
+map('n', '<K>', ':move .-2<CR>', { desc = 'Line [Move Up]' })
+map('x', '<J>', ":move '>+1<CR>gv=gv", { desc = 'Block [Move Down]' })
+map('x', '<K>', ":move '<-2<CR>gv=gv", { desc = 'Block [Move Up]' })
+
+-- LSP
+map('n', '<leader>li', ":LspInfo<CR>", { desc = 'LSP Info' })
+
+-- LSP lines
+map('n', '<leader>ld', require('lsp_lines').toggle, { desc = 'Diagnostics' })
+
+-- LSP py-lsp
+map('n', '<leader>vc', ":PyLspCurrentVenv<CR>", { desc = 'Current' })
+map('n', '<leader>vn', ":PyLspCreateVenv venv<CR>", { desc = 'Create' })
+map('n', '<leader>va', ":PyLspActivateVenv venv<CR>", { desc = 'Activate' })
+map('n', '<leader>vd', ":PyLspDeactiveVenv<CR>", { desc = 'Deactivate' })
+map('n', '<leader>vi', ":PyRun -m pip install -r requirements.txt<CR>", { desc = 'Install dependencies' })
+
+-- Mason
+map('n', '<leader>m', ":Mason<CR>", { desc = 'Mason' })
 
 -- Null-ls
 map('n', '<leader>nf', ":lua vim.lsp.buf.formatting()<CR>", { desc = 'Format' }) -- Formatting

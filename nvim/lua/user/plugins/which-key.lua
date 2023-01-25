@@ -105,23 +105,23 @@ local mappings = {
       name = "DAP",
     },
 
+    -- Insert Line
+    i = {
+      name = "Insert",
+      a = { "Insert line [Above]" },
+      b = { "Insert line [Below]" },
+    },
+
     -- Lspsaga
-    g = {
+    l = {
       name = "Lspsaga",
       a = { "Code action" },
-      d = { "Definition" },
-      f = { "Finder" },
+      d = { "Diagnostics" },
+      f = { "Definition" },
       k = { "Documentation" },
       o = { "Outline" },
       r = { "Rename" },
       t = { "Terminal" },
-    },
-
-    -- Line
-    l = {
-      name = "Line",
-      a = { "Insert [Above]" },
-      b = { "Insert [Below]" },
     },
 
     -- Null-ls
@@ -154,6 +154,11 @@ local mappings = {
       -- Gitsigns
     u = {
       name = "Gitsigns",
+    },
+
+      -- Venv (Python)
+    v = {
+      name = "PyVenv",
     },
 
 

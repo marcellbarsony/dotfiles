@@ -111,13 +111,13 @@ local function map(m, k, v)
 end
 
 -- lspsaga
-map('n', '<leader>gf', '<cmd>Lspsaga lsp_finder<CR>') -- Lsp finder
-map('n', '<leader>ga', '<cmd>Lspsaga code_action<CR>') -- Code actions
-map('n', '<leader>gr', '<cmd>Lspsaga rename<CR>') -- Rename variable
-map('n', '<leader>gd', '<cmd>Lspsaga peek_definition<CR>') -- Go to definition
---map('n', '<leader>gs', '<cmd>Lspsaga show_line_diagnostics<CR>') -- Diagnostics (line)
---map('n', '<leader>gd', '<cmd>Lspsaga show_cursor_diagnostics<CR>') -- Diagnostics (cursor)
-map('n', '<leader>go', '<cmd>Lspsaga outline<CR>') -- Project outline
-map('n', '<leader>gk', '<cmd>Lspsaga hover_doc<CR>') -- Documentation
-map('n', '<leader>gt', '<cmd>Lspsaga open_floaterm<CR>') -- Floating terminal
+map('n', '<leader>lf', '<cmd>Lspsaga lsp_finder<CR>') -- Lsp finder
+map('n', '<leader>la', '<cmd>Lspsaga code_action<CR>') -- Code actions
+map('n', '<leader>lr', '<cmd>Lspsaga rename<CR>') -- Rename variable
+map('n', '<leader>lf', '<cmd>Lspsaga peek_definition<CR>') -- Go to definition
+--map('n', '<leader>ls', '<cmd>Lspsaga show_line_diagnostics<CR>') -- Diagnostics (line)
+--map('n', '<leader>ld', '<cmd>Lspsaga show_cursor_diagnostics<CR>') -- Diagnostics (cursor)
+map('n', '<leader>lo', '<cmd>Lspsaga outline<CR>') -- Project outline
+map('n', '<leader>lk', '<cmd>Lspsaga hover_doc<CR>') -- Documentation
+map('n', '<leader>lt', '<cmd>Lspsaga open_floaterm<CR>') -- Floating terminal
 

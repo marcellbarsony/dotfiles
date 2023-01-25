@@ -2,7 +2,7 @@
 -- https://github.com/neovim/nvim-lspconfig
 -- Dependencies:
 
--- Require servers
+Require servers
 local nvim_lsp = require('lspconfig')
 local servers = {
   'bashls',
@@ -18,8 +18,6 @@ for _, lsp in ipairs(servers) do
   }
 end
 
--- Attach servers
-
 -- Diagnostics
 vim.diagnostic.config({
     virtual_text = false,
@@ -30,14 +28,14 @@ vim.diagnostic.config({
     })
 
 -- Diagnostics symbols
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+local signs = { Error = "", Warn = "", Hint = "", Info = "" }
 
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, {
-    text = icon,
-    texthl = hl,
-    --numhl = hl
+    --text = icon,
+    --texthl = hl,
+    numhl = hl
     })
 end
 

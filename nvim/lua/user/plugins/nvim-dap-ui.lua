@@ -50,7 +50,7 @@ require("dapui").setup({
     },
     {
       elements = {
-        "console"
+        --"console"
         --"repl"
       },
       size = 0.10, -- % of total lines
