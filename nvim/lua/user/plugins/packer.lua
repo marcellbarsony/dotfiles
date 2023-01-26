@@ -158,6 +158,7 @@ return packer.startup(function(use)
       'neovim/nvim-lspconfig',
       'onsails/lspkind.nvim',
       'williamboman/mason-lspconfig.nvim',
+      'jay-babu/mason-nvim-dap.nvim',
     },
   }
 

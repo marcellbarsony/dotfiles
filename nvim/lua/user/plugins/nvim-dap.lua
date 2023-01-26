@@ -1,27 +1,24 @@
 -- Nvim DAP
 -- https://github.com/mfussenegger/nvim-dap/
--- :help dap-mappings
--- :help dap-api
-
 
 local dap = require('dap')
 
+-- DAP adapter
+-- :h dap-adapters
 dap.adapters.python = {
   type = 'executable';
-  command = 'path/to/virtualenvs/debugpy/bin/python';
+  command = os.getenv('HOME') .. '/.virtualenvs/tools/bin/python';
   args = { '-m', 'debugpy.adapter' };
 }
 
+-- Debugee configuration
+-- :h dap-configuration
 dap.configurations.python = {
   {
-    -- The first three options are required by nvim-dap
-    type = 'python'; -- the type here established the link to the adapter definition: `dap.adapters.python`
+    type = 'python';
     request = 'launch';
     name = "Launch file";
-
-    -- Options below are for debugpy, see https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings for supported options
-
-    program = "${file}"; -- This configuration will launch the current file if used.
+    program = "${file}";
     pythonPath = function()
       -- debugpy supports launching an application with a different interpreter then the one used to launch debugpy itself.
       -- The code below looks for a `venv` or `.venv` folder in the current directly and uses the python within.
@@ -37,3 +34,10 @@ dap.configurations.python = {
     end;
   },
 }
+
+-- Signs configuration
+vim.fn.sign_define('DapBreakpoint', {text='B', texthl='', linehl='', numhl=''})
+vim.fn.sign_define('DapBreakpointCondition', {text='C', texthl='', linehl='', numhl=''})
+vim.fn.sign_define('DapLogPoint', {text='L', texthl='', linehl='', numhl=''})
+vim.fn.sign_define('DapStopped', {text='→', texthl='', linehl='', numhl=''})
+vim.fn.sign_define('DapBreakpointRejected', {text='R', texthl='', linehl='', numhl=''})

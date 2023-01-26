@@ -5,8 +5,8 @@ require("dapui").setup({
   -- Icons
   icons = {
     expanded = "",
-    collapsed = "",
-    current_frame = ""
+    collapsed = ">", -- 
+    current_frame = ">", -- 
   },
   -- Mappings
   mappings = {
@@ -26,41 +26,31 @@ require("dapui").setup({
     --   expand = "o",
     -- }
   },
-  -- Expand lines larger than the window
-  -- Requires >= 0.7
   expand_lines = vim.fn.has("nvim-0.7") == 0,
-  -- Layouts define sections of the screen to place windows.
-  -- The position can be "left", "right", "top" or "bottom".
-  -- The size specifies the height/width depending on position. It can be an Int
-  -- or a Float. Integer specifies height/width directly (i.e. 20 lines/columns) while
-  -- Float value specifies percentage (i.e. 0.3 - 30% of available lines/columns)
-  -- Elements are the elements shown in the layout (in order).
-  -- Layouts are opened in order so that earlier layouts take priority in window sizing.
   layouts = {
     {
       elements = {
       -- Elements can be strings or table with id and size keys.
         { id = "scopes", size = 0.65 },
         { id = "breakpoints", size = 0.1 },
-        { id = "stacks", size = 0.15 },
-        { id = "watches", size = 0.1 },
+        { id = "stacks", size = 0.16 },
+        { id = "watches", size = 0.09 },
       },
       size = 55, -- Width (columns)
       position = "right",
     },
     {
       elements = {
-        --"console"
+        "console",
         --"repl"
       },
-      size = 0.10, -- % of total lines
+      size = 0.1,
       position = "bottom",
     },
   },
+  -- Controls
   controls = {
-    -- Requires nvim 0.8 or higher
-    enabled = true,
-    -- Display controls in this element
+    enabled = false,
     element = "repl",
     icons = {
       pause = "",
@@ -73,6 +63,7 @@ require("dapui").setup({
       terminate = "",
     },
   },
+  -- Floating
   floating = {
     max_height = nil, -- These can be integers or a float between 0 and 1.
     max_width = nil, -- Floats will be treated as percentage of your screen.

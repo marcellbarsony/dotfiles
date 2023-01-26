@@ -91,7 +91,7 @@ local options = {
   number = true,
   numberwidth = 3,
   relativenumber = true,
-  signcolumn = 'no',
+  signcolumn = 'yes',
 
   -- Mode
   showmode = false,

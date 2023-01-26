@@ -3,7 +3,7 @@
 -- :h dap-configuration
 
 -- Debugpy module
-local path='~/.local/git/arch/debugpy/bin/python'
+local path='/usr/bin/python'
 
 -- Adapter setup
 require('dap-python').setup(path)

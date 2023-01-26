@@ -68,18 +68,18 @@ map('n', '<leader>5', ":lua require'dap'.continue()<CR>", { desc = 'DAP [Continu
 map('n', '<leader>3', ":lua require'dap'.step_over()<CR>", { desc = 'DAP [Step over]'} )
 map('n', '<leader>2', ":lua require'dap'.step_into()<CR>", { desc = 'DAP [Step into]'} )
 map('n', '<leader>0', ":lua require'dap'.step_out()<CR>", { desc = 'DAP [Step out]'} )
-map('n', '<leader>b', ":lua require'dap'.toggle_breakpoint()<CR>", { desc = 'Breakpoint'} )
-map('n', '<leader>B', ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", { desc = 'Set breakpoint'} )
-map('n', '<leader>dp', ":lua require'dap'.set.breakpoint(nul, nul, vim.fn.input('Log point message: '))<CR>", { desc = 'Set breakpoint with log point message' })
-map('n', '<leader>dr', ":lua require'dap'.repl.open()<CR>", { desc = 'Repl.Open' })
+map('n', '<leader>b', ":lua require'dap'.toggle_breakpoint()<CR>", { desc = 'DAP [Breakpoint]'} )
+map('n', '<leader>B', ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", { desc = '[DAP] Breakpoint condition'} )
+map('n', '<leader>dp', ":lua require'dap'.set.breakpoint(nul, nul, vim.fn.input('Log point message: '))<CR>", { desc = 'Breakpoint log point msg' })
+map('n', '<leader>dr', ":lua require'dap'.repl.open()<CR>", { desc = 'REPL' })
 map('n', '<leader>dl', ":lua require'dap'.run_last()<CR>", { desc = 'Run last' })
 map('n', '<leader>dm', ":lua require('dap-python').test_method()<CR>", { desc = 'Run method above'})
 
 -- DAP-Python
 -- h: dap-python
-map('n', '<leader>dn', ":lua require('dap-python').test_method()<CR>", { desc = 'Py - Test method' })
-map('n', '<leader>df', ":lua require('dap-python').test_class()<CR>", { desc = 'Py - Test class' })
-map('n', '<leader>ds', ":lua require('dap-python').debug_selection()<CR>", { desc = 'Py - Debug selection' })
+map('n', '<leader>dpm', ":lua require('dap-python').test_method()<CR>", { desc = 'Py test [Method]' })
+map('n', '<leader>dpc', ":lua require('dap-python').test_class()<CR>", { desc = 'Py test [Class]' })
+map('n', '<leader>dps', ":lua require('dap-python').debug_selection()<CR>", { desc = 'Py test [Selection]' })
 
 -- File manager
 --map('n', '<leader>t', ':Lex 30<CR>', { desc = 'Netrw', silent = true })
@@ -136,6 +136,13 @@ map('n', '<leader>tp', ":Telescope pickers<CR>", { desc = 'Pickers' })
 map('n', '<leader>ts', ":Telescope search_history<CR>", { desc = 'Search history' })
 map('n', '<leader>tt', ":Telescope treesitter<CR>", { desc = 'Treesitter' })
 map('n', '<leader>tv', ":Telescope vim_options<CR>", { desc = 'Vim options' })
+
+-- Telescope-DAP
+map('n', '<leader>dc', ':lua require"telescope".extensions.dap.commands{}<CR>', { desc = 'Commands'})
+map('n', '<leader>dd', ':lua require"telescope".extensions.dap.configurations{}<CR>', { desc = 'Config' })
+map('n', '<leader>db', ':lua require"telescope".extensions.dap.list_breakpoints{}<CR>', { desc = 'Breakpoints' })
+map('n', '<leader>dv', ':lua require"telescope".extensions.dap.variables{}<CR>', { desc = 'Variables' })
+map('n', '<leader>df', ':lua require"telescope".extensions.dap.frames{}<CR>', { desc = 'Frames' })
 
 -- Shell movements
 map('i', '<C-A>', '<ESC>I', { desc = 'Shell movement' })
