@@ -141,6 +141,9 @@ return packer.startup(function(use)
     },
   }
 
+  -- Colorizer
+  use 'NvChad/nvim-colorizer.lua'
+
   -- Fold (ufo)
   -- use { 'kevinhwang91/nvim-ufo',
   --   requires = 'kevinhwang91/promise-async'

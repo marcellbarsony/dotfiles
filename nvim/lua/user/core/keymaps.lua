@@ -28,11 +28,11 @@ map('', '<left>', '<nop>')
 map('', '<right>', '<nop>')
 
 -- Core
---map('n', '<leader>r', ':so %<CR>', { desc = 'Reload [BROKEN]'})
+--map('n', '<leader>r', ':so %<CR>', { desc = 'Reload [TODO]'})
 map('n', '<leader>w', ':w<CR>', { desc = 'Write'})
 map('n', '<leader>ww', ':w<CR>', { desc = 'Write current'})
 map('n', '<leader>wa', ':wall<CR>', { desc = 'Write all'})
-map('n', '<leader>wq', ':wq<CR>', { desc = 'Quit' })
+map('n', '<leader>wq', ':wq<CR>', { desc = 'Write & Quit' })
 map('n', '<leader>q', ':q!<CR>', { desc = 'Quit' })
 map('n', '<ESC>', '', { desc = 'Unmap <C-[>'})
 
@@ -69,7 +69,7 @@ map('n', '<leader>3', ":lua require'dap'.step_over()<CR>", { desc = 'DAP [Step o
 map('n', '<leader>2', ":lua require'dap'.step_into()<CR>", { desc = 'DAP [Step into]'} )
 map('n', '<leader>0', ":lua require'dap'.step_out()<CR>", { desc = 'DAP [Step out]'} )
 map('n', '<leader>b', ":lua require'dap'.toggle_breakpoint()<CR>", { desc = 'DAP [Breakpoint]'} )
-map('n', '<leader>B', ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", { desc = '[DAP] Breakpoint condition'} )
+map('n', '<leader>B', ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", { desc = 'DAP [Breakpoint condition]'} )
 map('n', '<leader>dp', ":lua require'dap'.set.breakpoint(nul, nul, vim.fn.input('Log point message: '))<CR>", { desc = 'Breakpoint log point msg' })
 map('n', '<leader>dr', ":lua require'dap'.repl.open()<CR>", { desc = 'REPL' })
 map('n', '<leader>dl', ":lua require'dap'.run_last()<CR>", { desc = 'Run last' })
@@ -110,7 +110,7 @@ map('n', '<leader>ld', require('lsp_lines').toggle, { desc = 'Diagnostics' })
 map('n', '<leader>vc', ":PyLspCurrentVenv<CR>", { desc = 'Current' })
 map('n', '<leader>vn', ":PyLspCreateVenv venv<CR>", { desc = 'Create' })
 map('n', '<leader>va', ":PyLspActivateVenv venv<CR>", { desc = 'Activate' })
-map('n', '<leader>vd', ":PyLspDeactiveVenv<CR>", { desc = 'Deactivate' })
+map('n', '<leader>vd', ":PyLspDeactivateVenv<CR>", { desc = 'Deactivate' })
 map('n', '<leader>vi', ":PyRun -m pip install -r requirements.txt<CR>", { desc = 'Install dependencies' })
 
 -- Mason
@@ -120,7 +120,6 @@ map('n', '<leader>m', ":Mason<CR>", { desc = 'Mason' })
 map('n', '<leader>nf', ":lua vim.lsp.buf.formatting()<CR>", { desc = 'Format' }) -- Formatting
 
 -- Telescope
-map('n', '<leader>tx', ":Telescope<CR>", { desc = 'Telescope' })
 map('n', '<leader>tb', ":Telescope buffers<CR>", { desc = 'Buffers' })
 map('n', '<leader>tc', ":Telescope commands<CR>", { desc = 'Commands' })
 map('n', '<leader>td', ":Telescope diagnostics<CR>", { desc = 'Diagnostics' })
@@ -134,7 +133,8 @@ map('n', '<leader>tn', ":Telescope git_status<CR>", { desc = 'Git status' })
 map('n', '<leader>to', ":Telescope oldfiles<CR>", { desc = 'History' })
 map('n', '<leader>tp', ":Telescope pickers<CR>", { desc = 'Pickers' })
 map('n', '<leader>ts', ":Telescope search_history<CR>", { desc = 'Search history' })
-map('n', '<leader>tt', ":Telescope treesitter<CR>", { desc = 'Treesitter' })
+map('n', '<leader>tt', ":Telescope<CR>", { desc = 'Telescope' })
+map('n', '<leader>tx', ":Telescope treesitter<CR>", { desc = 'Treesitter symbols' })
 map('n', '<leader>tv', ":Telescope vim_options<CR>", { desc = 'Vim options' })
 
 -- Telescope-DAP
