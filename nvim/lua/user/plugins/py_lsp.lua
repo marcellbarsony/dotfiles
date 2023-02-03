@@ -7,7 +7,7 @@ require'py_lsp'.setup {
   on_attach = nil,
   source_strategies = {"default", "poetry", "conda", "system"},
   capabilities = nil,
-  host_python = nil
-  --host_python = "/usr/bin/python"
+  --host_python = nil
+  host_python = "/usr/bin/python"
 }
 

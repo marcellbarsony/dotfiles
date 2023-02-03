@@ -89,7 +89,7 @@ local options = {
 
   -- Line number
   number = true,
-  numberwidth = 3,
+  numberwidth = 2,
   relativenumber = true,
   signcolumn = 'yes',
 

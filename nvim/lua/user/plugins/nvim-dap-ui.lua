@@ -10,7 +10,6 @@ require("dapui").setup({
   },
   -- Mappings
   mappings = {
-    -- Use a table to apply multiple mappings
     expand = { "<CR>", "<2-LeftMouse>" },
     open = "o",
     remove = "d",
@@ -20,7 +19,6 @@ require("dapui").setup({
   },
   -- Override mappings for specific elements
   element_mappings = {
-    -- Example:
     -- stacks = {
     --   open = "<CR>",
     --   expand = "o",
@@ -30,13 +28,12 @@ require("dapui").setup({
   layouts = {
     {
       elements = {
-      -- Elements can be strings or table with id and size keys.
-        { id = "scopes", size = 0.65 },
+        { id = "scopes", size = 0.7 },
         { id = "breakpoints", size = 0.1 },
-        { id = "stacks", size = 0.16 },
-        { id = "watches", size = 0.09 },
+        { id = "stacks", size = 0.1 },
+        { id = "watches", size = 0.1 },
       },
-      size = 55, -- Width (columns)
+      size = 60, -- Width (columns)
       position = "right",
     },
     {
@@ -44,7 +41,7 @@ require("dapui").setup({
         "console",
         --"repl"
       },
-      size = 0.1,
+      size = 0.25,
       position = "bottom",
     },
   },

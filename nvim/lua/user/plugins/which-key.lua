@@ -96,6 +96,7 @@ local mappings = {
   g = { name = "Goto" },
   v = { name = "VISUAL Mode" },
   y = { name = "Yank" },
+  o = { name = "LSPkind outline" },
 
   -- Leader
   ["<leader>"] = {

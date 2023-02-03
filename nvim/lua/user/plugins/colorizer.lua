@@ -14,7 +14,7 @@ require("colorizer").setup {
     hsl_fn = false, -- CSS hsl() and hsla() functions
     css = false, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
     css_fn = false, -- Enable all CSS *functions*: rgb_fn, hsl_fn
-    mode = "virtualtext", -- Display mode: background, foreground, virtualtext
+    mode = "background", -- Display mode: background, foreground, virtualtext
     tailwind = false, -- Enable tailwind colors: true / false / normal / lsp / both
     sass = { enable = false, parsers = { css }, }, -- Enable sass colors
     virtualtext = "■",

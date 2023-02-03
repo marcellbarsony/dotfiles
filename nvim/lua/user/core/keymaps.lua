@@ -73,17 +73,17 @@ map('n', '<leader>B', ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint
 map('n', '<leader>dp', ":lua require'dap'.set.breakpoint(nul, nul, vim.fn.input('Log point message: '))<CR>", { desc = 'Breakpoint log point msg' })
 map('n', '<leader>dr', ":lua require'dap'.repl.open()<CR>", { desc = 'REPL' })
 map('n', '<leader>dl', ":lua require'dap'.run_last()<CR>", { desc = 'Run last' })
-map('n', '<leader>dm', ":lua require('dap-python').test_method()<CR>", { desc = 'Run method above'})
+map('n', '<leader>dq', ":lua require('dap').disconnect()<CR>", { desc = 'Quit'})
 
 -- DAP-Python
 -- h: dap-python
-map('n', '<leader>dpm', ":lua require('dap-python').test_method()<CR>", { desc = 'Py test [Method]' })
-map('n', '<leader>dpc', ":lua require('dap-python').test_class()<CR>", { desc = 'Py test [Class]' })
-map('n', '<leader>dps', ":lua require('dap-python').debug_selection()<CR>", { desc = 'Py test [Selection]' })
+map('n', '<leader>dz', ":lua require('dap-python').test_method()<CR>", { desc = 'Py test [Method]' })
+map('n', '<leader>dx', ":lua require('dap-python').test_class()<CR>", { desc = 'Py test [Class]' })
+map('n', '<leader>ds', ":lua require('dap-python').debug_selection()<CR>", { desc = 'Py test [Selection]' })
 
 -- File manager
---map('n', '<leader>t', ':Lex 30<CR>', { desc = 'Netrw', silent = true })
 map('n', 't', ':NvimTreeToggle<CR>', { desc = 'NvimTree' })
+--map('n', '<leader>t', ':Lex 30<CR>', { desc = 'Netrw', silent = true })
 
 -- Gitsigns
 map('n', '<leader>uu', ':Gitsigns toggle_signs<CR>:Gitsigns toggle_numhl<CR>:Gitsigns toggle_current_line_blame<CR>', { desc = 'Toggle' })

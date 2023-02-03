@@ -329,7 +329,7 @@ screens = [
                 close_button_location='right',
                 foreground=PRIMARY,
                 # text_closed='☁',
-                text_closed='W',
+                text_closed='[<]',
                 text_opened='[x]',
                 widgets=[
                     widget.OpenWeather(
@@ -345,9 +345,9 @@ screens = [
                 ),
             # Updates
             widget.CheckUpdates(
-                colour_have_updates='22EE44',
+                colour_have_updates=PRIMARY,
                 colour_no_updates=PRIMARY,
-                display_format='{updates}',
+                display_format='U: {updates}',
                 distro='Arch_Sup',
                 initial_text='Checking updates...',
                 foreground=PRIMARY,

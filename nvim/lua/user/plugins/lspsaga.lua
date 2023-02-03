@@ -4,30 +4,31 @@
 local saga = require("lspsaga")
 
 saga.setup({
-  border_style = "single",
-  saga_winblend = 0, -- Opacity
-  -- when cursor in saga window you config these to move
+  ui = {
+    theme = "round",
+    title = true,
+    border = "single",
+    winblend = 0,
+    expand = "",
+    collapse = "",
+    preview = " ",
+    code_action = "A",
+    diagnostic = "D",
+    incoming = " ",
+    outgoing = " ",
+    hover = ' ',
+    kind = {},
+  },
+  beacon = {
+    enable = true,
+    frequency = 7,
+  },
   move_in_saga = { prev = '<C-p>',next = '<C-n>'},
-  -- Error, Warn, Info, Hint
-  -- use emoji like
-  -- { "🙀", "😿", "😾", "😺" }
-  -- or
-  -- { "😡", "😥", "😤", "😐" }
-  -- and diagnostic_header can be a function type
-  -- must return a string and when diagnostic_header
-  -- is function type it will have a param `entry`
-  -- entry is a table type has these filed
-  -- { bufnr, code, col, end_col, end_lnum, lnum, message, severity, source }
   diagnostic_header = { " ", " ", " ", "ﴞ " },
-  -- preview lines above of lsp_finder
   preview_lines_above = 0,
-  -- preview lines of lsp_finder and definition preview
   max_preview_lines = 10,
-  -- use emoji lightbulb in default
   code_action_icon = "A",
-  -- if true can press number to execute the codeaction in codeaction window
   code_action_num_shortcut = true,
-  -- same as nvim-lightbulb but async
   code_action_lightbulb = {
       enable = false,
       enable_in_insert = false,
@@ -37,7 +38,6 @@ saga.setup({
       sign_priority = 20,
       virtual_text = true,
   },
-  -- finder icons
   finder_icons = {
     def = '  ',
     ref = '諭 ',
@@ -64,10 +64,13 @@ saga.setup({
   },
   rename_action_quit = '<ESC>',
   rename_in_select = true,
-  -- show symbols in winbar must nightly
-  -- in_custom mean use lspsaga api to get symbols
-  -- and set it to your custom winbar or some winbar plugins.
-  -- if in_cusomt = true you must set in_enable to false
+  rename = {
+    quit = "<C-c>",
+    exec = "<CR>",
+    mark = "x",
+    confirm = "<CR>",
+    in_select = true,
+  },
   symbol_in_winbar = {
       in_custom = false,
       enable = false, -- Toggle
@@ -83,16 +86,15 @@ saga.setup({
   -- show outline
   show_outline = {
    win_position = 'right',
-    --set special filetype win that outline window split.like NvimTree neotree
-    -- defx, db_ui
     win_with = '',
     win_width = 30,
     auto_enter = true,
     auto_preview = true,
     virt_text = '┃',
     jump_key = 'o',
-    -- auto refresh when change buffer
     auto_refresh = true,
+    show_detail = true,
+    auto_close = true,
   },
   -- custom lsp kind
   -- usage { Field = 'color code'} or {Field = {your icon, your color code}}
@@ -114,10 +116,16 @@ end
 map('n', '<leader>lf', '<cmd>Lspsaga lsp_finder<CR>') -- Lsp finder
 map('n', '<leader>la', '<cmd>Lspsaga code_action<CR>') -- Code actions
 map('n', '<leader>lr', '<cmd>Lspsaga rename<CR>') -- Rename variable
-map('n', '<leader>lf', '<cmd>Lspsaga peek_definition<CR>') -- Go to definition
---map('n', '<leader>ls', '<cmd>Lspsaga show_line_diagnostics<CR>') -- Diagnostics (line)
---map('n', '<leader>ld', '<cmd>Lspsaga show_cursor_diagnostics<CR>') -- Diagnostics (cursor)
+map('n', '<leader>lf', '<cmd>Lspsaga peek_definition<CR>') -- Definition (peek)
+map('n',         'gd', '<cmd>Lspsaga goto_definition<CR>') -- Definition (jump)
+map('n', '<leader>ls', '<cmd>Lspsaga show_line_diagnostics<CR>') -- Diagnostics (line)
+map('n', '<leader>lb', '<cmd>Lspsaga show_buf_diagnostics<CR>') -- Diagnostics (buffer)
 map('n', '<leader>lo', '<cmd>Lspsaga outline<CR>') -- Project outline
-map('n', '<leader>lk', '<cmd>Lspsaga hover_doc<CR>') -- Documentation
 map('n', '<leader>lt', '<cmd>Lspsaga open_floaterm<CR>') -- Floating terminal
+map('n', '<leader>lk', "<cmd>Lspsaga hover_doc ++keep<CR>") -- Documentation
+
+map("n", "<Leader>ci", "<cmd>Lspsaga incoming_calls<CR>")
+map("n", "<Leader>co", "<cmd>Lspsaga outgoing_calls<CR>")
+
+
 
