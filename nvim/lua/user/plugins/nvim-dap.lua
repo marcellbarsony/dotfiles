@@ -16,9 +16,9 @@ dap.adapters.python = {
 -- :h dap-configuration
 dap.configurations.python = {
   {
+    name = "Launch file [dap-conf]";
     type = 'python';
     request = 'launch';
-    name = "Launch file [dap-conf]";
     program = "${file}";
     console = "integratedTerminal";
     pythonPath = function()

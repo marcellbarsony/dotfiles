@@ -3,11 +3,11 @@
 
 require'py_lsp'.setup {
   auto_source = true,
+  capabilities = nil,
+  default_venv_name = ".venv", -- Local venv
+  host_python = "/usr/bin/python", -- nil
   language_server = "pyright",
   on_attach = nil,
   source_strategies = {"default", "poetry", "conda", "system"},
-  capabilities = nil,
-  --host_python = nil
-  host_python = "/usr/bin/python"
 }
 

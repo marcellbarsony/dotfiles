@@ -33,7 +33,7 @@ require("dapui").setup({
         { id = "stacks", size = 0.1 },
         { id = "watches", size = 0.1 },
       },
-      size = 60, -- Width (columns)
+      size = 70, -- Width (columns)
       position = "right",
     },
     {

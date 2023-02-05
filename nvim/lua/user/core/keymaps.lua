@@ -43,17 +43,17 @@ map('n', '<leader>c', ':nohl<CR>', { desc = 'Nohl' }) -- Clear highlighting
 --map('n', 'N', 'Nzz') -- Fix N: keep cursor in center
 
 -- Splits
-map('n', '<leader>sv', ':vsplit<CR>', { desc = 'Vertical' }) -- Split Vertical
-map('n', '<leader>sh', ':split<CR>' , { desc = 'Horizontal' }) -- Split Horizontal
-map('n', '<leader>sw', '<C-w>x', { desc = 'Swap' }) -- Split swap
+map('n', '<leader>sv', ':vsplit<CR>', { desc = 'Vertical' })
+map('n', '<leader>sh', ':split<CR>' , { desc = 'Horizontal' })
+map('n', '<leader>sw', '<C-w>x', { desc = 'Swap' })
 map('n', '<C-k>', '<C-w>k', { desc = 'Split [Up]' }) -- Move up
 map('n', '<C-j>', '<C-w>j', { desc = 'Split [Down]' }) -- Move down
 map('n', '<C-h>', '<C-w>h', { desc = 'Split [Left]' }) -- Move left
 map('n', '<C-l>', '<C-w>l', { desc = 'Split [Right]' }) -- Move right
-map('n', '<C-A-k>', ':resize -2<CR>') -- Resize up
-map('n', '<C-A-j>', ':resize +2<CR>') -- Resize down
-map('n', '<C-A-h>', ':vertical resize -2<CR>') -- Resize left
-map('n', '<C-A-l>', ':vertical resize +2<CR>') -- Resize right
+map('n', '<C-A-k>', ':resize -2<CR>') -- Up
+map('n', '<C-A-j>', ':resize +2<CR>') -- Down
+map('n', '<C-A-h>', ':vertical resize -2<CR>') -- Left
+map('n', '<C-A-l>', ':vertical resize +2<CR>') -- Right
 
 -- Buffers
 map('n', '<C-]>', ':bn<CR>', { desc = 'Buffer [Next]' }) -- Move to next
@@ -69,17 +69,17 @@ map('n', '<leader>3', ":lua require'dap'.step_over()<CR>", { desc = 'DAP [Step o
 map('n', '<leader>2', ":lua require'dap'.step_into()<CR>", { desc = 'DAP [Step into]'} )
 map('n', '<leader>0', ":lua require'dap'.step_out()<CR>", { desc = 'DAP [Step out]'} )
 map('n', '<leader>b', ":lua require'dap'.toggle_breakpoint()<CR>", { desc = 'DAP [Breakpoint]'} )
-map('n', '<leader>B', ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", { desc = 'DAP [Breakpoint condition]'} )
-map('n', '<leader>dp', ":lua require'dap'.set.breakpoint(nul, nul, vim.fn.input('Log point message: '))<CR>", { desc = 'Breakpoint log point msg' })
+map('n', '<leader>B', ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", { desc = 'DAP [Breakpoint [Condition]'} )
+map('n', '<leader>dp', ":lua require'dap'.set.breakpoint(nul, nul, vim.fn.input('Log point message: '))<CR>", { desc = 'Breakpoint [log point msg]' })
 map('n', '<leader>dr', ":lua require'dap'.repl.open()<CR>", { desc = 'REPL' })
 map('n', '<leader>dl', ":lua require'dap'.run_last()<CR>", { desc = 'Run last' })
 map('n', '<leader>dq', ":lua require('dap').disconnect()<CR>", { desc = 'Quit'})
 
 -- DAP-Python
 -- h: dap-python
-map('n', '<leader>dz', ":lua require('dap-python').test_method()<CR>", { desc = 'Py test [Method]' })
 map('n', '<leader>dx', ":lua require('dap-python').test_class()<CR>", { desc = 'Py test [Class]' })
-map('n', '<leader>ds', ":lua require('dap-python').debug_selection()<CR>", { desc = 'Py test [Selection]' })
+map('n', '<leader>dy', ":lua require('dap-python').debug_selection()<CR>", { desc = 'Py test [Selection]' })
+map('n', '<leader>dz', ":lua require('dap-python').test_method()<CR>", { desc = 'Py test [Method]' })
 
 -- File manager
 map('n', 't', ':NvimTreeToggle<CR>', { desc = 'NvimTree' })
@@ -101,23 +101,44 @@ map('x', '<J>', ":move '>+1<CR>gv=gv", { desc = 'Block [Move Down]' })
 map('x', '<K>', ":move '<-2<CR>gv=gv", { desc = 'Block [Move Up]' })
 
 -- LSP
-map('n', '<leader>li', ":LspInfo<CR>", { desc = 'LSP Info' })
+map('n', '<leader>li', ":LspInfo<CR>", { desc = 'Info' })
+map('n', '<leader>ll', ":LspLog<CR>", { desc = 'Log' })
 
 -- LSP lines
 map('n', '<leader>ld', require('lsp_lines').toggle, { desc = 'Diagnostics' })
 
--- LSP py-lsp
+-- LSP py-lsp (venv)
+map('n', '<leader>va', ":PyLspActivateVenv .venv<CR>", { desc = 'Activate' })
 map('n', '<leader>vc', ":PyLspCurrentVenv<CR>", { desc = 'Current' })
-map('n', '<leader>vn', ":PyLspCreateVenv venv<CR>", { desc = 'Create' })
-map('n', '<leader>va', ":PyLspActivateVenv venv<CR>", { desc = 'Activate' })
 map('n', '<leader>vd', ":PyLspDeactivateVenv<CR>", { desc = 'Deactivate' })
+map('n', '<leader>vf', ":PyLspFindVenvs<CR>", { desc = 'Find' })
+map('n', '<leader>vn', ":PyLspCreateVenv .venv<CR>", { desc = 'New' })
 map('n', '<leader>vi', ":PyRun -m pip install -r requirements.txt<CR>", { desc = 'Install dependencies' })
 
 -- Mason
-map('n', '<leader>m', ":Mason<CR>", { desc = 'Mason' })
+map('n', '<leader>mm', ":Mason<CR>", { desc = 'Mason' })
+map('n', '<leader>ml', ":MasonLog<CR>", { desc = 'Log' })
 
 -- Null-ls
-map('n', '<leader>nf', ":lua vim.lsp.buf.formatting()<CR>", { desc = 'Format' }) -- Formatting
+map('n', '<leader>nl', ":NullLsLog<CR>", { desc = 'Log' })
+map('n', '<leader>ni', ":NullLsInfo<CR>", { desc = 'Info' })
+map('n', '<leader>nf', ":lua vim.lsp.buf.formatting()<CR>", { desc = 'Format' })
+
+-- Packer
+map('n', '<leader>pc', ":PackerCompile<CR>", { desc = 'Compil' })
+map('n', '<leader>pi', ":PackerInstall<CR>", { desc = 'Install' })
+map('n', '<leader>ps', ":PackerSync<CR>", { desc = 'Sync' })
+map('n', '<leader>pS', ":PackerStatus<CR>", { desc = 'Status' })
+map('n', '<leader>pu', ":PackerUpdate<CR>", { desc = 'Update' })
+
+-- Shell movements
+map('i', '<C-A>', '<ESC>I', { desc = 'Shell movement' })
+map('i', '<C-E>', '<ESC>A', { desc = 'Shell movement' })
+
+-- System-wide clipboard
+map('n', '<leader>y', '\"+y', { desc = 'Yank' })
+map('v', '<leader>y', '\"+y', { desc = 'Yank' })
+map('n', '<leader>y', '\"+Y', { desc = 'Yank' })
 
 -- Telescope
 map('n', '<leader>tb', ":Telescope buffers<CR>", { desc = 'Buffers' })
@@ -144,14 +165,6 @@ map('n', '<leader>db', ':lua require"telescope".extensions.dap.list_breakpoints{
 map('n', '<leader>dv', ':lua require"telescope".extensions.dap.variables{}<CR>', { desc = 'Variables' })
 map('n', '<leader>df', ':lua require"telescope".extensions.dap.frames{}<CR>', { desc = 'Frames' })
 
--- Shell movements
-map('i', '<C-A>', '<ESC>I', { desc = 'Shell movement' })
-map('i', '<C-E>', '<ESC>A', { desc = 'Shell movement' })
-
--- System-wide clipboard
-map('n', '<leader>y', '\"+y', { desc = 'Yank' })
-map('v', '<leader>y', '\"+y', { desc = 'Yank' })
-map('n', '<leader>y', '\"+Y', { desc = 'Yank' })
 
 -- Replace highlighted word
 --map('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])

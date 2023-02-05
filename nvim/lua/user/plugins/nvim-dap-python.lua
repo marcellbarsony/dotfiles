@@ -11,10 +11,11 @@ local path='~/.local/git/arch/.virtualenvs/debugpy/bin/python'
 require('dap-python').setup(path)
 
   table.insert(require('dap').configurations.python, {
+    name = 'DAP-Python [dap-py]',
     type = 'python',
     request = 'launch',
-    name = 'DAP-Python [dap-py]',
     program = '${file}',
+    console = "integratedTerminal";
     pythonPath = function()
       return '/usr/bin/python'
     end;

@@ -6,7 +6,7 @@
 local nvim_lsp = require('lspconfig')
 local servers = {
   'bashls',
-  'pyright',
+  --'pyright',
   'pylsp',
   'sumneko_lua',
 }

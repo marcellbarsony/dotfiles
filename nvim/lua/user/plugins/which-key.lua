@@ -93,7 +93,7 @@ local mappings = {
   -- Normal mode
   ['['] = { name = "" },
   [']'] = { name = "" },
-  g = { name = "Goto" },
+  g = { name = "GoTo" },
   v = { name = "VISUAL Mode" },
   y = { name = "Yank" },
   o = { name = "LSPkind outline" },
@@ -109,19 +109,21 @@ local mappings = {
     -- Insert Line
     i = {
       name = "Insert",
-      a = { "Insert line [Above]" },
-      b = { "Insert line [Below]" },
+      a = { "Line [Above]" },
+      b = { "Line [Below]" },
     },
 
     -- Lspsaga
     l = {
       name = "Lspsaga",
       a = { "Code action" },
-      d = { "Diagnostics" },
+      b = { "Diagnostics [Buffer]" },
+      d = { "Diagnostics [Line]" },
       f = { "Definition" },
       k = { "Documentation" },
       o = { "Outline" },
       r = { "Rename" },
+      s = { "Diagnostics [LSP Lines]" },
       t = { "Terminal" },
     },
 
@@ -130,21 +132,19 @@ local mappings = {
       name = "Null-ls",
     },
 
+    -- Mason
+    m = {
+      name = "Mason",
+    },
+
     -- Packer
     p = {
       name = "Packer",
-      c = { "<cmd>PackerCompile<cr>", "Compile" },
-      i = { "<cmd>PackerInstall<cr>", "Install" },
-      s = { "<cmd>PackerSync<cr>", "Sync" },
-      S = { "<cmd>PackerStatus<cr>", "Status" },
-      u = { "<cmd>PackerUpdate<cr>", "Update" },
     },
 
     -- Split
     s = {
       name = "Split",
-      h = { "Horizontal" },
-      v = { "Vertical" },
     },
 
     -- Telescope
