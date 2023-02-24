@@ -75,6 +75,8 @@ cmp.setup({
       side_padding = 0,
       winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
     }
+    -- documentation = cmp.config.window.bordered(),
+    -- completion = cmp.config.window.bordered(),
   },
 
   -- View
@@ -227,6 +229,7 @@ cmp.setup({
     ['<C-e>'] = cmp.mapping({ i = cmp.mapping.close(), c = cmp.mapping.close() }), -- Close
     -- ['<Down>'] = cmp.mapping(cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }), {'i'}),
     -- ['<Up>'] = cmp.mapping(cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }), {'i'}),
+    ['<C-e>'] = cmp.mapping({ i = cmp.mapping.close(), c = cmp.mapping.close() }), -- Close
   },
 
   -- Sources

@@ -81,9 +81,11 @@ map('n', '<leader>dx', ":lua require('dap-python').test_class()<CR>", { desc = '
 map('n', '<leader>dy', ":lua require('dap-python').debug_selection()<CR>", { desc = 'Py test [Selection]' })
 map('n', '<leader>dz', ":lua require('dap-python').test_method()<CR>", { desc = 'Py test [Method]' })
 
--- File manager
+-- Nvim-tree
 map('n', 't', ':NvimTreeToggle<CR>', { desc = 'NvimTree' })
---map('n', '<leader>t', ':Lex 30<CR>', { desc = 'Netrw', silent = true })
+-- map('n', 'tc', ':NvimTreeCollapse<CR>', { desc = 'Collapse' })
+-- map('n', 'tf', ':NvimTreeFindFile<CR>', { desc = 'Find file' })
+-- map('n', '<leader>t', ':Lex 30<CR>', { desc = 'Netrw', silent = true })
 
 -- Gitsigns
 map('n', '<leader>uu', ':Gitsigns toggle_signs<CR>:Gitsigns toggle_numhl<CR>:Gitsigns toggle_current_line_blame<CR>', { desc = 'Toggle' })

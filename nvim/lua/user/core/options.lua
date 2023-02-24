@@ -62,7 +62,7 @@ local options = {
   -- Cursor
   cursorcolumn = false,
   cursorline = false,
-  scrolloff = 999,
+  scrolloff = 10,
   sidescrolloff = 8,
 
   -- Encoding
