@@ -40,10 +40,10 @@ ls.add_snippets("python", {
     fmt("def {}({}):\n"..
       "\tdef {}({})\n"..
       "\t\t{}\n"..
-      "{}\n"..
+      "{}{}\n"..
       "\n"..
       "\n"..
-      "@{}{}", {
+      "@{}", {
       same(1),
       i(2, "func"),
       i(3, "wrapper"),
@@ -57,8 +57,8 @@ ls.add_snippets("python", {
         sn(nil, {i(1), t""}),
         sn(nil, {i(1), t"\t", t"return ", i(2, "")})
         }),
-      i(1, "decorator"),
       i(0),
+      i(1, "decorator"),
     })
   ),
   s( -- timer
@@ -69,10 +69,10 @@ ls.add_snippets("python", {
       "\t\t{}()\n"..
       '\t\tprint("{}", time.time() - {}, "{}")\n'..
       "\t\t{}\n"..
-      "{}\n"..
+      "{}{}\n"..
       "\n"..
       "\n"..
-      "@{}{}", {
+      "@{}", {
       same(1),
       i(2, "func"),
       i(3, "wrapper"),
@@ -91,8 +91,8 @@ ls.add_snippets("python", {
         sn(nil, {i(1), t""}),
         sn(nil, {i(1), t"\t", t"return ", i(2, "")})
         }),
-      i(1, "timer"),
       i(0),
+      i(1, "timer"),
     })
   ),
 
