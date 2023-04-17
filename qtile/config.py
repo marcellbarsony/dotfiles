@@ -182,8 +182,7 @@ for i, name in enumerate(group_names):
 
 groups.append(
     ScratchPad("scratchpad", [
-        DropDown("term", "kitty", x=0.1, y=0.1, height=0.8, width=0.8, opacity=1,
-                warp_pointer=True, on_focus_lost_hide=False)]),
+        DropDown("term", "kitty", x=0.1, y=0.1, height=0.8, width=0.8, opacity=1, warp_pointer=True, on_focus_lost_hide=False)]),
 )
 
 # Layouts

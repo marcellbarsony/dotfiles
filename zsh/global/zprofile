@@ -1,4 +1,4 @@
 if [[ "$(tty)" = "/dev/tty1" ]]; then
   startx ${XDG_CONFIG_HOME}/x11/.xinitrc
-  # pgrep dwm || startx "${XDG_CONFIG_HOME}/x11/.xinitrc
+  # pgrep qtile || startx "${XDG_CONFIG_HOME}/x11/.xinitrc
 fi

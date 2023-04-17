@@ -3,3 +3,5 @@
 	name = marcellbarsony
 [usern]
 	name = marcellbarsony
+[init]
+	defaultBranch = main

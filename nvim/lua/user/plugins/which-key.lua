@@ -97,6 +97,8 @@ local mappings = {
   v = { name = "VISUAL Mode" },
   y = { name = "Yank" },
   o = { name = "LSPkind outline" },
+  u = { name = "Undo" },
+  -- Ctrl+^ - Alternate file
 
   -- Leader
   ["<leader>"] = {

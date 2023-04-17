@@ -1,18 +1,22 @@
 # Default programs
-export TERMINAL="kitty"
-export EDITOR="nvim"
-export VISUAL="nvim"
 export BROWSER="Librewolf"
+export EDITOR="nvim"
+export TERMINAL="kitty"
+export VISUAL="nvim"
 export WM="qtile"
 
 # Language
 export LANG=en_US.UTF-8
 
 # XDG paths
+export XDG_APP_HOME="$HOME/.local/share/applications"
+export XDG_BIN_HOME="$HOME/.local/bin"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_DIRS="$HOME/usr/local/share:/usr/share"
+export XDG_DATA_DIRS="/usr/local/share:/usr/share"
 export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_FONT_HOME="$HOME/.local/share/fonts"
+export XDG_ICON_HOME="$HOME/.local/share/icons"
 export XDG_STATE_HOME="$HOME/.local/state"
 
 # Paths
@@ -25,7 +29,7 @@ export XINITRC="$HOME/.config/x11/"
 # export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 # set viminfofile=$XDG_CONFIG_HOME/nvim/viminfo
 
-# NVM
+# NPM
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 
 # Python
@@ -42,15 +46,18 @@ export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export PATH=/home/marci/.local/share/cargo/bin:$PATH
 
 # Scripts
-export PATH=$HOME/.local/git/scripts:$PATH
-export PATH=$HOME/.local/git/scripts/malware/ransomware:$PATH
+#export PATH=$HOME/.local/git/scripts:$PATH
+#export PATH=$HOME/.local/git/scripts/malware/ransomware:$PATH
 
 # Starship prompt
-# export STARSHIP_CONFIG=~/.config/starship/config.toml
-# export STARSHIP_CACHE=~/.config/starship
+export STARSHIP_CONFIG=~/.config/starship/config.toml
+export STARSHIP_CACHE=~/.config/starship
 
 # Spaceship prompt
-export SPACESHIP_CONFIG="$HOME/.config/spaceship/spaceship.zsh"
+# export SPACESHIP_CONFIG="$HOME/.config/spaceship/spaceship.zsh"
+
+# SSH
+export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
 
 # Fix prompt
 export LC_CTYPE=en_US.UTF-8

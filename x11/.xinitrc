@@ -18,10 +18,9 @@ exec unclutter --timeout 3 &
 #xmodmap ~/.config/x11/xmodmap &
 
 # Wallpaper
-xwallpaper --output VGA-1 --maximize $HOME/Documents/Wallpapers/4K/Synthwave/4k_cyberpunk_city.jpg
-xwallpaper --output VGA-2 --maximize $HOME/Documents/Wallpapers/4K/Synthwave/4k_cyberpunk_city.jpg
+xwallpaper --output VGA-1 --maximize $HOME/Downloads/Wallpapers/4K/Synthwave/4k_cyberpunk_city.jpg
+xwallpaper --output VGA-2 --maximize $HOME/Downloads/Wallpapers/4K/Synthwave/4k_cyberpunk_city.jpg
 
-# Window manager
+# Window Manager
 qtile start
-#exec openbox-session
 #exec leftwm

@@ -43,10 +43,10 @@
   HISTFILE=~/.config/zsh/.zsh_history
 
 # Prompt - Starship (Rust)
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 
 # Prompt - Spaceship (Shell)
-source "$HOME/.local/src/spaceship/spaceship.zsh"
+# source "$HOME/.local/src/spaceship/spaceship.zsh"
 
 # Source zmodules
   for f in ~/.config/zsh/zmodules/*; do source "$f"; done
@@ -129,7 +129,7 @@ export KEYTIMEOUT=1
   bindkey -M menuselect '\r' accept-line
 
 # Zsh-Autosuggestions
-  source ~/.local/src/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Zsh-Completions
 #  fpath=(~/.local/src/zsh-completions/src $fpath)
@@ -137,4 +137,4 @@ export KEYTIMEOUT=1
 #  zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
 # Zsh-Syntax-highlighting (source last)
-  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null

@@ -60,6 +60,11 @@ map('n', '<C-]>', ':bn<CR>', { desc = 'Buffer [Next]' }) -- Move to next
 map('n', '<C-[>', ':bp<CR>', { desc = 'Buffer [Prev]' }) -- Move to prev
 map('n', "<C-'>", ':b#<CR>', { desc = 'Buffer [To last]' }) -- Move to last
 map('n', "<C-q>", ':bdelete<CR>', { desc = 'Buffer [Delete]' }) -- Move to last
+--map('n', "<C-^>", ':_#<CR>', { desc = 'Alternate file' }) -- :help alternate-file
+
+-- Undo & Redo
+map('n', "<u>", ':undo<CR>', { desc = 'Undo' }) -- Undo
+map('n', "<C-r>", ':redo<CR>', { desc = 'Redo' }) -- Redo
 
 -- DAP
 -- :h dap-api
