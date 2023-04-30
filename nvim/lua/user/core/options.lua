@@ -10,6 +10,7 @@ local options = {
   binary = false,
   breakindent = true,
   browsedir = 'current',
+  confirm = true,
   conceallevel = 0,
   list = true,
   listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂',

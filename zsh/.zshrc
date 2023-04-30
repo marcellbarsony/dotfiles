@@ -3,7 +3,7 @@
 
 # Bind key
   bindkey -e
-  bindkey -s '^s' spotify-tui
+  # bindkey -s '^s' spotify-tui
 
 # Colors
   autoload -U colors && colors
@@ -12,7 +12,6 @@
 # Git
   autoload -U vcs_info
   precmd() { vcs_info }
-
   zstyle ':vcs_info:git:*' formats 'branch %b' # Format
   setopt PROMPT_SUBST
   RPROMPT=\$vcs_info_msg_0_ # Prompt
@@ -29,7 +28,7 @@
   # ZSH_HIGHLIGHT_STYLES[line]='fg=magenta'
   # ZSH_HIGHLIGHT_STYLES[root]='fg=magenta'
 
-# Highlights (regexp)
+  # Highlights (regexp)
   # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/regexp.md
   typeset -A ZSH_HIGHLIGHT_REGEXP
   # ZSH_HIGHLIGHT_REGEXP+=('"*"' fg=magenta,bold) # Double quote
@@ -42,18 +41,24 @@
   SAVEHIST=1000
   HISTFILE=~/.config/zsh/.zsh_history
 
-# Prompt - Starship (Rust)
-eval "$(starship init zsh)"
+# Prompt
+  eval "$(starship init zsh)" # Starship
+  # source "$HOME/.local/src/spaceship/spaceship.zsh" # Spaceship
 
-# Prompt - Spaceship (Shell)
-# source "$HOME/.local/src/spaceship/spaceship.zsh"
-
-# Source zmodules
-  for f in ~/.config/zsh/zmodules/*; do source "$f"; done
+# SSH agent
+#  if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+#      ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"
+#  fi
+#  if [[ ! -f "$SSH_AUTH_SOCK" ]]; then
+#      source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
+#  fi
+#
+#  # SSH agent venv
+#  export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
 
 # VI mode
-bindkey -v
-export KEYTIMEOUT=1
+  bindkey -v
+  export KEYTIMEOUT=1
 
   # VIM - Edit line
   autoload edit-command-line
@@ -129,12 +134,15 @@ export KEYTIMEOUT=1
   bindkey -M menuselect '\r' accept-line
 
 # Zsh-Autosuggestions
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.local/src/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Zsh-Completions
-#  fpath=(~/.local/src/zsh-completions/src $fpath)
-#  autoload -Uz compinit && compinit
-#  zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+  # fpath=(~/.local/src/zsh-completions/src $fpath)
+  # autoload -Uz compinit && compinit
+  # zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+
+# zmodules
+  for f in ~/.config/zsh/zmodules/*; do source "$f"; done
 
 # Zsh-Syntax-highlighting (source last)
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+  source ~/.local/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

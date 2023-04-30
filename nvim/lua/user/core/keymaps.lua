@@ -28,13 +28,11 @@ map('', '<left>', '<nop>')
 map('', '<right>', '<nop>')
 
 -- Core
---map('n', '<leader>r', ':so %<CR>', { desc = 'Reload [TODO]'})
-map('n', '<leader>w', ':w<CR>', { desc = 'Write'})
-map('n', '<leader>ww', ':w<CR>', { desc = 'Write current'})
-map('n', '<leader>wa', ':wall<CR>', { desc = 'Write all'})
-map('n', '<leader>wq', ':wq<CR>', { desc = 'Write & Quit' })
-map('n', '<leader>q', ':q!<CR>', { desc = 'Quit' })
-map('n', '<ESC>', '', { desc = 'Unmap <C-[>'})
+map('n', '<leader>w', ':wall<CR>', { desc = 'Write all'})
+map('n', '<leader>wq', ':waq<CR>', { desc = 'Write & Quit' })
+map('n', '<leader>q', ':q<CR>', { desc = 'Quit' })
+map('n', '<leader>r', ':source %<CR>', { desc = 'Reload [TODO]'})
+--map('n', '<ESC>', '', { desc = 'Unmap <C-[>'})
 
 -- Search
 map('n', '*', '*N', { desc = 'Find word' }) -- Fix *: don't move to next match
@@ -50,10 +48,10 @@ map('n', '<C-k>', '<C-w>k', { desc = 'Split [Up]' }) -- Move up
 map('n', '<C-j>', '<C-w>j', { desc = 'Split [Down]' }) -- Move down
 map('n', '<C-h>', '<C-w>h', { desc = 'Split [Left]' }) -- Move left
 map('n', '<C-l>', '<C-w>l', { desc = 'Split [Right]' }) -- Move right
-map('n', '<C-A-k>', ':resize -2<CR>') -- Up
-map('n', '<C-A-j>', ':resize +2<CR>') -- Down
-map('n', '<C-A-h>', ':vertical resize -2<CR>') -- Left
-map('n', '<C-A-l>', ':vertical resize +2<CR>') -- Right
+map('n', '<C-A-k>', ':resize -5<CR>') -- Up
+map('n', '<C-A-j>', ':resize +5<CR>') -- Down
+map('n', '<C-A-h>', ':vertical resize -5<CR>') -- Left
+map('n', '<C-A-l>', ':vertical resize +5<CR>') -- Right
 
 -- Buffers
 map('n', '<C-]>', ':bn<CR>', { desc = 'Buffer [Next]' }) -- Move to next
