@@ -21,6 +21,7 @@ gh/
 
 # Nvim
 nvim/plugin/
+nvim/lazy-lock.json
 nvim/lua/.luarc.json
 
 # Pulse Audio

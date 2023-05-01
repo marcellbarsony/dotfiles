@@ -38,6 +38,7 @@ dashboard.section.header.val = {
 dashboard.section.buttons.val = {
     dashboard.button( "n", "  > New file" , ":ene <BAR> startinsert <CR>"),
     dashboard.button( "f", "  > Find file", ":cd $HOME/.local | Telescope find_files<CR>"),
+    dashboard.button( "h", "  > Health"   , ":checkhealth<CR>"),
     dashboard.button( "r", "  > Recent"   , ":Telescope oldfiles<CR>"),
     dashboard.button( "q", "  > Quit"     , ":qa<CR>"),
 }

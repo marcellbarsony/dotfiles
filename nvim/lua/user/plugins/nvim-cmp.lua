@@ -296,7 +296,7 @@ local servers = {
   'bashls',
   'pyright',
   'pylsp',
-  'sumneko_lua',
+  'lua_ls',
 }
 
 -- Advertise server capabilities

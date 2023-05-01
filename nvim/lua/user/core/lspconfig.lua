@@ -8,7 +8,7 @@ local servers = {
   'bashls',
   --'pyright',
   'pylsp',
-  'sumneko_lua',
+  'lua_ls',
 }
 
 for _, lsp in ipairs(servers) do
