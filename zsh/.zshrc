@@ -104,7 +104,7 @@
   zstyle ':autocomplete:*' min-delay 0.05
   zstyle ':autocomplete:*' min-input 2
   zstyle ':autocomplete:*' ignored-input '..'
-  zstyle ':autocomplete:*' list-lines 16
+  # zstyle ':autocomplete:*' list-lines 16
   zstyle ':autocomplete:history-search:*' list-lines 16
   zstyle ':autocomplete:history-incremental-search-*:*' list-lines 16
   zstyle ':autocomplete:*' recent-dirs cdr
