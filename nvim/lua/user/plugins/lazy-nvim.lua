@@ -16,29 +16,31 @@ vim.opt.rtp:prepend(lazypath)
 -- vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
 
 require("lazy").setup({
-  "folke/which-key.nvim",
-
-  -- Auto pair
-  "windwp/nvim-autopairs",
 
   -- Auto pair
   'windwp/nvim-autopairs',
 
   -- Bufferline
-  { 'akinsho/bufferline.nvim',
-    dependencies = 'nvim-tree/nvim-web-devicons'
-  },
-
+  'akinsho/bufferline.nvim',
+ 
   -- Color theme
-  'folke/tokyonight.nvim',
+  { 'folke/tokyonight.nvim',
+    lazy = false,
+    priority = 1000,
+  },
 
   -- Dashboard
   'goolord/alpha-nvim',
 
+  -- Devicons
+  { 'nvim-tree/nvim-web-devicons',
+    lazy = true
+  },
+
   -- CMP
   { 'hrsh7th/nvim-cmp',
+    event = 'InsertEnter',
     dependencies = {
-      'nvim-tree/nvim-web-devicons',
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-cmdline',
       'hrsh7th/cmp-nvim-lsp',
@@ -47,15 +49,10 @@ require("lazy").setup({
   },
 
   -- Colorizer
-   'NvChad/nvim-colorizer.lua',
-
-  -- Fold (ufo)
-  -- { 'kevinhwang91/nvim-ufo',
-  --   dependencies = 'kevinhwang91/promise-async'
-  -- }
+  'NvChad/nvim-colorizer.lua',
 
   -- Gitsigns
-  { 'lewis6991/gitsigns.nvim' },
+  'lewis6991/gitsigns.nvim',
 
   -- Indent lines
   'lukas-reineke/indent-blankline.nvim',
@@ -71,17 +68,15 @@ require("lazy").setup({
   },
 
   -- LSP Lines
-  'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
+  { url = 'https://git.sr.ht/~whynothugo/lsp_lines.nvim' },
 
   -- LSP Saga
-  { 'glepnir/lspsaga.nvim' },
+  'glepnir/lspsaga.nvim',
 
   -- Nvim tree
   { 'nvim-tree/nvim-tree.lua',
-    dependencies = {
-      'nvim-tree/nvim-web-devicons',
-    },
-    tag = 'nightly'
+    cmd = 'NvimTreeToggle',
+    version = 'nightly'
   },
 
   -- Null-ls
@@ -105,11 +100,11 @@ require("lazy").setup({
   -- 'windwp/windline.nvim'
 
   -- Telescope
-  { 'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    dependencies = { {
+  { 'nvim-telescope/telescope.nvim',
+    dependencies = {
       'nvim-lua/plenary.nvim', -- Lua library
       'BurntSushi/ripgrep' -- Live grep
-    } }
+    }
   },
 
   -- Treesitter

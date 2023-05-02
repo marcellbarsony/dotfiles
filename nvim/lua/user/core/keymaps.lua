@@ -96,6 +96,9 @@ map('n', '<leader>us', ':Gitsigns toggle_signs<CR>', { desc = 'Signs' })
 map('n', '<leader>un', ':Gitsigns toggle_numhl<CR>', { desc = 'Numhl' })
 map('n', '<leader>ub', ':Gitsigns toggle_current_line_blame<CR>', { desc = 'Blame' })
 
+-- Lazy.nvim
+map('n', '<leader>p', ':Lazy<CR>', { desc = 'Lazy' })
+
 -- Lines
 -- Reference: https://vim.fandom.com/wiki/Moving_lines_up_or_down
 map('n', '<leader>ib', 'o<ESC>', { desc = 'Line [Insert Below]' })
@@ -130,11 +133,11 @@ map('n', '<leader>ni', ":NullLsInfo<CR>", { desc = 'Info' })
 map('n', '<leader>nf', ":lua vim.lsp.buf.formatting()<CR>", { desc = 'Format' })
 
 -- Packer
-map('n', '<leader>pc', ":PackerCompile<CR>", { desc = 'Compil' })
-map('n', '<leader>pi', ":PackerInstall<CR>", { desc = 'Install' })
-map('n', '<leader>ps', ":PackerSync<CR>", { desc = 'Sync' })
-map('n', '<leader>pS', ":PackerStatus<CR>", { desc = 'Status' })
-map('n', '<leader>pu', ":PackerUpdate<CR>", { desc = 'Update' })
+-- map('n', '<leader>pc', ":PackerCompile<CR>", { desc = 'Compil' })
+-- map('n', '<leader>pi', ":PackerInstall<CR>", { desc = 'Install' })
+-- map('n', '<leader>ps', ":PackerSync<CR>", { desc = 'Sync' })
+-- map('n', '<leader>pS', ":PackerStatus<CR>", { desc = 'Status' })
+-- map('n', '<leader>pu', ":PackerUpdate<CR>", { desc = 'Update' })
 
 -- Shell movements
 map('i', '<C-A>', '<ESC>I', { desc = 'Shell movement' })
