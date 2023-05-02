@@ -1,5 +1,4 @@
 -- Keymaps
-
 local function map(mode, lhs, rhs, opts)
   local options = { noremap = true, silent = true }
   if opts then
@@ -33,10 +32,9 @@ map('n', '<leader>wq', ':waq<CR>', { desc = 'Write & Quit' })
 map('n', '<leader>q', ':q<CR>', { desc = 'Quit' })
 map('n', '<leader>r', ':source %<CR>', { desc = 'Reload [TODO]'})
 map('n', '<leader>h', ':checkhealth<CR>', { desc = 'Health'})
---map('n', '<ESC>', '', { desc = 'Unmap <C-[>'})
 
 -- Search
-map('n', '*', '*N', { desc = 'Find word' }) -- Fix *: don't move to next match
+map('n', '*', '*N', { desc = 'Find word' }) -- Fix * - don't move to next match
 map('n', '<leader>c', ':nohl<CR>', { desc = 'Nohl' }) -- Clear highlighting
 --map('n', 'n', 'nzz') -- Fix n: keep cursor in center
 --map('n', 'N', 'Nzz') -- Fix N: keep cursor in center
@@ -59,7 +57,8 @@ map('n', '<C-]>', ':bn<CR>', { desc = 'Buffer [Next]' }) -- Move to next
 map('n', '<C-[>', ':bp<CR>', { desc = 'Buffer [Prev]' }) -- Move to prev
 map('n', "<C-'>", ':b#<CR>', { desc = 'Buffer [To last]' }) -- Move to last
 map('n', "<C-q>", ':bdelete<CR>', { desc = 'Buffer [Delete]' }) -- Move to last
---map('n', "<C-^>", ':_#<CR>', { desc = 'Alternate file' }) -- :help alternate-file
+map('n', "<C-^>", ':_#<CR>', { desc = 'Alternate file' }) -- :help alternate-file
+map('n', '<ESC>', '', { desc = 'Unmap <C-[>'}) -- Unmap buffer prev
 
 -- Undo & Redo
 map('n', "<u>", ':undo<CR>', { desc = 'Undo' }) -- Undo

@@ -1,3 +1,6 @@
+-- Package manager
+require('user.plugins.lazy-nvim')
+
 -- Core
 require('user.core.autocmd')
 require('user.core.colors')
@@ -6,7 +9,6 @@ require('user.core.keymaps')
 require('user.core.options')
 
 -- Plugins
---require('user.plugins.lazy-nvim')
 require('user.plugins.alpha-nvim')
 require('user.plugins.autopairs')
 require('user.plugins.bufferline')
@@ -26,7 +28,7 @@ require('user.plugins.nvim-dap-ui')
 require('user.plugins.nvim-dap-python')
 require('user.plugins.nvim-dap-vtxt')
 require('user.plugins.nvim-tree')
-require('user.plugins.packer')
+--require('user.plugins.packer')
 require('user.plugins.py_lsp')
 require('user.plugins.telescope')
 require('user.plugins.treesitter')

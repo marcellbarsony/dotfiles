@@ -22,109 +22,111 @@ require("lazy").setup({
   "windwp/nvim-autopairs",
 
   -- Auto pair
-  'windwp/nvim-autopairs'
+  'windwp/nvim-autopairs',
 
   -- Bufferline
   { 'akinsho/bufferline.nvim',
-    tag = "v3.*",
-    requires = 'nvim-tree/nvim-web-devicons'
-  }
+    dependencies = 'nvim-tree/nvim-web-devicons'
+  },
 
   -- Color theme
-  'folke/tokyonight.nvim'
+  'folke/tokyonight.nvim',
 
   -- Dashboard
-  'goolord/alpha-nvim'
+  'goolord/alpha-nvim',
 
   -- CMP
   { 'hrsh7th/nvim-cmp',
-    requires = {
+    dependencies = {
       'nvim-tree/nvim-web-devicons',
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-cmdline',
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-path',
     },
-  }
+  },
 
   -- Colorizer
-   'NvChad/nvim-colorizer.lua'
+   'NvChad/nvim-colorizer.lua',
 
   -- Fold (ufo)
   -- { 'kevinhwang91/nvim-ufo',
-  --   requires = 'kevinhwang91/promise-async'
+  --   dependencies = 'kevinhwang91/promise-async'
   -- }
 
   -- Gitsigns
-  { 'lewis6991/gitsigns.nvim' }
+  { 'lewis6991/gitsigns.nvim' },
 
   -- Indent lines
-  'lukas-reineke/indent-blankline.nvim'
+  'lukas-reineke/indent-blankline.nvim',
 
   -- LSP
   { 'williamboman/mason.nvim',
-    requires = {
+    dependencies = {
       'neovim/nvim-lspconfig',
       'onsails/lspkind.nvim',
       'williamboman/mason-lspconfig.nvim',
       'jay-babu/mason-nvim-dap.nvim',
     },
-  }
+  },
 
   -- LSP Lines
-  'https://git.sr.ht/~whynothugo/lsp_lines.nvim'
+  'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
 
   -- LSP Saga
-  { 'glepnir/lspsaga.nvim' }
+  { 'glepnir/lspsaga.nvim' },
 
   -- Nvim tree
   { 'nvim-tree/nvim-tree.lua',
-    requires = {
+    dependencies = {
       'nvim-tree/nvim-web-devicons',
     },
     tag = 'nightly'
-  }
+  },
 
   -- Null-ls
-  'jose-elias-alvarez/null-ls.nvim'
+  'jose-elias-alvarez/null-ls.nvim',
 
   -- Py-lsp
-  'HallerPatrick/py_lsp.nvim'
+  'HallerPatrick/py_lsp.nvim',
 
   -- Snippets [Luasnip]
   { 'L3MON4D3/LuaSnip',
-    requires = {
+    dependencies = {
       'saadparwaiz1/cmp_luasnip',
       -- 'rafamadriz/friendly-snippets'
     },
-  }
+  },
 
   -- Status line
-  'nvim-lualine/lualine.nvim'
+  'nvim-lualine/lualine.nvim',
   -- 'glepnir/galaxyline.nvim'
   -- 'feline-nvim/feline.nvim'
   -- 'windwp/windline.nvim'
 
   -- Telescope
   { 'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    requires = { {
+    dependencies = { {
       'nvim-lua/plenary.nvim', -- Lua library
       'BurntSushi/ripgrep' -- Live grep
     } }
-  }
+  },
 
   -- Treesitter
   { 'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate',
-    requires = { 'p00f/nvim-ts-rainbow' }
-  }
+    build = ':TSUpdate',
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter-textobjects',
+      'p00f/nvim-ts-rainbow'
+    }
+  },
 
   -- Which key
-  'folke/which-key.nvim'
+  'folke/which-key.nvim',
 
   -- DAP (Debug)
   { 'mfussenegger/nvim-dap',
-    requires = {
+    dependencies = {
       'mfussenegger/nvim-dap-python', -- Python
       'nvim-telescope/telescope-dap.nvim', -- Telescope
       'rcarriga/nvim-dap-ui', -- UI
@@ -132,8 +134,4 @@ require("lazy").setup({
     }
   }
 
-
 })
-
--- Check health
--- :checkhealth lazy
