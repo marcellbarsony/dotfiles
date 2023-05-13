@@ -10,7 +10,7 @@ from libqtile.lazy import lazy
 
 mod = 'mod4'
 mod1 = 'mod1'
-browser = 'librewolf'
+browser = 'firefox'
 terminal = 'kitty'
 menu = 'rofi -show drun'  # dmenu_run
 
@@ -57,11 +57,11 @@ def switch_screens(qtile):
 
 def window_name(text):
     """
-    TODO: Implement WindowName filter
+    TODO: WindowName filter
     """
-    valami_list = [" - Chromium", " - Firefox", " - LibreWolf"]
-    for string in valami_list:
-        text = text.replace(string, "")
+    window_name = [" - Chromium", " - Firefox", " - LibreWolf"]
+    for window in window_name:
+        text = text.replace(window, "")
         return text
 
 # Keys

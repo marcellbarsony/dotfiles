@@ -8,7 +8,7 @@ picom -b &
 zsh /home/marci/.config/x11/xrandr/marci_home.sh
 
 # Notification
-dunst &
+# dunst &
 
 # Unclutter
 exec unclutter --timeout 3 &
@@ -18,8 +18,8 @@ exec unclutter --timeout 3 &
 #xmodmap ~/.config/x11/xmodmap &
 
 # Wallpaper
-xwallpaper --output VGA-1 --maximize $HOME/Downloads/Wallpapers/4K/Synthwave/4k_cyberpunk_city.jpg
-xwallpaper --output VGA-2 --maximize $HOME/Downloads/Wallpapers/4K/Synthwave/4k_cyberpunk_city.jpg
+xwallpaper --output DP-1 --maximize $HOME/Pictures/4K/Synthwave/4k_cyberpunk_city.jpg
+xwallpaper --output HDMI-2 --maximize $HOME/Pictures/4K/Synthwave/4k_cyberpunk_city.jpg
 
 # Window Manager
 qtile start
