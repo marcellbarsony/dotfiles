@@ -370,6 +370,7 @@ screens = [
             widget.Memory(
                 format='RAM: {MemUsed:.0f}{mm}',
                 foreground=PRIMARY,
+                # measure_mem='G',
                 mouse_callbacks={'Button1': open_sysmonitor},
                 update_interval=10
                 ),
