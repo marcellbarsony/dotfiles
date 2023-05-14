@@ -7,4 +7,3 @@ vim.diagnostic.config({
   virtual_lines = false, { only_current_line = true },
   virtual_text = false, -- Redundancy
 })
-

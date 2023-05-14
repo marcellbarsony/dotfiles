@@ -82,14 +82,13 @@ require("lazy").setup({
   -- Null-ls
   'jose-elias-alvarez/null-ls.nvim',
 
-  -- Py-lsp
+  -- Pylsp
   'HallerPatrick/py_lsp.nvim',
 
-  -- Snippets [Luasnip]
+  -- Snippets
   { 'L3MON4D3/LuaSnip',
     dependencies = {
       'saadparwaiz1/cmp_luasnip',
-      -- 'rafamadriz/friendly-snippets'
     },
   },
 

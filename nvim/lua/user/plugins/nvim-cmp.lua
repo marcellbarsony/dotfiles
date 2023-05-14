@@ -5,8 +5,7 @@
 local cmp = require'cmp'
 local lspkind = require'lspkind'
 local lspconfig = require'lspconfig'
-local luasnip = require("luasnip") -- Luasnip
---local cmp_ultisnips_mappings = require("cmp_nvim_ultisnips.mappings") -- Ultisnips
+local luasnip = require("luasnip")
 
 -- SuperTab (check backspace)
 local check_backspace = function()
@@ -14,7 +13,7 @@ local check_backspace = function()
   return col == 0 or vim.fn.getlin("."):sub(col, col):match "%s"
 end
 
--- Kind Icons
+-- Kind icons
 local kind_icons = {
   Text = "",
   Method = "",
@@ -43,12 +42,6 @@ local kind_icons = {
   TypeParameter = ""
 }
 
--- -- Ultisnips
--- -- cmp-nvim-ultisnips mapping
--- local t = function(str)
---   return vim.api.nvim_replace_termcodes(str, true, true, true)
--- end
-
 -- Luasnip (Tab)
 local has_words_before = function()
   unpack = unpack or table.unpack
@@ -62,7 +55,6 @@ cmp.setup({
   -- Snippet
   snippet = {
     expand = function(args)
-      -- vim.fn["UltiSnips#Anon"](args.body) -- Ultisnips
       require('luasnip').lsp_expand(args.body) -- Luasnip
     end,
   },
@@ -83,29 +75,10 @@ cmp.setup({
     entries = "custom", selection_rder = "near_cursor" -- custom/wildmenu/native
   },
 
-  -- Mapping (nvim-cmp ultisnips + cmp-cmdline)
+  -- Mapping
   mapping = {
 
-    -- Luasnips
     ['<CR>'] = cmp.mapping.confirm({ select = false }), -- Accept selected item. 'false' confirms explicitly selected items.
-
-    -- -- Ultisnips
-    -- ['<CR>'] = cmp.mapping({
-    --   -- Accept currently selected item. Set 'false' to confirm excplicitly selected items only
-    --   i = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false }),
-    --   -- When completion menu is visible select completion or expand snippet, else <CR>
-    --   -- i = cmp.mapping.confirm({ select = false }),
-    --   -- When completion menu is visible select completion only, don't accept line, else <CR>
-    --   c = function(fallback)
-    --     if cmp.visible() then
-    --       -- Accept selected item
-    --       cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false })
-    --     else
-    --       fallback()
-    --     end
-    --   end
-    -- }),
-
     -- Luasnips
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
@@ -120,7 +93,6 @@ cmp.setup({
         fallback()
       end
     end, { "i", "s" }),
-
     ["<S-Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
@@ -130,65 +102,6 @@ cmp.setup({
         fallback()
       end
     end, { "i", "s" }),
-
-    --  -- Ultisnips
-    --  ["<Tab>"] = cmp.mapping({
-    --    c = function()
-    --      if cmp.visible() then
-    --        -- Insert next/prev entry
-    --        cmp.select_next_item({ behavior = cmp.SelectBehavior.Insert })
-    --      else
-    --        -- Start completion
-    --        cmp.complete()
-    --      end
-    --    end,
-    --    -- Snippet (jump forward)
-    --    i = function(fallback)
-    --       if cmp.visible() then
-    --         -- Insert next entry
-    --         cmp.select_next_item({ behavior = cmp.SelectBehavior.Insert })
-    --       elseif vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
-    --         -- Jump to next snippet tag
-    --         vim.api.nvim_feedkeys(t("<Plug>(ultisnips_jump_forward)"), 'm', true)
-    --       else
-    --         fallback()
-    --       end
-    --    end,
-    --    -- Snippet (jump forward)
-    --    s = function(fallback)
-    --      if vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
-    --        vim.api.nvim_feedkeys(t("<Plug>(ultisnips_jump_forward)"), 'm', true)
-    --      else
-    --        fallback()
-    --      end
-    --    end
-    --    }),
-    --  ["<S-Tab>"] = cmp.mapping({
-    --    c = function()
-    --      if cmp.visible() then
-    --        cmp.select_prev_item({ behavior = cmp.SelectBehavior.Insert })
-    --      else
-    --        cmp.complete()
-    --      end
-    --    end,
-    --    i = function(fallback)
-    --      if cmp.visible() then
-    --        cmp.select_prev_item({ behavior = cmp.SelectBehavior.Insert })
-    --      elseif vim.fn["UltiSnips#CanJumpBackwards"]() == 1 then
-    --         return vim.api.nvim_feedkeys( t("<Plug>(ultisnips_jump_backward)"), 'm', true)
-    --      else
-    --         fallback()
-    --      end
-    --    end,
-    --    s = function(fallback)
-    --      if vim.fn["UltiSnips#CanJumpBackwards"]() == 1 then
-    --        return vim.api.nvim_feedkeys( t("<Plug>(ultisnips_jump_backward)"), 'm', true)
-    --      else
-    --        fallback()
-    --      end
-    --    end
-    --  }),
-
     -- CMP
     ['<C-j>'] = cmp.mapping({ -- Down
       c = function()
@@ -226,17 +139,16 @@ cmp.setup({
     ['<Up>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), {'i', 'c'}), -- Scroll docs
     ['<Down>'] = cmp.mapping(cmp.mapping.scroll_docs(4), {'i', 'c'}), -- Scroll docs
     ['<C-e>'] = cmp.mapping({ i = cmp.mapping.close(), c = cmp.mapping.close() }), -- Close
+    ['<C-e>'] = cmp.mapping({ i = cmp.mapping.close(), c = cmp.mapping.close() }), -- Close
     -- ['<Down>'] = cmp.mapping(cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }), {'i'}),
     -- ['<Up>'] = cmp.mapping(cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }), {'i'}),
-    ['<C-e>'] = cmp.mapping({ i = cmp.mapping.close(), c = cmp.mapping.close() }), -- Close
   },
 
   -- Sources
   sources = cmp.config.sources({
     { name = 'luasnip', max_item_count = 5 },
     { name = 'nvim_lsp', max_item_count = 10 },
-    { name = 'buffer', keyword_length = 3 , max_item_count = 3 },
-    -- { name = 'ultisnips', max_item_count = 5 },
+    { name = 'buffer', keyword_length = 2 , max_item_count = 3 },
   }),
 
   -- Formatting
@@ -288,3 +200,12 @@ cmp.setup.cmdline(':', {
     { name = 'cmdline' }
   })
 })
+
+-- Set up lspconfig.
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+-- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+require('lspconfig')['pylsp'].setup {
+  on_attach = on_attach,
+  flags = lsp_flags,
+  capabilities = capabilities
+}

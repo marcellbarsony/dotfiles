@@ -34,8 +34,7 @@ require("indent_blankline").setup {
     --    "IndentBlanklineIndent2",
     --    "IndentBlanklineIndent4",
     --},
- 
+
     show_trailing_blankline_indent = false,
 
 }
-

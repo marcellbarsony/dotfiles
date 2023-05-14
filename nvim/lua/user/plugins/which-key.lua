@@ -139,9 +139,9 @@ local mappings = {
       name = "Mason",
     },
 
-    -- Packer
+    -- Lazy.nvim
     p = {
-      name = "Packer",
+      name = "Lazy",
     },
 
     -- Split

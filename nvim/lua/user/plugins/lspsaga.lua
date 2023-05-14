@@ -123,9 +123,5 @@ map('n', '<leader>lb', '<cmd>Lspsaga show_buf_diagnostics<CR>') -- Diagnostics (
 map('n', '<leader>lo', '<cmd>Lspsaga outline<CR>') -- Project outline
 map('n', '<leader>lt', '<cmd>Lspsaga open_floaterm<CR>') -- Floating terminal
 map('n', '<leader>lk', "<cmd>Lspsaga hover_doc ++keep<CR>") -- Documentation
-
 map("n", "<Leader>ci", "<cmd>Lspsaga incoming_calls<CR>")
 map("n", "<Leader>co", "<cmd>Lspsaga outgoing_calls<CR>")
-
-
-
