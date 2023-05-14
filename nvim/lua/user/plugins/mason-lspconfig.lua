@@ -4,6 +4,6 @@
 require("mason-lspconfig").setup({
 
   -- Bootstrap lsp servers
-  ensure_installed = {"pylsp", "lua_ls"}
+  ensure_installed = { "pylsp", "lua_ls" }
 
 })

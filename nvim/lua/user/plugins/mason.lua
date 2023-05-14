@@ -3,17 +3,20 @@
 
 require("mason").setup({
 
-  -- Pip
-  pip = {
-    upgrade_ipi = true, -- Upgrade pip to the latest version in the virtual environment before installing packages.
-    install_args = {},
-  },
+  -- Path
+  PATH = "prepend",
 
   -- Log level
   log_level = vim.log.levels.INFO,
 
+  -- Pip
+  pip = {
+    upgrade_ipi = true,
+    install_args = {},
+  },
+
   -- Concurrent installers
-  max_concurrent_installers = 4,
+  max_concurrent_installers = 5,
 
   -- GitHub
   github = {
@@ -23,12 +26,15 @@ require("mason").setup({
   -- Providers
   providers = {
     "mason.providers.registry-api",
+    "mason.providers.client",
  },
 
   -- UI
   ui = {
     check_outdated_packages_on_open = false,
     border = "none", -- none/rounded
+    width = 0.8,
+    height = 0.8,
     icons = {
       package_installed = "✓",
       package_pending = "➜",

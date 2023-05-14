@@ -22,7 +22,7 @@ require("lazy").setup({
 
   -- Bufferline
   'akinsho/bufferline.nvim',
- 
+
   -- Color theme
   { 'folke/tokyonight.nvim',
     lazy = false,
@@ -39,7 +39,7 @@ require("lazy").setup({
 
   -- CMP
   { 'hrsh7th/nvim-cmp',
-    event = 'InsertEnter',
+    --event = 'InsertEnter',
     dependencies = {
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-cmdline',
@@ -48,19 +48,11 @@ require("lazy").setup({
     },
   },
 
-  -- Colorizer
-  'NvChad/nvim-colorizer.lua',
-
-  -- Gitsigns
-  'lewis6991/gitsigns.nvim',
-
-  -- Indent lines
-  'lukas-reineke/indent-blankline.nvim',
-
   -- LSP
+  'neovim/nvim-lspconfig',
   { 'williamboman/mason.nvim',
+    build = ":MasonUpdate",
     dependencies = {
-      'neovim/nvim-lspconfig',
       'onsails/lspkind.nvim',
       'williamboman/mason-lspconfig.nvim',
       'jay-babu/mason-nvim-dap.nvim',
@@ -72,6 +64,16 @@ require("lazy").setup({
 
   -- LSP Saga
   'glepnir/lspsaga.nvim',
+
+  -- Colorizer
+  'NvChad/nvim-colorizer.lua',
+
+  -- Gitsigns
+  'lewis6991/gitsigns.nvim',
+
+  -- Indent lines
+  'lukas-reineke/indent-blankline.nvim',
+
 
   -- Nvim tree
   { 'nvim-tree/nvim-tree.lua',

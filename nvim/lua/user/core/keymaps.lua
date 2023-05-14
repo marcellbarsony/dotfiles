@@ -110,6 +110,7 @@ map('x', '<K>', ":move '<-2<CR>gv=gv", { desc = 'Block [Move Up]' })
 
 -- LSP
 map('n', '<leader>li', ":LspInfo<CR>", { desc = 'Info' })
+map('n', '<leader>lh', ":help lspconfig.txt<CR>", { desc = 'Help' })
 map('n', '<leader>ll', ":LspLog<CR>", { desc = 'Log' })
 
 -- LSP lines
@@ -124,20 +125,15 @@ map('n', '<leader>vn', ":PyLspCreateVenv .venv<CR>", { desc = 'New' })
 map('n', '<leader>vi', ":PyRun -m pip install -r requirements.txt<CR>", { desc = 'Install dependencies' })
 
 -- Mason
-map('n', '<leader>mm', ":Mason<CR>", { desc = 'Mason' })
+map('n', '<leader>mc', ":checkhealth mason<CR>", { desc = 'Health' })
+map('n', '<leader>mh', ":h mason<CR>", { desc = 'Help' })
 map('n', '<leader>ml', ":MasonLog<CR>", { desc = 'Log' })
+map('n', '<leader>mm', ":Mason<CR>", { desc = 'Mason' })
 
 -- Null-ls
 map('n', '<leader>nl', ":NullLsLog<CR>", { desc = 'Log' })
 map('n', '<leader>ni', ":NullLsInfo<CR>", { desc = 'Info' })
 map('n', '<leader>nf', ":lua vim.lsp.buf.formatting()<CR>", { desc = 'Format' })
-
--- Packer
--- map('n', '<leader>pc', ":PackerCompile<CR>", { desc = 'Compil' })
--- map('n', '<leader>pi', ":PackerInstall<CR>", { desc = 'Install' })
--- map('n', '<leader>ps', ":PackerSync<CR>", { desc = 'Sync' })
--- map('n', '<leader>pS', ":PackerStatus<CR>", { desc = 'Status' })
--- map('n', '<leader>pu', ":PackerUpdate<CR>", { desc = 'Update' })
 
 -- Shell movements
 map('i', '<C-A>', '<ESC>I', { desc = 'Shell movement' })

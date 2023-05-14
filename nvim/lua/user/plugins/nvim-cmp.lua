@@ -3,8 +3,6 @@
 
 -- Require
 local cmp = require'cmp'
-local lspkind = require'lspkind'
-local lspconfig = require'lspconfig'
 local luasnip = require("luasnip")
 
 -- SuperTab (check backspace)
@@ -55,7 +53,7 @@ cmp.setup({
   -- Snippet
   snippet = {
     expand = function(args)
-      require('luasnip').lsp_expand(args.body) -- Luasnip
+      luasnip.lsp_expand(args.body) -- Luasnip
     end,
   },
 
@@ -139,7 +137,6 @@ cmp.setup({
     ['<Up>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), {'i', 'c'}), -- Scroll docs
     ['<Down>'] = cmp.mapping(cmp.mapping.scroll_docs(4), {'i', 'c'}), -- Scroll docs
     ['<C-e>'] = cmp.mapping({ i = cmp.mapping.close(), c = cmp.mapping.close() }), -- Close
-    ['<C-e>'] = cmp.mapping({ i = cmp.mapping.close(), c = cmp.mapping.close() }), -- Close
     -- ['<Down>'] = cmp.mapping(cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }), {'i'}),
     -- ['<Up>'] = cmp.mapping(cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }), {'i'}),
   },
@@ -200,12 +197,3 @@ cmp.setup.cmdline(':', {
     { name = 'cmdline' }
   })
 })
-
--- Set up lspconfig.
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
--- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-require('lspconfig')['pylsp'].setup {
-  on_attach = on_attach,
-  flags = lsp_flags,
-  capabilities = capabilities
-}

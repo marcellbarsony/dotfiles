@@ -1,23 +1,24 @@
 -- nvim-lspconfig
 -- https://github.com/neovim/nvim-lspconfig
 
--- Require servers
-local nvim_lsp = require('lspconfig')
+-- Additional capabilities by nvim-cmp
+-- https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+local lspconfig = require('lspconfig')
+
+-- Enable language servers
 local servers = {
-  --'bashls',
-  --'pyright',
-  'pylsp',
   'lua_ls',
+  'pylsp',
+  -- 'pyright',
 }
 
--- nvim-cmp server capabilities
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
 for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup {
+  lspconfig[lsp].setup {
     on_attach = on_attach,
+    capabilities = capabilities,
     flags = lsp_flags,
-    capabilities = capabilities
   }
 end
 
@@ -30,7 +31,6 @@ vim.diagnostic.config({
     severity_sort = true,
     })
 
--- Diagnostics symbols
 local signs = { Error = "", Warn = "", Hint = "", Info = "" }
 
 for type, icon in pairs(signs) do

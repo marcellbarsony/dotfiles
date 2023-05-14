@@ -103,7 +103,7 @@ local mappings = {
   -- Leader
   ["<leader>"] = {
 
-    -- Lspsaga
+    -- Debug
     d = {
       name = "DAP",
     },
@@ -117,7 +117,7 @@ local mappings = {
 
     -- Lspsaga
     l = {
-      name = "Lspsaga",
+      name = "LSP",
       a = { "Code action" },
       b = { "Diagnostics [Buffer]" },
       d = { "Diagnostics [Line]" },
@@ -125,7 +125,7 @@ local mappings = {
       k = { "Documentation" },
       o = { "Outline" },
       r = { "Rename" },
-      s = { "Diagnostics [LSP Lines]" },
+      s = { "LSP Lines" },
       t = { "Terminal" },
     },
 
