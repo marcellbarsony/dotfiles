@@ -1,5 +1,4 @@
 # Import
-
 import os
 import subprocess
 from libqtile import bar, hook, layout, widget, qtile
@@ -7,7 +6,6 @@ from libqtile.config import Click, Drag, DropDown, Group, Key, Match, ScratchPad
 from libqtile.lazy import lazy
 
 # Variables
-
 mod = 'mod4'
 mod1 = 'mod1'
 browser = 'firefox'
@@ -15,14 +13,12 @@ terminal = 'kitty'
 menu = 'rofi -show drun'  # dmenu_run
 
 # Colors
-
 PRIMARY = '#9A79E6'
 SECONDARY = '#7AA2F7'
 INACTIVE = '#444444'
 
+
 # Functions
-
-
 def window_to_prev_group(qtile):
     if qtile.currentWindow is not None:
         i = qtile.groups.index(qtile.currentGroup)
@@ -64,11 +60,9 @@ def window_name(text):
         text = text.replace(window, "")
         return text
 
+
 # Keys
-
-
 keys = [
-
     # Layouts
     Key([mod],            "Tab", lazy.next_layout(), desc="Next layout"),
     Key([mod, "shift"],   "Tab", lazy.prev_layout(), desc="Prev layout"),
@@ -134,38 +128,34 @@ keys = [
     # Split = all windows displayed
     # Unsplit = 1 window displayed, like Max layout, but still with multiple stack panes
     Key([mod, "shift"], "Return", lazy.layout.toggle_split(), desc="Toggle between split and unsplit sides of stack"),
-
 ]
 
 # Workspaces [numbered] (default)
-
-# groups = [Group(i) for i in "123456789"]
-# for i in groups:
-#     keys.extend([
-#         Key(
-#             [mod], i.name, lazy.group[i.name].toscreen(),
-#             desc="Switch to group {}".format(i.name),
-#         ),
-#         Key(
-#             [mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True),
-#             desc="Move window & switch to group {}".format(i.name),
-#         ),
-#     ])
+groups = [Group(i) for i in "123456789"]
+for i in groups:
+    keys.extend([
+        Key(
+            [mod], i.name, lazy.group[i.name].toscreen(),
+            desc="Switch to group {}".format(i.name),
+        ),
+        Key(
+            [mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True),
+            desc="Move window & switch to group {}".format(i.name),
+        ),
+    ])
 
 # Workspaces [named]
-
 # group_names = ' 1 2 3 4 5'.split()
-group_names = ' 一 二 三 四 五'.split()
-groups = [Group(name, layout='max') for name in group_names]
-
-for i, name in enumerate(group_names):
-    indx = str(i + 1)
-    keys += [
-        Key([mod], indx, lazy.group[name].toscreen()),
-        Key([mod, 'shift'], indx, lazy.window.togroup(name))]
+# group_names = ' 一 二 三 四 五'.split()
+# groups = [Group(name, layout='max') for name in group_names]
+#
+# for i, name in enumerate(group_names):
+#     indx = str(i + 1)
+#     keys += [
+#         Key([mod], indx, lazy.group[name].toscreen()),
+#         Key([mod, 'shift'], indx, lazy.window.togroup(name))]
 
 # Workspaces
-
 # groups = [
 #     Group(" 1 ", layout='Columns'),
 #     Group(" 2 ", layout='Columns'),
@@ -179,14 +169,12 @@ for i, name in enumerate(group_names):
 # ]
 
 # ScratchPad
-
 groups.append(
     ScratchPad("scratchpad", [
         DropDown("term", "kitty", x=0.1, y=0.1, height=0.8, width=0.8, opacity=1, warp_pointer=True, on_focus_lost_hide=False)]),
 )
 
 # Layouts
-
 layouts = [
     # Bsp
     # layout.Bsp(),
@@ -257,14 +245,10 @@ mouse = [
 ]
 
 # Mouse callbacks
-
-
 def open_sysmonitor():
     qtile.cmd_spawn('alacritty -e bpytop')
 
 # Widgets
-
-
 widget_defaults = dict(
     font='sans',
     fontsize=13,
@@ -274,7 +258,6 @@ extension_defaults = widget_defaults.copy()
 
 # Screens
 screens = [
-
     # Screen 0 (DP-1)
     Screen(
         top=bar.Bar([
@@ -498,17 +481,15 @@ screens = [
     ),
 ]
 
+
 # Hooks
-
-
 @hook.subscribe.startup_once
 def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.Popen([home])
 
+
 # Configuration variables
-
-
 auto_fullscreen = True
 auto_minimize = False
 bring_front_click = False
@@ -516,7 +497,7 @@ cursor_warp = False
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: list
 focus_on_window_activation = 'smart'
-follow_mouse_focus = False
+follow_mouse_focus = True
 floating_layout = layout.Floating(
     float_rules=[
         # Run `xprop` to see the wm class and name

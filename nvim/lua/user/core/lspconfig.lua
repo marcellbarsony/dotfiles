@@ -1,6 +1,5 @@
 -- nvim-lspconfig
 -- https://github.com/neovim/nvim-lspconfig
--- Dependencies:
 
 -- Require servers
 local nvim_lsp = require('lspconfig')
@@ -11,10 +10,14 @@ local servers = {
   'lua_ls',
 }
 
+-- nvim-cmp server capabilities
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup{
+  nvim_lsp[lsp].setup {
     on_attach = on_attach,
     flags = lsp_flags,
+    capabilities = capabilities
   }
 end
 
@@ -38,4 +41,3 @@ for type, icon in pairs(signs) do
     --numhl = hl
     })
 end
-

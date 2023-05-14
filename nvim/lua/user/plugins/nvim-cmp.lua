@@ -5,7 +5,6 @@
 local cmp = require'cmp'
 local lspkind = require'lspkind'
 local lspconfig = require'lspconfig'
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local luasnip = require("luasnip") -- Luasnip
 --local cmp_ultisnips_mappings = require("cmp_nvim_ultisnips.mappings") -- Ultisnips
 
@@ -289,20 +288,3 @@ cmp.setup.cmdline(':', {
     { name = 'cmdline' }
   })
 })
-
--- lspconfig setup
-local nvim_lsp = require('lspconfig')
-local servers = {
-  'bashls',
-  'pyright',
-  'pylsp',
-  'lua_ls',
-}
-
--- Advertise server capabilities
-for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup{
-    capabilities = capabilities
-  }
-end
-
