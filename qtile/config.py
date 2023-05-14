@@ -250,7 +250,7 @@ def open_sysmonitor():
 
 # Widgets
 widget_defaults = dict(
-    font='sans',
+    font='JetBrains Mono',
     fontsize=13,
     padding=3,
 )

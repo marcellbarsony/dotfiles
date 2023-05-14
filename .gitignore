@@ -47,9 +47,6 @@ spotifyd/spotifyd.conf
 # VSCodium
 VSCodium/
 
-# wal
-wal/
-
 # Wireshark
 wireshark/decode_as_entries
 wireshark/expert_severity

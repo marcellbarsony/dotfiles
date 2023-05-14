@@ -1,5 +1,0 @@
-# Polybar
-sh $HOME/.config/openbox/polybar.sh &
-
-# Taskbar
-tint2 &
