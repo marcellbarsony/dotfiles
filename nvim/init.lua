@@ -1,7 +1,7 @@
--- Package manager
+-- Lazy
 require('user.plugins.lazy-nvim')
 
--- Nvim core
+-- Core
 require('user.core.autocmd')
 require('user.core.colors')
 require('user.core.keymaps')
@@ -17,6 +17,12 @@ require('user.plugins.nvim-dap-ui')
 require('user.plugins.nvim-dap-python')
 require('user.plugins.nvim-dap-vtxt')
 
+-- Git
+require('user.plugins.gitsigns')
+
+-- Greeter
+require('user.plugins.alpha-nvim')
+
 -- LSP setup
 require('user.plugins.mason')
 require('user.plugins.mason-lspconfig')
@@ -24,13 +30,12 @@ require('user.plugins.mason-lspconfig')
 -- LSP tools
 require('user.plugins.lsp_lines')
 require('user.plugins.lspsaga')
+require('user.plugins.py_lsp')
 
 -- Plugins
-require('user.plugins.alpha-nvim')
 require('user.plugins.autopairs')
 require('user.plugins.bufferline')
 require('user.plugins.colorizer')
-require('user.plugins.gitsigns')
 require('user.plugins.indent-blankline')
 require('user.plugins.lualine')
 require('user.plugins.nvim-tree')
@@ -44,4 +49,3 @@ require('user.plugins.luasnip')
 -- TODO
 --require('user.plugins.mason-nvim-dap')
 --require('user.plugins.null-ls')
---require('user.plugins.py_lsp')

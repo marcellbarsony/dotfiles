@@ -5,6 +5,6 @@
 require("mason-lspconfig").setup({
 
   -- Bootstrap lsp servers
-  ensure_installed = { "pylsp", "lua_ls", "rust_analyzer" }
+  ensure_installed = { "pyright", "lua_ls", "rust_analyzer" }
 
 })

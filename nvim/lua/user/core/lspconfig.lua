@@ -10,8 +10,8 @@ local lspconfig = require('lspconfig')
 -- Enable language servers
 local servers = {
   'lua_ls',
-  'pylsp',
-  -- 'pyright',
+  --'pylsp',
+  'pyright',
 }
 
 for _, lsp in ipairs(servers) do

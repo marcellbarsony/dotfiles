@@ -87,7 +87,7 @@ map('n', '<leader>dz', ":lua require('dap-python').test_method()<CR>", { desc = 
 -- Nvim-tree
 map('n', 't', ':NvimTreeToggle<CR>', { desc = 'NvimTree' })
 -- map('n', 'tc', ':NvimTreeCollapse<CR>', { desc = 'Collapse' })
--- map('n', 'tf', ':NvimTreeFindFile<CR>', { desc = 'Find file' })
+-- map('n', '<leader>x', ':NvimTreeFindFile<CR>', { desc = 'Find file' })
 -- map('n', '<leader>t', ':Lex 30<CR>', { desc = 'Netrw', silent = true })
 
 -- Gitsigns
@@ -114,14 +114,14 @@ map('n', '<leader>lh', ":help lspconfig.txt<CR>", { desc = 'Help' })
 map('n', '<leader>ll', ":LspLog<CR>", { desc = 'Log' })
 
 -- LSP lines
-map('n', '<leader>ld', require('lsp_lines').toggle, { desc = 'Diagnostics' })
+map('n', '<leader>ld', require('lsp_lines').toggle, { desc = 'LSP lines' })
 
 -- LSP py-lsp (venv)
-map('n', '<leader>va', ":PyLspActivateVenv .venv<CR>", { desc = 'Activate' })
+map('n', '<leader>va', ":PyLspActivateVenv<CR>", { desc = 'Activate' })
 map('n', '<leader>vc', ":PyLspCurrentVenv<CR>", { desc = 'Current' })
 map('n', '<leader>vd', ":PyLspDeactivateVenv<CR>", { desc = 'Deactivate' })
 map('n', '<leader>vf', ":PyLspFindVenvs<CR>", { desc = 'Find' })
-map('n', '<leader>vn', ":PyLspCreateVenv .venv<CR>", { desc = 'New' })
+map('n', '<leader>vn', ":PyLspCreateVenv<CR>", { desc = 'New' })
 map('n', '<leader>vi', ":PyRun -m pip install -r requirements.txt<CR>", { desc = 'Install dependencies' })
 
 -- Mason
@@ -129,6 +129,7 @@ map('n', '<leader>mc', ":checkhealth mason<CR>", { desc = 'Health' })
 map('n', '<leader>mh', ":h mason<CR>", { desc = 'Help' })
 map('n', '<leader>ml', ":MasonLog<CR>", { desc = 'Log' })
 map('n', '<leader>mm', ":Mason<CR>", { desc = 'Mason' })
+map('n', '<leader>mu', ":MasonUninstallAll<CR>", { desc = 'Uninstall all' })
 
 -- Null-ls
 map('n', '<leader>nl', ":NullLsLog<CR>", { desc = 'Log' })
