@@ -43,18 +43,6 @@
 
 # Prompt
   eval "$(starship init zsh)" # Starship
-  # source "$HOME/.local/src/spaceship/spaceship.zsh" # Spaceship
-
-# SSH agent
-#  if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-#      ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"
-#  fi
-#  if [[ ! -f "$SSH_AUTH_SOCK" ]]; then
-#      source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
-#  fi
-#
-#  # SSH agent venv
-#  export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
 
 # VI mode
   bindkey -v
@@ -63,7 +51,7 @@
   # VIM - Edit line
   autoload edit-command-line
   zle -N edit-command-line
-  bindkey '^e' edit-command-line # (Ctrl + E)
+  bindkey '^e' edit-command-line # (Ctrl + e)
 
   # VIM - Cursor
   function zle-keymap-select {
@@ -98,6 +86,7 @@
 
 
 # Zsh-Autocomplete
+# https://github.com/marlonrichert/zsh-autocomplete
   source ~/.local/src/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
   zstyle ':autocomplete:*' default-context ''

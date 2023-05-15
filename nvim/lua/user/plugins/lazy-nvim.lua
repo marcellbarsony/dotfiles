@@ -53,9 +53,9 @@ require("lazy").setup({
   { 'williamboman/mason.nvim',
     build = ":MasonUpdate",
     dependencies = {
-      'onsails/lspkind.nvim',
       'williamboman/mason-lspconfig.nvim',
-      'jay-babu/mason-nvim-dap.nvim',
+      'jay-babu/mason-null-ls.nvim',
+      'onsails/lspkind.nvim',
     },
   },
 
@@ -123,6 +123,7 @@ require("lazy").setup({
   -- DAP (Debug)
   { 'mfussenegger/nvim-dap',
     dependencies = {
+      'jay-babu/mason-nvim-dap.nvim',
       'mfussenegger/nvim-dap-python', -- Python
       'nvim-telescope/telescope-dap.nvim', -- Telescope
       'rcarriga/nvim-dap-ui', -- UI
