@@ -26,6 +26,7 @@ require('user.plugins.alpha-nvim')
 -- LSP setup
 require('user.plugins.mason')
 require('user.plugins.mason-lspconfig')
+require('user.plugins.mason-nvim-dap')
 
 -- LSP tools
 require('user.plugins.lsp_lines')
@@ -47,5 +48,4 @@ require('user.plugins.which-key')
 require('user.plugins.luasnip')
 
 -- TODO
---require('user.plugins.mason-nvim-dap')
 --require('user.plugins.null-ls')

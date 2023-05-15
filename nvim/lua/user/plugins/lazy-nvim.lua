@@ -29,8 +29,8 @@ require("lazy").setup({
     priority = 1000,
   },
 
-  -- Dashboard
-  'goolord/alpha-nvim',
+  -- Colorizer
+  'NvChad/nvim-colorizer.lua',
 
   -- Devicons
   { 'nvim-tree/nvim-web-devicons',
@@ -48,6 +48,16 @@ require("lazy").setup({
     },
   },
 
+  -- DAP (Debug Adapter Protocol)
+  { 'mfussenegger/nvim-dap',
+    dependencies = {
+      'mfussenegger/nvim-dap-python', -- Python
+      'nvim-telescope/telescope-dap.nvim', -- Telescope
+      'rcarriga/nvim-dap-ui', -- UI
+      'theHamsta/nvim-dap-virtual-text', -- Virtual text
+    },
+  },
+
   -- LSP
   'neovim/nvim-lspconfig',
   { 'williamboman/mason.nvim',
@@ -55,6 +65,7 @@ require("lazy").setup({
     dependencies = {
       'williamboman/mason-lspconfig.nvim',
       'jay-babu/mason-null-ls.nvim',
+      'jay-babu/mason-nvim-dap.nvim',
       'onsails/lspkind.nvim',
     },
   },
@@ -65,10 +76,10 @@ require("lazy").setup({
   -- LSP Saga
   'glepnir/lspsaga.nvim',
 
-  -- Colorizer
-  'NvChad/nvim-colorizer.lua',
+  -- Greeter
+  'goolord/alpha-nvim',
 
-  -- Gitsigns
+  -- Git
   'lewis6991/gitsigns.nvim',
 
   -- Indent lines
@@ -84,7 +95,7 @@ require("lazy").setup({
   -- Null-ls
   'jose-elias-alvarez/null-ls.nvim',
 
-  -- Pylsp
+  -- Python venv
   'HallerPatrick/py_lsp.nvim',
 
   -- Snippets
@@ -103,7 +114,7 @@ require("lazy").setup({
   -- Telescope
   { 'nvim-telescope/telescope.nvim',
     dependencies = {
-      'nvim-lua/plenary.nvim', -- Lua library
+      'nvim-lua/plenary.nvim', -- Lua lib
       'BurntSushi/ripgrep' -- Live grep
     }
   },
@@ -119,16 +130,5 @@ require("lazy").setup({
 
   -- Which key
   'folke/which-key.nvim',
-
-  -- DAP (Debug)
-  { 'mfussenegger/nvim-dap',
-    dependencies = {
-      'jay-babu/mason-nvim-dap.nvim',
-      'mfussenegger/nvim-dap-python', -- Python
-      'nvim-telescope/telescope-dap.nvim', -- Telescope
-      'rcarriga/nvim-dap-ui', -- UI
-      'theHamsta/nvim-dap-virtual-text', -- Virtual text
-    }
-  }
 
 })

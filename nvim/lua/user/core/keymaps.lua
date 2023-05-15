@@ -16,22 +16,24 @@ end
 --  command_mode = "c",
 
 -- Leader
-map("n", "<Bslash>", "", { desc = 'LEADER'})
+map("n", "<Bslash>", "", { desc = 'LEADER' })
 vim.g.mapleader = "\\"
 vim.g.maplocalleader = "\\"
+
+-- Core
+map('n', '<leader>w', ':wall<CR>', { desc = 'Write all' })
+map('n', '<leader>wq', ':waq<CR>', { desc = 'Write & Quit' })
+map('n', '<leader>q', ':q<CR>', { desc = 'Quit' })
+map('n', '<leader>r', ':source %<CR>', { desc = 'Reload [TODO]' })
+
+-- Alpha
+map('n', '<leader>a', ':Alpha<CR>', { desc = 'Alpha' })
 
 -- Disable arrow keys
 map('', '<up>', '<nop>')
 map('', '<down>', '<nop>')
 map('', '<left>', '<nop>')
 map('', '<right>', '<nop>')
-
--- Core
-map('n', '<leader>w', ':wall<CR>', { desc = 'Write all'})
-map('n', '<leader>wq', ':waq<CR>', { desc = 'Write & Quit' })
-map('n', '<leader>q', ':q<CR>', { desc = 'Quit' })
-map('n', '<leader>r', ':source %<CR>', { desc = 'Reload [TODO]'})
-map('n', '<leader>h', ':checkhealth<CR>', { desc = 'Health'})
 
 -- Search
 map('n', '*', '*N', { desc = 'Find word' }) -- Fix * - don't move to next match
@@ -58,7 +60,7 @@ map('n', '<C-[>', ':bp<CR>', { desc = 'Buffer [Prev]' }) -- Move to prev
 map('n', "<C-'>", ':b#<CR>', { desc = 'Buffer [To last]' }) -- Move to last
 map('n', "<C-q>", ':bdelete<CR>', { desc = 'Buffer [Delete]' }) -- Move to last
 map('n', "<C-^>", ':_#<CR>', { desc = 'Alternate file' }) -- :help alternate-file
-map('n', '<ESC>', '', { desc = 'Unmap <C-[>'}) -- Unmap buffer prev
+map('n', '<ESC>', '', { desc = 'Unmap <C-[>' }) -- Unmap buffer prev
 
 -- Undo & Redo
 map('n', "<u>", ':undo<CR>', { desc = 'Undo' }) -- Undo
@@ -67,12 +69,12 @@ map('n', "<C-r>", ':redo<CR>', { desc = 'Redo' }) -- Redo
 -- DAP
 -- :h dap-api
 -- :h dap-mappings
-map('n', '<leader>5', ":lua require'dap'.continue()<CR>", { desc = 'DAP [Continue]'} )
-map('n', '<leader>3', ":lua require'dap'.step_over()<CR>", { desc = 'DAP [Step over]'} )
-map('n', '<leader>2', ":lua require'dap'.step_into()<CR>", { desc = 'DAP [Step into]'} )
-map('n', '<leader>0', ":lua require'dap'.step_out()<CR>", { desc = 'DAP [Step out]'} )
-map('n', '<leader>b', ":lua require'dap'.toggle_breakpoint()<CR>", { desc = 'DAP [Breakpoint]'} )
-map('n', '<leader>B', ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", { desc = 'DAP [Breakpoint [Condition]'} )
+map('n', '<leader>5', ":lua require'dap'.continue()<CR>", { desc = 'DAP [Continue]' })
+map('n', '<leader>3', ":lua require'dap'.step_over()<CR>", { desc = 'DAP [Step over]' })
+map('n', '<leader>2', ":lua require'dap'.step_into()<CR>", { desc = 'DAP [Step into]' })
+map('n', '<leader>0', ":lua require'dap'.step_out()<CR>", { desc = 'DAP [Step out]' })
+map('n', '<leader>b', ":lua require'dap'.toggle_breakpoint()<CR>", { desc = 'DAP [Break]' })
+map('n', '<leader>B', ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", { desc = 'DAP [Break + condition]' })
 map('n', '<leader>dp', ":lua require'dap'.set.breakpoint(nul, nul, vim.fn.input('Log point message: '))<CR>", { desc = 'Breakpoint [log point msg]' })
 map('n', '<leader>dr', ":lua require'dap'.repl.open()<CR>", { desc = 'REPL' })
 map('n', '<leader>dl', ":lua require'dap'.run_last()<CR>", { desc = 'Run last' })
@@ -95,9 +97,6 @@ map('n', '<leader>uu', ':Gitsigns toggle_signs<CR>:Gitsigns toggle_numhl<CR>:Git
 map('n', '<leader>us', ':Gitsigns toggle_signs<CR>', { desc = 'Signs' })
 map('n', '<leader>un', ':Gitsigns toggle_numhl<CR>', { desc = 'Numhl' })
 map('n', '<leader>ub', ':Gitsigns toggle_current_line_blame<CR>', { desc = 'Blame' })
-
--- Lazy.nvim
-map('n', '<leader>p', ':Lazy<CR>', { desc = 'Lazy' })
 
 -- Lines
 -- Reference: https://vim.fandom.com/wiki/Moving_lines_up_or_down
@@ -150,12 +149,12 @@ map('n', '<leader>tb', ":Telescope buffers<CR>", { desc = 'Buffers' })
 map('n', '<leader>tc', ":Telescope commands<CR>", { desc = 'Commands' })
 map('n', '<leader>td', ":Telescope diagnostics<CR>", { desc = 'Diagnostics' })
 map('n', '<leader>tf', ":Telescope find_files<CR>", { desc = 'Find files' })
-map('n', '<leader>tg', ":Telescope git_commits<CR>", { desc = 'Git commits' })
+map('n', '<leader>tgc', ":Telescope git_commits<CR>", { desc = 'Commits' })
+map('n', '<leader>tgs', ":Telescope git_status<CR>", { desc = 'Status' })
 map('n', '<leader>th', ":Telescope highlights<CR>", { desc = 'Highlights' })
 map('n', '<leader>tk', ":Telescope keymaps<CR>", { desc = 'Keymaps' })
 map('n', '<leader>tl', ":Telescope live_grep<CR>", { desc = 'Live grep' })
 map('n', '<leader>tm', ":Telescope man_pages<CR>", { desc = 'Man' })
-map('n', '<leader>tn', ":Telescope git_status<CR>", { desc = 'Git status' })
 map('n', '<leader>to', ":Telescope oldfiles<CR>", { desc = 'History' })
 map('n', '<leader>tp', ":Telescope pickers<CR>", { desc = 'Pickers' })
 map('n', '<leader>ts', ":Telescope search_history<CR>", { desc = 'Search history' })

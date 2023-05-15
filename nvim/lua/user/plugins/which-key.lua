@@ -139,11 +139,6 @@ local mappings = {
       name = "Mason",
     },
 
-    -- Lazy.nvim
-    p = {
-      name = "Lazy",
-    },
-
     -- Split
     s = {
       name = "Split",
@@ -152,6 +147,9 @@ local mappings = {
     -- Telescope
     t = {
       name = "Telescope",
+      g = {
+        name = "GIT",
+      },
     },
 
       -- Gitsigns
@@ -170,5 +168,3 @@ local mappings = {
 
 local wk = require("which-key")
 wk.register(mappings, opts)
-
-

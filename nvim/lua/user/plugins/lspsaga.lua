@@ -118,10 +118,10 @@ map('n', '<leader>la', '<cmd>Lspsaga code_action<CR>') -- Code actions
 map('n', '<leader>lr', '<cmd>Lspsaga rename<CR>') -- Rename variable
 map('n', '<leader>lf', '<cmd>Lspsaga peek_definition<CR>') -- Definition (peek)
 map('n',         'gd', '<cmd>Lspsaga goto_definition<CR>') -- Definition (jump)
-map('n', '<leader>ls', '<cmd>Lspsaga show_line_diagnostics<CR>') -- Diagnostics (line)
-map('n', '<leader>lb', '<cmd>Lspsaga show_buf_diagnostics<CR>') -- Diagnostics (buffer)
+--map('n', '<leader>ls', '<cmd>Lspsaga show_line_diagnostics<CR>') -- Diagnostics (line)
+--map('n', '<leader>lb', '<cmd>Lspsaga show_buf_diagnostics<CR>') -- Diagnostics (buffer)
 map('n', '<leader>lo', '<cmd>Lspsaga outline<CR>') -- Project outline
-map('n', '<leader>lt', '<cmd>Lspsaga open_floaterm<CR>') -- Floating terminal
+--map('n', '<leader>lt', '<cmd>Lspsaga open_floaterm<CR>') -- Floating terminal
 map('n', '<leader>lk', "<cmd>Lspsaga hover_doc ++keep<CR>") -- Documentation
 map("n", "<Leader>ci", "<cmd>Lspsaga incoming_calls<CR>")
 map("n", "<Leader>co", "<cmd>Lspsaga outgoing_calls<CR>")
