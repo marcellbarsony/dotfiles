@@ -1,6 +1,9 @@
 -- Lazy
 require('user.plugins.lazy-nvim')
 
+-- Buffer
+require('user.plugins.bufferline')
+
 -- Core
 require('user.core.autocmd')
 require('user.core.colors')
@@ -16,6 +19,9 @@ require('user.plugins.nvim-dap')
 require('user.plugins.nvim-dap-ui')
 require('user.plugins.nvim-dap-python')
 require('user.plugins.nvim-dap-vtxt')
+
+-- File explorer
+require('user.plugins.nvim-tree')
 
 -- Git
 require('user.plugins.gitsigns')
@@ -35,17 +41,17 @@ require('user.plugins.py_lsp')
 
 -- Plugins
 require('user.plugins.autopairs')
-require('user.plugins.bufferline')
 require('user.plugins.colorizer')
 require('user.plugins.indent-blankline')
-require('user.plugins.lualine')
-require('user.plugins.nvim-tree')
 require('user.plugins.telescope')
 require('user.plugins.treesitter')
 require('user.plugins.which-key')
 
 -- Snippet
 require('user.plugins.luasnip')
+
+-- Statusline
+require('user.plugins.lualine')
 
 -- TODO
 --require('user.plugins.null-ls')

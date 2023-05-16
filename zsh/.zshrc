@@ -3,11 +3,10 @@
 
 # Bind key
   bindkey -e
-  # bindkey -s '^s' spotify-tui
 
 # Colors
-  autoload -U colors && colors
   # https://i.stack.imgur.com/UQVe5.png
+  autoload -U colors && colors
 
 # Git
   autoload -U vcs_info
@@ -88,9 +87,11 @@
 # Zsh-Autocomplete
 # https://github.com/marlonrichert/zsh-autocomplete
   source ~/.local/src/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+  # Pass arguments to compinit
+  zstyle '*:compinit' arguments -D -i -u -C -w
 
   zstyle ':autocomplete:*' default-context ''
-  zstyle ':autocomplete:*' min-delay 0.05
+  zstyle ':autocomplete:*' min-delay 0.1
   zstyle ':autocomplete:*' min-input 2
   zstyle ':autocomplete:*' ignored-input '..'
   # zstyle ':autocomplete:*' list-lines 16
@@ -101,7 +102,12 @@
   zstyle ':autocomplete:*' widget-style menu-select
   zstyle ':autocomplete:*' fzf-completion no
   zstyle ':autocomplete:*' add-space executables aliases functions builtins reserved-words commands
+  # bindkey -M menuselect '\r' .accept-line # Always accept on Enter
 
+  # Tab
+  bindkey '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
+  #bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
+  #bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
   # Up arrow:
   bindkey '\e[A' up-line-or-search
   bindkey '\eOA' up-line-or-search
@@ -123,12 +129,16 @@
   bindkey -M menuselect '\r' accept-line
 
 # Zsh-Autosuggestions
-source ~/.local/src/zsh-autosuggestions/zsh-autosuggestions.zsh
+# https://github.com/zsh-users/zsh-autosuggestions
+  source ~/.local/src/zsh-autosuggestions/zsh-autosuggestions.zsh
+  bindkey '^ ' autosuggest-accept
 
 # Zsh-Completions
-  # fpath=(~/.local/src/zsh-completions/src $fpath)
-  # autoload -Uz compinit && compinit
-  # zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+#  autoload -Uz compinit && compinit
+#  fpath=(~/.local/share/zsh-completions/src $fpath)
+#  zstyle ':completion:*' menu-select
+#  zstyle ':completion:*' menu-complete
+#  zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
 # zmodules
   for f in ~/.config/zsh/zmodules/*; do source "$f"; done
