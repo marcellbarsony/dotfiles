@@ -8,6 +8,12 @@ export WM="qtile"
 # Language
 export LANG=en_US.UTF-8
 
+# $PATH
+# https://wiki.archlinux.org/title/zsh#Configuring_$PATH
+typeset -U path PATH
+path=(~/.local/bin $path)
+export PATH
+
 # XDG paths
 export XDG_APP_HOME="$HOME/.local/share/applications"
 export XDG_BIN_HOME="$HOME/.local/bin"
