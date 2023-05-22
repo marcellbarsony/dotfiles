@@ -95,7 +95,7 @@ preexec() {
 
 # Zsh Autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-bindkey '^ ' autosuggest-accept
+#bindkey '^ ' autosuggest-accept
 
 # Zsh Completions
 zstyle ':completion:*' menu select

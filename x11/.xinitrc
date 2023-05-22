@@ -11,9 +11,9 @@ zsh /home/marci/.config/x11/xrandr/double.sh
 exec unclutter --timeout 3 &
 
 # Wallpaper
-xwallpaper --output eDP-1 --maximize $HOME/Pictures/4K/Synthwave/4k_cyberpunk_city.jpg
-xwallpaper --output DP-1 --maximize $HOME/Pictures/4K/Synthwave/4k_cyberpunk_city.jpg
-xwallpaper --output HDMI-2 --maximize $HOME/Pictures/4K/Synthwave/4k_cyberpunk_city.jpg
+xwallpaper --output eDP1 --maximize $HOME/Pictures/4K/Synthwave/4k_cyberpunk_city.jpg
+xwallpaper --output DP1 --maximize $HOME/Pictures/4K/Synthwave/4k_cyberpunk_city.jpg
+xwallpaper --output HDMI2 --maximize $HOME/Pictures/4K/Synthwave/4k_cyberpunk_city.jpg
 
 # Notification
 # dunst &
