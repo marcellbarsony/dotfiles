@@ -10,7 +10,7 @@ mod = 'mod4'
 mod1 = 'mod1'
 browser = 'firefox'
 terminal = 'kitty'
-menu = 'rofi -show drun'  # dmenu_run
+menu = 'dmenu_run'
 
 # Colors
 PRIMARY = '#9A79E6'

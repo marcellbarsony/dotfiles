@@ -42,6 +42,9 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export PATH="/usr/lib/python3.10/site-packages:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
+# QT5
+export QT_STYLE_OVERRIDE="Adwaita-Dark"
+
 # Ruby
 #export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 #export PATH="$PATH:GEM_HOME/bin"
