@@ -61,4 +61,4 @@ user-dirs.locale
 
 # ZSH
 zsh/.zcompdump
-zsh/.zsh_history
+zsh/history
