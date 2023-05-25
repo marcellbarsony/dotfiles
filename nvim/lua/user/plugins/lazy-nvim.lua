@@ -1,4 +1,7 @@
--- Bootstrap lazy.nvim
+-- lazy.nvim
+-- https://github.com/folke/lazy.nvim
+
+-- Bootstrap
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -97,6 +100,9 @@ require("lazy").setup({
 
   -- Python venv
   'HallerPatrick/py_lsp.nvim',
+
+  -- Rust
+  'simrat39/rust-tools.nvim',
 
   -- Snippets
   { 'L3MON4D3/LuaSnip',

@@ -4,14 +4,13 @@
 -- Additional capabilities by nvim-cmp
 -- https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
 local lspconfig = require('lspconfig')
 
--- Enable language servers
+-- Language servers
 local servers = {
   'lua_ls',
-  --'pylsp',
   'pyright',
+  --'pylsp',
 }
 
 for _, lsp in ipairs(servers) do
@@ -31,6 +30,7 @@ vim.diagnostic.config({
     severity_sort = true,
     })
 
+-- Signs
 local signs = { Error = "", Warn = "", Hint = "", Info = "" }
 
 for type, icon in pairs(signs) do

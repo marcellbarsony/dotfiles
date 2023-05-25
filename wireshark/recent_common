@@ -50,7 +50,7 @@ gui.geometry_status_pane: 250
 gui.geometry_status_pane_right: 250
 
 # Last used Configuration Profile.
-gui.last_used_profile: Bluetooth
+gui.last_used_profile: Default
 
 # WLAN statistics upper pane size.
 # Decimal number.
@@ -100,8 +100,8 @@ gui.geom.ManageInterfacesDialog.maximized: FALSE
 
 # Geometry and maximized state of ProfileDialog window.
 # Decimal integers.
-gui.geom.ProfileDialog.x: 2578
-gui.geom.ProfileDialog.y: 293
+gui.geom.ProfileDialog.x: 2576
+gui.geom.ProfileDialog.y: 291
 gui.geom.ProfileDialog.width: 570
 gui.geom.ProfileDialog.height: 400
 # TRUE or FALSE (case-insensitive).
