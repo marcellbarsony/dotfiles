@@ -47,13 +47,6 @@ spotifyd/spotifyd.conf
 # VSCodium
 VSCodium/
 
-# Wireshark
-wireshark/decode_as_entries
-wireshark/expert_severity
-wireshark/language
-wireshark/recent
-wireshark/recent_common
-
 # XDG
 user-dirs.dirs
 user-dirs.locale

@@ -166,7 +166,7 @@
 # 8 = External Capture,
 # 9 = Virtual
 # A string
-gui.interfaces_hidden_types: 8
+#gui.interfaces_hidden_types: 
 
 # Enables automatic updates for IO Graph
 # TRUE or FALSE (case-insensitive)
@@ -206,7 +206,7 @@ gui.interfaces_hidden_types: 8
 
 # Color preferences for a marked frame
 # A six-digit hexadecimal RGB color triplet (e.g. fce94f)
-gui.marked_frame.fg: 4f4f4f
+#gui.marked_frame.fg: ffffff
 
 # Color preferences for a marked frame
 # A six-digit hexadecimal RGB color triplet (e.g. fce94f)
@@ -218,7 +218,7 @@ gui.marked_frame.fg: 4f4f4f
 
 # Color preferences for a ignored frame
 # A six-digit hexadecimal RGB color triplet (e.g. fce94f)
-gui.ignored_frame.bg: cacaca
+#gui.ignored_frame.bg: ffffff
 
 # TCP stream window color preference
 # A six-digit hexadecimal RGB color triplet (e.g. fce94f)
@@ -234,7 +234,7 @@ gui.ignored_frame.bg: cacaca
 
 # TCP stream window color preference
 # A six-digit hexadecimal RGB color triplet (e.g. fce94f)
-gui.stream.server.bg: 9999a2
+#gui.stream.server.bg: ededfb
 
 # Valid color filter background
 # A six-digit hexadecimal RGB color triplet (e.g. fce94f)
@@ -252,7 +252,7 @@ gui.stream.server.bg: 9999a2
 
 # Packet list hidden columns
 # List all columns to hide in the packet list.
-#gui.column.hidden: 
+gui.column.hidden: 
 
 # Packet list column format
 # Each pair of strings consists of a column title and its format
@@ -275,7 +275,7 @@ gui.qt.font_name: JetBrains Mono,10,-1,5,50,0,0,0,0,0,Regular
 
 # Layout type (1-6)
 # A decimal number
-#gui.layout_type: 2
+gui.layout_type: 4
 
 # Layout content of the pane 1
 # One of: NONE, PLIST, PDETAILS, PBYTES, PDIAGRAM
@@ -290,7 +290,7 @@ gui.qt.font_name: JetBrains Mono,10,-1,5,50,0,0,0,0,0,Regular
 # Layout content of the pane 3
 # One of: NONE, PLIST, PDETAILS, PBYTES, PDIAGRAM
 # (case-insensitive).
-#gui.layout_content_3: PBYTES
+gui.layout_content_3: PDIAGRAM
 
 # Enable Packet List Separator
 # TRUE or FALSE (case-insensitive)
@@ -328,7 +328,7 @@ gui.qt.font_name: JetBrains Mono,10,-1,5,50,0,0,0,0,0,Regular
 
 # Interface link-layer header types (Ex: en0(1),en1(143),...)
 # A string
-capture.devices_linktypes: wlp0s20f3(1),any(113),lo(1),enp0s31f6(1),bluetooth0(201),bluetooth-monitor(254),nflog(239),nfqueue(228),dbus-system(231),dbus-session(231),ciscodump(147),dpauxmon(275),randpkt(147),sdjournal(147),sshdump(147),udpdump(252),wifidump(147)
+#capture.devices_linktypes: 
 
 # Interface descriptions (Ex: eth0(eth0 descr),eth1(eth1 descr),...)
 # A string
@@ -344,15 +344,15 @@ capture.devices_linktypes: wlp0s20f3(1),any(113),lo(1),enp0s31f6(1),bluetooth0(2
 
 # Interface buffer size (Ex: en0(1),en1(143),...)
 # A string
-capture.devices_buffersize: wlp0s20f3(2),any(2),lo(2),enp0s31f6(2),bluetooth0(2),bluetooth-monitor(2),nflog(2),nfqueue(2),dbus-system(2),dbus-session(2),ciscodump(2),dpauxmon(2),randpkt(2),sdjournal(2),sshdump(2),udpdump(2),wifidump(2)
+#capture.devices_buffersize: 
 
 # Interface snap length (Ex: en0(65535),en1(1430),...)
 # A string
-capture.devices_snaplen: wlp0s20f3:0(262144),any:0(262144),lo:0(262144),enp0s31f6:0(262144),bluetooth0:0(262144),bluetooth-monitor:0(262144),nflog:0(262144),nfqueue:0(262144),dbus-system:0(262144),dbus-session:0(262144),ciscodump:0(262144),dpauxmon:0(262144),randpkt:0(262144),sdjournal:0(262144),sshdump:0(262144),udpdump:0(262144),wifidump:0(262144)
+#capture.devices_snaplen: 
 
 # Interface promiscuous mode (Ex: en0(0),en1(1),...)
 # A string
-capture.devices_pmode: wlp0s20f3(1),any(1),lo(1),enp0s31f6(1),bluetooth0(1),bluetooth-monitor(1),nflog(1),nfqueue(1),dbus-system(1),dbus-session(1),ciscodump(1),dpauxmon(1),randpkt(1),sdjournal(1),sshdump(1),udpdump(1),wifidump(1)
+#capture.devices_pmode: 
 
 # Capture in promiscuous mode?
 # TRUE or FALSE (case-insensitive)
