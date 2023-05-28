@@ -1,4 +1,4 @@
-# Recent settings file for Wireshark 4.0.5.
+# Recent settings file for Wireshark 4.0.6.
 #
 # This file is regenerated each time Wireshark is quit
 # and when changing configuration profile.
@@ -75,11 +75,11 @@ gui.allow_hover_selection: TRUE
 
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 462
+gui.geometry_main_upper_pane: 590
 
 # Main window middle pane size.
 # Decimal number.
-gui.geometry_main_lower_pane: 954
+gui.geometry_main_lower_pane: 1276
 
 # Packet list column pixel widths.
 # Each pair of strings consists of a column format and its pixel width.
@@ -89,7 +89,7 @@ column.width:
         %s, -1,
         %d, -1,
         %p, -1,
-        %L, -1,
+        %L, 80,
         %i, 1328
 
 # Open conversation dialog tabs.

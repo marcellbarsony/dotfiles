@@ -1,4 +1,4 @@
-# Common recent settings file for Wireshark 4.0.5.
+# Common recent settings file for Wireshark 4.0.6.
 #
 # This file is regenerated each time Wireshark is quit
 # and when changing configuration profile.
@@ -9,29 +9,31 @@
 recent.capture_file: /home/marci/Downloads/Basic-Wireshark-Capture1.pcapng
 recent.capture_file: /home/marci/Downloads/udemy-lab1-wiresharkintro.pcapng
 recent.capture_file: /home/marci/Downloads/wireshark_udemy/udemy-lab1-wiresharkintro.pcapng
+recent.capture_file: /home/marci/Downloads/wireshark_udemy/udemy-ip_frag_nmap_scan.pcapng
+recent.capture_file: /home/marci/Downloads/wireshark_udemy/udemy-ipv6-peek.pcapng
 
 ######## Recent capture filters (latest last), cannot be altered through command line ########
 
 
 ######## Recent display filters (latest last), cannot be altered through command line ########
 
+recent.display_filter: (ip.addr eq 104.26.2.85 and ip.addr eq 192.168.1.3) and (tcp.port eq 443 and tcp.port eq 47180)
+recent.display_filter: (ip.addr eq 192.168.1.3 and ip.addr eq 172.217.20.4) and (tcp.port eq 50468 and tcp.port eq 443)
+recent.display_filter: (ip.addr eq 172.217.20.4 and ip.addr eq 192.168.1.3) and (tcp.port eq 443 and tcp.port eq 50484)
+recent.display_filter: (ip.addr eq 192.168.1.3 and ip.addr eq 142.251.39.3) and (tcp.port eq 56006 and tcp.port eq 80)
+recent.display_filter: (ip.addr eq 192.168.1.3 and ip.addr eq 52.84.106.63) and (tcp.port eq 58320 and tcp.port eq 443)
+recent.display_filter: (ip.addr eq 192.168.1.3 and ip.addr eq 172.217.20.4) and (tcp.port eq 50452 and tcp.port eq 443)
+recent.display_filter: tcp
 recent.display_filter: icmp
 recent.display_filter: ip.addr == 142.251.39.14
 recent.display_filter: tcp.flags.syn == 1
-recent.display_filter: !(eth.type == 0x0800)
-recent.display_filter: ! eth.type == 0x0800
-recent.display_filter: ip.src==10.1.1.1 && tcp.srcport==49676 && ip.dst==10.1.1.100 && tcp.dstport==80
-recent.display_filter: ip.addr eq 10.1.1.1 and ip.addr eq 10.1.1.254
-recent.display_filter: ip.addr eq 10.1.1.100 and ip.addr eq 10.1.1.1
-recent.display_filter: eth.addr eq 36:e4:5c:40:91:a2 and eth.addr eq 00:0c:29:8f:dc:d7
-recent.display_filter: tcp.port == 80
 
 # Main window geometry.
 # Decimal numbers.
-gui.geometry_main_x: 1925
-gui.geometry_main_y: 34
-gui.geometry_main_width: 1910
-gui.geometry_main_height: 1041
+gui.geometry_main_x: 0
+gui.geometry_main_y: 0
+gui.geometry_main_width: 1920
+gui.geometry_main_height: 1080
 
 # Main window maximized.
 # TRUE or FALSE (case-insensitive).
@@ -50,7 +52,7 @@ gui.geometry_status_pane: 250
 gui.geometry_status_pane_right: 250
 
 # Last used Configuration Profile.
-gui.last_used_profile: Default
+gui.last_used_profile: TCP
 
 # WLAN statistics upper pane size.
 # Decimal number.
@@ -82,7 +84,7 @@ gui.search_type: DISPLAY_FILTER
 
 # Geometry and maximized state of ShowPacketBytesDialog window.
 # Decimal integers.
-gui.geom.ShowPacketBytesDialog.x: 2881
+gui.geom.ShowPacketBytesDialog.x: 961
 gui.geom.ShowPacketBytesDialog.y: 30
 gui.geom.ShowPacketBytesDialog.width: 950
 gui.geom.ShowPacketBytesDialog.height: 1041
@@ -98,10 +100,19 @@ gui.geom.ManageInterfacesDialog.height: 425
 # TRUE or FALSE (case-insensitive).
 gui.geom.ManageInterfacesDialog.maximized: FALSE
 
+# Geometry and maximized state of DisplayFilterExpressionDialog window.
+# Decimal integers.
+gui.geom.DisplayFilterExpressionDialog.x: 400
+gui.geom.DisplayFilterExpressionDialog.y: 99
+gui.geom.DisplayFilterExpressionDialog.width: 1043
+gui.geom.DisplayFilterExpressionDialog.height: 935
+# TRUE or FALSE (case-insensitive).
+gui.geom.DisplayFilterExpressionDialog.maximized: FALSE
+
 # Geometry and maximized state of ProfileDialog window.
 # Decimal integers.
-gui.geom.ProfileDialog.x: 2576
-gui.geom.ProfileDialog.y: 291
+gui.geom.ProfileDialog.x: 674
+gui.geom.ProfileDialog.y: 353
 gui.geom.ProfileDialog.width: 570
 gui.geom.ProfileDialog.height: 400
 # TRUE or FALSE (case-insensitive).
@@ -109,12 +120,12 @@ gui.geom.ProfileDialog.maximized: FALSE
 
 # Geometry and maximized state of PreferencesDialog window.
 # Decimal integers.
-gui.geom.PreferencesDialog.x: 2879
-gui.geom.PreferencesDialog.y: 28
-gui.geom.PreferencesDialog.width: 950
-gui.geom.PreferencesDialog.height: 1041
+gui.geom.PreferencesDialog.x: 0
+gui.geom.PreferencesDialog.y: 0
+gui.geom.PreferencesDialog.width: 1920
+gui.geom.PreferencesDialog.height: 1080
 # TRUE or FALSE (case-insensitive).
-gui.geom.PreferencesDialog.maximized: FALSE
+gui.geom.PreferencesDialog.maximized: TRUE
 
 # Geometry and maximized state of TrafficTableDialog window.
 # Decimal integers.
@@ -127,7 +138,7 @@ gui.geom.TrafficTableDialog.maximized: TRUE
 
 # Geometry and maximized state of PacketDialog window.
 # Decimal integers.
-gui.geom.PacketDialog.x: 2881
+gui.geom.PacketDialog.x: 961
 gui.geom.PacketDialog.y: 30
 gui.geom.PacketDialog.width: 950
 gui.geom.PacketDialog.height: 1041
@@ -154,12 +165,21 @@ gui.geom.dns.maximized: FALSE
 
 # Geometry and maximized state of ColoringRulesDialog window.
 # Decimal integers.
-gui.geom.ColoringRulesDialog.x: 2243
-gui.geom.ColoringRulesDialog.y: 137
+gui.geom.ColoringRulesDialog.x: 308
+gui.geom.ColoringRulesDialog.y: 122
 gui.geom.ColoringRulesDialog.width: 1273
 gui.geom.ColoringRulesDialog.height: 832
 # TRUE or FALSE (case-insensitive).
 gui.geom.ColoringRulesDialog.maximized: FALSE
+
+# Geometry and maximized state of Display Filter Macros window.
+# Decimal integers.
+gui.geom.Display Filter Macros.x: 666
+gui.geom.Display Filter Macros.y: 298
+gui.geom.Display Filter Macros.width: 566
+gui.geom.Display Filter Macros.height: 403
+# TRUE or FALSE (case-insensitive).
+gui.geom.Display Filter Macros.maximized: FALSE
 
 # Custom colors.
 # List of custom colors selected in Qt color picker.

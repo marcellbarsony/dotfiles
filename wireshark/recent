@@ -1,4 +1,4 @@
-# Recent settings file for Wireshark 4.0.5.
+# Recent settings file for Wireshark 4.0.6.
 #
 # This file is regenerated each time Wireshark is quit
 # and when changing configuration profile.
@@ -47,7 +47,7 @@ gui.time_format: RELATIVE
 
 # Timestamp display precision.
 # One of: AUTO, SEC, DSEC, CSEC, MSEC, USEC, NSEC
-gui.time_precision: AUTO
+gui.time_precision: USEC
 
 # Seconds display format.
 # One of: SECONDS, HOUR_MIN_SEC
@@ -75,22 +75,24 @@ gui.allow_hover_selection: TRUE
 
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 1268
+gui.geometry_main_upper_pane: 1292
 
 # Main window middle pane size.
 # Decimal number.
-gui.geometry_main_lower_pane: 609
+gui.geometry_main_lower_pane: 456
 
 # Packet list column pixel widths.
 # Each pair of strings consists of a column format and its pixel width.
 column.width:
         %m, 78,
-        %t, 90,
-        %s, 145,
-        %d, 246,
-        %p, 137,
+        %t, 75:R,
+        %s, 122:L,
+        %d, 122:L,
+        %S, 69,
+        %rD, 70:R,
+        %p, 69:C,
         %L, 61,
-        %i, 699
+        %i, 1018
 
 # Open conversation dialog tabs.
 # List of conversation names, e.g. "TCP", "IPv6".

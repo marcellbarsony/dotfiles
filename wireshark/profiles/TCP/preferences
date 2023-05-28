@@ -1,4 +1,4 @@
-# Configuration file for Wireshark 4.0.5.
+# Configuration file for Wireshark 4.0.6.
 #
 # This file is regenerated each time preferences are saved within
 # Wireshark. Making manual changes should be safe, however.
@@ -252,30 +252,36 @@
 
 # Packet list hidden columns
 # List all columns to hide in the packet list.
-gui.column.hidden: 
+gui.column.hidden: %L
 
 # Packet list column format
 # Each pair of strings consists of a column title and its format
-#gui.column.format: 
-#	"No.", "%m",
-#	"Time", "%t",
-#	"Source", "%s",
-#	"Destination", "%d",
-#	"Protocol", "%p",
-#	"Length", "%L",
-#	"Info", "%i"
+gui.column.format: 
+	"No.", "%m",
+	"Time", "%t",
+	"SRC IP", "%s",
+	"DST IP", "%d",
+	"SRC Port", "%Cus:tcp.srcport:0:R",
+	"DST Port", "%Cus:tcp.dstport:0:R",
+	"Protocol", "%p",
+	"Length", "%L",
+	"Stream", "%Cus:tcp.stream:0:R",
+	"Segment", "%Cus:tcp.len:0:R",
+	"SEQ No", "%Cus:tcp.seq:0:R",
+	"ACK No", "%Cus:tcp.ack:0:R",
+	"Info", "%i"
 
 ####### User Interface: Font ########
 
 # Font name for packet list, protocol tree, and hex dump panes. (Qt)
 # A string
-gui.qt.font_name: JetBrains Mono,10,-1,5,50,0,0,0,0,0,Regular
+gui.qt.font_name: Liberation Mono,10,-1,5,50,0,0,0,0,0,Regular
 
 ####### User Interface: Layout ########
 
 # Layout type (1-6)
 # A decimal number
-gui.layout_type: 4
+#gui.layout_type: 2
 
 # Layout content of the pane 1
 # One of: NONE, PLIST, PDETAILS, PBYTES, PDIAGRAM
@@ -290,7 +296,7 @@ gui.layout_type: 4
 # Layout content of the pane 3
 # One of: NONE, PLIST, PDETAILS, PBYTES, PDIAGRAM
 # (case-insensitive).
-gui.layout_content_3: PDIAGRAM
+#gui.layout_content_3: PBYTES
 
 # Enable Packet List Separator
 # TRUE or FALSE (case-insensitive)

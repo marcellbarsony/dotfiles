@@ -1,4 +1,4 @@
-# Configuration file for Wireshark 4.0.5.
+# Configuration file for Wireshark 4.0.6.
 #
 # This file is regenerated each time preferences are saved within
 # Wireshark. Making manual changes should be safe, however.
@@ -180,29 +180,29 @@ gui.interfaces_hidden_types: 8,4
 
 # Foreground color for an active selected item
 # A six-digit hexadecimal RGB color triplet (e.g. fce94f)
-#gui.active_frame.fg: 000000
+gui.active_frame.fg: ffffff
 
 # Background color for an active selected item
 # A six-digit hexadecimal RGB color triplet (e.g. fce94f)
-#gui.active_frame.bg: cbe8ff
+gui.active_frame.bg: 747474
 
 # Color style for an active selected item
 # One of: DEFAULT, FLAT, GRADIENT
 # (case-insensitive).
-#gui.active_frame.style: DEFAULT
+gui.active_frame.style: FLAT
 
 # Foreground color for an inactive selected item
 # A six-digit hexadecimal RGB color triplet (e.g. fce94f)
-#gui.inactive_frame.fg: 000000
+gui.inactive_frame.fg: ffffff
 
 # Background color for an inactive selected item
 # A six-digit hexadecimal RGB color triplet (e.g. fce94f)
-#gui.inactive_frame.bg: efefef
+gui.inactive_frame.bg: 484848
 
 # Color style for an inactive selected item
 # One of: DEFAULT, FLAT, GRADIENT
 # (case-insensitive).
-#gui.inactive_frame.style: DEFAULT
+gui.inactive_frame.style: FLAT
 
 # Color preferences for a marked frame
 # A six-digit hexadecimal RGB color triplet (e.g. fce94f)
@@ -252,18 +252,20 @@ gui.stream.server.bg: 9999a2
 
 # Packet list hidden columns
 # List all columns to hide in the packet list.
-#gui.column.hidden: 
+gui.column.hidden: 
 
 # Packet list column format
 # Each pair of strings consists of a column title and its format
-#gui.column.format: 
-#	"No.", "%m",
-#	"Time", "%t",
-#	"Source", "%s",
-#	"Destination", "%d",
-#	"Protocol", "%p",
-#	"Length", "%L",
-#	"Info", "%i"
+gui.column.format: 
+	"No.", "%m",
+	"Time", "%t",
+	"SRC IP", "%s",
+	"DST IP", "%d",
+	"SRC Port", "%S",
+	"DST Port", "%rD",
+	"Protocol", "%p",
+	"Length", "%L",
+	"Info", "%i"
 
 ####### User Interface: Font ########
 

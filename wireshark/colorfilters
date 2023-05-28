@@ -1,6 +1,5 @@
 # This file was created by Wireshark. Edit with care.
 @Bad TCP@tcp.analysis.flags && !tcp.analysis.window_update && !tcp.analysis.keep_alive && !tcp.analysis.keep_alive_ack@[4626,10023,11822][63479,34695,34695]
-@TCP SYN@tcp.flags.syn == 1@[1542,32896,35723][61166,61166,60652]
 @HSRP State Change@hsrp.state != 8 && hsrp.state != 16@[4626,10023,11822][65535,64764,40092]
 @Spanning Tree Topology  Change@stp.type == 0x80@[4626,10023,11822][65535,64764,40092]
 @OSPF State Change@ospf.msg != 1@[4626,10023,11822][65535,64764,40092]
@@ -15,6 +14,7 @@
 @HTTP@http || tcp.port == 80 || http2@[58596,65535,51143][4626,10023,11822]
 @DCERPC@dcerpc@[51143,38807,65535][4626,10023,11822]
 @Routing@hsrp || eigrp || ospf || bgp || cdp || vrrp || carp || gvrp || igmp || ismp@[65535,62451,54998][4626,10023,11822]
+@TCP SYN@tcp.flags.syn == 1@[21845,43690,32639][61166,61166,60652]
 @TCP SYN/FIN@tcp.flags & 0x02 || tcp.flags.fin == 1@[41120,41120,41120][4626,10023,11822]
 @TCP@tcp@[59367,59110,65535][4626,10023,11822]
 @UDP@udp@[56026,61166,65535][4626,10023,11822]

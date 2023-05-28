@@ -1,4 +1,4 @@
-# Recent settings file for Wireshark 4.0.5.
+# Recent settings file for Wireshark 4.0.6.
 #
 # This file is regenerated each time Wireshark is quit
 # and when changing configuration profile.
@@ -75,22 +75,28 @@ gui.allow_hover_selection: TRUE
 
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 1269
+gui.geometry_main_upper_pane: 574
 
 # Main window middle pane size.
 # Decimal number.
-gui.geometry_main_lower_pane: 494
+gui.geometry_main_lower_pane: 1317
 
 # Packet list column pixel widths.
 # Each pair of strings consists of a column format and its pixel width.
 column.width:
-        %m, -1,
-        %t, -1,
-        %s, -1,
-        %d, -1,
-        %p, -1,
-        %L, -1,
-        %i, 1279
+        %m, 64,
+        %t, 75,
+        %s, 206,
+        %d, 202,
+        "%Cus:tcp.srcport", 69,
+        "%Cus:tcp.dstport", 70,
+        %p, 69:C,
+        %L, 0,
+        "%Cus:tcp.stream", 62,
+        "%Cus:tcp.len", 65,
+        "%Cus:tcp.seq", 62,
+        "%Cus:tcp.ack", 62,
+        %i, 1088
 
 # Open conversation dialog tabs.
 # List of conversation names, e.g. "TCP", "IPv6".

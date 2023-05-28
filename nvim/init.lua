@@ -18,7 +18,7 @@ require('user.plugins.nvim-cmp')
 require('user.plugins.nvim-dap')
 require('user.plugins.nvim-dap-ui')
 require('user.plugins.nvim-dap-python')
-require('user.plugins.nvim-dap-vtxt')
+--require('user.plugins.nvim-dap-vtxt')
 
 -- File explorer
 require('user.plugins.nvim-tree')

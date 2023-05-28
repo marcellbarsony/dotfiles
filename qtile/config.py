@@ -497,7 +497,7 @@ cursor_warp = False
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: list
 focus_on_window_activation = 'smart'
-follow_mouse_focus = True
+follow_mouse_focus = False
 floating_layout = layout.Floating(
     float_rules=[
         # Run `xprop` to see the wm class and name

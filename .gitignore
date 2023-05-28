@@ -4,17 +4,14 @@ Bitwarden CLI/data.json
 # Bpytop
 bpytop/error.log
 
-# Cargo
-cargo/
-
 # Configstore
 configstore/
 
+# Chromium
+chromium/
+
 # Dconf
 dconf/
-
-# Flameshot
-flameshot/
 
 # GitHub
 gh/
@@ -24,7 +21,7 @@ nvim/plugin/
 nvim/lazy-lock.json
 nvim/lua/.luarc.json
 
-# Pulse Audio
+# Pulse audio
 pulse/
 pavucontrol.ini
 
@@ -32,7 +29,7 @@ pavucontrol.ini
 qtile/__pycache__
 qtile/config/__pycache__
 
-# QtProject
+# QT5
 QtProject.conf
 
 # Rust Bitwarden
