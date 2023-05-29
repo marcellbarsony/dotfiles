@@ -5,3 +5,5 @@
 	name = marcellbarsony
 [init]
 	defaultBranch = main
+[advice]
+	detachedHead = false

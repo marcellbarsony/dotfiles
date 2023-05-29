@@ -31,7 +31,7 @@ export HISTFILE="$XDG_STATE_HOME/zsh/history"
 export KITTY_CONFIG_DIRECTORY="$XDG_CONFIG_HOME/kitty"
 export ZDOTDIR="$HOME/.config/zsh/"
 export XINITRC="$HOME/.config/x11/"
-export GIT_CONFIG="#$XDG_CONFIG_HOME/git/config"
+#export GIT_CONFIG="$XDG_CONFIG_HOME/git/config"
 # export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 # set viminfofile=$XDG_CONFIG_HOME/nvim/viminfo
 
