@@ -53,7 +53,7 @@ export QT_STYLE_OVERRIDE="Adwaita-Dark"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export PATH=/home/marci/.local/share/cargo/bin:$PATH
-. "/home/marci/.local/share/cargo/env"
+#. "/home/marci/.local/share/cargo/env"
 
 # Scripts
 #export PATH=$HOME/.local/git/scripts:$PATH

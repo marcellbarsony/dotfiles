@@ -32,9 +32,6 @@ qtile/config/__pycache__
 # QT5
 QtProject.conf
 
-# Rust Bitwarden
-rbw/
-
 # Spotify
 spotify-tui/client.yml
 spotify-tui/config.yml
