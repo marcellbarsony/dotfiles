@@ -2,7 +2,7 @@
   "email":"barsonymarcell@protonmail.com",
   "base_url":null,
   "identity_url":null,
-  "lock_timeout":1800,
+  "lock_timeout":600,
   "sync_interval":3600,
   "pinentry":"pinentry",
   "client_cert_path":null
