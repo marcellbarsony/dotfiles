@@ -258,8 +258,10 @@ extension_defaults = widget_defaults.copy()
 
 # Screens
 screens = [
-    # Screen 0 (DP-1)
+    # Screen 0
     Screen(
+        wallpaper = '~/Pictures/4k/cyberpunk/4k_cyberpunk_city.jpg',
+        wallpaper_mode='stretch',
         top=bar.Bar([
             # LEFT
             # Groups
@@ -403,7 +405,7 @@ screens = [
         ),
     ),
 
-    # Screen 1 (HDMI-2)
+    # Screen 1
     Screen(
         top=bar.Bar([
             # LEFT
