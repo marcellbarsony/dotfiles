@@ -32,12 +32,12 @@ recent.display_filter: tcp.flags.syn == 1
 # Decimal numbers.
 gui.geometry_main_x: 0
 gui.geometry_main_y: 0
-gui.geometry_main_width: 1920
-gui.geometry_main_height: 1080
+gui.geometry_main_width: 1910
+gui.geometry_main_height: 1161
 
 # Main window maximized.
 # TRUE or FALSE (case-insensitive).
-gui.geometry_main_maximized: FALSE
+gui.geometry_main_maximized: TRUE
 
 # Leftalign Action Buttons.
 # TRUE or FALSE (case-insensitive).
@@ -52,7 +52,7 @@ gui.geometry_status_pane: 250
 gui.geometry_status_pane_right: 250
 
 # Last used Configuration Profile.
-gui.last_used_profile: TCP
+gui.last_used_profile: Default
 
 # WLAN statistics upper pane size.
 # Decimal number.
@@ -64,7 +64,7 @@ privs.warn_if_elevated: TRUE
 
 # Warn if Wireshark is unable to capture.
 # TRUE or FALSE (case-insensitive).
-sys.warn_if_no_capture: TRUE
+sys.warn_if_no_capture: FALSE
 
 # Find packet search in.
 # One of: PACKET_LIST, PACKET_DETAILS, PACKET_BYTES
@@ -111,10 +111,10 @@ gui.geom.DisplayFilterExpressionDialog.maximized: FALSE
 
 # Geometry and maximized state of ProfileDialog window.
 # Decimal integers.
-gui.geom.ProfileDialog.x: 674
-gui.geom.ProfileDialog.y: 353
-gui.geom.ProfileDialog.width: 570
-gui.geom.ProfileDialog.height: 400
+gui.geom.ProfileDialog.x: 0
+gui.geom.ProfileDialog.y: 0
+gui.geom.ProfileDialog.width: 950
+gui.geom.ProfileDialog.height: 1041
 # TRUE or FALSE (case-insensitive).
 gui.geom.ProfileDialog.maximized: FALSE
 
@@ -122,10 +122,10 @@ gui.geom.ProfileDialog.maximized: FALSE
 # Decimal integers.
 gui.geom.PreferencesDialog.x: 0
 gui.geom.PreferencesDialog.y: 0
-gui.geom.PreferencesDialog.width: 1920
-gui.geom.PreferencesDialog.height: 1080
+gui.geom.PreferencesDialog.width: 950
+gui.geom.PreferencesDialog.height: 1161
 # TRUE or FALSE (case-insensitive).
-gui.geom.PreferencesDialog.maximized: TRUE
+gui.geom.PreferencesDialog.maximized: FALSE
 
 # Geometry and maximized state of TrafficTableDialog window.
 # Decimal integers.

@@ -75,11 +75,11 @@ gui.allow_hover_selection: TRUE
 
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 574
+gui.geometry_main_upper_pane: 383
 
 # Main window middle pane size.
 # Decimal number.
-gui.geometry_main_lower_pane: 1317
+gui.geometry_main_lower_pane: 929
 
 # Packet list column pixel widths.
 # Each pair of strings consists of a column format and its pixel width.
@@ -117,9 +117,6 @@ gui.endpoint_tabs_columns:
 # For RLC stats, whether to use RLC PDUs found inside MAC frames.
 # TRUE or FALSE (case-insensitive).
 gui.rlc_pdus_from_mac_frames: FALSE
-
-# Last directory navigated to in File Open dialog.
-gui.fileopen_remembered_dir: /home/marci/Downloads/wireshark_udemy/
 
 # Additional Toolbars shown
 # List of additional toolbars to show.
