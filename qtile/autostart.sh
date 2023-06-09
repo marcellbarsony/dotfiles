@@ -9,5 +9,4 @@ run() {
 
 # Applications
 picom -b &
-exec unclutter --timeout 5 &
 run kitty
