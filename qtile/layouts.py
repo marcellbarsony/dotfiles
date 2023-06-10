@@ -12,7 +12,7 @@ layouts = [
     #    border_normal = '#FFFFFF',
     #    border_width = 3,
     #    margin = [15, 15, 15, 15],
-    # ),
+    #    ),
 
     # Columns
     layout.Columns(
@@ -57,7 +57,7 @@ layouts = [
     # Stack
     # layout.Stack(
     #    num_stacks=2
-    # ),
+    #    ),
 
     # Tile
     # layout.Tile(),

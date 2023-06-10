@@ -166,7 +166,7 @@
 # 8 = External Capture,
 # 9 = Virtual
 # A string
-#gui.interfaces_hidden_types: 
+gui.interfaces_hidden_types: 8,5,4
 
 # Enables automatic updates for IO Graph
 # TRUE or FALSE (case-insensitive)
@@ -238,15 +238,15 @@
 
 # Valid color filter background
 # A six-digit hexadecimal RGB color triplet (e.g. fce94f)
-#gui.color_filter_bg.valid: afffaf
+#gui.color_filter_bg.valid: 006600
 
 # Invalid color filter background
 # A six-digit hexadecimal RGB color triplet (e.g. fce94f)
-#gui.color_filter_bg.invalid: ffafaf
+#gui.color_filter_bg.invalid: 660000
 
 # Deprecated color filter background
 # A six-digit hexadecimal RGB color triplet (e.g. fce94f)
-#gui.color_filter_bg.deprecated: ffffaf
+#gui.color_filter_bg.deprecated: 666600
 
 ####### User Interface: Columns ########
 
@@ -259,6 +259,7 @@ gui.column.hidden: %L
 gui.column.format: 
 	"No.", "%m",
 	"Time", "%t",
+	"Delta", "%Gt",
 	"SRC IP", "%s",
 	"DST IP", "%d",
 	"SRC Port", "%Cus:tcp.srcport:0:R",

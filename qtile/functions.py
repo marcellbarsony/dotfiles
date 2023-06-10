@@ -1,4 +1,8 @@
-# Functions
+# Lazy objects
+# https://qtile.readthedocs.io/en/stable/manual/config/lazy.html
+
+from libqtile.lazy import lazy
+
 def window_to_prev_group(qtile):
     if qtile.currentWindow is not None:
         i = qtile.groups.index(qtile.currentGroup)
@@ -32,10 +36,6 @@ def switch_screens(qtile):
 
 
 def window_name(text):
-    """
-    TODO: WindowName filter
-    """
-    window_name = [" - Chromium", " - Firefox", " - LibreWolf"]
-    for window in window_name:
-        text = text.replace(window, "")
+    for string in [" - Chromium", " - Firefox"]:
+        text = text.replace(string, "")
         return text

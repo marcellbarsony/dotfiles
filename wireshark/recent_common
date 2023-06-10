@@ -11,6 +11,7 @@ recent.capture_file: /home/marci/Downloads/udemy-lab1-wiresharkintro.pcapng
 recent.capture_file: /home/marci/Downloads/wireshark_udemy/udemy-lab1-wiresharkintro.pcapng
 recent.capture_file: /home/marci/Downloads/wireshark_udemy/udemy-ip_frag_nmap_scan.pcapng
 recent.capture_file: /home/marci/Downloads/wireshark_udemy/udemy-ipv6-peek.pcapng
+recent.capture_file: /home/marci/Downloads/TCP Handshake_ChrisGreer.pcapng
 
 ######## Recent capture filters (latest last), cannot be altered through command line ########
 
@@ -30,10 +31,10 @@ recent.display_filter: tcp.flags.syn == 1
 
 # Main window geometry.
 # Decimal numbers.
-gui.geometry_main_x: 0
-gui.geometry_main_y: 0
+gui.geometry_main_x: 5
+gui.geometry_main_y: 32
 gui.geometry_main_width: 1910
-gui.geometry_main_height: 1161
+gui.geometry_main_height: 1163
 
 # Main window maximized.
 # TRUE or FALSE (case-insensitive).
@@ -52,7 +53,7 @@ gui.geometry_status_pane: 250
 gui.geometry_status_pane_right: 250
 
 # Last used Configuration Profile.
-gui.last_used_profile: Default
+gui.last_used_profile: TCP
 
 # WLAN statistics upper pane size.
 # Decimal number.
@@ -120,10 +121,10 @@ gui.geom.ProfileDialog.maximized: FALSE
 
 # Geometry and maximized state of PreferencesDialog window.
 # Decimal integers.
-gui.geom.PreferencesDialog.x: 0
-gui.geom.PreferencesDialog.y: 0
-gui.geom.PreferencesDialog.width: 950
-gui.geom.PreferencesDialog.height: 1161
+gui.geom.PreferencesDialog.x: 618
+gui.geom.PreferencesDialog.y: 319
+gui.geom.PreferencesDialog.width: 702
+gui.geom.PreferencesDialog.height: 587
 # TRUE or FALSE (case-insensitive).
 gui.geom.PreferencesDialog.maximized: FALSE
 

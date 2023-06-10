@@ -5,5 +5,6 @@ from keybindings import *
 from layouts import *
 from mouse import *
 from screens import *
+from scratchpads import *
 from widgets import *
 from settings import *

@@ -10,3 +10,5 @@ run() {
 # Applications
 picom -b &
 run kitty
+python /home/marci/.src/arch-tools/xtools/displays.py
+python /home/marci/.src/arch-tools/xtools/wallpaper.py
