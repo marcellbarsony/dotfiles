@@ -6,33 +6,33 @@ from variables import *
 
 
 # Groups [default]
-#groups = [Group(i) for i in "123456789"]
-#for i in groups:
-#    keys.extend(
-#        [
-#            Key([mod], i.name, lazy.group[i.name].toscreen(),
-#                desc="Go to group {}".format(i.name),),
-#            Key([mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True),
-#                desc="Go to group {} & Move window".format(i.name),),
-#            #Key([mod, "shift"], i.name, lazy.window.togroup(i.name), 
-#            #    desc="Move window to group {}".format(i.name)),
-#        ]
-#    )
+groups = [Group(i) for i in "123456789"]
+for i in groups:
+    keys.extend(
+        [
+            Key([mod], i.name, lazy.group[i.name].toscreen(),
+                desc="Go to group {}".format(i.name),),
+            Key([mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True),
+                desc="Go to group {} & Move window".format(i.name),),
+            #Key([mod, "shift"], i.name, lazy.window.togroup(i.name), 
+            #    desc="Move window to group {}".format(i.name)),
+        ]
+    )
 
 # Groups [named]
-group_names = ' 1 2 3 4 5'.split()
-group_names = ' A B C D E'.split()
-groups = [Group(name, layout='max') for name in group_names]
-for i, name in enumerate(group_names):
-    indx = str(i + 1)
-    keys += [
-        Key([mod], indx, lazy.group[name].toscreen(),
-            desc="Go to group"),
-        Key([mod, 'shift'], indx, lazy.window.togroup(name, switch_group=True),
-            desc="Go to group & Move window"),
-        #Key([mod, 'shift'], indx, lazy.window.togroup(name),
-        #    desc="Move window"),
-    ]
+#group_names = ' 1 2 3 4 5'.split()
+#group_names = ' A B C D E'.split()
+#groups = [Group(name, layout='max') for name in group_names]
+#for i, name in enumerate(group_names):
+#    indx = str(i + 1)
+#    keys += [
+#        Key([mod], indx, lazy.group[name].toscreen(),
+#            desc="Go to group"),
+#        Key([mod, 'shift'], indx, lazy.window.togroup(name, switch_group=True),
+#            desc="Go to group & Move window"),
+#        #Key([mod, 'shift'], indx, lazy.window.togroup(name),
+#        #    desc="Move window"),
+#    ]
 
 # Groups
 # groups = [

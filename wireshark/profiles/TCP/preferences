@@ -166,7 +166,7 @@
 # 8 = External Capture,
 # 9 = Virtual
 # A string
-gui.interfaces_hidden_types: 8,5,4
+gui.interfaces_hidden_types: 8,4
 
 # Enables automatic updates for IO Graph
 # TRUE or FALSE (case-insensitive)
@@ -252,24 +252,19 @@ gui.interfaces_hidden_types: 8,5,4
 
 # Packet list hidden columns
 # List all columns to hide in the packet list.
-gui.column.hidden: %L
+gui.column.hidden: 
 
 # Packet list column format
 # Each pair of strings consists of a column title and its format
 gui.column.format: 
 	"No.", "%m",
 	"Time", "%t",
-	"Delta", "%Gt",
-	"SRC IP", "%s",
-	"DST IP", "%d",
-	"SRC Port", "%Cus:tcp.srcport:0:R",
-	"DST Port", "%Cus:tcp.dstport:0:R",
+	"IP [SRC]", "%s",
+	"IP [DST]", "%d",
+	"Port [SRC]", "%Cus:tcp.srcport:0:R",
+	"Port [DST]", "%Cus:tcp.dstport:0:R",
 	"Protocol", "%p",
 	"Length", "%L",
-	"Stream", "%Cus:tcp.stream:0:R",
-	"Segment", "%Cus:tcp.len:0:R",
-	"SEQ No", "%Cus:tcp.seq:0:R",
-	"ACK No", "%Cus:tcp.ack:0:R",
 	"Info", "%i"
 
 ####### User Interface: Font ########
