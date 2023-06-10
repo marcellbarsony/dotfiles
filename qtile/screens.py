@@ -4,7 +4,8 @@ from libqtile import bar, widget
 from libqtile.config import Screen
 from colors import *
 from mouse import *
-from functions import network_ip, network_interface, window_name
+from func_screens import window_name
+from func_network import network_ip, network_interface
 from variables import font_size, sep_padding, sep_width
 
 
@@ -12,6 +13,7 @@ screens = [
     # SCREEN1
     Screen(
         top=bar.Bar([
+            # LEFT
             widget.GroupBox(
                 active=PRIMARY,
                 background=None,
@@ -19,7 +21,7 @@ screens = [
                 center_aligned=True,
                 disable_drag=True,
                 fontshadow=None,
-                fontsize=14,
+                fontsize=font_size,
                 hide_unused=False,
                 highlight_color=['000000', '4A2996'],
                 highlight_method='line',
@@ -34,7 +36,7 @@ screens = [
             ),
             widget.WindowName(
                 background=None,
-                fontsize=14,
+                fontsize=font_size,
                 foreground=PRIMARY,
                 max_chars=200,
                 parse_text=window_name,
@@ -45,32 +47,29 @@ screens = [
                 scroll_step=1,
             ),
 
-            # Spacer
             widget.Spacer(),
 
-            # Weather
+            # RIGHT
             widget.WidgetBox(
                 button_location='left',
                 close_button_location='right',
                 foreground=PRIMARY,
                 text_closed='☁',
-                #text_closed='[]',
-                text_opened='[Weather]',
+                text_opened='[>]',
                 widgets=[
                     widget.OpenWeather(
                         location='Budapest',
                         format='{location_city} {main_temp}°{units_temperature} - {weather_details} {icon}',
                         foreground=PRIMARY,
                         update_interval=600
-                        ),
+                    ),
                 ]
             ),
             widget.Sep(
                 foreground=INACTIVE,
-                linewidth=2,
-                padding=5,
-                ),
-            # Updates
+                linewidth=sep_width,
+                padding=sep_padding,
+            ),
             widget.CheckUpdates(
                 colour_have_updates=PRIMARY,
                 colour_no_updates=PRIMARY,
@@ -78,29 +77,14 @@ screens = [
                 distro='Arch_Sup',
                 initial_text='Checking updates...',
                 foreground=PRIMARY,
-                no_update_string='No updates',
+                no_update_string='Updated',
                 update_interval=3600,
-                ),
+            ),
             widget.Sep(
                 foreground=INACTIVE,
-                linewidth=2,
-                padding=5,
-                ),
-            # Battery
-            widget.Battery(
-                battery=0,
-                format='{char} {percent:2.0%} {hour:d}:{min:02d} {watt:.2f} W',
-                foreground=PRIMARY,
-                low_percentage=0.1,
-                low_foregound='FF0000',
-                update_interval=60,
-                ),
-            widget.Sep(
-                foreground=INACTIVE,
-                linewidth=2,
-                padding=5,
-                ),
-            # Network
+                linewidth=sep_width,
+                padding=sep_padding,
+            ),
             widget.WidgetBox(
                 button_location='left',
                 close_button_location='right',
@@ -108,31 +92,34 @@ screens = [
                 text_closed='[Network]',
                 text_open='[Network]',
                 widgets=[
-                    # Network
                     widget.Net(
                         format='{down} ↓↑ {up}',
                         foreground=PRIMARY,
                         update_interval=5,
                         ),
-                    widget.TextBox(
-                        foreground=PRIMARY,
-                        fmt = '@'
-                        ),
-                    # wlan
                     widget.Wlan(
                         foreground=PRIMARY,
-                        format='{essid} ({percent:2.0%})',
+                        format=' @{essid} ({percent:2.0%})',
                         interface='wlp1s0',
                         update_interval=60,
-                        ),
+                    ),
+                    widget.GenPollText(
+                        func=network_ip,
+                        foreground=PRIMARY,
+                        update_interval=600,
+                    ),
+                    widget.GenPollText(
+                        func=network_interface,
+                        foreground=PRIMARY,
+                        update_interval=600,
+                    ),
                 ]
             ),
             widget.Sep(
                 foreground=INACTIVE,
-                linewidth=2,
-                padding=5,
-                ),
-            # RESOURCES
+                linewidth=sep_width,
+                padding=sep_padding,
+            ),
             widget.WidgetBox(
                 button_location='left',
                 close_button_location='right',
@@ -140,54 +127,58 @@ screens = [
                 text_closed='[Resources]',
                 text_open='[Resources]',
                 widgets=[
-                    # Disk Free
+                    widget.WidgetBox(
+                        button_location='left',
+                        close_button_location='right',
+                        foreground=PRIMARY,
+                        text_closed='[Battery]',
+                        text_open='[Battery]',
+                        widgets=[
+                            widget.Battery(
+                                battery=0,
+                                format='BAT: {char}{percent:2.0%} {watt:.2f}W {hour:d}h{min:02d}m left',
+                                foreground=PRIMARY,
+                                low_percentage=0.1,
+                                low_foregound='FF0000',
+                                update_interval=60,
+                            ),
+                        ]
+                    ),
                     widget.DF(
                         foreground=PRIMARY,
-                        format='{p} {uf}{m}',
+                        format='MEM: {p} {uf}{m}',
                         visible_on_warn=False,
-                        ),
-                    widget.Sep(
-                        foreground=INACTIVE,
-                        ),
+                    ),
                     widget.CPU(
                         format='CPU: {load_percent}%',
                         foreground=PRIMARY,
                         mouse_callbacks={'Button1': open_sysmonitor},
                         update_interval=10
-                        ),
-                    widget.Sep(
-                        foreground=INACTIVE,
-                        ),
-                    # RAM
+                    ),
                     widget.Memory(
                         format='RAM: {MemUsed:.0f}{mm}',
                         foreground=PRIMARY,
                         mouse_callbacks={'Button1': open_sysmonitor},
                         update_interval=10
-                        ),
-                    widget.Sep(
-                        foreground=INACTIVE,
-                        ),
-                    # Thermal
+                    ),
                     widget.ThermalSensor(
-                        format='{temp:.1f}{unit}',
+                        format='{temp:.1f}{unit}', # TODO
                         foreground=PRIMARY,
                         threshold=60,
                         update_interval=30,
-                        ),
+                    ),
                 ]
             ),
             widget.Sep(
                 foreground=INACTIVE,
-                linewidth=2,
-                padding=5,
-                ),
-            # Time & Date
+                linewidth=sep_width,
+                padding=sep_padding,
+            ),
             widget.Clock(
                 format='%I:%M %p',
                 foreground=PRIMARY,
                 update_interval=60,
-                ),
+            ),
             ],
             24,
             border_width=[0, 0, 0, 0],

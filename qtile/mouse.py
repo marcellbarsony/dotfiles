@@ -5,6 +5,7 @@ from libqtile import qtile
 from libqtile.lazy import lazy
 from variables import *
 
+
 # Mouse callbacks
 def open_sysmonitor():
     qtile.cmd_spawn('kitty -e neofetch')

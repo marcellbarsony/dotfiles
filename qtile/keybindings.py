@@ -3,7 +3,7 @@
 from libqtile.config import Key
 from libqtile.lazy import lazy
 from variables import *
-from functions import *
+from func_keys import *
 
 
 keys = [
