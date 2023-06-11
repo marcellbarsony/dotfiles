@@ -184,17 +184,6 @@ ls.add_snippets("python", {
   ),
   s( -- with
     "with",
-    fmt("with {} as {}:\n" ..
-      "\t{}{}", {
-      i(1, "expression"),
-      i(2, "target"),
-      i(3, "pass"),
-      i(0),
-      }
-    )
-  ),
-  s( -- with-context
-    "with-context",
     fmt('with open({}, "{}") as {}:\n' ..
       '\t{} = {}.{}(){}', {
       i(1, "file"),

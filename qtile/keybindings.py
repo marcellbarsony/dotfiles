@@ -4,9 +4,15 @@ from libqtile.config import Key
 from libqtile.lazy import lazy
 from variables import *
 from func_keys import *
+from func_audio import audio_increase, audio_decrease, audio_mute
 
 
 keys = [
+    # Audio [TEST]
+    Key([mod], "XF86AudioRaiseVolume", lazy.run(audio_increase), desc="Volume +10%"),
+    Key([mod], "XF86AudioLowerVolume", lazy.run(audio_decrease), desc="Volume -10%"),
+    Key([mod], "XF86AudioMute", lazy.run(audio_mute), desc="Toggle audio"),
+
     # Qtile actions
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload config"),
