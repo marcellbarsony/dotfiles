@@ -8,7 +8,7 @@ from func_screens import window_name
 from func_audio import audio_increase, audio_decrease, audio_mute
 from func_backlight import backlight_increase, backlight_decrease
 from func_network import network_ip, network_interface
-from variables import font_size, sep_padding, sep_width
+from variables import font_size, sep_padding, sep_width, widget_padding
 
 
 widget_defaults = dict(
@@ -18,7 +18,9 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
+
 screens = [
+
     # SCREEN1
     Screen(
         top=bar.Bar([
@@ -32,9 +34,9 @@ screens = [
                 fontshadow=None,
                 fontsize=font_size,
                 hide_unused=False,
-                highlight_color=['000000', '4A2996'],
+                highlight_color=[highlight_color_1, '4A2996'],
                 highlight_method='line',
-                inactive=INACTIVE,
+                inactive=inactive,
                 margin_x=0,
                 margin_y=5,
                 padding_x=5,
@@ -57,10 +59,9 @@ screens = [
                 scroll_repeat=True,
                 scroll_step=1,
             ),
-
+            ### Spacer ###
             widget.Spacer(),
-
-            ### Additional ###
+            ### Settings ###
             widget.WidgetBox(
                 button_location='left',
                 close_button_location='right',
@@ -69,29 +70,6 @@ screens = [
                 text_closed='󰄽',
                 text_open='󰄾',
                 widgets=[
-                    ### UPDATES ###
-                    widget.TextBox(
-                        foreground=PRIMARY,
-                        fontsize=20,
-                        padding=3,
-                        margin=15,
-                        fmt='',
-                    ),
-                    widget.CheckUpdates(
-                        colour_have_updates=PRIMARY,
-                        colour_no_updates=PRIMARY,
-                        display_format='{updates}',
-                        distro='Arch_Sup',
-                        initial_text='Checking updates...',
-                        foreground=PRIMARY,
-                        no_update_string='',
-                        update_interval=3600,
-                    ),
-                    widget.Sep(
-                        foreground=INACTIVE,
-                        linewidth=sep_width,
-                        padding=sep_padding,
-                    ),
                     ### Weather ###
                     widget.OpenWeather(
                         location='Budapest',
@@ -100,9 +78,55 @@ screens = [
                         update_interval=600
                     ),
                     widget.Sep(
-                        foreground=INACTIVE,
+                        foreground=inactive,
                         linewidth=sep_width,
                         padding=sep_padding,
+                    ),
+                    ### XBacklight ###
+                    widget.WidgetBox(
+                        button_location='left',
+                        close_button_location='right',
+                        foreground=PRIMARY,
+                        text_closed='[Network]',
+                        text_open='[Network]',
+                        widgets=[
+                            widget.TextBox(
+                                fmt='󱫋',
+                                fontsize=24,
+                                foreground=PRIMARY,
+                                padding=sep_padding,
+                            ),
+                            widget.GenPollText(
+                                func=network_interface,
+                                foreground=PRIMARY,
+                                update_interval=600,
+                            ),
+                            ### IP ###
+                            widget.TextBox(
+                                fmt='󰩟',
+                                fontsize=24,
+                                foreground=PRIMARY,
+                                padding=sep_padding,
+                            ),
+                            widget.GenPollText(
+                                func=network_ip,
+                                foreground=PRIMARY,
+                                update_interval=600,
+                            ),
+                            ### Wlan ###
+                            widget.TextBox(
+                                fmt='󰖩',
+                                fontsize=24,
+                                foreground=PRIMARY,
+                                padding=sep_padding,
+                            ),
+                            widget.Wlan(
+                                foreground=PRIMARY,
+                                format='{essid} ({percent:2.0%})',
+                                interface='wlp1s0',
+                                update_interval=60,
+                            ),
+                        ]
                     ),
                     ### XBacklight ###
                     widget.WidgetBox(
@@ -114,12 +138,12 @@ screens = [
                         widgets=[
                             widget.TextBox(
                                 fmt='  ',
-                                fontsize=20,
+                                fontsize=22,
                                 foreground=PRIMARY,
                                 mouse_callbacks={'Button1': backlight_increase},
                             ),
                             widget.TextBox(
-                                fontsize=20,
+                                fontsize=22,
                                 foreground=PRIMARY,
                                 fmt='  ',
                                 mouse_callbacks={'Button1': backlight_decrease},
@@ -136,54 +160,77 @@ screens = [
                         widgets=[
                             widget.TextBox(
                                 fmt='  ',
-                                fontsize=20,
+                                fontsize=22,
                                 foreground=PRIMARY,
                                 mouse_callbacks={'Button1': audio_mute},
                             ),
                             widget.TextBox(
-                                fmt='  ',
-                                fontsize=20,
-                                foreground=PRIMARY,
-                                mouse_callbacks={'Button1': audio_decrease},
-                            ),
-                            widget.TextBox(
                                 fmt='  ',
-                                fontsize=20,
+                                fontsize=22,
                                 foreground=PRIMARY,
                                 mouse_callbacks={'Button1': audio_increase},
+                            ),
+                            widget.TextBox(
+                                fmt='  ',
+                                fontsize=22,
+                                foreground=PRIMARY,
+                                mouse_callbacks={'Button1': audio_decrease},
                             ),
                         ]
                     ),
                     widget.Sep(
-                        foreground=INACTIVE,
+                        foreground=inactive,
                         linewidth=sep_width,
                         padding=sep_padding,
                     ),
                 ]
             ),
             widget.Sep(
-                foreground=INACTIVE,
+                foreground=inactive,
+                linewidth=sep_width,
+                padding=sep_padding,
+            ),
+            ### UPDATES ###
+            widget.TextBox(
+                foreground=PRIMARY,
+                fontsize=22,
+                padding=widget_padding,
+                margin=15,
+                fmt='',
+            ),
+            widget.CheckUpdates(
+                colour_have_updates=PRIMARY,
+                colour_no_updates=PRIMARY,
+                display_format='{updates}',
+                distro='Arch_Sup',
+                initial_text='Checking updates...',
+                foreground=PRIMARY,
+                no_update_string='',
+                update_interval=3600,
+            ),
+            widget.Sep(
+                foreground=inactive,
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
             ### NETWORK ###
             widget.Net(
-                format='{down} ↓↑ {up}',
+                format='{down}  {up}',
                 foreground=PRIMARY,
                 #prefix='M',
                 update_interval=5,
                 ),
             widget.Sep(
-                foreground=INACTIVE,
+                foreground=inactive,
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
             ### CPU ###
             widget.TextBox(
                 foreground=PRIMARY,
-                fontsize=23,
+                fontsize=24,
                 fmt='',
-                padding=3,
+                padding=widget_padding,
             ),
             widget.CPU(
                 format='{load_percent}%',
@@ -192,16 +239,16 @@ screens = [
                 update_interval=10,
             ),
             widget.Sep(
-                foreground=INACTIVE,
+                foreground=inactive,
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
             ### RAM ###
             widget.TextBox(
                 foreground=PRIMARY,
-                fontsize=23,
+                fontsize=24,
                 fmt='',
-                padding=0,
+                padding=widget_padding,
             ),
             widget.Memory(
                 format='{MemUsed:.0f}{mm}',
@@ -210,16 +257,16 @@ screens = [
                 update_interval=10
             ),
             widget.Sep(
-                foreground=INACTIVE,
+                foreground=inactive,
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
             ### BATTERY ###
             widget.TextBox(
                 foreground=PRIMARY,
-                fontsize=23,
-                fmt='',
-                padding=3,
+                fontsize=18,
+                fmt='󱐋',
+                padding=widget_padding,
             ),
             widget.Battery(
                 battery=0,
@@ -228,29 +275,32 @@ screens = [
                 format='{percent:2.0%}',
                 foreground=PRIMARY,
                 low_percentage=0.1,
-                low_foregound='FF0000',
+                low_foregound=battery_low,
                 update_interval=60,
+                padding=widget_padding,
             ),
             widget.Sep(
-                foreground=INACTIVE,
+                foreground=inactive,
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
             ### CLOCK ###
             widget.Clock(
-                format='%b-%d %I:%M %p',
+                format='%I:%M %p',
                 foreground=PRIMARY,
                 update_interval=60,
+                padding=widget_padding,
             ),
             ],
             26,
             border_width=[0, 0, 0, 0],
-            border_color=['000000', '000000', '000000', '000000'],
+            border_color=[border_top, border_right, border_bottom, border_left],
             background='#16161E',
             margin=[3, 3, 0, 3],
             opacity=0.8,
         ),
     ),
+
     # SCREEN2
     Screen(
         top=bar.Bar([
@@ -264,9 +314,9 @@ screens = [
                 fontshadow=None,
                 fontsize=font_size,
                 hide_unused=False,
-                highlight_color=['000000', '4A2996'],
+                highlight_color=[highlight_color_1, '4A2996'],
                 highlight_method='line',
-                inactive=INACTIVE,
+                inactive=inactive,
                 margin_x=0,
                 margin_y=5,
                 padding_x=5,
@@ -289,10 +339,9 @@ screens = [
                 scroll_repeat=True,
                 scroll_step=1,
             ),
-
+            ### Spacer ###
             widget.Spacer(),
-
-            ### Additional ###
+            ### Settings ###
             widget.WidgetBox(
                 button_location='left',
                 close_button_location='right',
@@ -301,29 +350,6 @@ screens = [
                 text_closed='󰄽',
                 text_open='󰄾',
                 widgets=[
-                    ### UPDATES ###
-                    widget.TextBox(
-                        foreground=PRIMARY,
-                        fontsize=20,
-                        padding=3,
-                        margin=15,
-                        fmt='',
-                    ),
-                    widget.CheckUpdates(
-                        colour_have_updates=PRIMARY,
-                        colour_no_updates=PRIMARY,
-                        display_format='{updates}',
-                        distro='Arch_Sup',
-                        initial_text='Checking updates...',
-                        foreground=PRIMARY,
-                        no_update_string='',
-                        update_interval=3600,
-                    ),
-                    widget.Sep(
-                        foreground=INACTIVE,
-                        linewidth=sep_width,
-                        padding=sep_padding,
-                    ),
                     ### Weather ###
                     widget.OpenWeather(
                         location='Budapest',
@@ -332,9 +358,55 @@ screens = [
                         update_interval=600
                     ),
                     widget.Sep(
-                        foreground=INACTIVE,
+                        foreground=inactive,
                         linewidth=sep_width,
                         padding=sep_padding,
+                    ),
+                    ### XBacklight ###
+                    widget.WidgetBox(
+                        button_location='left',
+                        close_button_location='right',
+                        foreground=PRIMARY,
+                        text_closed='[Network]',
+                        text_open='[Network]',
+                        widgets=[
+                            widget.TextBox(
+                                fmt='󱫋',
+                                fontsize=24,
+                                foreground=PRIMARY,
+                                padding=sep_padding,
+                            ),
+                            widget.GenPollText(
+                                func=network_interface,
+                                foreground=PRIMARY,
+                                update_interval=600,
+                            ),
+                            ### IP ###
+                            widget.TextBox(
+                                fmt='󰩟',
+                                fontsize=24,
+                                foreground=PRIMARY,
+                                padding=sep_padding,
+                            ),
+                            widget.GenPollText(
+                                func=network_ip,
+                                foreground=PRIMARY,
+                                update_interval=600,
+                            ),
+                            ### Wlan ###
+                            widget.TextBox(
+                                fmt='󰖩',
+                                fontsize=24,
+                                foreground=PRIMARY,
+                                padding=sep_padding,
+                            ),
+                            widget.Wlan(
+                                foreground=PRIMARY,
+                                format='{essid} ({percent:2.0%})',
+                                interface='wlp1s0',
+                                update_interval=60,
+                            ),
+                        ]
                     ),
                     ### XBacklight ###
                     widget.WidgetBox(
@@ -346,12 +418,12 @@ screens = [
                         widgets=[
                             widget.TextBox(
                                 fmt='  ',
-                                fontsize=20,
+                                fontsize=22,
                                 foreground=PRIMARY,
                                 mouse_callbacks={'Button1': backlight_increase},
                             ),
                             widget.TextBox(
-                                fontsize=20,
+                                fontsize=22,
                                 foreground=PRIMARY,
                                 fmt='  ',
                                 mouse_callbacks={'Button1': backlight_decrease},
@@ -368,54 +440,77 @@ screens = [
                         widgets=[
                             widget.TextBox(
                                 fmt='  ',
-                                fontsize=20,
+                                fontsize=22,
                                 foreground=PRIMARY,
                                 mouse_callbacks={'Button1': audio_mute},
                             ),
                             widget.TextBox(
-                                fmt='  ',
-                                fontsize=20,
-                                foreground=PRIMARY,
-                                mouse_callbacks={'Button1': audio_decrease},
-                            ),
-                            widget.TextBox(
                                 fmt='  ',
-                                fontsize=20,
+                                fontsize=22,
                                 foreground=PRIMARY,
                                 mouse_callbacks={'Button1': audio_increase},
+                            ),
+                            widget.TextBox(
+                                fmt='  ',
+                                fontsize=22,
+                                foreground=PRIMARY,
+                                mouse_callbacks={'Button1': audio_decrease},
                             ),
                         ]
                     ),
                     widget.Sep(
-                        foreground=INACTIVE,
+                        foreground=inactive,
                         linewidth=sep_width,
                         padding=sep_padding,
                     ),
                 ]
             ),
             widget.Sep(
-                foreground=INACTIVE,
+                foreground=inactive,
+                linewidth=sep_width,
+                padding=sep_padding,
+            ),
+            ### UPDATES ###
+            widget.TextBox(
+                foreground=PRIMARY,
+                fontsize=22,
+                padding=widget_padding,
+                margin=15,
+                fmt='',
+            ),
+            widget.CheckUpdates(
+                colour_have_updates=PRIMARY,
+                colour_no_updates=PRIMARY,
+                display_format='{updates}',
+                distro='Arch_Sup',
+                initial_text='Checking updates...',
+                foreground=PRIMARY,
+                no_update_string='',
+                update_interval=3600,
+            ),
+            widget.Sep(
+                foreground=inactive,
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
             ### NETWORK ###
             widget.Net(
-                format='{down} ↓↑ {up}',
+                format='{down}  {up}',
                 foreground=PRIMARY,
                 #prefix='M',
                 update_interval=5,
                 ),
             widget.Sep(
-                foreground=INACTIVE,
+                foreground=inactive,
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
             ### CPU ###
             widget.TextBox(
                 foreground=PRIMARY,
-                fontsize=23,
+                fontsize=24,
                 fmt='',
-                padding=3,
+                padding=widget_padding,
             ),
             widget.CPU(
                 format='{load_percent}%',
@@ -424,16 +519,16 @@ screens = [
                 update_interval=10,
             ),
             widget.Sep(
-                foreground=INACTIVE,
+                foreground=inactive,
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
             ### RAM ###
             widget.TextBox(
                 foreground=PRIMARY,
-                fontsize=23,
+                fontsize=24,
                 fmt='',
-                padding=0,
+                padding=widget_padding,
             ),
             widget.Memory(
                 format='{MemUsed:.0f}{mm}',
@@ -442,16 +537,16 @@ screens = [
                 update_interval=10
             ),
             widget.Sep(
-                foreground=INACTIVE,
+                foreground=inactive,
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
             ### BATTERY ###
             widget.TextBox(
                 foreground=PRIMARY,
-                fontsize=23,
-                fmt='',
-                padding=3,
+                fontsize=18,
+                fmt='󱐋',
+                padding=widget_padding,
             ),
             widget.Battery(
                 battery=0,
@@ -460,29 +555,32 @@ screens = [
                 format='{percent:2.0%}',
                 foreground=PRIMARY,
                 low_percentage=0.1,
-                low_foregound='FF0000',
+                low_foregound=battery_low,
                 update_interval=60,
+                padding=widget_padding,
             ),
             widget.Sep(
-                foreground=INACTIVE,
+                foreground=inactive,
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
             ### CLOCK ###
             widget.Clock(
-                format='%b-%d %I:%M %p',
+                format='%I:%M %p',
                 foreground=PRIMARY,
                 update_interval=60,
+                padding=widget_padding,
             ),
             ],
             26,
             border_width=[0, 0, 0, 0],
-            border_color=['000000', '000000', '000000', '000000'],
+            border_color=[border_top, border_right, border_bottom, border_left],
             background='#16161E',
             margin=[3, 3, 0, 3],
             opacity=0.8,
         ),
     ),
+
     # SCREEN3
     Screen(
         top=bar.Bar([
@@ -496,9 +594,9 @@ screens = [
                 fontshadow=None,
                 fontsize=font_size,
                 hide_unused=False,
-                highlight_color=['000000', '4A2996'],
+                highlight_color=[highlight_color_1, '4A2996'],
                 highlight_method='line',
-                inactive=INACTIVE,
+                inactive=inactive,
                 margin_x=0,
                 margin_y=5,
                 padding_x=5,
@@ -521,10 +619,9 @@ screens = [
                 scroll_repeat=True,
                 scroll_step=1,
             ),
-
+            ### Spacer ###
             widget.Spacer(),
-
-            ### Additional ###
+            ### Settings ###
             widget.WidgetBox(
                 button_location='left',
                 close_button_location='right',
@@ -533,29 +630,6 @@ screens = [
                 text_closed='󰄽',
                 text_open='󰄾',
                 widgets=[
-                    ### UPDATES ###
-                    widget.TextBox(
-                        foreground=PRIMARY,
-                        fontsize=20,
-                        padding=3,
-                        margin=15,
-                        fmt='',
-                    ),
-                    widget.CheckUpdates(
-                        colour_have_updates=PRIMARY,
-                        colour_no_updates=PRIMARY,
-                        display_format='{updates}',
-                        distro='Arch_Sup',
-                        initial_text='Checking updates...',
-                        foreground=PRIMARY,
-                        no_update_string='',
-                        update_interval=3600,
-                    ),
-                    widget.Sep(
-                        foreground=INACTIVE,
-                        linewidth=sep_width,
-                        padding=sep_padding,
-                    ),
                     ### Weather ###
                     widget.OpenWeather(
                         location='Budapest',
@@ -564,9 +638,55 @@ screens = [
                         update_interval=600
                     ),
                     widget.Sep(
-                        foreground=INACTIVE,
+                        foreground=inactive,
                         linewidth=sep_width,
                         padding=sep_padding,
+                    ),
+                    ### XBacklight ###
+                    widget.WidgetBox(
+                        button_location='left',
+                        close_button_location='right',
+                        foreground=PRIMARY,
+                        text_closed='[Network]',
+                        text_open='[Network]',
+                        widgets=[
+                            widget.TextBox(
+                                fmt='󱫋',
+                                fontsize=24,
+                                foreground=PRIMARY,
+                                padding=sep_padding,
+                            ),
+                            widget.GenPollText(
+                                func=network_interface,
+                                foreground=PRIMARY,
+                                update_interval=600,
+                            ),
+                            ### IP ###
+                            widget.TextBox(
+                                fmt='󰩟',
+                                fontsize=24,
+                                foreground=PRIMARY,
+                                padding=sep_padding,
+                            ),
+                            widget.GenPollText(
+                                func=network_ip,
+                                foreground=PRIMARY,
+                                update_interval=600,
+                            ),
+                            ### Wlan ###
+                            widget.TextBox(
+                                fmt='󰖩',
+                                fontsize=24,
+                                foreground=PRIMARY,
+                                padding=sep_padding,
+                            ),
+                            widget.Wlan(
+                                foreground=PRIMARY,
+                                format='{essid} ({percent:2.0%})',
+                                interface='wlp1s0',
+                                update_interval=60,
+                            ),
+                        ]
                     ),
                     ### XBacklight ###
                     widget.WidgetBox(
@@ -578,12 +698,12 @@ screens = [
                         widgets=[
                             widget.TextBox(
                                 fmt='  ',
-                                fontsize=20,
+                                fontsize=22,
                                 foreground=PRIMARY,
                                 mouse_callbacks={'Button1': backlight_increase},
                             ),
                             widget.TextBox(
-                                fontsize=20,
+                                fontsize=22,
                                 foreground=PRIMARY,
                                 fmt='  ',
                                 mouse_callbacks={'Button1': backlight_decrease},
@@ -600,54 +720,77 @@ screens = [
                         widgets=[
                             widget.TextBox(
                                 fmt='  ',
-                                fontsize=20,
+                                fontsize=22,
                                 foreground=PRIMARY,
                                 mouse_callbacks={'Button1': audio_mute},
                             ),
                             widget.TextBox(
-                                fmt='  ',
-                                fontsize=20,
-                                foreground=PRIMARY,
-                                mouse_callbacks={'Button1': audio_decrease},
-                            ),
-                            widget.TextBox(
                                 fmt='  ',
-                                fontsize=20,
+                                fontsize=22,
                                 foreground=PRIMARY,
                                 mouse_callbacks={'Button1': audio_increase},
+                            ),
+                            widget.TextBox(
+                                fmt='  ',
+                                fontsize=22,
+                                foreground=PRIMARY,
+                                mouse_callbacks={'Button1': audio_decrease},
                             ),
                         ]
                     ),
                     widget.Sep(
-                        foreground=INACTIVE,
+                        foreground=inactive,
                         linewidth=sep_width,
                         padding=sep_padding,
                     ),
                 ]
             ),
             widget.Sep(
-                foreground=INACTIVE,
+                foreground=inactive,
+                linewidth=sep_width,
+                padding=sep_padding,
+            ),
+            ### UPDATES ###
+            widget.TextBox(
+                foreground=PRIMARY,
+                fontsize=22,
+                padding=widget_padding,
+                margin=15,
+                fmt='',
+            ),
+            widget.CheckUpdates(
+                colour_have_updates=PRIMARY,
+                colour_no_updates=PRIMARY,
+                display_format='{updates}',
+                distro='Arch_Sup',
+                initial_text='Checking updates...',
+                foreground=PRIMARY,
+                no_update_string='',
+                update_interval=3600,
+            ),
+            widget.Sep(
+                foreground=inactive,
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
             ### NETWORK ###
             widget.Net(
-                format='{down} ↓↑ {up}',
+                format='{down}  {up}',
                 foreground=PRIMARY,
                 #prefix='M',
                 update_interval=5,
                 ),
             widget.Sep(
-                foreground=INACTIVE,
+                foreground=inactive,
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
             ### CPU ###
             widget.TextBox(
                 foreground=PRIMARY,
-                fontsize=23,
+                fontsize=24,
                 fmt='',
-                padding=3,
+                padding=widget_padding,
             ),
             widget.CPU(
                 format='{load_percent}%',
@@ -656,16 +799,16 @@ screens = [
                 update_interval=10,
             ),
             widget.Sep(
-                foreground=INACTIVE,
+                foreground=inactive,
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
             ### RAM ###
             widget.TextBox(
                 foreground=PRIMARY,
-                fontsize=23,
+                fontsize=24,
                 fmt='',
-                padding=0,
+                padding=widget_padding,
             ),
             widget.Memory(
                 format='{MemUsed:.0f}{mm}',
@@ -674,16 +817,16 @@ screens = [
                 update_interval=10
             ),
             widget.Sep(
-                foreground=INACTIVE,
+                foreground=inactive,
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
             ### BATTERY ###
             widget.TextBox(
                 foreground=PRIMARY,
-                fontsize=23,
-                fmt='',
-                padding=3,
+                fontsize=18,
+                fmt='󱐋',
+                padding=widget_padding,
             ),
             widget.Battery(
                 battery=0,
@@ -692,27 +835,30 @@ screens = [
                 format='{percent:2.0%}',
                 foreground=PRIMARY,
                 low_percentage=0.1,
-                low_foregound='FF0000',
+                low_foregound=battery_low,
                 update_interval=60,
+                padding=widget_padding,
             ),
             widget.Sep(
-                foreground=INACTIVE,
+                foreground=inactive,
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
             ### CLOCK ###
             widget.Clock(
-                format='%b-%d %I:%M %p',
+                format='%I:%M %p',
                 foreground=PRIMARY,
                 update_interval=60,
+                padding=widget_padding,
             ),
             ],
             26,
             border_width=[0, 0, 0, 0],
-            border_color=['000000', '000000', '000000', '000000'],
+            border_color=[border_top, border_right, border_bottom, border_left],
             background='#16161E',
             margin=[3, 3, 0, 3],
             opacity=0.8,
         ),
     ),
+
 ]

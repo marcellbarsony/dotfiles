@@ -8,7 +8,7 @@ from variables import *
 
 # Mouse callbacks
 def open_sysmonitor():
-    qtile.cmd_spawn('kitty -e neofetch')
+    qtile.cmd_spawn('kitty --class neofetch --name neofetch sh -c "neofetch; exec bash"')
 
 # Drag floating layouts
 mouse = [
