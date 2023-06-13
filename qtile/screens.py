@@ -75,8 +75,8 @@ screens = [
                         button_location='left',
                         close_button_location='right',
                         foreground=PRIMARY,
-                        text_closed='[ Weather]',
-                        text_open='[ Weather]',
+                        text_closed='[  Weather ]',
+                        text_open='[  Weather ]',
                         widgets=[
                             widget.OpenWeather(
                                 location='Budapest',
@@ -96,8 +96,8 @@ screens = [
                         button_location='left',
                         close_button_location='right',
                         foreground=PRIMARY,
-                        text_closed='[ Network]',
-                        text_open='[ Network]',
+                        text_closed='[  Network ]',
+                        text_open='[  Network ]',
                         widgets=[
                             widget.Sep(
                                 foreground=inactive,
@@ -152,9 +152,14 @@ screens = [
                         button_location='left',
                         close_button_location='right',
                         foreground=PRIMARY,
-                        text_closed='[󰌵 Xlight]',
-                        text_open='[󰌵 Xlight]',
+                        text_closed='[ 󰌵 Xlight ]',
+                        text_open='[ 󰌵 Xlight ]',
                         widgets=[
+                            widget.Sep(
+                                foreground=inactive,
+                                linewidth=sep_width,
+                                padding=sep_padding,
+                            ),
                             widget.TextBox(
                                 fmt='  ',
                                 fontsize=22,
@@ -167,6 +172,11 @@ screens = [
                                 fmt='  ',
                                 mouse_callbacks={'Button1': backlight_decrease},
                             ),
+                            widget.Sep(
+                                foreground=inactive,
+                                linewidth=sep_width,
+                                padding=sep_padding,
+                            ),
                         ]
                     ),
                     ### Audio ###
@@ -174,9 +184,14 @@ screens = [
                         button_location='left',
                         close_button_location='right',
                         foreground=PRIMARY,
-                        text_closed='[ Audio]',
-                        text_open='[ Audio]',
+                        text_closed='[  Audio ]',
+                        text_open='[  Audio ]',
                         widgets=[
+                            widget.Sep(
+                                foreground=inactive,
+                                linewidth=sep_width,
+                                padding=sep_padding,
+                            ),
                             widget.TextBox(
                                 fmt='  ',
                                 fontsize=22,
@@ -195,6 +210,11 @@ screens = [
                                 foreground=PRIMARY,
                                 mouse_callbacks={'Button1': audio_decrease},
                             ),
+                            widget.Sep(
+                                foreground=inactive,
+                                linewidth=sep_width,
+                                padding=sep_padding,
+                            ),
                         ]
                     ),
                     widget.Sep(
@@ -209,7 +229,7 @@ screens = [
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
-            ### UPDATES ###
+            ### PACKAGES ###
             widget.TextBox(
                 foreground=PRIMARY,
                 fontsize=22,
@@ -224,7 +244,7 @@ screens = [
                 distro='Arch_Sup',
                 initial_text='Checking updates...',
                 foreground=PRIMARY,
-                no_update_string='',
+                no_update_string='0',
                 update_interval=3600,
             ),
             widget.Sep(
@@ -319,6 +339,5 @@ screens = [
             opacity=0.8,
         ),
     ),
-
 
 ]

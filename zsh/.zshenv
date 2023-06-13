@@ -7,6 +7,7 @@ export WM="qtile"
 
 # Language
 export LANG=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
 
 # $PATH
 # https://wiki.archlinux.org/title/zsh#Configuring_$PATH
@@ -69,8 +70,8 @@ export STARSHIP_CACHE=~/.config/starship
 # SSH
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
 
-# Fix prompt
-export LC_CTYPE=en_US.UTF-8
+# Sudo
+export SUDO_PROMPT="$(tput bold setaf 4)[sudo]$(tput sgr0) password for %p: "
 
 # Disable files
 export LESSHISTFILE=-
