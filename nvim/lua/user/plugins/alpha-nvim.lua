@@ -36,14 +36,14 @@ dashboard.section.header.val = {
 
 -- Menu
 dashboard.section.buttons.val = {
-    dashboard.button( "fn", "  > File [New]" , ":ene <BAR> startinsert <CR>"),
-    dashboard.button( "ff", "  > File [Find]", ":cd $HOME/.local | Telescope find_files<CR>"),
+    dashboard.button( "fn", "󰈔  > File [New]" , ":ene <BAR> startinsert <CR>"),
+    dashboard.button( "ff", "󰍉  > File [Find]", ":cd $HOME/.local | Telescope find_files<CR>"),
     dashboard.button( "h", "✚  > Health"   , ":checkhealth<CR>"),
-    dashboard.button( "l", "⚙  > Lazy"     , ":Lazy<CR>"),
-    dashboard.button( "m", "⚙  > Mason"    , ":Mason<CR>"),
-    dashboard.button( "n", "n  > News"     , ":help news<CR>"),
-    dashboard.button( "r", "  > Recent"   , ":Telescope oldfiles<CR>"),
-    dashboard.button( "q", "  > Quit"     , ":qa<CR>"),
+    dashboard.button( "l", "󱎦  > Lazy"     , ":Lazy<CR>"),
+    dashboard.button( "m", "󱎥  > Mason"    , ":Mason<CR>"),
+    dashboard.button( "n", "󱀁  > News"     , ":help news<CR>"),
+    dashboard.button( "r", "  > Recent"   , ":Telescope oldfiles<CR>"),
+    dashboard.button( "q", "  > Quit"     , ":qa<CR>"),
 }
 
 -- Send config to alpha

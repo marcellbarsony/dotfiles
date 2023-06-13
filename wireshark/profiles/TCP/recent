@@ -79,24 +79,24 @@ gui.geometry_main_upper_pane: 1283
 
 # Main window middle pane size.
 # Decimal number.
-gui.geometry_main_lower_pane: 447
+gui.geometry_main_lower_pane: 446
 
 # Packet list column pixel widths.
 # Each pair of strings consists of a column format and its pixel width.
 column.width:
-        %m, 60,
+        %m, 67,
         %t, 92:L,
         %Tt, 92,
-        %s, 99:L,
-        %d, 135:L,
+        %s, 77:L,
+        %d, 77:L,
         "%Cus:tcp.srcport", 0,
         "%Cus:tcp.dstport", 0,
         %L, 61,
         %p, 69:C,
-        "%Cus:tcp.len", 51:R,
+        "%Cus:tcp.len", 43:R,
         "%Cus:tcp.seq", 51,
         "%Cus:tcp.ack", 51,
-        %i, 544:L
+        %i, 599:L
 
 # Open conversation dialog tabs.
 # List of conversation names, e.g. "TCP", "IPv6".

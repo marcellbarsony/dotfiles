@@ -2,7 +2,6 @@
 -- https://github.com/akinsho/bufferline.nvim
 -- :h bufferline-configuration
 
-
 require('bufferline').setup {
   options = {
     numbers = "none",
@@ -20,7 +19,7 @@ require('bufferline').setup {
     indicator = "│",
     close_icon = "",
     --close_icon = '',
-    buffer_close_icon = "",
+    buffer_close_icon = "",
     modified_icon = "●",
     left_trunc_marker = "",
     right_trunc_marker = "",

@@ -15,6 +15,4 @@ run kitty
 
 # Displays & Wallapper
 python /home/marci/.src/arch-tools/xtools/displays.py
-#python /home/marci/.src/arch-tools/xtools/wallpaper.py
-python /home/marci/.src/arch-tools/xtools/setwallpaper.py
-xwallpaper --output eDP-1 --stretch $HOME/Pictures/4k/cyberpunk/4k_cyberpunk_city_2.jpg
+python /home/marci/.src/arch-tools/xtools/wallpaper.py
