@@ -93,94 +93,68 @@ $character"""
 
 add_newline = true
 
-[line_break]
-#disabled = true
-
-[cmd_duration]
-min_time = 2_000
-disabled = false
-
-[git_branch]
-always_show_remote = true
-symbol = " "
-
-# Nerd fonts
-# https://starship.rs/presets/nerd-font.html
-
-[fill]
-symbol = " "
-
 [aws]
-symbol = "  "
+symbol = " "
+format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
 
 [buf]
 symbol = " "
 
 [c]
 symbol = " "
+format = '\[[$symbol($version(-$name))]($style)\]'
+
+[cmd_duration]
+min_time = 2_000
+disabled = false
+format = '\[[⏱ $duration]($style)\]'
+
+[cmake]
+symbol = "󰔶 "
+format = '\[[$symbol($version)]($style)\]'
 
 [conda]
 symbol = " "
-
-[dart]
-symbol = " "
+format = '\[[$symbol$environment]($style)\]'
 
 [directory]
-read_only = " 󰌾"
+read_only = " "
 
 [docker_context]
-symbol = " "
+symbol = "󰡨 "
 
-[elixir]
-symbol = " "
+[dotnet]
+symbol = " "
+format = '\[[$symbol($version)(🎯 $tfm)]($style)\]'
 
-[elm]
-symbol = " "
+[fill]
+symbol = " "
 
-[fossil_branch]
+[git_branch]
+always_show_remote = true
 symbol = " "
+format = '\[[$symbol$branch]($style)\] '
 
 [golang]
 symbol = " "
 
-[guix_shell]
-symbol = " "
-
-[haskell]
-symbol = " "
-
-[haxe]
-symbol = "⌘ "
-
-[hg_branch]
-symbol = " "
-
 [hostname]
 ssh_symbol = " "
 
-[java]
-symbol = " "
-
-[julia]
-symbol = " "
+[line_break]
+disabled = false
 
 [lua]
 symbol = " "
+format = '\[[$symbol($version)]($style)\]'
 
 [memory_usage]
 symbol = "󰍛 "
-
-[meson]
-symbol = "󰔷 "
-
-[nim]
-symbol = "󰆥 "
-
-[nix_shell]
-symbol = " "
+format = '\[$symbol[$ram( | $swap)]($style)\]'
 
 [nodejs]
 symbol = " "
+format = '\[[$symbol($version)]($style)\]'
 
 [os.symbols]
 Alpaquita = " "
@@ -223,23 +197,20 @@ Ubuntu = " "
 Unknown = " "
 Windows = "󰍲 "
 
+[os]
+format = '\[[$symbol]($style)\]'
+
 [package]
 symbol = "󰏗 "
+format = '\[[$symbol$version]($style)\]'
 
 [python]
 symbol = " "
-
-[rlang]
-symbol = "󰟔 "
-
-[ruby]
-symbol = " "
+format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
 
 [rust]
 symbol = " "
+format = '\[[$symbol($version)]($style)\]'
 
-[scala]
-symbol = " "
-
-[spack]
-symbol = "🅢 "
+[sudo]
+format = '\[[as $symbol]($style)\]'

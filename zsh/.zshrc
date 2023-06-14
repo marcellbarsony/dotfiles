@@ -42,6 +42,7 @@ HISTFILE=~/.config/zsh/history
 # Prompt (Starship)
 eval "$(starship init zsh)"
 
+
 # VI mode
 bindkey -v
 # Conflicts with Autocomplete
@@ -64,12 +65,12 @@ function zle-keymap-select {
     echo -ne '\e[3 q'
   fi
 }
-
 zle -N zle-keymap-select
-zle -N zle-line-init
+
 zle-line-init() {
     echo -ne "\e[3 q"
 }
+zle -N zle-line-init
 
 preexec() {
   echo -ne '\e[3 q'

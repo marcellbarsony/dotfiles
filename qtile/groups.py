@@ -20,8 +20,8 @@ for i in groups:
     )
 
 # Groups [named]
-#group_names = ' 1 2 3 4 5'.split()
-#group_names = ' A B C D E'.split()
+#group_names = ' 一 二 三 四 五 六 七 八 九 十'.split()
+##group_names = ' A B C D E'.split()
 #groups = [Group(name, layout='max') for name in group_names]
 #for i, name in enumerate(group_names):
 #    indx = str(i + 1)

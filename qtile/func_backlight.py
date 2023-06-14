@@ -5,5 +5,5 @@ def backlight_increase():
     subprocess.run(cmd, shell=True, stdout=subprocess.PIPE, text=True)
 
 def backlight_decrease():
-    cmd = f'brightnessctl --class=backlight set +10%'
+    cmd = f'brightnessctl --class=backlight set 10%-'
     subprocess.run(cmd, shell=True, stdout=subprocess.PIPE, text=True)

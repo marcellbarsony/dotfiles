@@ -229,29 +229,6 @@ screens = [
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
-            ### PACKAGES ###
-            widget.TextBox(
-                foreground=PRIMARY,
-                fontsize=22,
-                padding=widget_padding,
-                margin=15,
-                fmt='',
-            ),
-            widget.CheckUpdates(
-                colour_have_updates=PRIMARY,
-                colour_no_updates=PRIMARY,
-                display_format='{updates}',
-                distro='Arch_Sup',
-                initial_text='Checking updates...',
-                foreground=PRIMARY,
-                no_update_string='0',
-                update_interval=3600,
-            ),
-            widget.Sep(
-                foreground=inactive,
-                linewidth=sep_width,
-                padding=sep_padding,
-            ),
             ### NETWORK ###
             widget.Net(
                 format='{down}  {up}',
@@ -294,6 +271,29 @@ screens = [
                 foreground=PRIMARY,
                 mouse_callbacks={'Button1': open_sysmonitor},
                 update_interval=10
+            ),
+            widget.Sep(
+                foreground=inactive,
+                linewidth=sep_width,
+                padding=sep_padding,
+            ),
+            ### PACKAGES ###
+            widget.TextBox(
+                foreground=PRIMARY,
+                fontsize=22,
+                padding=widget_padding,
+                margin=15,
+                fmt='',
+            ),
+            widget.CheckUpdates(
+                colour_have_updates=PRIMARY,
+                colour_no_updates=PRIMARY,
+                display_format='{updates}',
+                distro='Arch_Sup',
+                initial_text='Checking updates...',
+                foreground=PRIMARY,
+                no_update_string='0',
+                update_interval=3600,
             ),
             widget.Sep(
                 foreground=inactive,
