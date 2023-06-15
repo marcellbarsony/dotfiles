@@ -56,5 +56,8 @@ require('user.plugins.luasnip')
 -- Statusline
 require('user.plugins.lualine')
 
+-- TypeScript
+require('user.plugins.tsserver')
+
 -- TODO
 --require('user.plugins.null-ls')

@@ -249,10 +249,17 @@ screens = [
                 padding=widget_padding,
             ),
             widget.CPU(
-                format='{load_percent}%',
+                format='{load_percent}% ',
                 foreground=PRIMARY,
                 mouse_callbacks={'Button1': open_sysmonitor},
                 update_interval=10,
+            ),
+            widget.ThermalSensor(
+                foreground=PRIMARY,
+                format='{temp:.1f}{unit}',
+                tag_sensor='CPU',
+                threshold=80,
+                update_interval=30,
             ),
             widget.Sep(
                 foreground=inactive,
@@ -301,22 +308,18 @@ screens = [
                 padding=sep_padding,
             ),
             ### BATTERY ###
-            widget.TextBox(
-                foreground=PRIMARY,
-                fontsize=18,
-                fmt='󱐋',
-                padding=widget_padding,
-            ),
             widget.Battery(
                 battery=0,
-                charge_char='',
-                discharge_char='Discharge',
-                format='{percent:2.0%}',
+                charge_char='󰚥',
+                discharge_char='󱐋',
+                format='{char} {percent:2.0%}',
                 foreground=PRIMARY,
+                full_char = '󰁹',
                 low_percentage=0.1,
                 low_foregound=battery_low,
                 update_interval=60,
                 padding=widget_padding,
+                show_short_text=False,
             ),
             widget.Sep(
                 foreground=inactive,

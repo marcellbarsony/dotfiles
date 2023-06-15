@@ -19,10 +19,10 @@ recent.display_filter: tcp.flags.syn == 0
 
 # Main window geometry.
 # Decimal numbers.
-gui.geometry_main_x: 5
+gui.geometry_main_x: 1925
 gui.geometry_main_y: 34
 gui.geometry_main_width: 1910
-gui.geometry_main_height: 1161
+gui.geometry_main_height: 1041
 
 # Main window maximized.
 # TRUE or FALSE (case-insensitive).
