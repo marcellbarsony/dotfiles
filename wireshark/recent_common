@@ -6,23 +6,19 @@
 
 ######## Recent capture files (latest last), cannot be altered through command line ########
 
-recent.capture_file: /home/marci/Downloads/TCP Handshake_ChrisGreer.pcapng
-recent.capture_file: /home/marci/Downloads/TCP Retrans and Seq Analysis.pcap
 
 ######## Recent capture filters (latest last), cannot be altered through command line ########
 
 
 ######## Recent display filters (latest last), cannot be altered through command line ########
 
-recent.display_filter: tcp.flags.syn == 1
-recent.display_filter: tcp.flags.syn == 0
 
 # Main window geometry.
 # Decimal numbers.
 gui.geometry_main_x: 1925
-gui.geometry_main_y: 34
+gui.geometry_main_y: 31
 gui.geometry_main_width: 1910
-gui.geometry_main_height: 1041
+gui.geometry_main_height: 1044
 
 # Main window maximized.
 # TRUE or FALSE (case-insensitive).

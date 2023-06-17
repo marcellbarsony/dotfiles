@@ -52,6 +52,9 @@ VirtualBox/
 # Wireplumber
 wireplumber/
 
+# Wireshark
+wireshark/recent_common
+
 # XDG
 user-dirs.dirs
 user-dirs.locale

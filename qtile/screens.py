@@ -234,7 +234,7 @@ screens = [
                 format='{down}  {up}',
                 foreground=PRIMARY,
                 #prefix='M',
-                update_interval=5,
+                update_interval=10,
                 ),
             widget.Sep(
                 foreground=inactive,
@@ -337,9 +337,9 @@ screens = [
             26,
             border_width=[0, 0, 0, 0],
             border_color=[border_top, border_right, border_bottom, border_left],
-            background='#16161E',
-            margin=[3, 3, 0, 3],
-            opacity=0.8,
+            background='#000000',
+            margin=[0, 0, 0, 0],
+            opacity=0.9,
         ),
     ),
 
@@ -556,7 +556,7 @@ screens = [
                 format='{down}  {up}',
                 foreground=PRIMARY,
                 #prefix='M',
-                update_interval=5,
+                update_interval=10,
                 ),
             widget.Sep(
                 foreground=inactive,
@@ -659,10 +659,9 @@ screens = [
             26,
             border_width=[0, 0, 0, 0],
             border_color=[border_top, border_right, border_bottom, border_left],
-            background='#16161E',
-            margin=[3, 3, 0, 3],
-            opacity=0.8,
+            background='#000000',
+            margin=[0, 0, 0, 0],
+            opacity=0.9,
         ),
     ),
-
 ]
