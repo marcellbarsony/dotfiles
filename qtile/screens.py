@@ -34,7 +34,7 @@ screens = [
                 fontshadow=None,
                 fontsize=font_size,
                 hide_unused=False,
-                highlight_color=[highlight_color_1, '4A2996'],
+                highlight_color=[highlight_color_1, INACTIVE],
                 highlight_method='line',
                 inactive=inactive,
                 margin_x=0,
@@ -290,6 +290,7 @@ screens = [
                 fontsize=22,
                 padding=widget_padding,
                 margin=15,
+                mouse_callbacks={'Button1': open_pacman},
                 fmt='',
             ),
             widget.CheckUpdates(

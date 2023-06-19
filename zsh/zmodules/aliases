@@ -11,8 +11,6 @@ alias exa='exa -lahB --all --color-scale'
 # Folders
 alias home='clear && cd $HOME && l'
 alias cfg='clear && cd $HOME/.config && l'
-alias nc='cd $HOME/.config/nvim && nvim init.lua'
-alias np='cd $HOME/.config/nvim/lua/user && nvim'
 
 # Grep
 alias grep='grep --color=auto'
