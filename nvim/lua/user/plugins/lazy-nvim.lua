@@ -98,9 +98,6 @@ require("lazy").setup({
   -- Null-ls
   'jose-elias-alvarez/null-ls.nvim',
 
-  -- Python venv
-  'HallerPatrick/py_lsp.nvim',
-
   -- Rust
   'simrat39/rust-tools.nvim',
 

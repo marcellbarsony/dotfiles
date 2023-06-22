@@ -75,7 +75,7 @@ gui.allow_hover_selection: TRUE
 
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 461
+gui.geometry_main_upper_pane: 601
 
 # Main window middle pane size.
 # Decimal number.

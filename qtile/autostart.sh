@@ -14,5 +14,5 @@ picom -b &
 run kitty
 
 # Displays & Wallapper
-python /home/marci/.local/bin/xdisplay.py
+#python /home/marci/.local/bin/xdisplay.py
 python /home/marci/.local/bin/xwall.py -r

@@ -37,7 +37,6 @@ require('user.plugins.mason-nvim-dap')
 -- LSP tools
 require('user.plugins.lsp_lines')
 require('user.plugins.lspsaga')
-require('user.plugins.py_lsp')
 
 -- Plugins
 require('user.plugins.autopairs')

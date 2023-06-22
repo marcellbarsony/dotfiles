@@ -69,5 +69,5 @@ keys = [
     Key([mod],       "w", lazy.to_screen(0),  desc='Focus 1st monitor'),
     Key([mod],       "e", lazy.to_screen(1),  desc='Focus 2nd monitor'),
     Key([mod],       "r", lazy.to_screen(2),  desc='Focus 3rd monitor'),
-    Key([mod],       "t", lazy.function(switch_screens)),
+    Key([mod],       "s", lazy.function(switch_screens)),
 ]
