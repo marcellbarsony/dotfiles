@@ -16,6 +16,9 @@ dconf/
 # GitHub
 gh/
 
+# GTK
+gtk-3.0/
+
 # Npm
 npm/_cacache
 npm/_logs
@@ -32,6 +35,9 @@ pikaur.conf
 # Pulse audio
 pulse/
 pavucontrol.ini
+
+# Procps
+procps/
 
 # Qtile
 qtile/__pycache__
