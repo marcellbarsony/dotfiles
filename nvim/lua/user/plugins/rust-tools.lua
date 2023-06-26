@@ -21,8 +21,20 @@ rust_tools.setup({
     end,
   },
   tools = {
-    hover_actions = {
-      auto_focus = true,
+    hover_actions = {  -- options same as lsp hover / vim.lsp.util.open_floating_preview()
+      auto_focus = true, -- whether the hover action window gets automatically focused
+      border = { -- the border that is used for the hover window - see vim.api.nvim_open_win()
+        { "╭", "FloatBorder" },
+        { "─", "FloatBorder" },
+        { "╮", "FloatBorder" },
+        { "│", "FloatBorder" },
+        { "╯", "FloatBorder" },
+        { "─", "FloatBorder" },
+        { "╰", "FloatBorder" },
+        { "│", "FloatBorder" },
+      },
+      max_width = nil, -- Maximal width of the hover window. Nil means no max.
+      max_height = nil, -- Maximal height of the hover window. Nil means no max.
     },
   },
 })

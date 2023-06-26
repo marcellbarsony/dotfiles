@@ -8,7 +8,7 @@ require("mason-lspconfig").setup({
   ensure_installed = {
     "lua_ls", -- Lua
     "rust_analyzer", -- Rust
-    "tsserver", -- typescript
+    "tsserver", -- Typescript / Javascript
     -- "pyright", -- Requires npm
   }
 

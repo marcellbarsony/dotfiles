@@ -47,7 +47,7 @@ require('user.plugins.treesitter')
 require('user.plugins.which-key')
 
 -- Rust
-require('user.plugins.rust-tools')
+-- require('user.plugins.rust-tools')
 
 -- Snippet
 require('user.plugins.luasnip')
