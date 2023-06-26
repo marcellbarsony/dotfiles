@@ -52,6 +52,9 @@ spotify-tui/config.yml
 spotify-tui/.spotify_token_cache.json
 spotifyd/spotifyd.conf
 
+#SQLite
+sqlitebrowser/
+
 # VirtualBox
 VirtualBox/
 

@@ -1,16 +1,15 @@
 # Coreutils
-alias c='clear'
 alias cls='clear'
 alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
 
-# Exa
-alias exa='exa -lahB --all --color-scale'
-
-# Folders
+# Direcotires
 alias home='clear && cd $HOME && l'
 alias cfg='clear && cd $HOME/.config && l'
+
+# Exa
+alias exa='exa -lahB --all --color-scale'
 
 # Grep
 alias grep='grep --color=auto'
@@ -23,27 +22,14 @@ alias l='lsd -laF'
 
 # Navigation
 alias ..='cd ..'
-alias .2='cd ../..'
-alias .3='cd ../../..'
-alias .4='cd ../../../..'
-alias .5='cd ../../../../..'
-
-# Neofetch
-alias nf='neofetch'
+alias ..2='cd ../..'
+alias ..3='cd ../../..'
+alias ..4='cd ../../../..'
+alias ..5='cd ../../../../..'
 
 # NeoVim
 alias nv='nvim'
 alias vim='nvim'
 
-# Git
-alias g='git'
-alias gst='git status'
-alias gstat='git status'
-alias ga='git add'
-alias gaa='git add -A'
-alias gp='git push'
-alias gc='git commit -m'
-alias gcl='git clone'
-
 # Spotify
-alias spotify='spt'
+# alias spotify='spt'
