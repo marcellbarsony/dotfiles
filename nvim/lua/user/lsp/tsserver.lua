@@ -1,3 +1,6 @@
+-- TODO: name
+-- TODO: repo
+
 local lspconfig = require'lspconfig'
 
 lspconfig.tsserver.setup{

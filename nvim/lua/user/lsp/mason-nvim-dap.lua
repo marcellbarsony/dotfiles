@@ -5,7 +5,7 @@ local dap = require("dap")
 
 require("mason-nvim-dap").setup({
   ensure_installed = {
-    "python",
+    "python", -- debugpy
     "codelldb",
   },
   automatic_installation = true,

@@ -1,24 +1,24 @@
 -- Lazy
 require('user.plugins.lazy-nvim')
 
--- Buffer
-require('user.plugins.bufferline')
-
--- Core
+-- Nvim Core
 require('user.core.autocmd')
 require('user.core.colors')
 require('user.core.keymaps')
 require('user.core.lspconfig')
 require('user.core.options')
 
+-- Buffer
+require('user.plugins.bufferline')
+
 -- CMP
 require('user.plugins.nvim-cmp')
 
 -- DAP
-require('user.plugins.nvim-dap')
-require('user.plugins.nvim-dap-ui')
-require('user.plugins.nvim-dap-python')
---require('user.plugins.nvim-dap-vtxt')
+require('user.dap.nvim-dap')
+require('user.dap.nvim-dap-ui')
+require('user.dap.nvim-dap-python')
+--require('user.dap.nvim-dap-vtxt')
 
 -- File explorer
 require('user.plugins.nvim-tree')
@@ -29,14 +29,13 @@ require('user.plugins.gitsigns')
 -- Greeter
 require('user.plugins.alpha-nvim')
 
--- LSP setup
-require('user.plugins.mason')
-require('user.plugins.mason-lspconfig')
-require('user.plugins.mason-nvim-dap')
-
--- LSP tools
-require('user.plugins.lsp_lines')
-require('user.plugins.lspsaga')
+-- LSP setup (mason)
+require('user.lsp.lsp_lines')
+require('user.lsp.lspsaga')
+require('user.lsp.mason')
+require('user.lsp.mason-lspconfig')
+require('user.lsp.mason-nvim-dap')
+require('user.lsp.tsserver')
 
 -- Plugins
 require('user.plugins.autopairs')
@@ -46,17 +45,15 @@ require('user.plugins.telescope')
 require('user.plugins.treesitter')
 require('user.plugins.which-key')
 
--- Rust
--- require('user.plugins.rust-tools')
-
 -- Snippet
 require('user.plugins.luasnip')
 
 -- Statusline
 require('user.plugins.lualine')
 
--- TypeScript
-require('user.plugins.tsserver')
+-- Rust
+-- require('user.plugins.rust-tools')
 
 -- TODO
 --require('user.plugins.null-ls')
+--require('user.plugins.nvim-ufo')
