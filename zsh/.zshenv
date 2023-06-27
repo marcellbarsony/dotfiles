@@ -49,9 +49,6 @@ export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export PATH="$HOME/.local/share/cargo/bin:$PATH"
 #. "/home/marci/.local/share/cargo/env"
 
-# Scripts
-export PATH=$HOME/.src/arch-tools/xtools:$PATH
-
 # Starship prompt
 export STARSHIP_CONFIG=~/.config/starship/config.toml
 export STARSHIP_CACHE=~/.config/starship

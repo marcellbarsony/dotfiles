@@ -33,8 +33,8 @@ rust_tools.setup({
         { "└", "FloatBorder" },
         { "│", "FloatBorder" },
       },
-      max_width = nil, -- Maximal width of the hover window. Nil means no max.
-      max_height = nil, -- Maximal height of the hover window. Nil means no max.
+      max_width = nil,
+      max_height = nil,
     },
   },
 })
