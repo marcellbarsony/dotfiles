@@ -6,7 +6,11 @@
 
 -- Adapter config
 
-
+local dap = require('dap')
+dap.adapters.codelldb = {
+  type = 'server',
+  port = "${port}",
+}
 
 -- Debugee config
 

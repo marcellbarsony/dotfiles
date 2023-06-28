@@ -17,6 +17,7 @@ require('user.dap.nvim-dap-python')
 -- Mason
 require('user.mason.mason')
 require('user.mason.mason-lspconfig')
+require('user.mason.mason-null-ls')
 require('user.mason.mason-nvim-dap')
 
 -- Lang
@@ -34,6 +35,7 @@ require('user.plugins.lualine')
 require('user.plugins.luasnip')
 require('user.plugins.lsp_lines')
 require('user.plugins.lspsaga')
+require('user.plugins.null-ls')
 require('user.plugins.nvim-cmp')
 require('user.plugins.nvim-tree')
 require('user.plugins.telescope')
@@ -41,5 +43,4 @@ require('user.plugins.treesitter')
 require('user.plugins.which-key')
 
 -- TODO
---require('user.plugins.null-ls')
 --require('user.plugins.nvim-ufo')
