@@ -75,11 +75,11 @@ gui.allow_hover_selection: TRUE
 
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 1317
+gui.geometry_main_upper_pane: 732
 
 # Main window middle pane size.
 # Decimal number.
-gui.geometry_main_lower_pane: 660
+gui.geometry_main_lower_pane: 409
 
 # Packet list column pixel widths.
 # Each pair of strings consists of a column format and its pixel width.

@@ -7,7 +7,7 @@ from mouse import *
 from func_screens import window_name
 from func_audio import audio_increase, audio_decrease, audio_mute
 from func_backlight import backlight_increase, backlight_decrease
-from func_network import network_ip, network_interface
+from func_network import network_ip, network_interface, network_gateway
 from variables import font_size, sep_padding, sep_width, widget_padding
 
 
@@ -104,6 +104,7 @@ screens = [
                                 linewidth=sep_width,
                                 padding=sep_padding,
                             ),
+                            ### Interface
                             widget.TextBox(
                                 fmt='󱫋',
                                 fontsize=24,
@@ -112,6 +113,18 @@ screens = [
                             ),
                             widget.GenPollText(
                                 func=network_interface,
+                                foreground=PRIMARY,
+                                update_interval=600,
+                            ),
+                            ### IP ###
+                            widget.TextBox(
+                                fmt='󰩟',
+                                fontsize=24,
+                                foreground=PRIMARY,
+                                padding=sep_padding,
+                            ),
+                            widget.GenPollText(
+                                func=network_ip,
                                 foreground=PRIMARY,
                                 update_interval=600,
                             ),
@@ -128,15 +141,15 @@ screens = [
                                 interface='wlp1s0',
                                 update_interval=60,
                             ),
-                            ### IP ###
+                            ### Gateway ###
                             widget.TextBox(
-                                fmt='󰩟',
+                                fmt='󱇢',
                                 fontsize=24,
                                 foreground=PRIMARY,
                                 padding=sep_padding,
                             ),
                             widget.GenPollText(
-                                func=network_ip,
+                                func=network_gateway,
                                 foreground=PRIMARY,
                                 update_interval=600,
                             ),
@@ -427,6 +440,7 @@ screens = [
                                 linewidth=sep_width,
                                 padding=sep_padding,
                             ),
+                            ### Interface
                             widget.TextBox(
                                 fmt='󱫋',
                                 fontsize=24,
@@ -435,6 +449,18 @@ screens = [
                             ),
                             widget.GenPollText(
                                 func=network_interface,
+                                foreground=PRIMARY,
+                                update_interval=600,
+                            ),
+                            ### IP ###
+                            widget.TextBox(
+                                fmt='󰩟',
+                                fontsize=24,
+                                foreground=PRIMARY,
+                                padding=sep_padding,
+                            ),
+                            widget.GenPollText(
+                                func=network_ip,
                                 foreground=PRIMARY,
                                 update_interval=600,
                             ),
@@ -451,15 +477,15 @@ screens = [
                                 interface='wlp1s0',
                                 update_interval=60,
                             ),
-                            ### IP ###
+                            ### Gateway ###
                             widget.TextBox(
-                                fmt='󰩟',
+                                fmt='󱇢',
                                 fontsize=24,
                                 foreground=PRIMARY,
                                 padding=sep_padding,
                             ),
                             widget.GenPollText(
-                                func=network_ip,
+                                func=network_gateway,
                                 foreground=PRIMARY,
                                 update_interval=600,
                             ),
@@ -620,7 +646,7 @@ screens = [
                 colour_have_updates=PRIMARY,
                 colour_no_updates=PRIMARY,
                 display_format='{updates}',
-                distro='Arch_Sup',
+                distro='Arch',
                 initial_text='Checking updates...',
                 foreground=PRIMARY,
                 no_update_string='0',

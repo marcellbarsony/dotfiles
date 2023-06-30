@@ -48,6 +48,9 @@ user_pref("browser.compactmode.show", true);
 user_pref("browser.tabs.firefox-view", false);
 user_pref("browser.tabs.tabmanager.enabled", false);
 
+/* WEBSITE APPEARANCE (DARK) */
+user_pref("layout.css.prefers-color-scheme.content-override", 0);
+
 /* TODO */
 // Disable save login info for...
 // Check all default preferences (about:preferences)

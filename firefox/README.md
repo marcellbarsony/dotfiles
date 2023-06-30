@@ -16,7 +16,7 @@ sudo pacman -S firefox pipewire-jack
 
 - Wait until settings & plugin sync
 
-- Terminate Firefox
+- **Terminate Firefox**
 
 ### Containers
 
