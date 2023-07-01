@@ -10,6 +10,10 @@ user_pref("extensions.pocket.enabled", false);
 /* FIND BAR */
 user_pref("findbar.highlightAll", true);
 
+/* FULL SCREEN */
+user_pref("full-screen-api.warning.delay", 0);
+user_pref("full-screen-api.warning.timeout", 0);
+
 /* LAYOUT */
 user_pref("layout.css.devPixelsPerPx", "0.9");
 

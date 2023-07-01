@@ -29,6 +29,12 @@ nvim/plugin/
 nvim/lazy-lock.json
 nvim/lua/.luarc.json
 
+# OBS
+obs-studio/basic/
+obs-studio/logs/
+obs-studio/plugin_config/
+obs-studio/profiler_data/
+
 # Pikaur
 pikaur.conf
 
@@ -38,6 +44,9 @@ pavucontrol.ini
 
 # Procps
 procps/
+
+# QPWgraph (Pipewire)
+rncbc.org/
 
 # Qtile
 qtile/__pycache__
