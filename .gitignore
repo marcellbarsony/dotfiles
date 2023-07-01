@@ -45,6 +45,9 @@ pavucontrol.ini
 # Procps
 procps/
 
+# ProtonVPN
+protonvpn/
+
 # QPWgraph (Pipewire)
 rncbc.org/
 
