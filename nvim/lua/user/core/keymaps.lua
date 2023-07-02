@@ -37,28 +37,27 @@ map('', '<right>', '<nop>')
 
 -- Search
 map('n', '*', '*N', { desc = 'Find word' }) -- Fix * - don't move to next match
-map('n', '<leader>c', ':nohl<CR>', { desc = 'Nohl' }) -- Clear highlighting
---map('n', 'n', 'nzz') -- Fix n: keep cursor in center
---map('n', 'N', 'Nzz') -- Fix N: keep cursor in center
+map('n', 'n', 'nzzzv') -- Fix n: keep cursor in center
+map('n', 'N', 'Nzzzv') -- Fix N: keep cursor in center
 
 -- Splits
 map('n', '<leader>sv', ':vsplit<CR>', { desc = 'Vertical' })
 map('n', '<leader>sh', ':split<CR>' , { desc = 'Horizontal' })
-map('n', '<leader>sw', '<C-w>x', { desc = 'Swap' })
+map('n', '<leader>ss', '<C-w>x', { desc = 'Swap' })
 map('n', '<C-k>', '<C-w>k', { desc = 'Split [Up]' }) -- Move up
 map('n', '<C-j>', '<C-w>j', { desc = 'Split [Down]' }) -- Move down
 map('n', '<C-h>', '<C-w>h', { desc = 'Split [Left]' }) -- Move left
 map('n', '<C-l>', '<C-w>l', { desc = 'Split [Right]' }) -- Move right
 map('n', '<C-A-k>', ':resize -5<CR>') -- Up
 map('n', '<C-A-j>', ':resize +5<CR>') -- Down
-map('n', '<C-A-h>', ':vertical resize -5<CR>') -- Left
-map('n', '<C-A-l>', ':vertical resize +5<CR>') -- Right
+map('n', '<C-A-h>', ':vertical resize -5<CR>') -- Grow
+map('n', '<C-A-l>', ':vertical resize +5<CR>') -- Shrink
 
 -- Buffers
 map('n', '<C-]>', ':bn<CR>', { desc = 'Buffer [Next]' }) -- Move to next
 map('n', '<C-[>', ':bp<CR>', { desc = 'Buffer [Prev]' }) -- Move to prev
 map('n', "<C-'>", ':b#<CR>', { desc = 'Buffer [To last]' }) -- Move to last
-map('n', "<C-q>", ':bdelete<CR>', { desc = 'Buffer [Delete]' }) -- Move to last
+map('n', "<C-q>", ':bdelete<CR>', { desc = 'Buffer [Delete]' }) -- Delete buffer
 map('n', "<C-^>", ':_#<CR>', { desc = 'Alternate file' }) -- :help alternate-file
 map('n', '<ESC>', '', { desc = 'Unmap <C-[>' }) -- Unmap buffer prev
 
@@ -169,9 +168,9 @@ map('n', '<leader>db', ':lua require"telescope".extensions.dap.list_breakpoints{
 map('n', '<leader>dv', ':lua require"telescope".extensions.dap.variables{}<CR>', { desc = 'Variables' })
 map('n', '<leader>df', ':lua require"telescope".extensions.dap.frames{}<CR>', { desc = 'Frames' })
 
-
--- Replace highlighted word
---map('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+-- Highlights
+map('n', '<leader>hc', ':nohl<CR>', { desc = 'Clear' })
+map('n', '<leader>hr', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = 'Replace' })
 
 -- Use operator pending mode to visually select the whole buffer
 -- e.g. dA = delete buffer ALL, yA = copy whole buffer ALL
@@ -181,5 +180,5 @@ map('x', 'A', ':<C-U>normal! ggVG<CR>')
 -- VISUAL --
 map('v', '<', '<gv') -- Indent left
 map('v', '>', '>gv') -- Indent right
-map('x', 'K', ":move '<-2<CR>gv-gv") -- Move block up
-map('x', 'J', ":move '>+1<CR>gv-gv") -- Move block down
+map('v', 'K', ":move '<-2<CR>gv-gv") -- Move up
+map('v', 'J', ":move '>+1<CR>gv-gv") -- Move down

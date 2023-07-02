@@ -111,6 +111,11 @@ local mappings = {
       name = "DAP",
     },
 
+    -- Highlight
+    h = {
+      name = "Highlight",
+    },
+
     -- Insert Line
     i = {
       name = "Insert",

@@ -48,6 +48,7 @@ local has_words_before = function()
 end
 
 -- CMP Setup
+-- https://github.com/hrsh7th/nvim-cmp#setup
 cmp.setup({
 
   -- Snippet
