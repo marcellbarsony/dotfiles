@@ -8,12 +8,12 @@ local function map(mode, lhs, rhs, opts)
 end
 
 -- Modes
---  normal_mode = "n"
---  insert_mode = "i"
---  visual_mode = "v"
---  visual_block_mode = "x",
---  term_mode = "t",
---  command_mode = "c",
+--  n - normal_mode
+--  i - insert_mode
+--  v - visual_mode
+--  x - visual_block_mode
+--  t - term_mode
+--  c - command_mode
 
 -- Leader
 map("n", "<Bslash>", "", { desc = 'LEADER' })

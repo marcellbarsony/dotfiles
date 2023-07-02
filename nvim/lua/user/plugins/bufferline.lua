@@ -7,10 +7,10 @@ require('bufferline').setup {
     numbers = "none",
 
     -- Commands
-    close_command = "bdelete! %d",          -- can be a string | function, see "Mouse actions"
-    right_mouse_command = "bdelete! %d",    -- can be a string | function, see "Mouse actions"
-    left_mouse_command = "buffer %d",       -- can be a string | function, see "Mouse actions"
-    middle_mouse_command = nil,             -- can be a string | function, see "Mouse actions"
+    close_command = "bdelete! %d",  -- can be a string | function, see "Mouse actions"
+    right_mouse_command = "bdelete! %d",  -- can be a string | function, see "Mouse actions"
+    left_mouse_command = "buffer %d",  -- can be a string | function, see "Mouse actions"
+    middle_mouse_command = nil,  -- can be a string | function, see "Mouse actions"
 
     -- Icons
     show_buffer_icons = true,
@@ -26,7 +26,7 @@ require('bufferline').setup {
 
     -- Length
     max_name_length = 15,
-    max_prefix_length = 15,                 -- prefix used when a buffer is de-duplicated
+    max_prefix_length = 15,  -- de-duplicated buffer prefix
     tab_size = 20,
 
     -- Diagnostics
@@ -50,8 +50,8 @@ require('bufferline').setup {
       }
     },
 
-    persist_buffer_sort = true,             -- whether or not custom sorted buffers should persist
-    separator_style = "thin",               -- | "thick" | "thin" | { 'any', 'any' },
+    persist_buffer_sort = true,  -- enable custom sorted buffers
+    separator_style = "thin",  -- | "thick" | "thin" | { 'any', 'any' },
 
     -- Bufferline
     always_show_bufferline = false,

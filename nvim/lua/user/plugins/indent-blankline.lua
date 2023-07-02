@@ -18,7 +18,7 @@ vim.opt.list = true
 require("indent_blankline").setup {
 
     space_char_blankline = " ",
-    --char = "",
+    --char = "|",
 
     -- GUI FG
     char_highlight_list = {
@@ -35,6 +35,8 @@ require("indent_blankline").setup {
     --    "IndentBlanklineIndent4",
     --},
 
+    show_current_context = true,
+    show_current_context_start = true,
     show_trailing_blankline_indent = false,
 
 }
