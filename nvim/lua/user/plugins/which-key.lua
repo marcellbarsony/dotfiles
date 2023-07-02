@@ -142,6 +142,17 @@ local mappings = {
       name = "Mason",
     },
 
+    -- Rust
+    r = {
+      name = "Rust",
+      a = {
+        name = "Action [Hover]",
+      },
+      g = {
+        name = "Action [Group]",
+      },
+    },
+
     -- Split
     s = {
       name = "Split",

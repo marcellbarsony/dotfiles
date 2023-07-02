@@ -8,7 +8,7 @@ require("dapui").setup({
   -- Controls
   controls = {
     element = "repl",
-    enabled = false,
+    enabled = true,
     icons = {
       disconnect = "",
       pause = "",
@@ -50,29 +50,29 @@ require("dapui").setup({
   layouts = { {
       elements = { {
           id = "scopes",
-          size = 0.7
+          size = 0.55
         }, {
           id = "breakpoints",
-          size = 0.1
+          size = 0.15
         }, {
           id = "stacks",
-          size = 0.1
+          size = 0.15
         }, {
           id = "watches",
-          size = 0.1
+          size = 0.15
         } },
       position = "right",
-      size = 70
+      size = 0.3
     }, {
       elements = { {
-          -- id = "repl",
-          size = 0.5
-        }, {
           id = "console",
-          size = 0.5
+          size = 0.6
+        }, {
+          id = "repl",
+          size = 0.4
         } },
       position = "bottom",
-      size = 10
+      size = 7
     } },
 
   -- Mappings
