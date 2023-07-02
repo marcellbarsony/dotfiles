@@ -32,6 +32,9 @@ require("which-key").setup {
     -- ["<cr>"] = "RET",
     -- ["<tab>"] = "TAB",
   },
+  motions = {
+    count = true,
+  },
   icons = {
     breadcrumb = "󰄾",
     separator = "",

@@ -1,9 +1,10 @@
 -- nvim-colorizer
 -- https://github.com/NvChad/nvim-colorizer.lua
 
-
--- Default options
+-- Configuration
 require("colorizer").setup {
+  -- Default options
+  -- https://github.com/NvChad/nvim-colorizer.lua#customization
   filetypes = { "*" },
   user_default_options = {
     RGB = true, -- #RGB hex codes

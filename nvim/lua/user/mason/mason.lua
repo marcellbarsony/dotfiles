@@ -1,6 +1,8 @@
 -- mason.nvim
 -- https://github.com/williamboman/mason.nvim
 
+-- Config
+-- https://github.com/williamboman/mason.nvim#configuration
 require("mason").setup({
 
   -- Path
@@ -9,25 +11,30 @@ require("mason").setup({
   -- Log level
   log_level = vim.log.levels.INFO,
 
-  -- Pip
-  pip = {
-    upgrade_ipi = true,
-    install_args = {},
-  },
-
   -- Concurrent installers
   max_concurrent_installers = 5,
 
-  -- GitHub
-  github = {
-    download_url_template = "https://github.com/%s/releases/download/%s/%s",
+  -- Registries
+  registries = {
+    "github:mason-org/mason-registry",
   },
 
   -- Providers
   providers = {
     "mason.providers.registry-api",
     "mason.providers.client",
- },
+  },
+
+  -- GitHub
+  github = {
+    download_url_template = "https://github.com/%s/releases/download/%s/%s",
+  },
+
+  -- Pip
+  pip = {
+    upgrade_pip = true,
+    install_args = {},
+  },
 
   -- UI
   ui = {

@@ -1,8 +1,10 @@
 -- Autopairs
 -- https://github.com/windwp/nvim-autopairs
 
+require("nvim-autopairs").setup{
 
-require("nvim-autopairs").setup {
+  -- Default values
+  -- https://github.com/windwp/nvim-autopairs#default-values
   disable_filetype = { "TelescopePrompt" },
   disable_in_macro = false,  -- disable when recording or executing a macro
   disable_in_visualblock = false, -- disable when insert after visual block mode
@@ -19,4 +21,5 @@ require("nvim-autopairs").setup {
   map_bs = true,  -- map the <BS> key
   map_c_h = false,  -- Map the <C-h> key to delete a pair
   map_c_w = false, -- map <c-w> to delete a pair if possible
+
 }

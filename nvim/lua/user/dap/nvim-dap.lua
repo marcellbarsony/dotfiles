@@ -5,7 +5,6 @@
 
 
 -- Adapter config
-
 local dap = require('dap')
 dap.adapters.codelldb = {
   type = 'server',
@@ -13,14 +12,10 @@ dap.adapters.codelldb = {
 }
 
 -- Debugee config
-
-
-
+-- [TODO]
 
 -- Client config
-
-
-
+-- [TODO]
 
 -- Signs config
 vim.fn.sign_define('DapBreakpoint',          {text='B', texthl='', linehl='', numhl=''})
