@@ -47,7 +47,6 @@ saga.setup({
     quit = "q",
   },
 
-
   -- :Lspsaga code_action
   -- https://github.com/nvimdev/lspsaga.nvim#lspsaga-code_action
   code_action = {

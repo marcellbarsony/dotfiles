@@ -4,6 +4,11 @@ user_pref("browser.toolbars.bookmarks.visibility", "never");
 /* CONTAINERS */
 user_pref("privacy.userContext.newTabContainersOnLeftClick.enabled", true);
 
+/* CROSS-ORIGIN */
+// user_pref("network.auth.subresource-http-auth-allow", 0); // 0905
+// user_pref("network.http.referer.XOriginPolicy", 0); // 1601
+// user_pref("network.http.referer.XOriginTrimmingPolicy", 0); // 1602
+
 /* EXTENSIONS */
 user_pref("extensions.pocket.enabled", false);
 

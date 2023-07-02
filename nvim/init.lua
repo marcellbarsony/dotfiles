@@ -12,7 +12,7 @@ require('user.core.options')
 require('user.dap.nvim-dap')
 require('user.dap.nvim-dap-ui')
 require('user.dap.nvim-dap-python')
---require('user.dap.nvim-dap-vtxt')
+require('user.dap.nvim-dap-vtxt')
 
 -- Mason
 require('user.mason.mason')

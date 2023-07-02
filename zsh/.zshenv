@@ -1,5 +1,5 @@
 # Default programs
-export BROWSER="Librewolf"
+export BROWSER="Firefox"
 export EDITOR="nvim"
 export TERMINAL="kitty"
 export VISUAL="nvim"
