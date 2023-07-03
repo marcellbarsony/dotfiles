@@ -51,7 +51,7 @@ require("lazy").setup({
     },
   },
 
-  -- DAP (Debug Adapter Protocol)
+  -- DAP
   { 'mfussenegger/nvim-dap',
     dependencies = {
       'mfussenegger/nvim-dap-python', -- Python
@@ -87,7 +87,6 @@ require("lazy").setup({
 
   -- Indent lines
   'lukas-reineke/indent-blankline.nvim',
-
 
   -- Nvim tree
   { 'nvim-tree/nvim-tree.lua',

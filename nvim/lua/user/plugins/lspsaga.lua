@@ -3,7 +3,6 @@
 
 local saga = require("lspsaga")
 
-
 saga.setup({
 
   -- Default options
@@ -35,7 +34,6 @@ saga.setup({
       close_in_preview = '<ESC>',
     },
   },
-  finder_request_timeout = 1500,
 
   -- :Lspsaga peek_definition
   -- https://github.com/nvimdev/lspsaga.nvim#lspsaga-peek_definition
@@ -126,7 +124,7 @@ saga.setup({
     auto_resize = false,
     custom_sort = nil,
     keys = {
-      expand_or_jump = 'o',
+      expand_or_jump = "o",
       quit = "q",
     },
   },
@@ -159,42 +157,26 @@ saga.setup({
     color_mode = true,
   },
 
+  -- :Lspsaga beacon
+  -- https://github.com/nvimdev/lspsaga.nvim#lspsaga-beacon
+  beacon = {
+    enable = true,
+    frequency = 7,
+  },
+
   -- :Lspsaga UI
   -- https://github.com/nvimdev/lspsaga.nvim#lspsaga-ui
   ui = {
-    -- This option only works in Neovim 0.9
     title = true,
-    -- Border type can be single, double, rounded, solid, shadow.
     border = "single",
     winblend = 0,
     expand = "",
     collapse = "",
-    code_action = "💡",
-    incoming = " ",
-    outgoing = " ",
+    code_action = "󱐋",
+    incoming = "󰏷 ",
+    outgoing = "󰏻 ",
     hover = ' ',
     kind = {},
   },
 
 })
-
--- Mappings
-local options = { noremap = true, silent = true }
-
-local function map(m, k, v)
-  vim.api.nvim_set_keymap(m, k, v, options )
-end
-
--- lspsaga
-map('n', '<leader>lf', '<cmd>Lspsaga lsp_finder<CR>') -- Lsp finder
-map('n', '<leader>la', '<cmd>Lspsaga code_action<CR>') -- Code actions
-map('n', '<leader>lr', '<cmd>Lspsaga rename<CR>') -- Rename variable
-map('n', '<leader>lf', '<cmd>Lspsaga peek_definition<CR>') -- Definition (peek)
-map('n',         'gd', '<cmd>Lspsaga goto_definition<CR>') -- Definition (jump)
---map('n', '<leader>ls', '<cmd>Lspsaga show_line_diagnostics<CR>') -- Diagnostics (line)
---map('n', '<leader>lb', '<cmd>Lspsaga show_buf_diagnostics<CR>') -- Diagnostics (buffer)
-map('n', '<leader>lo', '<cmd>Lspsaga outline<CR>') -- Project outline
---map('n', '<leader>lt', '<cmd>Lspsaga open_floaterm<CR>') -- Floating terminal
-map('n', '<leader>lk', "<cmd>Lspsaga hover_doc ++keep<CR>") -- Documentation
-map("n", "<Leader>ci", "<cmd>Lspsaga incoming_calls<CR>")
-map("n", "<Leader>co", "<cmd>Lspsaga outgoing_calls<CR>")

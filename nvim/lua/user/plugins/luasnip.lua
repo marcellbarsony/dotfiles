@@ -1,20 +1,16 @@
 -- Luasnip
 -- https://github.com/L3MON4D3/LuaSnip
 
--- Shorthands --{{{
 local ls = require("luasnip")
 local types = require("luasnip.util.types")
---}}}
 
--- Config --{{{
--- virtual text
+-- Config (virtual text)
 ls.config.set_config({
   history = true,
   updateevents = "TextChanged,TextChangedI", -- Update more often, (:h events)
   ext_opts = {
     [types.choiceNode] = {
       active = {
-        --virt_text = { { "choiceNode", "Comment" } },
         virt_text = { { "●", "GruvboxOrange" } },
       },
     },
@@ -33,10 +29,8 @@ ls.config.set_config({
 		return vim.split(vim.bo.filetype, ".", true)
 	end,
 })
---}}}
 
--- Keymaps --{{{
-
+-- Keymaps
 -- Reload snippets <Ctrl-u>
 vim.keymap.set({ "i", "s" }, "<c-u>", '<cmd>source ~/.config/nvim/lua/user/plugins/luasnip.lua<CR>')
 
@@ -74,19 +68,7 @@ end)
 
 --vim.keymap.set({ "i", "s" }, "<c-u>", '<cmd>lua require("luasnip.extras.select_choice")()<cr><C-c><C-c>')
 
--- }}}
-
--- Snippets --{{{
-
--- Lua
+-- Snippets (Lua)
 require("luasnip.loaders.from_lua").load({
   paths = "~/.config/nvim/snippets/"
 })
-
--- VS Code & Friendly snippets
---require("luasnip.loaders.from_vscode").lazy_load({
---  paths = { "~/.local/share/nvim/site/pack/packer/start/friendly-snippets/" }
---})
-
---}}}
-
