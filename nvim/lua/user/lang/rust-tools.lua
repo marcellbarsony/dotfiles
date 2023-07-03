@@ -13,8 +13,8 @@ local liblldb_path = extension_path .. "lldb/lib/liblldb.so"
 
 rust_tools.setup({
 
-  -- https://github.com/simrat39/rust-tools.nvim/wiki/Debugging
   -- DAP (CodeLLDB)
+  -- https://github.com/simrat39/rust-tools.nvim/wiki/Debugging
   dap = {
     adapter = require("rust-tools.dap").get_codelldb_adapter(
       codelldb_path,

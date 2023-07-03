@@ -108,8 +108,9 @@ map("n", "<leader>vi", ":PyRun -m pip install -r requirements.txt<CR>", { desc =
 -- Lspsaga
 map("n", "<leader>lf", ":Lspsaga lsp_finder<CR>", { desc = "Finder" })
 map("n", "<leader>la", ":Lspsaga code_action<CR>", { desc = "Code actions"})
-map("n", "<leader>lr", ":Lspsaga rename<CR>", { desc = "Rename variable"})
+map("n", "<leader>lr", ":Lspsaga rename<CR>", { desc = "Rename"})
 map("n", "<leader>lf", ":Lspsaga peek_definition<CR>", { desc = "Definition [Peek]" })
+map("n", "<leader>lg", ":Lspsaga peek_type_definition<CR>", { desc = "Definition [Type]" })
 map("n",         "gd", ":Lspsaga goto_definition<CR>", { desc = "Definition [Jump]" })
 map("n", "<leader>lo", ":Lspsaga outline<CR>", { desc = "Outline" })
 map("n", "<leader>lk", ":Lspsaga hover_doc<CR>", { desc = "Documentation" })

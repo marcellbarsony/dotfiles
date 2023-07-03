@@ -64,14 +64,15 @@ cmp.setup({
       col_offset = 1,
       side_padding = 0,
       winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
-    }
+    },
     -- documentation = cmp.config.window.bordered(),
     -- completion = cmp.config.window.bordered(),
   },
 
   -- View
   view = {
-    entries = "custom", selection_rder = "near_cursor" -- custom/wildmenu/native
+    entries = "custom",
+    selection_rder = "near_cursor" -- custom/wildmenu/native
   },
 
   -- Mapping
@@ -166,6 +167,7 @@ cmp.setup({
       return vim_item
     end
   },
+
   -- Experimental
   experimental = {
     ghost_text = true,

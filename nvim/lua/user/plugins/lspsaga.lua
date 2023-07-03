@@ -69,7 +69,7 @@ saga.setup({
   },
 
   -- :Lspasga hover_doc
-  -- https://github.com/nvimdev/lspsaga.nvim#lspsaga-lightbulb
+  -- https://github.com/nvimdev/lspsaga.nvim#lspasga-hover_doc
   hover = {
     max_width = 0.6,
     open_link = 'gx',
@@ -77,7 +77,7 @@ saga.setup({
   },
 
   -- :Lspsaga diagnostic_jump_next
-  -- https://github.com/nvimdev/lspsaga.nvim#lspsaga-lightbulb
+  -- https://github.com/nvimdev/lspsaga.nvim#lspsaga-diagnostic_jump_next
   diagnostic = {
     on_insert = false,
     on_insert_follow = false,

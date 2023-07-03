@@ -3,7 +3,6 @@
 
 local null_ls = require("null-ls")
 
-
 -- Setup
 -- https://github.com/jose-elias-alvarez/null-ls.nvim#setup
 null_ls.setup({
