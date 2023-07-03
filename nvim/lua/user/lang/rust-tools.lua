@@ -1,6 +1,7 @@
 -- rust-tools.nvim
 -- https://github.com/simrat39/rust-tools.nvim
 -- https://github.com/vadimcn/codelldb
+-- https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/
 
 local rust_tools = require("rust-tools")
 local mason_registry = require("mason-registry")

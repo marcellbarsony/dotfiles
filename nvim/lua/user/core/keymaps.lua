@@ -1,11 +1,5 @@
 -- Keymaps
-local function map(mode, lhs, rhs, opts)
-  local options = { noremap = true, silent = true }
-  if opts then
-    options = vim.tbl_extend('force', options, opts)
-  end
-  vim.keymap.set(mode, lhs, rhs, options)
-end
+-- https://neovim.io/doc/user/map.html
 
 -- Modes
 --  n - normal_mode
@@ -14,6 +8,14 @@ end
 --  x - visual_block_mode
 --  t - term_mode
 --  c - command_mode
+
+local function map(mode, lhs, rhs, opts)
+  local options = { noremap = true, silent = true }
+  if opts then
+    options = vim.tbl_extend('force', options, opts)
+  end
+  vim.keymap.set(mode, lhs, rhs, options)
+end
 
 -- Leader
 map("n", "<Bslash>", "", { desc = 'LEADER' })
@@ -29,29 +31,11 @@ map('n', '<leader>r', ':source %<CR>', { desc = 'Reload [TODO]' })
 -- Alpha
 map('n', '<leader>a', ':Alpha<CR>', { desc = 'Alpha' })
 
--- Disable arrow keys
+-- Arrow keys
 map('', '<up>', '<nop>')
 map('', '<down>', '<nop>')
 map('', '<left>', '<nop>')
 map('', '<right>', '<nop>')
-
--- Search
-map('n', '*', '*N', { desc = 'Find word' }) -- Fix * - don't move to next match
-map('n', 'n', 'nzzzv') -- Fix n: keep cursor in center
-map('n', 'N', 'Nzzzv') -- Fix N: keep cursor in center
-
--- Splits
-map('n', '<leader>sv', ':vsplit<CR>', { desc = 'Vertical' })
-map('n', '<leader>sh', ':split<CR>' , { desc = 'Horizontal' })
-map('n', '<leader>ss', '<C-w>x', { desc = 'Swap' })
-map('n', '<C-k>', '<C-w>k', { desc = 'Split [Up]' }) -- Move up
-map('n', '<C-j>', '<C-w>j', { desc = 'Split [Down]' }) -- Move down
-map('n', '<C-h>', '<C-w>h', { desc = 'Split [Left]' }) -- Move left
-map('n', '<C-l>', '<C-w>l', { desc = 'Split [Right]' }) -- Move right
-map('n', '<C-A-k>', ':resize -5<CR>') -- Up
-map('n', '<C-A-j>', ':resize +5<CR>') -- Down
-map('n', '<C-A-h>', ':vertical resize -5<CR>') -- Grow
-map('n', '<C-A-l>', ':vertical resize +5<CR>') -- Shrink
 
 -- Buffers
 map('n', '<C-]>', ':bn<CR>', { desc = 'Buffer [Next]' }) -- Move to next
@@ -61,9 +45,10 @@ map('n', "<C-q>", ':bdelete<CR>', { desc = 'Buffer [Delete]' }) -- Delete buffer
 map('n', "<C-^>", ':_#<CR>', { desc = 'Alternate file' }) -- :help alternate-file
 map('n', '<ESC>', '', { desc = 'Unmap <C-[>' }) -- Unmap buffer prev
 
--- Undo & Redo
-map('n', "<u>", ':undo<CR>', { desc = 'Undo' }) -- Undo
-map('n', "<C-r>", ':redo<CR>', { desc = 'Redo' }) -- Redo
+-- Clipboard
+map('n', '<leader>y', '\"+y', { desc = 'Yank [Global]' })
+map('v', '<leader>y', '\"+y', { desc = 'Yank [Global]' })
+map('n', '<leader>y', '\"+Y', { desc = 'Yank [Global]' })
 
 -- DAP
 -- :h dap-api
@@ -85,17 +70,15 @@ map('n', '<leader>dx', ":lua require('dap-python').test_class()<CR>", { desc = '
 map('n', '<leader>dy', ":lua require('dap-python').debug_selection()<CR>", { desc = 'Py test [Selection]' })
 map('n', '<leader>dz', ":lua require('dap-python').test_method()<CR>", { desc = 'Py test [Method]' })
 
--- Nvim-tree
-map('n', 't', ':NvimTreeToggle<CR>', { desc = 'NvimTree' })
--- map('n', 'tc', ':NvimTreeCollapse<CR>', { desc = 'Collapse' })
--- map('n', '<leader>x', ':NvimTreeFindFile<CR>', { desc = 'Find file' })
--- map('n', '<leader>t', ':Lex 30<CR>', { desc = 'Netrw', silent = true })
-
 -- Gitsigns
 map('n', '<leader>uu', ':Gitsigns toggle_signs<CR>:Gitsigns toggle_numhl<CR>:Gitsigns toggle_current_line_blame<CR>', { desc = 'Toggle' })
 map('n', '<leader>us', ':Gitsigns toggle_signs<CR>', { desc = 'Signs' })
 map('n', '<leader>un', ':Gitsigns toggle_numhl<CR>', { desc = 'Numhl' })
 map('n', '<leader>ub', ':Gitsigns toggle_current_line_blame<CR>', { desc = 'Blame' })
+
+-- Highlights
+map('n', '<leader>hc', ':nohl<CR>', { desc = 'Clear' })
+map('n', '<leader>hr', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = 'Replace' })
 
 -- Lines
 -- Reference: https://vim.fandom.com/wiki/Moving_lines_up_or_down
@@ -114,7 +97,7 @@ map('n', '<leader>ll', ":LspLog<CR>", { desc = 'Log' })
 -- LSP lines
 map('n', '<leader>ld', require('lsp_lines').toggle, { desc = 'LSP lines' })
 
--- LSP py-lsp (venv)
+-- LSP py-lsp
 map('n', '<leader>va', ":PyLspActivateVenv<CR>", { desc = 'Activate' })
 map('n', '<leader>vc', ":PyLspCurrentVenv<CR>", { desc = 'Current' })
 map('n', '<leader>vd', ":PyLspDeactivateVenv<CR>", { desc = 'Deactivate' })
@@ -134,14 +117,33 @@ map('n', '<leader>nl', ":NullLsLog<CR>", { desc = 'Log' })
 map('n', '<leader>ni', ":NullLsInfo<CR>", { desc = 'Info' })
 map('n', '<leader>nf', ":lua vim.lsp.buf.formatting()<CR>", { desc = 'Format' })
 
+-- Nvim-tree
+map('n', 't', ':NvimTreeToggle<CR>', { desc = 'NvimTree' })
+-- map('n', 'tc', ':NvimTreeCollapse<CR>', { desc = 'Collapse' })
+-- map('n', '<leader>x', ':NvimTreeFindFile<CR>', { desc = 'Find file' })
+-- map('n', '<leader>t', ':Lex 30<CR>', { desc = 'Netrw', silent = true })
+
+-- Search
+map('n', '*', '*N', { desc = 'Find word' }) -- Fix * - don't move to next match
+map('n', 'n', 'nzzzv') -- Fix n: keep cursor in center
+map('n', 'N', 'Nzzzv') -- Fix N: keep cursor in center
+
 -- Shell movements
 map('i', '<C-A>', '<ESC>I', { desc = 'Shell movement' })
 map('i', '<C-E>', '<ESC>A', { desc = 'Shell movement' })
 
--- System-wide clipboard
-map('n', '<leader>y', '\"+y', { desc = 'Yank' })
-map('v', '<leader>y', '\"+y', { desc = 'Yank' })
-map('n', '<leader>y', '\"+Y', { desc = 'Yank' })
+-- Splits
+map('n', '<leader>sv', ':vsplit<CR>', { desc = 'Vertical' })
+map('n', '<leader>sh', ':split<CR>' , { desc = 'Horizontal' })
+map('n', '<leader>ss', '<C-w>x', { desc = 'Swap' })
+map('n', '<C-k>', '<C-w>k', { desc = 'Split [Up]' }) -- Move up
+map('n', '<C-j>', '<C-w>j', { desc = 'Split [Down]' }) -- Move down
+map('n', '<C-h>', '<C-w>h', { desc = 'Split [Left]' }) -- Move left
+map('n', '<C-l>', '<C-w>l', { desc = 'Split [Right]' }) -- Move right
+map('n', '<C-A-k>', ':resize -5<CR>') -- Up
+map('n', '<C-A-j>', ':resize +5<CR>') -- Down
+map('n', '<C-A-h>', ':vertical resize -5<CR>') -- Grow
+map('n', '<C-A-l>', ':vertical resize +5<CR>') -- Shrink
 
 -- Telescope
 map('n', '<leader>tb', ":Telescope buffers<CR>", { desc = 'Buffers' })
@@ -168,16 +170,16 @@ map('n', '<leader>db', ':lua require"telescope".extensions.dap.list_breakpoints{
 map('n', '<leader>dv', ':lua require"telescope".extensions.dap.variables{}<CR>', { desc = 'Variables' })
 map('n', '<leader>df', ':lua require"telescope".extensions.dap.frames{}<CR>', { desc = 'Frames' })
 
--- Highlights
-map('n', '<leader>hc', ':nohl<CR>', { desc = 'Clear' })
-map('n', '<leader>hr', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = 'Replace' })
+-- Undo & Redo
+map('n', "<u>", ':undo<CR>', { desc = 'Undo' }) -- Undo
+map('n', "<C-r>", ':redo<CR>', { desc = 'Redo' }) -- Redo
 
 -- Use operator pending mode to visually select the whole buffer
 -- e.g. dA = delete buffer ALL, yA = copy whole buffer ALL
 map('o', 'A', ':<C-U>normal! mzggVG<CR>`z')
 map('x', 'A', ':<C-U>normal! ggVG<CR>')
 
--- VISUAL --
+-- Visual
 map('v', '<', '<gv') -- Indent left
 map('v', '>', '>gv') -- Indent right
 map('v', 'K', ":move '<-2<CR>gv-gv") -- Move up
