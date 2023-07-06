@@ -1,7 +1,7 @@
 # Default programs
 export BROWSER="Firefox"
 export EDITOR="nvim"
-export TERMINAL="kitty"
+export TERMINAL="alacritty"
 export VISUAL="nvim"
 export WM="qtile"
 
@@ -29,7 +29,7 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export GIT_CONFIG="$XDG_CONFIG_HOME/git/config"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export HISTFILE="$XDG_STATE_HOME/zsh/history"
-export KITTY_CONFIG_DIRECTORY="$XDG_CONFIG_HOME/kitty"
+#export KITTY_CONFIG_DIRECTORY="$XDG_CONFIG_HOME/kitty"
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export ZDOTDIR="$HOME/.config/zsh/"
 export XINITRC="$HOME/.config/x11/"

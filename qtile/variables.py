@@ -2,7 +2,7 @@
 mod = 'mod4'
 mod1 = 'mod1'
 browser = 'firefox'
-terminal = 'kitty'
+terminal = 'alacritty'
 menu = 'dmenu_run'  # rofi -show drun
 
 # Screens

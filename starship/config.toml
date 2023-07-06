@@ -107,7 +107,7 @@ format = '\[[$symbol($version(-$name))]($style)\]'
 [cmd_duration]
 min_time = 2_000
 disabled = false
-format = '\[[⏱ $duration]($style)\]'
+format = '\[[$duration]($style)\]'
 
 [cmake]
 symbol = "󰔶 "
@@ -134,6 +134,20 @@ symbol = " "
 always_show_remote = true
 symbol = " "
 format = '\[[$symbol$branch]($style)\] '
+
+[git_status]
+conflicted = '='
+ahead = '⇡'
+behind = '⇣'
+diverged = '⇕'
+up_to_date = ''
+untracked = '?'
+stashed = '$'
+modified = '!'
+staged = '+'
+renamed = ''
+deleted = '✘'
+style = 'bold white'
 
 [golang]
 symbol = " "
@@ -209,7 +223,8 @@ symbol = " "
 format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
 
 [rust]
-symbol = " "
+symbol = " "
+version_format = "v${raw}"
 format = '\[[$symbol($version)]($style)\]'
 
 [sudo]

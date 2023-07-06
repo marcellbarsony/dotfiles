@@ -63,6 +63,7 @@ local options = {
   -- Cursor
   cursorcolumn = false,
   cursorline = false,
+  guicursor = "n:block,i:hor1",
   scrolloff = 10,
   sidescrolloff = 8,
 

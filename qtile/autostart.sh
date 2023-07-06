@@ -11,7 +11,7 @@ run() {
 picom -b &
 
 # Terminal
-run kitty
+run alacritty
 
 # Displays & Wallapper
 #python /home/marci/.local/bin/xdisplay.py
