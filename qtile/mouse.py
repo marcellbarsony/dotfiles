@@ -8,10 +8,10 @@ from variables import *
 
 # Mouse callbacks
 def open_sysmonitor():
-    qtile.cmd_spawn('kitty --class neofetch --name neofetch sh -c "neofetch; exec bash"')
+    qtile.cmd_spawn(f'kitty --class neofetch --name neofetch sh -c "neofetch; exec bash"')
 
 def open_pacman():
-    qtile.cmd_spawn('kitty --class pacman --name pacman sh -c "sudo pacman -Syu; exec bash"')
+    qtile.cmd_spawn(f'kitty --class pacman --name pacman sh -c "sudo pacman -Syu; exec bash"')
 
 # Drag floating layouts
 mouse = [

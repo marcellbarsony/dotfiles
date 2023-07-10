@@ -73,6 +73,9 @@ starship/*.log
 # VirtualBox
 VirtualBox/
 
+# VLC
+vlc/
+
 # Wireplumber
 wireplumber/
 

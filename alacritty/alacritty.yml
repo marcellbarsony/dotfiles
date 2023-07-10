@@ -25,7 +25,7 @@ window:
   decorations: full
 
   # Background opacity
-  opacity: 0.8
+  opacity: 0.75
 
   # Startup Mode (changes require restart)
   startup_mode: Windowed
@@ -83,7 +83,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 13.0
+  size: 12.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
