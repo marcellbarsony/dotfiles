@@ -5,7 +5,7 @@ from libqtile.config import Match
 auto_fullscreen = True
 auto_minimize = False
 bring_front_click = False
-cursor_warp = True
+cursor_warp = False
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: list
 focus_on_window_activation = "smart"

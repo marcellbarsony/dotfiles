@@ -48,6 +48,7 @@ require("lazy").setup({
       'hrsh7th/cmp-cmdline',
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-path',
+      'hrsh7th/cmp-nvim-lsp-signature-help',
     },
   },
 
@@ -60,6 +61,18 @@ require("lazy").setup({
       'theHamsta/nvim-dap-virtual-text', -- Virtual text
     },
   },
+
+  -- Greeter
+  'goolord/alpha-nvim',
+
+  -- Git
+  'lewis6991/gitsigns.nvim',
+
+  -- HEX
+  'RaafatTurki/hex.nvim',
+
+  -- Indent lines
+  'lukas-reineke/indent-blankline.nvim',
 
   -- LSP
   'neovim/nvim-lspconfig',
@@ -78,15 +91,6 @@ require("lazy").setup({
 
   -- LSP Saga
   'glepnir/lspsaga.nvim',
-
-  -- Greeter
-  'goolord/alpha-nvim',
-
-  -- Git
-  'lewis6991/gitsigns.nvim',
-
-  -- Indent lines
-  'lukas-reineke/indent-blankline.nvim',
 
   -- Nvim tree
   { 'nvim-tree/nvim-tree.lua',

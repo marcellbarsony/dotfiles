@@ -6,6 +6,7 @@
 -- https://github.com/jay-babu/mason-null-ls.nvim#configuration
 require("mason-null-ls").setup({
   ensure_installed = { 
-    "rustfmt",
+    -- Rustfmt is now deprecated - should be installed with rustup
+    -- "rustfmt",
   }
 })

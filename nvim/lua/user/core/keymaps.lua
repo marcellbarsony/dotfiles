@@ -38,12 +38,12 @@ map("", "<left>", "<nop>")
 map("", "<right>", "<nop>")
 
 -- Buffers
-map("n", "<C-]>", ":bn<CR>", { desc = "Buffer [Next]" }) -- Move to next
-map("n", "<C-[>", ":bp<CR>", { desc = "Buffer [Prev]" }) -- Move to prev
-map("n", "<C-'>", ":b#<CR>", { desc = "Buffer [To last]" }) -- Move to last
-map("n", "<C-q>", ":bdelete<CR>", { desc = "Buffer [Delete]" }) -- Delete buffer
+map("n", "<C-]>", ":bn<CR>", { desc = "Buffer [Next]" })
+map("n", "<C-[>", ":bp<CR>", { desc = "Buffer [Prev]" })
+map("n", "<C-'>", ":b#<CR>", { desc = "Buffer [To last]" })
+map("n", "<C-q>", ":bdelete<CR>", { desc = "Buffer [Delete]" })
 map("n", "<C-^>", ":_#<CR>", { desc = "Alternate file" }) -- :help alternate-file
-map("n", "<ESC>", "", { desc = "Unmap <C-[>" }) -- Unmap buffer prev
+--map("n", "<ESC>", "", { desc = "Unmap <C-[>" }) -- Unmap buffer prev
 
 -- Clipboard
 map("n", "<leader>y", "\"+y", { desc = "Yank [Global]" })

@@ -12,6 +12,7 @@ local check_backspace = function()
 end
 
 -- Kind icons
+-- https://github.com/hrsh7th/nvim-cmp/wiki/Menu-Appearance#how-to-add-visual-studio-code-codicons-to-the-menu
 local kind_icons = {
   Class = "",
   Color = "",
@@ -79,7 +80,9 @@ cmp.setup({
   mapping = {
 
     ['<CR>'] = cmp.mapping.confirm({ select = false }), -- Accept selected item. 'false' confirms explicitly selected items.
+
     -- Luasnips
+    -- https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
@@ -172,18 +175,22 @@ cmp.setup({
   experimental = {
     ghost_text = true,
   }
+
 })
 
 -- Configuration for specific filetype
+-- https://github.com/hrsh7th/nvim-cmp#setup
 cmp.setup.filetype('gitcommit', {
   sources = cmp.config.sources({
-    { name = 'cmp_git' }, -- Specify the `cmp_git` source if installed
+    { name = 'cmp_git' },
   }, {
     { name = 'buffer' },
   })
 })
 
--- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
+-- `/` & `?` completions
+-- https://github.com/hrsh7th/cmp-cmdline#setup
+-- Conflicts with `native_menu`
 cmp.setup.cmdline({ '/', '?' }, {
   mapping = cmp.mapping.preset.cmdline(),
   sources = {
@@ -191,7 +198,9 @@ cmp.setup.cmdline({ '/', '?' }, {
   }
 })
 
--- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+-- `:` completions
+-- https://github.com/hrsh7th/cmp-cmdline#setup
+-- Conflicts with `native_menu`
 cmp.setup.cmdline(':', {
   mapping = cmp.mapping.preset.cmdline(),
   sources = cmp.config.sources({
