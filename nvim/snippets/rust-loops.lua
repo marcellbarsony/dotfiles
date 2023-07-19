@@ -1,7 +1,7 @@
--- Python snippets [Sockets]
--- https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
+-- Rust snippets [loops]
+-- Docs: https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
 
--- SHORTHANDS -- {{{
+-- SHORTHANDS --{{{
 local ls = require("luasnip")
 local s = ls.snippet
 local sn = ls.snippet_node
@@ -22,9 +22,9 @@ local fmta = require("luasnip.extras.fmt").fmta
 local types = require("luasnip.util.types")
 local conds = require("luasnip.extras.conditions")
 local conds_expand = require("luasnip.extras.conditions.expand")
--- }}}
+--}}}
 
--- FUNCTIONS -- {{{
+-- FUNCTIONS --{{{
 -- Same
 local same = function(index)
   return f(function(arg)
@@ -34,18 +34,48 @@ end
 -- }}}
 
 -- SNIPPETS -- {{{
-ls.add_snippets("python", {
-  s( -- Socket creation
-    "socket",
-    fmt('{} = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n'..
-      "{}.connect(({}, {}))\n"..
-      "{}", {
-      i(1, "s"),
+ls.add_snippets("rust", {
+  s( -- for
+   "for",
+    fmt("for {} in {} {{\n" ..
+      "\t{}\n"..
+      "}}\n"..
+      "{}"
+      , {
+      i(1, "loop_variable"),
+      i(2, "iterator"),
+      i(3, "// iterator loop"),
+      i(4),
+      }
+    )
+  ),
+  s( -- loop
+    "loop",
+    fmt("'{}: loop {{\n" ..
+      "\t{}\n"..
+      "\tbreak '{};\n"..
+      "}}\n"..
+      "{}"
+      , {
+      i(1, "label"),
+      i(2, "// loop"),
       same(1),
-      i(2, "target_ip"),
-      i(3, "target_port"),
-      i(0),
-    })
+      i(5),
+      }
+    )
+  ),
+  s( -- while
+    "while",
+    fmt("while {} {{\n" ..
+      "\t{}\n"..
+      "}}\n"..
+      "{}"
+      , {
+      i(1, "bool_condition"),
+      i(2, "// while loop"),
+      i(3),
+      }
+    )
   ),
 })
--- }}}
+--}}}

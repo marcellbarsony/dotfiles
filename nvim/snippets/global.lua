@@ -1,7 +1,7 @@
 -- Global snippets
 -- https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
 
--- SHORTHANDS --{{{
+-- SHORTHANDS -- {{{
 local ls = require("luasnip")
 local s = ls.snippet
 local sn = ls.snippet_node
@@ -22,12 +22,12 @@ local fmta = require("luasnip.extras.fmt").fmta
 local types = require("luasnip.util.types")
 local conds = require("luasnip.extras.conditions")
 local conds_expand = require("luasnip.extras.conditions.expand")
---}}}
+-- }}}
 
--- FUNCTIONS --{{{
---}}}
+-- FUNCTIONS -- {{{
+-- }}}
 
--- SNIPPETS --{{{
+-- SNIPPETS -- {{{
 ls.add_snippets("all", {
   s( -- date
     "date",
@@ -90,4 +90,4 @@ ls.add_snippets("all", {
     })
   ),
 })
---}}}
+-- }}}

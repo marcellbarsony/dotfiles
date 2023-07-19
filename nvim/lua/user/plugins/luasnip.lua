@@ -1,13 +1,15 @@
 -- Luasnip
 -- https://github.com/L3MON4D3/LuaSnip
+-- :h luasnip.txt
 
 local ls = require("luasnip")
 local types = require("luasnip.util.types")
 
--- Config (virtual text)
-ls.config.set_config({
+-- Config
+-- :h luasnip-config-options
+ls.setup({
   history = true,
-  updateevents = "TextChanged,TextChangedI", -- Update more often, (:h events)
+  updateevents = "TextChanged,TextChangedI", -- :h events
   ext_opts = {
     [types.choiceNode] = {
       active = {
@@ -15,60 +17,52 @@ ls.config.set_config({
       },
     },
   },
-  ext_base_prio = 300, -- treesitter-hl has 100, use something higher (default is 200).
-  ext_prio_increase = 1, -- minimal increase in priority.
+  ext_base_prio = 300,
+  ext_prio_increase = 1,
   enable_autosnippets = true,
   store_selection_keys = "<Tab>",
-	-- luasnip uses this function to get the currently active filetype. This
-	-- is the (rather uninteresting) default, but it's possible to use
-	-- eg. treesitter for getting the current filetype by setting ft_func to
-	-- require("luasnip.extras.filetype_functions").from_cursor (requires
-	-- `nvim-treesitter/nvim-treesitter`). This allows correctly resolving
-	-- the current filetype in eg. a markdown-code block or `vim.cmd()`.
 	ft_func = function()
 		return vim.split(vim.bo.filetype, ".", true)
 	end,
 })
 
--- Keymaps
+-- Keymaps {{{
+-- https://github.com/L3MON4D3/LuaSnip/#keymaps
+
 -- Reload snippets <Ctrl-u>
 vim.keymap.set({ "i", "s" }, "<c-u>", '<cmd>source ~/.config/nvim/lua/user/plugins/luasnip.lua<CR>')
 
--- Jump forward (expand) <Ctrl-k>
-vim.keymap.set({ "i", "s" }, "<c-b>", function()
+-- Jump (forward)
+vim.keymap.set({ "i", "s" }, "<c-l>", function()
   if ls.expand_or_jumpable() then
     ls.expand_or_jump()
   end
 end, { silent = true })
 
--- Jump backwards <Ctrl-j>
-vim.keymap.set({ "i", "s" }, "<c-j>", function()
+-- Jump (backward)
+vim.keymap.set({ "i", "s" }, "<c-h>", function()
   if ls.jumpable() then
     ls.jump(-1)
   end
 end, { silent = true })
 
---vim.keymap.set({ "i", "s" }, "<a-p>", function()
---  if ls.expand_or_jumpable() then
---    ls.expand()
---  end
---end, { silent = true })
-
-vim.keymap.set( "i", "<c-l>", function()
+-- Choice (+)
+vim.keymap.set( "i", "<c-k>", function()
 	if ls.choice_active() then
 		ls.change_choice(1)
 	end
 end)
 
-vim.keymap.set({ "i", "s" }, "<a-h>", function()
+-- Choice (-)
+vim.keymap.set({ "i" }, "<c-j>", function()
 	if ls.choice_active() then
 		ls.change_choice(-1)
 	end
 end)
 
---vim.keymap.set({ "i", "s" }, "<c-u>", '<cmd>lua require("luasnip.extras.select_choice")()<cr><C-c><C-c>')
+-- }}}
 
--- Snippets (Lua)
+-- Source snippets
 require("luasnip.loaders.from_lua").load({
   paths = "~/.config/nvim/snippets/"
 })

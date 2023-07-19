@@ -1,7 +1,7 @@
 -- Rust snippets
 -- Docs: https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
 
--- SHORTHANDS --{{{
+-- SHORTHANDS -- {{{
 local ls = require("luasnip")
 local s = ls.snippet
 local sn = ls.snippet_node
@@ -22,128 +22,19 @@ local fmta = require("luasnip.extras.fmt").fmta
 local types = require("luasnip.util.types")
 local conds = require("luasnip.extras.conditions")
 local conds_expand = require("luasnip.extras.conditions.expand")
---}}}
+-- }}}
 
--- FUNCTIONS --{{{
+-- FUNCTIONS -- {{{
 -- Same
 local same = function(index)
   return f(function(arg)
     return arg[1]
   end, { index })
 end
---}}}
+-- }}}
 
--- SNIPPETS --{{{
+-- SNIPPETS -- {{{
 ls.add_snippets("rust", {
-  s( -- let
-    "let",
-    fmt("let {}\n" ..
-      "{}"
-      , {
-      c(1, {
-        -- Array
-        sn(nil, {
-          i(1),
-          i(2, "arr"),
-          t": (",
-          i(3, "type"),
-          t", ",
-          i(4, "count"),
-          t") = [",
-          i(5, "objects"),
-          t"];"
-        }),
-        -- Bool
-        sn(nil, {
-          i(1),
-          i(2, "bool"),
-          t": bool = ",
-          c(3, {
-            sn(nil, {i(1), t"true"}),
-            sn(nil, {i(1), t"false"}),
-          }),
-          t";",
-        }),
-        -- Integer
-        sn(nil, {
-          i(1),
-          i(2, "int"),
-          t": ",
-          c(3, {
-            sn(nil, {i(1), i(2, "type")}),
-            sn(nil, {i(1), t"i32"}),
-            sn(nil, {i(1), t"u32"}),
-            sn(nil, {i(1), t"f32"}),
-            sn(nil, {i(1), t"i64"}),
-            sn(nil, {i(1), t"u64"}),
-            sn(nil, {i(1), t"f64"}),
-            sn(nil, {i(1), t"i128"}),
-            sn(nil, {i(1), t"u128"}),
-            sn(nil, {i(1), t"f128"}),
-            sn(nil, {i(1), t"isize"}),
-            sn(nil, {i(1), t"usize"}),
-          }),
-          t" = ",
-          i(4, "num"),
-          t";"
-        }),
-        -- Strings
-        sn(nil, {
-          i(1),
-          i(2, "str"),
-          t": ",
-          c(3, {
-            sn(nil, {i(1), t"&str", t' = "', i(2), t'";'}),
-            sn(nil, {i(1), t"String", t" = String::new();"}),
-            sn(nil, {i(1), t"String", t' = String::from("', i(2), t'");'}),
-            sn(nil, {i(1), t"String", t' = format!("', i(2, 'Hello {}", "world!'), t'");'}),
-            sn(nil, {i(1), t"char", t' = "', i(2, ""), t'";'}),
-          }),
-        }),
-        -- Tuple
-        sn(nil, {
-          i(1),
-          i(2, "tup"),
-          t": (",
-          i(3, "type"),
-          t") = (",
-          i(4, "values"),
-          t");",
-        }),
-        -- Vector
-        sn(nil, {
-          i(1),
-          i(2, "vec"),
-          t": Vec<",
-          i(3, "type"),
-          t"> = ",
-          c(4, {
-            sn(nil, {i(1), t"Vec::new();"}),
-            sn(nil, {i(1), t"vec![", i(2, "values"), t"];"}),
-          }),
-        }),
-      }),
-      i(2),
-      }
-    )
-  ),
-  s( -- enum
-    "enum",
-    fmt("enum {} {{\n" ..
-      "\t{}{}\n"..
-      "}}\n"..
-      "{}"
-      , {
-      i(1, "EnumName"),
-      c(2, {
-        sn(nil, {i(1), i(2, "Variant"), t"(", i(3, "type"), t"),"}),
-        sn(nil, {i(1), i(2, "Variant"), t","}),
-      }),
-      i(3),
-      i(4),
-      }
-    )
-  ),
   s( -- if/else-if/else
     "if",
     fmt("if {} {{\n" ..
@@ -184,20 +75,6 @@ ls.add_snippets("rust", {
       }
     )
   ),
-  s( -- for loop
-   "for",
-    fmt("for {} in {} {{\n" ..
-      "\t{}\n"..
-      "}}\n"..
-      "{}"
-      , {
-      i(1, "loop_variable"),
-      i(2, "iterator"),
-      i(3, "// iterator loop"),
-      i(4),
-      }
-    )
-  ),
   s( -- function
     "fn",
     fmt("fn {}({}){} {{\n" ..
@@ -206,7 +83,10 @@ ls.add_snippets("rust", {
       "{}"
       , {
       i(1, "fn_name"),
-      i(2, "parameter"),
+      c(2, {
+        sn(nil, {i(1), i(2, "parameter"), t": ", i(3, "type")}),
+        sn(nil, {i(1), t""}),
+      }),
       c(3, {
         sn(nil, {i(1), t" -> ", i(2, "return")}),
         sn(nil, {i(1), t""}),
@@ -216,36 +96,21 @@ ls.add_snippets("rust", {
       }
     )
   ),
-  s( -- loop
-    "loop",
-    fmt("'{}: loop {{\n" ..
-      "\t{}\n"..
-      "\tbreak '{};\n"..
-      "}}\n"..
-      "{}"
-      , {
-      i(1, "label"),
-      i(2, "// loop"),
-      same(1),
-      i(5),
-      }
-    )
-  ),
   s( -- match
     "match",
     fmt("match {} {{\n" ..
-      "\t{} => {}{}\n"..
-      "}}\n"..
+      "\t{} => {}{}" ..
+      "\n}}\n" ..
       "{}"
       , {
       i(1, "expression"),
-      i(2, "pattern"),
+      i(2, "_"),
       c(3, {
         d(1, function() -- action
           return sn(nil, {
             i(1),
             i(2, "action"),
-            t({","}),
+            t({",", "\t"}),
             })
         end),
         d(1, function() -- case action
@@ -262,35 +127,5 @@ ls.add_snippets("rust", {
       }
     )
   ),
-  s( -- struct
-    "struct",
-    fmt("struct {} {{\n" ..
-      "\t{}{}\n"..
-      "}}\n"..
-      "{}"
-      , {
-      i(1, "StructName"),
-      c(2, {
-        sn(nil, {i(1), i(2, "key"), t": ", i(3, "type"), t","}),
-        sn(nil, {i(1), i(2, "key"), t","}),
-      }),
-      i(3),
-      i(4),
-      }
-    )
-  ),
-  s( -- while
-    "while",
-    fmt("while {} {{\n" ..
-      "\t{}\n"..
-      "}}\n"..
-      "{}"
-      , {
-      i(1, "condition"),
-      i(2, "// while loop"),
-      i(3),
-      }
-    )
-  ),
 })
---}}}
+-- }}}

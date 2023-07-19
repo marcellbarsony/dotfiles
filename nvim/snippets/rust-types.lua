@@ -1,5 +1,5 @@
--- Python snippets [Sockets]
--- https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
+-- Rust snippets
+-- Docs: https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
 
 -- SHORTHANDS -- {{{
 local ls = require("luasnip")
@@ -34,18 +34,40 @@ end
 -- }}}
 
 -- SNIPPETS -- {{{
-ls.add_snippets("python", {
-  s( -- Socket creation
-    "socket",
-    fmt('{} = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n'..
-      "{}.connect(({}, {}))\n"..
-      "{}", {
-      i(1, "s"),
-      same(1),
-      i(2, "target_ip"),
-      i(3, "target_port"),
-      i(0),
-    })
+ls.add_snippets("rust", {
+  s( -- enum
+    "enum",
+    fmt("enum {} {{\n" ..
+      "\t{}{}\n"..
+      "}}\n"..
+      "{}"
+      , {
+      i(1, "EnumName"),
+      c(2, {
+        sn(nil, {i(1), i(2, "Variant"), t"(", i(3, "type"), t"),"}),
+        sn(nil, {i(1), i(2, "Variant"), t","}),
+      }),
+      i(3),
+      i(4),
+      }
+    )
+  ),
+  s( -- struct
+    "struct",
+    fmt("struct {} {{\n" ..
+      "\t{}{}\n"..
+      "}}\n"..
+      "{}"
+      , {
+      i(1, "StructName"),
+      c(2, {
+        sn(nil, {i(1), i(2, "key"), t": ", i(3, "type"), t","}),
+        sn(nil, {i(1), i(2, "key"), t","}),
+      }),
+      i(3),
+      i(4),
+      }
+    )
   ),
 })
 -- }}}
