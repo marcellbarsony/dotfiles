@@ -12,7 +12,7 @@ sudo pacman -S firefox pipewire-jack
 
 - Sign in to Firefox
 
-- Sign in to containers (enable sync)
+- Sign in to containers & enable sync
 
 - Wait until settings & plugin sync
 
@@ -27,8 +27,6 @@ sudo pacman -S firefox pipewire-jack
 ### Preferences [ArkenFox]
 
 - Clone the [ArkenFox repository](https://github.com/arkenfox/user.js)
-
-- Terminate Firefox
 
 - Copy `updater.sh`, `user.js` and `user-overrides.js` to `~/.mozilla/firefox/<user_profile>/`
 

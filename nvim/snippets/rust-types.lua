@@ -38,13 +38,15 @@ ls.add_snippets("rust", {
   s( -- enum
     "enum",
     fmt("enum {} {{\n" ..
-      "\t{}{}\n"..
-      "}}\n"..
+      "\t{}{}\n" ..
+      "}}\n" ..
       "{}"
       , {
       i(1, "EnumName"),
       c(2, {
+        -- Variant & type
         sn(nil, {i(1), i(2, "Variant"), t"(", i(3, "type"), t"),"}),
+        -- Variant
         sn(nil, {i(1), i(2, "Variant"), t","}),
       }),
       i(3),
@@ -52,16 +54,49 @@ ls.add_snippets("rust", {
       }
     )
   ),
+  s( -- impl
+    "impl",
+    fmt("impl {} {{\n" ..
+      "\t{}\n" ..
+      "}}\n" ..
+      "{}"
+      , {
+      c(1, {
+        -- Trait
+        sn(nil, {i(1), i(2, "Trait"), t" for ", i(3, "ImplName")}),
+        -- No Trait
+        sn(nil, {i(1), i(2, "ImplName")}),
+      }),
+      i(2, "// Methods"),
+      i(3),
+      }
+    )
+  ),
+  s( -- module
+    "mod",
+    fmt("mod {} {{\n" ..
+      "\t{}\n" ..
+      "}}\n" ..
+      "{}"
+      , {
+      i(1, "module_name"),
+      i(2, "// Modules"),
+      i(3),
+      }
+    )
+  ),
   s( -- struct
     "struct",
     fmt("struct {} {{\n" ..
-      "\t{}{}\n"..
-      "}}\n"..
+      "\t{}{}\n" ..
+      "}}\n" ..
       "{}"
       , {
       i(1, "StructName"),
       c(2, {
+        -- Key & type
         sn(nil, {i(1), i(2, "key"), t": ", i(3, "type"), t","}),
+        -- Key
         sn(nil, {i(1), i(2, "key"), t","}),
       }),
       i(3),

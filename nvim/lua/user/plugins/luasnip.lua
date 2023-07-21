@@ -13,7 +13,7 @@ ls.setup({
   ext_opts = {
     [types.choiceNode] = {
       active = {
-        virt_text = { { "●", "GruvboxOrange" } },
+        virt_text = { { "󰁎", "GruvboxOrange" } },
       },
     },
   },
@@ -26,7 +26,7 @@ ls.setup({
 	end,
 })
 
--- Keymaps {{{
+-- Keymaps --- {{{
 -- https://github.com/L3MON4D3/LuaSnip/#keymaps
 
 -- Reload snippets <Ctrl-u>

@@ -62,7 +62,7 @@ ls.add_snippets("rust", {
           t", ",
           i(4, "N"),
           t") = [",
-          i(5, "objects"),
+          i(5, "elements"),
           t"];"
         }),
         -- Bool
@@ -86,16 +86,36 @@ ls.add_snippets("rust", {
           i(4, "num"),
           t";"
         }),
+        -- Option
+        sn(nil, {
+          i(1),
+          i(2, "opt"),
+          t": Option<",
+          i(3, "type"),
+          t"> = ",
+          c(4, {
+            -- None
+            sn(nil, {i(1), t"None"}),
+            -- Some
+            sn(nil, {i(1), t"Some(", i(2, "value"), t")"}),
+          }),
+          t";",
+        }),
         -- Strings
         sn(nil, {
           i(1),
           i(2, "str"),
           t": ",
           c(3, {
+            -- String slice (&str)
             sn(nil, {i(1), t"&str", t' = "', i(2), t'";'}),
+            -- String literal (empty)
             sn(nil, {i(1), t"String", t" = String::new();"}),
+            -- String literal (content)
             sn(nil, {i(1), t"String", t' = String::from("', i(2), t'");'}),
+            -- String format
             sn(nil, {i(1), t"String", t' = format!("', i(2, 'Hello {}", "world!'), t'");'}),
+            -- Character
             sn(nil, {i(1), t"char", t' = "', i(2, ""), t'";'}),
           }),
         }),
@@ -106,7 +126,7 @@ ls.add_snippets("rust", {
           t": (",
           i(3, "type"),
           t") = (",
-          i(4, "values"),
+          i(4, "elements"),
           t");",
         }),
         -- Vector
@@ -117,8 +137,10 @@ ls.add_snippets("rust", {
           i(3, "type"),
           t"> = ",
           c(4, {
+            -- Vector (empty)
             sn(nil, {i(1), t"Vec::new();"}),
-            sn(nil, {i(1), t"vec![", i(2, "values"), t"];"}),
+            -- Vector (content)
+            sn(nil, {i(1), t"vec![", i(2, "items"), t"];"}),
           }),
         }),
       }),

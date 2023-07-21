@@ -35,60 +35,24 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("rust", {
-  s( -- if/else-if/else
-    "if",
-    fmt("if {} {{\n" ..
-      "\t{}\n"..
-      "}}{}\n"..
-      "{}"
-      , {
-      i(1, "condition"),
-      i(2, "// if"),
-      c(3, {
-        d(1, function() -- nothing
-          return sn(nil, {
-            i(1),
-            t({""}),
-          })
-        end),
-        d(1, function() -- else
-          return sn(nil, {
-            i(1),
-            t({" else {", "\t"}),
-            i(2, "// else"),
-            t({"", "}"}),
-            })
-        end),
-        d(1, function() -- else-if
-          return sn(nil, {
-            i(1),
-            t({" else if {", "\t"}),
-            i(2, "// else if"),
-            t({"", "} else {"}),
-            t({"", "\t"}),
-            i(3, "// else"),
-            t({"", "}"}),
-            })
-        end),
-      }),
-      i(4),
-      }
-    )
-  ),
   s( -- function
     "fn",
     fmt("fn {}({}){} {{\n" ..
-      "\t{}\n"..
-      "}}\n"..
+      "\t{}\n" ..
+      "}}\n" ..
       "{}"
       , {
       i(1, "fn_name"),
       c(2, {
+        -- parameters
         sn(nil, {i(1), i(2, "parameter"), t": ", i(3, "type")}),
+        -- no parameters
         sn(nil, {i(1), t""}),
       }),
       c(3, {
+        -- return
         sn(nil, {i(1), t" -> ", i(2, "return")}),
+        -- no return
         sn(nil, {i(1), t""}),
       }),
       i(4, "// function"),
@@ -96,34 +60,17 @@ ls.add_snippets("rust", {
       }
     )
   ),
-  s( -- match
-    "match",
-    fmt("match {} {{\n" ..
-      "\t{} => {}{}" ..
-      "\n}}\n" ..
-      "{}"
-      , {
-      i(1, "expression"),
-      i(2, "_"),
-      c(3, {
-        d(1, function() -- action
-          return sn(nil, {
-            i(1),
-            i(2, "action"),
-            t({",", "\t"}),
-            })
-        end),
-        d(1, function() -- case action
-          return sn(nil, {
-            i(1),
-            t({"{", "\t\t"}),
-            i(2, "// case"),
-            t({"", "\t},", "\t"}),
-            })
-        end),
+  s( -- use
+    "use",
+    fmt("use {}::{};\n{}", {
+      i(1, "module"),
+      c(2, {
+        -- Glob operator
+        sn(nil, {i(1), t"*"}), -- Glob operator
+        -- Nested paths
+        sn(nil, {i(1), t"(", i(2, "module"), t")"}),
       }),
-      i(4),
-      i(5),
+      i(3),
       }
     )
   ),
