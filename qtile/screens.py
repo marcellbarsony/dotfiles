@@ -246,8 +246,8 @@ screens = [
             widget.Net(
                 format='{down}  {up}',
                 foreground=PRIMARY,
-                #prefix='M',
                 update_interval=10,
+                use_bits=True,
                 ),
             widget.Sep(
                 foreground=inactive,
@@ -269,7 +269,7 @@ screens = [
             ),
             widget.ThermalSensor(
                 foreground=PRIMARY,
-                format='{temp:.1f}{unit}',
+                format=' {temp:.0f}',
                 tag_sensor='CPU',
                 threshold=80,
                 update_interval=30,
@@ -582,8 +582,8 @@ screens = [
             widget.Net(
                 format='{down}  {up}',
                 foreground=PRIMARY,
-                #prefix='M',
                 update_interval=10,
+                use_bits=True,
                 ),
             widget.Sep(
                 foreground=inactive,
@@ -605,7 +605,7 @@ screens = [
             ),
             widget.ThermalSensor(
                 foreground=PRIMARY,
-                format='{temp:.1f}{unit}',
+                format=' {temp:.0f}',
                 tag_sensor='CPU',
                 threshold=80,
                 update_interval=30,
@@ -918,8 +918,8 @@ screens = [
             widget.Net(
                 format='{down}  {up}',
                 foreground=PRIMARY,
-                #prefix='M',
                 update_interval=10,
+                use_bits=True,
                 ),
             widget.Sep(
                 foreground=inactive,
@@ -941,7 +941,7 @@ screens = [
             ),
             widget.ThermalSensor(
                 foreground=PRIMARY,
-                format='{temp:.1f}{unit}',
+                format=' {temp:.0f}',
                 tag_sensor='CPU',
                 threshold=80,
                 update_interval=30,

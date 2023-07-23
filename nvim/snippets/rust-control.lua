@@ -42,7 +42,7 @@ ls.add_snippets("rust", {
       "}}{}\n" ..
       "{}"
       , {
-      i(1, "condition"),
+      i(1, "<condition>"),
       i(2, "// if"),
       c(3, {
         d(1, function() -- nothing
@@ -63,7 +63,7 @@ ls.add_snippets("rust", {
           return sn(nil, {
             i(1),
             t({" else if "}),
-            i(2, "condition"),
+            i(2, "<condition>"),
             t({" {", "\t"}),
             i(3, "// else if"),
             t({"", "} else {"}),
@@ -80,33 +80,52 @@ ls.add_snippets("rust", {
   s( -- match
     "match",
     fmt("match {} {{\n" ..
-      "\t{} => {}{}" ..
+      "\t{}" ..
       "\n}}\n" ..
       "{}"
       , {
-      i(1, "expression"),
-      i(2, "_"),
-      c(3, {
+      i(1, "<expression>"),
+      c(2, {
         d(1, function() -- action
           return sn(nil, {
             i(1),
-            i(2, "action"),
+            i(2, "_"),
+            t({" => "}),
+            i(3, "<action>"),
             t({","}),
+            i(4),
+            })
+        end),
+        d(1, function() -- error handling
+          return sn(nil, {
+            i(1),
+            t({"Ok("}),
+            i(2),
+            t({") => "}),
+            i(3, "Type"),
+            t({",", "\tErr("}),
+            i(4),
+            t({") => "}),
+            i(5, "Error"),
+            t({","}),
+            i(6),
             })
         end),
         d(1, function() -- case action
           return sn(nil, {
             i(1),
-            t({"{", "\t\t"}),
-            i(2, "// case"),
+            i(2, "_"),
+            t({" = {", "\t\t"}),
+            i(3, "// case"),
             t({"", "\t},"}),
+            i(4)
             })
         end),
       }),
-      i(4),
-      i(5),
+      i(3),
       }
     )
   ),
+
 })
--- }}}
+-- }}

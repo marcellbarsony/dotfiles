@@ -60,19 +60,5 @@ ls.add_snippets("rust", {
       }
     )
   ),
-  s( -- use
-    "use",
-    fmt("use {}::{};\n{}", {
-      i(1, "module"),
-      c(2, {
-        -- Glob operator
-        sn(nil, {i(1), t"*"}), -- Glob operator
-        -- Nested paths
-        sn(nil, {i(1), t"(", i(2, "module"), t")"}),
-      }),
-      i(3),
-      }
-    )
-  ),
 })
 -- }}}

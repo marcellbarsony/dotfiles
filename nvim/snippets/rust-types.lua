@@ -72,19 +72,6 @@ ls.add_snippets("rust", {
       }
     )
   ),
-  s( -- module
-    "mod",
-    fmt("mod {} {{\n" ..
-      "\t{}\n" ..
-      "}}\n" ..
-      "{}"
-      , {
-      i(1, "module_name"),
-      i(2, "// Modules"),
-      i(3),
-      }
-    )
-  ),
   s( -- struct
     "struct",
     fmt("struct {} {{\n" ..

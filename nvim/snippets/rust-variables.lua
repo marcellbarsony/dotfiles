@@ -76,6 +76,17 @@ ls.add_snippets("rust", {
           }),
           t";",
         }),
+        -- HashMap
+        sn(nil, {
+          i(1),
+          t"mut ",
+          i(2, "hash"),
+          t": HashMap<",
+          i(3, "key"),
+          t", ",
+          i(4, "value"),
+          t"> = HashMap::new();",
+        }),
         -- Integer
         sn(nil, {
           i(1),
