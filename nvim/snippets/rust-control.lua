@@ -42,7 +42,7 @@ ls.add_snippets("rust", {
       "}}{}\n" ..
       "{}"
       , {
-      i(1, "<condition>"),
+      i(1, "condition"),
       i(2, "// if"),
       c(3, {
         d(1, function() -- nothing
@@ -63,7 +63,7 @@ ls.add_snippets("rust", {
           return sn(nil, {
             i(1),
             t({" else if "}),
-            i(2, "<condition>"),
+            i(2, "condition"),
             t({" {", "\t"}),
             i(3, "// else if"),
             t({"", "} else {"}),
@@ -84,14 +84,14 @@ ls.add_snippets("rust", {
       "\n}}\n" ..
       "{}"
       , {
-      i(1, "<expression>"),
+      i(1, "expression"),
       c(2, {
         d(1, function() -- action
           return sn(nil, {
             i(1),
             i(2, "_"),
             t({" => "}),
-            i(3, "<action>"),
+            i(3, "action"),
             t({","}),
             i(4),
             })
@@ -119,6 +119,18 @@ ls.add_snippets("rust", {
             i(3, "// case"),
             t({"", "\t},"}),
             i(4)
+            })
+        end),
+        d(1, function() -- Some/None
+          return sn(nil, {
+            i(1),
+            t({"Some("}),
+            i(2, "Type"),
+            t({") => "}),
+            i(3, "action"),
+            t({",", "\tNone => "}),
+            i(4, "action"),
+            t({","}),
             })
         end),
       }),

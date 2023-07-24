@@ -42,7 +42,7 @@ ls.add_snippets("rust", {
       "}}\n"..
       "{}"
       , {
-      i(1, "loop_variable"),
+      i(1, "item"),
       i(2, "iterator"),
       i(3, "// iterator loop"),
       i(4),
