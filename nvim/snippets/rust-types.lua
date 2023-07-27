@@ -39,8 +39,7 @@ ls.add_snippets("rust", {
     "enum",
     fmt("enum {} {{\n" ..
       "\t{}{}\n" ..
-      "}}\n" ..
-      "{}"
+      "}}\n"
       , {
       i(1, "EnumName"),
       c(2, {
@@ -50,7 +49,6 @@ ls.add_snippets("rust", {
         sn(nil, {i(1), i(2, "Variant"), t","}),
       }),
       i(3),
-      i(4),
       }
     )
   ),

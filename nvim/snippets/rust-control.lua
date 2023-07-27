@@ -81,7 +81,7 @@ ls.add_snippets("rust", {
     "match",
     fmt("match {} {{\n" ..
       "\t{}" ..
-      "\n}}\n" ..
+      "\n}}{}\n" ..
       "{}"
       , {
       i(1, "expression"),
@@ -96,6 +96,16 @@ ls.add_snippets("rust", {
             i(4),
             })
         end),
+        d(1, function() -- action case
+          return sn(nil, {
+            i(1),
+            i(2, "_"),
+            t({" = {", "\t\t"}),
+            i(3, "// case action"),
+            t({"", "\t},"}),
+            i(4)
+            })
+        end),
         d(1, function() -- error handling
           return sn(nil, {
             i(1),
@@ -108,17 +118,6 @@ ls.add_snippets("rust", {
             t({") => "}),
             i(5, "Error"),
             t({","}),
-            i(6),
-            })
-        end),
-        d(1, function() -- case action
-          return sn(nil, {
-            i(1),
-            i(2, "_"),
-            t({" = {", "\t\t"}),
-            i(3, "// case"),
-            t({"", "\t},"}),
-            i(4)
             })
         end),
         d(1, function() -- Some/None
@@ -135,6 +134,7 @@ ls.add_snippets("rust", {
         end),
       }),
       i(3),
+      i(4),
       }
     )
   ),
