@@ -104,6 +104,9 @@ symbol = " "
 symbol = " "
 format = '\[[$symbol($version(-$name))]($style)\]'
 
+[character]
+success_symbol = '[](bold green)'
+
 [cmd_duration]
 min_time = 2_000
 disabled = false
