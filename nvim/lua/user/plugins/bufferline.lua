@@ -18,7 +18,6 @@ require('bufferline').setup {
     show_close_icon = false,
     indicator = "│",
     close_icon = "",
-    --close_icon = '',
     buffer_close_icon = "",
     modified_icon = "●",
     left_trunc_marker = "",
@@ -51,7 +50,7 @@ require('bufferline').setup {
     },
 
     persist_buffer_sort = true,  -- enable custom sorted buffers
-    separator_style = "thin",  -- | "thick" | "thin" | { 'any', 'any' },
+    separator_style = "thick",  -- | "thick" | "thin" | { 'any', 'any' },
 
     -- Bufferline
     always_show_bufferline = false,
@@ -63,28 +62,28 @@ require('bufferline').setup {
     },
 
   -- Highlights
+  -- :h bufferline-highlights
   highlights = {
     fill = {
-      fg = { attribute = "fg", highlight = "TabLine" },
-      bg = { attribute = "bg", highlight = "TabLine" },
+      -- Transparent if not defined
+      --fg = { attribute = "fg", highlight = "TabLine" },
+      --bg = { attribute = "fg", highlight = "TabLine" },
     },
     background = {
-      fg = { attribute = "fg", highlight = "TabLine" },
-      bg = { attribute = "bg", highlight = "TabLine" },
+      -- Transparent if not defined
+      --fg = { attribute = "fg", highlight = "TabLine" },
+      --bg = { attribute = "bg", highlight = "TabLine" },
     },
-
     buffer_selected = {
-      fg = {attribute='fg',highlight='TabLine'},
-      bg = {attribute='bg',highlight='TabLine'},
+      fg = "#BB9AF7",
+      bg = "#1C2032",
       bold = true,
-      italic = true
+      italic = false
     },
-
     buffer_visible = {
       fg = { attribute = "fg", highlight = "TabLine" },
       bg = { attribute = "bg", highlight = "TabLine" },
     },
-
     close_button = {
       fg = { attribute = "fg", highlight = "TabLine" },
       bg = { attribute = "bg", highlight = "TabLine" },
@@ -93,11 +92,10 @@ require('bufferline').setup {
       fg = { attribute = "fg", highlight = "TabLine" },
       bg = { attribute = "bg", highlight = "TabLine" },
     },
-    -- close_button_selected = {
-    --   fg = {attribute='fg',highlight='TabLineSel'},
-    --   bg ={attribute='bg',highlight='TabLineSel'}
-    --   },
-
+    close_button_selected = {
+      fg = {attribute='fg',highlight='TabLineSel'},
+      bg ={attribute='bg',highlight='TabLineSel'}
+      },
     tab_selected = {
       fg = { attribute = "fg", highlight = "Normal" },
       bg = { attribute = "bg", highlight = "Normal" },
@@ -127,7 +125,6 @@ require('bufferline').setup {
       bg = { attribute = "bg", highlight = "TabLine" },
       italic = false,
     },
-
     modified = {
       fg = { attribute = "fg", highlight = "TabLine" },
       bg = { attribute = "bg", highlight = "TabLine" },
@@ -140,7 +137,6 @@ require('bufferline').setup {
       fg = { attribute = "fg", highlight = "TabLine" },
       bg = { attribute = "bg", highlight = "TabLine" },
     },
-
     separator = {
       fg = { attribute = "bg", highlight = "TabLine" },
       bg = { attribute = "bg", highlight = "TabLine" },
@@ -150,9 +146,9 @@ require('bufferline').setup {
       bg = { attribute = "bg", highlight = "Normal" },
     },
      separator_visible = {
-       fg = {attribute='bg',highlight='TabLine'},
-       bg = {attribute='bg',highlight='TabLine'}
-       },
+      fg = {attribute='bg',highlight='TabLine'},
+      bg = {attribute='bg',highlight='TabLine'}
+      },
     indicator_selected = {
       fg = { attribute = "fg", highlight = "LspDiagnosticsDefaultHint" },
       bg = { attribute = "bg", highlight = "Normal" },
