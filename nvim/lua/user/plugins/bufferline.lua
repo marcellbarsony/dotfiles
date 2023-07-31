@@ -76,7 +76,7 @@ require('bufferline').setup {
     },
     buffer_selected = {
       fg = "#BB9AF7",
-      bg = "#1C2032",
+      --bg = "#1C2032",
       bold = true,
       italic = false
     },
