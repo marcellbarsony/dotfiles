@@ -39,7 +39,7 @@ gui.statusbar_show: TRUE
 
 # Packet list colorize (hide).
 # TRUE or FALSE (case-insensitive).
-gui.packet_list_colorize: FALSE
+gui.packet_list_colorize: TRUE
 
 # Timestamp display format.
 # One of: RELATIVE, ABSOLUTE, ABSOLUTE_WITH_YMD, ABSOLUTE_WITH_YDOY, ABSOLUTE_WITH_DATE, DELTA, DELTA_DIS, EPOCH, UTC, UTC_WITH_YMD, UTC_WITH_YDOY, UTC_WITH_DATE
@@ -79,7 +79,7 @@ gui.geometry_main_upper_pane: 1279
 
 # Main window middle pane size.
 # Decimal number.
-gui.geometry_main_lower_pane: 646
+gui.geometry_main_lower_pane: 640
 
 # Packet list column pixel widths.
 # Each pair of strings consists of a column format and its pixel width.

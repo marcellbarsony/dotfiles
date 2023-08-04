@@ -149,8 +149,8 @@ cmp.setup({
   -- Sources
   sources = cmp.config.sources({
     { name = 'luasnip', max_item_count = 5 },
-    { name = 'nvim_lsp', max_item_count = 10 },
-    { name = 'buffer', keyword_length = 2 , max_item_count = 3 },
+    { name = 'nvim_lsp', max_item_count = 15 },
+    { name = 'buffer', keyword_length = 3 , max_item_count = 3 },
   }),
 
   -- Formatting

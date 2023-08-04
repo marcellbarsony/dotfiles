@@ -26,7 +26,7 @@ export XDG_ICON_HOME="$HOME/.local/share/icons"
 export XDG_STATE_HOME="$HOME/.local/state"
 
 # Paths
-export GIT_CONFIG="$XDG_CONFIG_HOME/git/config"
+#export GIT_CONFIG="$XDG_CONFIG_HOME/git/config"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export HISTFILE="$XDG_STATE_HOME/zsh/history"
 #export KITTY_CONFIG_DIRECTORY="$XDG_CONFIG_HOME/kitty"
