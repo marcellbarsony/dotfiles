@@ -26,14 +26,13 @@ export XDG_ICON_HOME="$HOME/.local/share/icons"
 export XDG_STATE_HOME="$HOME/.local/state"
 
 # Paths
-#export GIT_CONFIG="$XDG_CONFIG_HOME/git/config"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export HISTFILE="$XDG_STATE_HOME/zsh/history"
-#export KITTY_CONFIG_DIRECTORY="$XDG_CONFIG_HOME/kitty"
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export ZDOTDIR="$HOME/.config/zsh/"
 export XINITRC="$HOME/.config/x11/"
 export QT_STYLE_OVERRIDE="Adwaita-Dark"
+#export KITTY_CONFIG_DIRECTORY="$XDG_CONFIG_HOME/kitty"
 
 # Python
 export PATH="/usr/lib/python3.10/site-packages:$PATH"
@@ -49,7 +48,7 @@ export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export PATH="$HOME/.local/share/cargo/bin:$PATH"
 #. "/home/marci/.local/share/cargo/env"
 
-# Starship prompt
+# Starship
 export STARSHIP_CONFIG=~/.config/starship/config.toml
 export STARSHIP_CACHE=~/.config/starship
 

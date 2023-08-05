@@ -1,24 +1,16 @@
 # Coreutils
 alias cls='clear'
+alias cp='cp -i'
+alias grep='grep --color=auto'
 alias mv='mv -i'
 alias rm='rm -i'
-alias cp='cp -i'
 
-# Direcotires
-alias home='clear && cd $HOME && l'
-alias cfg='clear && cd $HOME/.config && l'
-
-# Exa
+# Coreutils [Rust]
 alias exa='exa -lahB --all --color-scale'
-
-# Grep
-alias grep='grep --color=auto'
+alias l='lsd -laF'
 
 # Jekyll
 alias jekyll='bundle exec jekyll serve --livereload'
-
-# Lsd
-alias l='lsd -laF'
 
 # Navigation
 alias ..='cd ..'
@@ -26,10 +18,9 @@ alias ..2='cd ../..'
 alias ..3='cd ../../..'
 alias ..4='cd ../../../..'
 alias ..5='cd ../../../../..'
+alias home='clear && cd $HOME && l'
+alias cfg='clear && cd $HOME/.config && l'
 
 # NeoVim
 alias nv='nvim'
 alias vim='nvim'
-
-# Spotify
-# alias spotify='spt'

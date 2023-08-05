@@ -81,7 +81,7 @@ map("n", "<leader>hc", ":nohl<CR>", { desc = "Clear" })
 map("n", "<leader>hr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace" })
 
 -- Lines
--- Reference: https://vim.fandom.com/wiki/Moving_lines_up_or_down
+-- https://vim.fandom.com/wiki/Moving_lines_up_or_down
 map("n", "<leader>ib", "o<ESC>", { desc = "Line [Insert Below]" })
 map("n", "<leader>ia", "O<ESC>", { desc = "Line [Insert Above]" })
 map("n", "<J>", ":move .+1<CR>", { desc = "Line [Move Down]" })
