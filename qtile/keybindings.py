@@ -6,7 +6,6 @@ from variables import *
 from func_keys import *
 from func_audio import audio_increase, audio_decrease, audio_mute
 
-
 keys = [
     # Audio [TEST]
     Key([mod], "XF86AudioRaiseVolume", lazy.run(audio_increase), desc="Volume +10%"),
@@ -20,7 +19,7 @@ keys = [
     # Spawn
     Key([mod], "Return", lazy.spawn(terminal), desc="Spawn terminal"),
     Key([mod],      "b", lazy.spawn(browser), desc="Spawn broswer"),
-    Key([mod],      "d", lazy.spawn(menu), desc="Spawn launch menu"),
+    Key([mod],      "d", lazy.spawn(menu), desc="Spawn menu"),
     Key([mod],      "r", lazy.spawncmd(), desc="Spawn command prompt"),
 
     # Layouts
@@ -53,7 +52,7 @@ keys = [
     Key([mod],  "m", lazy.layout.toggle_split(), desc="Maximize in split"),
     Key([mod],  "n", lazy.layout.normalize(), desc="Reset windows"),
 
-    # ScratchPad
+    # Scratchpad
     Key([mod], 'i', lazy.group['scratchpad'].dropdown_toggle('term'), desc='Scratchpad'),
 
     # Groups

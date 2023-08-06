@@ -151,12 +151,8 @@ local mappings = {
     -- Rust
     r = {
       name = "Rust",
-      a = {
-        name = "Action [Hover]",
-      },
-      g = {
-        name = "Action [Group]",
-      },
+      a = { "Action [Hover]" },
+      g = { "Action [Group]" },
     },
 
     -- Split
@@ -167,9 +163,7 @@ local mappings = {
     -- Telescope
     t = {
       name = "Telescope",
-      g = {
-        name = "GIT",
-      },
+      g = { name = "GIT" },
     },
 
       -- Gitsigns

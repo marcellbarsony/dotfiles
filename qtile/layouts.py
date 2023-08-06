@@ -1,13 +1,12 @@
 from libqtile import layout
 from colors import *
 
-
 layouts = [
     # Bsp
     # layout.Bsp(),
 
     # Max
-    # layout.Max(
+    #layout.Max(
     #    border_focus = '#FFFFFF',
     #    border_normal = '#FFFFFF',
     #    border_width = 3,
@@ -34,40 +33,40 @@ layouts = [
         ),
 
     # Floating
-    # layout.Floating(
-    #     border_focus=PRIMARY,
-    #     border_normal=['#222255'],
-    #     border_width=1,
-    #     fullscreen_border_width=3,
-    #     max_border_width=3,
-    #     ),
-
-    # Matrix
-    # layout.Matrix(),
-
-    # MonadTall
-    # layout.MonadTall(),
-
-    # MonadWide
-    # layout.MonadWide(),
-
-    # RatioTile
-    # layout.RatioTile(),
-
-    # Stack
-    # layout.Stack(
-    #    num_stacks=2
+    #layout.Floating(
+    #    border_focus=PRIMARY,
+    #    border_normal=['#222255'],
+    #    border_width=1,
+    #    fullscreen_border_width=3,
+    #    max_border_width=3,
     #    ),
 
+    # Matrix
+    #layout.Matrix(),
+
+    # MonadTall
+    #layout.MonadTall(),
+
+    # MonadWide
+    #layout.MonadWide(),
+
+    # RatioTile
+    #layout.RatioTile(),
+
+    # Stack
+    #layout.Stack(
+    #   num_stacks=2
+    #   ),
+
     # Tile
-    # layout.Tile(),
+    #layout.Tile(),
 
     # TreeTab
-    # layout.TreeTab(),
+    #layout.TreeTab(),
 
     # VerticalTile
-    # layout.VerticalTile(),
+    #layout.VerticalTile(),
 
     # Zoomy
-    # layout.Zoomy(),
+    #layout.Zoomy(),
 ]

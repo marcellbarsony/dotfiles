@@ -97,9 +97,11 @@ ls.add_snippets("rust", {
         -- Alias
         sn(nil, {i(1), i(2, "module::module"), t" as ", i(3, "name")}),
         -- Glob operator
-        sn(nil, {i(1), i(2, "module"), t"::*"}),
+        sn(nil, {i(1), i(2, "module::module"), t"::*"}),
         -- Nested path
-        sn(nil, {i(1), i(2, "module"), t"::(", i(3, "foo, bar, baz"), t")"}),
+        sn(nil, {i(1), i(2, "module::module"), t"::{", i(3, "foo, bar, baz"), t"}"}),
+        -- Nested path (with self reference)
+        sn(nil, {i(1), i(2, "module::module"), t"::{self, ", i(3, "foo, bar, baz"), t"}"}),
         -- Crate [Absolute path]
         sn(nil, {i(1), t"crate::", i(2, "module")}),
         -- Self [Relative path]

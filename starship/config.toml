@@ -76,7 +76,6 @@ $cmd_duration\
 $line_break\
 $jobs\
 $battery\
-$time\
 $status\
 $os\
 $container\
@@ -84,12 +83,13 @@ $shell\
 $character"""
 
 # Right prompt
-#right_format="""
+right_format="""
+$time\
+"""
 #$git_branch\
 #$git_state\
 #$git_metrics\
 #$git_status\
-#"""
 
 add_newline = true
 
@@ -232,3 +232,9 @@ format = '\[[$symbol($version)]($style)\]'
 
 [sudo]
 format = '\[[as $symbol]($style)\]'
+
+#[time]
+#format = '[$time]($style) '
+#disabled = false
+#style = 'blue'
+#time_format = '%I:%M%p'
