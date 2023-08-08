@@ -12,7 +12,7 @@ for i in groups:
         [
             Key([mod], i.name, lazy.group[i.name].toscreen(),
                 desc="Go to group {}".format(i.name),),
-            Key([mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True),
+            Key([mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=False),
                 desc="Go to group {} & Move window".format(i.name),),
             #Key([mod, "shift"], i.name, lazy.window.togroup(i.name), 
             #    desc="Move window to group {}".format(i.name)),

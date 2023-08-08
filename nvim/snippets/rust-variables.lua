@@ -41,7 +41,7 @@ ls.add_snippets("rust", {
       "{}"
       , {
       i(1, "CONSTANT"),
-      i(2, "type"),
+      i(2, "T"),
       i(3, "value"),
       i(4),
       }
@@ -57,12 +57,17 @@ ls.add_snippets("rust", {
         sn(nil, {
           i(1),
           i(2, "arr"),
-          t": (",
-          i(3, "type"),
-          t", ",
+          t": [",
+          i(3, "T"),
+          t"; ",
           i(4, "N"),
-          t") = [",
-          i(5, "elements"),
+          t"] = [",
+          c(5, {
+            -- Individual elements
+            sn(nil, {i(1), t"x, y, z"}),
+            -- Repeat expression
+            sn(nil, {i(1), i(2, "expr"), t"; ", i(3, "N")}),
+          }),
           t"];"
         }),
         -- Bool
@@ -92,7 +97,7 @@ ls.add_snippets("rust", {
           i(1),
           i(2, "int"),
           t": ",
-          i(3, "type"),
+          i(3, "T"),
           t" = ",
           i(4, "num"),
           t";"
@@ -102,7 +107,7 @@ ls.add_snippets("rust", {
           i(1),
           i(2, "opt"),
           t": Option<",
-          i(3, "type"),
+          i(3, "T"),
           t"> = ",
           c(4, {
             -- None
@@ -135,7 +140,7 @@ ls.add_snippets("rust", {
           i(1),
           i(2, "tup"),
           t": (",
-          i(3, "type"),
+          i(3, "T"),
           t") = (",
           i(4, "elements"),
           t");",
@@ -145,7 +150,7 @@ ls.add_snippets("rust", {
           i(1),
           i(2, "vec"),
           t": Vec<",
-          i(3, "type"),
+          i(3, "T"),
           t"> = ",
           c(4, {
             -- Vector (empty)
@@ -165,7 +170,7 @@ ls.add_snippets("rust", {
       "{}"
       , {
       i(1, "STATIC"),
-      i(2, "type"),
+      i(2, "T"),
       i(3, "value"),
       i(4),
       }
