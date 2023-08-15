@@ -84,25 +84,24 @@ ls.add_snippets("rust", {
       "\n}}{}\n" ..
       "{}"
       , {
-      i(1, "expression"),
+      i(1, "pattern"),
       c(2, {
         d(1, function() -- action
           return sn(nil, {
             i(1),
-            i(2, "_"),
+            i(2, "Variant"),
             t({" => "}),
             i(3, "action"),
-            t({","}),
             i(4),
             })
         end),
         d(1, function() -- action case
           return sn(nil, {
             i(1),
-            i(2, "_"),
-            t({" = {", "\t\t"}),
+            i(2, "Variant"),
+            t({" => {", "\t\t"}),
             i(3, "// case action"),
-            t({"", "\t},"}),
+            t({"", "\t}"}),
             i(4)
             })
         end),
@@ -110,26 +109,24 @@ ls.add_snippets("rust", {
           return sn(nil, {
             i(1),
             t({"Ok("}),
-            i(2),
+            i(2, "foo"),
             t({") => "}),
-            i(3, "Type"),
+            i(3, "action"),
             t({",", "\tErr("}),
-            i(4),
+            i(4, "err"),
             t({") => "}),
-            i(5, "Error"),
-            t({","}),
+            i(5, "action"),
             })
         end),
-        d(1, function() -- Some/None
+        d(1, function() -- option
           return sn(nil, {
             i(1),
             t({"Some("}),
-            i(2, "Type"),
+            i(2, "foo"),
             t({") => "}),
             i(3, "action"),
             t({",", "\tNone => "}),
             i(4, "action"),
-            t({","}),
             })
         end),
       }),

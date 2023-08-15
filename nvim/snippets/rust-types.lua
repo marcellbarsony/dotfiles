@@ -37,18 +37,38 @@ end
 ls.add_snippets("rust", {
   s( -- enum
     "enum",
-    fmt("enum {} {{\n" ..
-      "\t{}{}\n" ..
+    fmt("enum {}\n" ..
       "}}\n"
       , {
-      i(1, "EnumName"),
-      c(2, {
-        -- Variant & type
-        sn(nil, {i(1), i(2, "Variant"), t"(", i(3, "type"), t"),"}),
-        -- Variant
-        sn(nil, {i(1), i(2, "Variant"), t","}),
+      c(1, {
+        d(1, function() -- Generic
+          return sn(nil, {
+            i(1),
+            i(2, "Type"),
+            t({" {", "\t"}),
+            c(3, {
+              -- Unit-like
+              sn(nil, {i(1), i(2, "Variant"), t",", i(3)}),
+              -- Data
+              sn(nil, {i(1), i(2, "Variant"), t"(", i(3, "Type"), t"),", i(4)}),
+              -- Struct-like
+              sn(nil, {i(1), i(2, "Struct"), t" { ", i(3, "Type"), t" },", i(4)}),
+            }),
+          })
+        end),
+        d(1, function() -- Option
+          return sn(nil, {
+            i(1),
+            t({"Option<T> {", "\tSome(T),", "\tNone,"}),
+          })
+        end),
+        d(1, function() -- Result
+          return sn(nil, {
+            i(1),
+            t({"Result<T, E> {", "\tOk(T),", "\tErr(E),"}),
+          })
+        end),
       }),
-      i(3),
       }
     )
   ),
@@ -60,10 +80,10 @@ ls.add_snippets("rust", {
       "{}"
       , {
       c(1, {
-        -- Trait
-        sn(nil, {i(1), i(2, "Trait"), t" for ", i(3, "ImplName")}),
         -- No Trait
-        sn(nil, {i(1), i(2, "ImplName")}),
+        sn(nil, {i(1), i(2, "Type")}),
+        -- Trait
+        sn(nil, {i(1), i(2, "Trait"), t" for ", i(3, "Type")}),
       }),
       i(2, "// Methods"),
       i(3),
@@ -77,15 +97,40 @@ ls.add_snippets("rust", {
       "}}\n" ..
       "{}"
       , {
-      i(1, "StructName"),
+      i(1, "Type"),
       c(2, {
-        -- Key & type
-        sn(nil, {i(1), i(2, "key"), t": ", i(3, "type"), t","}),
+        -- Key & Type
+        sn(nil, {i(1), i(2, "key"), t": ", i(3, "Type"), t","}),
         -- Key
         sn(nil, {i(1), i(2, "key"), t","}),
       }),
       i(3),
       i(4),
+      }
+    )
+  ),
+  s( -- trait
+    "trait",
+    fmt("{}trait {}{} {{\n" ..
+      "\t{}\n" ..
+      "}}\n" ..
+      "{}"
+      , {
+      c(1, {
+        -- Private
+        sn(nil, {i(1), t""}),
+        -- Public
+        sn(nil, {i(1), t"pub "}),
+      }),
+      i(2, "Type"),
+      c(3, {
+        -- no generic type
+        sn(nil, {i(1)}),
+        -- generic type
+        sn(nil, {i(1), t"<", i(2, "T, U, V"), t">"}),
+      }),
+      i(4, "// Methods"),
+      i(5),
       }
     )
   ),

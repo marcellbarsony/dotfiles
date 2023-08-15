@@ -36,7 +36,7 @@ end
 -- SNIPPETS -- {{{
 ls.add_snippets("rust", {
   s( -- import
-    "imp",
+    "crate",
     fmt("{};\n{}"
       , {
       c(1, {
@@ -106,6 +106,8 @@ ls.add_snippets("rust", {
         sn(nil, {i(1), t"crate::", i(2, "module")}),
         -- Self [Relative path]
         sn(nil, {i(1), t"self::", i(2, "module")}),
+        -- Super [TODO]
+        sn(nil, {i(1), t"super::", i(2, "module")}),
       }),
       i(2),
       }

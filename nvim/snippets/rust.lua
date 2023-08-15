@@ -37,26 +37,54 @@ end
 ls.add_snippets("rust", {
   s( -- function
     "fn",
-    fmt("fn {}({}){} {{\n" ..
+    fmt("{}fn {}{}({}){} {{\n" ..
       "\t{}\n" ..
       "}}\n" ..
       "{}"
       , {
-      i(1, "fn_name"),
-      c(2, {
-        -- parameters
-        sn(nil, {i(1), i(2, "parameter"), t": ", i(3, "type")}),
-        -- no parameters
+      c(1, {
+        -- no qualifier
+        sn(nil, {i(1)}),
+        -- async
+        sn(nil, {i(1), t"async "}),
+        -- const
+        sn(nil, {i(1), t"const "}),
+        -- unsafe
+        sn(nil, {i(1), t"unsafe "}),
+      }),
+      i(2, "function"),
+      c(3, {
+        -- generic
+        sn(nil, {i(1), t"<", i(2, "T, U, V"), t">"}),
+        -- generic + trait
+        sn(nil, {i(1), t"<", i(2, "T: Trait"), t">"}),
+        -- plain
+        sn(nil, {i(1)}),
+      }),
+      c(4, {
+        -- parameter
+        sn(nil, {i(1), i(2, "foo"), t": ", i(3, "Type")}),
+        -- self
+        sn(nil, {i(1), t"&self"}),
+        -- self + parameter
+        sn(nil, {i(1), t"&self, ", i(2, "foo"), t": ", i(3, "Type")}),
+        -- self + mut
+        sn(nil, {i(1), t"&mut self", i(2, "")}),
+        -- self + mut + parameter
+        sn(nil, {i(1), t"&mut self, ", i(2, "foo"), t": ", i(3, "Type")}),
+        -- no parameter
         sn(nil, {i(1), t""}),
       }),
-      c(3, {
+      c(5, {
         -- return
-        sn(nil, {i(1), t" -> ", i(2, "return")}),
+        sn(nil, {i(1), t" -> ", i(2, "Type")}),
+        -- return result
+        sn(nil, {i(1), t" -> Result<", i(2, "Type"), t", ", i(3, "io::Error"), t">"}),
         -- no return
         sn(nil, {i(1), t""}),
       }),
-      i(4, "// function"),
-      i(5),
+      i(6, "// function"),
+      i(7),
       }
     )
   ),

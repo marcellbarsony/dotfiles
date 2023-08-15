@@ -1,53 +1,53 @@
 -- Lualine
 -- https://github.com/nvim-lualine/lualine.nvim
 
+
 require('lualine').setup {
   options = {
 
-    -- Global configuration
+    -- Global config
     always_divide_middle = true,
+    icons_enabled = true,
     ignore_focus = {},
     globalstatus = true,
-    refresh = {
-      statusline = 1000,
-      tabline = 1000,
-      winbar = 1000,
-    },
-    sections = {
-      --lualine_a = {'mode'},
-      --lualine_b = {'branch', 'diff', 'diagnostics'},
-      --lualine_c = {'filename'},
-      --lualine_x = {'encoding', 'fileformat', 'filetype'},
-      --lualine_y = {'location'},
-      --lualine_z = {'progress'}
-    },
-    inactive_sections = {
-      --lualine_a = {},
-      --lualine_b = {},
-      --lualine_c = {'filename'},
-      --lualine_x = {'location'},
-      --lualine_y = {},
-      --lualine_z = {}
-    },
+    theme = 'custom',
 
-    -- Icons
-    icons_enabled = true,
-
-    -- Theme
-    -- https://github.com/nvim-lualine/lualine.nvim#separators
-    theme = 'ayu_dark', -- auto/tokyonight
-
-    -- Separators
-    -- https://github.com/nvim-lualine/lualine.nvim#separators
-    component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
-
-    -- Disable lualine
+    -- Disabled files
     -- https://github.com/nvim-lualine/lualine.nvim#disabling-lualine
     disabled_filetypes = {
       statusline = {},
       winbar = {},
     },
+
+    -- Refresh
+    refresh = {
+      statusline = 1000,
+      tabline = 1000,
+      winbar = 1000,
+    },
+
+    -- Sections
+    -- sections = {
+    --   lualine_a = {'mode'},
+    --   lualine_b = {'branch', 'diff', 'diagnostics'},
+    --   lualine_c = {'filename'},
+    --   lualine_x = {'encoding', 'fileformat', 'filetype'},
+    --   lualine_y = {'location'},
+    --   lualine_z = {'progress'}
+    -- },
+    -- inactive_sections = {
+    --   lualine_a = {},
+    --   lualine_b = {},
+    --   lualine_c = {'filename'},
+    --   lualine_x = {'location'},
+    --   lualine_y = {},
+    --   lualine_z = {}
+    -- },
+
+    -- Separators
+    -- https://github.com/nvim-lualine/lualine.nvim#separators
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
   },
 
   -- Tabline
@@ -56,8 +56,8 @@ require('lualine').setup {
 
   -- Winbar
   -- https://github.com/nvim-lualine/lualine.nvim#winbar
-  inactive_winbar = {},
   winbar = {},
+  inactive_winbar = {},
 
   -- Extensions
   -- https://github.com/nvim-lualine/lualine.nvim#extensions

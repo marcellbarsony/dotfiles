@@ -64,9 +64,11 @@ ls.add_snippets("rust", {
           t"] = [",
           c(5, {
             -- Individual elements
-            sn(nil, {i(1), t"x, y, z"}),
+            sn(nil, {i(1), i(2, "foo, bar, baz")}),
             -- Repeat expression
-            sn(nil, {i(1), i(2, "expr"), t"; ", i(3, "N")}),
+            sn(nil, {i(1), i(2, "repeat"), t"; ", i(3, "N")}),
+            -- 2D array
+            sn(nil, {t"[", i(1), i(2, "array-1"), t"], [", i(3, "array-2"), t"]", i(4)}),
           }),
           t"];"
         }),
