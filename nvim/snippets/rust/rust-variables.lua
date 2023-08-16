@@ -172,7 +172,7 @@ ls.add_snippets("rust", {
       "{}"
       , {
       i(1, "STATIC"),
-      i(2, "T"),
+      i(2, "Type"),
       i(3, "value"),
       i(4),
       }

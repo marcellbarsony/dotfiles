@@ -163,7 +163,7 @@ local mappings = {
     -- Telescope
     t = {
       name = "Telescope",
-      g = { name = "GIT" },
+      u = { name = "GIT" },
     },
 
       -- Gitsigns

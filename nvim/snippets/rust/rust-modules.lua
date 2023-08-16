@@ -61,7 +61,7 @@ ls.add_snippets("rust", {
             t({"mod "}),
             i(2, "mod_name"),
             t({" {", "\t"}),
-            i(3, "// modules"),
+            i(3, "// ..."),
             t({"", "}"}),
           })
         end),
@@ -71,7 +71,7 @@ ls.add_snippets("rust", {
             t({"pub mod "}),
             i(2, "mod_name"),
             t({" {", "\t"}),
-            i(3, "// modules"),
+            i(3, "// ..."),
             t({"", "}"}),
             })
         end),

@@ -1,5 +1,6 @@
--- Rust snippets
--- Docs: https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
+-- Functions
+-- https://doc.rust-lang.org/reference/items/functions.html
+-- https://doc.rust-lang.org/book/ch03-03-how-functions-work.html
 
 -- SHORTHANDS -- {{{
 local ls = require("luasnip")
@@ -37,7 +38,7 @@ end
 ls.add_snippets("rust", {
   s( -- function
     "fn",
-    fmt("{}fn {}{}({}){} {{\n" ..
+    fmt("{}fn {}{}({}){}{{\n" ..
       "\t{}\n" ..
       "}}\n" ..
       "{}"
@@ -55,7 +56,7 @@ ls.add_snippets("rust", {
       i(2, "function"),
       c(3, {
         -- generic
-        sn(nil, {i(1), t"<", i(2, "T, U, V"), t">"}),
+        sn(nil, {i(1), t"<", i(2, "T"), t">"}),
         -- generic + trait
         sn(nil, {i(1), t"<", i(2, "T: Trait"), t">"}),
         -- plain
@@ -77,13 +78,26 @@ ls.add_snippets("rust", {
       }),
       c(5, {
         -- return
-        sn(nil, {i(1), t" -> ", i(2, "Type")}),
-        -- return result
+        sn(nil, {i(1), t" -> ", i(2, "Type"), t" "}),
+        -- where
+        d(1, function()
+          return sn(nil, {
+            i(1),
+            t({" -> "}),
+            i(2, "Type"),
+            t({"", "\twhere "}),
+            i(3, "T"),
+            t({": "}),
+            i(4, "Trait"),
+            t({"", ""}),
+          })
+        end),
+        -- result
         sn(nil, {i(1), t" -> Result<", i(2, "Type"), t", ", i(3, "io::Error"), t">"}),
         -- no return
         sn(nil, {i(1), t""}),
       }),
-      i(6, "// function"),
+      i(6, "// ..."),
       i(7),
       }
     )

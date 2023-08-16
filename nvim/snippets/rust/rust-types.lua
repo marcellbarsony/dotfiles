@@ -85,7 +85,7 @@ ls.add_snippets("rust", {
         -- Trait
         sn(nil, {i(1), i(2, "Trait"), t" for ", i(3, "Type")}),
       }),
-      i(2, "// Methods"),
+      i(2, "// ..."),
       i(3),
       }
     )
@@ -97,7 +97,14 @@ ls.add_snippets("rust", {
       "}}\n" ..
       "{}"
       , {
-      i(1, "Type"),
+      c(1, {
+        -- Type
+        sn(nil, {i(1), i(2, "Type")}),
+        -- Generic
+        sn(nil, {i(1), i(2, "Type"), t"<", i(3, "T"), t">"}),
+        -- Generic where
+        sn(nil, {i(1), i(2, "Type"), t"<", i(3, "T"), t"> where ", i(4, "T: Trait") }),
+      }),
       c(2, {
         -- Key & Type
         sn(nil, {i(1), i(2, "key"), t": ", i(3, "Type"), t","}),
@@ -129,7 +136,7 @@ ls.add_snippets("rust", {
         -- generic type
         sn(nil, {i(1), t"<", i(2, "T, U, V"), t">"}),
       }),
-      i(4, "// Methods"),
+      i(4, "// ..."),
       i(5),
       }
     )

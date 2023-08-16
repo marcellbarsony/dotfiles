@@ -135,9 +135,9 @@ map("n", "<leader>nf", ":lua vim.lsp.buf.formatting()<CR>", { desc = "Format" })
 
 -- Nvim-tree
 map("n", "t", ":NvimTreeToggle<CR>", { desc = "NvimTree" })
--- map("n", "tc", ":NvimTreeCollapse<CR>", { desc = "Collapse" })
--- map("n", "<leader>x", ":NvimTreeFindFile<CR>", { desc = "Find file" })
--- map("n", "<leader>t", ":Lex 30<CR>", { desc = "Netrw", silent = true })
+--map("n", "tc", ":NvimTreeCollapse<CR>", { desc = "Collapse" })
+--map("n", "<leader>x", ":NvimTreeFindFile<CR>", { desc = "Find file" })
+--map("n", "<leader>t", ":Lex 30<CR>", { desc = "Netrw", silent = true })
 
 -- Search
 map("n", "*", "*N", { desc = "Find word" }) -- Fix * - don"t move to next match
@@ -166,18 +166,18 @@ map("n", "<leader>tb", ":Telescope buffers<CR>", { desc = "Buffers" })
 map("n", "<leader>tc", ":Telescope commands<CR>", { desc = "Commands" })
 map("n", "<leader>td", ":Telescope diagnostics<CR>", { desc = "Diagnostics" })
 map("n", "<leader>tf", ":Telescope find_files<CR>", { desc = "Find files" })
-map("n", "<leader>tgc", ":Telescope git_commits<CR>", { desc = "Commits" })
-map("n", "<leader>tgs", ":Telescope git_status<CR>", { desc = "Status" })
+map("n", "<leader>tg", ":Telescope live_grep<CR>", { desc = "Live grep" })
 map("n", "<leader>th", ":Telescope highlights<CR>", { desc = "Highlights" })
 map("n", "<leader>tk", ":Telescope keymaps<CR>", { desc = "Keymaps" })
-map("n", "<leader>tl", ":Telescope live_grep<CR>", { desc = "Live grep" })
 map("n", "<leader>tm", ":Telescope man_pages<CR>", { desc = "Man" })
 map("n", "<leader>to", ":Telescope oldfiles<CR>", { desc = "History" })
 map("n", "<leader>tp", ":Telescope pickers<CR>", { desc = "Pickers" })
 map("n", "<leader>ts", ":Telescope search_history<CR>", { desc = "Search history" })
 map("n", "<leader>tt", ":Telescope<CR>", { desc = "Telescope" })
-map("n", "<leader>tx", ":Telescope treesitter<CR>", { desc = "Treesitter symbols" })
+map("n", "<leader>tuc",":Telescope git_commits<CR>", { desc = "Commits" })
+map("n", "<leader>tus",":Telescope git_status<CR>", { desc = "Status" })
 map("n", "<leader>tv", ":Telescope vim_options<CR>", { desc = "Vim options" })
+map("n", "<leader>tx", ":Telescope treesitter<CR>", { desc = "Treesitter symbols" })
 
 -- Telescope-DAP
 map("n", "<leader>dc", ":lua require'telescope'.extensions.dap.commands{}<CR>", { desc = "Commands"})
