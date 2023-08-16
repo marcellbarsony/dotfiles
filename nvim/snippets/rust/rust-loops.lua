@@ -51,16 +51,32 @@ ls.add_snippets("rust", {
   ),
   s( -- loop
     "loop",
-    fmt("'{}: loop {{\n" ..
-      "\t{}\n"..
-      "\tbreak '{};\n"..
-      "}}\n"..
+    fmt("{}\n" ..
       "{}"
       , {
-      i(1, "label"),
-      i(2, "// ..."),
-      same(1),
-      i(5),
+      c(1, {
+        d(1, function()
+          return sn(nil, {
+            i(1),
+            t({"'"}),
+            i(2, "label"),
+            t({" loop {", "\t"}),
+            i(3, "// ..."),
+            t({"", "\tbreak '"}),
+            same(2),
+            t({";", "}"}),
+          })
+        end),
+        d(1, function()
+          return sn(nil, {
+            i(1),
+            t({"loop {", "\t"}),
+            i(2, "// ..."),
+            t({"", "}"}),
+          })
+        end),
+      }),
+      i(2),
       }
     )
   ),

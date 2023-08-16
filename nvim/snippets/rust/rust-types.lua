@@ -102,7 +102,7 @@ ls.add_snippets("rust", {
         sn(nil, {i(1), i(2, "Type")}),
         -- Generic
         sn(nil, {i(1), i(2, "Type"), t"<", i(3, "T"), t">"}),
-        -- Generic where
+        -- Where
         sn(nil, {i(1), i(2, "Type"), t"<", i(3, "T"), t"> where ", i(4, "T: Trait") }),
       }),
       c(2, {
