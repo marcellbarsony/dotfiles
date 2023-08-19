@@ -1,2 +1,1 @@
-**Arch Linux configuration files**
-
+**The Chad Stack dotfiles**
