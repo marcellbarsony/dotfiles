@@ -13,7 +13,7 @@ from variables import font_size, sep_padding, sep_width, widget_padding
 
 widget_defaults = dict(
     font="JetBrainsMono Nerd Font Mono",
-    fontsize=15,
+    fontsize=14,
     padding=0,
 )
 extension_defaults = widget_defaults.copy()
@@ -66,7 +66,7 @@ screens = [
                 button_location='left',
                 close_button_location='right',
                 foreground=PRIMARY,
-                fontsize=24,
+                fontsize=20,
                 text_closed='󰄽',
                 text_open='󰄾',
                 widgets=[
@@ -107,7 +107,7 @@ screens = [
                             ### Interface
                             widget.TextBox(
                                 fmt='󱫋',
-                                fontsize=24,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 padding=sep_padding,
                             ),
@@ -119,7 +119,7 @@ screens = [
                             ### IP ###
                             widget.TextBox(
                                 fmt='󰩟',
-                                fontsize=24,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 padding=sep_padding,
                             ),
@@ -131,7 +131,7 @@ screens = [
                             ### Wlan ###
                             widget.TextBox(
                                 fmt='󰖩',
-                                fontsize=24,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 padding=sep_padding,
                             ),
@@ -144,7 +144,7 @@ screens = [
                             ### Gateway ###
                             widget.TextBox(
                                 fmt='󱇢',
-                                fontsize=24,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 padding=sep_padding,
                             ),
@@ -175,12 +175,12 @@ screens = [
                             ),
                             widget.TextBox(
                                 fmt='  ',
-                                fontsize=22,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 mouse_callbacks={'Button1': backlight_increase},
                             ),
                             widget.TextBox(
-                                fontsize=22,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 fmt='  ',
                                 mouse_callbacks={'Button1': backlight_decrease},
@@ -207,19 +207,19 @@ screens = [
                             ),
                             widget.TextBox(
                                 fmt='  ',
-                                fontsize=22,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 mouse_callbacks={'Button1': audio_mute},
                             ),
                             widget.TextBox(
                                 fmt='  ',
-                                fontsize=22,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 mouse_callbacks={'Button1': audio_increase},
                             ),
                             widget.TextBox(
                                 fmt='  ',
-                                fontsize=22,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 mouse_callbacks={'Button1': audio_decrease},
                             ),
@@ -257,7 +257,7 @@ screens = [
             ### CPU ###
             widget.TextBox(
                 foreground=PRIMARY,
-                fontsize=24,
+                fontsize=20,
                 fmt='',
                 padding=widget_padding,
             ),
@@ -282,7 +282,7 @@ screens = [
             ### RAM ###
             widget.TextBox(
                 foreground=PRIMARY,
-                fontsize=24,
+                fontsize=20,
                 fmt='',
                 padding=widget_padding,
             ),
@@ -300,7 +300,7 @@ screens = [
             ### PACKAGES ###
             widget.TextBox(
                 foreground=PRIMARY,
-                fontsize=22,
+                fontsize=20,
                 padding=widget_padding,
                 margin=15,
                 mouse_callbacks={'Button1': open_pacman},
@@ -348,7 +348,7 @@ screens = [
                 padding=widget_padding,
             ),
             ],
-            25,
+            20,
             border_width=[0, 0, 0, 0],
             border_color=[border_top, border_right, border_bottom, border_left],
             background='#000000',
@@ -402,7 +402,7 @@ screens = [
                 button_location='left',
                 close_button_location='right',
                 foreground=PRIMARY,
-                fontsize=24,
+                fontsize=20,
                 text_closed='󰄽',
                 text_open='󰄾',
                 widgets=[
@@ -443,7 +443,7 @@ screens = [
                             ### Interface
                             widget.TextBox(
                                 fmt='󱫋',
-                                fontsize=24,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 padding=sep_padding,
                             ),
@@ -455,7 +455,7 @@ screens = [
                             ### IP ###
                             widget.TextBox(
                                 fmt='󰩟',
-                                fontsize=24,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 padding=sep_padding,
                             ),
@@ -467,7 +467,7 @@ screens = [
                             ### Wlan ###
                             widget.TextBox(
                                 fmt='󰖩',
-                                fontsize=24,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 padding=sep_padding,
                             ),
@@ -480,7 +480,7 @@ screens = [
                             ### Gateway ###
                             widget.TextBox(
                                 fmt='󱇢',
-                                fontsize=24,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 padding=sep_padding,
                             ),
@@ -511,12 +511,12 @@ screens = [
                             ),
                             widget.TextBox(
                                 fmt='  ',
-                                fontsize=22,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 mouse_callbacks={'Button1': backlight_increase},
                             ),
                             widget.TextBox(
-                                fontsize=22,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 fmt='  ',
                                 mouse_callbacks={'Button1': backlight_decrease},
@@ -543,19 +543,19 @@ screens = [
                             ),
                             widget.TextBox(
                                 fmt='  ',
-                                fontsize=22,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 mouse_callbacks={'Button1': audio_mute},
                             ),
                             widget.TextBox(
                                 fmt='  ',
-                                fontsize=22,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 mouse_callbacks={'Button1': audio_increase},
                             ),
                             widget.TextBox(
                                 fmt='  ',
-                                fontsize=22,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 mouse_callbacks={'Button1': audio_decrease},
                             ),
@@ -593,7 +593,7 @@ screens = [
             ### CPU ###
             widget.TextBox(
                 foreground=PRIMARY,
-                fontsize=24,
+                fontsize=20,
                 fmt='',
                 padding=widget_padding,
             ),
@@ -618,7 +618,7 @@ screens = [
             ### RAM ###
             widget.TextBox(
                 foreground=PRIMARY,
-                fontsize=24,
+                fontsize=20,
                 fmt='',
                 padding=widget_padding,
             ),
@@ -636,7 +636,7 @@ screens = [
             ### PACKAGES ###
             widget.TextBox(
                 foreground=PRIMARY,
-                fontsize=22,
+                fontsize=20,
                 padding=widget_padding,
                 margin=15,
                 mouse_callbacks={'Button1': open_pacman},
@@ -684,7 +684,7 @@ screens = [
                 padding=widget_padding,
             ),
             ],
-            25,
+            20,
             border_width=[0, 0, 0, 0],
             border_color=[border_top, border_right, border_bottom, border_left],
             background='#000000',
@@ -738,7 +738,7 @@ screens = [
                 button_location='left',
                 close_button_location='right',
                 foreground=PRIMARY,
-                fontsize=24,
+                fontsize=20,
                 text_closed='󰄽',
                 text_open='󰄾',
                 widgets=[
@@ -779,7 +779,7 @@ screens = [
                             ### Interface
                             widget.TextBox(
                                 fmt='󱫋',
-                                fontsize=24,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 padding=sep_padding,
                             ),
@@ -791,7 +791,7 @@ screens = [
                             ### IP ###
                             widget.TextBox(
                                 fmt='󰩟',
-                                fontsize=24,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 padding=sep_padding,
                             ),
@@ -803,7 +803,7 @@ screens = [
                             ### Wlan ###
                             widget.TextBox(
                                 fmt='󰖩',
-                                fontsize=24,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 padding=sep_padding,
                             ),
@@ -816,7 +816,7 @@ screens = [
                             ### Gateway ###
                             widget.TextBox(
                                 fmt='󱇢',
-                                fontsize=24,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 padding=sep_padding,
                             ),
@@ -847,12 +847,12 @@ screens = [
                             ),
                             widget.TextBox(
                                 fmt='  ',
-                                fontsize=22,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 mouse_callbacks={'Button1': backlight_increase},
                             ),
                             widget.TextBox(
-                                fontsize=22,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 fmt='  ',
                                 mouse_callbacks={'Button1': backlight_decrease},
@@ -879,19 +879,19 @@ screens = [
                             ),
                             widget.TextBox(
                                 fmt='  ',
-                                fontsize=22,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 mouse_callbacks={'Button1': audio_mute},
                             ),
                             widget.TextBox(
                                 fmt='  ',
-                                fontsize=22,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 mouse_callbacks={'Button1': audio_increase},
                             ),
                             widget.TextBox(
                                 fmt='  ',
-                                fontsize=22,
+                                fontsize=20,
                                 foreground=PRIMARY,
                                 mouse_callbacks={'Button1': audio_decrease},
                             ),
@@ -929,7 +929,7 @@ screens = [
             ### CPU ###
             widget.TextBox(
                 foreground=PRIMARY,
-                fontsize=24,
+                fontsize=20,
                 fmt='',
                 padding=widget_padding,
             ),
@@ -954,7 +954,7 @@ screens = [
             ### RAM ###
             widget.TextBox(
                 foreground=PRIMARY,
-                fontsize=24,
+                fontsize=20,
                 fmt='',
                 padding=widget_padding,
             ),
@@ -972,7 +972,7 @@ screens = [
             ### PACKAGES ###
             widget.TextBox(
                 foreground=PRIMARY,
-                fontsize=22,
+                fontsize=20,
                 padding=widget_padding,
                 margin=15,
                 mouse_callbacks={'Button1': open_pacman},
@@ -1020,7 +1020,7 @@ screens = [
                 padding=widget_padding,
             ),
             ],
-            25,
+            20,
             border_width=[0, 0, 0, 0],
             border_color=[border_top, border_right, border_bottom, border_left],
             background='#000000',

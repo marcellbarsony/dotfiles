@@ -44,6 +44,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Rust
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export RUST_BACKTRACE=1
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export PATH="$HOME/.local/share/cargo/bin:$PATH"
 #. "/home/marci/.local/share/cargo/env"

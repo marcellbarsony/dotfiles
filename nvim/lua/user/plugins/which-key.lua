@@ -175,6 +175,11 @@ local mappings = {
     v = {
       name = "PyVenv",
     },
+
+      -- Write
+    w = {
+      name = "Write",
+    },
   }
 }
 

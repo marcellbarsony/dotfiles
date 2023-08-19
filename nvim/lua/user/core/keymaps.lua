@@ -23,8 +23,9 @@ vim.g.mapleader = "\\"
 vim.g.maplocalleader = "\\"
 
 -- Core
-map("n", "<leader>w", ":wall<CR>", { desc = "Write all" })
-map("n", "<leader>wq", ":waq<CR>", { desc = "Write & Quit" })
+map("n", "<leader>wb", ":w!<CR>", { desc = "Write buffer" })
+map("n", "<leader>wa", ":wa!<CR>", { desc = "Write all" })
+map("n", "<leader>wq", ":wqa!<CR>", { desc = "Write all & Quit" })
 map("n", "<leader>q", ":q<CR>", { desc = "Quit" })
 map("n", "<leader>r", ":source %<CR>", { desc = "Reload [TODO]" })
 

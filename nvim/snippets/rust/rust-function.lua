@@ -55,12 +55,13 @@ ls.add_snippets("rust", {
       }),
       i(2, "function"),
       c(3, {
+        sn(nil, {i(1)}),
         -- generic
         sn(nil, {i(1), t"<", i(2, "T"), t">"}),
         -- generic + trait
-        sn(nil, {i(1), t"<", i(2, "T: Trait"), t">"}),
-        -- plain
-        sn(nil, {i(1)}),
+        sn(nil, {i(1), t"<", i(2, "T"), t": ", i(3, "Trait"), t">"}),
+        -- lifetime
+        sn(nil, {i(1), t"<'", i(2, "lifetime"), t">"}),
       }),
       c(4, {
         -- parameter

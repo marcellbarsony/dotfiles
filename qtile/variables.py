@@ -6,7 +6,7 @@ terminal = 'alacritty -vv'
 menu = 'dmenu_run'
 
 # Screens
-font_size = 15
+font_size = 14
 
 # Widget
 widget_padding = 5
