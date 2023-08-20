@@ -74,14 +74,14 @@ dashboard.section.header.val = {
 dashboard.section.buttons.val = {
     dashboard.button( "fn", "󰈔  > File [New]" , ":ene <BAR> startinsert <CR>"),
     dashboard.button( "ff", "󰍉  > File [Find]", ":cd $HOME/.local | Telescope find_files<CR>"),
-    dashboard.button( "g", "󰭎  > Grep"  , ":Telescope live_grep<CR>"),
     dashboard.button( "h", "✚  > Health", ":checkhealth<CR>"),
     dashboard.button( "l", "󰐱  > Lazy"  , ":Lazy<CR>"),
     dashboard.button( "m", "󱎥  > Mason" , ":Mason<CR>"),
     dashboard.button( "n", "󱀁  > News"  , ":help news<CR>"),
     dashboard.button( "q", "  > Quit"  , ":qa<CR>"),
     dashboard.button( "r", "  > Recent", ":Telescope oldfiles<CR>"),
-    dashboard.button( "t", "󰙅  > Tree"  , ":NvimTreeToggle<CR>"),
+    dashboard.button( "tt", "󰭎  > Telescope"  , ":Telescope<CR>"),
+    dashboard.button( "tg", "󰭎  > Telescope [Grep]"  , ":Telescope live_grep<CR>"),
 }
 
 -- Send config to alpha

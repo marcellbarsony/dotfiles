@@ -39,17 +39,18 @@ map("", "<left>", "<nop>")
 map("", "<right>", "<nop>")
 
 -- Buffers
+map("n", "<ESC>", "", { desc = "Unmap <C-[>" }) -- Unmap buffer prev
 map("n", "<C-]>", ":bn<CR>", { desc = "Buffer [Next]" })
-map("n", "<C-[>", ":bp<CR>", { desc = "Buffer [Prev]" })
+map("n", "<C-[>", ":bp<CR>", { desc = "Buffer [Prev]" }) -- TODO: broken, works with any other key than [
 map("n", "<C-'>", ":b#<CR>", { desc = "Buffer [To last]" })
 map("n", "<C-q>", ":bdelete<CR>", { desc = "Buffer [Delete]" })
-map("n", "<C-^>", ":_#<CR>", { desc = "Alternate file" }) -- :help alternate-file
---map("n", "<ESC>", "", { desc = "Unmap <C-[>" }) -- Unmap buffer prev
+--map("n", "<C-^>", ":_#<CR>", { desc = "Alternate file" }) -- :help alternate-file
 
 -- Clipboard
 map("n", "<leader>y", "\"+y", { desc = "Yank [Global]" })
 map("v", "<leader>y", "\"+y", { desc = "Yank [Global]" })
 map("n", "<leader>y", "\"+Y", { desc = "Yank [Global]" })
+map("n", "<leader>p", "\"_dp", { desc = "paste" })
 
 -- DAP
 -- :h dap-api
@@ -129,21 +130,26 @@ map("n", "<leader>ml", ":MasonLog<CR>", { desc = "Log" })
 map("n", "<leader>mm", ":Mason<CR>", { desc = "Mason" })
 map("n", "<leader>mu", ":MasonUninstallAll<CR>", { desc = "Uninstall all" })
 
+-- Navigation
+-- Conflicts with cursor scrollof
+-- map("n", "<C-d>", "<C-d>zz<CR>", { desc = "Page down" })
+-- map("n", "<C-u>", "<C-u>zz<CR>", { desc = "Page up" })
+
 -- Null-ls
 map("n", "<leader>nl", ":NullLsLog<CR>", { desc = "Log" })
 map("n", "<leader>ni", ":NullLsInfo<CR>", { desc = "Info" })
 map("n", "<leader>nf", ":lua vim.lsp.buf.formatting()<CR>", { desc = "Format" })
 
 -- Nvim-tree
-map("n", "t", ":NvimTreeToggle<CR>", { desc = "NvimTree" })
+map("n", "<leader>f", ":NvimTreeToggle<CR>", { desc = "Files [NvimTree]" })
 --map("n", "tc", ":NvimTreeCollapse<CR>", { desc = "Collapse" })
 --map("n", "<leader>x", ":NvimTreeFindFile<CR>", { desc = "Find file" })
 --map("n", "<leader>t", ":Lex 30<CR>", { desc = "Netrw", silent = true })
 
 -- Search
 map("n", "*", "*N", { desc = "Find word" }) -- Fix * - don"t move to next match
-map("n", "n", "nzzzv") -- Fix n: keep cursor in center
-map("n", "N", "Nzzzv") -- Fix N: keep cursor in center
+map("n", "n", "nzzzv", { desc = "Search [Next]" }) -- Fix n: keep cursor in center
+map("n", "N", "Nzzzv", { desc = "Search [Previous]" }) -- Fix N: keep cursor in center
 
 -- Shell movements
 map("i", "<C-A>", "<ESC>I", { desc = "Shell movement" })
@@ -157,28 +163,38 @@ map("n", "<C-k>", "<C-w>k", { desc = "Split [Up]" }) -- Move up
 map("n", "<C-j>", "<C-w>j", { desc = "Split [Down]" }) -- Move down
 map("n", "<C-h>", "<C-w>h", { desc = "Split [Left]" }) -- Move left
 map("n", "<C-l>", "<C-w>l", { desc = "Split [Right]" }) -- Move right
-map("n", "<C-A-k>", ":resize -5<CR>") -- Up
-map("n", "<C-A-j>", ":resize +5<CR>") -- Down
-map("n", "<C-A-h>", ":vertical resize -5<CR>") -- Grow
-map("n", "<C-A-l>", ":vertical resize +5<CR>") -- Shrink
+map("n", "<C-A-k>", ":resize -5<CR>", { desc = "Split [Hor -]" }) -- Decrease
+map("n", "<C-A-j>", ":resize +5<CR>", { desc = "Split [Hor +]" }) -- Increase
+map("n", "<C-A-h>", ":vertical resize -5<CR>", { desc = "Split [Ver +]" }) -- Increase
+map("n", "<C-A-l>", ":vertical resize +5<CR>", { desc = "Split [Ver -]" }) -- Decrease
 
 -- Telescope
+-- https://github.com/nvim-telescope/telescope.nvim#vim-pickers
 map("n", "<leader>tb", ":Telescope buffers<CR>", { desc = "Buffers" })
-map("n", "<leader>tc", ":Telescope commands<CR>", { desc = "Commands" })
 map("n", "<leader>td", ":Telescope diagnostics<CR>", { desc = "Diagnostics" })
-map("n", "<leader>tf", ":Telescope find_files<CR>", { desc = "Find files" })
-map("n", "<leader>tg", ":Telescope live_grep<CR>", { desc = "Live grep" })
+map("n", "<leader>tg", ":Telescope live_grep<CR>", { desc = "Grep" })
 map("n", "<leader>th", ":Telescope highlights<CR>", { desc = "Highlights" })
-map("n", "<leader>tk", ":Telescope keymaps<CR>", { desc = "Keymaps" })
 map("n", "<leader>tm", ":Telescope man_pages<CR>", { desc = "Man" })
 map("n", "<leader>to", ":Telescope oldfiles<CR>", { desc = "History" })
 map("n", "<leader>tp", ":Telescope pickers<CR>", { desc = "Pickers" })
+map("n", "<leader>tr", ":Telescope registers<CR>", { desc = "Registers" })
 map("n", "<leader>ts", ":Telescope search_history<CR>", { desc = "Search history" })
 map("n", "<leader>tt", ":Telescope<CR>", { desc = "Telescope" })
-map("n", "<leader>tuc",":Telescope git_commits<CR>", { desc = "Commits" })
-map("n", "<leader>tus",":Telescope git_status<CR>", { desc = "Status" })
-map("n", "<leader>tv", ":Telescope vim_options<CR>", { desc = "Vim options" })
 map("n", "<leader>tx", ":Telescope treesitter<CR>", { desc = "Treesitter symbols" })
+-- Commands
+map("n", "<leader>tcc", ":Telescope commands<CR>", { desc = "Commands" })
+map("n", "<leader>tch", ":Telescope command_history<CR>", { desc = "History" })
+-- Files
+map("n", "<leader>tfb", ":Telescope current_buffer_fuzzy_find<CR>", { desc = "Current buffer fuzzy find" })
+map("n", "<leader>tff", ":Telescope find_files<CR>", { desc = "Find files" }) -- Current directory
+-- Git
+map("n", "<leader>tuc",":Telescope git_commits<CR>", { desc = "Commits" })
+map("n", "<leader>tub",":Telescope git_branches<CR>", { desc = "Branches" })
+map("n", "<leader>tuf",":Telescope git_files<CR>", { desc = "Files" })
+map("n", "<leader>tus",":Telescope git_status<CR>", { desc = "Status" })
+-- Vim
+map("n", "<leader>tvk", ":Telescope keymaps<CR>", { desc = "Keymaps" })
+map("n", "<leader>tvo", ":Telescope vim_options<CR>", { desc = "Options" })
 
 -- Telescope-DAP
 map("n", "<leader>dc", ":lua require'telescope'.extensions.dap.commands{}<CR>", { desc = "Commands"})
@@ -197,7 +213,7 @@ map("o", "A", ":<C-U>normal! mzggVG<CR>`z")
 map("x", "A", ":<C-U>normal! ggVG<CR>")
 
 -- Visual
-map("v", "<", "<gv") -- Indent left
-map("v", ">", ">gv") -- Indent right
-map("v", "K", ":move '<-2<CR>gv-gv") -- Move up
-map("v", "J", ":move '>+1<CR>gv-gv") -- Move down
+map("v", "<", "<gv", { desc = "Indent [Left]" }) -- Indent left
+map("v", ">", ">gv", { desc = "Indent [Left]" }) -- Indent right
+map("v", "K", ":move '<-2<CR>gv-gv", { desc = "Move [Up]" }) -- Move up
+map("v", "J", ":move '>+1<CR>gv-gv", { desc = "Move [Down]" }) -- Move down

@@ -64,7 +64,7 @@ local options = {
   cursorcolumn = false,
   cursorline = false,
   guicursor = "n:block,i:hor1",
-  scrolloff = 10,
+  scrolloff = 100,
   sidescrolloff = 8,
 
   -- Encoding

@@ -34,6 +34,9 @@ require('telescope').setup{
     --   picker_config_key = value,
     --   ...
     -- }
+    find_files = {
+      -- theme = "dropdown",
+    }
   },
   extensions = {
     -- extension_name = {
