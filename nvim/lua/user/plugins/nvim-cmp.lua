@@ -141,7 +141,7 @@ cmp.setup({
     ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), {'i', 'c'}), -- Open
     ['<C-h>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), {'i', 'c'}), -- Scroll docs
     ['<C-l>'] = cmp.mapping(cmp.mapping.scroll_docs(4), {'i', 'c'}), -- Scroll docs
-    ['<C-e>'] = cmp.mapping({ i = cmp.mapping.close(), c = cmp.mapping.close() }), -- Close
+    ['<C-c>'] = cmp.mapping({ i = cmp.mapping.close(), c = cmp.mapping.close() }), -- Close
     -- ['<Down>'] = cmp.mapping(cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }), {'i'}),
     -- ['<Up>'] = cmp.mapping(cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }), {'i'}),
   },

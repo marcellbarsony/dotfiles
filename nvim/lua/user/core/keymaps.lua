@@ -50,7 +50,7 @@ map("n", "<C-q>", ":bdelete<CR>", { desc = "Buffer [Delete]" })
 map("n", "<leader>y", "\"+y", { desc = "Yank [Global]" })
 map("v", "<leader>y", "\"+y", { desc = "Yank [Global]" })
 map("n", "<leader>y", "\"+Y", { desc = "Yank [Global]" })
-map("n", "<leader>p", "\"_dp", { desc = "paste" })
+--map("n", "<leader>p", "\"_dp", { desc = "Paste" })
 
 -- DAP
 -- :h dap-api
@@ -109,7 +109,7 @@ map("n", "<leader>vi", ":PyRun -m pip install -r requirements.txt<CR>", { desc =
 
 -- Lspsaga
 map("n", "<leader>lf", ":Lspsaga lsp_finder<CR>", { desc = "Finder" })
-map("n", "<leader>la", ":Lspsaga code_action<CR>", { desc = "Code actions"})
+map("n", "<leader>la", ":Lspsaga code_action<CR>", { desc = "Actions"})
 map("n", "<leader>lr", ":Lspsaga rename<CR>", { desc = "Rename"})
 map("n", "<leader>lf", ":Lspsaga peek_definition<CR>", { desc = "Definition [Peek]" })
 map("n", "<leader>lg", ":Lspsaga peek_type_definition<CR>", { desc = "Definition [Type]" })
