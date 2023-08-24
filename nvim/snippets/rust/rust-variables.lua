@@ -133,6 +133,8 @@ ls.add_snippets("rust", {
             sn(nil, {i(1), t"String", t' = String::from("', i(2), t'");'}),
             -- String format
             sn(nil, {i(1), t"String", t' = format!("', i(2, 'Hello {}", "world!'), t'");'}),
+            -- String reference
+            sn(nil, {i(1), t"&String", t' = ', i(2), t';'}),
             -- Character
             sn(nil, {i(1), t"char", t' = "', i(2, ""), t'";'}),
           }),
@@ -155,10 +157,14 @@ ls.add_snippets("rust", {
           i(3, "T"),
           t"> = ",
           c(4, {
-            -- Vector (empty)
+            -- empty
             sn(nil, {i(1), t"Vec::new();"}),
-            -- Vector (content)
+            -- content
             sn(nil, {i(1), t"vec![", i(2, "items"), t"];"}),
+            -- arguments
+            sn(nil, {i(1), t"env::args().collect();"}),
+            -- custom
+            sn(nil, {i(1), i(2), t";"}),
           }),
         }),
       }),

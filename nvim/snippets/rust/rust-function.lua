@@ -96,7 +96,7 @@ ls.add_snippets("rust", {
         -- result
         sn(nil, {i(1), t" -> Result<", i(2, "Type"), t", ", i(3, "io::Error"), t">"}),
         -- no return
-        sn(nil, {i(1), t""}),
+        sn(nil, {i(1), t" "}),
       }),
       i(6, "// ..."),
       i(7),
