@@ -77,6 +77,26 @@ ls.add_snippets("rust", {
       }
     )
   ),
+  s( -- if let
+    "if let",
+    fmt("if let {} {{\n" ..
+      "\t{}\n"..
+      "}}\n"..
+      "{}"
+      , {
+      c(1, {
+        -- Some
+        sn(nil, {i(1), t'Some(', i(2, "x"), t') = ', i(3, "var") }),
+        -- None
+        sn(nil, {i(1), t'None(', i(2, "x"), t') = ', i(3, "var") }),
+        -- Err
+        sn(nil, {i(1), t'Err(', i(2, "e"), t') = ', i(3, "var") }),
+      }),
+      i(2, "// ..."),
+      i(3),
+      }
+    )
+  ),
   s( -- match
     "match",
     fmt("match {} {{\n" ..
@@ -135,6 +155,5 @@ ls.add_snippets("rust", {
       }
     )
   ),
-
 })
 -- }}

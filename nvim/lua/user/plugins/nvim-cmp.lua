@@ -70,6 +70,9 @@ cmp.setup({
     -- completion = cmp.config.window.bordered(),
   },
 
+  -- Min completion length
+  min_length = 0,
+
   -- View
   view = {
     entries = "custom",
@@ -149,7 +152,7 @@ cmp.setup({
   -- Sources
   sources = cmp.config.sources({
     { name = 'luasnip', max_item_count = 5 },
-    { name = 'nvim_lsp', max_item_count = 15 },
+    { name = 'nvim_lsp', max_item_count = 100 },
     { name = 'buffer', keyword_length = 3 , max_item_count = 3 },
   }),
 
