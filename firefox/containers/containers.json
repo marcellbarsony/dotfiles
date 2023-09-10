@@ -19,7 +19,7 @@
       "accessKey":""
     },
     {"userContextId":8,"public":true,"icon":"circle","color":"blue","name":"Bitwarden"},
-    {"userContextId":11,"public":true,"icon":"circle","color":"turquoise","name":"Browsing"},
+    {"userContextId":11,"public":true,"icon":"circle","color":"green","name":"Trusted"},
     {"userContextId":12,"public":true,"icon":"fingerprint","color":"turquoise","name":"Cyber"},
     {"userContextId":13,"public":true,"icon":"dollar","color":"green","name":"Finance"},
     {"userContextId":14,"public":true,"icon":"circle","color":"blue","name":"Google"},

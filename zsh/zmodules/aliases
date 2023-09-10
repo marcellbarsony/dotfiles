@@ -24,3 +24,6 @@ alias cfg='clear && cd $HOME/.config && l'
 # NeoVim
 alias nv='nvim'
 alias vim='nvim'
+
+# Ntfy
+alias notify='ntfy publish teszt01010001'

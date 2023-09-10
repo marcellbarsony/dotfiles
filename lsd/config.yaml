@@ -13,7 +13,7 @@ blocks:
 # == Color ==
 color:
   when: always
-  theme: colortheme
+  theme: custom
 
 # == Date ==
 date: '+%a %d %b %Y %X'
@@ -62,3 +62,5 @@ total-size: false
 
 # == Symlink arrow ==
 symlink-arrow: ⇒
+
+header: false
