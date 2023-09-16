@@ -1,6 +1,6 @@
 {
   "version":4,
-  "lastUserContextId":23,
+  "lastUserContextId":21,
   "identities":[
     {
       "public":false,
@@ -19,18 +19,16 @@
       "accessKey":""
     },
     {"userContextId":8,"public":true,"icon":"circle","color":"blue","name":"Bitwarden"},
-    {"userContextId":11,"public":true,"icon":"circle","color":"green","name":"Trusted"},
+    {"userContextId":11,"public":true,"icon":"circle","color":"turquoise","name":"Browsing"},
     {"userContextId":12,"public":true,"icon":"fingerprint","color":"turquoise","name":"Cyber"},
     {"userContextId":13,"public":true,"icon":"dollar","color":"green","name":"Finance"},
-    {"userContextId":14,"public":true,"icon":"circle","color":"blue","name":"Google"},
+    {"userContextId":14,"public":true,"icon":"circle","color":"toolbar","name":"Google"},
     {"userContextId":15,"public":true,"icon":"circle","color":"orange","name":"Gov"},
     {"userContextId":16,"public":true,"icon":"circle","color":"blue","name":"Meta"},
     {"userContextId":17,"public":true,"icon":"circle","color":"blue","name":"Microsoft"},
     {"userContextId":18,"public":true,"icon":"circle","color":"purple","name":"Proton"},
     {"userContextId":19,"public":true,"icon":"circle","color":"orange","name":"Reddit"},
-    {"userContextId":20,"public":true,"icon":"fingerprint","color":"pink","name":"Security"},
-    {"userContextId":21,"public":true,"icon":"circle","color":"green","name":"Spotify"},
-    {"userContextId":22,"public":true,"icon":"fingerprint","color":"green","name":"Trusted"},
-    {"userContextId":23,"public":true,"icon":"fingerprint","color":"red","name":"Untrusted"}
+    {"userContextId":20,"public":true,"icon":"circle","color":"green","name":"Spotify"},
+    {"userContextId":21,"public":true,"icon":"circle","color":"red","name":"Untrusted"}
   ]
 }

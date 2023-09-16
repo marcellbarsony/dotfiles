@@ -57,18 +57,20 @@ ls.add_snippets("rust", {
         sn(nil, {
           i(1),
           i(2, "arr"),
-          t": [",
-          i(3, "T"),
-          t"; ",
-          i(4, "N"),
-          t"] = [",
-          c(5, {
+          c(3, {
+            -- Implicit
+            sn(nil, {i(1), t" "}),
+            -- Explicit
+            sn(nil, {i(1), t": [", i(2, "T"), t"; ", i(3, "N"), t"] "}),
+          }),
+          t"= [",
+          c(4, {
             -- Individual elements
             sn(nil, {i(1), i(2, "foo, bar, baz")}),
             -- Repeat expression
             sn(nil, {i(1), i(2, "repeat"), t"; ", i(3, "N")}),
             -- 2D array
-            sn(nil, {t"[", i(1), i(2, "array-1"), t"], [", i(3, "array-2"), t"]", i(4)}),
+            sn(nil, {t"[", i(1), i(2, "foo, bar, baz"), t"], [", i(3, "foo, bar, baz"), t"]", i(4)}),
           }),
           t"];"
         }),
@@ -146,7 +148,7 @@ ls.add_snippets("rust", {
           t": (",
           i(3, "T"),
           t") = (",
-          i(4, "elements"),
+          i(4, "foo, bar, baz"),
           t");",
         }),
         -- Vector
@@ -160,7 +162,7 @@ ls.add_snippets("rust", {
             -- empty
             sn(nil, {i(1), t"Vec::new();"}),
             -- content
-            sn(nil, {i(1), t"vec![", i(2, "items"), t"];"}),
+            sn(nil, {i(1), t"vec![", i(2, "foo, bar, baz"), t"];"}),
             -- arguments
             sn(nil, {i(1), t"env::args().collect();"}),
             -- custom

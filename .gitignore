@@ -71,6 +71,9 @@ sqlitebrowser/
 # Starship
 starship/*.log
 
+# Thunar
+Thunar/
+
 # VirtualBox
 VirtualBox/
 
@@ -86,6 +89,9 @@ wireshark/recent_common
 # XDG
 user-dirs.dirs
 user-dirs.locale
+
+# XFCE
+xfce4/
 
 # ZSH
 zsh/.zcompdump

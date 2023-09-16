@@ -880,6 +880,364 @@
   },
   {
     "windows": {
+      "1": {
+        "15": {
+          "id": 15,
+          "index": 0,
+          "windowId": 1,
+          "highlighted": true,
+          "active": true,
+          "attention": false,
+          "pinned": true,
+          "status": "complete",
+          "hidden": false,
+          "discarded": false,
+          "incognito": false,
+          "width": 2144,
+          "height": 1233,
+          "lastAccessed": 1694829129579,
+          "audible": false,
+          "autoDiscardable": true,
+          "mutedInfo": {
+            "muted": false
+          },
+          "isInReaderMode": false,
+          "sharingState": {
+            "camera": false,
+            "microphone": false
+          },
+          "successorTabId": -1,
+          "cookieStoreId": "firefox-container-21",
+          "url": "https://open.spotify.com/playlist/3ari4ennU7OqNTXzDmJWa0",
+          "title": "Emil Rottmayer - playlist by Marcell Barsony | Spotify",
+          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAzFBMVEUe12AAAAAe12Ae12Ae2GAe12Ae2GEe2GAn62J//38e2GAe12Aq6Woe2GAe2GIf2WIe2GEj22ke2WMe2GAf2GAe2WEf2WQf2WAe2WEf2GAe2WIf2GIf2mEf2WMf2mMe3GUe2GEe2GAe2WIe12Ag2WEe2GEi3GId12Ae2WIf2WIf2mIe3GQe12D///8e2GAf2WEe2GEf2WEo5Gsf22Ie4WEe2GAe2WIe2WIg22Ef22Me22Ih2WMg3mIg2WMe2GAh2mMg22Qf2WEg3mIf2WKSFH3wAAAARHRSTlP/APv+3+KG3A0Cx/oM5HeJyh1krryVMN6p5nWScilaM5zLjvcvnyzudJQxQukBpoC1URM5ItBtS1ZAXTYnZ9ZFT6I+YPPLiNQAAADHSURBVHicPY9FtsJQEETrKXEXEpzg313x/e+JfuQcqkd1J10XjDF7E0ZVFYWFTYWAFSgBilC1ZYCVc1NN+NpjeAioC95CXjOM1PIxGB5ezk9pySELhOi+vr/t70axFScf0IiwnHQoqsxWcQIHFdzpz+J/8Dccq46ET9eEOs2ex9vFoAuqEXCfzXt5upM5AQda4PiV9D+/T78T+q+xkWgaWsrldA6UMzAzrI2Au6Lp3vpG3B5NJ7latnKy711tmV1ox/cdPTP6Fy06Dtg/6ZwhAAAAAElFTkSuQmCC"
+        },
+        "16": {
+          "id": 16,
+          "index": 1,
+          "windowId": 1,
+          "highlighted": false,
+          "active": false,
+          "attention": false,
+          "pinned": true,
+          "status": "complete",
+          "hidden": false,
+          "discarded": false,
+          "incognito": false,
+          "width": 2144,
+          "height": 1233,
+          "lastAccessed": 1694826440010,
+          "audible": false,
+          "autoDiscardable": true,
+          "mutedInfo": {
+            "muted": false
+          },
+          "isInReaderMode": false,
+          "sharingState": {
+            "camera": false,
+            "microphone": false
+          },
+          "successorTabId": -1,
+          "cookieStoreId": "firefox-container-14",
+          "url": "https://www.youtube.com/",
+          "title": "YouTube",
+          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAtklEQVQ4T2NkoBAwUqifAW7AfwYGAaBhBlADHXAYfAAqfgGo8QOIDTYAqDkBSM0n0TWJQM0LGIGaQbaeJ1EzTLkhyIAAIG89mQYkggxoAGqux2rAgwdAzwF9dwDmdQxVjfgN+A80HgQ2bmRgKChgYAAZiAqINODgQYhLSDYApAFk84YNuIII7ALcgSgATBofwNGNC4ADkbJoBBlNUUKCuQ0tKYNcBUra6AAWn6hJGZ8nCclRnBsBzJ03KZWC+NsAAAAASUVORK5CYII="
+        }
+      },
+      "42": {
+        "5": {
+          "id": 5,
+          "index": 0,
+          "windowId": 42,
+          "highlighted": false,
+          "active": false,
+          "attention": false,
+          "pinned": true,
+          "status": "complete",
+          "hidden": false,
+          "discarded": false,
+          "incognito": false,
+          "width": 1271,
+          "height": 1217,
+          "lastAccessed": 1694820796046,
+          "audible": false,
+          "autoDiscardable": true,
+          "mutedInfo": {
+            "muted": false
+          },
+          "isInReaderMode": false,
+          "sharingState": {
+            "camera": false,
+            "microphone": false
+          },
+          "successorTabId": -1,
+          "cookieStoreId": "firefox-container-16",
+          "url": "https://github.com/",
+          "title": "GitHub: Let’s build from here · GitHub",
+          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADdklEQVRYR71X7VHbQBDdk4zH/ApUEDEmGTMZO6YCcAWQCuJUgKkA0wFUEFJBnAowFSDsZFASOygVxPmFByxfds+SOEl3OhmY3Ix/WNq7fff27YcYLLGqr+v7YMEeA3CAsTXc2gy3u8D5hAP4jENv9H34peixeFb+cmo1x4aVI3S4j8bk1LgQyAQB9YKpfej77iRvQy6AzVqjyxkcFHWcdkRAkJGTkTc41oFQAnCc5lppdX4uUWy8tcHAnd1aLRUbGQDOqzdNu2SfP/bWOiDERjALWv7Pb65skwBAN7dX5zfP7TxyKEDcWhsyEzEAJe2cX+EmFwW4i4Yvl4kD5/AXgPfCjNmR9rqj68F29D8GQIIDBkeyE875h7E3PKNn1Vq9jUC6MRDOLxK2wJqMwYvQcSfeh6nLbPY5AZ7DMQqzS88EAJFqrHyZoZ7PWyPvaz/aTCzByr2TjmP8Hs+BaWUiU0xnl1j5Jgn2IRQCAN7ujDH2PkNxCsAyIZBBY0b9yaQo55+QpXYIoDEh+hRGcQge41xcThUCfE6CHF8P1pnWAEUUTC3HVMlMwMLMclUi5gF/x3T0ywI0OTG9JwFjiD9mGAY4ZZu1eh/VLaeJsMPKtf7U28sON7cayHpqYSYRAMrztwmVIv1jb1Co8ZhuH73XXNRlKmSYyz4C2Ch6eBE7HdNKAHQgVitjqy7iOLKpbjV8lRCZ7sX/0ACK4rdWhM+aBZpagEPLBTFwgtQcKBTaH3nD1jI062x18UcGTrWFiA6bAxz+uh6cPAWErgbQmaIQiUpVmfuqUiwcc+jmjVR54FQdNrKnrkmVNtuMsFXyOXeZBdieF/WB0pIx3kMwPQxLog2nAdBEZVn2Dl6ogz9HB5Dox17Qidtx1DKj0QnuV/xSJaAqmShSiOYKQUTjeOL86lYdBxC2VyRkM3634XsepeZiyXQJEPxOTC02lF05PBS38Y9hT+WEbl8q2ZdGAOmB5AHEQ1nGNBT9WgwUUG4v5MCxQi4mJN1S1nzZOMVgdiiVBDmbBdu66ecxACLhKYfS6EAxltt2P6IdmTjDuPrRe1NG6BgQzoNgN3csj0HQh4lKgGhg6hGatns1m9q7hT5MZGpVebw0AElwqrAZO144MXdQgUKIpjmhWmuEH6P4cQr3XUq1PNEaAchhgcp0zXQgAU6P5nkA/gEVLspa51VkdgAAAABJRU5ErkJggg=="
+        },
+        "6": {
+          "id": 6,
+          "index": 1,
+          "windowId": 42,
+          "highlighted": false,
+          "active": false,
+          "attention": false,
+          "pinned": true,
+          "status": "complete",
+          "hidden": false,
+          "discarded": false,
+          "incognito": false,
+          "width": 1271,
+          "height": 1217,
+          "lastAccessed": 1694820796053,
+          "audible": false,
+          "autoDiscardable": true,
+          "mutedInfo": {
+            "muted": false
+          },
+          "isInReaderMode": false,
+          "sharingState": {
+            "camera": false,
+            "microphone": false
+          },
+          "successorTabId": -1,
+          "cookieStoreId": "firefox-container-17",
+          "url": "https://chat.openai.com/auth/login",
+          "title": "ChatGPT",
+          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAnFBMVEV1qZzh7Ol2qp11qZzx9/XV5OB2qZyKtqvS4998qqPH3NeGs6iTvLJ2qZ17raDi7erQ4t12qpwAAADb6eXR4t7O4NywzsaItare6ueyz8d/r6OHtKmRu7CQuq91qpyqysJ5rJ/k7uzC2dOhxLt5rJl9rqHK3tmjxr2VvbPZ5+S40syZv7bt9PLW5uK71c6uzcXD2tScwbi+1tDG29bszlBiAAAANHRSTlP////w//////8n////8v///7AA//////////////+u//////8o////////////////////P9dGuAAAAK5JREFUeJxVj0cWwyAMRAFjwL333u0kTr3/3QI4WXg2kv5TG+CPngV+sjzNB6PyL4UUDXgiDhBu1BZZDUS/uU12dEsDylsEzbC5dM2EqIPkXNwzI8pjN12fpgRO6xrqHL4KhssDIJfqhDA9id8S3C/FR0VELxhyJKjwTq9sVg3WQglKvUzDR84X9ZkEBFbEbrplxbLmjyUBxJGdB8dR+TpKdgiHw452Msfla/UJfQEz8gr/+IiTPwAAAABJRU5ErkJggg=="
+        },
+        "7": {
+          "id": 7,
+          "index": 2,
+          "windowId": 42,
+          "highlighted": false,
+          "active": false,
+          "attention": false,
+          "pinned": true,
+          "status": "complete",
+          "hidden": false,
+          "discarded": false,
+          "incognito": false,
+          "width": 1271,
+          "height": 1217,
+          "lastAccessed": 1694820796063,
+          "audible": false,
+          "autoDiscardable": true,
+          "mutedInfo": {
+            "muted": false
+          },
+          "isInReaderMode": false,
+          "sharingState": {
+            "camera": false,
+            "microphone": false
+          },
+          "successorTabId": -1,
+          "cookieStoreId": "firefox-container-14",
+          "url": "https://bard.google.com/",
+          "title": "Bard",
+          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEO0lEQVRYR7WXXWhcRRTHz71zb/Ym2/QDfNMHsdRW0Qqt+NwXLRTRF6344oP4UZNtsm1JpBhEJCS0FjGpNlIalVLRotYSsSS2xdIHH6yt+CQIPuiDoE/u1/3Y3dzxf2b2rhs3u5m7qRcOs5CZ+f/mf2bmTCxK+f348uuyZmXokfdfs1IOXbV7qkluHJiUVcujGmLPqVyqsZ1gU01yfWgGAP3EwS48eXJ/qvGrQRhPcG3opIzsLEXWQAPAo2dn9hqPX7cDi7kPZWhtoMhmAA4PMO6JobcfHlvPXjBawRLEA4iHNgNkKUQKQmHht03jx3YZzbEuBxYOnpeBPagAAruffGFTAIAQbWRbdPzNh3qGWHPg17lzEN9IPgACsYHKEPUdBACCBkDVpuX5iQedXlLRFeCb4Xnpi00QZ4BNEHeo7FhUAUBFgcAFpIFdWLaJLozfv+aC/gu56gA+7yxYsTcjACDQigEqQriMKDEAgwCC01ADQB0hMfvS4e2pIFZ0/jU3JP3qRi3Momj9xu+ScKnoavEkOBURUlEFRN2CC5iNJxRS0rej9xqBqE5/HXtKRn9jlyP8mFe+ZQVEGS6weNERum2A8B4IGxA1pIIB+HMA0LcsKbMcU39V3rnw6o4/Op6Cwty+pjgDVEivXDugQUpisClcgGDRFSoV7ECA+BfCIgt5cGNJHovXdVw6sqOjG1bh1D7JwtqBQapYm6ncCiC2ACCr8l/AygsQ55Y3YgLgwxkFAkds7AQPogMNcW4Xu+yLJtlv48/DiVaAJA3dARJxBuCwYX+ycha/PrKt615o+yOX204p4JVrJ3QKElFuo8ZpsADgUrz9p5e2/mJyL3Skuzx8RvI+UOlINiGEGaC5CRu2t5yEK7deuedRE+GkT1d7Fg5+qtzge6DouOr4MUAJTrADfA8k4lfzZsfO6CJq7fTZ6FeAwNHERZScfxbXALoeXBy/z+jM9/we+Dh/WdWDksNXsRZWpwDi8xMP9CzOQMaDz+avoS5k24rRzBs7jeaYPHpzaWJ6997UKUgGnB+9pEqyLsdcCS2amDZ7C0wdvSX7cTMeOr67DdaIPoH4ZHRRPctC21NVMP9W+4Sr5Xl27AfpAcCLK9Fz7+zxWvukArg48jmeZVn1JsRERmPnjtyQmbhOfTJA+LR/5vEV44wmSYgXcx/dhPiuCABPzz6x5tgPDn0nHRmRi+iToYLIxBV67L0XmmPXnCTNpZL0PZe/KlEbUZbrqIxVBaAh4ELsUwZOIB208/QUivht/i6MfCktilETAEB1QNSaEDoN7AIgKCA3G5ofw7ScV4ZPS5sdIA3AkaTBFSFtm3tXLf62O9AK+v2B6Vjgfyih0gAIisjxqrR1du7/3QOtED+/eFgKUSPhIh2ZGt194kzvpyBtGpL+v+OtYffV6a7Js+u7iHoF+HPqGckO3DH2RRvAPyAr9uZLu6+SAAAAAElFTkSuQmCC"
+        },
+        "8": {
+          "id": 8,
+          "index": 3,
+          "windowId": 42,
+          "highlighted": false,
+          "active": false,
+          "attention": false,
+          "pinned": true,
+          "status": "complete",
+          "hidden": false,
+          "discarded": false,
+          "incognito": false,
+          "width": 1271,
+          "height": 1217,
+          "lastAccessed": 1694820796147,
+          "audible": false,
+          "autoDiscardable": true,
+          "mutedInfo": {
+            "muted": false
+          },
+          "isArticle": true,
+          "isInReaderMode": false,
+          "sharingState": {
+            "camera": false,
+            "microphone": false
+          },
+          "successorTabId": -1,
+          "cookieStoreId": "firefox-container-11",
+          "url": "https://doc.rust-lang.org/stable/std/",
+          "title": "std - Rust",
+          "favIconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj48c3ZnIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAzMiAzMiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxuczpzZXJpZj0iaHR0cDovL3d3dy5zZXJpZi5jb20vIiBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kOyI+CjxkZWZzPgogIDxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbCiAgICAjbG9nbyB7CiAgICAgIGZpbGwtcnVsZTogbm9uemVybzsKICAgIH0KICAgICNsb2dvLXRlZXRoIHsKICAgICAgc3Ryb2tlOiAjMDAwMDAwOwogICAgICBzdHJva2Utd2lkdGg6IDAuOTJweDsKICAgIH0KICAgIEBtZWRpYSAocHJlZmVycy1jb2xvci1zY2hlbWU6IGRhcmspIHsKICAgICAgI2xvZ28gewogICAgICAgIGZpbGw6ICNGRkZGRkY7CiAgICAgICAgZmlsbC1ydWxlOiBub256ZXJvOwogICAgICB9CiAgICAgICNsb2dvLXRlZXRoIHsKICAgICAgICBmaWxsOiAjRkZGRkZGOwogICAgICAgIHN0cm9rZTogI0ZGRkZGRjsKICAgICAgICBzdHJva2Utd2lkdGg6IDAuOTJweDsKICAgICAgfQogICAgfQogIF1dPjwvc3R5bGU+CjwvZGVmcz4KPHBhdGggaWQ9ImxvZ28iIGQ9Ik0xNS45OTMsMS41NGMtNy45NzIsMCAtMTQuNDYxLDYuNDkyIC0xNC40NjEsMTQuNDYyYzAsNy45NjkgNi40OTIsMTQuNDYxIDE0LjQ2MSwxNC40NjFjNy45NywwIDE0LjQ2MiwtNi40OTIgMTQuNDYyLC0xNC40NjFjMCwtNy45NyAtNi40OTIsLTE0LjQ2MiAtMTQuNDYyLC0xNC40NjJabS0wLjAyMSwxLjI4NWMwLjUxMSwwLjAxMyAwLjkyNCwwLjQzOSAwLjkyNCwwLjk1MWMwLDAuNTIyIC0wLjQzLDAuOTUyIC0wLjk1MiwwLjk1MmMtMC41MjIsMCAtMC45NTEsLTAuNDMgLTAuOTUxLC0wLjk1MmMwLDAgMCwwIDAsMGMwLC0wLjUyMiAwLjQyOSwtMC45NTIgMC45NTEsLTAuOTUyYzAuMDEsMCAwLjAxOSwwLjAwMSAwLjAyOCwwLjAwMVptMi4xNzgsMS41NjZjMy4zNzksMC42MzMgNi4zMTMsMi43MjMgOC4wMTYsNS43MDlsLTEuMTIzLDIuNTMzYy0wLjE5MywwLjQzOCAwLjAwNiwwLjk1MiAwLjQ0LDEuMTQ3bDIuMTYsMC45NThjMC4wNjcsMC42NzUgMC4wNzYsMS4zNTUgMC4wMjUsMi4wMzFsLTEuMjAyLDBjLTAuMTIsMCAtMC4xNjksMC4wOCAtMC4xNjksMC4xOTZsMCwwLjU1MWMwLDEuMjk3IC0wLjczMSwxLjU4MiAtMS4zNzMsMS42NTJjLTAuNjEyLDAuMDcgLTEuMjg4LC0wLjI1NyAtMS4zNzQsLTAuNjNjLTAuMzYxLC0yLjAyOSAtMC45NjEsLTIuNDYgLTEuOTA5LC0zLjIxYzEuMTc4LC0wLjc0NiAyLjQwMSwtMS44NSAyLjQwMSwtMy4zMjVjMCwtMS41OTQgLTEuMDkyLC0yLjU5NyAtMS44MzUsLTMuMDljLTEuMDQ2LC0wLjY4OCAtMi4yMDMsLTAuODI2IC0yLjUxNSwtMC44MjZsLTEyLjQyMSwwYzEuNzE3LC0xLjkxOCA0LjAyLC0zLjIxOCA2LjU1LC0zLjY5NmwxLjQ2NiwxLjUzNmMwLjMzLDAuMzQ2IDAuODc4LDAuMzYxIDEuMjIzLDAuMDI4bDEuNjQsLTEuNTY0Wm0tMTMuNTIyLDcuMDQzYzAuNTExLDAuMDE1IDAuOTI0LDAuNDQgMC45MjQsMC45NTFjMCwwLjUyMiAtMC40MywwLjk1MiAtMC45NTIsMC45NTJjLTAuNTIyLDAgLTAuOTUxLC0wLjQzIC0wLjk1MSwtMC45NTJjMCwwIDAsMCAwLDBjMCwtMC41MjIgMC40MjksLTAuOTUxIDAuOTUxLC0wLjk1MWMwLjAwOSwwIDAuMDE5LDAgMC4wMjgsMFptMjIuNjg1LDAuMDQzYzAuNTExLDAuMDE1IDAuOTI0LDAuNDQgMC45MjQsMC45NTFjMCwwLjUyMiAtMC40MywwLjk1MiAtMC45NTIsMC45NTJjLTAuNTIyLDAgLTAuOTUxLC0wLjQzIC0wLjk1MSwtMC45NTJjMCwwIDAsMCAwLDBjMCwtMC41MjIgMC40MjksLTAuOTUyIDAuOTUxLC0wLjk1MmMwLjAxLDAgMC4wMTksMCAwLjAyOCwwLjAwMVptLTIwLjg5MiwwLjE1M2wxLjY1OCwwbDAsNy40NzdsLTMuMzQ3LDBjLTAuNDE0LC0xLjQ1MiAtMC41NDIsLTIuOTcgLTAuMzgsLTQuNDdsMi4wNSwtMC45MTJjMC40MzgsLTAuMTk1IDAuNjM3LC0wLjcwNiAwLjQ0MSwtMS4xNDRsLTAuNDIyLC0wLjk1MVptNi45MiwwLjA3OWwzLjk0OSwwYzAuMjA1LDAgMS40NDEsMC4yMzYgMS40NDEsMS4xNjNjMCwwLjc2OCAtMC45NDgsMS4wNDMgLTEuNzI4LDEuMDQzbC0zLjY2NSwwbDAuMDAzLC0yLjIwNlptMCw1LjM3M2wzLjAyNiwwYzAuMjc1LDAgMS40NzcsMC4wNzkgMS44NiwxLjYxNWMwLjExOSwwLjQ3MSAwLjM4NSwyLjAwNyAwLjU2NiwyLjQ5OWMwLjE4LDAuNTUxIDAuOTExLDEuNjUyIDEuNjkxLDEuNjUybDQuOTM4LDBjLTAuMzMxLDAuNDQ0IC0wLjY5MywwLjg2MyAtMS4wODMsMS4yNTVsLTIuMDEsLTAuNDMyYy0wLjQ2OCwtMC4xMDEgLTAuOTMsMC4xOTkgLTEuMDMxLDAuNjY3bC0wLjQ3NywyLjIyOGMtMy4xMDQsMS40MDYgLTYuNjcyLDEuMzg5IC05Ljc2MiwtMC4wNDZsLTAuNDc4LC0yLjIyOGMtMC4xMDEsLTAuNDY4IC0wLjU2LC0wLjc2NyAtMS4wMjgsLTAuNjY3bC0xLjk2NywwLjQyM2MtMC4zNjUsLTAuMzc3IC0wLjcwNCwtMC43NzggLTEuMDE2LC0xLjJsOS41NjcsMGMwLjEwNywwIDAuMTgxLC0wLjAxOCAwLjE4MSwtMC4xMTlsMCwtMy4zODRjMCwtMC4wOTcgLTAuMDc0LC0wLjExOSAtMC4xODEsLTAuMTE5bC0yLjc5OSwwbDAuMDAzLC0yLjE0NFptLTQuNDE1LDcuNzQ5YzAuNTEyLDAuMDE1IDAuOTI0LDAuNDQgMC45MjQsMC45NTFjMCwwLjUyMiAtMC40MjksMC45NTIgLTAuOTUxLDAuOTUyYy0wLjUyMiwwIC0wLjk1MiwtMC40MyAtMC45NTIsLTAuOTUyYzAsMCAwLDAgMCwwYzAsLTAuNTIyIDAuNDMsLTAuOTUyIDAuOTUyLC0wLjk1MmMwLjAwOSwwIDAuMDE4LDAuMDAxIDAuMDI3LDAuMDAxWm0xNC4wODksMC4wNDNjMC41MTEsMC4wMTUgMC45MjQsMC40MzkgMC45MjMsMC45NTFjMCwwLjUyMiAtMC40MjksMC45NTIgLTAuOTUxLDAuOTUyYy0wLjUyMiwwIC0wLjk1MSwtMC40MyAtMC45NTEsLTAuOTUyYzAsMCAwLDAgMCwwYzAsLTAuNTIyIDAuNDI5LC0wLjk1MiAwLjk1MSwtMC45NTJjMC4wMDksMCAwLjAxOCwwIDAuMDI4LDAuMDAxWiIvPjxwYXRoIGlkPSJsb2dvLXRlZXRoIiBkPSJNMjkuNjQ3LDE2LjAwMmMwLDcuNDkgLTYuMTYzLDEzLjY1MyAtMTMuNjU0LDEzLjY1M2MtNy40OSwwIC0xMy42NTQsLTYuMTYzIC0xMy42NTQsLTEzLjY1M2MwLC03LjQ5MSA2LjE2NCwtMTMuNjU0IDEzLjY1NCwtMTMuNjU0YzcuNDkxLDAgMTMuNjU0LDYuMTYzIDEzLjY1NCwxMy42NTRabS0wLjI1NywtMS4zMTlsMi4xMywxLjMxOWwtMi4xMywxLjMxOGwxLjgzLDEuNzFsLTIuMzQ0LDAuODc4bDEuNDYzLDIuMDM1bC0yLjQ3NSwwLjQwNGwxLjA0LDIuMjgybC0yLjUwNiwtMC4wODlsMC41NzUsMi40NDJsLTIuNDQxLC0wLjU3NmwwLjA4OSwyLjUwNmwtMi4yODMsLTEuMDRsLTAuNDAzLDIuNDc1bC0yLjAzNSwtMS40NjJsLTAuODc4LDIuMzQzbC0xLjcxLC0xLjgyOWwtMS4zMTksMi4xMjlsLTEuMzE4LC0yLjEyOWwtMS43MSwxLjgyOWwtMC44NzgsLTIuMzQzbC0yLjAzNSwxLjQ2MmwtMC40MDQsLTIuNDc1bC0yLjI4MiwxLjA0bDAuMDg5LC0yLjUwNmwtMi40NDIsMC41NzZsMC41NzUsLTIuNDQybC0yLjUwNSwwLjA4OWwxLjA0LC0yLjI4MmwtMi40NzUsLTAuNDA0bDEuNDYyLC0yLjAzNWwtMi4zNDMsLTAuODc4bDEuODI5LC0xLjcxbC0yLjEyOSwtMS4zMThsMi4xMjksLTEuMzE5bC0xLjgyOSwtMS43MWwyLjM0MywtMC44NzhsLTEuNDYyLC0yLjAzNWwyLjQ3NSwtMC40MDRsLTEuMDQsLTIuMjgybDIuNTA1LDAuMDg5bC0wLjU3NSwtMi40NDFsMi40NDIsMC41NzVsLTAuMDg5LC0yLjUwNmwyLjI4MiwxLjA0bDAuNDA0LC0yLjQ3NWwyLjAzNSwxLjQ2M2wwLjg3OCwtMi4zNDRsMS43MSwxLjgzbDEuMzE4LC0yLjEzbDEuMzE5LDIuMTNsMS43MSwtMS44M2wwLjg3OCwyLjM0NGwyLjAzNSwtMS40NjNsMC40MDMsMi40NzVsMi4yODMsLTEuMDRsLTAuMDg5LDIuNTA2bDIuNDQxLC0wLjU3NWwtMC41NzUsMi40NDFsMi41MDYsLTAuMDg5bC0xLjA0LDIuMjgybDIuNDc1LDAuNDA0bC0xLjQ2MywyLjAzNWwyLjM0NCwwLjg3OGwtMS44MywxLjcxWiIvPjwvc3ZnPgo="
+        },
+        "9": {
+          "id": 9,
+          "index": 4,
+          "windowId": 42,
+          "highlighted": false,
+          "active": false,
+          "attention": false,
+          "pinned": true,
+          "status": "complete",
+          "hidden": false,
+          "discarded": false,
+          "incognito": false,
+          "width": 1271,
+          "height": 1217,
+          "lastAccessed": 1694820796206,
+          "audible": false,
+          "autoDiscardable": true,
+          "mutedInfo": {
+            "muted": false
+          },
+          "isInReaderMode": false,
+          "sharingState": {
+            "camera": false,
+            "microphone": false
+          },
+          "successorTabId": -1,
+          "cookieStoreId": "firefox-container-11",
+          "url": "https://docs.python.org/3.11/",
+          "title": "3.11.5 Documentation",
+          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACAUlEQVQ4T32Tz2rUUBTGz0VUXCh5AaGuVSZv4CAMlirMuHOlMwtBcGPtohvpRES6qH+68AHGjdtOBZEWpUlpERXaRN24UAd8gdl1Jjl/PPcmU9KpJHAhucn3O9/5zo2Bqav1ctdPs1GXGOuUoceEQIhD5qx/4tTp+TC4OSxLzDRgbuVjyEg9JmohZk3KAVCA1j+/uN2qBMwub4ZE9Icp9QnJnwB0z0Kir6udeiWg8fR9WxBnUCuzVlZA1zpwSwF7r+4eB1x/ttUTwiYiekct00RYwLJof+kXgJErutGHM6ZjbjzfCtRqd6rXct+2snsGkBwgYwWkAJQ9NnMrH2JNu3bYK7peDytPAhQRC3i9/+iHr+KaA3AamWvLG+r+SNLATAln2dDmoO5AhNS2ibcXvo/OnjxYLMQWAKbx5J3YhIuQ4Py5g/tvOt8aWs5zaQtbq/ZjHyT1ymIHuBq8jdVyrbCa7DzcG6iqmYu1b3JW/7MUSmli6ktrGmI+KmaMPi0kapc1JFe1AqDvhOdNPVjzstFoVQEzuuIvi4kNKU85B0TOhdh7dSTjvCUjA3Npt33sKMvfe6F+XAaETmCFrJYvbj+oPIkyaCugmHM+azcuhcbA4JvLO9VHWX7f6gGP75Ra0OoUggEFywVru9KBC//nbKAhttyBsWMESEBMX6sH03/vP5xF3/IzElBAAAAAAElFTkSuQmCC"
+        },
+        "10": {
+          "id": 10,
+          "index": 5,
+          "windowId": 42,
+          "highlighted": false,
+          "active": false,
+          "attention": false,
+          "pinned": true,
+          "status": "complete",
+          "hidden": false,
+          "discarded": false,
+          "incognito": false,
+          "width": 1271,
+          "height": 1217,
+          "lastAccessed": 1694820796259,
+          "audible": false,
+          "autoDiscardable": true,
+          "mutedInfo": {
+            "muted": false
+          },
+          "isInReaderMode": false,
+          "sharingState": {
+            "camera": false,
+            "microphone": false
+          },
+          "successorTabId": -1,
+          "cookieStoreId": "firefox-container-11",
+          "url": "https://www.rapidtables.com/convert/number/index.html",
+          "title": "Number conversions",
+          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAolBMVEX/mjAAAAD/mzD/nDH/nTH7mC7tjytUMAgfDgGiYBrWgie1ax8iEALKeiN0QxA1HANEJQb2lC0EAgCeXxqqZRzAdSLkiSlnPAyGTxShXxqzax7iiCnzki2SVhewaB7fhihiOAyBTBO6cCAoFAJcNApqPg0LAwBLKQaJUBR5RhHwkSzPfSTGdyIuGAMIAwAQBgBvQA5PLAh3RRGMUxZ8SRJfNgsZqoJwAAAAlklEQVR4nHWP1Q7DMAxFe0OFpNyuOGbm//+1dVvSp82yLPnIPtK1/hSh9N39vt/cttNH2vQkLuDIBcKxIdzGk+UJKqYNjYOU1UBGv4DWOHutjbXQLySAKiNVDsy+C3GJYHOjpP4J+R2OObDoEHNxSCC1kvArJkQcEWjARysUwlpC+fwDWlm5mUc8153F2sFYl4t081fuF0V4B+e3thvGAAAAAElFTkSuQmCC"
+        },
+        "11": {
+          "id": 11,
+          "index": 6,
+          "windowId": 42,
+          "highlighted": false,
+          "active": false,
+          "attention": false,
+          "pinned": true,
+          "status": "complete",
+          "hidden": false,
+          "discarded": false,
+          "incognito": false,
+          "width": 1271,
+          "height": 1217,
+          "lastAccessed": 1694828435483,
+          "audible": false,
+          "autoDiscardable": true,
+          "mutedInfo": {
+            "muted": false
+          },
+          "isInReaderMode": false,
+          "sharingState": {
+            "camera": false,
+            "microphone": false
+          },
+          "successorTabId": -1,
+          "cookieStoreId": "firefox-default",
+          "url": "https://marcellbarsony.github.io/homepage/",
+          "title": "Homepage",
+          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAXVBMVEUAAABfS4teS4teS4tbSIhbSJFdSIltSJFfS4s/P39eS4pfTItfSotiSotdSoleS4tVVapdS4tfTIxeSIoAAP9fP39cSIteSotfTIVjRo1kTY1eS4teS4tjTZBeS4lKgKOcAAAAH3RSTlMA///wHA5KB+wE3//QH0v3A+zeRgEITZkoEjjn2BdOtYdMzQAAAPBJREFUeJyNUwkSwiAMlNSjilprva//P1MSEggUtDsdKLCEsGxmU2AADIE6AOs713w0ARv5eAx7JvAsL/BuxFIIHN9/Bix4CjAB54dVhnujIjjGYZT6xs2qCOsxwVgbcgBTIqgkKwRJEnMoESAmWY7wl6B1qERQUv++Re2IIJR7pYKSqdTvfP30TI/o2rbvWwV8qyAUOybaSn6ZgBYjm4khcOiMB+biCfMqzqPUy2iqGOI18yTJwOoWyu7muiM8OkWQbWDdbW588jE+N8fmM5ot4ZVILVmE2vE7UiUzKbELhqFyw3KSmuPiZMMsqnAu+QLogAhNqQOC6AAAAABJRU5ErkJggg=="
+        },
+        "34": {
+          "id": 34,
+          "index": 7,
+          "windowId": 42,
+          "highlighted": true,
+          "active": true,
+          "attention": false,
+          "pinned": false,
+          "status": "complete",
+          "hidden": false,
+          "discarded": false,
+          "incognito": false,
+          "width": 1271,
+          "height": 1217,
+          "lastAccessed": 1694829129580,
+          "audible": false,
+          "autoDiscardable": true,
+          "mutedInfo": {
+            "muted": false
+          },
+          "isInReaderMode": false,
+          "sharingState": {
+            "camera": false,
+            "microphone": false
+          },
+          "successorTabId": -1,
+          "cookieStoreId": "firefox-container-14",
+          "url": "https://www.youtube.com/watch?v=Zs-pS-egQSs&list=PLai5B987bZ9CoVR-QEIN9foz4QCJ0H2Y8&index=9",
+          "title": "Common Collections in Rust - YouTube",
+          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAtklEQVQ4T2NkoBAwUqifAW7AfwYGAaBhBlADHXAYfAAqfgGo8QOIDTYAqDkBSM0n0TWJQM0LGIGaQbaeJ1EzTLkhyIAAIG89mQYkggxoAGqux2rAgwdAzwF9dwDmdQxVjfgN+A80HgQ2bmRgKChgYAAZiAqINODgQYhLSDYApAFk84YNuIII7ALcgSgATBofwNGNC4ADkbJoBBlNUUKCuQ0tKYNcBUra6AAWn6hJGZ8nCclRnBsBzJ03KZWC+NsAAAAASUVORK5CYII="
+        }
+      }
+    },
+    "windowsNumber": 2,
+    "windowsInfo": {
+      "1": {
+        "id": 1,
+        "focused": false,
+        "top": 22,
+        "left": 0,
+        "width": 2133,
+        "height": 1311,
+        "incognito": false,
+        "type": "normal",
+        "state": "normal",
+        "alwaysOnTop": false,
+        "title": "Emil Rottmayer - playlist by Marcell Barsony | Spotify — Mozilla Firefox"
+      },
+      "42": {
+        "id": 42,
+        "focused": true,
+        "top": 28,
+        "left": 6,
+        "width": 1264,
+        "height": 1296,
+        "incognito": false,
+        "type": "normal",
+        "state": "normal",
+        "alwaysOnTop": false,
+        "title": "Common Collections in Rust - YouTube — Mozilla Firefox"
+      }
+    },
+    "tabsNumber": 10,
+    "name": "Auto Save - Browser exited",
+    "date": 1694829129579,
+    "lastEditedTime": 1694829129579,
+    "tag": [
+      "browserExit",
+      "Arch"
+    ],
+    "sessionStartTime": 1694820980636,
+    "id": "53efe12f-d97e-489d-9674-cfd69ea38839"
+  },
+  {
+    "windows": {
       "67": {
         "9": {
           "id": 9,
@@ -970,464 +1328,6 @@
     ],
     "sessionStartTime": 1693446416089,
     "id": "768224d2-19f1-4f2c-bd29-27d7976da3b3"
-  },
-  {
-    "windows": {
-      "1": {
-        "4": {
-          "id": 4,
-          "index": 0,
-          "windowId": 1,
-          "highlighted": true,
-          "active": true,
-          "attention": false,
-          "pinned": true,
-          "status": "complete",
-          "hidden": false,
-          "discarded": false,
-          "incognito": false,
-          "width": 2144,
-          "height": 1233,
-          "lastAccessed": 1694305547569,
-          "audible": false,
-          "autoDiscardable": true,
-          "mutedInfo": {
-            "muted": false
-          },
-          "isArticle": false,
-          "isInReaderMode": false,
-          "sharingState": {
-            "camera": false,
-            "microphone": false
-          },
-          "successorTabId": -1,
-          "cookieStoreId": "firefox-container-21",
-          "url": "https://open.spotify.com/playlist/37i9dQZEVXbvYoi0dvVM3H",
-          "title": "Release Radar | Spotify Playlist",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAzFBMVEUe12AAAAAe12Ae12Ae2GAe12Ae2GEn62Ie2GB//38e2GAe12Aq6Wof2WIe2GAe2GEe2GEf2WAe2GAe2WMj22kf2GAe2WIe2WEf2WQe2WEf2GAf2GIf2WMe2WIf2mMe2GEe2GAe12Ag2WEe2GEe2WIi3GIe3GUd12Af2mEf2WIf2mIe3GQe12D///8e4WEf2WEh2WMe2GEg22Eo5Gsf22Ie2GAe2GAe2WIe2WIf2WEg3mIf2WIg3mIg2WMe2GAh2mMg22Qf2WEf22Me22JfTCdfAAAARHRSTlP/APv+3+KGDdwCx/oMiuTKd96uZB28dZUwqeaSKXRanMv3L5+OLDPucpQxQukBIoA2tVYTOdCmbUtRPmAnZ9ZFT6JAXTks5XQAAADISURBVHicPY9FtsJQEETraYi7EDQ4fHfF978n+pFzqB7VnXRdMMbsjR/WdehXNhUCVqQEKEIVlgFWyU014WuP4SGiLngLecGwUMvPaHj4+XtKYg5ZwUf37fF9f7fIrCz9gEaI5bhDUXE+yFI4qOHOTvP//vNwpDoSAV3j6yR/GW3n/S6ohsB9Pu2VyU6WBBxogeN3uvp6/T2P6b/GRqJpaCmXsykQT8DMsDYC7oCme+sbcXs0neQK2crJlXe1ZXalnSBw9MToXwAtqQ7Xqgf/KgAAAABJRU5ErkJggg=="
-        },
-        "5": {
-          "id": 5,
-          "index": 1,
-          "windowId": 1,
-          "highlighted": false,
-          "active": false,
-          "attention": false,
-          "pinned": true,
-          "status": "complete",
-          "hidden": false,
-          "discarded": false,
-          "incognito": false,
-          "width": 2144,
-          "height": 1233,
-          "lastAccessed": 1694300435577,
-          "audible": false,
-          "autoDiscardable": true,
-          "mutedInfo": {
-            "muted": false
-          },
-          "isInReaderMode": false,
-          "sharingState": {
-            "camera": false,
-            "microphone": false
-          },
-          "successorTabId": -1,
-          "cookieStoreId": "firefox-container-14",
-          "url": "https://www.youtube.com/",
-          "title": "YouTube",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAtklEQVQ4T2NkoBAwUqifAW7AfwYGAaBhBlADHXAYfAAqfgGo8QOIDTYAqDkBSM0n0TWJQM0LGIGaQbaeJ1EzTLkhyIAAIG89mQYkggxoAGqux2rAgwdAzwF9dwDmdQxVjfgN+A80HgQ2bmRgKChgYAAZiAqINODgQYhLSDYApAFk84YNuIII7ALcgSgATBofwNGNC4ADkbJoBBlNUUKCuQ0tKYNcBUra6AAWn6hJGZ8nCclRnBsBzJ03KZWC+NsAAAAASUVORK5CYII="
-        },
-        "7": {
-          "id": 7,
-          "index": 2,
-          "windowId": 1,
-          "highlighted": false,
-          "active": false,
-          "attention": false,
-          "pinned": false,
-          "status": "complete",
-          "hidden": false,
-          "discarded": false,
-          "incognito": false,
-          "width": 2144,
-          "height": 1233,
-          "lastAccessed": 1694305498599,
-          "audible": false,
-          "autoDiscardable": true,
-          "mutedInfo": {
-            "muted": false
-          },
-          "isInReaderMode": false,
-          "sharingState": {
-            "camera": false,
-            "microphone": false
-          },
-          "successorTabId": -1,
-          "cookieStoreId": "firefox-container-14",
-          "url": "https://www.youtube.com/watch?v=rDoqT-a6UFg",
-          "title": "Visualizing memory layout of Rust's data types - YouTube",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAtklEQVQ4T2NkoBAwUqifAW7AfwYGAaBhBlADHXAYfAAqfgGo8QOIDTYAqDkBSM0n0TWJQM0LGIGaQbaeJ1EzTLkhyIAAIG89mQYkggxoAGqux2rAgwdAzwF9dwDmdQxVjfgN+A80HgQ2bmRgKChgYAAZiAqINODgQYhLSDYApAFk84YNuIII7ALcgSgATBofwNGNC4ADkbJoBBlNUUKCuQ0tKYNcBUra6AAWn6hJGZ8nCclRnBsBzJ03KZWC+NsAAAAASUVORK5CYII="
-        },
-        "58": {
-          "id": 58,
-          "index": 4,
-          "windowId": 1,
-          "highlighted": false,
-          "active": false,
-          "attention": false,
-          "pinned": false,
-          "status": "complete",
-          "hidden": false,
-          "discarded": false,
-          "incognito": false,
-          "width": 2144,
-          "height": 1233,
-          "lastAccessed": 1694301001095,
-          "audible": false,
-          "autoDiscardable": true,
-          "mutedInfo": {
-            "muted": false
-          },
-          "isArticle": true,
-          "isInReaderMode": false,
-          "sharingState": {
-            "camera": false,
-            "microphone": false
-          },
-          "successorTabId": -1,
-          "cookieStoreId": "firefox-container-14",
-          "url": "https://quickref.me/vim.html",
-          "title": "Vim Cheat Sheet & Quick Reference",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAPFBMVEUAAAAjuIMjuIMiuIMhuIIit4MAqlUit4Mit4MiuYMjuIIftH8Aqn8juIMiuIQhuYMhtn8Av38it4IjuIKsRgomAAAAFHRSTlMA/9niVfoD9Y5C0RgGV7lyLgTrUHbuYXQAAACJSURBVHiczZJZDoAgDEQFcd/1/ndVGqAlVMCYGOcHyLwuQIs/aRVUDOD5DLGngCx/irR411noD6yvECjZPKSA5EpV2pcaNLAJCxPA0jnAES5IAGIPCGwEAMgPI8nEKGsL+C+DVedrq0+99hv2womnbbEBsXDA47/hdbyYGVQZAPBl+XOtIi1+rhOpEgG+Cbv6+gAAAABJRU5ErkJggg=="
-        },
-        "102": {
-          "id": 102,
-          "index": 3,
-          "windowId": 1,
-          "highlighted": false,
-          "active": false,
-          "attention": false,
-          "pinned": false,
-          "status": "complete",
-          "hidden": false,
-          "discarded": false,
-          "incognito": false,
-          "width": 2144,
-          "height": 1233,
-          "lastAccessed": 1694302427815,
-          "audible": false,
-          "autoDiscardable": true,
-          "mutedInfo": {
-            "muted": false
-          },
-          "isInReaderMode": false,
-          "sharingState": {
-            "camera": false,
-            "microphone": false
-          },
-          "successorTabId": -1,
-          "cookieStoreId": "firefox-container-14",
-          "openerTabId": 7,
-          "url": "https://www.youtube.com/results?search_query=rust+box",
-          "title": "rust box - YouTube",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAflBMVEX/AAAAAAD////+AAD+AAD+AAD/AAD+AAD/AAD/AAD+AAD+AAD+AAD/AAD/AAD/AAD/AAD+AAD/Kyv/7e3/iYn+AAD/2Nj/eHj/AAD/AAD/Cwv/AAD/Pz///v7/5ub+AAD/AAD+AAD/AAD/8vL/AAD+AAD+AAD/AAD+AAD/Dg7DffOXAAAAKnRSTlP/AP/+5+/AlgXJc9e33ir7Clf///+o//8hif8v////8zjPff8/7OIu1P82uCqHAAAApklEQVR4nM2TVxKDMAxENzIxhARMeu/9/heMmTCDbED+Zf/kfTNWxSCg3gDFexrrCLWi6zJ95EUFbJnjaVICcbcPaAtIPqydyECCVAZu0DycNYARxjykuQ+8wMsHEa1d4IyhB9Bxx19UEyA6hQA6yMDK/cJPkr5OkgaZCyzcIvC0nWC6ezZsm8Rh2oFjIwOX8LhlQJUrZ7p981/a/KNa7Wzfp8uS9ANtKQW43u47XgAAAABJRU5ErkJggg=="
-        }
-      },
-      "40": {
-        "9": {
-          "id": 9,
-          "index": 0,
-          "windowId": 40,
-          "highlighted": false,
-          "active": false,
-          "attention": false,
-          "pinned": true,
-          "status": "complete",
-          "hidden": false,
-          "discarded": false,
-          "incognito": false,
-          "width": 2144,
-          "height": 1191,
-          "lastAccessed": 1694286312409,
-          "audible": false,
-          "autoDiscardable": true,
-          "mutedInfo": {
-            "muted": false
-          },
-          "isInReaderMode": false,
-          "sharingState": {
-            "camera": false,
-            "microphone": false
-          },
-          "successorTabId": -1,
-          "cookieStoreId": "firefox-default",
-          "url": "https://marcellbarsony.github.io/homepage/",
-          "title": "Homepage",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAXVBMVEUAAABfS4teS4teS4tbSJFbSIhdSIltSJFfS4s/P39eS4pfTItfSotiSotdSoleSIpeS4tVVapdS4teS4sAAP9fP39cSIteSotfTIVjRo1kTY1eS4teS4tjTZBeS4mBOuQBAAAAH3RSTlMA///wDhxKB+wE3//QH0tG9wPs3gEITZkoEjjn2BdOHBXPRAAAAO9JREFUeJyNUwkSwiAMlNSjitpa7/P/z5SEBAIF7U4HCiwhLJvZFBgAQ6AOwPrONR9NwEY+HsOeCTzLC7wbsRQCx/efAQueAkzA+W6V4d6oCI5xGKW+cbMqwnpMMNaGHMCUCCrJCkGSxBxKBIhJliP8JWgdKhGU1L9vUTsiCOVeqaBkKvU7Xz890yP6th2GVgHfKgjFjom2kl8moMXIZmIIHDrjgbl4wqKK8yj1MpoqunjNPEkysLqFsru57giPXhFkG1h3mxuffIzPzbH5jGZLeCVSSxahdvyOVMlMSuyCYajcsJyk5rg42TDzKpxLvgQ3CEzXFSg+AAAAAElFTkSuQmCC"
-        },
-        "10": {
-          "id": 10,
-          "index": 1,
-          "windowId": 40,
-          "highlighted": false,
-          "active": false,
-          "attention": false,
-          "pinned": true,
-          "status": "complete",
-          "hidden": false,
-          "discarded": false,
-          "incognito": false,
-          "width": 2144,
-          "height": 1233,
-          "lastAccessed": 1694305503177,
-          "audible": false,
-          "autoDiscardable": true,
-          "mutedInfo": {
-            "muted": false
-          },
-          "isInReaderMode": false,
-          "sharingState": {
-            "camera": false,
-            "microphone": false
-          },
-          "successorTabId": -1,
-          "cookieStoreId": "firefox-container-11",
-          "url": "https://discord.com/",
-          "title": "Discord | Your Place to Talk and Hang Out",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACy0lEQVRYR82XS2sTURTH/zePGptXi4iUfgDBpfigVZQiPjaupKQFn2ijFQnUrroQFBe6EBUVqSYbG8TULtwp+ChCyaJduBX8AIqImMkkpm2aXO/MeJvM485MXpDZBJJ7zvmdM/9zci5BA8/oKPV6+/I5gISszCilclWK9C8skIpbt8TNwdil/B9C0OfmbN0ZKZOMONrYAoxNyO8BerTBwIbj5EMmGT4m8iEEGJvI09YC661ZNSxjWX7Z7uAcxQrCBNCp4CIIHUCng1tBbAK0R3BuVVMTZh1Ae0XnhML1oAKw0kvsI2JndGC/D9cublWPVCoUpycLuuMvZ0PweLR8nqRKyK5s2DJQitx8KtLPAWxb7tXzsFNClr+Px2VbO6UKRBuvshD33q1eDA54mwL48bOK6zeKQttKLuwjsQkpT0CEKTabPY9qVwUKWiB2rZeIBzC0x99U9twou1JmmlgV+rAFaDV7N1VoCGBufhXvPpVVv0Y4XurjI36cHw/oMrZ7DUIAvw+Ye6qXRr2jkYM+xM9qbfnsRQmfszUdG+HOXJWxIZC5EOBcbAtOHOkRZpJ8EEIoqPV9Xq7i8nRN7UaAtx/XkX69ZqkDIcD920EM7PCYjBIzBZw62YPDw3q47HIZmTdreHzXvCx9Z+04LWhHBiCxaWFesR7dCWL7NjNAMy3x63cViRnzPGBtKAsH0dSVAPbt1rdgoUg3yy4CKf6lCPbq/+WXv5TxcNbciuogUhyJZoGdonft9GJ4L1Mqe5S5//Wbtoca338yXcLikrUC1VGsGDktnZMXAjg0pFXDab5zgMWldSTT1sL7Xz11ae2Ov2PtNbRjA3YrUco25ai6KXfPSsbZO70XGjfj7lvLO1WJhi4mNQiJXc1Ia1czygSX0gRn9bi6nLpZWo3O+dLp1BeuALgTZX/0RJWbsmiFo4XMYCSKm6TqFJj//g894h/bts3R9QAAAABJRU5ErkJggg=="
-        },
-        "11": {
-          "id": 11,
-          "index": 2,
-          "windowId": 40,
-          "highlighted": false,
-          "active": false,
-          "attention": false,
-          "pinned": true,
-          "status": "complete",
-          "hidden": false,
-          "discarded": false,
-          "incognito": false,
-          "width": 2144,
-          "height": 1233,
-          "lastAccessed": 1694305528709,
-          "audible": false,
-          "autoDiscardable": true,
-          "mutedInfo": {
-            "muted": false
-          },
-          "isArticle": false,
-          "isInReaderMode": false,
-          "sharingState": {
-            "camera": false,
-            "microphone": false
-          },
-          "successorTabId": -1,
-          "cookieStoreId": "firefox-container-17",
-          "url": "https://www.linkedin.com/in/marcellbarsony/",
-          "title": "Marcell Barsony | LinkedIn",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACPElEQVRYR2NkGGDAOMD2M8AdwJF8yJmR+f8cRgZGBVo66j/D/wf//zKm/JhrtxdkD9wBnGkH79PacpjHQI74PsteEcUBXGmH/tPS5+hmf5tlB/Y8PATQHcDMzPjHS0/oGUjRtkvvpP7+/c9CTQfidQDI8mNVBp91ZHgEQZZeefLlvVXbBV5qOgKvA/wMhB8vz9SSRfZx5PRrjzddeIsiRkmIDG4HMDMBo6DaEBgF3NAo+PreqvU8799/1EsHhBMh0BHe+sLgRLj14lspaloOMpOgAyiJX2L0EnRAlY8cijltWx6B+bZq/GAMA8tPvPpw/80PgQAjkedBxiIsBnI8X3///c+w68o7/om7nzK9+PgLoRjJRIIO+DrTFsUB3OmHwXyQw6p95eFyRSvuXEywkZTWk+EWQff5v///v8XPvvFt3dk3GHJUc8CvP/8+sbEw8eEKdpAjjOrPfrv98juKI6jmAJjF//8z/Pzx+997TjYmkEUopeaS4y9fpy+4JYrsSKo6YO3ZN09zF9/i//j9L4+iCMeH3aX6jJICbPC4B4o/lSo4Jk0TBzz98POVWvkpMWTDPXSFn63N0ZJCEvsDTEMooUK1EOje/vhPw4YHKIaDCrJP021QxGCJGOYoqjmgdfNDBlgWRQ4FXLlo1AGjITAaAkSHADFVKiVqCJYDlBhOjF4MB3CmHQJ2TBgUiNFMqRpgBwTYMbFD7ZhwpO53YWRknk1rR4As////b+qP2Y57QB4ZPJ1TSoOVXP0AtBqNMCxwApoAAAAASUVORK5CYII="
-        },
-        "12": {
-          "id": 12,
-          "index": 3,
-          "windowId": 40,
-          "highlighted": false,
-          "active": false,
-          "attention": false,
-          "pinned": true,
-          "status": "complete",
-          "hidden": false,
-          "discarded": false,
-          "incognito": false,
-          "width": 2144,
-          "height": 1233,
-          "lastAccessed": 1694304776853,
-          "audible": false,
-          "autoDiscardable": true,
-          "mutedInfo": {
-            "muted": false
-          },
-          "isArticle": false,
-          "isInReaderMode": false,
-          "sharingState": {
-            "camera": false,
-            "microphone": false
-          },
-          "successorTabId": -1,
-          "cookieStoreId": "firefox-container-16",
-          "url": "https://www.instagram.com/",
-          "title": "Instagram",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABgFBMVEX///8AAAD9AGP+rgH+xwD+vgDbAdj+IXb/5vH9Anf+XSn9B2t1F/3JAt36A6z+A7n5xfL+AIb+K1X9BsL+K2z9AJz7Gbf+HV6yBeH+Foj+lQX+cyT+hgOWCuz+ZTTyAL3+dxj/zsz+jBP+Pj38Jp/+Sz/qANT+M0n+GKn+PEv9BI/uFtH92/P+Nl/8JsL+dAP+SjGjGPz/5rKEGf79Ywb+ZdmzFvaUGP3nAMj9IYP+dr//psv+oQT+VWT8eN3pGuL/6uP+Sh//eKz9WRX+vYf+QG//stPPG/P3r/L+zoD/j4n+zgD/16r7jN/+jKX+sYuADfT/5tH+hh7+oaH+ganonvfIS/b+YU7+qCP/gsr9vuz+M4/+eUj8muqBHP/5kRiAGv7fI+z4C5vmALT9lQ52HPzjALv3DpvxAKP+IZTDKPt4Gv3+mDLuNd7/vJ//K3n9DV3/JKP/Tjr/vgT+KH7/X0/WANH+dQP9fgPYAM7/NWL+QUz+wSv+wQT+WC7+sAiW5cuzAAAAgHRSTlP/AP/+/////////v/9/////////////////////v/////////////////////+//7///////////3/////////////////////////////////////////////////GhXM/70WUWJPee/6/4r///9B/w5/v+UQyMeDhD7l//e8ez9yTusAAAKdSURBVHicXZNZV9pQFEY/xEogFQUxVKQVBGQKg4pKQCiIWlQQRRzAsWpV6lA7z+1f73eDrK7lfuBlb849NyuBwWA4uj55SjY2Np6TZ6Sf9H35fkbJ4I2wHd2V/X2CdPpCBMJPT0/P6brr+vomJtLp9NiFAUcdPTc5K7RuHqAfuzrDdUdP7mxvlwcfKB9WbyfGiNV6iZM5XQ/iEYPxIXrrKSYFbyWgXM3nZzrk82VAjQ9YrcNXmBWoUF9Ho0NkQPyQuIoW/XAEr8gOcCv8QJf8YTwOxOlterCNMr3CkVZFoac8tLbQjERsNrwkZVSjihIKharcRa0qioqZ4SayNpvNzCAabSEvtJ9aoCrW0LAemM1mRONxZRBNf7u9L0HK+P0ZCSp9JINlehn8q7+FjKZpWUj7I4SDxOkikOUetNua1kLD4XBIWDBpGosmVJ7OgL4HJiovGvbYErDkMIlkHxgxmxew3ENgt9uDXqyGwzkGMQcTEwOTLHeDYDDoY+Dz+SSsx2JMHA2o8v+AJskgmQxsQcqFmSxJaDid990gmSwWGVgslt0CCqu53BZvG3M6nQ1k6WUUi8VSBbUSi4NC50EVclzMuY7sfY9sRrFUSt2h5vGMjo4e1JgUtnbD4WDQLgKZQSmVSi2ikvAQNi9IIODzBXm19XvZbEMqlUjcADdu9/h4vV7XEwsTcWunHiQSCfcmCnsul2tcNBxjsSS5sdfuNI1EQO127fHsqRXBIqnV7rz6qnrwld41v7f5+KX17vqCdod2im/CG43GXyuVqQcqlUrtwJL0hWMO7RLHbt0/6WI0zrvG655RSzLA4NN7GM7pKXp1uoXHw0VZvBMf77kIdL2mJ51CjPj5Q/+6Dcd/P/7uXeugF50Rfz58pvwHqq+NqE0hSg8AAAAASUVORK5CYII="
-        },
-        "13": {
-          "id": 13,
-          "index": 4,
-          "windowId": 40,
-          "highlighted": false,
-          "active": false,
-          "attention": false,
-          "pinned": true,
-          "status": "complete",
-          "hidden": false,
-          "discarded": false,
-          "incognito": false,
-          "width": 2144,
-          "height": 1233,
-          "lastAccessed": 1694305502322,
-          "audible": false,
-          "autoDiscardable": true,
-          "mutedInfo": {
-            "muted": false
-          },
-          "isInReaderMode": false,
-          "sharingState": {
-            "camera": false,
-            "microphone": false
-          },
-          "successorTabId": -1,
-          "cookieStoreId": "firefox-container-16",
-          "url": "https://www.facebook.com/",
-          "title": "Facebook",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFQklEQVRYR5VXXUxURxQ+M3d/+HMXl11cWsSkITap2j6ZkMYHoSQQmpCYVvtgk6ZJGwONKdXUEKwUEa3VijZGqJTYNK1Nax9MSSF9aICkbULCo5VEw4u4KmURlsvuwrL3znTm/rB77+wFdsjusHfOPeebc7455wyCLY7DlHr+HoZarEAzAXgFU3iBsA9/HSN4StgHA0wRFwwdeBPGfkVobSuq0WZCe8ZoOLYAnSqFowDUZ5GnFAAxFXxmg39zhRSwLGFye3sAd9+vRbMb2XAEUD1CvckVcpoo6AQFUmyzoOs0jfM5x0CAE9hFeosK8fnpJpTKLZPj6Z47NDxP1buUQI2+I4dh84AgZQBEEpoIIunQ/SOiNwTo5T/RVykhwwCk0jRuClEGBbE/PmsOMP7ns/EgEwcO3BIhHPECboq8i+5lA7UACLGdw5o6SVW1UvcwM8a08DnXMNf4nEteWJekCHik/dEsT6xr5jGX55RxAqRm3ZjgYqtPJEb7tn0Y3npJgqoS7TTAigIgM/4/X6VQP8x+mMzkSpk+jKQJX7nroMmJdQDl36e6VYWesezUDiCLdMECgFt1bng9zFA4jOAtzrtsBLqg5ELn5t7zduphZCP0HXM9WZsmxGD7Fjj3S6Mb6ndKjsb5QnBw1bYfPZzsk0CStzr6PprVAARvrvYRSloy59h8z/rEJN2BCgmGmr0bGueLZTdXNMKaJLWQGEn9i8cKWtHhO9QzOp+MsuxmTTIbqB94wwNv73ZtCiDQn3SUYYGT64JFIVQ+EG9YS8EfOo1tIXPgwPg7hfBayOr+H6bS0DORhrkk24p5LO3mbfo9FBqR/+vlG0yuddPtZOF70lIMxW7r0Xx5MMGM6xkikzcye3LQ34dKry2PsfN6cCsATIfE2rYJ4v6rcg4XWsXsmRshPI58V+QH7Hzu5qIiCW0KDBn5pEgX/xUOIM+B0EPk/yq2TAiwNJJj2BEZMZRP+QVh36WlHBzKckoO9ViCOPJfXFxWwQDg4ILl9tI8twYws0Rg7zfyej3QPGyt3sBOQhxt+yL2gCUgLQQiafXCE+/YnjeAf2bS0PBj3PqebYNYwg9RSc8iIyHRSOhUXRNnAnkD+PleCj74LWHxgLBBTsKirvlNj2Hi87K8AVz+KwldoyuW93JQqg/5zj5vSCskdyIyXk+eDeYN4OPf4/DtJK8Fzi2NW8KNWioe+Xchynjgs9dv0WV6f7DSExIAFX4WFTo0MZFm+guMsdy0NxDSklZRxzwrRmqL/RzZOyDT6uqFchFAx5yQR8SOKmNBYsUoeSHYqpfjS/Hw0nx8mv0o3iiVmgpTX+4QABS0MwBG97TeIXFiG0HQSJ4JSMIfLKmOnirRy7HmhfZn3YqCWEMiNhAZa/pa6rIIwPPprFDL7DExAWKJnlu9WJFpSLgB3pI9+vO/cdaM1ji2wUYyX+utEDzgPTkreECsrhw/nthVv0NsybRQdMXDckyeVCnVmlKnkb6mXYgsw932VGhi7SGREIr4Sn37o10l65cVod0t/mR2X0pVR5gXKp26XuX6iwIA1/EnYi3IlkIQKZBcTYmrYee23JQPtcbDMYjdJUAzHTJfNEKg3BAd5Poo4nhTwhgmSstKD2Xv3LTlfDU7Tr0z9NlphZATQKh+NTMIqvaLAHDLY5GEGCdcGPdWoYrz09fzuJple457Y0FZ6CSIHgWKfDy5k4EqIQT42Ix2QjSQGMmYwO2AK9Ad7cvEOxenHD0gCLOM6R19XJtKk2Y6uEto4dCHj8aZ7Slw4yGo2zkGR7Z2Pf8ffhZtanwf5VwAAAAASUVORK5CYII="
-        },
-        "83": {
-          "id": 83,
-          "index": 5,
-          "windowId": 40,
-          "highlighted": true,
-          "active": true,
-          "attention": false,
-          "pinned": false,
-          "status": "complete",
-          "hidden": false,
-          "discarded": false,
-          "incognito": false,
-          "width": 2144,
-          "height": 1233,
-          "lastAccessed": 1694305547573,
-          "audible": false,
-          "autoDiscardable": true,
-          "mutedInfo": {
-            "muted": false
-          },
-          "isInReaderMode": false,
-          "sharingState": {
-            "camera": false,
-            "microphone": false
-          },
-          "successorTabId": -1,
-          "cookieStoreId": "firefox-container-17",
-          "url": "https://app.diagrams.net/#Hmarcellbarsony%2Fnotes%2Fmain%2FApplications%2Fkeyboard_us.drawio#%7B%22pageId%22%3A%22JTv5oVlXKc6UWLUXq-vB%22%7D",
-          "title": "keyboard_us.drawio - draw.io",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAh1BMVEXwhwTfbAz////fawnwhgH77uPjfSjhbwvjfirwt4j98+nidx3+9+/98uTpfAjylybznDLmij710rPxkBjsgAb++vftqnP21rvromT1z6/gcRX2tmbwigr52rj42sDymSrpnFzxvZLvjBfkgzLoeQT1sVv0pEL4y5T0qk3mgyjvhQLxokn737s0vFv5AAAAlUlEQVR4nGWO2RKCMAxFE9MWKEV2UGRx3///+wy0yoycl5ucmSxgEYwrJ9ohSYZ27sU9MiZ6PWexWzGb87+g9U9ctZQ6Je9rRNKlaX0idEbArSKqDuhMHl96ReT3ez9E5P6tTRkgBqXRdYgg4ogvbBEzDunTUkDeSSnHEY6MRwCOD6UaxEYpuxSg8AgZojGmRwpvFJYPJDQHp2BuFp8AAAAASUVORK5CYII="
-        },
-        "90": {
-          "id": 90,
-          "index": 6,
-          "windowId": 40,
-          "highlighted": false,
-          "active": false,
-          "attention": false,
-          "pinned": false,
-          "status": "complete",
-          "hidden": false,
-          "discarded": false,
-          "incognito": false,
-          "width": 2144,
-          "height": 1233,
-          "lastAccessed": 1694298603168,
-          "audible": false,
-          "autoDiscardable": true,
-          "mutedInfo": {
-            "muted": false
-          },
-          "isArticle": false,
-          "isInReaderMode": false,
-          "sharingState": {
-            "camera": false,
-            "microphone": false
-          },
-          "successorTabId": -1,
-          "cookieStoreId": "firefox-container-11",
-          "url": "https://telex.hu/",
-          "title": "Telex",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABI1BMVEUAAAAALVQAK1P///8ARloAUVwAXV8APlcAamIAN1YanV0AimgAemYAMlUAMlvx9vYAKVP3+PpTrkJWsEQAKlOBvDIAVVUSmmEAK1M9rVFUsEUAKVMAeGcAeWUAKVOHvjB2uTcAf38AamIAiWhIrUwAPleAxptttkgASG0KmHAAMVVRfY8AXV8AaWGKvy0AOFYAKlMANVcAM1YAK1QAMlSyx80ALlUARloAUVwAKVMAW1284ddykqOywcxohps0i4Xu9vQLTWQGgXAzeIAAT1ozbn4/rHKcsL00ZHxGr3ar2M0zpIgARFcJk3QaR2oUh3YASlyxzc4tk4TE4NsGS2IzgIIBPVwCOFsAVF8AX2J3k6b4/Pu0xc6xys2x0c8AP1kAbGQBZiZiAAAAYXRSTlMA/////////////////xn//////6ioBrGTGe/kSu1J5EkGqJKT4/8HBxn//+P//Kjv/0qx7f+T/Pz8////////////////////////////////////////////////////mxvf/AAAAOBJREFUeJwlj0WCw0AMBGUPrNf2xBRmZuYsMzOE6f+viJzUQV2tWwNSjHsjo1HEGy+6DcATbMqyaZpyM+jZ946MSB8S3g5+/H0JKV88Cjf7fmh3hShP5tZ5qyWE6LahcYycWWT5VBmjNSB3hFQs0rv+26DlYEApfbs3SO8LhdIBDBljd7cGWU1RGBtClXN+8m+Q7xkK51VIK4pSuzTIeltDU9IQjem6/nNFfj9vUGJRSGU0TXs/JYuXV5RMCqAUUFX1IZ9/xgiU3DGhbNhxbNt2wtnQYW4h6UvU6wlfsoBlB8csGtpoTxPkAAAAAElFTkSuQmCC"
-        },
-        "92": {
-          "id": 92,
-          "index": 7,
-          "windowId": 40,
-          "highlighted": false,
-          "active": false,
-          "attention": false,
-          "pinned": false,
-          "status": "complete",
-          "hidden": false,
-          "discarded": false,
-          "incognito": false,
-          "width": 2144,
-          "height": 1233,
-          "lastAccessed": 1694303120119,
-          "audible": false,
-          "autoDiscardable": true,
-          "mutedInfo": {
-            "muted": false
-          },
-          "isArticle": true,
-          "isInReaderMode": false,
-          "sharingState": {
-            "camera": false,
-            "microphone": false
-          },
-          "successorTabId": -1,
-          "cookieStoreId": "firefox-container-11",
-          "openerTabId": 90,
-          "url": "https://telex.hu/zacc/2023/09/09/musk-grimes-gyerek-techno-mechanicus-tau",
-          "title": "Telex: Úgy tűnik, hogy Elon Musknak van egy eddig nem ismert gyereke: Techno Mechanicus",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABI1BMVEUAAAAALVQAK1P///8ARloAUVwAXV8APlcAamIAN1YanV0AimgAemYAMlUAMlvx9vb3+PpTrkJWsEQAKVMAKlOBvDIAKVMAVVUSmmEAKVMAK1M9rVFUsEUAKVMAeGcAeWWHvjB2uTcAf38AamIAiWhIrUwAPleAxptttkgASG0KmHAAMVVRfY8AXV8AaWGKvy0ARloAOFYAKlMANVcAUVwAM1YAK1QAMlSyx80ALlUAW1284ddykqOr2M1ohpszeIDu9vQLTWQGgXA0i4UASlwzbn4/rHKcsL00ZHwzpIiywcxGr3YJk3QaR2oUh3axzc4tk4TE4NsGS2IzgIIAP1kCOFsAVF8AX2J3k6b4/PsARFcAT1q0xc6xys2x0c8BPVwAbGQeXRKyAAAAYXRSTlMA/////////////////xn//////6ioSQax/JMZ7+RK7eRJBqiSk+P/BwcZ///j//z8qO///Eqx7f+T////////////////////////////////////////////////////xDn6/gAAAOBJREFUeJwlj0WCw0AMBGUPrNf2xBRmZuYsMzOE6f+viJzUQV2tWwNS8ntjoVDM6y+5DcATbsuy4zhyO+zZ976MSO8S3j5+AiMJqVw8CjdHAegNhKj8T82XTkcIMehB6xg5M8nyqbpBa0H+CKmaZHj984eWhyaldH5vkOEdCqVN6DLGFpcGWY1RGOtCjXN+8muQzwkK5zXIKIpSvzXIeltHUzIQT+i6/nVFvj9uUBJxSGc1TXs7JbPzZ5RsGqAcVFX1oVB4xQiW3TGRXNS2Lcuyo7nIYW4x5Us2GklfqohlB69DGtqBbIIvAAAAAElFTkSuQmCC"
-        }
-      }
-    },
-    "windowsNumber": 2,
-    "windowsInfo": {
-      "1": {
-        "id": 1,
-        "focused": false,
-        "top": 22,
-        "left": 0,
-        "width": 2133,
-        "height": 1311,
-        "incognito": false,
-        "type": "normal",
-        "state": "normal",
-        "alwaysOnTop": false,
-        "title": "Release Radar | Spotify Playlist — Mozilla Firefox"
-      },
-      "40": {
-        "id": 40,
-        "focused": true,
-        "top": 22,
-        "left": 0,
-        "width": 2133,
-        "height": 1311,
-        "incognito": false,
-        "type": "normal",
-        "state": "normal",
-        "alwaysOnTop": false,
-        "title": "keyboard_us.drawio - draw.io — Mozilla Firefox"
-      }
-    },
-    "tabsNumber": 13,
-    "name": "Auto Save - Browser exited",
-    "date": 1694305547569,
-    "lastEditedTime": 1694305547569,
-    "tag": [
-      "browserExit",
-      "Arch"
-    ],
-    "sessionStartTime": 1694276429814,
-    "id": "9289aa50-8cef-4bd6-b11a-c3daff866cc2"
   },
   {
     "windows": {
@@ -1633,13 +1533,12 @@
           "incognito": false,
           "width": 2144,
           "height": 1233,
-          "lastAccessed": 1694382675393,
-          "audible": true,
+          "lastAccessed": 1694854626958,
+          "audible": false,
           "autoDiscardable": true,
           "mutedInfo": {
             "muted": false
           },
-          "isArticle": false,
           "isInReaderMode": false,
           "sharingState": {
             "camera": false,
@@ -1647,9 +1546,9 @@
           },
           "successorTabId": -1,
           "cookieStoreId": "firefox-container-21",
-          "url": "https://open.spotify.com/playlist/37i9dQZEVXbvYoi0dvVM3H",
-          "title": "Only Have Eyes 4 U • The Motion Epic",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAzFBMVEUe12AAAAAe12Ae12Ae2GAe12Ae2GEe2GAn62J//38e2GAe12Aq6Wof2WIe2GAd2GIe2GEj22ke2WMe2GAf2GAe2WEf2WQf2WAe2WEf2GAe2WIf2GIf2WMe12Af2mEe3GUe2GEe2GAe12Ag2WEe2GEe2WIi3GIf2mMe2WIf2WIf2mIf2WH///8e2GAf2WEe22Ie2GEh2mMo5Gsf22Ie4WEe2GAg2WMe2WIg22Ef22Mh2WMg3mIe2WIe2GAe12Ae3GQg22Qf2WEg3mIf2WKqPQ6bAAAARHRSTlP/APv+3+KG3A0Cx/oMiuR3yh1krryVMN6p5nWSKe5yM5zL9y+fjixadJQxUQGmgF21RRM5ItBnS1ZANidt1ulCT6I+YPZsOVAAAADHSURBVHicPY9FtsJQEETrKXEXEjw4313x/e+JfuQcqkd1J10XjDF740dVFfmFTYWAFSoBilC1ZYCVc1NN+NpjuA+pC95CXjOM1OAhXB7uzo9pySEL+Oi+vr+97EexFScf0IgwmHQoqsxWcQIHFdz5z+Kv/7scq45EQNf4Os2ex5+LfhdUI2CXzXp5upU5AQda4PiVDP+/T08T+q+xkWgaWsrlfAaUUzAzrI2Au6Lp3vpG3B5NJ7latnJy6F1tmV1oJwgcPTX6FyeJDtgeutTRAAAAAElFTkSuQmCC"
+          "url": "https://open.spotify.com/playlist/3ari4ennU7OqNTXzDmJWa0",
+          "title": "Emil Rottmayer - playlist by Marcell Barsony | Spotify",
+          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAzFBMVEUe12AAAAAe12Ae12Ae2GAe12Ae2GEn62Ie2GB//38e2GAd2GIe12Aq6Wof2WIe2GAe2GEe2WMj22ke2GAf2GAe2WEf2WQf2WAe2WEf2GAe2WIf2GIf2WMf2mMe2GEe2GAe12Ag2WEe2WIe2GEe2WIi3GIe3GUd12Af2WEf2WIf2mIh2mMe12D///8e2GAf2WEo5Gsh2WMe2GEf2WEf22Ie4WEe2GAg2WMe2WIg22Ef22Me22Ig3mIe2WIe2GAe3GQg22Qf2WEg3mIf2WIIm66kAAAARHRSTlP/APv+3+KGDdwCx3f6DIrkymQdrryVMN6p5nWSKVqcy/cvdJ+OLDLucpQxRekBpoATNrVROSLQZ0tWQF0nbdZCT6I+YGEompgAAADISURBVHicPY9FtsNAEAM16JjZjh1yGD4zhu9/p/TE70W9Um1aBcaYvQmiqoqCwqZCwHKVAEWo2jLAyrmpJnztMzy41AVvIa8ZFmr56A4Ob+entOSQBQJ0nz/e7/aLxEriT2hEWI46FFVmkySGgwre7Hf+338ZDFVHIqRrAp1mr8Oveb8LqhFwn017ebqTOQEHWuD4Ha+2P6e/Ef3X2Eg0DS3lcjYFyjGYGdZGwJvQdH99I16PppNcLVs5ufKvtswutBOGjh4b/QskoQ7Ww5eKDQAAAABJRU5ErkJggg=="
         },
         "13": {
           "id": 13,
@@ -1665,13 +1564,12 @@
           "incognito": false,
           "width": 2144,
           "height": 1233,
-          "lastAccessed": 1694379709512,
+          "lastAccessed": 1694859905213,
           "audible": false,
           "autoDiscardable": true,
           "mutedInfo": {
             "muted": false
           },
-          "isArticle": false,
           "isInReaderMode": false,
           "sharingState": {
             "camera": false,
@@ -1679,44 +1577,13 @@
           },
           "successorTabId": -1,
           "cookieStoreId": "firefox-container-14",
-          "url": "https://www.youtube.com/",
-          "title": "YouTube",
+          "url": "https://www.youtube.com/watch?v=JoK5BjlmGBY",
+          "title": "Nothing But Thieves - Honey Whiskey (Official Audio) - YouTube",
           "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAtklEQVQ4T2NkoBAwUqifAW7AfwYGAaBhBlADHXAYfAAqfgGo8QOIDTYAqDkBSM0n0TWJQM0LGIGaQbaeJ1EzTLkhyIAAIG89mQYkggxoAGqux2rAgwdAzwF9dwDmdQxVjfgN+A80HgQ2bmRgKChgYAAZiAqINODgQYhLSDYApAFk84YNuIII7ALcgSgATBofwNGNC4ADkbJoBBlNUUKCuQ0tKYNcBUra6AAWn6hJGZ8nCclRnBsBzJ03KZWC+NsAAAAASUVORK5CYII="
         },
-        "14": {
-          "id": 14,
+        "79": {
+          "id": 79,
           "index": 2,
-          "windowId": 1,
-          "highlighted": false,
-          "active": false,
-          "attention": false,
-          "pinned": false,
-          "status": "complete",
-          "hidden": false,
-          "discarded": false,
-          "incognito": false,
-          "width": 2144,
-          "height": 1233,
-          "lastAccessed": 1694382680583,
-          "audible": false,
-          "autoDiscardable": true,
-          "mutedInfo": {
-            "muted": false
-          },
-          "isInReaderMode": false,
-          "sharingState": {
-            "camera": false,
-            "microphone": false
-          },
-          "successorTabId": -1,
-          "cookieStoreId": "firefox-container-14",
-          "url": "https://www.youtube.com/watch?v=rDoqT-a6UFg",
-          "title": "Visualizing memory layout of Rust's data types - YouTube",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAtklEQVQ4T2NkoBAwUqifAW7AfwYGAaBhBlADHXAYfAAqfgGo8QOIDTYAqDkBSM0n0TWJQM0LGIGaQbaeJ1EzTLkhyIAAIG89mQYkggxoAGqux2rAgwdAzwF9dwDmdQxVjfgN+A80HgQ2bmRgKChgYAAZiAqINODgQYhLSDYApAFk84YNuIII7ALcgSgATBofwNGNC4ADkbJoBBlNUUKCuQ0tKYNcBUra6AAWn6hJGZ8nCclRnBsBzJ03KZWC+NsAAAAASUVORK5CYII="
-        },
-        "16": {
-          "id": 16,
-          "index": 3,
           "windowId": 1,
           "highlighted": true,
           "active": true,
@@ -1728,23 +1595,22 @@
           "incognito": false,
           "width": 2144,
           "height": 1233,
-          "lastAccessed": 1694382822714,
+          "lastAccessed": 1694859933520,
           "audible": false,
           "autoDiscardable": true,
           "mutedInfo": {
             "muted": false
           },
-          "isArticle": true,
           "isInReaderMode": false,
           "sharingState": {
             "camera": false,
             "microphone": false
           },
           "successorTabId": -1,
-          "cookieStoreId": "firefox-container-14",
-          "url": "https://quickref.me/vim.html",
-          "title": "Vim Cheat Sheet & Quick Reference",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAPFBMVEUAAAAjuIMjuIMiuIMhuIIit4MAqlUit4Mit4MiuYMjuIIftH8Aqn8juIMiuIQhuYMjuIIhtn8Av38it4L1PmIjAAAAFHRSTlMA/9niVfoD9Y5C0RgGV7lyUC4E602B8MoAAACJSURBVHiczZJZDoAgDEQFcd/1/ndVGqAlVMCYGOcHyLwuQIs/aRNUDOD5DHGkgCx/irR411noD6yvECjZPKSA5EpV2pcaNLAJCxPA0jnAES5IAGIPCOwEAMgPI8nEKGsL+C+DVedrq0+99hv2womnbbEBsXDA47/htb6YGVQZAPBl+XOtIi1+rhOuxwG+Czhe7wAAAABJRU5ErkJggg=="
+          "cookieStoreId": "firefox-default",
+          "url": "moz-extension://c537cf8f-ef19-471f-8642-d493a3b74fff/options/index.html#sessions",
+          "title": "Tab Session Manager",
+          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAsUlEQVRYR2M027TpPwMdANCSCaf9/ArRrWKklwNAFmNzBF0dgM0RdHcAuiMwHHDS1xclmsw3byYqhcD0oavf5urKkHn8OMPDL19QzIFFB80dAHLY2x8/cDqCLg4AeR2XI+jmAJgjvHbvRokKujoAZDN6Ghk+DsCVVQjlKqqFAM0cQFQhQIIiktMACWYTpXTUAaMhMBoCoyEwGgKjITAaAgRDgKg6lYqKBqRnhOz+UQcAAMmj6dP9uoyhAAAAAElFTkSuQmCC"
         }
       },
       "40": {
@@ -1762,7 +1628,7 @@
           "incognito": false,
           "width": 2144,
           "height": 1233,
-          "lastAccessed": 1694286312409,
+          "lastAccessed": 1694820796046,
           "audible": false,
           "autoDiscardable": true,
           "mutedInfo": {
@@ -1774,10 +1640,10 @@
             "microphone": false
           },
           "successorTabId": -1,
-          "cookieStoreId": "firefox-default",
-          "url": "https://marcellbarsony.github.io/homepage/",
-          "title": "Homepage",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAXVBMVEUAAABfS4teS4teS4tbSJFbSIhdSIltSJFfS4s/P39eS4pfTItfSotiSotdSoleSIpeS4tVVapdS4teS4tfP38AAP9cSIteSotfTIVjRo1kTY1eS4teS4tjTZBeS4k0SNwkAAAAH3RSTlMA///wDhxKB+wE3//QH0tG9wPs3ggBTZkoEjjn2BdOm03aCwAAAO9JREFUeJyNUwkSwiAMlNSjitpa7/P/z5SEBAIF7U4HCiwhLJvZFBgAQ6AOwPrONR9NwEY+HsOeCTzLC7wbsRQCx/efAQueAkzA+W6V4d6oCI5xGKW+cbMqwnpMMNaGHMCUCCrJCkGSxBxKBIhJliP8JWgdKhGU1L9vUTsiCOVeqaBkKvU7Xz8/0yP6th2GVgHfKgjFjom2kl8moMXIZmIIHDrjgbl4wqKK0yj1MpoqunjNPEkysLqFsru57giPXhFkG1h3mxuffIzPzbH5jGZLeCVSSxahdvyOVMlMSuyCYajcsJyk5rg42TDzKpxLvgTACEy154NrAAAAAElFTkSuQmCC"
+          "cookieStoreId": "firefox-container-16",
+          "url": "https://github.com/",
+          "title": "GitHub: Let’s build from here · GitHub",
+          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADdklEQVRYR71X7VHbQBDdk4zH/ApUEDEmGTMZO6YCcAWQCuJUgKkA0wFUEFJBnAowFSDsZFASOygVxPmFByxfds+SOEl3OhmY3Ix/WNq7fff27YcYLLGqr+v7YMEeA3CAsTXc2gy3u8D5hAP4jENv9H34peixeFb+cmo1x4aVI3S4j8bk1LgQyAQB9YKpfej77iRvQy6AzVqjyxkcFHWcdkRAkJGTkTc41oFQAnCc5lppdX4uUWy8tcHAnd1aLRUbGQDOqzdNu2SfP/bWOiDERjALWv7Pb65skwBAN7dX5zfP7TxyKEDcWhsyEzEAJe2cX+EmFwW4i4Yvl4kD5/AXgPfCjNmR9rqj68F29D8GQIIDBkeyE875h7E3PKNn1Vq9jUC6MRDOLxK2wJqMwYvQcSfeh6nLbPY5AZ7DMQqzS88EAJFqrHyZoZ7PWyPvaz/aTCzByr2TjmP8Hs+BaWUiU0xnl1j5Jgn2IRQCAN7ujDH2PkNxCsAyIZBBY0b9yaQo55+QpXYIoDEh+hRGcQge41xcThUCfE6CHF8P1pnWAEUUTC3HVMlMwMLMclUi5gF/x3T0ywI0OTG9JwFjiD9mGAY4ZZu1eh/VLaeJsMPKtf7U28sON7cayHpqYSYRAMrztwmVIv1jb1Co8ZhuH73XXNRlKmSYyz4C2Ch6eBE7HdNKAHQgVitjqy7iOLKpbjV8lRCZ7sX/0ACK4rdWhM+aBZpagEPLBTFwgtQcKBTaH3nD1jI062x18UcGTrWFiA6bAxz+uh6cPAWErgbQmaIQiUpVmfuqUiwcc+jmjVR54FQdNrKnrkmVNtuMsFXyOXeZBdieF/WB0pIx3kMwPQxLog2nAdBEZVn2Dl6ogz9HB5Dox17Qidtx1DKj0QnuV/xSJaAqmShSiOYKQUTjeOL86lYdBxC2VyRkM3634XsepeZiyXQJEPxOTC02lF05PBS38Y9hT+WEbl8q2ZdGAOmB5AHEQ1nGNBT9WgwUUG4v5MCxQi4mJN1S1nzZOMVgdiiVBDmbBdu66ecxACLhKYfS6EAxltt2P6IdmTjDuPrRe1NG6BgQzoNgN3csj0HQh4lKgGhg6hGatns1m9q7hT5MZGpVebw0AElwqrAZO144MXdQgUKIpjmhWmuEH6P4cQr3XUq1PNEaAchhgcp0zXQgAU6P5nkA/gEVLspa51VkdgAAAABJRU5ErkJggg=="
         },
         "5": {
           "id": 5,
@@ -1793,7 +1659,7 @@
           "incognito": false,
           "width": 2144,
           "height": 1233,
-          "lastAccessed": 1694305503177,
+          "lastAccessed": 1694820796053,
           "audible": false,
           "autoDiscardable": true,
           "mutedInfo": {
@@ -1805,10 +1671,10 @@
             "microphone": false
           },
           "successorTabId": -1,
-          "cookieStoreId": "firefox-container-11",
-          "url": "https://discord.com/",
-          "title": "Discord | Your Place to Talk and Hang Out",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACy0lEQVRYR82XS2sTURTH/zePGptXi4iUfgDBpfigVZQiPjaupKQFn2ijFQnUrroQFBe6EBUVqSYbG8TULtwp+ChCyaJduBX8AIqImMkkpm2aXO/MeJvM485MXpDZBJJ7zvmdM/9zci5BA8/oKPV6+/I5gISszCilclWK9C8skIpbt8TNwdil/B9C0OfmbN0ZKZOMONrYAoxNyO8BerTBwIbj5EMmGT4m8iEEGJvI09YC661ZNSxjWX7Z7uAcxQrCBNCp4CIIHUCng1tBbAK0R3BuVVMTZh1Ae0XnhML1oAKw0kvsI2JndGC/D9cublWPVCoUpycLuuMvZ0PweLR8nqRKyK5s2DJQitx8KtLPAWxb7tXzsFNClr+Px2VbO6UKRBuvshD33q1eDA54mwL48bOK6zeKQttKLuwjsQkpT0CEKTabPY9qVwUKWiB2rZeIBzC0x99U9twou1JmmlgV+rAFaDV7N1VoCGBufhXvPpVVv0Y4XurjI36cHw/oMrZ7DUIAvw+Ye6qXRr2jkYM+xM9qbfnsRQmfszUdG+HOXJWxIZC5EOBcbAtOHOkRZpJ8EEIoqPV9Xq7i8nRN7UaAtx/XkX69ZqkDIcD920EM7PCYjBIzBZw62YPDw3q47HIZmTdreHzXvCx9Z+04LWhHBiCxaWFesR7dCWL7NjNAMy3x63cViRnzPGBtKAsH0dSVAPbt1rdgoUg3yy4CKf6lCPbq/+WXv5TxcNbciuogUhyJZoGdonft9GJ4L1Mqe5S5//Wbtoca338yXcLikrUC1VGsGDktnZMXAjg0pFXDab5zgMWldSTT1sL7Xz11ae2Ov2PtNbRjA3YrUco25ai6KXfPSsbZO70XGjfj7lvLO1WJhi4mNQiJXc1Ia1czygSX0gRn9bi6nLpZWo3O+dLp1BeuALgTZX/0RJWbsmiFo4XMYCSKm6TqFJj//g894h/bts3R9QAAAABJRU5ErkJggg=="
+          "cookieStoreId": "firefox-container-17",
+          "url": "https://chat.openai.com/auth/login",
+          "title": "ChatGPT",
+          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAnFBMVEV1qZzh7Ol2qp11qZzx9/XV5OB2qZyKtqvS49/H3NeGs6h8qqOTvLJ2qZ17raDi7erQ4t12qpwAAADb6eXR4t7O4NywzsaItare6ueyz8d/r6OHtKmRu7CQuq95rJl1qpyqysJ5rJ/k7uzC2dOhxLt9rqHK3tmjxr2VvbPZ5+S40syZv7bt9PLW5uK71c6uzcXD2tScwbi+1tDG29bC6BCoAAAANHRSTlP////w/////////yf/8v///7AA//////////////8orv//////////////////////////XBAz5gAAAK5JREFUeJxVj0cWwyAMRAFjwL333u0kTr3/3QI4WXg2kv5TG+DXngV+sjzDB7XyL4UUA3gijhBu1BZZA0S/uU12dEsDylsEzbC59O2EqIPkXDwwPcpjN12fpgRO5+rqHL4KhssDIJdqhDAtid8S3C/FR0VEKxhyJKjwTq9sVnXWQQlKrUzDR84XDZkEBFbEbvtlxbLmjyUBxJGdB8dR+TpKdgjHw45xMsflG80JfQEuBgr/9jNCFwAAAABJRU5ErkJggg=="
         },
         "6": {
           "id": 6,
@@ -1824,23 +1690,22 @@
           "incognito": false,
           "width": 2144,
           "height": 1233,
-          "lastAccessed": 1694379082036,
+          "lastAccessed": 1694820796063,
           "audible": false,
           "autoDiscardable": true,
           "mutedInfo": {
             "muted": false
           },
-          "isArticle": false,
           "isInReaderMode": false,
           "sharingState": {
             "camera": false,
             "microphone": false
           },
           "successorTabId": -1,
-          "cookieStoreId": "firefox-container-17",
-          "url": "https://www.linkedin.com/in/marcellbarsony/",
-          "title": "Marcell Barsony | LinkedIn",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACPElEQVRYR2NkGGDAOMD2M8AdwJF8yJmR+f8cRgZGBVo66j/D/wf//zKm/JhrtxdkD9wBnGkH79PacpjHQI74PsteEcUBXGmH/tPS5+hmf5tlB/Y8PATQHcDMzPjHS0/oGUjRtkvvpP7+/c9CTQfidQDI8mNVBp91ZHgEQZZeefLlvVXbBV5qOgKvA/wMhB8vz9SSRfZx5PRrjzddeIsiRkmIDG4HMDMBo6DaEBgF3NAo+PreqvU8799/1EsHhBMh0BHe+sLgRLj14lspaloOMpOgAyiJX2L0EnRAlY8cijltWx6B+bZq/GAMA8tPvPpw/80PgQAjkedBxiIsBnI8X3///c+w68o7/om7nzK9+PgLoRjJRIIO+DrTFsUB3OmHwXyQw6p95eFyRSvuXEywkZTWk+EWQff5v///v8XPvvFt3dk3GHJUc8CvP/8+sbEw8eEKdpAjjOrPfrv98juKI6jmAJjF//8z/Pzx+997TjYmkEUopeaS4y9fpy+4JYrsSKo6YO3ZN09zF9/i//j9L4+iCMeH3aX6jJICbPC4B4o/lSo4Jk0TBzz98POVWvkpMWTDPXSFn63N0ZJCEvsDTEMooUK1EOje/vhPw4YHKIaDCrJP021QxGCJGOYoqjmgdfNDBlgWRQ4FXLlo1AGjITAaAkSHADFVKiVqCJYDlBhOjF4MB3CmHQJ2TBgUiNFMqRpgBwTYMbFD7ZhwpO53YWRknk1rR4As////b+qP2Y57QB4ZPJ1TSoOVXP0AtBqNMCxwApoAAAAASUVORK5CYII="
+          "cookieStoreId": "firefox-container-14",
+          "url": "https://bard.google.com/",
+          "title": "Bard",
+          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEO0lEQVRYR7WXXWhcRRTHz71zb/Ym2/QDfNMHsdRW0Qqt+NwXLRTRF6344oP4UZNtsm1JpBhEJCS0FjGpNlIalVLRotYSsSS2xdIHH6yt+CQIPuiDoE/u1/3Y3dzxf2b2rhs3u5m7qRcOs5CZ+f/mf2bmTCxK+f348uuyZmXokfdfs1IOXbV7qkluHJiUVcujGmLPqVyqsZ1gU01yfWgGAP3EwS48eXJ/qvGrQRhPcG3opIzsLEXWQAPAo2dn9hqPX7cDi7kPZWhtoMhmAA4PMO6JobcfHlvPXjBawRLEA4iHNgNkKUQKQmHht03jx3YZzbEuBxYOnpeBPagAAruffGFTAIAQbWRbdPzNh3qGWHPg17lzEN9IPgACsYHKEPUdBACCBkDVpuX5iQedXlLRFeCb4Xnpi00QZ4BNEHeo7FhUAUBFgcAFpIFdWLaJLozfv+aC/gu56gA+7yxYsTcjACDQigEqQriMKDEAgwCC01ADQB0hMfvS4e2pIFZ0/jU3JP3qRi3Momj9xu+ScKnoavEkOBURUlEFRN2CC5iNJxRS0rej9xqBqE5/HXtKRn9jlyP8mFe+ZQVEGS6weNERum2A8B4IGxA1pIIB+HMA0LcsKbMcU39V3rnw6o4/Op6Cwty+pjgDVEivXDugQUpisClcgGDRFSoV7ECA+BfCIgt5cGNJHovXdVw6sqOjG1bh1D7JwtqBQapYm6ncCiC2ACCr8l/AygsQ55Y3YgLgwxkFAkds7AQPogMNcW4Xu+yLJtlv48/DiVaAJA3dARJxBuCwYX+ycha/PrKt615o+yOX204p4JVrJ3QKElFuo8ZpsADgUrz9p5e2/mJyL3Skuzx8RvI+UOlINiGEGaC5CRu2t5yEK7deuedRE+GkT1d7Fg5+qtzge6DouOr4MUAJTrADfA8k4lfzZsfO6CJq7fTZ6FeAwNHERZScfxbXALoeXBy/z+jM9/we+Dh/WdWDksNXsRZWpwDi8xMP9CzOQMaDz+avoS5k24rRzBs7jeaYPHpzaWJ6997UKUgGnB+9pEqyLsdcCS2amDZ7C0wdvSX7cTMeOr67DdaIPoH4ZHRRPctC21NVMP9W+4Sr5Xl27AfpAcCLK9Fz7+zxWvukArg48jmeZVn1JsRERmPnjtyQmbhOfTJA+LR/5vEV44wmSYgXcx/dhPiuCABPzz6x5tgPDn0nHRmRi+iToYLIxBV67L0XmmPXnCTNpZL0PZe/KlEbUZbrqIxVBaAh4ELsUwZOIB208/QUivht/i6MfCktilETAEB1QNSaEDoN7AIgKCA3G5ofw7ScV4ZPS5sdIA3AkaTBFSFtm3tXLf62O9AK+v2B6Vjgfyih0gAIisjxqrR1du7/3QOtED+/eFgKUSPhIh2ZGt194kzvpyBtGpL+v+OtYffV6a7Js+u7iHoF+HPqGckO3DH2RRvAPyAr9uZLu6+SAAAAAElFTkSuQmCC"
         },
         "7": {
           "id": 7,
@@ -1856,23 +1721,23 @@
           "incognito": false,
           "width": 2144,
           "height": 1233,
-          "lastAccessed": 1694382690981,
+          "lastAccessed": 1694820796147,
           "audible": false,
           "autoDiscardable": true,
           "mutedInfo": {
             "muted": false
           },
-          "isArticle": false,
+          "isArticle": true,
           "isInReaderMode": false,
           "sharingState": {
             "camera": false,
             "microphone": false
           },
           "successorTabId": -1,
-          "cookieStoreId": "firefox-container-16",
-          "url": "https://www.instagram.com/",
-          "title": "Instagram",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABgFBMVEX////9AGUAAAD+A7v+yQD+Rjj+OEj+vgD+rgH+L2n9A3d1F/39IID+AIb+eLD7A6n8Erz+4/b+F4j+AZr+LVb+igP+JHK0BeL+ihXnANbSAdr/5rT+YCnyALr2sPP+UCj+aNn7IsKlGPz9D2X+lwb+dxXrAMr/6Oz9ZgL+H1v/r9DFAt3+uYf+Q1yUGP3pGuCEGf7+bCf9VhP/6d3xFc7+dSPcAdb9G63+owX9A47+Wz3+U2r+Lab+egH3yPf/1Oz8HZySCev+fsj/0Mv+i6WjCur4hOf/0q/8wO7+y3+ADfT+gtj/jIv+o5LPG/L/ntvBHPz1BZ7+pLv+OJG+QPj+cDv+gyHdIe7+upu4Gvn+myz+zN3+dVKBHP/5kRjbAMp2HPz7StDmALT9lQ5/Gv7jALv4C5vomvf+qyTfQ+t4G/3/4ZL+wSv/JKP/Tjr/K3nvAKP+QUz/vgT+KH7/X0/+G5T+WC79fgPYAM7/NWL+wQT9E13+dQP/xc3+sAj+zwBWV/HzAAAAgHRSTlP//wD///////7///3////////////+/////////f///////////////v/////////////////////////////////////////////////////x//////////////8aFdti/xZRzE+9////iv//Dn9BgOW/5RBxvIOEPvf/x/97/x1nYOQAAAKfSURBVHicXZNpV9pQFEUPaCihQAxg6hCJiBipooJDFBwQKVCR4qx1rPPUeW6p7V/veUF0LffXvdd9N2/lwel07l+fPiWLi4vz8/MvnpGBgYGOjsOfx5QM3ghLTSmsLTs6JiYm+g7PRCD8yMjI0JDQtqSbaG9v7+vr6zpzYv9O9wgtJJWN8F0rx7iu6571i4vwrE2pFA4XjoTu6lI+4nSI9KzP4hGzkSZ65Rw9gnUVCBcK3Q0KYUCNNClKcAWvBbNQt4bHxpoeiKgo0QensLy8/OoKuKJvudfd1UgEmKb3YYtcIEzd0qIoiiUqyqpSQo7eh2ESRoHesqwyd1HLVsscjoJlVOk9IhgroWxZ2ew0tUC1FCsYzKHq83g8GItEIpyWzQbWVKj+7LRfxVyWp+fwnN4BDs6W4Pd6vasw1wKEg3JTUz6/CBwOZANe7y78mqaZdsYihzmezsBBoGmyvIt8KJQAZE0TyRoQ8HgaQYjsYsnlYpCRZdEw8D4ELrKAJUlymcgnWMiaH3PRaPQ+kCTJDqQKzEwikZAzLOO1WiOQJMNgYBhGehTmUiazasKU4/Fa/i4wjFSqiEpK1/U9s35RoxnuFc9jld6DFCliMBYbTyY3KqPUlQTXCoUY1By8yVR/f/82ijMxJuPjyY2NdDrNjV2uW+RrUY8P9DM7wE5ra1tb2+Ym5+iikPjVCQZTDGZmWjsxetnb21tPxpO6bnCf21A8GmBA33rJsztf2gyS7e0FwEyE4lpgBX/oeycvOx//tAtpbqp5z/FDeLfb/fbmpvOOYrE4uGdw05Ds/YaDun/SwO2e5C6xpG6I4Ms7OE8mGdA0CxoFb0XnCPmDeLwnwtu6ntQLMeLTL/t1Ow/+fv7d3PxPUC9EENO/v/9K+R8KPoio+4j6RAAAAABJRU5ErkJggg=="
+          "cookieStoreId": "firefox-container-11",
+          "url": "https://doc.rust-lang.org/stable/std/",
+          "title": "std - Rust",
+          "favIconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj48c3ZnIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAzMiAzMiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxuczpzZXJpZj0iaHR0cDovL3d3dy5zZXJpZi5jb20vIiBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kOyI+CjxkZWZzPgogIDxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbCiAgICAjbG9nbyB7CiAgICAgIGZpbGwtcnVsZTogbm9uemVybzsKICAgIH0KICAgICNsb2dvLXRlZXRoIHsKICAgICAgc3Ryb2tlOiAjMDAwMDAwOwogICAgICBzdHJva2Utd2lkdGg6IDAuOTJweDsKICAgIH0KICAgIEBtZWRpYSAocHJlZmVycy1jb2xvci1zY2hlbWU6IGRhcmspIHsKICAgICAgI2xvZ28gewogICAgICAgIGZpbGw6ICNGRkZGRkY7CiAgICAgICAgZmlsbC1ydWxlOiBub256ZXJvOwogICAgICB9CiAgICAgICNsb2dvLXRlZXRoIHsKICAgICAgICBmaWxsOiAjRkZGRkZGOwogICAgICAgIHN0cm9rZTogI0ZGRkZGRjsKICAgICAgICBzdHJva2Utd2lkdGg6IDAuOTJweDsKICAgICAgfQogICAgfQogIF1dPjwvc3R5bGU+CjwvZGVmcz4KPHBhdGggaWQ9ImxvZ28iIGQ9Ik0xNS45OTMsMS41NGMtNy45NzIsMCAtMTQuNDYxLDYuNDkyIC0xNC40NjEsMTQuNDYyYzAsNy45NjkgNi40OTIsMTQuNDYxIDE0LjQ2MSwxNC40NjFjNy45NywwIDE0LjQ2MiwtNi40OTIgMTQuNDYyLC0xNC40NjFjMCwtNy45NyAtNi40OTIsLTE0LjQ2MiAtMTQuNDYyLC0xNC40NjJabS0wLjAyMSwxLjI4NWMwLjUxMSwwLjAxMyAwLjkyNCwwLjQzOSAwLjkyNCwwLjk1MWMwLDAuNTIyIC0wLjQzLDAuOTUyIC0wLjk1MiwwLjk1MmMtMC41MjIsMCAtMC45NTEsLTAuNDMgLTAuOTUxLC0wLjk1MmMwLDAgMCwwIDAsMGMwLC0wLjUyMiAwLjQyOSwtMC45NTIgMC45NTEsLTAuOTUyYzAuMDEsMCAwLjAxOSwwLjAwMSAwLjAyOCwwLjAwMVptMi4xNzgsMS41NjZjMy4zNzksMC42MzMgNi4zMTMsMi43MjMgOC4wMTYsNS43MDlsLTEuMTIzLDIuNTMzYy0wLjE5MywwLjQzOCAwLjAwNiwwLjk1MiAwLjQ0LDEuMTQ3bDIuMTYsMC45NThjMC4wNjcsMC42NzUgMC4wNzYsMS4zNTUgMC4wMjUsMi4wMzFsLTEuMjAyLDBjLTAuMTIsMCAtMC4xNjksMC4wOCAtMC4xNjksMC4xOTZsMCwwLjU1MWMwLDEuMjk3IC0wLjczMSwxLjU4MiAtMS4zNzMsMS42NTJjLTAuNjEyLDAuMDcgLTEuMjg4LC0wLjI1NyAtMS4zNzQsLTAuNjNjLTAuMzYxLC0yLjAyOSAtMC45NjEsLTIuNDYgLTEuOTA5LC0zLjIxYzEuMTc4LC0wLjc0NiAyLjQwMSwtMS44NSAyLjQwMSwtMy4zMjVjMCwtMS41OTQgLTEuMDkyLC0yLjU5NyAtMS44MzUsLTMuMDljLTEuMDQ2LC0wLjY4OCAtMi4yMDMsLTAuODI2IC0yLjUxNSwtMC44MjZsLTEyLjQyMSwwYzEuNzE3LC0xLjkxOCA0LjAyLC0zLjIxOCA2LjU1LC0zLjY5NmwxLjQ2NiwxLjUzNmMwLjMzLDAuMzQ2IDAuODc4LDAuMzYxIDEuMjIzLDAuMDI4bDEuNjQsLTEuNTY0Wm0tMTMuNTIyLDcuMDQzYzAuNTExLDAuMDE1IDAuOTI0LDAuNDQgMC45MjQsMC45NTFjMCwwLjUyMiAtMC40MywwLjk1MiAtMC45NTIsMC45NTJjLTAuNTIyLDAgLTAuOTUxLC0wLjQzIC0wLjk1MSwtMC45NTJjMCwwIDAsMCAwLDBjMCwtMC41MjIgMC40MjksLTAuOTUxIDAuOTUxLC0wLjk1MWMwLjAwOSwwIDAuMDE5LDAgMC4wMjgsMFptMjIuNjg1LDAuMDQzYzAuNTExLDAuMDE1IDAuOTI0LDAuNDQgMC45MjQsMC45NTFjMCwwLjUyMiAtMC40MywwLjk1MiAtMC45NTIsMC45NTJjLTAuNTIyLDAgLTAuOTUxLC0wLjQzIC0wLjk1MSwtMC45NTJjMCwwIDAsMCAwLDBjMCwtMC41MjIgMC40MjksLTAuOTUyIDAuOTUxLC0wLjk1MmMwLjAxLDAgMC4wMTksMCAwLjAyOCwwLjAwMVptLTIwLjg5MiwwLjE1M2wxLjY1OCwwbDAsNy40NzdsLTMuMzQ3LDBjLTAuNDE0LC0xLjQ1MiAtMC41NDIsLTIuOTcgLTAuMzgsLTQuNDdsMi4wNSwtMC45MTJjMC40MzgsLTAuMTk1IDAuNjM3LC0wLjcwNiAwLjQ0MSwtMS4xNDRsLTAuNDIyLC0wLjk1MVptNi45MiwwLjA3OWwzLjk0OSwwYzAuMjA1LDAgMS40NDEsMC4yMzYgMS40NDEsMS4xNjNjMCwwLjc2OCAtMC45NDgsMS4wNDMgLTEuNzI4LDEuMDQzbC0zLjY2NSwwbDAuMDAzLC0yLjIwNlptMCw1LjM3M2wzLjAyNiwwYzAuMjc1LDAgMS40NzcsMC4wNzkgMS44NiwxLjYxNWMwLjExOSwwLjQ3MSAwLjM4NSwyLjAwNyAwLjU2NiwyLjQ5OWMwLjE4LDAuNTUxIDAuOTExLDEuNjUyIDEuNjkxLDEuNjUybDQuOTM4LDBjLTAuMzMxLDAuNDQ0IC0wLjY5MywwLjg2MyAtMS4wODMsMS4yNTVsLTIuMDEsLTAuNDMyYy0wLjQ2OCwtMC4xMDEgLTAuOTMsMC4xOTkgLTEuMDMxLDAuNjY3bC0wLjQ3NywyLjIyOGMtMy4xMDQsMS40MDYgLTYuNjcyLDEuMzg5IC05Ljc2MiwtMC4wNDZsLTAuNDc4LC0yLjIyOGMtMC4xMDEsLTAuNDY4IC0wLjU2LC0wLjc2NyAtMS4wMjgsLTAuNjY3bC0xLjk2NywwLjQyM2MtMC4zNjUsLTAuMzc3IC0wLjcwNCwtMC43NzggLTEuMDE2LC0xLjJsOS41NjcsMGMwLjEwNywwIDAuMTgxLC0wLjAxOCAwLjE4MSwtMC4xMTlsMCwtMy4zODRjMCwtMC4wOTcgLTAuMDc0LC0wLjExOSAtMC4xODEsLTAuMTE5bC0yLjc5OSwwbDAuMDAzLC0yLjE0NFptLTQuNDE1LDcuNzQ5YzAuNTEyLDAuMDE1IDAuOTI0LDAuNDQgMC45MjQsMC45NTFjMCwwLjUyMiAtMC40MjksMC45NTIgLTAuOTUxLDAuOTUyYy0wLjUyMiwwIC0wLjk1MiwtMC40MyAtMC45NTIsLTAuOTUyYzAsMCAwLDAgMCwwYzAsLTAuNTIyIDAuNDMsLTAuOTUyIDAuOTUyLC0wLjk1MmMwLjAwOSwwIDAuMDE4LDAuMDAxIDAuMDI3LDAuMDAxWm0xNC4wODksMC4wNDNjMC41MTEsMC4wMTUgMC45MjQsMC40MzkgMC45MjMsMC45NTFjMCwwLjUyMiAtMC40MjksMC45NTIgLTAuOTUxLDAuOTUyYy0wLjUyMiwwIC0wLjk1MSwtMC40MyAtMC45NTEsLTAuOTUyYzAsMCAwLDAgMCwwYzAsLTAuNTIyIDAuNDI5LC0wLjk1MiAwLjk1MSwtMC45NTJjMC4wMDksMCAwLjAxOCwwIDAuMDI4LDAuMDAxWiIvPjxwYXRoIGlkPSJsb2dvLXRlZXRoIiBkPSJNMjkuNjQ3LDE2LjAwMmMwLDcuNDkgLTYuMTYzLDEzLjY1MyAtMTMuNjU0LDEzLjY1M2MtNy40OSwwIC0xMy42NTQsLTYuMTYzIC0xMy42NTQsLTEzLjY1M2MwLC03LjQ5MSA2LjE2NCwtMTMuNjU0IDEzLjY1NCwtMTMuNjU0YzcuNDkxLDAgMTMuNjU0LDYuMTYzIDEzLjY1NCwxMy42NTRabS0wLjI1NywtMS4zMTlsMi4xMywxLjMxOWwtMi4xMywxLjMxOGwxLjgzLDEuNzFsLTIuMzQ0LDAuODc4bDEuNDYzLDIuMDM1bC0yLjQ3NSwwLjQwNGwxLjA0LDIuMjgybC0yLjUwNiwtMC4wODlsMC41NzUsMi40NDJsLTIuNDQxLC0wLjU3NmwwLjA4OSwyLjUwNmwtMi4yODMsLTEuMDRsLTAuNDAzLDIuNDc1bC0yLjAzNSwtMS40NjJsLTAuODc4LDIuMzQzbC0xLjcxLC0xLjgyOWwtMS4zMTksMi4xMjlsLTEuMzE4LC0yLjEyOWwtMS43MSwxLjgyOWwtMC44NzgsLTIuMzQzbC0yLjAzNSwxLjQ2MmwtMC40MDQsLTIuNDc1bC0yLjI4MiwxLjA0bDAuMDg5LC0yLjUwNmwtMi40NDIsMC41NzZsMC41NzUsLTIuNDQybC0yLjUwNSwwLjA4OWwxLjA0LC0yLjI4MmwtMi40NzUsLTAuNDA0bDEuNDYyLC0yLjAzNWwtMi4zNDMsLTAuODc4bDEuODI5LC0xLjcxbC0yLjEyOSwtMS4zMThsMi4xMjksLTEuMzE5bC0xLjgyOSwtMS43MWwyLjM0MywtMC44NzhsLTEuNDYyLC0yLjAzNWwyLjQ3NSwtMC40MDRsLTEuMDQsLTIuMjgybDIuNTA1LDAuMDg5bC0wLjU3NSwtMi40NDFsMi40NDIsMC41NzVsLTAuMDg5LC0yLjUwNmwyLjI4MiwxLjA0bDAuNDA0LC0yLjQ3NWwyLjAzNSwxLjQ2M2wwLjg3OCwtMi4zNDRsMS43MSwxLjgzbDEuMzE4LC0yLjEzbDEuMzE5LDIuMTNsMS43MSwtMS44M2wwLjg3OCwyLjM0NGwyLjAzNSwtMS40NjNsMC40MDMsMi40NzVsMi4yODMsLTEuMDRsLTAuMDg5LDIuNTA2bDIuNDQxLC0wLjU3NWwtMC41NzUsMi40NDFsMi41MDYsLTAuMDg5bC0xLjA0LDIuMjgybDIuNDc1LDAuNDA0bC0xLjQ2MywyLjAzNWwyLjM0NCwwLjg3OGwtMS44MywxLjcxWiIvPjwvc3ZnPgo="
         },
         "8": {
           "id": 8,
@@ -1888,45 +1753,43 @@
           "incognito": false,
           "width": 2144,
           "height": 1233,
-          "lastAccessed": 1694382528551,
+          "lastAccessed": 1694820796206,
           "audible": false,
           "autoDiscardable": true,
           "mutedInfo": {
             "muted": false
           },
-          "isArticle": false,
           "isInReaderMode": false,
           "sharingState": {
             "camera": false,
             "microphone": false
           },
           "successorTabId": -1,
-          "cookieStoreId": "firefox-container-16",
-          "url": "https://www.facebook.com/",
-          "title": "Facebook",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFQklEQVRYR5VXXUxURxQ+M3d/+HMXl11cWsSkITap2j6ZkMYHoSQQmpCYVvtgk6ZJGwONKdXUEKwUEa3VijZGqJTYNK1Nax9MSSF9aICkbULCo5VEw4u4KmURlsvuwrL3znTm/rB77+wFdsjusHfOPeebc7455wyCLY7DlHr+HoZarEAzAXgFU3iBsA9/HSN4StgHA0wRFwwdeBPGfkVobSuq0WZCe8ZoOLYAnSqFowDUZ5GnFAAxFXxmg39zhRSwLGFye3sAd9+vRbMb2XAEUD1CvckVcpoo6AQFUmyzoOs0jfM5x0CAE9hFeosK8fnpJpTKLZPj6Z47NDxP1buUQI2+I4dh84AgZQBEEpoIIunQ/SOiNwTo5T/RVykhwwCk0jRuClEGBbE/PmsOMP7ns/EgEwcO3BIhHPECboq8i+5lA7UACLGdw5o6SVW1UvcwM8a08DnXMNf4nEteWJekCHik/dEsT6xr5jGX55RxAqRm3ZjgYqtPJEb7tn0Y3npJgqoS7TTAigIgM/4/X6VQP8x+mMzkSpk+jKQJX7nroMmJdQDl36e6VYWesezUDiCLdMECgFt1bng9zFA4jOAtzrtsBLqg5ELn5t7zduphZCP0HXM9WZsmxGD7Fjj3S6Mb6ndKjsb5QnBw1bYfPZzsk0CStzr6PprVAARvrvYRSloy59h8z/rEJN2BCgmGmr0bGueLZTdXNMKaJLWQGEn9i8cKWtHhO9QzOp+MsuxmTTIbqB94wwNv73ZtCiDQn3SUYYGT64JFIVQ+EG9YS8EfOo1tIXPgwPg7hfBayOr+H6bS0DORhrkk24p5LO3mbfo9FBqR/+vlG0yuddPtZOF70lIMxW7r0Xx5MMGM6xkikzcye3LQ34dKry2PsfN6cCsATIfE2rYJ4v6rcg4XWsXsmRshPI58V+QH7Hzu5qIiCW0KDBn5pEgX/xUOIM+B0EPk/yq2TAiwNJJj2BEZMZRP+QVh36WlHBzKckoO9ViCOPJfXFxWwQDg4ILl9tI8twYws0Rg7zfyej3QPGyt3sBOQhxt+yL2gCUgLQQiafXCE+/YnjeAf2bS0PBj3PqebYNYwg9RSc8iIyHRSOhUXRNnAnkD+PleCj74LWHxgLBBTsKirvlNj2Hi87K8AVz+KwldoyuW93JQqg/5zj5vSCskdyIyXk+eDeYN4OPf4/DtJK8Fzi2NW8KNWioe+Xchynjgs9dv0WV6f7DSExIAFX4WFTo0MZFm+guMsdy0NxDSklZRxzwrRmqL/RzZOyDT6uqFchFAx5yQR8SOKmNBYsUoeSHYqpfjS/Hw0nx8mv0o3iiVmgpTX+4QABS0MwBG97TeIXFiG0HQSJ4JSMIfLKmOnirRy7HmhfZn3YqCWEMiNhAZa/pa6rIIwPPprFDL7DExAWKJnlu9WJFpSLgB3pI9+vO/cdaM1ji2wUYyX+utEDzgPTkreECsrhw/nthVv0NsybRQdMXDckyeVCnVmlKnkb6mXYgsw932VGhi7SGREIr4Sn37o10l65cVod0t/mR2X0pVR5gXKp26XuX6iwIA1/EnYi3IlkIQKZBcTYmrYee23JQPtcbDMYjdJUAzHTJfNEKg3BAd5Poo4nhTwhgmSstKD2Xv3LTlfDU7Tr0z9NlphZATQKh+NTMIqvaLAHDLY5GEGCdcGPdWoYrz09fzuJple457Y0FZ6CSIHgWKfDy5k4EqIQT42Ix2QjSQGMmYwO2AK9Ad7cvEOxenHD0gCLOM6R19XJtKk2Y6uEto4dCHj8aZ7Slw4yGo2zkGR7Z2Pf8ffhZtanwf5VwAAAAASUVORK5CYII="
+          "cookieStoreId": "firefox-container-11",
+          "url": "https://docs.python.org/3.11/",
+          "title": "3.11.5 Documentation",
+          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACAUlEQVQ4T32Tz2rUUBTGz0VUXCh5AaGuVSZv4CAMlirMuHOlMwtBcGPtohvpRES6qH+68AHGjdtOBZEWpUlpERXaRN24UAd8gdl1Jjl/PPcmU9KpJHAhucn3O9/5zo2Bqav1ctdPs1GXGOuUoceEQIhD5qx/4tTp+TC4OSxLzDRgbuVjyEg9JmohZk3KAVCA1j+/uN2qBMwub4ZE9Icp9QnJnwB0z0Kir6udeiWg8fR9WxBnUCuzVlZA1zpwSwF7r+4eB1x/ttUTwiYiekct00RYwLJof+kXgJErutGHM6ZjbjzfCtRqd6rXct+2snsGkBwgYwWkAJQ9NnMrH2JNu3bYK7peDytPAhQRC3i9/+iHr+KaA3AamWvLG+r+SNLATAln2dDmoO5AhNS2ibcXvo/OnjxYLMQWAKbx5J3YhIuQ4Py5g/tvOt8aWs5zaQtbq/ZjHyT1ymIHuBq8jdVyrbCa7DzcG6iqmYu1b3JW/7MUSmli6ktrGmI+KmaMPi0kapc1JFe1AqDvhOdNPVjzstFoVQEzuuIvi4kNKU85B0TOhdh7dSTjvCUjA3Npt33sKMvfe6F+XAaETmCFrJYvbj+oPIkyaCugmHM+azcuhcbA4JvLO9VHWX7f6gGP75Ra0OoUggEFywVru9KBC//nbKAhttyBsWMESEBMX6sH03/vP5xF3/IzElBAAAAAAElFTkSuQmCC"
         },
-        "10": {
-          "id": 10,
+        "9": {
+          "id": 9,
           "index": 5,
           "windowId": 40,
           "highlighted": false,
           "active": false,
           "attention": false,
-          "pinned": false,
+          "pinned": true,
           "status": "complete",
           "hidden": false,
           "discarded": false,
           "incognito": false,
           "width": 2144,
           "height": 1233,
-          "lastAccessed": 1694379563145,
+          "lastAccessed": 1694820796259,
           "audible": false,
           "autoDiscardable": true,
           "mutedInfo": {
             "muted": false
           },
-          "isArticle": false,
           "isInReaderMode": false,
           "sharingState": {
             "camera": false,
@@ -1934,58 +1797,25 @@
           },
           "successorTabId": -1,
           "cookieStoreId": "firefox-container-11",
-          "url": "https://telex.hu/",
-          "title": "Telex",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABI1BMVEUAAAAALVQAK1P///8ARloAUVwAXV8APlcAN1YAamIanV0AimgAemYAMlUAMlvx9vb3+PpTrkJWsEQAKVMAKlOBvDIAVVUSmmEAKVMAK1M9rVFUsEUAKVMAeGcAeWUAKVOHvjB2uTcAf38AamIAiWhIrUwAPleAxptttkgAUVwASG0KmHAAMVVRfY8AXV8AaWGKvy0ARloAOFYAKlMAM1YAK1QAMlSyx80ALlUANVcAW1284ddykqOywcxohpszeIDu9vQLTWQGgXA0i4Uzbn4/rHKcsL00ZHxGr3axzc4zpIgUh3YaR2oJk3QASlyr2M0tk4TE4NsGS2IzgIIAP1kCOFsAVF8AX2J3k6b4/PsARFcAT1q0xc6xys2x0c8BPVwAbGQbAE2zAAAAYXRSTlMA/////////////////xn//////6ioBrH8kxnv5ErtSeRJBqiSk+P/B/wHGf//4//8/KjvSrHt/5P/////////////////////////////////////////////////////eHggIAAAAN9JREFUeJwlj0WCw0AMBGUP7BompjAzM2eZmSFM/39F5KQO6mrdGpBywhsNBqPeRNltAJ5QR5Ydx5E7Ic++92REepPw9vDjH0pI9eJBuDn0Q7cvRPV/ap6PRkKIfhfax8iZSZaPtQ1aG/JHSM0kg+ufP7Q8tCil8zuDDD5QKG1BiTG2uDTIaozCWAnqnPOTX4M8T1A4r0NGUZTGrUHW2waakoFYXNf1ryvy/XqDEo9BOqtp2vspmX2+oGTTAJWAqqr3hcITRqDijgnnIrZtWZYdyYUPc4spX7LZTPpSRSw7sMwa2n/gb0cAAAAASUVORK5CYII="
+          "url": "https://www.rapidtables.com/convert/number/index.html",
+          "title": "Number conversions",
+          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAolBMVEX/mjAAAAD/mzD/nDH/nTH7mC7tjytUMAgfDgGiYBrWgie1ax8iEALKeiN0QxA1HANEJQb2lC0EAgCeXxqqZRzAdSLkiSlnPAyGTxShXxqzax7iiCnzki2SVhewaB7fhihiOAyBTBO6cCAoFAJcNApqPg0LAwBLKQaJUBR5RhHwkSzPfSTGdyIuGAMIAwAQBgBvQA5PLAh3RRGMUxZ8SRJfNgsZqoJwAAAAlklEQVR4nHWP1Q7DMAxFe0OFpNyuOGbm//+1dVvSp82yLPnIPtK1/hSh9N39vt/cttNH2vQkLuDIBcKxIdzGk+UJKqYNjYOU1UBGv4DWOHutjbXQLySAKiNVDsy+C3GJYHOjpP4J+R2OObDoEHNxSCC1kvArJkQcEWjARysUwlpC+fwDWlm5mUc8153F2sFYl4t081fuF0V4B+e3thvGAAAAAElFTkSuQmCC"
         },
-        "131": {
-          "id": 131,
+        "10": {
+          "id": 10,
           "index": 6,
           "windowId": 40,
           "highlighted": false,
           "active": false,
           "attention": false,
-          "pinned": false,
+          "pinned": true,
           "status": "complete",
           "hidden": false,
           "discarded": false,
           "incognito": false,
           "width": 2144,
           "height": 1233,
-          "lastAccessed": 1694381912281,
-          "audible": false,
-          "autoDiscardable": true,
-          "mutedInfo": {
-            "muted": false
-          },
-          "isArticle": true,
-          "isInReaderMode": false,
-          "sharingState": {
-            "camera": false,
-            "microphone": false
-          },
-          "successorTabId": -1,
-          "cookieStoreId": "firefox-container-11",
-          "openerTabId": 10,
-          "url": "https://telex.hu/sport/2023/09/10/mma-ufc-meglepetes-adesanya-sean-strickland",
-          "title": "Telex: Üssön már meg valaki, hogy nem álmodom-e!",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABI1BMVEUAAAAALVQAK1P///8ARloAUVwAXV8APlcAamIAN1YanV0AimgAemYAMlUAMlvx9vb3+PpTrkJWsEQAKVMAKVOBvDIAKVMAVVUSmmEAKlMAK1M9rVFUsEUAKVMAeGcAeWUASG2HvjB2uTcAf38AamIAiWhIrUwAPleAxptttkgKmHAAMVVRfY8AXV8AaWGKvy0ARloAOFYAKlMANVcAUVwAM1YAK1QAMlSyx80ALlUAW1284ddykqOywcxohps0i4Xu9vQLTWQGgXAzeIAASlwzbn4/rHKcsL00ZHwzpIir2M1Gr3YJk3QaR2oUh3axzc4tk4TE4NsGS2IzgIIBPVwCOFsAVF8AX2J3k6b4/PsARFcAT1q0xc6xys2x0c8AP1kAbGTXKGi2AAAAYXRSTlMA/////////////////xn///////yoSQaxqJMZ7+RK7QfkSQaokpPj/wcZ///j//z8qO///Eqx7f+T////////////////////////////////////////////////////2O+rPwAAAOBJREFUeJwlj0WCw0AMBGUPrNf2xBRmZuYsMzOE6f+viJzUQV2tWwOS9IdiXm8s5E+6DcATbsuy4zhyO+zZ976MSO8S3j5+AiMJqVw8CjdHAegNhKj8T83zTkcIMehB6xg5M8nyqfqH1oLCEVI1yfD6Z4NWgCaldH5vkOEdCqVN6DLGFrcGWY1RGOtCjXN+8muQzwkK5zXIKopSvzTIeltHU7IQT+i6/nVFvj9uUBJxyOQ0TXs7JbOXZ5RcBqAcVFX1oVh8xQiW3TGRfNS2Lcuyo/nIYW4p7Us1GilfuoRlB5k7GtoUMw/bAAAAAElFTkSuQmCC"
-        },
-        "230": {
-          "id": 230,
-          "index": 7,
-          "windowId": 40,
-          "highlighted": true,
-          "active": true,
-          "attention": false,
-          "pinned": false,
-          "status": "complete",
-          "hidden": false,
-          "discarded": false,
-          "incognito": false,
-          "width": 2144,
-          "height": 1233,
-          "lastAccessed": 1694382822717,
+          "lastAccessed": 1694828435483,
           "audible": false,
           "autoDiscardable": true,
           "mutedInfo": {
@@ -1998,9 +1828,72 @@
           },
           "successorTabId": -1,
           "cookieStoreId": "firefox-default",
-          "url": "moz-extension://c537cf8f-ef19-471f-8642-d493a3b74fff/options/index.html#sessions",
-          "title": "Tab Session Manager",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAsUlEQVRYR2M027TpPwMdANCSCaf9/ArRrWKklwNAFmNzBF0dgM0RdHcAuiMwHHDS1xclmsw3byYqhcD0oavf5urKkHn8OMPDL19QzIFFB80dAHLY2x8/cDqCLg4AeR2XI+jmAJgjvHbvRokKujoAZDN6Ghk+DsCVVQjlKqqFAM0cQFQhQIIiktMACWYTpXTUAaMhMBoCoyEwGgKjITAaAgRDgKg6lYqKBqRnhOz+UQcAAMmj6dP9uoyhAAAAAElFTkSuQmCC"
+          "url": "https://marcellbarsony.github.io/homepage/",
+          "title": "Homepage",
+          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAXVBMVEUAAABfS4teS4teS4tbSJFbSIhdSIltSJFfS4s/P39eS4pfTItfSotiSotdSoleS4tVVapdS4teSIpeS4tfP38AAP9cSIteSotfTIVjRo1kTY1eS4teS4tjTZBeS4lCL8jdAAAAH3RSTlMA///wDhxKB+wE3//QH0v3A+xG3ggBTZkoEjjn2BdOKhZwAAAAAO9JREFUeJyNUwkSwiAMlNSjilpb7/P/z5SEBAIF7U4HCiwhLJvZFBgAQ6AOwPrONR9NwEY+HsOeCTzLC7wbsRQCx/efAQueAkzA+WGV4d6oCI5xGKW+cbMqwnpMMNaGHMCUCCrJCkGSxBxKBIhJliP8JWgdKhGU1L9vUTsiCOVeqaBkKvU7Xz8/0yO6tu37VgHfKgjFjom2kl8moMXIZmIIHDrjgbl4wqKK0yj1MpoqhnjNPEkysLqFsru57giPThFkG1h3mxuffIzPzbH5jGZLeCVSSxahdvyOVMlMSuyCYajcsJyk5rg42TDzKpxLvgbJCEz+yAM6AAAAAElFTkSuQmCC"
+        },
+        "11": {
+          "id": 11,
+          "index": 7,
+          "windowId": 40,
+          "highlighted": true,
+          "active": true,
+          "attention": false,
+          "pinned": false,
+          "status": "complete",
+          "hidden": false,
+          "discarded": false,
+          "incognito": false,
+          "width": 2144,
+          "height": 1233,
+          "lastAccessed": 1694859933521,
+          "audible": false,
+          "autoDiscardable": true,
+          "mutedInfo": {
+            "muted": false
+          },
+          "isArticle": false,
+          "isInReaderMode": false,
+          "sharingState": {
+            "camera": false,
+            "microphone": false
+          },
+          "successorTabId": -1,
+          "cookieStoreId": "firefox-container-14",
+          "url": "https://www.youtube.com/watch?v=Zs-pS-egQSs&list=PLai5B987bZ9CoVR-QEIN9foz4QCJ0H2Y8&index=10",
+          "title": "Common Collections in Rust - YouTube",
+          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAtklEQVQ4T2NkoBAwUqifAW7AfwYGAaBhBlADHXAYfAAqfgGo8QOIDTYAqDkBSM0n0TWJQM0LGIGaQbaeJ1EzTLkhyIAAIG89mQYkggxoAGqux2rAgwdAzwF9dwDmdQxVjfgN+A80HgQ2bmRgKChgYAAZiAqINODgQYhLSDYApAFk84YNuIII7ALcgSgATBofwNGNC4ADkbJoBBlNUUKCuQ0tKYNcBUra6AAWn6hJGZ8nCclRnBsBzJ03KZWC+NsAAAAASUVORK5CYII="
+        },
+        "77": {
+          "id": 77,
+          "index": 8,
+          "windowId": 40,
+          "highlighted": false,
+          "active": false,
+          "attention": false,
+          "pinned": false,
+          "status": "complete",
+          "hidden": false,
+          "discarded": false,
+          "incognito": false,
+          "width": 2144,
+          "height": 1233,
+          "lastAccessed": 1694859840848,
+          "audible": false,
+          "autoDiscardable": true,
+          "mutedInfo": {
+            "muted": false
+          },
+          "isInReaderMode": false,
+          "sharingState": {
+            "camera": false,
+            "microphone": false
+          },
+          "successorTabId": -1,
+          "cookieStoreId": "firefox-container-16",
+          "url": "https://www.facebook.com/",
+          "title": "Facebook",
+          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFQklEQVRYR5VXXUxURxQ+M3d/+HMXl11cWsSkITap2j6ZkMYHoSQQmpCYVvtgk6ZJGwONKdXUEKwUEa3VijZGqJTYNK1Nax9MSSF9aICkbULCo5VEw4u4KmURlsvuwrL3znTm/rB77+wFdsjusHfOPeebc7455wyCLY7DlHr+HoZarEAzAXgFU3iBsA9/HSN4StgHA0wRFwwdeBPGfkVobSuq0WZCe8ZoOLYAnSqFowDUZ5GnFAAxFXxmg39zhRSwLGFye3sAd9+vRbMb2XAEUD1CvckVcpoo6AQFUmyzoOs0jfM5x0CAE9hFeosK8fnpJpTKLZPj6Z47NDxP1buUQI2+I4dh84AgZQBEEpoIIunQ/SOiNwTo5T/RVykhwwCk0jRuClEGBbE/PmsOMP7ns/EgEwcO3BIhHPECboq8i+5lA7UACLGdw5o6SVW1UvcwM8a08DnXMNf4nEteWJekCHik/dEsT6xr5jGX55RxAqRm3ZjgYqtPJEb7tn0Y3npJgqoS7TTAigIgM/4/X6VQP8x+mMzkSpk+jKQJX7nroMmJdQDl36e6VYWesezUDiCLdMECgFt1bng9zFA4jOAtzrtsBLqg5ELn5t7zduphZCP0HXM9WZsmxGD7Fjj3S6Mb6ndKjsb5QnBw1bYfPZzsk0CStzr6PprVAARvrvYRSloy59h8z/rEJN2BCgmGmr0bGueLZTdXNMKaJLWQGEn9i8cKWtHhO9QzOp+MsuxmTTIbqB94wwNv73ZtCiDQn3SUYYGT64JFIVQ+EG9YS8EfOo1tIXPgwPg7hfBayOr+H6bS0DORhrkk24p5LO3mbfo9FBqR/+vlG0yuddPtZOF70lIMxW7r0Xx5MMGM6xkikzcye3LQ34dKry2PsfN6cCsATIfE2rYJ4v6rcg4XWsXsmRshPI58V+QH7Hzu5qIiCW0KDBn5pEgX/xUOIM+B0EPk/yq2TAiwNJJj2BEZMZRP+QVh36WlHBzKckoO9ViCOPJfXFxWwQDg4ILl9tI8twYws0Rg7zfyej3QPGyt3sBOQhxt+yL2gCUgLQQiafXCE+/YnjeAf2bS0PBj3PqebYNYwg9RSc8iIyHRSOhUXRNnAnkD+PleCj74LWHxgLBBTsKirvlNj2Hi87K8AVz+KwldoyuW93JQqg/5zj5vSCskdyIyXk+eDeYN4OPf4/DtJK8Fzi2NW8KNWioe+Xchynjgs9dv0WV6f7DSExIAFX4WFTo0MZFm+guMsdy0NxDSklZRxzwrRmqL/RzZOyDT6uqFchFAx5yQR8SOKmNBYsUoeSHYqpfjS/Hw0nx8mv0o3iiVmgpTX+4QABS0MwBG97TeIXFiG0HQSJ4JSMIfLKmOnirRy7HmhfZn3YqCWEMiNhAZa/pa6rIIwPPprFDL7DExAWKJnlu9WJFpSLgB3pI9+vO/cdaM1ji2wUYyX+utEDzgPTkreECsrhw/nthVv0NsybRQdMXDckyeVCnVmlKnkb6mXYgsw932VGhi7SGREIr4Sn37o10l65cVod0t/mR2X0pVR5gXKp26XuX6iwIA1/EnYi3IlkIQKZBcTYmrYee23JQPtcbDMYjdJUAzHTJfNEKg3BAd5Poo4nhTwhgmSstKD2Xv3LTlfDU7Tr0z9NlphZATQKh+NTMIqvaLAHDLY5GEGCdcGPdWoYrz09fzuJple457Y0FZ6CSIHgWKfDy5k4EqIQT42Ix2QjSQGMmYwO2AK9Ad7cvEOxenHD0gCLOM6R19XJtKk2Y6uEto4dCHj8aZ7Slw4yGo2zkGR7Z2Pf8ffhZtanwf5VwAAAAASUVORK5CYII="
         }
       }
     },
@@ -2008,19 +1901,6 @@
     "windowsInfo": {
       "1": {
         "id": 1,
-        "focused": false,
-        "top": 22,
-        "left": 0,
-        "width": 2133,
-        "height": 1311,
-        "incognito": false,
-        "type": "normal",
-        "state": "normal",
-        "alwaysOnTop": false,
-        "title": "Vim Cheat Sheet & Quick Reference — Mozilla Firefox"
-      },
-      "40": {
-        "id": 40,
         "focused": true,
         "top": 22,
         "left": 0,
@@ -2031,26 +1911,39 @@
         "state": "normal",
         "alwaysOnTop": false,
         "title": "Tab Session Manager — Mozilla Firefox"
+      },
+      "40": {
+        "id": 40,
+        "focused": false,
+        "top": 22,
+        "left": 0,
+        "width": 2133,
+        "height": 1311,
+        "incognito": false,
+        "type": "normal",
+        "state": "normal",
+        "alwaysOnTop": false,
+        "title": "Common Collections in Rust - YouTube — Mozilla Firefox"
       }
     },
     "tabsNumber": 12,
     "name": "Tab Session Manager",
-    "date": 1694382822712,
-    "lastEditedTime": 1694382822712,
+    "date": 1694859933520,
+    "lastEditedTime": 1694859933520,
     "tag": [
       "temp",
       "Arch"
     ],
-    "sessionStartTime": 1694339953994,
+    "sessionStartTime": 1694851487269,
     "id": "c973b301-ecb2-44f4-823f-fc4c7bf850b1"
   },
   {
     "windows": {
-      "1656": {
-        "239": {
-          "id": 239,
+      "586": {
+        "92": {
+          "id": 92,
           "index": 0,
-          "windowId": 1656,
+          "windowId": 586,
           "highlighted": false,
           "active": false,
           "attention": false,
@@ -2061,69 +1954,7 @@
           "incognito": false,
           "width": 2144,
           "height": 1099,
-          "lastAccessed": 1693445596295,
-          "audible": false,
-          "autoDiscardable": true,
-          "mutedInfo": {
-            "muted": false
-          },
-          "isInReaderMode": false,
-          "sharingState": {
-            "camera": false,
-            "microphone": false
-          },
-          "successorTabId": -1,
-          "cookieStoreId": "firefox-container-12",
-          "url": "https://bluedemy.cyberdefenders.org/courses/take/certified-cyberdefender/texts/35188262-topic-4-extra-mile-controls",
-          "title": "Certified CyberDefender - CyberDefenders Training",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFtUlEQVRYR8VXe2xTVRj/dW3v2pVuXYeFsQcdLjxEhxgBhzKTReLMwGwmc0MjiNFE//ORqEFRVASGEtREjRiEuGEwE/8xOsxQwyAi4LIRlK1RxrNzLRvdq13f1++7a8u9fayAGE7yS0/P+c45v+9xvvNdFa6iiaKYRWKFhDmEJYRlhLmEvMjyQfrtIRwiHCXYCBdVKpUn3faqdAJ0+EKSeYWwmDCdoE+zZpzm+wnHCI1EonMy+ZQE6GDW+JnI4ZnpiKaY9zEJwudE5GIymaQE6PClJPwBYQFBSHc4ycdE6KB4cT8NnCA8T3O/xk8mSNNmFSS0izBLLmxzePHbGTe8wTAsRg0KTAIKTVqMeUNY/30/ehx+VM4xYM1iM26foYcmI2HrXtpvLZFol++rkIpo3kQCVkJGVJA1fOjTXnRc8CJMfd7cqMvAdKMWxbkaXHAFcIoIACJKbxGwo6EQCwo4bhUtTP/OEp6QWyJGIOLzb0lgkXKdCNZ+6XZWIHljZcNXvICqeVOw87Ei6LQxHeQLj9OfR6IxISfwFk28SlD4nLXf0ubE+z8PpCQQP6GmXd+rnY7Vi8xIERNbaPxNXicRiFy1I9RNiPYxXwhrm86hu+s8LmXlIpihuSoi5VY9mlYXIzcrqTzfjnK+oqpIkvmCBurlPmfNvUGR/OvHGx8exkstb+Ng0d34rKwOLl1OWhLmLDX2rCnC4pmGVLJf08RTTGA2dfYTSljyCEX6x+0DONzrxoiX4wa4bbAXjYe2o9R1DkN0+O75D+No/h34x2CBW6uHX62V5DJDfuT4RjF/4DSKxvqR99yTeLm6KJkbWPwMoYoJrKQOs9GLYhj3bT+NHidHtKyRNWaMOVH790949kQLhFAAw5lGOLPMuKQ3wS1MJEejz4N89wDhEo3n4oWajdi9fhmKzezZhGvJGbOeCWykzmu8AZt9TdN5/HBqjC5UYhNpdNaQHU+f/AYLnTZYxi/DEBiHJhyi7XlWBa9awCCRaiu+Bx/d9Th05hw8MNcgBeSdRXoIasXNeJcJHKSjOPlIreO8G2v3XIR9OJiEgsQS2nAQeeNDKBhzYJpnkPrD0Id8GBYMZJU8nM2eAbtxWsQ1E5oX5mjwyaMFuPfWKfJ925mAg0Ys0VFONN+dHMY7Pzpx9nKAz7tBTZTyQ/PqmfKYcDIBVlWtdLmIP/u92LjfgTab+wYRAKYaMtDz+lw5gVBSAtETQ+Ewdh29jKZjQzg94Md44L+Z48F5BuxRWkAioHBBvLohyrGO0QB+P+fBl8dd+OUvtkjaMiLBavnZGkrPhVhiVeQFyQWKIIxfGSYrBINBCAJnaBF/9HnxVYcLJ/t8sA/RdaTX0O0XEaBXUmqR55jvhJYeCZNejdmWTLxYORX3l05BhvK5loIwdg2TOdvlcqGxsREVFRVYvnw5tFotwmSVEV8YLncQ/aNBOAmOkQAuDPkxSuMaumnTjAJmTRVgNU/8pkjJ0jWMJaJkBBwOB6qrq2Gz2dDS0oKqqqqrCkrOKaFQCB6PB3q9XiIe12KJSJGK46WiBLq7u7F3716sXMl807e+vj5s3rwZvH7Tpk0oLS2NXxRLxVw5KB4jueT1Emhvb0dNTQ3MZjMOHDgAq9UaT2DiMeLRyZ7j6yHA5l+3bh22bt2KyspK7Nu3D9nZ2XICV57j6CgtSlqQXCsBr9eL1tZW1NfXQ6Ohq7dzJxoaGuTJh186ZUESsQKX4QklWTyBFStWpAwAu92Obdu2obm5GSMjI5IVGHEBmLwki5DgclxRlEYJdHV1oby8HPn5+QkE2OQcdJ2dnWALWCwWrFq1Chs2bEBOTqx4mbwolblCUZZHCXR0dEwa+lz7lZSUoK6uDrW1tSgrK4NOp5ObPn1ZLiMR+zChLCiwdj4fx03qZjKZpIhXqxXvGi+4tg8TGYmb92km1/OmfZzGkfjfPs//BT9GnWOdZjrHAAAAAElFTkSuQmCC"
-        },
-        "240": {
-          "id": 240,
-          "index": 1,
-          "windowId": 1656,
-          "highlighted": false,
-          "active": false,
-          "attention": false,
-          "pinned": true,
-          "status": "complete",
-          "hidden": false,
-          "discarded": false,
-          "incognito": false,
-          "width": 2144,
-          "height": 1099,
-          "lastAccessed": 1693445605451,
-          "audible": false,
-          "autoDiscardable": true,
-          "mutedInfo": {
-            "muted": false
-          },
-          "isInReaderMode": false,
-          "sharingState": {
-            "camera": false,
-            "microphone": false
-          },
-          "successorTabId": -1,
-          "cookieStoreId": "firefox-container-12",
-          "url": "https://cyberdefenders.org/accounts/login/?next=/online-labs/6133c324-7aef-4a75-b1ad-91f92e799ac3/#/labs",
-          "title": "CyberDefenders: Blue Team Training Platform",
-          "favIconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyNC4wLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxMDgwIDEwODAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEwODAgMTA4MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbGw6dXJsKCNTVkdJRF8xXyk7fQ0KCS5zdDF7ZmlsbDp1cmwoI1NWR0lEXzJfKTt9DQo8L3N0eWxlPg0KPGc+DQoJPGxpbmVhckdyYWRpZW50IGlkPSJTVkdJRF8xXyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIyNDUuNzQ4IiB5MT0iODY0LjU2OTYiIHgyPSI5MzAuMjI2NSIgeTI9Ijg2NC41Njk2Ij4NCgkJPHN0b3AgIG9mZnNldD0iNC4wMDAwMDBlLTAyIiBzdHlsZT0ic3RvcC1jb2xvcjojMTYyRDZGIi8+DQoJCTxzdG9wICBvZmZzZXQ9IjAuOTEiIHN0eWxlPSJzdG9wLWNvbG9yOiMzMjVERTciLz4NCgk8L2xpbmVhckdyYWRpZW50Pg0KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik04MzcsNzc1LjRDODMxLjQsODkyLjgsNzM0LjgsOTc3LDYwNi4yLDk3N0gzMzkuM1Y3MTQuNmwtOTMuNi00MS4zdjM4Mi41aDM2MC40YzE4Ni4zLDAsMzI0LTEyNy40LDMyNC0yOTUuNQ0KCQljMC0yLjQtMC4zLTQuNi0wLjQtN0M5MDIuMyw3NjMuNiw4NzEuMiw3NzEsODM3LDc3NS40eiIvPg0KCTxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHSURfMl8iIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMjcuNTUxMiIgeTE9IjM1OS4wOTQ2IiB4Mj0iMTA1Mi40NDg5IiB5Mj0iMzU5LjA5NDYiPg0KCQk8c3RvcCAgb2Zmc2V0PSI0LjAwMDAwMGUtMDIiIHN0eWxlPSJzdG9wLWNvbG9yOiMxNjJENkYiLz4NCgkJPHN0b3AgIG9mZnNldD0iMC45MSIgc3R5bGU9InN0b3AtY29sb3I6IzMyNURFNyIvPg0KCTwvbGluZWFyR3JhZGllbnQ+DQoJPHBhdGggY2xhc3M9InN0MSIgZD0iTTg5NS40LDM2Ny42QzgyMy45LDIwOS45LDc4Ni4xLDY3LDY4Ny4zLDMzLjRjLTU3LjQtMTkuNS04NS43LTMuNy0xMTMuNCw5LjRjLTguNSw0LTEwLjMsMTUuMy0zLDIxLjQNCgkJYzE1LjcsMTMuMiwzNC43LDI5LjksNTcuNiw1MC43QzU0NC44LDY2LjIsMzEzLjYtNi43LDI5MCw4MS43Yy0yMS4zLDc5LjgtNTYuOCwxOTcuNi01Ni44LDE5Ny42UzUwLjQsMjYwLjQsMjkuNCwzMzguMQ0KCQljLTIxLDc3LjgsMTQyLjksMjI3LDQxNC4xLDMwNi45YzI3MS4yLDc5LjksNDgxLjMsNTguOSw1NzEuNy0zOS45QzExMDUuNiw1MDYuMywxMDE4LjIsMzY5LjksODk1LjQsMzY3LjZ6IE04NDEuNiwzNjguOA0KCQljLTIwLjgsMjAuNS04OSw3Mi4yLTIzOC43LDYxLjVDNDQyLjYsNDE4LjgsMzEwLDMyMy43LDI3Ni41LDI5Ny43Yy01LjItNC03LjQtMTAuNC01LjgtMTYuOGMyLTgsNS41LTIwLjQsMTAuNi0zNi4yDQoJCWMzLjItOS44LDE0LjYtMTQuNSwyMy42LTkuNEMzNzIuNywyNzQsNDgxLDMzMSw1OTYuNCwzMzguNmMxMDMuMSw2LjgsMTY1LjEtMjMuMiwyMDUuMy00NS42YzguNi00LjgsMTkuMy0wLjksMjMsOC4ybDIwLjQsNDkuOQ0KCQlDODQ3LjUsMzU3LjIsODQ2LjIsMzY0LjIsODQxLjYsMzY4Ljh6Ii8+DQo8L2c+DQo8L3N2Zz4NCg=="
-        },
-        "266": {
-          "id": 266,
-          "index": 2,
-          "windowId": 1656,
-          "highlighted": false,
-          "active": false,
-          "attention": false,
-          "pinned": true,
-          "status": "complete",
-          "hidden": false,
-          "discarded": false,
-          "incognito": false,
-          "width": 2144,
-          "height": 1099,
-          "lastAccessed": 1693445626632,
+          "lastAccessed": 1694458556547,
           "audible": false,
           "autoDiscardable": true,
           "mutedInfo": {
@@ -2137,16 +1968,47 @@
           },
           "successorTabId": -1,
           "cookieStoreId": "firefox-container-12",
+          "url": "https://cyberdefenders.org/",
+          "title": "CyberDefenders: Blue Team Training Platform",
+          "favIconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyNC4wLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxMDgwIDEwODAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEwODAgMTA4MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbGw6dXJsKCNTVkdJRF8xXyk7fQ0KCS5zdDF7ZmlsbDp1cmwoI1NWR0lEXzJfKTt9DQo8L3N0eWxlPg0KPGc+DQoJPGxpbmVhckdyYWRpZW50IGlkPSJTVkdJRF8xXyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIyNDUuNzQ4IiB5MT0iODY0LjU2OTYiIHgyPSI5MzAuMjI2NSIgeTI9Ijg2NC41Njk2Ij4NCgkJPHN0b3AgIG9mZnNldD0iNC4wMDAwMDBlLTAyIiBzdHlsZT0ic3RvcC1jb2xvcjojMTYyRDZGIi8+DQoJCTxzdG9wICBvZmZzZXQ9IjAuOTEiIHN0eWxlPSJzdG9wLWNvbG9yOiMzMjVERTciLz4NCgk8L2xpbmVhckdyYWRpZW50Pg0KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik04MzcsNzc1LjRDODMxLjQsODkyLjgsNzM0LjgsOTc3LDYwNi4yLDk3N0gzMzkuM1Y3MTQuNmwtOTMuNi00MS4zdjM4Mi41aDM2MC40YzE4Ni4zLDAsMzI0LTEyNy40LDMyNC0yOTUuNQ0KCQljMC0yLjQtMC4zLTQuNi0wLjQtN0M5MDIuMyw3NjMuNiw4NzEuMiw3NzEsODM3LDc3NS40eiIvPg0KCTxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHSURfMl8iIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMjcuNTUxMiIgeTE9IjM1OS4wOTQ2IiB4Mj0iMTA1Mi40NDg5IiB5Mj0iMzU5LjA5NDYiPg0KCQk8c3RvcCAgb2Zmc2V0PSI0LjAwMDAwMGUtMDIiIHN0eWxlPSJzdG9wLWNvbG9yOiMxNjJENkYiLz4NCgkJPHN0b3AgIG9mZnNldD0iMC45MSIgc3R5bGU9InN0b3AtY29sb3I6IzMyNURFNyIvPg0KCTwvbGluZWFyR3JhZGllbnQ+DQoJPHBhdGggY2xhc3M9InN0MSIgZD0iTTg5NS40LDM2Ny42QzgyMy45LDIwOS45LDc4Ni4xLDY3LDY4Ny4zLDMzLjRjLTU3LjQtMTkuNS04NS43LTMuNy0xMTMuNCw5LjRjLTguNSw0LTEwLjMsMTUuMy0zLDIxLjQNCgkJYzE1LjcsMTMuMiwzNC43LDI5LjksNTcuNiw1MC43QzU0NC44LDY2LjIsMzEzLjYtNi43LDI5MCw4MS43Yy0yMS4zLDc5LjgtNTYuOCwxOTcuNi01Ni44LDE5Ny42UzUwLjQsMjYwLjQsMjkuNCwzMzguMQ0KCQljLTIxLDc3LjgsMTQyLjksMjI3LDQxNC4xLDMwNi45YzI3MS4yLDc5LjksNDgxLjMsNTguOSw1NzEuNy0zOS45QzExMDUuNiw1MDYuMywxMDE4LjIsMzY5LjksODk1LjQsMzY3LjZ6IE04NDEuNiwzNjguOA0KCQljLTIwLjgsMjAuNS04OSw3Mi4yLTIzOC43LDYxLjVDNDQyLjYsNDE4LjgsMzEwLDMyMy43LDI3Ni41LDI5Ny43Yy01LjItNC03LjQtMTAuNC01LjgtMTYuOGMyLTgsNS41LTIwLjQsMTAuNi0zNi4yDQoJCWMzLjItOS44LDE0LjYtMTQuNSwyMy42LTkuNEMzNzIuNywyNzQsNDgxLDMzMSw1OTYuNCwzMzguNmMxMDMuMSw2LjgsMTY1LjEtMjMuMiwyMDUuMy00NS42YzguNi00LjgsMTkuMy0wLjksMjMsOC4ybDIwLjQsNDkuOQ0KCQlDODQ3LjUsMzU3LjIsODQ2LjIsMzY0LjIsODQxLjYsMzY4Ljh6Ii8+DQo8L2c+DQo8L3N2Zz4NCg=="
+        },
+        "93": {
+          "id": 93,
+          "index": 1,
+          "windowId": 586,
+          "highlighted": false,
+          "active": false,
+          "attention": false,
+          "pinned": true,
+          "status": "complete",
+          "hidden": false,
+          "discarded": false,
+          "incognito": false,
+          "width": 2144,
+          "height": 1099,
+          "lastAccessed": 1694458557456,
+          "audible": false,
+          "autoDiscardable": true,
+          "mutedInfo": {
+            "muted": false
+          },
+          "isInReaderMode": false,
+          "sharingState": {
+            "camera": false,
+            "microphone": false
+          },
+          "successorTabId": -1,
+          "cookieStoreId": "firefox-container-12",
           "url": "https://hackthebox.com/",
           "title": "Hack The Box: Hacking Training For The Best | Individuals & Companies",
-          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABDlBMVEUAAACg8ACh8ACh8ACq/wCg8ACi/gCg8AD//wCg8ACg8ACg8ACw/gCh8QCg8ACg8ACi8QCg8ACg8ACg8AC//wCg8ACg8ACg8QCq/wCg8ACl8ACh8ACg8QCj8gCh8ACg8ACg8QC//wCg8ACg8ACi8QCg8ACg8ACg8ACp/gCg8ACh8gCi8wCg8QCg8QCh8gCm9QCk9ACg8QCq/wCg8ACg8ACg8ACf7wCg8ACy/wCg7wCh8ACg8QCg8QCg8ACg8AC2/wCh8QCn9gCh8gCg8ACg8ACg8ACi8ACi8wCp8gCg8ACk8wCh8QDM/wCg8ACh8QCj8gCg9QCh8ACp8ACi9wCi8gCi8gCg8QCj/wCv/wCg8AAcKw8rAAAAWnRSTlMA/4urA8ML/gH8+fcNc/L9JvTXkAR/49sM7BE0XT1X65IIxq1L5sfwCc07Fm+mUxowZgbQs7CZaArdoUhhI58Hlh0p4MLpakAVvC3JBXy5Khu+EiF2UIIOEKRLbNB8AAABpUlEQVR4nLWT1XbDMAyG45TSNCkzMzOtuOJWGvPe/0UmuenqNNnldE4bW/piWb8UTm1SvC5duFjzxjIuVybm/SMsOJMhAhZKOgW9eEUOQNThgL+AXNGEB/G8lYbuV/Cw5uMDdfJyxoaHe5ycsL+2w9KWKTNXcXoS4BO7G+prj3cibBNAHy1Ypck70eDphfCt24L5qkdPC/mQr8HmfOUxj/WKbnisLddSCfQiF9DLnwEiPozvTuHUuwlLYgALpiz0H6lAQuTbBVv0/QLpJJZBVm8g0OIjh+tEMs0Ahnash0KAQJMOnmbrxdoGFjBywWgJVRaxJEcJSjZeABzX8PnpzYiflqwFOKE5gjy2UZPeVQcACQ+EHMLHtS5gNhFiMv8L0E1pgVSXAezzJb35GRCWc+jnEZighkN5ywJbeXhud5FqaE3XiyegWE9DNy3u6qfS3ieqoasWkdaErKVIDbt5w0/P8wEa4gTlPG5C3B7spr0WUSpTbJZ9xlOhk/gTd1mlLsaUScVR6bS+NGG0KU/Hxu9b6IZRvLLBHurvdb9MxaTsZqb2/ACw3yZKgNjPTgAAAABJRU5ErkJggg=="
+          "favIconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABDlBMVEUAAACg8ACh8ACh8ACq/wCg8ACi/gCg8AD//wCg8ACg8ACg8ACw/gCh8QCg8ACg8ACg8ACg8AC//wCg8ACg8ACi8QCg8ACg8QCq/wCg8ACl8ACh8ACg8QCj8gCg8ACg8QCh8AC//wCg8ACg8ACh8gCg8ACg8ACg8ACp/gCi8QCg8ACh8gCi8wCg8QCg8QCm9QCk9ACg8QCq/wCg8ACg8ACg8ACg8ACf7wCg8ACg8ACg7wC2/wCh8ACg8ACg8QCg8ACy/wCh8QCn9gCh8gCg8ACg8ACg8ACi8ACi8wCp8gCk8wCh8QDM/wCi8gCj8gCg9QCh8ACp8ACi9wCg8ACi8gCg8QCj/wCv/wCh8QCg8AAiKfIEAAAAWnRSTlMA/4urA8ML/gH8+fcNc/L99NcEkH8m49sM7BE0XT3rklcIxq1T5sfwCUvNOxZvphowZgbQs7AjmWi83QehR2GfCpYdKeDC6WpAFS3JBXYqG74SIXxQgg4QuaROuPRNAAABpUlEQVR4nLWT1XbDMAyG45TSNCkzMzOuuOJWGPPe/0UmuenqNNnldE4bW/piWb8UTm1SMitduFhzxzJOZybm/iMs+BIhAhZK+AS9eFUOQNThgL+AXNWE58m8lYZe1/Cw5pNzdfJKxoaHe3ycsL+2w9KWqTBX8Xni4BO7W+prT4cibONAHy1Yo8k70eDphfCty4L5akdPC/mQt8HmfOExj/WKbnisLddSCfQsF9DLnwEifk3vTuHUmwlLYgALpiwMHqhAQuTbCVv0/QLpBJZB1vcg0PI9h+t4Is0Ahnash0KAQLMOnmbrxdoGFjBywWgZVRaxJEcZSjZeABzX8PrpzYiflqwFOKE5gTy2SZPeVQcACQ+EHMLHtS5gNhFiMv8L0E1pgVSXAeyLFb35GRBWC+jnEZihhiN5xwI7eXRud5FqaE1niyegmE1DNy2u2ofS3keqobMekTaEbKRIHbt5w/fP8wEa4gTlPC5CXB7spr0eUSpTbFx6wlOhk/gThyWlLsaUScVR6bQ+NWG0Pk/Hxu9d6oZRvIrBHhrsdb9MxaTSdqz2/AD5cSZJ+rZRtAAAAABJRU5ErkJggg=="
         }
       }
     },
     "windowsNumber": 1,
     "windowsInfo": {
-      "1656": {
-        "id": 1656,
+      "586": {
+        "id": 586,
         "focused": true,
         "top": 22,
         "left": 4288,
@@ -2159,14 +2021,14 @@
         "title": "Tab Session Manager - Session list — Mozilla Firefox"
       }
     },
-    "tabsNumber": 3,
+    "tabsNumber": 2,
     "name": "CYBER",
-    "date": 1693445676887,
-    "lastEditedTime": 1693446029214,
+    "date": 1694458563717,
+    "lastEditedTime": 1694458563731,
     "tag": [
       "Arch"
     ],
-    "sessionStartTime": 1693419662161,
+    "sessionStartTime": 1694453700463,
     "id": "e21f88de-2527-4cde-a5cb-2bcf39b4965c"
   },
   {
