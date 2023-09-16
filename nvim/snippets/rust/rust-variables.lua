@@ -90,11 +90,20 @@ ls.add_snippets("rust", {
           i(1),
           t"mut ",
           i(2, "hash"),
-          t": HashMap<",
-          i(3, "key"),
-          t", ",
-          i(4, "value"),
-          t"> = HashMap::new();",
+          c(3, {
+            -- Type
+            sn(nil, {i(1), t": HashMap<", i(2, "T"), t", ", i(3, "T"), t"> "}),
+            -- Custom typ
+            sn(nil, {i(1), t" "}),
+          }),
+          t"= HashMap::",
+          c(4, {
+            -- New
+            sn(nil, {i(1), t"new()"}),
+            -- With capacity
+            sn(nil, {i(1), t"with_capacity(", i(2), t")"}),
+          }),
+          t";"
         }),
         -- Integer
         sn(nil, {
@@ -155,9 +164,13 @@ ls.add_snippets("rust", {
         sn(nil, {
           i(1),
           i(2, "vec"),
-          t": Vec<",
-          i(3, "T"),
-          t"> = ",
+          c(3, {
+            -- type
+            sn(nil, {i(1), t": Vec<", i(2, "T"), t">"}),
+            -- no type
+            sn(nil, {i(1)}),
+          }),
+          t" = ",
           c(4, {
             -- empty
             sn(nil, {i(1), t"Vec::new();"}),

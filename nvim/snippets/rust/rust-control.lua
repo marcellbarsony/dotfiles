@@ -81,16 +81,22 @@ ls.add_snippets("rust", {
     "if let",
     fmt("if let {} {{\n" ..
       "\t{}\n"..
-      "}}\n"..
-      "{}"
+      "}}{}\n"
       , {
       c(1, {
-        -- Some
-        sn(nil, {i(1), t'Some(', i(2, "x"), t') = ', i(3, "var") }),
-        -- None
-        sn(nil, {i(1), t'None(', i(2, "x"), t') = ', i(3, "var") }),
-        -- Err
-        sn(nil, {i(1), t'Err(', i(2, "e"), t') = ', i(3, "var") }),
+        -- Custom
+        sn(nil, {i(1),  i(2, "pattern"), t" = ", i(3, "var") }),
+        -- Option
+        sn(nil, {i(1), t"Some(", i(2), t") = ", i(3, "var") }),
+        sn(nil, {i(1), t"None(", i(2), t") = ", i(3, "var") }),
+        -- Error
+        sn(nil, {i(1), t"Ok(", i(2), t") = ", i(3, "var") }),
+        sn(nil, {i(1), t"Err(", i(2), t") = ", i(3, "var") }),
+        -- Boolean
+        sn(nil, {i(1), t"true = ", i(2, "var") }),
+        sn(nil, {i(1), t"false = ", i(2, "var") }),
+        -- Tuple
+        sn(nil, {i(1), t"(", i(2, "foo, bar"), t") = ", i(3, "var") }),
       }),
       i(2, "// ..."),
       i(3),
