@@ -22,7 +22,7 @@
     {"userContextId":11,"public":true,"icon":"circle","color":"turquoise","name":"Browsing"},
     {"userContextId":12,"public":true,"icon":"fingerprint","color":"turquoise","name":"Cyber"},
     {"userContextId":13,"public":true,"icon":"dollar","color":"green","name":"Finance"},
-    {"userContextId":14,"public":true,"icon":"circle","color":"toolbar","name":"Google"},
+    {"userContextId":14,"public":true,"icon":"circle","color":"yellow","name":"Google"},
     {"userContextId":15,"public":true,"icon":"circle","color":"orange","name":"Gov"},
     {"userContextId":16,"public":true,"icon":"circle","color":"blue","name":"Meta"},
     {"userContextId":17,"public":true,"icon":"circle","color":"blue","name":"Microsoft"},

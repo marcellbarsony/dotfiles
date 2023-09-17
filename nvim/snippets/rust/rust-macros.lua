@@ -35,20 +35,20 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("rust", {
-  s( -- println!
-    "println!",
-    fmt("println!({});" ..
-      "\n{}"
-      , {
-      c(1, {
-        -- String
-        sn(nil, {i(1), t'"', i(2, "Hello, world!"), t'"'}),
-        -- String + Variable
-        sn(nil, {i(1), t'"', i(2, "Hello, world!"), t'", ', i(3, "foo")}),
-      }),
-      i(2),
-      }
-    )
-  ),
+  -- s( -- println!
+  --   "println!",
+  --   fmt("println!({});" ..
+  --     "\n{}"
+  --     , {
+  --     c(1, {
+  --       -- String
+  --       sn(nil, {i(1), t'"', i(2, "Hello, world!"), t'"'}),
+  --       -- String + Variable
+  --       sn(nil, {i(1), t'"', i(2, "Hello, world!"), t'", ', i(3, "foo")}),
+  --     }),
+  --     i(2),
+  --     }
+  --   )
+  -- ),
 })
 -- }}}

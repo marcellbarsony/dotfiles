@@ -1,0 +1,156 @@
+{
+  "firefox-container-8": [
+    {
+      "expression": "*.bitwarden.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-8",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "spxSRJXPt"
+    }
+  ],
+  "firefox-container-12": [
+    {
+      "expression": "*.cyberdefenders.org",
+      "listType": "WHITE",
+      "storeId": "firefox-container-12",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "ARXQW7kmB"
+    },
+    {
+      "expression": "*.hackthebox.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-12",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "EH7bARkcd"
+    }
+  ],
+  "firefox-container-14": [
+    {
+      "expression": "*.google.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-14",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "oQkaoHtEi"
+    },
+    {
+      "expression": "*.youtube.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-14",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "tZ7_5kwcZ"
+    }
+  ],
+  "firefox-container-15": [
+    {
+      "expression": "*.gov.hu",
+      "listType": "GREY",
+      "storeId": "firefox-container-15",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "EYNFnWYUM"
+    }
+  ],
+  "firefox-container-16": [
+    {
+      "expression": "*.facebook.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-16",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "9b1vYViAt"
+    },
+    {
+      "expression": "*.instagram.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-16",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "petJsm_Qy"
+    }
+  ],
+  "firefox-container-17": [
+    {
+      "expression": "*.github.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-17",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "tWRNEajr0"
+    },
+    {
+      "expression": "*.github.io",
+      "listType": "WHITE",
+      "storeId": "firefox-container-17",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "0YbNvqfdK"
+    },
+    {
+      "expression": "*.linkedin.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-17",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "4oTB2z2MB"
+    },
+    {
+      "expression": "*.microsoft.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-17",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "SoxjLSKV-"
+    },
+    {
+      "expression": "*.openai.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-17",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "Kjw7dyU4s"
+    }
+  ],
+  "firefox-container-18": [
+    {
+      "expression": "*.proton.me",
+      "listType": "WHITE",
+      "storeId": "firefox-container-18",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "8ufB0SIsF"
+    },
+    {
+      "expression": "*.protonvpn.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-18",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "FBDIifwEi"
+    }
+  ],
+  "firefox-container-19": [
+    {
+      "expression": "*.reddit.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-19",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "oqar0wTkS"
+    }
+  ],
+  "firefox-container-20": [
+    {
+      "expression": "*.spotify.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-20",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "U_tu3Vkcu"
+    }
+  ]
+}
