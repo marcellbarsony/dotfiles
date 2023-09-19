@@ -130,6 +130,19 @@ ls.add_snippets("rust", {
           }),
           t";",
         }),
+        -- PathBuf
+        sn(nil, {
+          i(1),
+          i(2, "path"),
+          t": PathBuf = ",
+          c(3, {
+            -- New
+            sn(nil, {i(1), t"PathBuf::new()"}),
+            -- From
+            sn(nil, {i(1), t'PathBuf::from("', i(2, "/foo/bar.baz"), t'")'}),
+          }),
+          t";",
+        }),
         -- Strings
         sn(nil, {
           i(1),
