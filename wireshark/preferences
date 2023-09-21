@@ -1,4 +1,4 @@
-# Configuration file for Wireshark 4.0.6.
+# Configuration file for Wireshark 4.0.8.
 #
 # This file is regenerated each time preferences are saved within
 # Wireshark. Making manual changes should be safe, however.
@@ -266,6 +266,7 @@ gui.column.format:
 	"Port [DST]", "%Cus:tcp.dstport:0:R",
 	"Protocol", "%p",
 	"Length", "%L",
+	"ID", "%Cus:ip.id:0:R",
 	"Info", "%i"
 
 ####### User Interface: Font ########
@@ -441,7 +442,7 @@ capture.devices_pmode: wlp1s0(1),any(1),lo(1),bluetooth0(1),bluetooth-monitor(1)
 
 # Remote capture filter
 # A string
-#extcap.ciscodump.remotefilter: deny tcp host fe80::89fc:3f5b:9e3:ac4b any eq 22, deny tcp any eq 22 host fe80::89fc:3f5b:9e3:ac4b, deny tcp host 192.168.1.34 any eq 22, deny tcp any eq 22 host 192.168.1.34, permit ip any any
+#extcap.ciscodump.remotefilter: deny tcp host fe80::b3f3:63fa:419a:bd82 any eq 22, deny tcp any eq 22 host fe80::b3f3:63fa:419a:bd82, deny tcp host 2001:4c4e:1e85:9f00:4de9:680f:dbd6:eb8d any eq 22, deny tcp any eq 22 host 2001:4c4e:1e85:9f00:4de9:680f:dbd6:eb8d, deny tcp host 192.168.1.40 any eq 22, deny tcp any eq 22 host 192.168.1.40, permit ip any any
 
 # Packets to capture
 # A string
@@ -561,7 +562,7 @@ capture.devices_pmode: wlp1s0(1),any(1),lo(1),bluetooth0(1),bluetooth-monitor(1)
 
 # Remote capture filter
 # A string
-#extcap.sshdump.remotefilter: not ((host fe80::89fc:3f5b:9e3:ac4b or host 192.168.1.34) and port 22)
+#extcap.sshdump.remotefilter: not ((host fe80::b3f3:63fa:419a:bd82 or host 2001:4c4e:1e85:9f00:4de9:680f:dbd6:eb8d or host 192.168.1.40) and port 22)
 
 # Packets to capture
 # A string

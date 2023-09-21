@@ -75,11 +75,11 @@ gui.allow_hover_selection: TRUE
 
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 1264
+gui.geometry_main_upper_pane: 1312
 
 # Main window middle pane size.
 # Decimal number.
-gui.geometry_main_lower_pane: 733
+gui.geometry_main_lower_pane: 571
 
 # Packet list column pixel widths.
 # Each pair of strings consists of a column format and its pixel width.
@@ -87,8 +87,8 @@ column.width:
         %m, 67,
         %t, 92:L,
         %Tt, 92,
-        %s, 77:L,
-        %d, 77:L,
+        %s, 122:L,
+        %d, 206:L,
         "%Cus:tcp.srcport", 0,
         "%Cus:tcp.dstport", 0,
         %L, 61,
@@ -119,7 +119,7 @@ gui.endpoint_tabs_columns:
 gui.rlc_pdus_from_mac_frames: FALSE
 
 # Last directory navigated to in File Open dialog.
-gui.fileopen_remembered_dir: /home/marci/Downloads/
+gui.fileopen_remembered_dir: /home/marci/Downloads/udemy-wireshark/
 
 # Additional Toolbars shown
 # List of additional toolbars to show.
