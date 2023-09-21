@@ -34,7 +34,7 @@ obs-studio/basic/
 obs-studio/logs/
 obs-studio/plugin_config/
 obs-studio/profiler_data/
-obs-studio/global.ini
+#obs-studio/global.ini
 
 # Pikaur
 pikaur.conf
