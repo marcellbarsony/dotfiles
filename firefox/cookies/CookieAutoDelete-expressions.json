@@ -6,7 +6,8 @@
       "storeId": "firefox-container-8",
       "cleanSiteData": [],
       "cookieNames": [],
-      "id": "spxSRJXPt"
+      "id": "nsg5ItcbT",
+      "cleanAllCookies": true
     }
   ],
   "firefox-container-12": [
@@ -34,7 +35,8 @@
       "storeId": "firefox-container-14",
       "cleanSiteData": [],
       "cookieNames": [],
-      "id": "oQkaoHtEi"
+      "id": "HkFo0KYS-",
+      "cleanAllCookies": true
     },
     {
       "expression": "*.youtube.com",
@@ -42,7 +44,8 @@
       "storeId": "firefox-container-14",
       "cleanSiteData": [],
       "cookieNames": [],
-      "id": "tZ7_5kwcZ"
+      "id": "FrdJOOasG",
+      "cleanAllCookies": true
     }
   ],
   "firefox-container-15": [
@@ -53,6 +56,14 @@
       "cleanSiteData": [],
       "cookieNames": [],
       "id": "EYNFnWYUM"
+    },
+    {
+      "expression": "magyarorszag.hu",
+      "listType": "GREY",
+      "storeId": "firefox-container-15",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "OdHT4DmZA"
     }
   ],
   "firefox-container-16": [
@@ -113,6 +124,14 @@
       "cleanSiteData": [],
       "cookieNames": [],
       "id": "Kjw7dyU4s"
+    },
+    {
+      "expression": "*.udemy.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-17",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "dBTzoLWso"
     }
   ],
   "firefox-container-18": [

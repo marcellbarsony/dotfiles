@@ -19,6 +19,9 @@ gh/
 # GTK
 gtk-3.0/
 
+# Kdenlive
+kdenlive*
+
 # Npm
 npm/_cacache
 npm/_logs
