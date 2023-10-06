@@ -88,7 +88,9 @@ wireplumber/
 
 # Wireshark
 wireshark/recent_common
-wireshark/*/recent
+wireshark/profiles/TCP/recent
+wireshark/profiles/TLS/recent
+wireshark/profiles/Classic/recent
 
 # XDG
 user-dirs.dirs
