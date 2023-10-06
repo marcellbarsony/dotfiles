@@ -21,24 +21,24 @@ keys = [
 
     # Spawn
     Key([mod], "Return", lazy.spawn(terminal), desc="Spawn terminal"),
-    Key([mod],      "b", lazy.spawn(browser), desc="Spawn broswer"),
-    Key([mod],      "d", lazy.spawn(menu), desc="Spawn menu"),
-    Key([mod],      "r", lazy.spawncmd(), desc="Spawn command prompt"),
+    Key([mod], "b", lazy.spawn(browser), desc="Spawn broswer"),
+    Key([mod], "d", lazy.spawn(menu), desc="Spawn menu"),
+    Key([mod], "r", lazy.spawncmd(), desc="Spawn command prompt"),
 
     # Layouts
-    Key([mod],          "Tab", lazy.next_layout(), desc="Next layout"),
+    Key([mod], "Tab", lazy.next_layout(), desc="Next layout"),
     Key([mod, "shift"], "Tab", lazy.prev_layout(), desc="Prev layout"),
 
     # Window - Actions
-    Key([mod],          "q", lazy.window.kill(), desc="Kill window"),
-    Key([mod],          "f", lazy.window.toggle_fullscreen(), lazy.hide_show_bar(), desc="Fullscreen"),
+    Key([mod],"q", lazy.window.kill(), desc="Kill window"),
+    Key([mod],"f", lazy.window.toggle_fullscreen(), lazy.hide_show_bar(), desc="Fullscreen"),
     Key([mod, "shift"], "f", lazy.window.toggle_floating(), desc="Floating"),
 
     # Window - Focus
-    Key([mod],     "h", lazy.layout.left(), desc="Focus left"),
-    Key([mod],     "l", lazy.layout.right(), desc="Focus right"),
-    Key([mod],     "j", lazy.layout.down(), desc="Focus down"),
-    Key([mod],     "k", lazy.layout.up(), desc="Focus up"),
+    Key([mod], "h", lazy.layout.left(), desc="Focus left"),
+    Key([mod], "l", lazy.layout.right(), desc="Focus right"),
+    Key([mod], "j", lazy.layout.down(), desc="Focus down"),
+    Key([mod], "k", lazy.layout.up(), desc="Focus up"),
     Key([mod], "space", lazy.layout.next(), desc="Focus next"),
 
     # Window - Move
@@ -52,8 +52,8 @@ keys = [
     Key([mod1], "l", lazy.layout.grow_right(), desc="Grow right"),
     Key([mod1], "j", lazy.layout.grow_down(), desc="Grow down"),
     Key([mod1], "k", lazy.layout.grow_up(), desc="Grow up"),
-    Key([mod],  "m", lazy.layout.toggle_split(), desc="Maximize in split"),
-    Key([mod],  "n", lazy.layout.normalize(), desc="Reset windows"),
+    Key([mod], "m", lazy.layout.toggle_split(), desc="Maximize in split"),
+    Key([mod], "n", lazy.layout.normalize(), desc="Reset windows"),
 
     # Scratchpad
     Key([mod], "i", lazy.group["scratchpad"].dropdown_toggle("term"), desc="Scratchpad"),
@@ -68,8 +68,8 @@ keys = [
     Key([mod, mod1], "j", lazy.function(window_to_previous_screen), lazy.prev_screen(), desc="Move & Focus prev screen"),
     Key([mod, mod1], "k", lazy.function(window_to_next_screen),     lazy.next_screen(), desc="Move & Focus next screen"),
     Key([mod, mod1], "l", lazy.next_screen(), desc="Focus next monitor"),
-    Key([mod],       "w", lazy.to_screen(0),  desc="Focus 1st monitor"),
-    Key([mod],       "e", lazy.to_screen(1),  desc="Focus 2nd monitor"),
-    Key([mod],       "r", lazy.to_screen(2),  desc="Focus 3rd monitor"),
-    Key([mod],       "s", lazy.function(switch_screens)),
+    Key([mod], "w", lazy.to_screen(0),  desc="Focus 1st monitor"),
+    Key([mod], "e", lazy.to_screen(1),  desc="Focus 2nd monitor"),
+    Key([mod], "r", lazy.to_screen(2),  desc="Focus 3rd monitor"),
+    Key([mod], "s", lazy.function(switch_screens)),
 ]

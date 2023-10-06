@@ -244,7 +244,7 @@ screens = [
             ),
             ### NETWORK ###
             widget.Net(
-                format='{down}  {up}',
+                format='{down:.0f}{down_suffix}  {up:.0f}{up_suffix}',
                 foreground=PRIMARY,
                 update_interval=10,
                 use_bits=True,
@@ -580,7 +580,7 @@ screens = [
             ),
             ### NETWORK ###
             widget.Net(
-                format='{down}  {up}',
+                format='{down:.0f}{down_suffix}  {up:.0f}{up_suffix}',
                 foreground=PRIMARY,
                 update_interval=10,
                 use_bits=True,
@@ -916,7 +916,7 @@ screens = [
             ),
             ### NETWORK ###
             widget.Net(
-                format='{down}  {up}',
+                format='{down:.0f}{down_suffix}  {up:.0f}{up_suffix}',
                 foreground=PRIMARY,
                 update_interval=10,
                 use_bits=True,

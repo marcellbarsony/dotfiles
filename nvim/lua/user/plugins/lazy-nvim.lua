@@ -72,7 +72,7 @@ require("lazy").setup({
   'RaafatTurki/hex.nvim',
 
   -- Indent lines
-  'lukas-reineke/indent-blankline.nvim',
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
   -- LSP
   'neovim/nvim-lspconfig',

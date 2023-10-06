@@ -13,11 +13,11 @@ layouts = [
         border_normal = ['#000000'],
         border_normal_stack = ['#000000'],
         border_on_single = False,
-        border_width = 2,
+        border_width = 1,
         fair = False,
         grow_amount = 10,
         insert_position = 1,
-        margin = [5, 5, 5, 5],
+        margin = [3, 3, 3, 3],
         margin_on_single = 0,
         num_columns = 2,
         single_border_width = None,
@@ -39,7 +39,7 @@ layouts = [
         border_normal = PRIMARY,
         border_width = 0,
         margin = [0, 0, 0, 0],
-        only_focused = False
+        only_focused = True
     ),
 
     # MonadTall
@@ -61,17 +61,7 @@ layouts = [
     #layout.Spiral(),
 
     # Stack
-    # layout.Stack(
-    #     autosplit = False,
-    #     border_focus = PRIMARY,
-    #     border_focus_stack = None,
-    #     border_normal = PRIMARY,
-    #     border_normal_stack = None,
-    #     border_width = 1,
-    #     fair = False,
-    #     margin = 3,
-    #     num_stacks = 2
-    # ),
+    #layout.Stack(),
 
     # Tile
     #layout.Tile(),
