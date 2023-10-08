@@ -87,6 +87,7 @@ vlc/
 wireplumber/
 
 # Wireshark
+wireshark/recent
 wireshark/recent_common
 wireshark/profiles/TCP/recent
 wireshark/profiles/TLS/recent
