@@ -31,8 +31,9 @@ export HISTFILE="$XDG_STATE_HOME/zsh/history"
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export ZDOTDIR="$HOME/.config/zsh/"
 export XINITRC="$HOME/.config/x11/"
-export QT_STYLE_OVERRIDE="Adwaita-Dark"
+export QT_QPA_PLATFORMTHEME=qt5ct
 #export KITTY_CONFIG_DIRECTORY="$XDG_CONFIG_HOME/kitty"
+#export QT_STYLE_OVERRIDE="Adwaita-Dark"
 
 # Python
 export PATH="/usr/lib/python3.10/site-packages:$PATH"
@@ -47,7 +48,6 @@ export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export RUST_BACKTRACE=1
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export PATH="$HOME/.local/share/cargo/bin:$PATH"
-#. "/home/marci/.local/share/cargo/env"
 
 # Starship
 export STARSHIP_CONFIG=~/.config/starship/config.toml

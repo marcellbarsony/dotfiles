@@ -20,6 +20,7 @@ gh/
 gtk-3.0/
 
 # Kdenlive
+kdeglobals
 kdenlive*
 
 # Npm

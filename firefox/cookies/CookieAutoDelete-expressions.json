@@ -86,6 +86,14 @@
   ],
   "firefox-container-17": [
     {
+      "expression": "*.azure.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-17",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "TGtcFBlUe"
+    },
+    {
       "expression": "*.github.com",
       "listType": "WHITE",
       "storeId": "firefox-container-17",
