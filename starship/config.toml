@@ -10,7 +10,7 @@ symbol = '󰠅 '
 style = 'blue bold'
 
 [c]
-format = 'via [$symbol($version(-$name))]($style)'
+format = 'via [$symbol($version(-$name))]($style) '
 symbol = ' '
 
 [character]
@@ -40,7 +40,8 @@ tag_disabled = false
 style = 'bold purple'
 
 [git_status]
-format = '\[($all_status$ahead_behind($style))\] '
+#format = '($all_status$ahead_behind($style)) '
+format = '([\[$all_status$ahead_behind\]]($style) )'
 conflicted = '='
 ahead = '⇡'
 behind = '⇣'
@@ -61,7 +62,7 @@ ssh_symbol = ' '
 disabled = false
 
 [lua]
-format = 'via [$symbol($version)]($style)'
+format = 'via [$symbol($version)]($style) '
 symbol = ' '
 style = 'bold blue'
 
@@ -74,14 +75,14 @@ style = 'bold green'
 disabled = true
 
 [python]
-format = 'via [${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)'
+format = 'via [${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
 symbol = ' '
 
 [rust]
-format = 'via [$symbol($version)]($style)'
+format = 'via [$symbol($version)]($style) '
 symbol = ' '
 version_format = "v${raw}"
 
 [sudo]
 disabled = false
-format = '[as sudo]($style) '
+format = 'as [su]($style) '
