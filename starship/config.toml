@@ -1,144 +1,46 @@
-format = """
-$username\
-$hostname\
-$localip\
-$shlvl\
-$singularity\
-$kubernetes\
-$directory\
-$vcsh\
-$fossil_branch\
-$git_branch\
-$git_commit\
-$git_state\
-$git_metrics\
-$git_status\
-$hg_branch\
-$pijul_channel\
-$docker_context\
-$package\
-$c\
-$cmake\
-$cobol\
-$daml\
-$dart\
-$deno\
-$dotnet\
-$elixir\
-$elm\
-$erlang\
-$fennel\
-$golang\
-$guix_shell\
-$haskell\
-$haxe\
-$helm\
-$java\
-$julia\
-$kotlin\
-$gradle\
-$lua\
-$nim\
-$nodejs\
-$ocaml\
-$opa\
-$perl\
-$php\
-$pulumi\
-$purescript\
-$python\
-$raku\
-$rlang\
-$red\
-$ruby\
-$rust\
-$scala\
-$swift\
-$terraform\
-$vlang\
-$vagrant\
-$zig\
-$buf\
-$nix_shell\
-$conda\
-$meson\
-$spack\
-$memory_usage\
-$aws\
-$gcloud\
-$openstack\
-$azure\
-$env_var\
-$crystal\
-$custom\
-$sudo\
-$cmd_duration\
-$line_break\
-$jobs\
-$battery\
-$status\
-$os\
-$container\
-$shell\
-$character"""
+# Prompt
+add_newline = false
+format = """$direcotry$character"""
+right_format = """$all"""
 
-# Right prompt
-right_format="""
-$time\
-"""
-#$git_branch\
-#$git_state\
-#$git_metrics\
-#$git_status\
-
-add_newline = true
-
-[aws]
-symbol = " "
-format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
-
-[buf]
-symbol = " "
+# Plugins
+[azure]
+format = 'via [$symbol($subscription)]($style) '
+symbol = '󰠅 '
+style = 'blue bold'
 
 [c]
-symbol = " "
-format = '\[[$symbol($version(-$name))]($style)\]'
+format = 'via [$symbol($version(-$name))]($style)'
+symbol = ' '
 
 [character]
 success_symbol = '[](bold green)'
+error_symbol = '[](bold red)'
 
 [cmd_duration]
 min_time = 2_000
-disabled = false
-format = '\[[$duration]($style)\]'
-
-[cmake]
-symbol = "󰔶 "
-format = '\[[$symbol($version)]($style)\]'
-
-[conda]
-symbol = " "
-format = '\[[$symbol$environment]($style)\]'
+format = 'took [$duration]($style) '
 
 [directory]
-read_only = " "
-
-[docker_context]
-symbol = "󰡨 "
-
-[dotnet]
-symbol = " "
-format = '\[[$symbol($version)(🎯 $tfm)]($style)\]'
-
-[fill]
-symbol = " "
+truncation_symbol = '../'
+truncation_length = 3
+truncate_to_repo = false
+read_only = ' '
+read_only_style = 'red'
 
 [git_branch]
 always_show_remote = true
-symbol = " "
-format = '\[[$symbol$branch]($style)\] '
+format = 'on [$symbol$branch]($style) '
+symbol = ' '
+style = 'bold purple'
+
+[git_commit]
+format = 'via [$hash$tag]($style)\] '
+tag_disabled = false
+style = 'bold purple'
 
 [git_status]
+format = '\[($all_status$ahead_behind($style))\] '
 conflicted = '='
 ahead = '⇡'
 behind = '⇣'
@@ -150,91 +52,74 @@ modified = '!'
 staged = '+'
 renamed = ''
 deleted = '✘'
-style = 'bold white'
-
-[golang]
-symbol = " "
+style = 'bold purple'
 
 [hostname]
-ssh_symbol = " "
+ssh_symbol = ' '
 
 [line_break]
 disabled = false
 
 [lua]
-symbol = " "
-format = '\[[$symbol($version)]($style)\]'
-
-[memory_usage]
-symbol = "󰍛 "
-format = '\[$symbol[$ram( | $swap)]($style)\]'
+format = 'via [$symbol($version)]($style)'
+symbol = ' '
+style = 'bold blue'
 
 [nodejs]
-symbol = " "
-format = '\[[$symbol($version)]($style)\]'
+symbol = ' '
+format = 'via [$symbol($version)]($style) '
+style = 'bold green'
 
 [os.symbols]
-Alpaquita = " "
-Alpine = " "
-Amazon = " "
-Android = " "
-Arch = " "
-Artix = " "
-CentOS = " "
-Debian = " "
-DragonFly = " "
-Emscripten = " "
-EndeavourOS = " "
-Fedora = " "
-FreeBSD = " "
-Garuda = "󰛓 "
-Gentoo = " "
-HardenedBSD = "󰞌 "
-Illumos = "󰈸 "
-Linux = " "
-Mabox = " "
-Macos = " "
-Manjaro = " "
-Mariner = " "
-MidnightBSD = " "
-Mint = " "
-NetBSD = " "
-NixOS = " "
-OpenBSD = "󰈺 "
-openSUSE = " "
-OracleLinux = "󰌷 "
-Pop = " "
-Raspbian = " "
-Redhat = " "
-RedHatEnterprise = " "
-Redox = "󰀘 "
-Solus = "󰠳 "
-SUSE = " "
-Ubuntu = " "
-Unknown = " "
-Windows = "󰍲 "
-
-[os]
-format = '\[[$symbol]($style)\]'
-
-[package]
-symbol = "󰏗 "
-format = '\[[$symbol$version]($style)\]'
+Alpaquita = ' '
+Alpine = ' '
+Amazon = ' '
+Android = ' '
+Arch = ' '
+Artix = ' '
+CentOS = ' '
+Debian = ' '
+DragonFly = ' '
+Emscripten = ' '
+EndeavourOS = ' '
+Fedora = ' '
+FreeBSD = ' '
+Garuda = '󰛓 '
+Gentoo = ' '
+HardenedBSD = '󰞌 '
+Illumos = '󰈸 '
+Linux = ' '
+Mabox = ' '
+Macos = ' '
+Manjaro = ' '
+Mariner = ' '
+MidnightBSD = ' '
+Mint = ' '
+NetBSD = ' '
+NixOS = ' '
+OpenBSD = '󰈺 '
+openSUSE = ' '
+OracleLinux = '󰌷 '
+Pop = ' '
+Raspbian = ' '
+Redhat = ' '
+RedHatEnterprise = ' '
+Redox = '󰀘 '
+Solus = '󰠳 '
+SUSE = ' '
+Ubuntu = ' '
+Unknown = ' '
+Windows = '󰍲 '
 
 [python]
+format = 'via [${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)'
 symbol = " "
-format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
 
 [rust]
+format = 'via [$symbol($version)]($style)'
 symbol = " "
 version_format = "v${raw}"
-format = '\[[$symbol($version)]($style)\]'
 
 [sudo]
-format = '\[[as $symbol]($style)\]'
-
-#[time]
-#format = '[$time]($style) '
-#disabled = false
-#style = 'blue'
-#time_format = '%I:%M%p'
+disabled = false
+format = '[as sudo]($style) '
