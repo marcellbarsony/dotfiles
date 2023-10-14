@@ -62,4 +62,5 @@ require('lualine').setup {
   -- Extensions
   -- https://github.com/nvim-lualine/lualine.nvim#extensions
   extensions = {}
+
 }

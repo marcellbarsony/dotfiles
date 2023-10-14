@@ -1,6 +1,6 @@
 # Prompt
 add_newline = false
-format = """$direcotry$character"""
+format = """$character"""
 right_format = """$all"""
 
 # Plugins
@@ -70,54 +70,16 @@ symbol = ' '
 format = 'via [$symbol($version)]($style) '
 style = 'bold green'
 
-[os.symbols]
-Alpaquita = ' '
-Alpine = ' '
-Amazon = ' '
-Android = ' '
-Arch = ' '
-Artix = ' '
-CentOS = ' '
-Debian = ' '
-DragonFly = ' '
-Emscripten = ' '
-EndeavourOS = ' '
-Fedora = ' '
-FreeBSD = ' '
-Garuda = '󰛓 '
-Gentoo = ' '
-HardenedBSD = '󰞌 '
-Illumos = '󰈸 '
-Linux = ' '
-Mabox = ' '
-Macos = ' '
-Manjaro = ' '
-Mariner = ' '
-MidnightBSD = ' '
-Mint = ' '
-NetBSD = ' '
-NixOS = ' '
-OpenBSD = '󰈺 '
-openSUSE = ' '
-OracleLinux = '󰌷 '
-Pop = ' '
-Raspbian = ' '
-Redhat = ' '
-RedHatEnterprise = ' '
-Redox = '󰀘 '
-Solus = '󰠳 '
-SUSE = ' '
-Ubuntu = ' '
-Unknown = ' '
-Windows = '󰍲 '
+[package]
+disabled = true
 
 [python]
 format = 'via [${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)'
-symbol = " "
+symbol = ' '
 
 [rust]
 format = 'via [$symbol($version)]($style)'
-symbol = " "
+symbol = ' '
 version_format = "v${raw}"
 
 [sudo]

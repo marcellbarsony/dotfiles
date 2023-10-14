@@ -8,7 +8,7 @@ require 'hex'.setup {
 
   -- cli command used to assemble from hex data
   assemble_cmd = 'hx -r',
-  
+
   -- function that runs on BufReadPre to determine if it's binary or not
   is_buf_binary_pre_read = function()
     -- logic that determines if a buffer contains binary data or not
@@ -20,4 +20,5 @@ require 'hex'.setup {
     -- logic that determines if a buffer contains binary data or not
     -- must return a bool
   end,
+
 }

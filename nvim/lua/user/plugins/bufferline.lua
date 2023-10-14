@@ -59,7 +59,7 @@ require('bufferline').setup {
     -- Sorting
     sort_by = "insert_at_end",
 
-    },
+  },
 
   -- Highlights
   -- :h bufferline-highlights
@@ -105,7 +105,7 @@ require('bufferline').setup {
       bg = { attribute = "bg", highlight = "TabLine" },
     },
     tab_close = {
-      -- fg = {attribute='fg',highlight='LspDiagnosticsDefaultError'},
+      --fg = {attribute='fg',highlight='LspDiagnosticsDefaultError'},
       fg = { attribute = "fg", highlight = "TabLineSel" },
       bg = { attribute = "bg", highlight = "Normal" },
     },

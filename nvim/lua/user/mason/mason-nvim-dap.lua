@@ -9,5 +9,5 @@ require("mason-nvim-dap").setup({
     "codelldb", -- rust
   },
   automatic_installation = true,
-	automatic_setup = false,
+  automatic_setup = false,
 })

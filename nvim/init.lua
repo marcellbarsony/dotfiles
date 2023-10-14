@@ -42,6 +42,3 @@ require('user.plugins.nvim-tree')
 require('user.plugins.telescope')
 require('user.plugins.treesitter')
 require('user.plugins.which-key')
-
--- TODO
---require('user.plugins.nvim-ufo')

@@ -52,4 +52,3 @@ return {
     c = { fg = colors.white, bg = colors.black },
   },
 }
-

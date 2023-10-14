@@ -47,11 +47,13 @@ require("dapui").setup({
   },
 
   -- Layouts
-  layouts = { {
-      elements = { {
+  layouts = {
+    {
+      elements = {
+        {
           id = "scopes",
           size = 0.55
-        }, {
+        },{
           id = "breakpoints",
           size = 0.15
         }, {
@@ -60,20 +62,24 @@ require("dapui").setup({
         }, {
           id = "watches",
           size = 0.15
-        } },
+        }
+      },
       position = "right",
       size = 0.3
     }, {
-      elements = { {
+      elements = {
+        {
           id = "console",
           size = 0.6
         }, {
           id = "repl",
           size = 0.4
-        } },
+        }
+      },
       position = "bottom",
       size = 7
-    } },
+    }
+  },
 
   -- Mappings
   mappings = {

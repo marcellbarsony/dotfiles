@@ -177,17 +177,17 @@ local mappings = {
       u = { name = "GIT" },
     },
 
-      -- Gitsigns
+    -- Gitsigns
     u = {
       name = "Gitsigns",
     },
 
-      -- Venv (Python)
+    -- Venv (Python)
     v = {
       name = "PyVenv",
     },
 
-      -- Write
+    -- Write
     w = {
       name = "Write",
     },

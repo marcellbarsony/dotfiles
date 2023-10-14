@@ -22,9 +22,9 @@ ls.setup({
   ext_prio_increase = 1,
   enable_autosnippets = true,
   store_selection_keys = "<Tab>",
-	ft_func = function()
-		return vim.split(vim.bo.filetype, ".", true)
-	end,
+  ft_func = function()
+    return vim.split(vim.bo.filetype, ".", true)
+  end,
 })
 
 -- Keymaps --- {{{
@@ -49,16 +49,16 @@ end, { silent = true })
 
 -- Choice (+)
 vim.keymap.set( "i", "<c-k>", function()
-	if ls.choice_active() then
-		ls.change_choice(1)
-	end
+  if ls.choice_active() then
+    ls.change_choice(1)
+  end
 end)
 
 -- Choice (-)
 vim.keymap.set({ "i" }, "<c-j>", function()
-	if ls.choice_active() then
-		ls.change_choice(-1)
-	end
+  if ls.choice_active() then
+    ls.change_choice(-1)
+  end
 end)
 
 -- }}}
