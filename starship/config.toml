@@ -40,19 +40,18 @@ tag_disabled = false
 style = 'bold purple'
 
 [git_status]
-#format = '($all_status$ahead_behind($style)) '
 format = '([\[$all_status$ahead_behind\]]($style) )'
 conflicted = '='
-ahead = '⇡'
-behind = '⇣'
-diverged = '⇕'
+ahead = '󰁝'
+behind = '󰁅'
+deleted = ''
+diverged = ''
+modified = '!'
+renamed = ''
+staged = ''
+stashed = '$'
 up_to_date = ''
 untracked = '?'
-stashed = '$'
-modified = '!'
-staged = '+'
-renamed = ''
-deleted = '✘'
 style = 'bold purple'
 
 [hostname]

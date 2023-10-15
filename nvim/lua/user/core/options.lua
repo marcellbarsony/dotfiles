@@ -123,7 +123,3 @@ vim.opt.shortmess:append "c"
 for key, value in pairs(options) do
     vim.opt[key] = value
 end
-
--- Netrw
---vim.g.loaded_netrw = 1
---vim.g.loaded_netrwPlugin = 1

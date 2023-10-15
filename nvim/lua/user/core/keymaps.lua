@@ -40,8 +40,8 @@ map("", "<right>", "<nop>")
 
 -- Buffers
 map("n", "<ESC>", "", { desc = "Unmap <C-[>" }) -- Unmap buffer prev
-map("n", "<C-]>", ":bn<CR>", { desc = "Buffer [Next]" })
-map("n", "<C-[>", ":bp<CR>", { desc = "Buffer [Prev]" }) -- TODO: broken, works with any other key than [
+map("n", "<Tab>", ":bn<CR>", { desc = "Buffer [Next]" })
+map("n", "<S-Tab>", ":bp<CR>", { desc = "Buffer [Prev]" }) -- TODO: broken, works with any other key than [
 map("n", "<C-'>", ":b#<CR>", { desc = "Buffer [To last]" })
 map("n", "<C-q>", ":bdelete<CR>", { desc = "Buffer [Delete]" })
 --map("n", "<C-^>", ":_#<CR>", { desc = "Alternate file" }) -- :help alternate-file
@@ -131,7 +131,7 @@ map("n", "<leader>mm", ":Mason<CR>", { desc = "Mason" })
 map("n", "<leader>mu", ":MasonUninstallAll<CR>", { desc = "Uninstall all" })
 
 -- Navigation
--- Conflicts with cursor scrollof
+-- Conflicts with cursor scrolloff
 -- map("n", "<C-d>", "<C-d>zz<CR>", { desc = "Page down" })
 -- map("n", "<C-u>", "<C-u>zz<CR>", { desc = "Page up" })
 
@@ -147,7 +147,7 @@ map("n", "<leader>f", ":NvimTreeToggle<CR>", { desc = "Files [NvimTree]" })
 --map("n", "<leader>t", ":Lex 30<CR>", { desc = "Netrw", silent = true })
 
 -- Search
-map("n", "*", "*N", { desc = "Find word" }) -- Fix * - don"t move to next match
+map("n", "*", "*N", { desc = "Find word" }) -- Fix * - don't move to next match
 map("n", "n", "nzzzv", { desc = "Search [Next]" }) -- Fix n: keep cursor in center
 map("n", "N", "Nzzzv", { desc = "Search [Previous]" }) -- Fix N: keep cursor in center
 
