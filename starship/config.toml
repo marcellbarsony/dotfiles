@@ -1,7 +1,12 @@
 # Prompt
 add_newline = false
-format = """$character"""
-right_format = """$all"""
+format = '''
+$directory
+$character
+'''
+right_format = '''
+$all
+'''
 
 # Plugins
 [azure]
@@ -80,7 +85,7 @@ symbol = ' '
 [rust]
 format = 'via [$symbol($version)]($style) '
 symbol = ' '
-version_format = "v${raw}"
+version_format = '${raw}'
 
 [sudo]
 disabled = false
