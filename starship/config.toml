@@ -1,11 +1,10 @@
 # Prompt
 add_newline = false
 format = '''
-$directory
 $character
 '''
 right_format = '''
-$all
+$directory$all
 '''
 
 # Plugins
