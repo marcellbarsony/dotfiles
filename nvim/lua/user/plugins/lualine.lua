@@ -10,7 +10,7 @@ require('lualine').setup {
     icons_enabled = true,
     ignore_focus = {},
     globalstatus = true,
-    theme = 'custom',
+    theme = 'palenight', --custom
 
     -- Disabled files
     -- https://github.com/nvim-lualine/lualine.nvim#disabling-lualine
@@ -62,5 +62,4 @@ require('lualine').setup {
   -- Extensions
   -- https://github.com/nvim-lualine/lualine.nvim#extensions
   extensions = {}
-
 }
