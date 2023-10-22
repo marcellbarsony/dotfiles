@@ -1,6 +1,6 @@
 {
   "version":4,
-  "lastUserContextId":21,
+  "lastUserContextId":20,
   "identities":[
     {
       "public":false,
@@ -28,7 +28,6 @@
     {"userContextId":17,"public":true,"icon":"circle","color":"blue","name":"Microsoft"},
     {"userContextId":18,"public":true,"icon":"circle","color":"purple","name":"Proton"},
     {"userContextId":19,"public":true,"icon":"circle","color":"orange","name":"Reddit"},
-    {"userContextId":20,"public":true,"icon":"circle","color":"green","name":"Spotify"},
-    {"userContextId":21,"public":true,"icon":"circle","color":"red","name":"Untrusted"}
+    {"userContextId":20,"public":true,"icon":"circle","color":"green","name":"Spotify"}
   ]
 }

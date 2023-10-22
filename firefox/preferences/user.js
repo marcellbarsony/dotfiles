@@ -1278,6 +1278,12 @@ user_pref("services.sync.prefs.sync.browser.urlbar.suggest.openpage", false);
 user_pref("services.sync.prefs.sync.browser.urlbar.suggest.searches", false);
 user_pref("services.sync.prefs.sync.browser.urlbar.suggest.topsites", false);
 
+/* SIGNON */
+user_pref("signon.rememberSignons", false);  // 5003
+user_pref("signon.rememberSignons.visibilityToggle", false);
+/* [TODO]: Set default download location */
+user_pref("browser.download.folderList", 1);
+
 /* SHUTDOWN */
 user_pref("privacy.clearOnShutdown.history", false); // 2811
 user_pref("privacy.clearOnShutdown.sessions", false); // 2811
