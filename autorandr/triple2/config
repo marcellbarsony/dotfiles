@@ -17,7 +17,7 @@ off
 output DP-7
 crtc 1
 mode 1920x1080
-pos 993x0
+pos 0x0
 rate 60.00
 x-prop-max_bpc 8
 x-prop-non_desktop 0
@@ -28,7 +28,7 @@ x-prop-underscan_vborder 0
 output DP-8
 crtc 2
 mode 1920x1080
-pos 0x1080
+pos 1920x0
 rate 60.00
 x-prop-max_bpc 8
 x-prop-non_desktop 0
@@ -39,7 +39,7 @@ x-prop-underscan_vborder 0
 output DP-9
 crtc 3
 mode 1920x1080
-pos 1920x1080
+pos 3840x0
 rate 60.00
 x-prop-max_bpc 8
 x-prop-non_desktop 0
