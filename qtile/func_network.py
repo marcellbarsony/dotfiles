@@ -7,8 +7,8 @@ def network_ip():
     output = result.stdout
     for line in output.split("\n"):
         if "inet " in line:
-            ip_address = line.split()[1].split("/")[0]
-            if ip_address != "127.0.0.1":
+            ip_address = line.split()[1]
+            if ip_address != "127.0.0.1/8":
                 return ip_address
 
 def network_interface():

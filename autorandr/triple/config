@@ -17,7 +17,7 @@ off
 output DP-7
 crtc 1
 mode 1920x1080
-pos 993x0
+pos 960x0
 rate 60.00
 x-prop-max_bpc 8
 x-prop-non_desktop 0
