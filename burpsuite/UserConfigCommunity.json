@@ -376,7 +376,7 @@
             "out_of_scope_history_logging_action":"prompt",
             "pause_tasks_at_startup_default":true,
             "show_learn_tab":false,
-            "submit_feedback":true,
+            "submit_feedback":false,
             "suppress_confirm_on_close":false,
             "temporary_files_location":""
         },

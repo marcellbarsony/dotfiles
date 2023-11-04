@@ -42,7 +42,6 @@ HISTFILE=~/.config/zsh/history
 # Prompt (Starship)
 eval "$(starship init zsh)"
 
-
 # VI mode
 bindkey -v
 # Conflicts with Autocomplete

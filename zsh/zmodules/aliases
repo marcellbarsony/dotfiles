@@ -1,29 +1,28 @@
 # Coreutils
-alias cls='clear'
-alias cp='cp -i'
-alias grep='grep --color=auto'
-alias mv='mv -i'
-alias rm='rm -i'
+alias cls="clear"
+alias cp="cp -i"
+alias grep="grep --color=auto"
+alias mv="mv -i"
+alias rm="rm -i"
 
 # Coreutils [Rust]
-alias exa='exa -lahB --all --color-scale'
-alias l='lsd -laF'
+alias ls="lsd -laF"
 
 # Jekyll
-alias jekyll='bundle exec jekyll serve --livereload'
+alias jekyll="bundle exec jekyll serve --livereload"
 
 # Navigation
-alias ..='cd ..'
-alias ..2='cd ../..'
-alias ..3='cd ../../..'
-alias ..4='cd ../../../..'
-alias ..5='cd ../../../../..'
-alias home='clear && cd $HOME && l'
-alias cfg='clear && cd $HOME/.config && l'
+alias ..="cd .."
+alias ..2="cd ../.."
+alias ..3="cd ../../.."
+alias ..4="cd ../../../.."
+alias ..5="cd ../../../../.."
+alias home="clear && cd $HOME && ls"
+alias cfg="clear && cd $HOME/.config && ls"
 
 # NeoVim
-alias nv='nvim'
-alias vim='nvim'
+alias nv="nvim"
+alias vim="nvim"
 
 # Ntfy
-alias notify='ntfy publish teszt01010001'
+alias notify="ntfy publish teszt01010001"

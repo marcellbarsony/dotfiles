@@ -1,0 +1,34 @@
+{
+  "mode": "disabled",
+  "logging": {
+    "size": 100,
+    "active": false
+  },
+  "1yuz8n1698974691861": {
+    "type": 1,
+    "color": "#cc8916",
+    "title": "Burp",
+    "active": true,
+    "address": "127.0.0.1",
+    "port": 8080,
+    "proxyDNS": false,
+    "username": "",
+    "password": "",
+    "whitePatterns": [
+      {
+        "title": "all URLs",
+        "active": true,
+        "pattern": "*",
+        "type": 1,
+        "protocols": 1
+      }
+    ],
+    "blackPatterns": [],
+    "pacURL": "",
+    "index": 9007199254740990
+  },
+  "browserVersion": "119.0",
+  "foxyProxyVersion": "7.5.1",
+  "foxyProxyEdition": "standard",
+  "sync": true
+}

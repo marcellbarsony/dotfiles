@@ -16,23 +16,16 @@ color:
   theme: custom
 
 # == Date ==
-date: '+%a %d %b %Y %X'
+date: "+%a %d %b %Y %X"
 
 # == Dereference ==
 dereference: false
-
-# == Display ==
-display: all
 
 # == Icons ==
 icons:
   when: auto
   theme: fancy
   separator: " "
-
-# == Ignore Globs ==
-# ignore-globs:
-#   - .git
 
 # == Indicators ==
 indicators: false
@@ -54,13 +47,20 @@ sorting:
   reverse: false
   dir-grouping: none
 
+# == Permission ==
+permission: rwx
+
 # == No Symlink ==
 no-symlink: false
 
 # == Total size ==
 total-size: false
 
+# == Hyperlink ==
+hyperlink: always
+
 # == Symlink arrow ==
 symlink-arrow: ⇒
 
+# == Header ==
 header: false

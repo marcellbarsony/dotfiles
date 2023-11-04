@@ -121,7 +121,7 @@ require("lazy").setup({
   { 'nvim-telescope/telescope.nvim',
     dependencies = {
       'nvim-lua/plenary.nvim', -- Lua lib
-      'BurntSushi/ripgrep' -- Live grep
+      -- 'BurntSushi/ripgrep' -- Live grep
     }
   },
 
