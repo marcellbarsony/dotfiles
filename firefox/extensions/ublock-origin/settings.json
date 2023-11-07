@@ -1,0 +1,44 @@
+{
+  "timeStamp": 1699327068455,
+  "version": "1.53.0",
+  "userSettings": {
+    "advancedUserEnabled": true,
+    "cloudStorageEnabled": true,
+    "uiAccentCustom": true,
+    "uiAccentCustom0": "#3584e4",
+    "uiTheme": "dark",
+    "importedLists": [],
+    "popupPanelSections": 63,
+    "tooltipsDisabled": true
+  },
+  "selectedFilterLists": [
+    "user-filters",
+    "assets.json",
+    "public_suffix_list.dat",
+    "ublock-badlists",
+    "ublock-filters",
+    "ublock-badware",
+    "ublock-privacy",
+    "ublock-unbreak",
+    "ublock-quick-fixes",
+    "easylist",
+    "easyprivacy",
+    "urlhaus-1",
+    "plowe-0"
+  ],
+  "hiddenSettings": {},
+  "whitelist": [
+    "about-scheme",
+    "chrome-extension-scheme",
+    "chrome-scheme",
+    "edge-scheme",
+    "moz-extension-scheme",
+    "opera-scheme",
+    "vivaldi-scheme",
+    "wyciwyg-scheme"
+  ],
+  "dynamicFilteringString": "behind-the-scene * * noop\nbehind-the-scene * inline-script noop\nbehind-the-scene * 1p-script noop\nbehind-the-scene * 3p-script noop\nbehind-the-scene * 3p-frame noop\nbehind-the-scene * image noop\nbehind-the-scene * 3p noop\n* * 3p-frame block\n* www.instagram.com * block\nwww.instagram.com www.instagram.com * noop\n* facebook.com * block\n* www.facebook.com * block\n* fbcdn.net * block\n* google.com * block\n* googleusercontent.com * block\n* googlevideo.com * block\n* twitter.com * block\n* yahoo.com * block\n* yahoo.net * block\n* youtube.com * block\n* www.youtube.com * block\nwww.facebook.com facebook.com * noop\nwww.facebook.com www.facebook.com * noop\nwww.facebook.com fbcdn.net * noop\nwww.youtube.com googleusercontent.com * noop\nwww.youtube.com googlevideo.com * noop\nwww.youtube.com youtube.com * noop\nwww.youtube.com www.youtube.com * noop\n* linkedin.com * block\n* www.linkedin.com * block\n* reddit.com * block\n* www.reddit.com * block\nwww.linkedin.com linkedin.com * noop\nwww.linkedin.com www.linkedin.com * noop\nwww.reddit.com reddit.com * noop\nwww.reddit.com www.reddit.com * noop\nwww.youtube.com google.com * noop\nconsent.yahoo.com yahoo.com * noop\n* consent.yahoo.com * block\nconsent.yahoo.com consent.yahoo.com * noop\nphotos.google.com google.com * noop\nphotos.google.com photos.google.com * noop\nphotos.google.com googleusercontent.com * noop\n* cdninstagram.com * block\nwww.instagram.com cdninstagram.com * noop\n* amazonaws.com * block\n* fonts.googleapis.com * block\n* ggpht.com * block\n* googletagmanager.com * block\ncyberdefenders.org amazonaws.com * noop\ncyberdefenders.org * 3p-frame noop\nbard.google.com google.com * noop\nhqporner.com * 3p-frame noop",
+  "urlFilteringString": "",
+  "hostnameSwitchesString": "no-large-media: behind-the-scene false\nno-csp-reports: * true",
+  "userFilters": ""
+}

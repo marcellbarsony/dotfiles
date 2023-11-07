@@ -19,6 +19,9 @@ gh/
 # GTK
 gtk-3.0/
 
+# Java
+java/
+
 # Kdenlive
 kdeglobals
 kdenlive*

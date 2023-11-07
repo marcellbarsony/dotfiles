@@ -35,6 +35,9 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 #export KITTY_CONFIG_DIRECTORY="$XDG_CONFIG_HOME/kitty"
 #export QT_STYLE_OVERRIDE="Adwaita-Dark"
 
+# Java
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
+
 # Python
 export PATH="/usr/lib/python3.10/site-packages:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
