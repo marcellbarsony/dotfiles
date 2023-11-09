@@ -19,7 +19,6 @@ vim.opt.rtp:prepend(lazypath)
 -- vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
 
 require("lazy").setup({
-
   -- Auto pair
   'windwp/nvim-autopairs',
 
@@ -31,7 +30,10 @@ require("lazy").setup({
     lazy = false,
     priority = 1000,
   },
-
+  { "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000
+  },
   -- Colorizer
   'NvChad/nvim-colorizer.lua',
 
@@ -92,14 +94,15 @@ require("lazy").setup({
   -- LSP Saga
   'glepnir/lspsaga.nvim',
 
-  -- Nvim tree
-  { 'nvim-tree/nvim-tree.lua',
-    cmd = 'NvimTreeToggle',
-    version = 'nightly'
-  },
-
   -- Null-ls
   'jose-elias-alvarez/null-ls.nvim',
+
+  -- Oil.nvim
+  {
+    'stevearc/oil.nvim',
+    opts = {},
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
 
   -- Rust
   'simrat39/rust-tools.nvim',

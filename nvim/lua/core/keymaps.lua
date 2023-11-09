@@ -140,11 +140,8 @@ map("n", "<leader>nl", ":NullLsLog<CR>", { desc = "Log" })
 map("n", "<leader>ni", ":NullLsInfo<CR>", { desc = "Info" })
 map("n", "<leader>nf", ":lua vim.lsp.buf.formatting()<CR>", { desc = "Format" })
 
--- Nvim-tree
-map("n", "<leader>f", ":NvimTreeToggle<CR>", { desc = "Files [NvimTree]" })
---map("n", "tc", ":NvimTreeCollapse<CR>", { desc = "Collapse" })
---map("n", "<leader>x", ":NvimTreeFindFile<CR>", { desc = "Find file" })
---map("n", "<leader>t", ":Lex 30<CR>", { desc = "Netrw", silent = true })
+-- Oil
+map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 -- Search
 map("n", "*", "*N", { desc = "Find word" }) -- Fix * - don't move to next match

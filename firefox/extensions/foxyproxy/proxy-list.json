@@ -7,7 +7,7 @@
   "1yuz8n1698974691861": {
     "type": 1,
     "color": "#cc8916",
-    "title": "Burp",
+    "title": "Localhost",
     "active": true,
     "address": "127.0.0.1",
     "port": 8080,
