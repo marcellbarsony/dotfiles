@@ -98,11 +98,7 @@ require("lazy").setup({
   'jose-elias-alvarez/null-ls.nvim',
 
   -- Oil.nvim
-  {
-    'stevearc/oil.nvim',
-    opts = {},
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-  },
+  'stevearc/oil.nvim',
 
   -- Rust
   'simrat39/rust-tools.nvim',

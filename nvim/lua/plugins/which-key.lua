@@ -101,19 +101,16 @@ local mappings = {
   y = { name = "Yank" },
   o = { name = "LSPkind outline" },
   u = { name = "Undo" },
-  -- Ctrl+^ - Alternate file
 
-  ["<C>"] = {
-
-    -- Debug
-    r = {
-      name = "Rusttt",
-    }
-  },
   -- Leader
   ["<leader>"] = {
 
     name = "Leader",
+
+    -- Buffer
+    b = {
+      name = "Buffer",
+    },
 
     -- Debug
     d = {
@@ -136,7 +133,7 @@ local mappings = {
     l = {
       name = "LSP",
       a = { "Code action" },
-      b = { "Diagnostics [Buffer]" },
+      --b = { "Diagnostics [Buffer]" },
       c = { "Calls" },
       d = { "Diagnostics [Line]" },
       f = { "Definition" },
@@ -164,17 +161,14 @@ local mappings = {
       g = { "Action [Group]" },
     },
 
-    -- Split
-    s = {
-      name = "Split",
-    },
-
     -- Telescope
     t = {
       name = "Telescope",
-      c = { name = "Commands" },
+      d = { name = "DAP" },
+      f = { name = "Find" },
+      h = { name = "History" },
       v = { name = "Vim" },
-      u = { name = "GIT" },
+      g = { name = "GIT" },
     },
 
     -- Gitsigns
