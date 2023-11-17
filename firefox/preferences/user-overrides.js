@@ -1,3 +1,6 @@
+/* BACKSPACE */
+user_pref("browser.backspace_action", 0);
+
 /* BOOKMARKS */
 user_pref("browser.toolbars.bookmarks.visibility", "never");
 

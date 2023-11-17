@@ -70,6 +70,9 @@ require("lazy").setup({
   -- Git
   'lewis6991/gitsigns.nvim',
 
+  -- Harpoon
+  'ThePrimeagen/harpoon',
+
   -- HEX
   'RaafatTurki/hex.nvim',
 

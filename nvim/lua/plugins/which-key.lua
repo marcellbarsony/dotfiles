@@ -167,8 +167,8 @@ local mappings = {
       d = { name = "DAP" },
       f = { name = "Find" },
       h = { name = "History" },
+      u = { name = "GIT" },
       v = { name = "Vim" },
-      g = { name = "GIT" },
     },
 
     -- Gitsigns

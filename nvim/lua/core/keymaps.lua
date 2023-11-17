@@ -26,8 +26,8 @@ vim.g.maplocalleader = "\\"
 map("n", "<leader>wb", ":w!<CR>", { desc = "Write buffer" })
 map("n", "<leader>wa", ":wa!<CR>", { desc = "Write all" })
 map("n", "<leader>wq", ":wqa!<CR>", { desc = "Write all & Quit" })
-map("n", "<leader>q", ":q<CR>", { desc = "Quit" })
 map("n", "<leader>r", ":source %<CR>", { desc = "Reload [TODO]" })
+--map("n", "<leader>q", ":q<CR>", { desc = "Quit" })
 
 -- Alpha
 map("n", "<leader>a", ":Alpha<CR>", { desc = "Alpha" })
@@ -62,8 +62,8 @@ map("n", "<leader>3", ":lua require'dap'.step_over()<CR>", { desc = "DAP [Step o
 map("n", "<leader>2", ":lua require'dap'.step_into()<CR>", { desc = "DAP [Step into]" })
 map("n", "<leader>0", ":lua require'dap'.step_out()<CR>", { desc = "DAP [Step out]" })
 map("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>", { desc = "DAP [Break]" })
-map("n", "<leader>B", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", { desc = "DAP [Break + condition]" })
-map("n", "<leader>dp", ":lua require'dap'.set.breakpoint(nul, nul, vim.fn.input('Log point message: '))<CR>", { desc = "Breakpoint [log point msg]" })
+map("n", "<leader>db", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", { desc = "Breakpoint [Condition]" })
+map("n", "<leader>dc", ":lua require'dap'.set.breakpoint(nul, nul, vim.fn.input('Log point message: '))<CR>", { desc = "Breakpoint [Log point msg]" })
 map("n", "<leader>dr", ":lua require'dap'.repl.open()<CR>", { desc = "REPL" })
 map("n", "<leader>dl", ":lua require'dap'.run_last()<CR>", { desc = "Run last" })
 map("n", "<leader>dq", ":lua require('dap').disconnect()<CR>", { desc = "Quit"})
@@ -134,8 +134,8 @@ map("n", "<leader>mu", ":MasonUninstallAll<CR>", { desc = "Uninstall all" })
 
 -- Navigation
 -- Conflicts with cursor scrolloff
--- map("n", "<C-d>", "<C-d>zz<CR>", { desc = "Page down" })
--- map("n", "<C-u>", "<C-u>zz<CR>", { desc = "Page up" })
+--map("n", "<C-d>", "<C-d>zz<CR>", { desc = "Page down" })
+--map("n", "<C-u>", "<C-u>zz<CR>", { desc = "Page up" })
 
 -- Null-ls
 map("n", "<leader>nl", ":NullLsLog<CR>", { desc = "Log" })
@@ -171,7 +171,6 @@ map("n", "<leader>td", ":Telescope diagnostics<CR>", { desc = "Diagnostics" })
 map("n", "<leader>tg", ":Telescope live_grep<CR>", { desc = "Grep" })
 map("n", "<leader>tm", ":Telescope man_pages<CR>", { desc = "Man" })
 map("n", "<leader>tp", ":Telescope pickers<CR>", { desc = "Pickers" })
-map("n", "<leader>tr", ":Telescope registers<CR>", { desc = "Registers" })
 map("n", "<leader>tt", ":Telescope<CR>", { desc = "Telescope" })
 map("n", "<leader>tx", ":Telescope treesitter<CR>", { desc = "Treesitter symbols" })
 -- DAP
@@ -184,10 +183,10 @@ map("n", "<leader>tdf", ":lua require'telescope'.extensions.dap.frames{}<CR>", {
 map("n", "<leader>tfb", ":Telescope current_buffer_fuzzy_find<CR>", { desc = "Find [Buffer]" })
 map("n", "<leader>tff", ":Telescope find_files<CR>", { desc = "Find [Files]" }) -- Current directory
 -- Git
-map("n", "<leader>tgc",":Telescope git_commits<CR>", { desc = "Commits" })
-map("n", "<leader>tgb",":Telescope git_branches<CR>", { desc = "Branches" })
-map("n", "<leader>tgf",":Telescope git_files<CR>", { desc = "Files" })
-map("n", "<leader>tgs",":Telescope git_status<CR>", { desc = "Status" })
+map("n", "<leader>tuc",":Telescope git_commits<CR>", { desc = "Commits" })
+map("n", "<leader>tub",":Telescope git_branches<CR>", { desc = "Branches" })
+map("n", "<leader>tuf",":Telescope git_files<CR>", { desc = "Files" })
+map("n", "<leader>tus",":Telescope git_status<CR>", { desc = "Status" })
 -- History
 map("n", "<leader>thf", ":Telescope oldfiles<CR>", { desc = "Files" })
 map("n", "<leader>ths", ":Telescope search_history<CR>", { desc = "Search" })
@@ -197,6 +196,7 @@ map("n", "<leader>tvc", ":Telescope commands<CR>", { desc = "Commands" })
 map("n", "<leader>tvh", ":Telescope highlights<CR>", { desc = "Highlights" })
 map("n", "<leader>tvk", ":Telescope keymaps<CR>", { desc = "Keymaps" })
 map("n", "<leader>tvo", ":Telescope vim_options<CR>", { desc = "Options" })
+map("n", "<leader>tvr", ":Telescope registers<CR>", { desc = "Registers" })
 
 -- Undo & Redo
 map("n", "<u>", ":undo<CR>", { desc = "Undo" }) -- Undo

@@ -72,17 +72,17 @@ dashboard.section.header.val = {
 
 -- Menu
 dashboard.section.buttons.val = {
-  dashboard.button( "f", "󰈔  > File [New]", ":ene <BAR> startinsert <CR>"),
+  dashboard.button( "f", "󰈔  > File", ":ene <BAR> startinsert <CR>"),
   dashboard.button( "l", "󰐱  > Lazy", ":Lazy<CR>"),
-  dashboard.button( "m", "󱎥  > Mason", ":Mason<CR>"),
-  dashboard.button( "nh", "✚  > Nvim [Health]", ":checkhealth<CR>"),
-  dashboard.button( "nn", "󱀁  > Nvim [News]", ":help news<CR>"),
+  dashboard.button( "m", "󰐱  > Mason", ":Mason<CR>"),
+  dashboard.button( "h", "✚  > Nvim [Health]", ":checkhealth<CR>"),
+  dashboard.button( "n", "󱀁  > Nvim [News]", ":help news<CR>"),
   dashboard.button( "q", "  > Quit", ":qa<CR>"),
-  dashboard.button( "r", "  > Recent", ":Telescope oldfiles<CR>"),
   dashboard.button( "tt", "󰭎  > Telescope", ":Telescope<CR>"),
-  dashboard.button( "tf", "󰍉  > Telescope [Find files]", ":Telescope find_files<CR>"),
+  dashboard.button( "tf", "󰭎  > Telescope [Find files]", ":Telescope find_files<CR>"),
   dashboard.button( "tg", "󰭎  > Telescope [Grep]", ":Telescope live_grep<CR>"),
-  dashboard.button( "tu", "󰍉  > Telescope [Git files]", ":Telescope git_files<CR>"),
+  dashboard.button( "tu", "󰭎  > Telescope [Git files]", ":Telescope git_files<CR>"),
+  dashboard.button( "to", "󰭎  > Telescope [Old files]", ":Telescope oldfiles<CR>"),
   dashboard.button( "-", "o  > Oil", ":Oil<CR>"),
 }
 
