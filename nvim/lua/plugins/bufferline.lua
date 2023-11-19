@@ -2,21 +2,37 @@
 -- https://github.com/akinsho/bufferline.nvim
 -- :h bufferline-configuration
 
-require('bufferline').setup {
+local bufferline = require('bufferline')
+
+bufferline.setup {
   options = {
-    numbers = "none",
+    mode = "buffers",
+    themable = true,
+
+    -- Bufferline
+    always_show_bufferline = false,
+    enforce_regular_tabs = true,
 
     -- Commands
-    close_command = "bdelete! %d",  -- can be a string | function, see "Mouse actions"
-    right_mouse_command = "bdelete! %d",  -- can be a string | function, see "Mouse actions"
-    left_mouse_command = "buffer %d",  -- can be a string | function, see "Mouse actions"
-    middle_mouse_command = nil,  -- can be a string | function, see "Mouse actions"
+    close_command = "bdelete! %d",
+    right_mouse_command = "bdelete! %d",
+    left_mouse_command = "buffer %d",
+    middle_mouse_command = nil,
+
+    -- Diagnostics
+    diagnostics = "nvim_lsp",
+    diagnostics_update_in_insert = true,
+    show_tab_indicators = false,
 
     -- Icons
+    indicator = {
+        icon = '▎',
+        style = 'none',
+    },
+    numbers = "none",
     show_buffer_icons = true,
     show_buffer_close_icons = false,
     show_close_icon = false,
-    indicator = "│",
     close_icon = "",
     buffer_close_icon = "",
     modified_icon = "●",
@@ -24,16 +40,13 @@ require('bufferline').setup {
     right_trunc_marker = "",
 
     -- Length
-    max_name_length = 15,
-    max_prefix_length = 15,  -- de-duplicated buffer prefix
+    max_name_length = 20,
+    max_prefix_length = 5,
+    show_duplicate_prefix = true,
     tab_size = 20,
+    truncate_names = true,
 
-    -- Diagnostics
-    diagnostics = "nvim_lsp",
-    diagnostics_update_in_insert = true,
-    show_tab_indicators = false,
-
-    -- Sidebar offset
+    -- Sidebar
     offsets = {
       {
         filetype = "NvimTree",
@@ -49,108 +62,16 @@ require('bufferline').setup {
       }
     },
 
-    persist_buffer_sort = true,  -- enable custom sorted buffers
-    separator_style = "thick",  -- | "thick" | "thin" | { 'any', 'any' },
-
-    -- Bufferline
-    always_show_bufferline = false,
-    enforce_regular_tabs = true,
+    -- Separator
+    separator_style = {" ", " "},
 
     -- Sorting
+    persist_buffer_sort = true,
     sort_by = "insert_at_end",
-
   },
 
   -- Highlights
   -- :h bufferline-highlights
   highlights = {
-    fill = {
-      -- Transparent if not defined
-      --fg = { attribute = "fg", highlight = "TabLine" },
-      --bg = { attribute = "fg", highlight = "TabLine" },
-    },
-    background = {
-      -- Transparent if not defined
-      --fg = { attribute = "fg", highlight = "TabLine" },
-      --bg = { attribute = "bg", highlight = "TabLine" },
-    },
-    buffer_selected = {
-      fg = "#BB9AF7",
-      --bg = "#1C2032",
-      bold = true,
-      italic = false
-    },
-    buffer_visible = {
-      fg = { attribute = "fg", highlight = "TabLine" },
-      bg = { attribute = "bg", highlight = "TabLine" },
-    },
-    close_button = {
-      fg = { attribute = "fg", highlight = "TabLine" },
-      bg = { attribute = "bg", highlight = "TabLine" },
-    },
-    close_button_visible = {
-      fg = { attribute = "fg", highlight = "TabLine" },
-      bg = { attribute = "bg", highlight = "TabLine" },
-    },
-    close_button_selected = {
-      fg = {attribute='fg',highlight='TabLineSel'},
-      bg ={attribute='bg',highlight='TabLineSel'}
-      },
-    tab_selected = {
-      fg = { attribute = "fg", highlight = "Normal" },
-      bg = { attribute = "bg", highlight = "Normal" },
-    },
-    tab = {
-      fg = { attribute = "fg", highlight = "TabLine" },
-      bg = { attribute = "bg", highlight = "TabLine" },
-    },
-    tab_close = {
-      --fg = {attribute='fg',highlight='LspDiagnosticsDefaultError'},
-      fg = { attribute = "fg", highlight = "TabLineSel" },
-      bg = { attribute = "bg", highlight = "Normal" },
-    },
-    duplicate_selected = {
-      fg = { attribute = "fg", highlight = "TabLineSel" },
-      bg = { attribute = "bg", highlight = "TabLineSel" },
-      italic = true
-    },
-    duplicate_visible = {
-      fg = { attribute = "fg", highlight = "TabLine" },
-      bg = { attribute = "bg", highlight = "TabLine" },
-      italic = true,
-    },
-    duplicate = {
-      fg = { attribute = "fg", highlight = "TabLine" },
-      bg = { attribute = "bg", highlight = "TabLine" },
-      italic = false,
-    },
-    modified = {
-      fg = { attribute = "fg", highlight = "TabLine" },
-      bg = { attribute = "bg", highlight = "TabLine" },
-    },
-    modified_selected = {
-      fg = { attribute = "fg", highlight = "Normal" },
-      bg = { attribute = "bg", highlight = "Normal" },
-    },
-    modified_visible = {
-      fg = { attribute = "fg", highlight = "TabLine" },
-      bg = { attribute = "bg", highlight = "TabLine" },
-    },
-    separator = {
-      fg = { attribute = "bg", highlight = "TabLine" },
-      bg = { attribute = "bg", highlight = "TabLine" },
-    },
-    separator_selected = {
-      fg = { attribute = "bg", highlight = "Normal" },
-      bg = { attribute = "bg", highlight = "Normal" },
-    },
-     separator_visible = {
-      fg = {attribute='bg',highlight='TabLine'},
-      bg = {attribute='bg',highlight='TabLine'}
-      },
-    indicator_selected = {
-      fg = { attribute = "fg", highlight = "LspDiagnosticsDefaultHint" },
-      bg = { attribute = "bg", highlight = "Normal" },
-    },
-  },
+  };
 }

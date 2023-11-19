@@ -7,7 +7,7 @@ require 'hex'.setup {
   dump_cmd = 'hx',
 
   -- cli command used to assemble from hex data
-  assemble_cmd = 'hx -r',
+  assemble_cmd = 'hx',
 
   -- function that runs on BufReadPre to determine if it's binary or not
   is_buf_binary_pre_read = function()

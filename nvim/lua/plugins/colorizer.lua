@@ -1,7 +1,6 @@
 -- nvim-colorizer
 -- https://github.com/NvChad/nvim-colorizer.lua
 
--- Configuration
 require("colorizer").setup {
   -- Default options
   -- https://github.com/NvChad/nvim-colorizer.lua#customization
