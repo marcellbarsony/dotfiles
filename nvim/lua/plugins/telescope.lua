@@ -4,7 +4,6 @@
 
 require('telescope').setup{
   defaults = {
-    -- config_key = value,
     sorting_strategy = 'descending',
     selection_strategy = 'reset',
     scroll_strategy = 'cycle',
@@ -15,7 +14,7 @@ require('telescope').setup{
     multi_icon = '+',
     initial_mode = 'insert',
     border = true,
-    --path_display = 'shorten',
+    path_display = 'shorten',
     borderchars = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
     dynamic_preview_title = true,
     results_title = false,

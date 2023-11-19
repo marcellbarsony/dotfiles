@@ -32,7 +32,7 @@ require("catppuccin").setup({
         types = {},
         operators = {},
     },
-    -- ~/.local/share/nvim/lazy/catppuccin/colors/catpuccin-mocha.nvim
+    -- ~/.local/share/nvim/lazy/catppuccin/lua/catppuccin/palettes/mocha.lua
     color_overrides = {
       crust = '#FF0000'
     },

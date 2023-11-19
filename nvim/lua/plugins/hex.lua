@@ -2,7 +2,6 @@
 -- https://github.com/RaafatTurki/hex.nvim
 
 require 'hex'.setup {
-
   -- cli command used to dump hex data
   dump_cmd = 'hx',
 
@@ -20,5 +19,4 @@ require 'hex'.setup {
     -- logic that determines if a buffer contains binary data or not
     -- must return a bool
   end,
-
 }

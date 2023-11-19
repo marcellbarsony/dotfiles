@@ -4,7 +4,6 @@
 local saga = require("lspsaga")
 
 saga.setup({
-
   -- Default options
   -- https://github.com/nvimdev/lspsaga.nvim#default-options
   preview = {
@@ -178,5 +177,4 @@ saga.setup({
     hover = ' ',
     kind = {},
   },
-
 })

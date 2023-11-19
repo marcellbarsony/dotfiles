@@ -3,7 +3,6 @@
 -- https://tree-sitter.github.io/tree-sitter/
 
 require'nvim-treesitter.configs'.setup {
-
   -- Modules
   -- https://github.com/nvim-treesitter/nvim-treesitter#modules
   ensure_installed = { "lua", "markdown", "markdown_inline", "python", "rust" },
@@ -24,7 +23,7 @@ require'nvim-treesitter.configs'.setup {
         end
     end,
     -- VIM Regex
-    additional_vim_regex_highlighting = false,
+    additional_vim_regex_highlighting = true,
   },
 
   -- Available modules
@@ -35,7 +34,7 @@ require'nvim-treesitter.configs'.setup {
   incremental_selection = {
     enable = true,
     keymaps = {
-      init_selection = "gnn", -- set to `false` to disable one of the mappings
+      init_selection = "gnn",
       node_incremental = "grn",
       scope_incremental = "grc",
       node_decremental = "grm",
@@ -47,5 +46,4 @@ require'nvim-treesitter.configs'.setup {
   indent = {
     enable = true
   },
-
 }

@@ -4,13 +4,12 @@
 
 require('lualine').setup {
   options = {
-
     -- Global config
     always_divide_middle = true,
     icons_enabled = true,
     ignore_focus = {},
     globalstatus = true,
-    theme = 'palenight', --custom
+    theme = 'palenight', -- custom
 
     -- Disabled files
     -- https://github.com/nvim-lualine/lualine.nvim#disabling-lualine

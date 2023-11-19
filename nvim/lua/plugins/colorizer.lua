@@ -21,7 +21,6 @@ require("colorizer").setup {
     virtualtext = "■",
     always_update = false,
   },
-  -- all the sub-options of filetypes apply to buftypes
   buftypes = {},
 }
 

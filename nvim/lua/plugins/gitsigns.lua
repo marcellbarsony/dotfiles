@@ -1,9 +1,7 @@
 -- gitsigns
 -- https://github.com/lewis6991/gitsigns.nvim
 
--- Setup
 require('gitsigns').setup {
-
   -- Signs
   signs = {
     add          = {hl = 'GitSignsAdd'   , text = '|', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'},
@@ -14,10 +12,10 @@ require('gitsigns').setup {
   },
 
   -- Signcolumn
-  signcolumn = false, -- Toggle:`:Gitsigns toggle_signs`
-  numhl      = false, -- Toggle:`:Gitsigns toggle_numhl`
-  linehl     = false, -- Toggle:`:Gitsigns toggle_linehl`
-  word_diff  = false, -- Toggle:`:Gitsigns toggle_word_diff`
+  signcolumn = false,
+  numhl      = false,
+  linehl     = false,
+  word_diff  = false,
 
   -- Gitdir
   watch_gitdir = {
@@ -26,10 +24,10 @@ require('gitsigns').setup {
   },
 
   attach_to_untracked = false,
-  current_line_blame = false, -- Toggle: `:Gitsigns toggle_current_line_blame`
+  current_line_blame = false,
   current_line_blame_opts = {
     virt_text = true,
-    virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
+    virt_text_pos = 'eol',
     delay = 1000,
     ignore_whitespace = false,
   },
@@ -37,8 +35,8 @@ require('gitsigns').setup {
   current_line_blame_formatter = '<author_time:%b-%d> - <summary>', -- Option: '<author>'
   sign_priority = 6,
   update_debounce = 100,
-  status_formatter = nil, -- Use default
-  max_file_length = 10000, -- Disable if exceeds length
+  status_formatter = nil,
+  max_file_length = 10000,
 
   -- Options passwd to nvim_open_win
   preview_config = {
@@ -53,5 +51,4 @@ require('gitsigns').setup {
   yadm = {
     enable = false
   },
-
 }

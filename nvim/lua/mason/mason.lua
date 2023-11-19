@@ -4,7 +4,6 @@
 -- Config
 -- https://github.com/williamboman/mason.nvim#configuration
 require("mason").setup({
-
   -- Path
   PATH = "prepend",
 
@@ -39,7 +38,7 @@ require("mason").setup({
   -- UI
   ui = {
     check_outdated_packages_on_open = false,
-    border = "none", -- none/rounded
+    border = "none",
     width = 0.8,
     height = 0.8,
     icons = {
@@ -59,5 +58,4 @@ require("mason").setup({
       apply_language_filter = "<C-f>",
     },
   },
-
 })

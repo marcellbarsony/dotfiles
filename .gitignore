@@ -31,6 +31,9 @@ npm/_cacache
 npm/_logs
 npm/_update-notifier-last-checked
 
+# Nushell
+nushell/history.txt
+
 # Nvim
 nvim/plugin/
 nvim/lazy-lock.json

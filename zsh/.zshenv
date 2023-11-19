@@ -32,8 +32,8 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export ZDOTDIR="$HOME/.config/zsh/"
 export XINITRC="$HOME/.config/x11/"
 export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_STYLE_OVERRIDE="Adwaita-Dark"
 #export KITTY_CONFIG_DIRECTORY="$XDG_CONFIG_HOME/kitty"
-#export QT_STYLE_OVERRIDE="Adwaita-Dark"
 
 # Java
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java

@@ -7,12 +7,12 @@ local rust_tools = require("rust-tools")
 local mason_registry = require("mason-registry")
 
 -- CodeLLDB
+-- https://github.com/simrat39/rust-tools.nvim/wiki/Debugging
 local extension_path = vim.env.HOME .. '/.local/share/nvim/mason/packages/codelldb/extension/'
 local codelldb_path = extension_path .. "adapter/codelldb"
 local liblldb_path = extension_path .. "lldb/lib/liblldb.so"
 
 rust_tools.setup({
-
   -- DAP (CodeLLDB)
   -- https://github.com/simrat39/rust-tools.nvim/wiki/Debugging
   dap = {
@@ -66,5 +66,4 @@ rust_tools.setup({
       highlight = "Comment",
     },
   },
-
 })
