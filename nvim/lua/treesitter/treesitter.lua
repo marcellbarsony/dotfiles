@@ -5,7 +5,7 @@
 require'nvim-treesitter.configs'.setup {
   -- Modules
   -- https://github.com/nvim-treesitter/nvim-treesitter#modules
-  ensure_installed = { "lua", "markdown", "markdown_inline", "python", "rust" },
+  ensure_installed = { "javascript", "lua", "markdown", "markdown_inline", "python", "rust" },
   sync_install = false,
   auto_install = true,
   ignore_install = { "" },
@@ -15,13 +15,6 @@ require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
     disable = { "" },
-    disable = function(lang, buf)
-        local max_filesize = 100 * 1024 -- 100 KB
-        local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
-        if ok and stats and stats.size > max_filesize then
-            return true
-        end
-    end,
     -- VIM Regex
     additional_vim_regex_highlighting = true,
   },

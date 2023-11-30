@@ -1,7 +1,7 @@
 -- Autopairs
 -- https://github.com/windwp/nvim-autopairs
 
-require("nvim-autopairs").setup{
+require("nvim-autopairs").setup {
   -- Default values
   -- https://github.com/windwp/nvim-autopairs#default-values
   disable_filetype = { "TelescopePrompt" },

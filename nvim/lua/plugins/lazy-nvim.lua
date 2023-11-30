@@ -9,14 +9,12 @@ if not vim.loop.fs_stat(lazypath) then
     "clone",
     "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
+    "--branch=stable",
     lazypath,
   })
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Example using a list of specs with the default options
--- vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
 
 require("lazy").setup({
   -- Auto pair
@@ -26,10 +24,10 @@ require("lazy").setup({
   'akinsho/bufferline.nvim',
 
   -- Color theme
-  { 'folke/tokyonight.nvim',
-    lazy = false,
-    priority = 1000,
-  },
+  -- { 'folke/tokyonight.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  -- },
   { "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000
@@ -44,7 +42,6 @@ require("lazy").setup({
 
   -- CMP
   { 'hrsh7th/nvim-cmp',
-    --event = 'InsertEnter',
     dependencies = {
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-cmdline',
@@ -69,9 +66,6 @@ require("lazy").setup({
 
   -- Git
   'lewis6991/gitsigns.nvim',
-
-  -- Harpoon
-  'ThePrimeagen/harpoon',
 
   -- HEX
   'RaafatTurki/hex.nvim',
@@ -115,15 +109,11 @@ require("lazy").setup({
 
   -- Status line
   'nvim-lualine/lualine.nvim',
-  -- 'glepnir/galaxyline.nvim'
-  -- 'feline-nvim/feline.nvim'
-  -- 'windwp/windline.nvim'
 
   -- Telescope
   { 'nvim-telescope/telescope.nvim',
     dependencies = {
-      'nvim-lua/plenary.nvim', -- Lua lib
-      -- 'BurntSushi/ripgrep' -- Live grep
+      'nvim-lua/plenary.nvim',
     }
   },
 
@@ -132,6 +122,7 @@ require("lazy").setup({
     build = ':TSUpdate',
     dependencies = {
       'nvim-treesitter/nvim-treesitter-textobjects',
+      'nvim-treesitter/nvim-treesitter-context',
       'p00f/nvim-ts-rainbow'
     }
   },
