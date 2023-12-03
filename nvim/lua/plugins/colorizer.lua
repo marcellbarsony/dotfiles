@@ -37,7 +37,7 @@ require 'colorizer'.setup {
   },
 }
 
--- Use the `default_options` as the second parameter, which uses
+-- Use `default_options` as the second parameter, which uses
 -- `foreground` for every mode. This is the inverse of the previous
 -- setup configuration.
 require 'colorizer'.setup {
@@ -63,16 +63,16 @@ require 'colorizer'.setup {
 -- Exclude some filetypes from highlighting by using `!`
 require 'colorizer'.setup {
   filetypes = {
-    '*'; -- Highlight all files, but customize some others.
-    '!vim'; -- Exclude vim from highlighting.
+    '*'; -- Highlight all files, but customize some others
+    '!vim'; -- Exclude vim from highlighting
   -- Exclusion Only makes sense if '*' is specified!
   },
 }
 
--- Alwyas update the color values in cmp_docs even if it not focused
+-- Update the color values in cmp_docs even if it not focused
 require 'colorizer'.setup {
   filetypes = {
-    '*'; -- Highlight all files, but customize some others.
+    '*'; -- Highlight all files, but customize some others
     cmp_docs = {always_update = true}
   },
 }

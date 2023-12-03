@@ -8,7 +8,7 @@ local mason_registry = require("mason-registry")
 
 -- CodeLLDB
 -- https://github.com/simrat39/rust-tools.nvim/wiki/Debugging
-local extension_path = vim.env.HOME .. '/.local/share/nvim/mason/packages/codelldb/extension/'
+local extension_path = vim.env.HOME .. "/.local/share/nvim/mason/packages/codelldb/extension/"
 local codelldb_path = extension_path .. "adapter/codelldb"
 local liblldb_path = extension_path .. "lldb/lib/liblldb.so"
 
@@ -25,7 +25,6 @@ rust_tools.setup({
   -- Server
   -- https://github.com/simrat39/rust-tools.nvim#setup
   server = {
-    capabilities = require("cmp_nvim_lsp").default_capabilities(),
     on_attach = function(_, bufnr)
       vim.keymap.set("n", "<Leader>ra", rust_tools.hover_actions.hover_actions, { buffer = bufnr })
       vim.keymap.set("n", "<Leader>rg", rust_tools.code_action_group.code_action_group, { buffer = bufnr })

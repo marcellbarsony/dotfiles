@@ -17,7 +17,7 @@ local options = {
   more=true,
   showtabline = 1,
   shiftwidth = 2,
-  textwidth = 100,
+  textwidth = 150,
   --virtualedit = all,
   wrap = false,
 

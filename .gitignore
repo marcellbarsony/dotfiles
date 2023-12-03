@@ -4,9 +4,6 @@ Bitwarden CLI/data.json
 # Bpytop
 bpytop/error.log
 
-# Configstore
-configstore/
-
 # Chromium
 chromium/
 

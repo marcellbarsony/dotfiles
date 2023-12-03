@@ -5,7 +5,14 @@
 require'nvim-treesitter.configs'.setup {
   -- Modules
   -- https://github.com/nvim-treesitter/nvim-treesitter#modules
-  ensure_installed = { "javascript", "lua", "markdown", "markdown_inline", "python", "rust" },
+  ensure_installed = {
+    "javascript",
+    "lua",
+    "markdown",
+    "markdown_inline",
+    "python",
+    "rust"
+  },
   sync_install = false,
   auto_install = true,
   ignore_install = { "" },

@@ -1,9 +1,7 @@
 -- lspsaga
 -- https://github.com/glepnir/lspsaga.nvim
 
-local saga = require("lspsaga")
-
-saga.setup({
+require("lspsaga").setup({
   -- Default options
   -- https://github.com/nvimdev/lspsaga.nvim#default-options
   preview = {
@@ -23,14 +21,14 @@ saga.setup({
     min_width = 30,
     force_max_height = false,
     keys = {
-      jump_to = 'p',
-      expand_or_jump = 'o',
-      vsplit = 's',
-      split = 'i',
-      tabe = 't',
-      tabnew = 'r',
-      quit = { 'q', '<ESC>' },
-      close_in_preview = '<ESC>',
+      jump_to = "p",
+      expand_or_jump = "o",
+      vsplit = "s",
+      split = "i",
+      tabe = "t",
+      tabnew = "r",
+      quit = { "q", "<ESC>" },
+      close_in_preview = "<ESC>",
     },
   },
 
@@ -71,8 +69,8 @@ saga.setup({
   -- https://github.com/nvimdev/lspsaga.nvim#lspasga-hover_doc
   hover = {
     max_width = 0.6,
-    open_link = 'gx',
-    open_browser = '!firefox',
+    open_link = "gx",
+    open_browser = "!firefox",
   },
 
   -- :Lspsaga diagnostic_jump_next
@@ -92,10 +90,10 @@ saga.setup({
     border_follow = true,
     extend_relatedInformation = false,
     keys = {
-      exec_action = 'o',
-      quit = 'q',
-      expand_or_jump = '<CR>',
-      quit_in_show = { 'q', '<ESC>' },
+      exec_action = "o",
+      quit = "q",
+      expand_or_jump = "<CR>",
+      quit_in_show = { "q", "<ESC>" },
     },
   },
 
@@ -174,7 +172,7 @@ saga.setup({
     code_action = "󱐋",
     incoming = "󰏷 ",
     outgoing = "󰏻 ",
-    hover = ' ',
+    hover = " ",
     kind = {},
   },
 })

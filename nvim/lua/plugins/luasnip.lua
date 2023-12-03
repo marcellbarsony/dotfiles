@@ -31,7 +31,7 @@ ls.setup({
 -- https://github.com/L3MON4D3/LuaSnip/#keymaps
 
 -- Reload snippets <Ctrl-u>
-vim.keymap.set({ "i", "s" }, "<c-u>", '<cmd>source ~/.config/nvim/lua/user/plugins/luasnip.lua<CR>')
+vim.keymap.set({ "i", "s" }, "<c-u>", "<cmd>source ~/.config/nvim/lua/user/plugins/luasnip.lua<CR>")
 
 -- Jump (forward)
 vim.keymap.set({ "i", "s" }, "<c-l>", function()
