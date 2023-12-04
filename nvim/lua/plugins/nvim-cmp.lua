@@ -5,12 +5,6 @@
 local cmp = require'cmp'
 local luasnip = require("luasnip")
 
--- SuperTab (check backspace)
-local check_backspace = function()
-  local col = vim.fn.col "." - 1
-  return col == 0 or vim.fn.getlin("."):sub(col, col):match "%s"
-end
-
 -- Kind icons
 -- https://github.com/hrsh7th/nvim-cmp/wiki/Menu-Appearance#how-to-add-visual-studio-code-codicons-to-the-menu
 local kind_icons = {
@@ -41,7 +35,14 @@ local kind_icons = {
   Variable = "󰫧",
 }
 
+-- SuperTab (check backspace)
+-- local check_backspace = function()
+--   local col = vim.fn.col "." - 1
+--   return col == 0 or vim.fn.getlin("."):sub(col, col):match "%s"
+-- end
+
 -- Luasnip (Tab)
+-- https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
 local has_words_before = function()
   unpack = unpack or table.unpack
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))

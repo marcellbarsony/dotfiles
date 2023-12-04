@@ -4,12 +4,12 @@
 -- Lspconfig
 -- https://github.com/williamboman/mason-lspconfig.nvim#configuration
 require("mason-lspconfig").setup({
-  -- Bootstrap lsp servers
+  -- Bootstrap LSP servers
   ensure_installed = {
     "lua_ls", -- Lua
     "rust_analyzer", -- Rust
-    "tsserver", -- Typescript / Javascript
-    -- "pyright", -- requires npm
+    "tsserver", -- Typescript / JavaScript
+    -- "pyright", -- Python (requires npm)
   },
   automatic_installation = false,
   handlers = nil,
