@@ -1,5 +1,5 @@
--- Attributes
--- https://doc.rust-lang.org/reference/attributes.html
+-- Rust snippets [Attributes]
+-- Docs: https://doc.rust-lang.org/reference/attributes.html
 
 -- SHORTHANDS -- {{{
 local ls = require("luasnip")

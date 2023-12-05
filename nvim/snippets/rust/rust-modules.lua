@@ -1,4 +1,4 @@
--- Rust snippets
+-- Rust snippets [Modules]
 -- Docs: https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
 
 -- SHORTHANDS -- {{{
@@ -40,10 +40,10 @@ ls.add_snippets("rust", {
     fmt("{};\n{}"
       , {
       c(1, {
-        -- Relative path
-        sn(nil, {i(1), i(2, "module::function()")}),
         -- Absolute path
         sn(nil, {i(1), t"crate::", i(2, "module::function()")}),
+        -- Relative path
+        sn(nil, {i(1), i(2, "module::function()")}),
         -- Parent module
         sn(nil, {i(1), t"super::", i(2, "module::function()")}),
       }),

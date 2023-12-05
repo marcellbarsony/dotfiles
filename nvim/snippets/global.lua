@@ -52,8 +52,8 @@ ls.add_snippets("all", {
     "lorem",
     fmt("{}", {
     c(1, {
-		  t{"Lorem ipsum dolor sit amet, consectetur adipiscing elit.", ""},
-		  t{"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      t{"Lorem ipsum dolor sit amet, consectetur adipiscing elit.", ""},
+      t{"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "Proin nec condimentum massa. Quisque tempus tempus malesuada.",
         "Vivamus justo leo, mattis vel viverra ac, mattis sit amet ex.",
         "Maecenas vel scelerisque leo. Duis in congue urna. Praesent non est",
@@ -71,7 +71,7 @@ ls.add_snippets("all", {
   s( -- pwd
     "pwd",
     fmt("{}", {
-		f(function()
+    f(function()
       return os.getenv("PWD")
     end)
     })
@@ -80,10 +80,10 @@ ls.add_snippets("all", {
     "time",
     fmt("{}", {
     c(1, {
-		  f(function()
+      f(function()
         return os.date("%I:%M %p")
       end),
-		  f(function()
+      f(function()
         return os.date("%H:%M")
       end),
       }),

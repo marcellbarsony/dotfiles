@@ -1,4 +1,4 @@
--- Rust snippets [Loops]
+-- Python snippets [Context]
 -- Docs: https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
 
 -- SHORTHANDS -- {{{
@@ -34,64 +34,28 @@ end
 -- }}}
 
 -- SNIPPETS -- {{{
-ls.add_snippets("rust", {
-  s( -- for
-   "for",
-    fmt("for {} in {} {{\n" ..
-      "\t{}\n"..
-      "}}\n"..
-      "{}"
-      , {
-      i(1, "item"),
-      i(2, "iterator"),
-      i(3, "// ..."),
-      i(4),
-      }
-    )
-  ),
-  s( -- loop
-    "loop",
-    fmt("{}\n" ..
-      "{}"
-      , {
-      c(1, {
-        d(1, function()
-          return sn(nil, {
-            i(1),
-            t({"'"}),
-            i(2, "label"),
-            t({" loop {", "\t"}),
-            i(3, "// ..."),
-            t({"", "\tbreak '"}),
-            same(2),
-            t({";", "}"}),
-          })
-        end),
-        d(1, function()
-          return sn(nil, {
-            i(1),
-            t({"loop {", "\t"}),
-            i(2, "// ..."),
-            t({"", "}"}),
-          })
-        end),
+ls.add_snippets("python", {
+  s( -- with
+    "with",
+    fmt('with open({}, "{}") as {}:\n' ..
+      '\t{} = {}.{}(){}', {
+      i(1, "file"),
+      c(2, {
+        t{"r"},
+        t{"w"},
+        t{"rw"},
+        t{"wb"},
+        t{"rb"},
+        }),
+      i(3, "file"),
+      i(4, "content"),
+      same(3),
+      c(5, {
+        t{"read"},
+        t{"write"},
       }),
-      i(2),
-      }
-    )
-  ),
-  s( -- while
-    "while",
-    fmt("while {} {{\n" ..
-      "\t{}\n"..
-      "}}\n"..
-      "{}"
-      , {
-      i(1, "bool_condition"),
-      i(2, "// ..."),
-      i(3),
-      }
-    )
+      i(0),
+    })
   ),
 })
---}}}
+-- }}}

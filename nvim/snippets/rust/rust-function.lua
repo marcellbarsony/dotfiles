@@ -1,6 +1,6 @@
--- Functions
--- https://doc.rust-lang.org/reference/items/functions.html
--- https://doc.rust-lang.org/book/ch03-03-how-functions-work.html
+-- Rust snippets [Functions]
+-- Docs: https://doc.rust-lang.org/reference/items/functions.html
+-- Book: https://doc.rust-lang.org/book/ch03-03-how-functions-work.html
 
 -- SHORTHANDS -- {{{
 local ls = require("luasnip")

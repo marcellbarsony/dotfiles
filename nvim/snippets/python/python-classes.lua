@@ -1,4 +1,4 @@
--- Rust snippets [Loops]
+-- Python snippets
 -- Docs: https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
 
 -- SHORTHANDS -- {{{
@@ -34,64 +34,25 @@ end
 -- }}}
 
 -- SNIPPETS -- {{{
-ls.add_snippets("rust", {
-  s( -- for
-   "for",
-    fmt("for {} in {} {{\n" ..
-      "\t{}\n"..
-      "}}\n"..
-      "{}"
+ls.add_snippets("python", {
+  s( -- class
+    "class",
+    fmt("class {}({}):\n\n" ..
+      '\t"""Docstring for {}"""\n\n'..
+      '\tdef __init__(self, {}):\n'..
+      '\t\t{}({}, self).__init__()\n' ..
+      '\t\tself.arg = {}{}'
       , {
-      i(1, "item"),
-      i(2, "iterator"),
-      i(3, "// ..."),
-      i(4),
-      }
-    )
-  ),
-  s( -- loop
-    "loop",
-    fmt("{}\n" ..
-      "{}"
-      , {
-      c(1, {
-        d(1, function()
-          return sn(nil, {
-            i(1),
-            t({"'"}),
-            i(2, "label"),
-            t({" loop {", "\t"}),
-            i(3, "// ..."),
-            t({"", "\tbreak '"}),
-            same(2),
-            t({";", "}"}),
-          })
-        end),
-        d(1, function()
-          return sn(nil, {
-            i(1),
-            t({"loop {", "\t"}),
-            i(2, "// ..."),
-            t({"", "}"}),
-          })
-        end),
-      }),
-      i(2),
-      }
-    )
-  ),
-  s( -- while
-    "while",
-    fmt("while {} {{\n" ..
-      "\t{}\n"..
-      "}}\n"..
-      "{}"
-      , {
-      i(1, "bool_condition"),
-      i(2, "// ..."),
-      i(3),
+      i(1, "ClassName"),
+      i(2, "object"),
+      same(1),
+      i(3, "arg"),
+      i(4, "super"),
+      same(1),
+      same(3),
+      i(0),
       }
     )
   ),
 })
---}}}
+-- }}}

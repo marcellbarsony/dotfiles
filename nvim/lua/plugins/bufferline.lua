@@ -7,6 +7,7 @@ local bufferline = require('bufferline')
 bufferline.setup {
   options = {
     mode = "buffers",
+    style_preset = bufferline.style_preset.default, -- or bufferline.style_preset.minimal,
     themable = true,
 
     -- Bufferline
