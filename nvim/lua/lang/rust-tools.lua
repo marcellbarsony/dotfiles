@@ -2,6 +2,7 @@
 -- https://github.com/simrat39/rust-tools.nvim
 -- https://github.com/vadimcn/codelldb
 -- https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/
+-- :help rust-tools.txt
 
 local rust_tools = require("rust-tools")
 local mason_registry = require("mason-registry")
@@ -26,6 +27,7 @@ rust_tools.setup({
   server = {
     -- Keymaps
     -- https://github.com/simrat39/rust-tools.nvim#setup
+    -- :help rust-tools-rust-tools.nvim-setup
     on_attach = function(_, bufnr)
       vim.keymap.set("n", "<Leader>ra", rust_tools.hover_actions.hover_actions, { buffer = bufnr })
       vim.keymap.set("n", "<Leader>rf", ":lua vim.lsp.buf.format()<CR>", { buffer = bufnr })
@@ -34,7 +36,7 @@ rust_tools.setup({
     -- Settings
     -- https://github.com/simrat39/rust-tools.nvim/wiki/Server-Configuration-Schema
     settings = {
-      ['rust-analyzer'] = {
+      ["rust-analyzer"] = {
         imports = {
           granularity = {
               group = "module",
@@ -42,6 +44,7 @@ rust_tools.setup({
           prefix = "self",
         },
         cargo = {
+          allfeatures = true,
           buildScripts = {
               enable = true,
           },
@@ -55,6 +58,7 @@ rust_tools.setup({
 
   -- Tools
   -- https://github.com/simrat39/rust-tools.nvim#configuration
+  -- :help rust-tools-rust-tools.nvim-configuration
   tools = {
     executor = require("rust-tools.executors").termopen,
     on_initialized = nil,

@@ -3,7 +3,6 @@
 -- https://neovim.io/doc/user/quickref.html
 
 local options = {
-
   allowrevins = false,
   autochdir = true,
   backspace = 'indent,eol,start',
@@ -114,7 +113,6 @@ local options = {
   -- Update
   timeoutlen = 250, -- which-key.nvim
   updatetime = 200,
-
 }
 
 vim.opt.shortmess:append "c"

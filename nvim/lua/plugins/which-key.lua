@@ -10,8 +10,6 @@ require("which-key").setup {
       enabled = false, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
       suggestions = 100, -- how many suggestions should be shown in the list?
     },
-  -- the presets plugin, adds help for a bunch of default keybindings in Neovim
-  -- No actual key bindings are created
     presets = {
       operators = true, -- adds help for operators like d, y, ... and registers them for motion / text object completion
       motions = true, -- adds help for motions
@@ -22,8 +20,6 @@ require("which-key").setup {
       g = true, -- bindings for prefixed with g
     },
   },
-  -- add operators that will trigger motion and text object completion
-  -- to enable all native operators, set the preset / operators plugin above
   operators = { gc = "Comments" },
   key_labels = {
     -- override the label used to display some keys. It doesn't effect WK in any other way.
@@ -92,7 +88,6 @@ local opts = {
 
 
 local mappings = {
-
   -- Normal mode
   ['['] = { name = "" },
   [']'] = { name = "" },
@@ -104,9 +99,7 @@ local mappings = {
 
   -- Leader
   ["<leader>"] = {
-
     name = "Leader",
-
     -- Buffer
     b = {
       name = "Buffer",

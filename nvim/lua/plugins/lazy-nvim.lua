@@ -71,9 +71,12 @@ require("lazy").setup({
   'RaafatTurki/hex.nvim',
 
   -- Indent lines
-  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+  { "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    opts = {}
+  },
 
-  -- LSP
+  -- LSP (Mason)
   'neovim/nvim-lspconfig',
   { 'williamboman/mason.nvim',
     build = ":MasonUpdate",

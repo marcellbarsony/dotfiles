@@ -19,26 +19,34 @@ require('mason.mason')
 require('mason.mason-lspconfig')
 require('mason.mason-nvim-dap')
 
+-- CMP & Snipppet
+require('plugins.nvim-cmp')
+require('plugins.luasnip')
+
+-- GIT
+require('plugins.gitsigns')
+
 -- Lang
 require('lang.rust-tools')
 require('lang.tsserver')
 
--- Plugins
+-- Navigation
 require('plugins.alpha-nvim')
+require('plugins.oil')
+require('plugins.which-key')
+
+-- Plugins
 require('plugins.autopairs')
 require('plugins.bufferline')
 require('plugins.colorizer')
-require('plugins.gitsigns')
 require('plugins.hex')
 require('plugins.indent-blankline')
 require('plugins.lualine')
-require('plugins.luasnip')
 require('plugins.lsp_lines')
 require('plugins.lspsaga')
-require('plugins.nvim-cmp')
-require('plugins.oil')
+
+-- Telescope
 require('plugins.telescope')
-require('plugins.which-key')
 
 -- Treesitter
 require('treesitter.treesitter')

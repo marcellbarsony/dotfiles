@@ -8,7 +8,7 @@ require("dapui").setup({
   -- Controls
   controls = {
     element = "repl",
-    enabled = true,
+    enabled = false,
     icons = {
       disconnect = "",
       pause = "",
@@ -54,13 +54,13 @@ require("dapui").setup({
           id = "scopes",
           size = 0.55
         },{
-          id = "breakpoints",
+          id = "watches",
           size = 0.15
         }, {
           id = "stacks",
           size = 0.15
         }, {
-          id = "watches",
+          id = "breakpoints",
           size = 0.15
         }
       },
@@ -70,14 +70,14 @@ require("dapui").setup({
       elements = {
         {
           id = "console",
-          size = 0.6
+          size = 0.5
         }, {
           id = "repl",
-          size = 0.4
+          size = 0.5
         }
       },
       position = "bottom",
-      size = 7
+      size = 8
     }
   },
 
@@ -96,7 +96,6 @@ require("dapui").setup({
     indent = 1,
     max_value_lines = 100
   }
-
 })
 
 -- [TODO] Neodev.nvim
@@ -114,11 +113,11 @@ require("dapui").setup({
 local dap, dapui = require("dap"), require("dapui")
 
 dap.listeners.after.event_initialized["dapui_config"] = function()
-  dapui.open() -- Open with DAP
+  dapui.open() -- Open DAP UI
 end
 dap.listeners.before.event_terminated["dapui_config"] = function()
-  dapui.close() -- Close when DAP terminated
+  dapui.close() -- Terminate DAP UI
 end
 dap.listeners.before.event_exited["dapui_config"] = function()
-  dapui.close() -- Close on exit
+  dapui.close() -- Close DAP UI
 end

@@ -27,8 +27,8 @@ bufferline.setup {
 
     -- Icons
     indicator = {
-        icon = '▎',
-        style = 'none',
+        icon = "▎",
+        style = "none",
     },
     numbers = "none",
     show_buffer_icons = true,

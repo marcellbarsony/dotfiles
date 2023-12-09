@@ -182,7 +182,6 @@ cmp.setup({
   experimental = {
     ghost_text = true,
   }
-
 })
 
 -- Specific filetypes
