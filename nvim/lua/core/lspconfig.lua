@@ -1,12 +1,14 @@
 -- nvim-lspconfig
 -- https://github.com/neovim/nvim-lspconfig
 
--- Additional capabilities by nvim-cmp
--- https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
+-- LSP config
 local lspconfig = require('lspconfig')
 
--- Language servers
+-- Additional capabilities by nvim-cmp
+-- https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion#nvim-cmp
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+-- LSP servers
 local servers = {
   'lua_ls',
   'pyright',

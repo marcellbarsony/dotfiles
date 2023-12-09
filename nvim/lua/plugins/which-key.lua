@@ -158,6 +158,7 @@ local mappings = {
     r = {
       name = "Rust",
       a = { "Action [Hover]" },
+      f = { "Format" },
       g = { "Action [Group]" },
     },
 

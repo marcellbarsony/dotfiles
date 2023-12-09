@@ -14,8 +14,8 @@ local liblldb_path = extension_path .. "lldb/lib/liblldb.so"
 
 rust_tools.setup({
   -- DAP (CodeLLDB)
-  -- https://github.com/simrat39/rust-tools.nvim/wiki/Debugging
   dap = {
+    -- https://github.com/simrat39/rust-tools.nvim/wiki/Debugging
     adapter = require("rust-tools.dap").get_codelldb_adapter(
       codelldb_path,
       liblldb_path
@@ -23,12 +23,34 @@ rust_tools.setup({
   },
 
   -- Server
-  -- https://github.com/simrat39/rust-tools.nvim#setup
   server = {
+    -- Keymaps
+    -- https://github.com/simrat39/rust-tools.nvim#setup
     on_attach = function(_, bufnr)
       vim.keymap.set("n", "<Leader>ra", rust_tools.hover_actions.hover_actions, { buffer = bufnr })
+      vim.keymap.set("n", "<Leader>rf", ":lua vim.lsp.buf.format()<CR>", { buffer = bufnr })
       vim.keymap.set("n", "<Leader>rg", rust_tools.code_action_group.code_action_group, { buffer = bufnr })
     end,
+    -- Settings
+    -- https://github.com/simrat39/rust-tools.nvim/wiki/Server-Configuration-Schema
+    settings = {
+      ['rust-analyzer'] = {
+        imports = {
+          granularity = {
+              group = "module",
+          },
+          prefix = "self",
+        },
+        cargo = {
+          buildScripts = {
+              enable = true,
+          },
+        },
+        procMacro = {
+          enable = true
+        },
+      }
+    }
   },
 
   -- Tools
@@ -37,6 +59,18 @@ rust_tools.setup({
     executor = require("rust-tools.executors").termopen,
     on_initialized = nil,
     reload_workspace_from_cargo_toml = true,
+    inlay_hints = {
+      auto = true,
+      only_current_line = false,
+      show_parameter_hints = true,
+      parameter_hints_prefix = "<- ",
+      other_hints_prefix = "=> ",
+      max_len_align = false,
+      max_len_align_padding = 1,
+      right_align = false,
+      right_align_padding = 7,
+      highlight = "Comment",
+    },
     hover_actions = {
       auto_focus = true,
       border = {
@@ -52,17 +86,66 @@ rust_tools.setup({
       max_width = nil,
       max_height = nil,
     },
-    inlay_hints = {
-      auto = true,
-      only_current_line = false,
-      show_parameter_hints = true,
-      parameter_hints_prefix = "<- ",
-      other_hints_prefix = "=> ",
-      max_len_align = false,
-      max_len_align_padding = 1,
-      right_align = false,
-      right_align_padding = 7,
-      highlight = "Comment",
+    crate_graph = {
+      backend = "x11",
+      output = nil,
+      full = true,
+      enabled_graphviz_backends = {
+        "bmp",
+        "cgimage",
+        "canon",
+        "dot",
+        "gv",
+        "xdot",
+        "xdot1.2",
+        "xdot1.4",
+        "eps",
+        "exr",
+        "fig",
+        "gd",
+        "gd2",
+        "gif",
+        "gtk",
+        "ico",
+        "cmap",
+        "ismap",
+        "imap",
+        "cmapx",
+        "imap_np",
+        "cmapx_np",
+        "jpg",
+        "jpeg",
+        "jpe",
+        "jp2",
+        "json",
+        "json0",
+        "dot_json",
+        "xdot_json",
+        "pdf",
+        "pic",
+        "pct",
+        "pict",
+        "plain",
+        "plain-ext",
+        "png",
+        "pov",
+        "ps",
+        "ps2",
+        "psd",
+        "sgi",
+        "svg",
+        "svgz",
+        "tga",
+        "tiff",
+        "tif",
+        "tk",
+        "vml",
+        "vmlz",
+        "wbmp",
+        "webp",
+        "xlib",
+        "x11",
+      },
     },
   },
 })

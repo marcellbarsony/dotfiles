@@ -37,6 +37,7 @@ nvim/lazy-lock.json
 nvim/lua/.luarc.json
 
 # OBS
+obs-studio/
 obs-studio/basic/
 obs-studio/logs/
 obs-studio/plugin_config/

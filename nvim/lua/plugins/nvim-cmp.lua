@@ -42,7 +42,6 @@ local kind_icons = {
 -- end
 
 -- Luasnip (Tab)
--- https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
 local has_words_before = function()
   unpack = unpack or table.unpack
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -67,8 +66,13 @@ cmp.setup({
       side_padding = 0,
       winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
     },
-    -- documentation = cmp.config.window.bordered(),
-    -- completion = cmp.config.window.bordered(),
+    -- -- Border
+    -- documentation = cmp.config.window.bordered {
+    --   winhighlight = 'Normal:CmpPmenu,CursorLine:PmenuSel,Search:None'
+    -- },
+    -- completion = cmp.config.window.bordered({
+    --   winhighlight = 'Normal:CmpPmenu,CursorLine:PmenuSel,Search:None'
+    -- }),
   },
 
   -- Minimum completion length
@@ -83,7 +87,8 @@ cmp.setup({
   -- Mapping
   mapping = {
 
-    ['<CR>'] = cmp.mapping.confirm({ select = false }), -- Accept selected item. 'false' confirms explicitly selected items.
+    -- Accept selected
+    ['<CR>'] = cmp.mapping.confirm({ select = false }),
 
     -- Luasnips
     -- https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
@@ -150,7 +155,7 @@ cmp.setup({
 
   -- Sources
   sources = cmp.config.sources({
-    { name = 'luasnip', max_item_count = 5 },
+    { name = 'luasnip', max_item_count = 5, priority_weight = 1 },
     { name = 'nvim_lsp', max_item_count = 100 },
     { name = 'buffer', keyword_length = 3 , max_item_count = 3 },
   }),
@@ -180,7 +185,7 @@ cmp.setup({
 
 })
 
--- Configuration for specific filetype
+-- Specific filetypes
 -- https://github.com/hrsh7th/nvim-cmp#setup
 cmp.setup.filetype('gitcommit', {
   sources = cmp.config.sources({

@@ -46,8 +46,8 @@ require("lazy").setup({
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-cmdline',
       'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-path',
       'hrsh7th/cmp-nvim-lsp-signature-help',
+      'hrsh7th/cmp-path',
     },
   },
 
@@ -79,7 +79,6 @@ require("lazy").setup({
     build = ":MasonUpdate",
     dependencies = {
       'williamboman/mason-lspconfig.nvim',
-      'jay-babu/mason-null-ls.nvim',
       'jay-babu/mason-nvim-dap.nvim',
       'onsails/lspkind.nvim',
     },
@@ -90,9 +89,6 @@ require("lazy").setup({
 
   -- LSP Saga
   'glepnir/lspsaga.nvim',
-
-  -- Null-ls
-  'jose-elias-alvarez/null-ls.nvim',
 
   -- Oil.nvim
   'stevearc/oil.nvim',

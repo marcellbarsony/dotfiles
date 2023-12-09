@@ -17,7 +17,6 @@ require('dap.nvim-dap-vtxt')
 -- Mason
 require('mason.mason')
 require('mason.mason-lspconfig')
-require('mason.mason-null-ls')
 require('mason.mason-nvim-dap')
 
 -- Lang
@@ -36,7 +35,6 @@ require('plugins.lualine')
 require('plugins.luasnip')
 require('plugins.lsp_lines')
 require('plugins.lspsaga')
-require('plugins.null-ls')
 require('plugins.nvim-cmp')
 require('plugins.oil')
 require('plugins.telescope')
