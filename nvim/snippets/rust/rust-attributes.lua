@@ -37,8 +37,14 @@ end
 ls.add_snippets("rust", {
   s(
     "#[attr]",
-    fmt("#[{}\n{}", {
+    fmt("#[{}{}", {
       c(1, {
+        d(1, function() -- derive-debug
+          return sn(nil, {
+            i(1),
+            t({"derive(Debug)]"}),
+          })
+        end),
         d(1, function() -- test
           return sn(nil, {
             i(1),
