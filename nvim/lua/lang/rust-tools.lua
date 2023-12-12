@@ -44,7 +44,6 @@ rust_tools.setup({
           prefix = "self",
         },
         cargo = {
-          allfeatures = true,
           buildScripts = {
               enable = true,
           },

@@ -42,7 +42,7 @@ map("", "<right>", "<nop>")
 map("n", "<Tab>", ":bn<CR>", { desc = "Buffer [Next]" })
 map("n", "<S-Tab>", ":bp<CR>", { desc = "Buffer [Prev]" })
 map("n", "<C-'>", ":b#<CR>", { desc = "Buffer [To last]" })
-map("n", "<C-q>", ":bdelete<CR>", { desc = "Buffer [Delete]" })
+map("n", "<C-q>", ":bdelete<CR>", { desc = "Buffer [Delete]" }) -- :bd!<CR>
 map("n", "<leader>bv", ":vsplit<CR>", { desc = "Vertical" })
 map("n", "<leader>bh", ":split<CR>" , { desc = "Horizontal" })
 map("n", "<leader>bs", "<C-w>x", { desc = "Swap" })
@@ -173,25 +173,25 @@ map("n", "<leader>tm", ":Telescope man_pages<CR>", { desc = "Man" })
 map("n", "<leader>tp", ":Telescope pickers<CR>", { desc = "Pickers" })
 map("n", "<leader>tt", ":Telescope<CR>", { desc = "Telescope" })
 map("n", "<leader>tx", ":Telescope treesitter<CR>", { desc = "Treesitter symbols" })
--- DAP
+-- Telescope-DAP
 map("n", "<leader>tdc", ":lua require'telescope'.extensions.dap.commands{}<CR>", { desc = "Commands"})
 map("n", "<leader>tdd", ":lua require'telescope'.extensions.dap.configurations{}<CR>", { desc = "Config" })
 map("n", "<leader>tdb", ":lua require'telescope'.extensions.dap.list_breakpoints{}<CR>", { desc = "Breakpoints" })
 map("n", "<leader>tdv", ":lua require'telescope'.extensions.dap.variables{}<CR>", { desc = "Variables" })
 map("n", "<leader>tdf", ":lua require'telescope'.extensions.dap.frames{}<CR>", { desc = "Frames" })
--- Files
+-- Telescope-Files
 map("n", "<leader>tfb", ":Telescope current_buffer_fuzzy_find<CR>", { desc = "Find [Buffer]" })
 map("n", "<leader>tff", ":Telescope find_files<CR>", { desc = "Find [Files]" }) -- Current directory
--- Git
+-- Telescope-Git
 map("n", "<leader>tuc",":Telescope git_commits<CR>", { desc = "Commits" })
 map("n", "<leader>tub",":Telescope git_branches<CR>", { desc = "Branches" })
 map("n", "<leader>tuf",":Telescope git_files<CR>", { desc = "Files" })
 map("n", "<leader>tus",":Telescope git_status<CR>", { desc = "Status" })
--- History
+-- Telescope-History
 map("n", "<leader>thf", ":Telescope oldfiles<CR>", { desc = "Files" })
 map("n", "<leader>ths", ":Telescope search_history<CR>", { desc = "Search" })
 map("n", "<leader>thc", ":Telescope command_history<CR>", { desc = "Command" })
--- Vim
+-- Telescope-Vim
 map("n", "<leader>tvc", ":Telescope commands<CR>", { desc = "Commands" })
 map("n", "<leader>tvh", ":Telescope highlights<CR>", { desc = "Highlights" })
 map("n", "<leader>tvk", ":Telescope keymaps<CR>", { desc = "Keymaps" })

@@ -5,7 +5,7 @@ require('plugins.lazy-nvim')
 require('core.autocmd')
 require('core.colors')
 require('core.lspconfig')
-require('core.mappings')
+require('core.keymaps')
 require('core.options')
 
 -- DAP
