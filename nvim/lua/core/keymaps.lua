@@ -39,13 +39,15 @@ map("", "<left>", "<nop>")
 map("", "<right>", "<nop>")
 
 -- Buffers
+map("n", "<leader>ba", "O<ESC>", { desc = "Line [Above]" })
+map("n", "<leader>bb", "o<ESC>", { desc = "Line [Below]" })
+map("n", "<leader>bv", ":vsplit<CR>", { desc = "Buffer [Vertical}" })
+map("n", "<leader>bh", ":split<CR>" , { desc = "Buffer [Horizontal]" })
+map("n", "<leader>bs", "<C-w>x", { desc = "Swap" })
 map("n", "<Tab>", ":bn<CR>", { desc = "Buffer [Next]" })
 map("n", "<S-Tab>", ":bp<CR>", { desc = "Buffer [Prev]" })
 map("n", "<C-'>", ":b#<CR>", { desc = "Buffer [To last]" })
 map("n", "<C-q>", ":bdelete<CR>", { desc = "Buffer [Delete]" }) -- :bd!<CR>
-map("n", "<leader>bv", ":vsplit<CR>", { desc = "Vertical" })
-map("n", "<leader>bh", ":split<CR>" , { desc = "Horizontal" })
-map("n", "<leader>bs", "<C-w>x", { desc = "Swap" })
 map("n", "<C-^>", ":_#<CR>", { desc = "Alternate file" }) -- :help alternate-file
 
 -- Clipboard
@@ -86,8 +88,6 @@ map("n", "<leader>hr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], {
 
 -- Lines
 -- https://vim.fandom.com/wiki/Moving_lines_up_or_down
-map("n", "<leader>ib", "o<ESC>", { desc = "Line [Insert Below]" })
-map("n", "<leader>ia", "O<ESC>", { desc = "Line [Insert Above]" })
 map("n", "<J>", ":move .+1<CR>", { desc = "Line [Move Down]" })
 map("n", "<K>", ":move .-2<CR>", { desc = "Line [Move Up]" })
 map("x", "<J>", ":move '>+1<CR>gv=gv", { desc = "Block [Move Down]" })
@@ -138,11 +138,6 @@ map("n", "<leader>mu", ":MasonUninstallAll<CR>", { desc = "Uninstall all" })
 -- Conflicts with cursor scrolloff
 --map("n", "<C-d>", "<C-d>zz<CR>", { desc = "Page down" })
 --map("n", "<C-u>", "<C-u>zz<CR>", { desc = "Page up" })
-
--- Null-ls
-map("n", "<leader>nl", ":NullLsLog<CR>", { desc = "Log" })
-map("n", "<leader>ni", ":NullLsInfo<CR>", { desc = "Info" })
-map("n", "<leader>nf", ":lua vim.lsp.buf.formatting()<CR>", { desc = "Format" })
 
 -- Oil
 map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })

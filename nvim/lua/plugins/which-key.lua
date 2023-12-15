@@ -115,24 +115,12 @@ local mappings = {
       name = "Highlight",
     },
 
-    -- Insert Line
-    i = {
-      name = "Insert",
-      a = { "Line [Above]" },
-      b = { "Line [Below]" },
-    },
-
     -- Lspsaga
     l = {
       name = "LSP",
       c = {
         name = "Calls"
       },
-    },
-
-    -- Null-ls
-    n = {
-      name = "Null-ls",
     },
 
     -- Mason
