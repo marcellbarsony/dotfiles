@@ -125,16 +125,9 @@ local mappings = {
     -- Lspsaga
     l = {
       name = "LSP",
-      a = { "Code action" },
-      --b = { "Diagnostics [Buffer]" },
-      c = { "Calls" },
-      d = { "Diagnostics [Line]" },
-      f = { "Definition" },
-      k = { "Documentation" },
-      o = { "Outline" },
-      r = { "Rename" },
-      s = { "LSP Lines" },
-      t = { "Terminal" },
+      c = {
+        name = "Calls"
+      },
     },
 
     -- Null-ls
