@@ -93,7 +93,6 @@ local mappings = {
   [']'] = { name = "" },
   g = { name = "Go-To" },
   v = { name = "VISUAL Mode" },
-  y = { name = "Yank" },
   o = { name = "LSPkind outline" },
   u = { name = "Undo" },
 

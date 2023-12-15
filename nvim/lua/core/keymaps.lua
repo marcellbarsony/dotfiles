@@ -51,9 +51,9 @@ map("n", "<C-q>", ":bdelete<CR>", { desc = "Buffer [Delete]" }) -- :bd!<CR>
 map("n", "<C-^>", ":_#<CR>", { desc = "Alternate file" }) -- :help alternate-file
 
 -- Clipboard
-map("n", "<leader>y", "\"+y", { desc = "Yank [Global]" })
-map("v", "<leader>y", "\"+y", { desc = "Yank [Global]" })
-map("n", "<leader>y", "\"+Y", { desc = "Yank [Global]" })
+map("n", "y", "\"+y", { desc = "Yank [Global]" })
+map("v", "y", "\"+y", { desc = "Yank [Global]" })
+map("n", "y", "\"+Y", { desc = "Yank [Global]" })
 --map("n", "<leader>p", "\"_dp", { desc = "Paste" })
 
 -- DAP
