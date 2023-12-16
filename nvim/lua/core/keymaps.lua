@@ -25,7 +25,7 @@ vim.g.maplocalleader = "\\"
 -- Core
 map("n", "<leader>bw", ":wa!<CR>", { desc = "Write all" })
 map("n", "<leader>bx", ":wqa!<CR>", { desc = "Write all & Quit" })
-map("n", "<leader>br", ":source %<CR>", { desc = "Reload [TODO]" })
+--map("n", "<leader>br", ":source<CR>", { desc = "Reload [TODO]" })
 
 -- Alpha
 map("n", "<leader>pa", ":Alpha<CR>", { desc = "Alpha" })
@@ -39,9 +39,9 @@ map("", "<right>", "<nop>")
 -- Buffers
 map("n", "<leader>ba", "O<ESC>", { desc = "Line [Above]" })
 map("n", "<leader>bb", "o<ESC>", { desc = "Line [Below]" })
-map("n", "<leader>bv", ":vsplit<CR>", { desc = "Buffer [Vertical}" })
-map("n", "<leader>bh", ":split<CR>" , { desc = "Buffer [Horizontal]" })
-map("n", "<leader>bs", "<C-w>x", { desc = "Swap" })
+map("n", "<leader>bh", ":split<CR>" , { desc = "Split [Horizontal]" })
+map("n", "<leader>bv", ":vsplit<CR>", { desc = "Split [Vertical}" })
+map("n", "<leader>bs", "<C-w>x", { desc = "Split [Swap]" })
 map("n", "<Tab>", ":bn<CR>", { desc = "Buffer [Next]" })
 map("n", "<S-Tab>", ":bp<CR>", { desc = "Buffer [Prev]" })
 map("n", "<C-'>", ":b#<CR>", { desc = "Buffer [To last]" })
@@ -165,8 +165,8 @@ map("n", "<C-A-l>", ":vertical resize +5<CR>", { desc = "Split [Ver -]" }) -- De
 -- Telescope
 -- https://github.com/nvim-telescope/telescope.nvim#vim-pickers
 map("n", "<leader>tb", ":Telescope buffers<CR>", { desc = "Buffers" })
-map("n", "<leader>td", ":Telescope diagnostics<CR>", { desc = "Diagnostics" })
 map("n", "<leader>tg", ":Telescope live_grep<CR>", { desc = "Grep" })
+map("n", "<leader>tk", ":Telescope diagnostics<CR>", { desc = "Diagnostics" })
 map("n", "<leader>tm", ":Telescope man_pages<CR>", { desc = "Man" })
 map("n", "<leader>tt", ":Telescope<CR>", { desc = "Telescope" })
 map("n", "<leader>tx", ":Telescope treesitter<CR>", { desc = "Treesitter symbols" })
