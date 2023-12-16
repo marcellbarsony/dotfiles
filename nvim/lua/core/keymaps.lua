@@ -23,13 +23,12 @@ vim.g.mapleader = "\\"
 vim.g.maplocalleader = "\\"
 
 -- Core
-map("n", "<leader>wb", ":w!<CR>", { desc = "Write buffer" })
-map("n", "<leader>wa", ":wa!<CR>", { desc = "Write all" })
-map("n", "<leader>wq", ":wqa!<CR>", { desc = "Write all & Quit" })
-map("n", "<leader>r", ":source %<CR>", { desc = "Reload [TODO]" })
+map("n", "<leader>bw", ":wa!<CR>", { desc = "Write all" })
+map("n", "<leader>bx", ":wqa!<CR>", { desc = "Write all & Quit" })
+map("n", "<leader>br", ":source %<CR>", { desc = "Reload [TODO]" })
 
 -- Alpha
-map("n", "<leader>a", ":Alpha<CR>", { desc = "Alpha" })
+map("n", "<leader>pa", ":Alpha<CR>", { desc = "Alpha" })
 
 -- Arrow keys
 map("", "<up>", "<nop>")
@@ -85,6 +84,9 @@ map("n", "<leader>ub", ":Gitsigns toggle_current_line_blame<CR>", { desc = "Blam
 map("n", "<leader>hc", ":nohl<CR>", { desc = "Clear" })
 map("n", "<leader>hr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace" })
 
+-- Lazy
+map("n", "<leader>pl", ":Lazy<CR>", { desc = "Lazy" })
+
 -- Lines
 -- https://vim.fandom.com/wiki/Moving_lines_up_or_down
 map("n", "<J>", ":move .+1<CR>", { desc = "Line [Move Down]" })
@@ -127,11 +129,11 @@ map("n",         "gd", ":Lspsaga goto_definition<CR>", { desc = "Definition [Jum
 --map("n", "<leader>lt", ":Lspsaga open_floaterm<CR>", { desc = "Floaterm" })
 
 -- Mason
-map("n", "<leader>mc", ":checkhealth mason<CR>", { desc = "Health" })
-map("n", "<leader>mh", ":h mason<CR>", { desc = "Help" })
-map("n", "<leader>ml", ":MasonLog<CR>", { desc = "Log" })
-map("n", "<leader>mm", ":Mason<CR>", { desc = "Mason" })
-map("n", "<leader>mu", ":MasonUninstallAll<CR>", { desc = "Uninstall all" })
+map("n", "<leader>pmc", ":checkhealth mason<CR>", { desc = "Health" })
+map("n", "<leader>pmh", ":h mason<CR>", { desc = "Help" })
+map("n", "<leader>pml", ":MasonLog<CR>", { desc = "Log" })
+map("n", "<leader>pmm", ":Mason<CR>", { desc = "Mason" })
+map("n", "<leader>pmu", ":MasonUninstallAll<CR>", { desc = "Uninstall all" })
 
 -- Navigation
 -- Conflicts with cursor scrolloff

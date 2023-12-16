@@ -125,16 +125,18 @@ local mappings = {
       },
     },
 
-    -- Mason
-    m = {
-      name = "Mason",
+    -- Plugins
+    p = {
+      name = "Plugins",
+      m = { 
+        name = "Mason"
+      },
     },
 
     -- Rust
     r = {
       name = "Rust",
       a = { "Action [Hover]" },
-      f = { "Format" },
       g = { "Action [Group]" },
     },
 
@@ -156,11 +158,6 @@ local mappings = {
     -- Venv (Python)
     v = {
       name = "PyVenv",
-    },
-
-    -- Write
-    w = {
-      name = "Write",
     },
   }
 }

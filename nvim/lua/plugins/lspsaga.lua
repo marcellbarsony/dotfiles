@@ -58,7 +58,7 @@ require("lspsaga").setup({
       vsplit = "<C-c>v",
       split = "<C-c>i",
       tabe = "<C-c>t",
-      tabnew = '<C-c>n',
+      tabnew = "<C-c>n",
       quit = "q",
       close = "<C-c>k"
     }
@@ -69,7 +69,7 @@ require("lspsaga").setup({
   -- https://nvimdev.github.io/lspsaga/diagnostic/
   diagnostic = {
     show_code_action = true,
-    show_layout = 'float',
+    show_layout = "float",
     show_normal_height = 10,
     jump_num_shortcut = true,
     max_width = 0.8,
