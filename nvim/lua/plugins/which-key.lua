@@ -114,11 +114,14 @@ local mappings = {
       name = "Highlight",
     },
 
-    -- Lspsaga
+    -- LSP
     l = {
       name = "LSP",
       c = {
         name = "Calls"
+      },
+      h = {
+        name = "Help"
       },
     },
 

@@ -27,7 +27,6 @@ map("n", "<leader>wb", ":w!<CR>", { desc = "Write buffer" })
 map("n", "<leader>wa", ":wa!<CR>", { desc = "Write all" })
 map("n", "<leader>wq", ":wqa!<CR>", { desc = "Write all & Quit" })
 map("n", "<leader>r", ":source %<CR>", { desc = "Reload [TODO]" })
---map("n", "<leader>q", ":q<CR>", { desc = "Quit" })
 
 -- Alpha
 map("n", "<leader>a", ":Alpha<CR>", { desc = "Alpha" })
@@ -93,10 +92,11 @@ map("n", "<K>", ":move .-2<CR>", { desc = "Line [Move Up]" })
 map("x", "<J>", ":move '>+1<CR>gv=gv", { desc = "Block [Move Down]" })
 map("x", "<K>", ":move '<-2<CR>gv=gv", { desc = "Block [Move Up]" })
 
--- LSP
-map("n", "<leader>li", ":LspInfo<CR>", { desc = "Info" })
-map("n", "<leader>lh", ":help lspconfig.txt<CR>", { desc = "Help" })
-map("n", "<leader>ll", ":LspLog<CR>", { desc = "Log" })
+-- LSP help
+map("n", "<leader>lhi", ":LspInfo<CR>", { desc = "Info" })
+map("n", "<leader>lhc", ":help lspconfig.txt<CR>", { desc = "Config" })
+map("n", "<leader>lhr", ":help lsp-config<CR>", { desc = "Reference" })
+map("n", "<leader>lhl", ":LspLog<CR>", { desc = "Log" })
 
 -- LSP lines
 map("n", "<leader>ld", require("lsp_lines").toggle, { desc = "LSP lines" })
@@ -109,22 +109,21 @@ map("n", "<leader>vf", ":PyLspFindVenvs<CR>", { desc = "Find" })
 map("n", "<leader>vn", ":PyLspCreateVenv<CR>", { desc = "New" })
 map("n", "<leader>vi", ":PyRun -m pip install -r requirements.txt<CR>", { desc = "Install dependencies" })
 
--- Lspsaga
+-- LSP lspsaga
+map("n", "<leader>la", ":Lspsaga code_action<CR>", { desc = "Action"})
+map("n", "<leader>ld", ":Lspsaga peek_definition<CR>", { desc = "Definition" })
 map("n", "<leader>lf", ":Lspsaga finder<CR>", { desc = "Finder"})
-map("n", "<leader>la", ":Lspsaga code_action<CR>", { desc = "Actions"})
-map("n", "<leader>lf", ":Lspsaga peek_definition<CR>", { desc = "Definition" })
-map("n", "<leader>lg", ":Lspsaga peek_type_definition<CR>", { desc = "Definition [Type]" })
-map("n", "<leader>ll", ":Lspsaga open_log<CR>", { desc = "Log"})
-map("n",         "gd", ":Lspsaga goto_definition<CR>", { desc = "Definition [Jump]" })
 map("n", "<leader>lk", ":Lspsaga hover_doc<CR>", { desc = "Documentation" })
 map("n", "<leader>lo", ":Lspsaga outline<CR>", { desc = "Outline" })
 map("n", "<leader>lr", ":Lspsaga rename<CR>", { desc = "Rename"})
+map("n", "<leader>lt", ":Lspsaga peek_type_definition<CR>", { desc = "Type" })
 map("n", "<Leader>lw", ":Lspsaga winbar_toggle<CR>", { desc = "Winbar"})
 map("n", "<Leader>lci", ":Lspsaga incoming_calls<CR>", { desc = "Incoming"})
 map("n", "<Leader>lco", ":Lspsaga outgoing_calls<CR>", { desc = "Outgoing"})
+map("n",         "gd", ":Lspsaga goto_definition<CR>", { desc = "Definition [Jump]" })
+--map("n", "<leader>lb", ":Lspsaga show_buf_diagnostics<CR>", { desc = "Diagnostics [Buffer] "})
 --map("n", "<leader>lk", ":Lspsaga hover_doc ++keep<CR>", { desc = "Documentation" })
 --map("n", "<leader>ls", ":Lspsaga show_line_diagnostics<CR>", { desc = "Diagnostics [Line] "})
---map("n", "<leader>lb", ":Lspsaga show_buf_diagnostics<CR>", { desc = "Diagnostics [Buffer] "})
 --map("n", "<leader>lt", ":Lspsaga open_floaterm<CR>", { desc = "Floaterm" })
 
 -- Mason
@@ -167,7 +166,6 @@ map("n", "<leader>tb", ":Telescope buffers<CR>", { desc = "Buffers" })
 map("n", "<leader>td", ":Telescope diagnostics<CR>", { desc = "Diagnostics" })
 map("n", "<leader>tg", ":Telescope live_grep<CR>", { desc = "Grep" })
 map("n", "<leader>tm", ":Telescope man_pages<CR>", { desc = "Man" })
-map("n", "<leader>tp", ":Telescope pickers<CR>", { desc = "Pickers" })
 map("n", "<leader>tt", ":Telescope<CR>", { desc = "Telescope" })
 map("n", "<leader>tx", ":Telescope treesitter<CR>", { desc = "Treesitter symbols" })
 -- Telescope-DAP
