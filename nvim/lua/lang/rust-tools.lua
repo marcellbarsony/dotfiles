@@ -30,7 +30,6 @@ rust_tools.setup({
     -- :help rust-tools-rust-tools.nvim-setup
     on_attach = function(_, bufnr)
       vim.keymap.set("n", "<Leader>ra", rust_tools.hover_actions.hover_actions, { buffer = bufnr })
-      vim.keymap.set("n", "<Leader>rf", ":lua vim.lsp.buf.format()<CR>", { buffer = bufnr })
       vim.keymap.set("n", "<Leader>rg", rust_tools.code_action_group.code_action_group, { buffer = bufnr })
     end,
     -- Settings
