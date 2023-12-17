@@ -24,7 +24,7 @@ vim.g.mapleader = "\\"
 -- Core
 map("n", "<leader>bww", "<cmd>wa!<CR>", { desc = "Write all" })
 map("n", "<leader>bwq", "<cmd>wqa!<CR>", { desc = "Write all & Quit" })
---map("n", "<leader>br", "<cmd>source<CR>", { desc = "Reload [TODO]" })
+--map("n", "<leader>br", "<cmd>source<CR>", { desc = "Reload config [TODO]" })
 vim.g.maplocalleader = "\\"
 
 -- Arrow keys
@@ -60,14 +60,19 @@ map("n", "<leader>br", [[<cmd>%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]
 
 -- Lines (move)
 -- https://vim.fandom.com/wiki/Moving_lines_up_or_down
-map("n", "<J>", "<cmd>move .+1<CR>", { desc = "Line [Move Down]" })
-map("n", "<K>", "<cmd>move .-2<CR>", { desc = "Line [Move Up]" })
-map("v", "K", ":move '<-2<CR>gv-gv", { desc = "Move [Up]" }) -- Move up
-map("v", "J", ":move '>+1<CR>gv-gv", { desc = "Move [Down]" }) -- Move down
-map("v", "<", "<gv", { desc = "Indent [Left]" }) -- Indent left
-map("v", ">", ">gv", { desc = "Indent [Left]" }) -- Indent right
+map("v", "K", ":move '<-2<CR>gv-gv", { desc = "Move [Up]" })
+map("v", "J", ":move '>+1<CR>gv-gv", { desc = "Move [Down]" })
+map("v", "<", "<gv", { desc = "Indent [Left]" })
+map("v", ">", ">gv", { desc = "Indent [Left]" })
+--map("n", "<J>", "<cmd>move .+1<CR>", { desc = "Line [Move Down]" })
+--map("n", "<K>", "<cmd>move .-2<CR>", { desc = "Line [Move Up]" })
 --map("x", "<J>", "<cmd>move '>+1<CR>gv=gv", { desc = "Block [Move Down]" })
 --map("x", "<K>", "<cmd>move '<-2<CR>gv=gv", { desc = "Block [Move Up]" })
+
+-- Markdown
+map("n", "<leader>lmp", "<cmd>MarkdownPreview<CR>", { desc = "MarkdownPreview" })
+map("n", "<leader>lms", "<cmd>MarkdownPreviewStop<CR>", { desc = "MarkdownPreviewStop" })
+map("n", "<leader>lmt", "<cmd>MarkdownPreviewToggle<CR>", { desc = "MarkdownPreviewToggle" })
 
 -- Navigation
 -- Conflicts with cursor scrolloff
@@ -80,8 +85,8 @@ map("n", "n", "nzzzv", { desc = "Search [Next]" }) -- Fix n: keep cursor in cent
 map("n", "N", "Nzzzv", { desc = "Search [Previous]" }) -- Fix N: keep cursor in center
 
 -- Shell movements
-map("i", "<C-A>", "<ESC>I", { desc = "Shell movement" })
-map("i", "<C-E>", "<ESC>A", { desc = "Shell movement" })
+--map("i", "<C-A>", "<ESC>I", { desc = "Shell movement" })
+--map("i", "<C-E>", "<ESC>A", { desc = "Shell movement" })
 
 -- Splits
 map("n", "<leader>sh", "<cmd>split<CR>" , { desc = "Horizontal" })

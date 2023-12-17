@@ -25,7 +25,13 @@ end
 
 -- KEYMAPS
 vim.api.nvim_create_autocmd("LspAttach", {
-  callback = function(args)
+  callback = function(args, bufnr)
+    -- Codelens
+    vim.keymap.set("n", "<leader>xx", vim.lsp.codelens.refresh, { buffer = args.buf, desc = "Codelens Refresh" })
+    --vim.keymap.set("n", "<leader>xr", vim.lsp.codelens.run, { buffer = args.buf, desc = "Codelens Run" })
+    --vim.keymap.set("n", "<leader>xc", vim.lsp.codelens.clear, { buffer = args.buf, desc = "Codelens Clear" })
+    --vim.keymap.set("n", "<leader>xc", vim.lsp.codelens.display, { buffer = bufnr, desc = "Codelens Clear" })
+
     -- Format
     vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { buffer = args.buf, desc = "Format" })
 

@@ -119,6 +119,7 @@ local mappings = {
     l = {
       name = "LSP",
       h = { name = "Help" },
+      m = { name = "Markdown" },
       r = {
         name = "Rust",
         a = { "Action [Hover]" },

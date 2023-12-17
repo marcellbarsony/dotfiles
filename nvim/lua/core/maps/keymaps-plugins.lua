@@ -31,5 +31,5 @@ map("n", "<leader>pmm", "<cmd>Mason<CR>", { desc = "Mason" })
 map("n", "<leader>pmu", "<cmd>MasonUninstallAll<CR>", { desc = "Uninstall all" })
 
 -- Oil
-map("n", "-", "<cmd>Oil<cr>", { desc = "Open parent directory" })
-map("n", "<leader>po", "<cmd>Oil<cr>", { desc = "Oil" })
+map("n", "-", "<cmd>Oil<CR>", { desc = "Open parent directory" })
+map("n", "<leader>po", "<cmd>Oil<CR>", { desc = "Oil" })
