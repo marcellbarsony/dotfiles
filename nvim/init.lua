@@ -1,53 +1,56 @@
 -- Lazy
-require('plugins.lazy-nvim')
+require("plugins.lazy-nvim")
 
 -- Nvim Core
-require('core.autocmd')
-require('core.colors')
-require('core.lspconfig')
-require('core.keymaps')
-require('core.options')
+require("core.autocmd")
+require("core.colors")
+require("core.lspconfig")
+require("core.options")
+require("core.maps.keymaps")
+require("core.maps.keymaps-lsp")
+require("core.maps.keymaps-dap")
+require("core.maps.keymaps-telescope")
 
 -- DAP
-require('dap.nvim-dap')
-require('dap.nvim-dap-ui')
-require('dap.nvim-dap-python')
-require('dap.nvim-dap-vtxt')
+require("dap.nvim-dap")
+require("dap.nvim-dap-ui")
+require("dap.nvim-dap-python")
+require("dap.nvim-dap-vtxt")
 
 -- Mason
-require('mason.mason')
-require('mason.mason-lspconfig')
-require('mason.mason-nvim-dap')
+require("mason.mason")
+require("mason.mason-lspconfig")
+require("mason.mason-nvim-dap")
 
 -- CMP & Snipppet
-require('plugins.nvim-cmp')
-require('plugins.luasnip')
+require("plugins.nvim-cmp")
+require("plugins.luasnip")
 
 -- GIT
-require('plugins.gitsigns')
+require("plugins.gitsigns")
 
 -- Lang
-require('lang.rust-tools')
-require('lang.tsserver')
+require("lang.rust-tools")
+require("lang.tsserver")
 
 -- Navigation
-require('plugins.alpha-nvim')
-require('plugins.oil')
-require('plugins.which-key')
+require("plugins.alpha-nvim")
+require("plugins.oil")
+require("plugins.which-key")
 
 -- Plugins
-require('plugins.autopairs')
-require('plugins.bufferline')
-require('plugins.colorizer')
-require('plugins.hex')
-require('plugins.indent-blankline')
-require('plugins.lualine')
-require('plugins.lsp_lines')
-require('plugins.lspsaga')
+require("plugins.autopairs")
+require("plugins.bufferline")
+require("plugins.colorizer")
+require("plugins.hex")
+require("plugins.indent-blankline")
+require("plugins.lualine")
+require("plugins.lsp_lines")
+require("plugins.lspsaga")
 
 -- Telescope
-require('plugins.telescope')
+require("plugins.telescope")
 
 -- Treesitter
-require('treesitter.treesitter')
-require('treesitter.treesitter-context')
+require("treesitter.treesitter")
+require("treesitter.treesitter-context")

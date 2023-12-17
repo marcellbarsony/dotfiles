@@ -18,80 +18,93 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   -- Auto pair
-  'windwp/nvim-autopairs',
+  { "windwp/nvim-autopairs",
+    event = "InsertEnter"
+  },
 
   -- Bufferline
-  'akinsho/bufferline.nvim',
+  "akinsho/bufferline.nvim",
 
   -- Color theme
   { "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000
   },
-  -- { 'folke/tokyonight.nvim',
+  -- { "folke/tokyonight.nvim",
   --   lazy = false,
   --   priority = 1000,
   -- },
   -- Colorizer
-  'NvChad/nvim-colorizer.lua',
+  "NvChad/nvim-colorizer.lua",
 
   -- Devicons
-  { 'nvim-tree/nvim-web-devicons',
+  { "nvim-tree/nvim-web-devicons",
     lazy = true
   },
 
   -- CMP
-  { 'hrsh7th/nvim-cmp',
+  { "hrsh7th/nvim-cmp",
+    event = "InsertEnter",
     dependencies = {
-      'hrsh7th/cmp-buffer',
-      'hrsh7th/cmp-cmdline',
-      'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-nvim-lsp-signature-help',
-      'hrsh7th/cmp-path',
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-cmdline",
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-nvim-lsp-signature-help",
+      "hrsh7th/cmp-path",
     },
   },
 
   -- DAP
-  { 'mfussenegger/nvim-dap',
+  { "mfussenegger/nvim-dap",
+    event = "VeryLazy",
     dependencies = {
-      'mfussenegger/nvim-dap-python', -- Python
-      'nvim-telescope/telescope-dap.nvim', -- Telescope
-      'rcarriga/nvim-dap-ui', -- UI
-      'theHamsta/nvim-dap-virtual-text', -- Virtual text
+      "mfussenegger/nvim-dap-python", -- Python
+      "nvim-telescope/telescope-dap.nvim", -- Telescope
+      "rcarriga/nvim-dap-ui", -- UI
+      "theHamsta/nvim-dap-virtual-text", -- Virtual text
     },
   },
 
   -- Greeter
-  'goolord/alpha-nvim',
+  { "goolord/alpha-nvim",
+    lazy = "true"
+  },
 
   -- Git
-  'lewis6991/gitsigns.nvim',
+  {"lewis6991/gitsigns.nvim",
+    event = {"BufReadPre", "BufNewFile"}
+  },
 
   -- HEX
-  'RaafatTurki/hex.nvim',
+  "RaafatTurki/hex.nvim",
 
   -- Indent lines
   { "lukas-reineke/indent-blankline.nvim",
+    event = {"BufReadPre", "BufNewFile"},
     main = "ibl",
     opts = {}
   },
 
   -- LSP (Mason)
-  'neovim/nvim-lspconfig',
-  { 'williamboman/mason.nvim',
+  "neovim/nvim-lspconfig",
+  { "williamboman/mason.nvim",
     build = ":MasonUpdate",
     dependencies = {
-      'williamboman/mason-lspconfig.nvim',
-      'jay-babu/mason-nvim-dap.nvim',
-      'onsails/lspkind.nvim',
+      "williamboman/mason-lspconfig.nvim",
+      "jay-babu/mason-nvim-dap.nvim",
+      "onsails/lspkind.nvim",
     },
   },
 
   -- LSP Lines
-  { url = 'https://git.sr.ht/~whynothugo/lsp_lines.nvim' },
+  { url = "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+    event = "LspAttach"
+  },
 
   -- LSP Saga
-  'glepnir/lspsaga.nvim',
+  { "glepnir/lspsaga.nvim",
+    event = "LspAttach"
+  },
 
   -- Markdown preview
   { "iamcco/markdown-preview.nvim",
@@ -101,38 +114,49 @@ require("lazy").setup({
   },
 
   -- Oil.nvim
-  'stevearc/oil.nvim',
+  { "stevearc/oil.nvim",
+    event = "VeryLazy"
+  },
 
   -- Rust
-  'simrat39/rust-tools.nvim',
+  { "simrat39/rust-tools.nvim",
+    ft = "rust"
+  },
 
   -- Snippets
-  { 'L3MON4D3/LuaSnip',
+  { "L3MON4D3/LuaSnip",
+    event = "InsertEnter",
     dependencies = {
-      'saadparwaiz1/cmp_luasnip',
+      "saadparwaiz1/cmp_luasnip",
     },
   },
 
   -- Status line
-  'nvim-lualine/lualine.nvim',
+  { "nvim-lualine/lualine.nvim",
+    event = {"BufReadPre", "BufNewFile"}
+  },
 
   -- Telescope
-  { 'nvim-telescope/telescope.nvim',
+  { "nvim-telescope/telescope.nvim",
+    cmd = "Telescope",
     dependencies = {
-      'nvim-lua/plenary.nvim',
+      "nvim-lua/plenary.nvim",
     }
   },
 
   -- Treesitter
-  { 'nvim-treesitter/nvim-treesitter',
-    build = ':TSUpdate',
+  { "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    event = {"BufReadPre", "BufNewFile"},
     dependencies = {
-      'nvim-treesitter/nvim-treesitter-textobjects',
-      'nvim-treesitter/nvim-treesitter-context',
-      'p00f/nvim-ts-rainbow'
+      "nvim-treesitter/nvim-treesitter-textobjects",
+      "nvim-treesitter/nvim-treesitter-context",
+      "p00f/nvim-ts-rainbow"
     }
   },
 
   -- Which key
-  'folke/which-key.nvim',
+  { "folke/which-key.nvim",
+    lazy = true
+  },
 })

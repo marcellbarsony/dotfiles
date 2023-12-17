@@ -104,14 +104,12 @@ local mappings = {
       name = "Buffer",
     },
 
-    -- Debug
+    -- DAP
     d = {
       name = "DAP",
-    },
-
-    -- Highlight
-    h = {
-      name = "Highlight",
+      t = {
+        name = "Telescope"
+      },
     },
 
     -- LSP
@@ -123,12 +121,15 @@ local mappings = {
       h = {
         name = "Help"
       },
+      s = {
+        name = "Symbols"
+      },
     },
 
     -- Plugins
     p = {
       name = "Plugins",
-      m = { 
+      m = {
         name = "Mason"
       },
     },
@@ -140,10 +141,14 @@ local mappings = {
       g = { "Action [Group]" },
     },
 
+    -- Split
+    s = {
+      name = "Split",
+    },
+
     -- Telescope
     t = {
       name = "Telescope",
-      d = { name = "DAP" },
       f = { name = "Find" },
       h = { name = "History" },
       u = { name = "GIT" },

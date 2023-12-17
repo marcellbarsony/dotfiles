@@ -26,34 +26,32 @@ end
 -- KEYMAPS
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
+    -- Format
+    vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { buffer = args.buf, desc = "Format" })
+
     -- Code Action
-    --vim.keymap.set("n", "\\la", vim.lsp.buf.code_action, { buffer = args.buf, desc = "Action" })
+    --vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { buffer = args.buf, desc = "Action" })
 
     -- Calls
-    --vim.keymap.set("n", "\\lci", vim.lsp.buf.code_action, { buffer = args.buf, desc = "Incoming" })
-    --vim.keymap.set("n", "\\lco", vim.lsp.buf.code_action, { buffer = args.buf, desc = "Outgoing" })
+    --vim.keymap.set("n", "<leader>lci", vim.lsp.buf.incoming_calls, { buffer = args.buf, desc = "Incoming" })
+    --vim.keymap.set("n", "<leader>lco", vim.lsp.buf.outgoing_calls, { buffer = args.buf, desc = "Outgoing" })
 
     -- Definition
-    --vim.keymap.set("n", "\\ld", vim.lsp.buf.definition, { buffer = args.buf, desc = "Definition" })
-    --vim.keymap.set("n", "\\lt", vim.lsp.buf.type_definition, { buffer = args.buf, desc = "Type" })
-    --vim.keymap.set("n", "\\le", vim.lsp.buf.declaration, { buffer = args.buf, desc = "Declaration" })
-
-    -- Format
-    vim.keymap.set("n", "\\lf", vim.lsp.buf.format, { buffer = args.buf, desc = "Format" })
+    --vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition, { buffer = args.buf, desc = "Definition" })
+    --vim.keymap.set("n", "<leader>lt", vim.lsp.buf.type_definition, { buffer = args.buf, desc = "Type" })
+    --vim.keymap.set("n", "<leader>le", vim.lsp.buf.declaration, { buffer = args.buf, desc = "Declaration" })
 
     -- Hover
-    --vim.keymap.set("n", "\\li", vim.lsp.buf.hover, { buffer = args.buf, desc = "Info [Hover]" })
+    --vim.keymap.set("n", "<leader>li", vim.lsp.buf.hover, { buffer = args.buf, desc = "Info [Hover]" })
 
     -- Implementation
-    --vim.keymap.set("n", "K", vim.lsp.buf.implementation, { buffer = args.buf, desc = "Implementation" })
+    --vim.keymap.set("n", "<leader>lk", vim.lsp.buf.implementation, { buffer = args.buf, desc = "Implementation" })
 
     -- Rename
-    --vim.keymap.set("n", "\\lr", vim.lsp.buf.rename, { buffer = args.buf, desc = "Rename" })
+    --vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, { buffer = args.buf, desc = "Rename" })
 
     -- References
-    vim.keymap.set("n", "\\lr", vim.lsp.buf.references, { buffer = args.buf, desc = "References" })
-
-    -- vim.lsp.buf.list_workspace_folders()
+    --vim.keymap.set("n", "<leader>lr", vim.lsp.buf.references, { buffer = args.buf, desc = "References" })
   end,
 })
 
