@@ -88,13 +88,13 @@ local opts = {
 
 
 local mappings = {
-  -- Normal mode
   ['['] = { name = "" },
   [']'] = { name = "" },
   g = { name = "Go-To" },
   v = { name = "VISUAL Mode" },
   o = { name = "LSPkind outline" },
   u = { name = "Undo" },
+  z = { name = "Fold" },
 
   -- Leader
   ["<leader>"] = {
@@ -102,62 +102,46 @@ local mappings = {
     -- Buffer
     b = {
       name = "Buffer",
+      w = { name = "Write" },
     },
 
     -- DAP
     d = {
       name = "DAP",
-      p = {
-        name = "Py test"
-      },
-      t = {
-        name = "Telescope"
-      },
+      p = { name = "Py test" },
+      t = { name = "Telescope" },
     },
 
     -- Git
-    u = {
-      name = "GIT",
-    },
+    u = { name = "GIT" },
 
     -- LSP
     l = {
       name = "LSP",
-      c = {
-        name = "Calls"
-      },
-      h = {
-        name = "Help"
-      },
+      h = { name = "Help" },
       r = {
         name = "Rust",
         a = { "Action [Hover]" },
         g = { "Action [Group]" },
       },
-      s = {
-        name = "Symbols"
-      },
-      v = {
-        name = "PyVenv",
-      },
+      s = { name = "Symbols" },
+      u = { name = "Calls" },
+      v = { name = "PyVenv" },
     },
 
     -- Plugins
     p = {
       name = "Plugins",
-      m = {
-        name = "Mason"
-      },
+      m = { name = "Mason" },
     },
 
     -- Split
-    s = {
-      name = "Split",
-    },
+    s = { name = "Split" },
 
     -- Telescope
     t = {
       name = "Telescope",
+      c = { name = "Command" },
       h = { name = "History" },
       g = { name = "GIT" },
       v = { name = "Vim" },

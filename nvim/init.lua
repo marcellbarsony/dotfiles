@@ -10,6 +10,7 @@ require("core.maps.keymaps")
 require("core.maps.keymaps-lsp")
 require("core.maps.keymaps-dap")
 require("core.maps.keymaps-telescope")
+require("core.maps.keymaps-plugins")
 
 -- DAP
 require("dap.nvim-dap")

@@ -22,13 +22,10 @@ map("n", "<Bslash>", "", { desc = "LEADER" })
 vim.g.mapleader = "\\"
 
 -- Core
-map("n", "<leader>bw", "<cmd>wa!<CR>", { desc = "Write all" })
-map("n", "<leader>bx", "<cmd>wqa!<CR>", { desc = "Write all & Quit" })
+map("n", "<leader>bww", "<cmd>wa!<CR>", { desc = "Write all" })
+map("n", "<leader>bwq", "<cmd>wqa!<CR>", { desc = "Write all & Quit" })
 --map("n", "<leader>br", "<cmd>source<CR>", { desc = "Reload [TODO]" })
 vim.g.maplocalleader = "\\"
-
--- Alpha
-map("n", "<leader>pa", "<cmd>Alpha<CR>", { desc = "Alpha" })
 
 -- Arrow keys
 map("", "<up>", "<nop>")
@@ -58,11 +55,8 @@ map("n", "<leader>uu", "<cmd>Gitsigns toggle_signs<CR>:Gitsigns toggle_numhl<CR>
 --map("n", "<leader>gb", "<cmd>Gitsigns toggle_current_line_blame<CR>", { desc = "Blame" })
 
 -- Highlights
-map("n", "<leader>bc", "<cmd>nohl<CR>", { desc = "Clear [Highlight]" })
+map("n", "<C-c>", "<cmd>nohl<CR>", { desc = "Clear [Highlight]" })
 map("n", "<leader>br", [[<cmd>%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace [Highlight]" })
-
--- Lazy
-map("n", "<leader>pl", "<cmd>Lazy<CR>", { desc = "Lazy" })
 
 -- Lines (move)
 -- https://vim.fandom.com/wiki/Moving_lines_up_or_down
@@ -75,21 +69,10 @@ map("v", ">", ">gv", { desc = "Indent [Left]" }) -- Indent right
 --map("x", "<J>", "<cmd>move '>+1<CR>gv=gv", { desc = "Block [Move Down]" })
 --map("x", "<K>", "<cmd>move '<-2<CR>gv=gv", { desc = "Block [Move Up]" })
 
--- Mason
-map("n", "<leader>pmc", "<cmd>checkhealth mason<CR>", { desc = "Health" })
-map("n", "<leader>pmh", "<cmd>h mason<CR>", { desc = "Help" })
-map("n", "<leader>pml", "<cmd>MasonLog<CR>", { desc = "Log" })
-map("n", "<leader>pmm", "<cmd>Mason<CR>", { desc = "Mason" })
-map("n", "<leader>pmu", "<cmd>MasonUninstallAll<CR>", { desc = "Uninstall all" })
-
 -- Navigation
 -- Conflicts with cursor scrolloff
 --map("n", "<C-d>", "<C-d>zz<CR>", { desc = "Page down" })
 --map("n", "<C-u>", "<C-u>zz<CR>", { desc = "Page up" })
-
--- Oil
-map("n", "-", "<cmd>Oil<cr>", { desc = "Open parent directory" })
-map("n", "<leader>po", "<cmd>Oil<cr>", { desc = "Oil" })
 
 -- Search
 map("n", "*", "*N", { desc = "Find word" }) -- Fix * - don't move to next match

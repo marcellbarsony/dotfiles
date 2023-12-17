@@ -9,13 +9,18 @@ local function map(mode, lhs, rhs, opts)
 end
 
 -- Telescope
-map("n", "<leader>td", "<cmd>Telescope diagnostics<CR>", { desc = "Diagnostics" })
 map("n", "<leader>tt", "<cmd>Telescope<CR>", { desc = "Telescope" })
+map("n", "<leader>ta", "<cmd>Telescope autocmmands<CR>", { desc = "Autocommands" })
+map("n", "<leader>td", "<cmd>Telescope diagnostics<CR>", { desc = "Diagnostics" })
+map("n", "<leader>tj", "<cmd>Telescope jumplist<CR>", { desc = "Jumplist" })
 map("n", "<leader>tm", "<cmd>Telescope man_pages<CR>", { desc = "Man" })
 map("n", "<leader>ts", "<cmd>Telescope treesitter<CR>", { desc = "Symbols [Treesitter]" })
 -- Telescope-Buffers
 map("n", "<leader>bb", "<cmd>Telescope buffers<CR>", { desc = "Buffers" })
 map("n", "<leader>bf", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Fuzzy Find" })
+-- Telescope-Commands
+map("n", "<leader>tcc", "<cmd>Telescope commands<CR>", { desc = "Commands" })
+map("n", "<leader>tch", "<cmd>Telescope command_history<CR>", { desc = "History" })
 -- Telescope-Files
 map("n", "<leader>tf", "<cmd>Telescope find_files<CR>", { desc = "Find Files" }) -- Current directory
 -- Telescope-Git
