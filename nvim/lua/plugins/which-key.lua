@@ -107,9 +107,17 @@ local mappings = {
     -- DAP
     d = {
       name = "DAP",
+      p = {
+        name = "Py test"
+      },
       t = {
         name = "Telescope"
       },
+    },
+
+    -- Git
+    u = {
+      name = "GIT",
     },
 
     -- LSP
@@ -121,8 +129,16 @@ local mappings = {
       h = {
         name = "Help"
       },
+      r = {
+        name = "Rust",
+        a = { "Action [Hover]" },
+        g = { "Action [Group]" },
+      },
       s = {
         name = "Symbols"
+      },
+      v = {
+        name = "PyVenv",
       },
     },
 
@@ -134,13 +150,6 @@ local mappings = {
       },
     },
 
-    -- Rust
-    r = {
-      name = "Rust",
-      a = { "Action [Hover]" },
-      g = { "Action [Group]" },
-    },
-
     -- Split
     s = {
       name = "Split",
@@ -149,20 +158,9 @@ local mappings = {
     -- Telescope
     t = {
       name = "Telescope",
-      f = { name = "Find" },
       h = { name = "History" },
-      u = { name = "GIT" },
+      g = { name = "GIT" },
       v = { name = "Vim" },
-    },
-
-    -- Gitsigns
-    u = {
-      name = "Gitsigns",
-    },
-
-    -- Venv (Python)
-    v = {
-      name = "PyVenv",
     },
   }
 }

@@ -29,8 +29,8 @@ rust_tools.setup({
     -- https://github.com/simrat39/rust-tools.nvim#setup
     -- :help rust-tools-rust-tools.nvim-setup
     on_attach = function(_, bufnr)
-      vim.keymap.set("n", "<Leader>ra", rust_tools.hover_actions.hover_actions, { buffer = bufnr })
-      vim.keymap.set("n", "<Leader>rg", rust_tools.code_action_group.code_action_group, { buffer = bufnr })
+      vim.keymap.set("n", "<Leader>lra", rust_tools.hover_actions.hover_actions, { buffer = bufnr })
+      vim.keymap.set("n", "<Leader>lrg", rust_tools.code_action_group.code_action_group, { buffer = bufnr })
     end,
     -- Settings
     -- https://github.com/simrat39/rust-tools.nvim/wiki/Server-Configuration-Schema

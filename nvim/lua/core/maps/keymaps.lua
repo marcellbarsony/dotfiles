@@ -52,10 +52,10 @@ map("n", "y", "\"+Y", { desc = "Yank [Global]" })
 --map("n", "<leader>p", "\"_dp", { desc = "Paste" })
 
 -- Gitsigns
-map("n", "<leader>uu", "<cmd>Gitsigns toggle_signs<CR>:Gitsigns toggle_numhl<CR>:Gitsigns toggle_current_line_blame<CR>", { desc = "Toggle" })
-map("n", "<leader>us", "<cmd>Gitsigns toggle_signs<CR>", { desc = "Signs" })
-map("n", "<leader>un", "<cmd>Gitsigns toggle_numhl<CR>", { desc = "Numhl" })
-map("n", "<leader>ub", "<cmd>Gitsigns toggle_current_line_blame<CR>", { desc = "Blame" })
+map("n", "<leader>uu", "<cmd>Gitsigns toggle_signs<CR>:Gitsigns toggle_numhl<CR>:Gitsigns toggle_current_line_blame<CR>", { desc = "Gitsigns" })
+--map("n", "<leader>gs", "<cmd>Gitsigns toggle_signs<CR>", { desc = "Signs" })
+--map("n", "<leader>gn", "<cmd>Gitsigns toggle_numhl<CR>", { desc = "Numhl" })
+--map("n", "<leader>gb", "<cmd>Gitsigns toggle_current_line_blame<CR>", { desc = "Blame" })
 
 -- Highlights
 map("n", "<leader>bc", "<cmd>nohl<CR>", { desc = "Clear [Highlight]" })
@@ -82,13 +82,14 @@ map("n", "<leader>pml", "<cmd>MasonLog<CR>", { desc = "Log" })
 map("n", "<leader>pmm", "<cmd>Mason<CR>", { desc = "Mason" })
 map("n", "<leader>pmu", "<cmd>MasonUninstallAll<CR>", { desc = "Uninstall all" })
 
+-- Navigation
 -- Conflicts with cursor scrolloff
 --map("n", "<C-d>", "<C-d>zz<CR>", { desc = "Page down" })
 --map("n", "<C-u>", "<C-u>zz<CR>", { desc = "Page up" })
--- Navigation
 
 -- Oil
 map("n", "-", "<cmd>Oil<cr>", { desc = "Open parent directory" })
+map("n", "<leader>po", "<cmd>Oil<cr>", { desc = "Oil" })
 
 -- Search
 map("n", "*", "*N", { desc = "Find word" }) -- Fix * - don't move to next match

@@ -84,14 +84,14 @@ end
 -- UI Customization
 -- https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization
 local border = {
-      {"┌", "FloatBorder"},
-      {"─", "FloatBorder"},
-      {"┐", "FloatBorder"},
-      {"│", "FloatBorder"},
-      {"┘", "FloatBorder"},
-      {"─", "FloatBorder"},
-      {"└", "FloatBorder"},
-      {"│", "FloatBorder"},
+  {"┌", "FloatBorder"},
+  {"─", "FloatBorder"},
+  {"┐", "FloatBorder"},
+  {"│", "FloatBorder"},
+  {"┘", "FloatBorder"},
+  {"─", "FloatBorder"},
+  {"└", "FloatBorder"},
+  {"│", "FloatBorder"},
 }
 
 local handlers =  {

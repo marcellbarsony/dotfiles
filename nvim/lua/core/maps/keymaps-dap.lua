@@ -1,13 +1,4 @@
--- Keymaps
--- https://neovim.io/doc/user/map.html
-
--- Modes
---  n - normal_mode
---  i - insert_mode
---  v - visual_mode
---  x - visual_block_mode
---  t - term_mode
---  c - command_mode
+-- Keymaps (DAP)
 
 local function map(mode, lhs, rhs, opts)
   local options = { noremap = true, silent = true }
@@ -40,6 +31,6 @@ map("n", "<leader>dtf", "<cmd>lua require'telescope'.extensions.dap.frames{}<CR>
 
 -- DAP-Python
 -- h: dap-python
-map("n", "<leader>dx", "<cmd>lua require('dap-python').test_class()<CR>", { desc = "Py test [Class]" })
-map("n", "<leader>dy", "<cmd>lua require('dap-python').debug_selection()<CR>", { desc = "Py test [Selection]" })
-map("n", "<leader>dz", "<cmd>lua require('dap-python').test_method()<CR>", { desc = "Py test [Method]" })
+map("n", "<leader>dpc", "<cmd>lua require('dap-python').test_class()<CR>", { desc = "Class" })
+map("n", "<leader>dps", "<cmd>lua require('dap-python').debug_selection()<CR>", { desc = "Selection" })
+map("n", "<leader>dpm", "<cmd>lua require('dap-python').test_method()<CR>", { desc = "Method" })
