@@ -54,6 +54,7 @@ require("lazy").setup({
   -- DAP
   { "mfussenegger/nvim-dap",
     event = "VeryLazy",
+    --lazy = true,
     dependencies = {
       "mfussenegger/nvim-dap-python", -- Python
       "nvim-telescope/telescope-dap.nvim", -- Telescope
@@ -68,7 +69,7 @@ require("lazy").setup({
   },
 
   -- Git
-  {"lewis6991/gitsigns.nvim",
+  { "lewis6991/gitsigns.nvim",
     event = {"BufReadPre", "BufNewFile"}
   },
 
@@ -82,8 +83,10 @@ require("lazy").setup({
     opts = {}
   },
 
-  -- LSP (Mason)
+  -- LSP
   "neovim/nvim-lspconfig",
+
+  -- LSP (Mason)
   { "williamboman/mason.nvim",
     build = ":MasonUpdate",
     dependencies = {
@@ -98,7 +101,7 @@ require("lazy").setup({
     event = "LspAttach"
   },
 
-  -- LSP Saga
+  -- Lspsaga
   { "glepnir/lspsaga.nvim",
     event = "LspAttach"
   },

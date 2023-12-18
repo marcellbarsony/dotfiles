@@ -49,7 +49,7 @@ map("n", "y", "\"+Y", { desc = "Yank [Global]" })
 --map("n", "<leader>p", "\"_dp", { desc = "Paste" })
 
 -- Gitsigns
-map("n", "<leader>uu", "<cmd>Gitsigns toggle_signs<CR>:Gitsigns toggle_numhl<CR>:Gitsigns toggle_current_line_blame<CR>", { desc = "Gitsigns" })
+map("n", "<leader>gg", "<cmd>Gitsigns toggle_signs<CR>:Gitsigns toggle_numhl<CR>:Gitsigns toggle_current_line_blame<CR>", { desc = "Gitsigns" })
 --map("n", "<leader>gs", "<cmd>Gitsigns toggle_signs<CR>", { desc = "Signs" })
 --map("n", "<leader>gn", "<cmd>Gitsigns toggle_numhl<CR>", { desc = "Numhl" })
 --map("n", "<leader>gb", "<cmd>Gitsigns toggle_current_line_blame<CR>", { desc = "Blame" })

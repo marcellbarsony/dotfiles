@@ -7,15 +7,6 @@ local dashboard = require("alpha.themes.dashboard")
 -- Header
 dashboard.section.header.val = {
 
---"                                                     ",
---"  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
---"  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ",
---"  ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ ",
---"  ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ",
---"  ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ",
---"  ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
---"                                                     ",
-
 "            ██████            ",
 "        ████▒▒▒▒▒▒████        ",
 "      ██▒▒▒▒▒▒▒▒▒▒▒▒▒▒██      ",
@@ -48,6 +39,15 @@ dashboard.section.header.val = {
 --"████  ██▒▒██  ██▒▒▒▒██  ██▒▒██                  ████▒▒▒▒▒▒████                  ",
 --"██      ██      ████      ████                      ██████                      ",
 
+--"                                                     ",
+--"  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
+--"  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ",
+--"  ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ ",
+--"  ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ",
+--"  ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ",
+--"  ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
+--"                                                     ",
+
 --"                   -`                   ",
 --"                  .o+`                  ",
 --"                 `ooo/                  ",
@@ -79,10 +79,10 @@ dashboard.section.buttons.val = {
   dashboard.button( "n", "󱀁  > Nvim [News]", ":help news<CR>"),
   dashboard.button( "q", "  > Quit", ":qa<CR>"),
   dashboard.button( "tt", "󰭎  > Telescope", ":Telescope<CR>"),
-  dashboard.button( "tf", "󰭎  > Telescope [Find files]", ":Telescope find_files<CR>"),
+  dashboard.button( "tf", "󰭎  > Telescope [Find Files]", ":Telescope find_files<CR>"),
   dashboard.button( "tg", "󰭎  > Telescope [Grep]", ":Telescope live_grep<CR>"),
-  dashboard.button( "tu", "󰭎  > Telescope [Git files]", ":Telescope git_files<CR>"),
-  dashboard.button( "to", "󰭎  > Telescope [Old files]", ":Telescope oldfiles<CR>"),
+  dashboard.button( "tu", "󰭎  > Telescope [Git Files]", ":Telescope git_files<CR>"),
+  dashboard.button( "to", "󰭎  > Telescope [Old Files]", ":Telescope oldfiles<CR>"),
   dashboard.button( "-", "o  > Oil", ":Oil<CR>"),
 }
 

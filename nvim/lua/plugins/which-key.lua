@@ -1,7 +1,6 @@
 -- Which-key
 -- https://github.com/folke/which-key.nvim
 
---local config = function()
 require("which-key").setup {
   plugins = {
     marks = true, -- shows a list of your marks on ' and `
@@ -43,31 +42,25 @@ require("which-key").setup {
   window = {
     border = "none", -- none, single, double, shadow
     position = "bottom", -- bottom, top
-    margin = { 0, 0, 0, 0 }, -- extra window margin [top, right, bottom, left]
-    padding = { 1, 1, 1, 1 }, -- extra window padding [top, right, bottom, left]
+    margin = { 0, 0, 0, 0 },
+    padding = { 1, 1, 1, 1 },
     winblend = 0
   },
   layout = {
-    height = { min = 5, max = 50 }, -- min and max height of the columns
-    width = { min = 5, max = 50 }, -- min and max width of the columns
-    spacing = 3, -- spacing between columns
-    align = "left", -- align columns left, center or right
+    height = { min = 5, max = 50 },
+    width = { min = 5, max = 50 },
+    spacing = 3,
+    align = "left",
   },
   ignore_missing = false, -- enable this to hide mappings for which you didn't specify a label
   hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ "}, -- hide mapping boilerplate
   show_help = false,
   show_keys = true,
   triggers = "auto",
-  -- triggers = {"<leader>"} -- or specify a list manually
   triggers_blacklist = {
-    -- list of mode / prefixes that should never be hooked by WhichKey
-    -- this is mostly relevant for key maps that start with a native binding
-    -- most people should not need to change this
     i = { "j", "k" },
     v = { "j", "k" },
   },
-  -- disable the WhichKey popup for certain buf types and file types.
-  -- Disabled by deafult for Telescope
   disable = {
     buftypes = {},
     filetypes = { "TelescopePrompt" },
@@ -76,16 +69,13 @@ require("which-key").setup {
 
 -- Config
 local opts = {
-  mode = "n", -- NORMAL mode
-  -- prefix: use "<leader>f" for example for mapping everything related to finding files
-  -- the prefix is prepended to every mapping part of `mappings`
+  mode = "n",
   prefix = "",
-  buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
-  silent = true, -- use `silent` when creating keymaps
-  noremap = true, -- use `noremap` when creating keymaps
-  nowait = false, -- use `nowait` when creating keymaps
+  buffer = nil,
+  silent = true,
+  noremap = true,
+  nowait = false,
 }
-
 
 local mappings = {
   ['['] = { name = "" },
@@ -113,7 +103,7 @@ local mappings = {
     },
 
     -- Git
-    u = { name = "GIT" },
+    g = { name = "GIT" },
 
     -- LSP
     l = {
@@ -144,7 +134,6 @@ local mappings = {
       name = "Telescope",
       c = { name = "Command" },
       h = { name = "History" },
-      g = { name = "GIT" },
       v = { name = "Vim" },
     },
   }

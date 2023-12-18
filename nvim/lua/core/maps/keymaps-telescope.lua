@@ -27,10 +27,10 @@ map("n", "<leader>tch", "<cmd>Telescope command_history<CR>", { desc = "History"
 map("n", "<leader>tf", "<cmd>Telescope find_files<CR>", { desc = "Find Files" }) -- Current directory
 
 -- Telescope-Git
-map("n", "<leader>uc","<cmd>Telescope git_commits<CR>", { desc = "Commits" })
-map("n", "<leader>ub","<cmd>Telescope git_branches<CR>", { desc = "Branches" })
-map("n", "<leader>uf","<cmd>Telescope git_files<CR>", { desc = "Files" })
-map("n", "<leader>us","<cmd>Telescope git_status<CR>", { desc = "Status" })
+map("n", "<leader>gc","<cmd>Telescope git_commits<CR>", { desc = "Commits" })
+map("n", "<leader>gb","<cmd>Telescope git_branches<CR>", { desc = "Branches" })
+map("n", "<leader>gf","<cmd>Telescope git_files<CR>", { desc = "Files" })
+map("n", "<leader>gs","<cmd>Telescope git_status<CR>", { desc = "Status" })
 
 -- Telescope-Grep
 map("n", "<leader>/", "<cmd>Telescope live_grep<CR>", { desc = "Live grep" })
