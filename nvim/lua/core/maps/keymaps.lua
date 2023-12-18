@@ -70,9 +70,9 @@ map("v", ">", ">gv", { desc = "Indent [Left]" })
 --map("x", "<K>", "<cmd>move '<-2<CR>gv=gv", { desc = "Block [Move Up]" })
 
 -- Markdown
-map("n", "<leader>lmp", "<cmd>MarkdownPreview<CR>", { desc = "MarkdownPreview" })
-map("n", "<leader>lms", "<cmd>MarkdownPreviewStop<CR>", { desc = "MarkdownPreviewStop" })
-map("n", "<leader>lmt", "<cmd>MarkdownPreviewToggle<CR>", { desc = "MarkdownPreviewToggle" })
+map("n", "<leader>lmp", "<cmd>MarkdownPreview<CR>", { desc = "Preview" })
+map("n", "<leader>lms", "<cmd>MarkdownPreviewStop<CR>", { desc = "Preiview Stop" })
+map("n", "<leader>lmt", "<cmd>MarkdownPreviewToggle<CR>", { desc = "Preiview Toggle" })
 
 -- Navigation
 -- Conflicts with cursor scrolloff

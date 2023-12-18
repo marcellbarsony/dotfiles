@@ -44,9 +44,9 @@ map("n", "<leader>lss", "<cmd>Telescope lsp_document_symbols<CR>", { desc = "Doc
 map("n", "<leader>lsw", "<cmd>Telescope lsp_workspace_symbols<CR>", { desc = "Workspace" })
 
 -- Py-lsp
-map("n", "<leader>lva", "<cmd>PyLspActivateVenv<CR>", { desc = "Activate" })
-map("n", "<leader>lvc", "<cmd>PyLspCurrentVenv<CR>", { desc = "Current" })
-map("n", "<leader>lvd", "<cmd>PyLspDeactivateVenv<CR>", { desc = "Deactivate" })
-map("n", "<leader>lvf", "<cmd>PyLspFindVenvs<CR>", { desc = "Find" })
-map("n", "<leader>lvn", "<cmd>PyLspCreateVenv<CR>", { desc = "New" })
-map("n", "<leader>lvi", "<cmd>PyRun -m pip install -r requirements.txt<CR>", { desc = "Install dependencies" })
+--map("n", "<leader>lva", "<cmd>PyLspActivateVenv<CR>", { desc = "Activate" })
+--map("n", "<leader>lvc", "<cmd>PyLspCurrentVenv<CR>", { desc = "Current" })
+--map("n", "<leader>lvd", "<cmd>PyLspDeactivateVenv<CR>", { desc = "Deactivate" })
+--map("n", "<leader>lvf", "<cmd>PyLspFindVenvs<CR>", { desc = "Find" })
+--map("n", "<leader>lvn", "<cmd>PyLspCreateVenv<CR>", { desc = "New" })
+--map("n", "<leader>lvi", "<cmd>PyRun -m pip install -r requirements.txt<CR>", { desc = "Install dependencies" })

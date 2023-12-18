@@ -41,7 +41,6 @@ require("plugins.which-key")
 
 -- Plugins
 require("plugins.autopairs")
-require("plugins.bufferline")
 require("plugins.colorizer")
 require("plugins.hex")
 require("plugins.indent-blankline")

@@ -22,9 +22,6 @@ require("lazy").setup({
     event = "InsertEnter"
   },
 
-  -- Bufferline
-  "akinsho/bufferline.nvim",
-
   -- Color theme
   { "catppuccin/nvim",
     name = "catppuccin",
