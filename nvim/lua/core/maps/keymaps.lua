@@ -20,12 +20,12 @@ end
 -- Leader
 map("n", "<Bslash>", "", { desc = "LEADER" })
 vim.g.mapleader = "\\"
+vim.g.maplocalleader = "\\"
 
 -- Core
 map("n", "<leader>bww", "<cmd>wa!<CR>", { desc = "Write all" })
 map("n", "<leader>bwq", "<cmd>wqa!<CR>", { desc = "Write all & Quit" })
 --map("n", "<leader>br", "<cmd>source<CR>", { desc = "Reload config [TODO]" })
-vim.g.maplocalleader = "\\"
 
 -- Arrow keys
 map("", "<up>", "<nop>")
@@ -60,10 +60,14 @@ map("n", "<leader>br", [[<cmd>%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]
 
 -- Lines (move)
 -- https://vim.fandom.com/wiki/Moving_lines_up_or_down
-map("v", "K", ":move '<-2<CR>gv-gv", { desc = "Move [Up]" })
-map("v", "J", ":move '>+1<CR>gv-gv", { desc = "Move [Down]" })
 map("v", "<", "<gv", { desc = "Indent [Left]" })
 map("v", ">", ">gv", { desc = "Indent [Left]" })
+
+map("v", "K", ":move '<-2<CR>gv=gv", { desc = "Move [Up]" }) -- w/indentation
+map("v", "J", ":move '>+1<CR>gv=gv", { desc = "Move [Down]" }) -- w/indentation
+--map("v", "K", ":move '<-2<CR>gv-gv", { desc = "Move [Up]" }) -- w/o indentation
+--map("v", "J", ":move '>+1<CR>gv-gv", { desc = "Move [Down]" }) -- w/o indentation
+
 --map("n", "<J>", "<cmd>move .+1<CR>", { desc = "Line [Move Down]" })
 --map("n", "<K>", "<cmd>move .-2<CR>", { desc = "Line [Move Up]" })
 --map("x", "<J>", "<cmd>move '>+1<CR>gv=gv", { desc = "Block [Move Down]" })

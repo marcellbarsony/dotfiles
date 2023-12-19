@@ -47,6 +47,7 @@ require("plugins.indent-blankline")
 require("plugins.lualine")
 require("plugins.lsp_lines")
 require("plugins.lspsaga")
+require("plugins.toggleterm")
 
 -- Telescope
 require("plugins.telescope")

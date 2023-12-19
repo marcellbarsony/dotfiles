@@ -144,6 +144,12 @@ require("lazy").setup({
     }
   },
 
+  -- amongst your other plugins
+  { "akinsho/toggleterm.nvim",
+    version = "*",
+    config = true
+  },
+
   -- Treesitter
   { "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
