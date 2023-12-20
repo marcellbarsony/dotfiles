@@ -5,4 +5,18 @@ require("toggleterm").setup{
   size = 20,
   direction = "float",
   open_mapping = [[<c-\>]],
+  hide_numbers = true,
+  autochdir = false,
+  highlights = {
+    --Normal = {
+    --  guibg = "<VALUE-HERE>",
+    --},
+    --NormalFloat = {
+    --  link = 'Normal'
+    --},
+    FloatBorder = {
+      guifg = "#FF0000",
+      guibg = "#FF0000",
+    },
+  },
 }

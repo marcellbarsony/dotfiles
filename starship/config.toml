@@ -39,7 +39,7 @@ symbol = ' '
 style = 'bold purple'
 
 [git_commit]
-format = 'via [$hash$tag]($style)\] '
+format = 'via [$hash$tag]($style) '
 tag_disabled = false
 style = 'bold purple'
 

@@ -15,7 +15,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-
 require("lazy").setup({
   -- Auto pair
   { "windwp/nvim-autopairs",
@@ -31,8 +30,14 @@ require("lazy").setup({
   --   lazy = false,
   --   priority = 1000,
   -- },
+
   -- Colorizer
   "NvChad/nvim-colorizer.lua",
+
+  -- Comment
+  { "numToStr/Comment.nvim",
+      lazy = false,
+  },
 
   -- Devicons
   { "nvim-tree/nvim-web-devicons",
