@@ -16,6 +16,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+
   -- Auto pair
   { "windwp/nvim-autopairs",
     event = "InsertEnter"
@@ -35,13 +36,11 @@ require("lazy").setup({
   "NvChad/nvim-colorizer.lua",
 
   -- Comment
-  { "numToStr/Comment.nvim",
-      lazy = false,
-  },
+  "numToStr/Comment.nvim",
 
   -- Devicons
   { "nvim-tree/nvim-web-devicons",
-    lazy = true
+    -- lazy = true
   },
 
   -- CMP
@@ -58,8 +57,7 @@ require("lazy").setup({
 
   -- DAP
   { "mfussenegger/nvim-dap",
-    event = "VeryLazy",
-    --lazy = true,
+    lazy = true,
     dependencies = {
       "mfussenegger/nvim-dap-python", -- Python
       "nvim-telescope/telescope-dap.nvim", -- Telescope
@@ -75,7 +73,10 @@ require("lazy").setup({
 
   -- Git
   { "lewis6991/gitsigns.nvim",
-    event = {"BufReadPre", "BufNewFile"}
+    event = {
+      "BufReadPre",
+      "BufNewFile"
+    }
   },
 
   -- HEX
@@ -83,7 +84,10 @@ require("lazy").setup({
 
   -- Indent lines
   { "lukas-reineke/indent-blankline.nvim",
-    event = {"BufReadPre", "BufNewFile"},
+    event = {
+      "BufReadPre",
+      "BufNewFile"
+    },
     main = "ibl",
     opts = {}
   },
@@ -113,14 +117,18 @@ require("lazy").setup({
 
   -- Markdown preview
   { "iamcco/markdown-preview.nvim",
-    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    cmd = {
+      "MarkdownPreviewToggle",
+      "MarkdownPreview",
+      "MarkdownPreviewStop"
+    },
     ft = { "markdown" },
     build = function() vim.fn["mkdp#util#install"]() end,
   },
 
   -- Oil.nvim
   { "stevearc/oil.nvim",
-    event = "VeryLazy"
+    lazy = true
   },
 
   -- Rust
@@ -138,7 +146,10 @@ require("lazy").setup({
 
   -- Status line
   { "nvim-lualine/lualine.nvim",
-    event = {"BufReadPre", "BufNewFile"}
+    event = {
+      "BufReadPre",
+      "BufNewFile"
+    }
   },
 
   -- Telescope
@@ -158,7 +169,10 @@ require("lazy").setup({
   -- Treesitter
   { "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    event = {"BufReadPre", "BufNewFile"},
+    event = {
+      "BufReadPre",
+      "BufNewFile"
+    },
     dependencies = {
       "nvim-treesitter/nvim-treesitter-textobjects",
       "nvim-treesitter/nvim-treesitter-context",

@@ -72,18 +72,17 @@ dashboard.section.header.val = {
 
 -- Menu
 dashboard.section.buttons.val = {
-  dashboard.button( "f", "󰈔  > File", ":ene <BAR> startinsert <CR>"),
   dashboard.button( "l", "󰐱  > Lazy", ":Lazy<CR>"),
+  dashboard.button( "f", "󰈔  > File", ":ene <BAR> startinsert <CR>"),
   dashboard.button( "m", "󰐱  > Mason", ":Mason<CR>"),
   dashboard.button( "h", "✚  > Nvim [Health]", ":checkhealth<CR>"),
   dashboard.button( "n", "󱀁  > Nvim [News]", ":help news<CR>"),
   dashboard.button( "q", "  > Quit", ":qa<CR>"),
   dashboard.button( "tt", "󰭎  > Telescope", ":Telescope<CR>"),
   dashboard.button( "tf", "󰭎  > Telescope [Find Files]", ":Telescope find_files<CR>"),
-  dashboard.button( "tg", "󰭎  > Telescope [Grep]", ":Telescope live_grep<CR>"),
-  dashboard.button( "tu", "󰭎  > Telescope [Git Files]", ":Telescope git_files<CR>"),
+  dashboard.button( "tg", "󰭎  > Telescope [Git Files]", ":Telescope git_files<CR>"),
   dashboard.button( "to", "󰭎  > Telescope [Old Files]", ":Telescope oldfiles<CR>"),
-  dashboard.button( "-", "o  > Oil", ":Oil<CR>"),
+  dashboard.button( "/", "󰭎  > Telescope [Grep]", ":Telescope live_grep<CR>"),
 }
 
 -- Send config to alpha
