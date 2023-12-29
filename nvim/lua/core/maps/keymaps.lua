@@ -72,6 +72,10 @@ map("n", "<leader>lmp", "<cmd>MarkdownPreview<CR>", { desc = "Preview" })
 map("n", "<leader>lms", "<cmd>MarkdownPreviewStop<CR>", { desc = "Preiview Stop" })
 map("n", "<leader>lmt", "<cmd>MarkdownPreviewToggle<CR>", { desc = "Preiview Toggle" })
 
+-- Macro
+map("n", "Q", "@qj", { desc = "Macro Replay" })
+map("x", "Q", ":norm @qj<CR>", { desc = "Macro Replay [Block]" })
+
 -- Navigation
 -- Conflicts with cursor scrolloff
 map("n", "<C-d>", "<C-d>zz<CR>", { desc = "Page down" })
@@ -83,8 +87,8 @@ map("n", "n", "nzzzv", { desc = "Search [Next]" }) -- Fix n: keep cursor in cent
 map("n", "N", "Nzzzv", { desc = "Search [Previous]" }) -- Fix N: keep cursor in center
 
 -- Shell movements
-map("i", "<C-A>", "<ESC>I", { desc = "" })
-map("i", "<C-E>", "<ESC>A", { desc = "" })
+map("i", "<C-A>", "<ESC>I", { desc = "Jump EOL" })
+map("i", "<C-E>", "<ESC>A", { desc = "Jump BOL" })
 
 -- Splits (Ctrl + w)
 map("n", "<C-k>", "<C-w>k", { desc = "Split [Up]" })

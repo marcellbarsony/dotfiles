@@ -56,8 +56,8 @@ local options = {
 
   -- Command line
   cdhome = true,
-  --o.cedit = 'CTRL-F',
   cmdheight = 0,
+  --o.cedit = 'CTRL-F',
 
   -- Cursor
   cursorcolumn = false,
