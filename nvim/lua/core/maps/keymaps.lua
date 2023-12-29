@@ -22,11 +22,6 @@ map("n", "<Bslash>", "", { desc = "LEADER" })
 vim.g.mapleader = "\\"
 vim.g.maplocalleader = "\\"
 
--- Core
-map("n", "<leader>bww", "<cmd>wa!<CR>", { desc = "Write all" })
-map("n", "<leader>bwq", "<cmd>wqa!<CR>", { desc = "Write all & Quit" })
---map("n", "<leader>bh", "<cmd>luafile ~/.config/nvim/init.lua<CR>", { desc = "Reload config [TODO]" })
-
 -- Arrow keys
 map("", "<up>", "<nop>")
 map("", "<down>", "<nop>")
@@ -54,7 +49,7 @@ map("n", "<leader>gg", "<cmd>Gitsigns toggle_signs<CR>:Gitsigns toggle_numhl<CR>
 
 -- Highlights
 map("n", "<C-c>", "<cmd>nohl<CR>", { desc = "Clear [Highlight]" })
-map("n", "<leader>br", [[<cmd>%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace [Highlight]" })
+--map("n", "<leader>br", [[<cmd>%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]<CR>, { desc = "" })
 
 -- Lines (Indent)
 map("v", "<", "<gv", { desc = "Indent [Left]" })

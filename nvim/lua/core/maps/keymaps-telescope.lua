@@ -9,36 +9,28 @@ local function map(mode, lhs, rhs, opts)
 end
 
 map("n", "<leader>tt", "<cmd>Telescope<CR>", { desc = "Telescope" })
-map("n", "<leader>ta", "<cmd>Telescope autocmmands<CR>", { desc = "Autocommands" })
+map("n", "<leader>ta", "<cmd>Telescope autocommands<CR>", { desc = "Autocommands" })
+map("n", "<leader>tb", "<cmd>Telescope buffers<CR>", { desc = "Buffers" })
+map("n", "<leader>tc", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Current Buffer Fuzzy" })
 map("n", "<leader>td", "<cmd>Telescope diagnostics<CR>", { desc = "Diagnostics" })
+map("n", "<leader>tf", "<cmd>Telescope find_files<CR>", { desc = "Find Files" })
 map("n", "<leader>tj", "<cmd>Telescope jumplist<CR>", { desc = "Jumplist" })
 map("n", "<leader>tm", "<cmd>Telescope man_pages<CR>", { desc = "Man" })
 map("n", "<leader>ts", "<cmd>Telescope treesitter<CR>", { desc = "Symbols [Treesitter]" })
 
--- Telescope-Buffers
-map("n", "<leader>bb", "<cmd>Telescope buffers<CR>", { desc = "Buffers" })
-map("n", "<leader>bf", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Fuzzy Find" })
-
--- Telescope-Commands
-map("n", "<leader>tcc", "<cmd>Telescope commands<CR>", { desc = "Commands" })
-map("n", "<leader>tch", "<cmd>Telescope command_history<CR>", { desc = "History" })
-
--- Telescope-Files
-map("n", "<leader>tf", "<cmd>Telescope find_files<CR>", { desc = "Find Files" }) -- Current directory
-
 -- Telescope-Git
-map("n", "<leader>gc","<cmd>Telescope git_commits<CR>", { desc = "Commits" })
 map("n", "<leader>gb","<cmd>Telescope git_branches<CR>", { desc = "Branches" })
+map("n", "<leader>gc","<cmd>Telescope git_commits<CR>", { desc = "Commits" })
 map("n", "<leader>gf","<cmd>Telescope git_files<CR>", { desc = "Files" })
 map("n", "<leader>gs","<cmd>Telescope git_status<CR>", { desc = "Status" })
 
 -- Telescope-Grep
-map("n", "<leader>/", "<cmd>Telescope live_grep<CR>", { desc = "Live grep" })
+map("n", "<leader>/", "<cmd>Telescope live_grep<CR>", { desc = "Live Grep" })
 
 -- Telescope-History
+map("n", "<leader>thc", "<cmd>Telescope command_history<CR>", { desc = "Command" })
 map("n", "<leader>thf", "<cmd>Telescope oldfiles<CR>", { desc = "Files" })
 map("n", "<leader>ths", "<cmd>Telescope search_history<CR>", { desc = "Search" })
-map("n", "<leader>thc", "<cmd>Telescope command_history<CR>", { desc = "Command" })
 
 -- Telescope-Vim
 map("n", "<leader>tvc", "<cmd>Telescope commands<CR>", { desc = "Commands" })

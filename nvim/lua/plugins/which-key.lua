@@ -89,11 +89,6 @@ local mappings = {
   -- Leader
   ["<leader>"] = {
     name = "Leader",
-    -- Buffer
-    b = {
-      name = "Buffer",
-      w = { name = "Write" },
-    },
 
     -- DAP
     d = {
@@ -117,7 +112,6 @@ local mappings = {
       },
       s = { name = "Symbols" },
       u = { name = "Calls" },
-      v = { name = "PyVenv" },
     },
 
     -- Plugins
@@ -126,13 +120,9 @@ local mappings = {
       m = { name = "Mason" },
     },
 
-    -- Split
-    s = { name = "Split" },
-
     -- Telescope
     t = {
       name = "Telescope",
-      c = { name = "Command" },
       h = { name = "History" },
       v = { name = "Vim" },
     },
