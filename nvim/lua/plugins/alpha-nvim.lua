@@ -72,11 +72,11 @@ dashboard.section.header.val = {
 
 -- Menu
 dashboard.section.buttons.val = {
-  dashboard.button( "l", "󰐱  > Lazy", ":Lazy<CR>"),
   dashboard.button( "f", "󰈔  > File", ":ene <BAR> startinsert <CR>"),
+  dashboard.button( "l", "󰐱  > Lazy", ":Lazy<CR>"),
   dashboard.button( "m", "󰐱  > Mason", ":Mason<CR>"),
-  dashboard.button( "h", "✚  > Nvim [Health]", ":checkhealth<CR>"),
-  dashboard.button( "n", "󱀁  > Nvim [News]", ":help news<CR>"),
+  dashboard.button( "nn", "  > Nvim [News]", ":help news<CR>"),
+  dashboard.button( "nh", "  > Nvim [Health]", ":checkhealth<CR>"),
   dashboard.button( "q", "  > Quit", ":qa<CR>"),
   dashboard.button( "tt", "󰭎  > Telescope", ":Telescope<CR>"),
   dashboard.button( "tf", "󰭎  > Telescope [Find Files]", ":Telescope find_files<CR>"),

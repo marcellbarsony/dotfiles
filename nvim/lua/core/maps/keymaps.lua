@@ -25,7 +25,7 @@ vim.g.maplocalleader = "\\"
 -- Core
 map("n", "<leader>bww", "<cmd>wa!<CR>", { desc = "Write all" })
 map("n", "<leader>bwq", "<cmd>wqa!<CR>", { desc = "Write all & Quit" })
---map("n", "<leader>br", "<cmd>source<CR>", { desc = "Reload config [TODO]" })
+--map("n", "<leader>bh", "<cmd>luafile ~/.config/nvim/init.lua<CR>", { desc = "Reload config [TODO]" })
 
 -- Arrow keys
 map("", "<up>", "<nop>")
@@ -38,9 +38,7 @@ map("n", "<Tab>", "<cmd>bn<CR>", { desc = "Buffer [Next]" })
 map("n", "<S-Tab>", "<cmd>bp<CR>", { desc = "Buffer [Prev]" })
 map("n", "<C-'>", "<cmd>b#<CR>", { desc = "Buffer [To last]" })
 map("n", "<C-q>", "<cmd>bdelete<CR>", { desc = "Buffer [Delete]" }) -- :bd!<CR>
-map("n", "<C-^>", "<cmd>_#<CR>", { desc = "Alternate file" }) -- :help alternate-file
---map("n", "<leader>ba", "O<ESC>", { desc = "Line [Above]" })
---map("n", "<leader>bb", "o<ESC>", { desc = "Line [Below]" })
+map("n", "<C-^>", "<cmd>e #<CR>", { desc = "Alternate file" }) -- :help alternate-file
 
 -- Clipboard
 map("n", "y", "\"+y", { desc = "Yank [Global]" })
@@ -58,20 +56,21 @@ map("n", "<leader>gg", "<cmd>Gitsigns toggle_signs<CR>:Gitsigns toggle_numhl<CR>
 map("n", "<C-c>", "<cmd>nohl<CR>", { desc = "Clear [Highlight]" })
 map("n", "<leader>br", [[<cmd>%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace [Highlight]" })
 
--- Lines (move)
--- https://vim.fandom.com/wiki/Moving_lines_up_or_down
+-- Lines (Indent)
 map("v", "<", "<gv", { desc = "Indent [Left]" })
 map("v", ">", ">gv", { desc = "Indent [Left]" })
 
-map("v", "K", ":move '<-2<CR>gv=gv", { desc = "Move [Up]" }) -- w/indentation
-map("v", "J", ":move '>+1<CR>gv=gv", { desc = "Move [Down]" }) -- w/indentation
---map("v", "K", ":move '<-2<CR>gv-gv", { desc = "Move [Up]" }) -- w/o indentation
---map("v", "J", ":move '>+1<CR>gv-gv", { desc = "Move [Down]" }) -- w/o indentation
+-- Lines (Misc)
+map("n", "J", "mzJ`z", { desc = "Append line below" })
 
---map("n", "<J>", "<cmd>move .+1<CR>", { desc = "Line [Move Down]" })
---map("n", "<K>", "<cmd>move .-2<CR>", { desc = "Line [Move Up]" })
---map("x", "<J>", "<cmd>move '>+1<CR>gv=gv", { desc = "Block [Move Down]" })
---map("x", "<K>", "<cmd>move '<-2<CR>gv=gv", { desc = "Block [Move Up]" })
+-- Lines (Move)
+-- https://vim.fandom.com/wiki/Moving_lines_up_or_down
+map("v", "K", ":move '<-2<CR>gv=gv", { desc = "Move [Up]" })
+map("v", "J", ":move '>+1<CR>gv=gv", { desc = "Move [Down]" })
+map("x", "K", ":move '<-2<CR>gv=gv", { desc = "Block [Move Up]" })
+map("x", "J", ":move '>+1<CR>gv=gv", { desc = "Block [Move Down]" })
+--map("n", "J", "<cmd>move .+1<CR>", { desc = "Line [Move Down]" })
+--map("n", "K", "<cmd>move .-2<CR>", { desc = "Line [Move Up]" })
 
 -- Markdown
 map("n", "<leader>lmp", "<cmd>MarkdownPreview<CR>", { desc = "Preview" })
@@ -80,8 +79,8 @@ map("n", "<leader>lmt", "<cmd>MarkdownPreviewToggle<CR>", { desc = "Preiview Tog
 
 -- Navigation
 -- Conflicts with cursor scrolloff
---map("n", "<C-d>", "<C-d>zz<CR>", { desc = "Page down" })
---map("n", "<C-u>", "<C-u>zz<CR>", { desc = "Page up" })
+map("n", "<C-d>", "<C-d>zz<CR>", { desc = "Page down" })
+map("n", "<C-u>", "<C-u>zz<CR>", { desc = "Page up" })
 
 -- Search
 map("n", "*", "*N", { desc = "Find word" }) -- Fix * - don't move to next match
@@ -89,21 +88,18 @@ map("n", "n", "nzzzv", { desc = "Search [Next]" }) -- Fix n: keep cursor in cent
 map("n", "N", "Nzzzv", { desc = "Search [Previous]" }) -- Fix N: keep cursor in center
 
 -- Shell movements
---map("i", "<C-A>", "<ESC>I", { desc = "Shell movement" })
---map("i", "<C-E>", "<ESC>A", { desc = "Shell movement" })
+map("i", "<C-A>", "<ESC>I", { desc = "" })
+map("i", "<C-E>", "<ESC>A", { desc = "" })
 
--- Splits
-map("n", "<leader>sh", "<cmd>split<CR>" , { desc = "Horizontal" })
-map("n", "<leader>sv", "<cmd>vsplit<CR>", { desc = "Vertical" })
-map("n", "<leader>ss", "<C-w>x", { desc = "Swap" })
-map("n", "<C-k>", "<C-w>k", { desc = "Split [Up]" }) -- Move up
-map("n", "<C-j>", "<C-w>j", { desc = "Split [Down]" }) -- Move down
-map("n", "<C-h>", "<C-w>h", { desc = "Split [Left]" }) -- Move left
-map("n", "<C-l>", "<C-w>l", { desc = "Split [Right]" }) -- Move right
-map("n", "<C-A-k>", "<cmd>resize -5<CR>", { desc = "Split [Hor -]" }) -- Decrease
-map("n", "<C-A-j>", "<cmd>resize +5<CR>", { desc = "Split [Hor +]" }) -- Increase
-map("n", "<C-A-h>", "<cmd>vertical resize -5<CR>", { desc = "Split [Ver +]" }) -- Increase
-map("n", "<C-A-l>", "<cmd>vertical resize +5<CR>", { desc = "Split [Ver -]" }) -- Decrease
+-- Splits (Ctrl + w)
+map("n", "<C-k>", "<C-w>k", { desc = "Split [Up]" })
+map("n", "<C-j>", "<C-w>j", { desc = "Split [Down]" })
+map("n", "<C-h>", "<C-w>h", { desc = "Split [Left]" })
+map("n", "<C-l>", "<C-w>l", { desc = "Split [Right]" })
+map("n", "<C-A-k>", "<cmd>resize -5<CR>", { desc = "Split [Hor -]" })
+map("n", "<C-A-j>", "<cmd>resize +5<CR>", { desc = "Split [Hor +]" })
+map("n", "<C-A-h>", "<cmd>vertical resize -5<CR>", { desc = "Split [Ver +]" })
+map("n", "<C-A-l>", "<cmd>vertical resize +5<CR>", { desc = "Split [Ver -]" })
 
 -- Undo & Redo
 map("n", "<u>", "<cmd>undo<CR>", { desc = "Undo" }) -- Undo
