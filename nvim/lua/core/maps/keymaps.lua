@@ -38,7 +38,6 @@ map("n", "<C-^>", "<cmd>e #<CR>", { desc = "Alternate file" }) -- :help alternat
 -- Clipboard
 map("n", "y", "\"+y", { desc = "Yank [Global]" })
 map("v", "y", "\"+y", { desc = "Yank [Global]" })
-map("n", "y", "\"+Y", { desc = "Yank [Global]" })
 --map("n", "<leader>p", "\"_dp", { desc = "Paste" })
 
 -- Gitsigns
@@ -106,5 +105,5 @@ map("n", "<C-r>", "<cmd>redo<CR>", { desc = "Redo" }) -- Redo
 
 -- Use operator pending mode to visually select the whole buffer
 -- e.g. dA = delete buffer ALL, yA = copy whole buffer ALL
-map("o", "A", "<cmd><C-U>normal! mzggVG<CR>`z")
-map("x", "A", "<cmd><C-U>normal! ggVG<CR>")
+--map("o", "A", "<cmd><C-U>normal! mzggVG<CR>`z")
+--map("x", "A", "<cmd><C-U>normal! ggVG<CR>")

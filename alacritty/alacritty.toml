@@ -1,0 +1,85 @@
+import = ["/home/marci/.config/alacritty/catppuccin/catppuccin-mocha.toml"]
+live_config_reload = true
+
+[colors]
+draw_bold_text_with_bright_colors = false
+transparent_background_colors = false
+
+[colors.cursor]
+cursor = "CellForeground"
+text = "CellBackground"
+
+[colors.primary]
+background = "#000000"
+bright_foreground = "#eaeaea"
+dim_foreground = "#828482"
+foreground = "#d5d8d6"
+
+[cursor]
+blink_interval = 1000
+vi_mode_style = "None"
+
+[cursor.style]
+blinking = "Off"
+shape = "Block"
+
+[env]
+TERM = "alacritty"
+
+[font]
+builtin_box_drawing = true
+size = 11.0
+
+[font.bold]
+family = "monospace"
+style = "Bold"
+
+[font.bold_italic]
+family = "monospace"
+style = "Bold Italic"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "monospace"
+style = "Italic"
+
+[font.normal]
+family = "monospace"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 0
+
+[scrolling]
+history = 5000
+multiplier = 5
+
+[window]
+decorations = "full"
+decorations_theme_variant = "Dark"
+dynamic_padding = false
+dynamic_title = true
+opacity = 0.7
+resize_increments = false
+startup_mode = "Windowed"
+title = "Alacritty"
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.dimensions]
+columns = 0
+lines = 0
+
+[window.padding]
+x = 5
+y = 5
+
+[window.position]
+x = 0
+y = 0

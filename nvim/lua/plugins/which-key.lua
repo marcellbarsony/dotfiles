@@ -20,13 +20,13 @@ require("which-key").setup {
     },
   },
   operators = { gc = "Comments" },
-  key_labels = {
-    -- override the label used to display some keys. It doesn't effect WK in any other way.
-    -- For example:
-    -- ["<space>"] = "SPC",
-    -- ["<cr>"] = "RET",
-    -- ["<tab>"] = "TAB",
-  },
+  --key_labels = {
+  --  --override the label used to display some keys. It doesn't effect WK in any other way.
+  --  For example:
+  --  ["<space>"] = "SPC",
+  --  ["<cr>"] = "RET",
+  --  ["<tab>"] = "TAB",
+  --},
   motions = {
     count = true,
   },
