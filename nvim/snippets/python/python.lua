@@ -64,7 +64,7 @@ ls.add_snippets("python", {
   ),
   s( -- if-name 
     "if-name",
-    fmt('if __name__ = "__main__":\n'..
+    fmt('if __name__ == "__main__":\n'..
       "\t{}{}", {
       i(1, "main()"),
       i(0),

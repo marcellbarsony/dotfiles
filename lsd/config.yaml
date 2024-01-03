@@ -45,7 +45,7 @@ size: default
 sorting:
   column: name
   reverse: false
-  dir-grouping: none
+  dir-grouping: first
 
 # == Permission ==
 permission: rwx
