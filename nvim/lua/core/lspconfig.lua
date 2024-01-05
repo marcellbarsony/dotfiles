@@ -23,7 +23,7 @@ for _, lsp in ipairs(servers) do
   }
 end
 
--- KEYMAPS
+-- Keymaps
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args, bufnr)
     -- Format
@@ -63,12 +63,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 -- Diagnostics
 vim.diagnostic.config({
-    virtual_text = false,
-    signs = true,
-    underline = false,
-    update_in_insert = false,
-    severity_sort = true,
-    })
+  virtual_text = false,
+  signs = true,
+  underline = false,
+  update_in_insert = false,
+  severity_sort = true,
+})
 
 -- Signs
 local signs = {
@@ -84,7 +84,7 @@ for type, icon in pairs(signs) do
     text = icon,
     texthl = hl,
     --numhl = hl
-    })
+  })
 end
 
 -- UI Customization

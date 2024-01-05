@@ -6,11 +6,7 @@ require("core.autocmd")
 require("core.colors")
 require("core.lspconfig")
 require("core.options")
-require("core.maps.keymaps")
-require("core.maps.keymaps-lsp")
-require("core.maps.keymaps-dap")
-require("core.maps.keymaps-telescope")
-require("core.maps.keymaps-plugins")
+require("core.keymaps")
 
 -- DAP
 require("dap.nvim-dap")

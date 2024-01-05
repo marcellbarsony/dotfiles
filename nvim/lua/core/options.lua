@@ -5,14 +5,14 @@
 local options = {
   allowrevins = false,
   autochdir = true,
-  backspace = 'indent,eol,start',
+  backspace = "indent,eol,start",
   binary = false,
   breakindent = true,
-  browsedir = 'current',
+  browsedir = "current",
   confirm = true,
   conceallevel = 0,
   list = true,
-  listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂',
+  listchars = "trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂",
   more=true,
   showtabline = 1,
   shiftwidth = 2,
@@ -22,15 +22,15 @@ local options = {
 
   -- Backup
   backup = false,
-  backupcopy = 'auto',
+  backupcopy = "auto",
   backupext = "~",
-  backupdir = '/tmp/',
+  backupdir = "/tmp/",
   writebackup = false,
 
   -- Buffer
-  bufhidden = '',
+  bufhidden = "",
   buflisted = true,
-  buftype = '',
+  buftype = "",
 
   -- Buffer split
   splitright = true,
@@ -45,10 +45,10 @@ local options = {
   smartcase = true,
 
   -- Clipboard
-  clipboard = 'unnamedplus',
+  clipboard = "unnamedplus",
 
   -- Colors
-  background = 'dark',
+  background = "dark",
   termguicolors = true,
 
   -- Command history
@@ -57,7 +57,7 @@ local options = {
   -- Command line
   cdhome = true,
   cmdheight = 0,
-  --o.cedit = 'CTRL-F',
+  --o.cedit = "CTRL-F",
 
   -- Cursor
   cursorcolumn = false,
@@ -67,12 +67,12 @@ local options = {
   sidescrolloff = 8,
 
   -- Encoding
-  fileencoding = 'utf-8',
+  fileencoding = "utf-8",
 
   -- Fold
-  foldmethod = 'manual',
-  foldexpr = 'nvim_treesitter#foldexpr()',
-  -- foldcolumn = '1', -- '0' is not bad
+  foldmethod = "manual",
+  foldexpr = "nvim_treesitter#foldexpr()",
+  -- foldcolumn = "1", -- "0" is not bad
   -- foldlevel = 99, -- Using ufo provider need a large value, feel free to decrease the value
   -- foldlevelstart = 99,
   -- foldenable = true,
@@ -83,16 +83,16 @@ local options = {
   -- Indentation
   autoindent = false,
   cindent = true,
-  cinoptions = '',
-  cinwords = 'if,else,while,do,for,switch',
-  --o.cinscopecls = 'public,protected,private',
+  cinoptions = "",
+  cinwords = "if,else,while,do,for,switch",
+  --o.cinscopecls = "public,protected,private",
   smartindent = false,
 
   -- Line number
   number = true,
   numberwidth = 2,
   relativenumber = true,
-  signcolumn = 'yes',
+  signcolumn = "yes",
 
   -- Mode
   showmode = false,
@@ -119,5 +119,5 @@ vim.opt.shortmess:append "c"
 
 -- Loop through options
 for key, value in pairs(options) do
-    vim.opt[key] = value
+  vim.opt[key] = value
 end

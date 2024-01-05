@@ -38,7 +38,6 @@ vim.g.rustaceanvim = function()
   }
 end
 
-
 -- Keymaps
 local function map(mode, lhs, rhs, opts)
   local options = { noremap = true, silent = true }
