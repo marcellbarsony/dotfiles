@@ -31,7 +31,8 @@ require("plugins.luasnip")
 require("plugins.gitsigns")
 
 -- Lang
-require("lang.rust-tools")
+--require("lang.rust-tools")
+require("lang.rustaceanvim")
 require("lang.tsserver")
 
 -- Navigation

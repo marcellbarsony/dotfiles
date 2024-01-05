@@ -38,6 +38,7 @@ map("n", "<C-^>", "<cmd>e #<CR>", { desc = "Alternate file" }) -- :help alternat
 -- Clipboard
 map("n", "y", "\"+y", { desc = "Yank [Global]" })
 map("v", "y", "\"+y", { desc = "Yank [Global]" })
+map("x", "p", [["_dp]], { desc = "Paste" })
 --map("n", "<leader>p", "\"_dp", { desc = "Paste" })
 
 -- Gitsigns
@@ -82,6 +83,7 @@ map("n", "<C-u>", "<C-u>zz<CR>", { desc = "Page up" })
 
 -- Search
 map("n", "*", "*N", { desc = "Find word" }) -- Fix * - don't move to next match
+map("n", "#", "#N", { desc = "Find word" }) -- Fix # - don't move to next match
 map("n", "n", "nzzzv", { desc = "Search [Next]" }) -- Fix n: keep cursor in center
 map("n", "N", "Nzzzv", { desc = "Search [Previous]" }) -- Fix N: keep cursor in center
 
@@ -102,8 +104,3 @@ map("n", "<C-A-l>", "<cmd>vertical resize +5<CR>", { desc = "Split [Ver -]" })
 -- Undo & Redo
 map("n", "<u>", "<cmd>undo<CR>", { desc = "Undo" }) -- Undo
 map("n", "<C-r>", "<cmd>redo<CR>", { desc = "Redo" }) -- Redo
-
--- Use operator pending mode to visually select the whole buffer
--- e.g. dA = delete buffer ALL, yA = copy whole buffer ALL
---map("o", "A", "<cmd><C-U>normal! mzggVG<CR>`z")
---map("x", "A", "<cmd><C-U>normal! ggVG<CR>")

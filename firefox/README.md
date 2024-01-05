@@ -2,7 +2,7 @@
 
 ### Install
 
-- Install Firefox
+Install dependencies
 
 ```
 sudo pacman -S firefox pipewire-jack
@@ -10,13 +10,13 @@ sudo pacman -S firefox pipewire-jack
 
 ### Sign in
 
-- Sign in to Firefox
+1. Sign in to Firefox
 
-- Sign in to containers & enable sync
+2. Sign in to containers & enable sync
 
-- Wait until settings & plugin sync
+3. Wait until settings & plugin sync
 
-- **Terminate Firefox**
+4. **Terminate Firefox**
 
 ### Containers
 

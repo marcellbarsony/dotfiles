@@ -90,37 +90,28 @@ local mappings = {
   ["<leader>"] = {
     name = "Leader",
 
-    -- DAP
     d = {
       name = "DAP",
       p = { name = "Py test" },
       t = { name = "Telescope" },
     },
 
-    -- Git
     g = { name = "GIT" },
 
-    -- LSP
     l = {
       name = "LSP",
       h = { name = "Help" },
       m = { name = "Markdown" },
-      r = {
-        name = "Rust",
-        a = { "Action [Hover]" },
-        g = { "Action [Group]" },
-      },
+      r = { name = "Rust" },
       s = { name = "Symbols" },
       u = { name = "Calls" },
     },
 
-    -- Plugins
     p = {
       name = "Plugins",
       m = { name = "Mason" },
     },
 
-    -- Telescope
     t = {
       name = "Telescope",
       h = { name = "History" },

@@ -36,28 +36,45 @@ require("lazy").setup({
   "NvChad/nvim-colorizer.lua",
 
   -- Comment
-  "numToStr/Comment.nvim",
+  { "numToStr/Comment.nvim",
+    lazy = false,
+  },
 
   -- Devicons
   { "nvim-tree/nvim-web-devicons",
-    -- lazy = true
+    event = "VeryLazy"
   },
 
   -- CMP
   { "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     dependencies = {
-      "hrsh7th/cmp-buffer",
-      "hrsh7th/cmp-cmdline",
-      "hrsh7th/cmp-nvim-lsp",
-      "hrsh7th/cmp-nvim-lsp-signature-help",
-      "hrsh7th/cmp-path",
+      {
+        "hrsh7th/cmp-buffer",
+        event = "InsertEnter",
+      },
+      {
+        "hrsh7th/cmp-cmdline",
+        event = "InsertEnter",
+      },
+      {
+        "hrsh7th/cmp-nvim-lsp",
+        event = "InsertEnter",
+      },
+      {
+        "hrsh7th/cmp-nvim-lsp-signature-help",
+        event = "InsertEnter",
+      },
+      {
+        "hrsh7th/cmp-path",
+        event = "InsertEnter",
+      },
     },
   },
 
   -- DAP
   { "mfussenegger/nvim-dap",
-    lazy = true,
+    event = "VeryLazy",
     dependencies = {
       "mfussenegger/nvim-dap-python", -- Python
       "nvim-telescope/telescope-dap.nvim", -- Telescope
@@ -67,17 +84,10 @@ require("lazy").setup({
   },
 
   -- Greeter
-  { "goolord/alpha-nvim",
-    lazy = "true"
-  },
+  "goolord/alpha-nvim",
 
   -- Git
-  { "lewis6991/gitsigns.nvim",
-    event = {
-      "BufReadPre",
-      "BufNewFile"
-    }
-  },
+  "lewis6991/gitsigns.nvim",
 
   -- HEX
   "RaafatTurki/hex.nvim",
@@ -93,7 +103,12 @@ require("lazy").setup({
   },
 
   -- LSP
-  "neovim/nvim-lspconfig",
+  { "neovim/nvim-lspconfig",
+    event = {
+      "BufReadPre",
+      "BufNewFile",
+    },
+  },
 
   -- LSP (Mason)
   { "williamboman/mason.nvim",
@@ -131,9 +146,9 @@ require("lazy").setup({
     lazy = true
   },
 
-  -- Rust
-  { "simrat39/rust-tools.nvim",
-    ft = "rust"
+  { "mrcjkb/rustaceanvim",
+    version = "^3",
+    ft = { "rust" },
   },
 
   -- Snippets
@@ -145,23 +160,22 @@ require("lazy").setup({
   },
 
   -- Status line
-  { "nvim-lualine/lualine.nvim",
-    event = {
-      "BufReadPre",
-      "BufNewFile"
-    }
-  },
+  "nvim-lualine/lualine.nvim",
 
   -- Telescope
   { "nvim-telescope/telescope.nvim",
+    lazy = true,
     cmd = "Telescope",
     dependencies = {
       "nvim-lua/plenary.nvim",
     }
   },
 
-  -- amongst your other plugins
+  -- Toggleterm
   { "akinsho/toggleterm.nvim",
+    --event = "VeryLazy",
+    lazy = true,
+    cmd = "Toggleterm",
     version = "*",
     config = true
   },
@@ -182,6 +196,10 @@ require("lazy").setup({
 
   -- Which key
   { "folke/which-key.nvim",
-    lazy = true
+    event = "VeryLazy",
+    init = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+    end,
   },
 })
