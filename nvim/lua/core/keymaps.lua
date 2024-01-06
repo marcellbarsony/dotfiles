@@ -41,8 +41,7 @@ map("n", "<C-^>", "<cmd>e #<CR>", { desc = "Alternate file" }) -- :help alternat
 -- Clipboard
 map("n", "y", "\"+y", { desc = "Yank [Global]" })
 map("v", "y", "\"+y", { desc = "Yank [Global]" })
-map("x", "p", [["_dp]], { desc = "Paste" })
---map("n", "<leader>p", "\"_dp", { desc = "Paste" })
+map("x", "p", [["_dp]], { desc = "Paste [Global]" })
 
 -- DAP
 -- :h dap-api
@@ -90,8 +89,8 @@ map("v", "K", ":move '<-2<CR>gv=gv", { desc = "Move [Up]" })
 map("v", "J", ":move '>+1<CR>gv=gv", { desc = "Move [Down]" })
 map("x", "K", ":move '<-2<CR>gv=gv", { desc = "Block [Move Up]" })
 map("x", "J", ":move '>+1<CR>gv=gv", { desc = "Block [Move Down]" })
---map("n", "J", "<cmd>move .+1<CR>", { desc = "Line [Move Down]" })
---map("n", "K", "<cmd>move .-2<CR>", { desc = "Line [Move Up]" })
+--map("n", "K", ":move .-2<CR>", { desc = "Line [Move Up]" })
+--map("n", "J", ":move .+1<CR>", { desc = "Line [Move Down]" })
 
 -- LSP Help
 map("n", "<leader>lhi", "<cmd>LspInfo<CR>", { desc = "Info" })
@@ -151,6 +150,15 @@ map("n", "<leader>po", "<cmd>Oil<CR>", { desc = "Oil" })
 --map("n", "<leader>lvn", "<cmd>PyLspCreateVenv<CR>", { desc = "New" })
 --map("n", "<leader>lvi", "<cmd>PyRun -m pip install -r requirements.txt<CR>", { desc = "Install dependencies" })
 
+-- Rust (rustaceanvim)
+local bufnr = vim.api.nvim_get_current_buf()
+map("n", "<leader>lra", function() vim.cmd.RustLsp("codeAction") end, { silent = true, buffer = bufnr, desc = "Action" })
+map("n", "<leader>lrd", function() vim.cmd.RustLsp("debuggables") end, { desc = "Debuggables" })
+map("n", "<leader>lrj", function() vim.cmd.RustLsp("joinLines") end, { desc = "Join lines" })
+map("n", "<leader>lrh", function() vim.cmd.RustLsp("hover", "actions") end, { desc = "Hover actions" })
+map("n", "<leader>lrr", function() vim.cmd.RustLsp("runnables") end, { desc = "Runnables" })
+map("n", "<leader>lr?", "<cmd>checkhealth rustaceanvim<CR>", { desc = "Health" })
+
 -- Search
 map("n", "*", "*N", { desc = "Find word" }) -- Fix *: don't move to next match
 map("n", "#", "#N", { desc = "Find word" }) -- Fix #: don't move to next match
@@ -175,7 +183,7 @@ map("n", "<C-A-l>", "<cmd>vertical resize +5<CR>", { desc = "Split [Ver -]" })
 map("n", "<leader>tt", "<cmd>Telescope<CR>", { desc = "Telescope" })
 map("n", "<leader>ta", "<cmd>Telescope autocommands<CR>", { desc = "Autocommands" })
 map("n", "<leader>tb", "<cmd>Telescope buffers<CR>", { desc = "Buffers" })
-map("n", "<leader>tc", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Current Buffer Fuzzy" })
+map("n", "<leader>tc", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Buffer [Fuzzy Current]" })
 map("n", "<leader>td", "<cmd>Telescope diagnostics<CR>", { desc = "Diagnostics" })
 map("n", "<leader>tf", "<cmd>Telescope find_files<CR>", { desc = "Find Files" })
 map("n", "<leader>tj", "<cmd>Telescope jumplist<CR>", { desc = "Jumplist" })
