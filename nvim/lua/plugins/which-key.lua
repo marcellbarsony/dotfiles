@@ -76,12 +76,11 @@ local opts = {
 }
 
 local mappings = {
-  ['['] = { name = "" },
-  [']'] = { name = "" },
+  ["["] = { name = "" },
+  ["]"] = { name = "" },
   g = { name = "Go-To" },
-  v = { name = "VISUAL Mode" },
-  o = { name = "LSPkind outline" },
-  u = { name = "Undo" },
+  v = { name = "VISUAL" },
+  --u = { name = "Undo" },
   z = { name = "Fold" },
 
   -- Leader
