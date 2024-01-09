@@ -27,10 +27,10 @@ require("lazy").setup({
     name = "catppuccin",
     priority = 1000
   },
-  -- { "folke/tokyonight.nvim",
-  --   lazy = false,
-  --   priority = 1000,
-  -- },
+  { "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+  },
 
   -- Colorizer
   "NvChad/nvim-colorizer.lua",
@@ -89,6 +89,9 @@ require("lazy").setup({
   -- Git
   "lewis6991/gitsigns.nvim",
 
+  -- Harpoon
+  { "ThePrimeagen/harpoon" },
+
   -- HEX
   "RaafatTurki/hex.nvim",
 
@@ -118,11 +121,6 @@ require("lazy").setup({
       "jay-babu/mason-nvim-dap.nvim",
       "onsails/lspkind.nvim",
     },
-  },
-
-  -- LSP Lines
-  { url = "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-    event = "LspAttach"
   },
 
   -- Lspsaga
@@ -193,6 +191,9 @@ require("lazy").setup({
       "p00f/nvim-ts-rainbow"
     }
   },
+
+  -- Trouble
+  "folke/trouble.nvim",
 
   -- Which key
   { "folke/which-key.nvim",

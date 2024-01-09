@@ -98,9 +98,6 @@ map("n", "<leader>lhc", "<cmd>help lspconfig.txt<CR>", { desc = "Config" })
 map("n", "<leader>lhr", "<cmd>help lsp-config<CR>", { desc = "Reference" })
 map("n", "<leader>lhl", "<cmd>LspLog<CR>", { desc = "Log" })
 
--- LSP Lines
-map("n", "<leader>ll", require("lsp_lines").toggle, { desc = "LSP lines" })
-
 -- Lspsaga
 map("n",         "gd", "<cmd>Lspsaga goto_definition<CR>", { desc = "Definition [Jump]" })
 map("n", "<leader>la", "<cmd>Lspsaga code_action<CR>", { desc = "Action"})
@@ -116,6 +113,9 @@ map("n", "<Leader>lw", "<cmd>Lspsaga winbar_toggle<CR>", { desc = "Winbar"})
 --map("n", "<leader>lt", "<cmd>Lspsaga open_floaterm<CR>", { desc = "Floaterm" })
 --map("n", "<Leader>lci", "<cmd>Lspsaga incoming_calls<CR>", { desc = "Incoming"})
 --map("n", "<Leader>lco", "<cmd>Lspsaga outgoing_calls<CR>", { desc = "Outgoing"})
+
+-- LSP Trouble
+map("n", "<leader>ll", "<cmd>TroubleToggle<CR>", { desc = "Trouble" })
 
 -- Macro
 map("n", "Q", "@qj", { desc = "Macro Replay" })
