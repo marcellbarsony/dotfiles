@@ -69,9 +69,13 @@ map("n", "<leader>gg", "<cmd>Gitsigns toggle_signs<CR>:Gitsigns toggle_numhl<CR>
 --map("n", "<leader>gn", "<cmd>Gitsigns toggle_numhl<CR>", { desc = "Numhl" })
 --map("n", "<leader>gb", "<cmd>Gitsigns toggle_current_line_blame<CR>", { desc = "Blame" })
 
+-- Harpoon
+map("n", "<leader>ha", "<cmd>lua require('harpoon.mark').add_file()<CR>", { desc = "Add" })
+map("n", "<leader>hh", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", { desc = "Toggle" })
+
 -- Highlights
-map("n", "<C-c>", "<cmd>nohl<CR>", { desc = "Clear [Highlight]" })
---map("n", "<leader>br", [[<cmd>%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]<CR>, { desc = "" })
+map("n", "<C-c>", "<cmd>nohl<CR>", { desc = "Clear" })
+--map("n", "<leader>cr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "[Highlight] Replace selected" })
 
 -- Lazy
 map("n", "<leader>pl", "<cmd>Lazy<CR>", { desc = "Lazy" })
@@ -99,23 +103,19 @@ map("n", "<leader>lhr", "<cmd>help lsp-config<CR>", { desc = "Reference" })
 map("n", "<leader>lhl", "<cmd>LspLog<CR>", { desc = "Log" })
 
 -- Lspsaga
-map("n",         "gd", "<cmd>Lspsaga goto_definition<CR>", { desc = "Definition [Jump]" })
-map("n", "<leader>la", "<cmd>Lspsaga code_action<CR>", { desc = "Action"})
-map("n", "<leader>lc", "<cmd>Lspsaga rename<CR>", { desc = "Rename"})
-map("n", "<leader>ld", "<cmd>Lspsaga hover_doc<CR>", { desc = "Documentation" })
+map("n", "<leader>la", "<cmd>Lspsaga code_action<CR>", { desc = "Action" })
 map("n", "<leader>lo", "<cmd>Lspsaga outline<CR>", { desc = "Outline" })
 map("n", "<leader>lp", "<cmd>Lspsaga peek_definition<CR>", { desc = "Peek definition" })
+map("n", "<leader>lr", "<cmd>Lspsaga rename<CR>", { desc = "Rename" })
 map("n", "<leader>lt", "<cmd>Lspsaga peek_type_definition<CR>", { desc = "Type" })
-map("n", "<Leader>lw", "<cmd>Lspsaga winbar_toggle<CR>", { desc = "Winbar"})
+map("n", "<Leader>lw", "<cmd>Lspsaga winbar_toggle<CR>", { desc = "Winbar" })
+--map("n",         "gd", "<cmd>Lspsaga goto_definition<CR>", { desc = "Definition [Jump]" })
 --map("n", "<leader>lb", "<cmd>Lspsaga show_buf_diagnostics<CR>", { desc = "Diagnostics [Buffer] "})
+--map("n", "<leader>ld", "<cmd>Lspsaga show_line_diagnostics<CR>", { desc = "Diagnostics" })
+--map("n", "<leader>lk", "<cmd>Lspsaga hover_doc<CR>", { desc = "Documentation" })
 --map("n", "<leader>lk", "<cmd>Lspsaga hover_doc ++keep<CR>", { desc = "Documentation" })
---map("n", "<leader>ls", "<cmd>Lspsaga show_line_diagnostics<CR>", { desc = "Diagnostics [Line] "})
---map("n", "<leader>lt", "<cmd>Lspsaga open_floaterm<CR>", { desc = "Floaterm" })
---map("n", "<Leader>lci", "<cmd>Lspsaga incoming_calls<CR>", { desc = "Incoming"})
---map("n", "<Leader>lco", "<cmd>Lspsaga outgoing_calls<CR>", { desc = "Outgoing"})
-
--- LSP Trouble
-map("n", "<leader>ll", "<cmd>TroubleToggle<CR>", { desc = "Trouble" })
+--map("n", "<Leader>lci", "<cmd>Lspsaga incoming_calls<CR>", { desc = "Incoming" })
+--map("n", "<Leader>lco", "<cmd>Lspsaga outgoing_calls<CR>", { desc = "Outgoing" })
 
 -- Macro
 map("n", "Q", "@qj", { desc = "Macro Replay" })
@@ -129,9 +129,9 @@ map("n", "<leader>pmm", "<cmd>Mason<CR>", { desc = "Mason" })
 map("n", "<leader>pmu", "<cmd>MasonUninstallAll<CR>", { desc = "Uninstall all" })
 
 -- Markdown
-map("n", "<leader>lmp", "<cmd>MarkdownPreview<CR>", { desc = "Preview" })
-map("n", "<leader>lms", "<cmd>MarkdownPreviewStop<CR>", { desc = "Preiview Stop" })
-map("n", "<leader>lmt", "<cmd>MarkdownPreviewToggle<CR>", { desc = "Preiview Toggle" })
+map("n", "<leader>mp", "<cmd>MarkdownPreview<CR>", { desc = "Preview" })
+map("n", "<leader>ms", "<cmd>MarkdownPreviewStop<CR>", { desc = "Preiview Stop" })
+map("n", "<leader>mt", "<cmd>MarkdownPreviewToggle<CR>", { desc = "Preiview Toggle" })
 
 -- Navigation
 -- Conflicts with cursor scrolloff
@@ -152,12 +152,12 @@ map("n", "<leader>po", "<cmd>Oil<CR>", { desc = "Oil" })
 
 -- Rust (rustaceanvim)
 local bufnr = vim.api.nvim_get_current_buf()
-map("n", "<leader>lra", function() vim.cmd.RustLsp("codeAction") end, { silent = true, buffer = bufnr, desc = "Action" })
-map("n", "<leader>lrd", function() vim.cmd.RustLsp("debuggables") end, { desc = "Debuggables" })
-map("n", "<leader>lrj", function() vim.cmd.RustLsp("joinLines") end, { desc = "Join lines" })
-map("n", "<leader>lrh", function() vim.cmd.RustLsp("hover", "actions") end, { desc = "Hover actions" })
-map("n", "<leader>lrr", function() vim.cmd.RustLsp("runnables") end, { desc = "Runnables" })
-map("n", "<leader>lr?", "<cmd>checkhealth rustaceanvim<CR>", { desc = "Health" })
+map("n", "<leader>ra", function() vim.cmd.RustLsp("codeAction") end, { silent = true, buffer = bufnr, desc = "Action" })
+map("n", "<leader>rd", function() vim.cmd.RustLsp("debuggables") end, { desc = "Debuggables" })
+map("n", "<leader>rh", "<cmd>checkhealth rustaceanvim<CR>", { desc = "Health" })
+map("n", "<leader>rj", function() vim.cmd.RustLsp("joinLines") end, { desc = "Join lines" })
+map("n", "<leader>rr", function() vim.cmd.RustLsp("runnables") end, { desc = "Runnables" })
+--map("n", "<leader>rh", function() vim.cmd.RustLsp("hover", "actions") end, { desc = "Hover actions" })
 
 -- Search
 map("n", "*", "*N", { desc = "Find word" }) -- Fix *: don't move to next match
@@ -212,8 +212,8 @@ map("n", "<leader>thf", "<cmd>Telescope oldfiles<CR>", { desc = "Files" })
 map("n", "<leader>ths", "<cmd>Telescope search_history<CR>", { desc = "Search" })
 
 -- Telescope-LSP
-map("n", "<leader>lv", "<cmd>Telescope lsp_references<CR>", { desc = "References" })
 map("n", "<leader>li", "<cmd>Telescope lsp_implementations<CR>", { desc = "Implementations" })
+map("n", "<leader>ll", "<cmd>Telescope lsp_references<CR>", { desc = "LSP References" })
 
 -- Telescope-LSP-Calls
 map("n", "<leader>lui", "<cmd>Telescope lsp_incoming_calls<CR>", { desc = "Incoming" })

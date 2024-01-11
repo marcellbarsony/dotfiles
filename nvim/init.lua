@@ -30,6 +30,7 @@ require("lang.tsserver")
 
 -- LSP
 require("plugins.lspsaga")
+require("plugins.trouble")
 
 -- Mason
 require("mason.mason")
@@ -49,7 +50,6 @@ require("plugins.comment")
 require("plugins.hex")
 require("plugins.indent-blankline")
 require("plugins.lualine")
-require("plugins.trouble")
 require("plugins.toggleterm")
 
 -- Telescope

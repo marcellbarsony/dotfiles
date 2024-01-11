@@ -76,14 +76,18 @@ local opts = {
 }
 
 local mappings = {
-  ["["] = { name = "" },
-  ["]"] = { name = "" },
-  g = { name = "Go-To" },
+  ["["] = { name = "Previous" },
+  ["]"] = { name = "Next" },
+  g = {
+    name = "Go-To",
+    d = "Definition",
+    D = "Declaration",
+    i = "Implementation",
+    t = "Type",
+  },
   v = { name = "VISUAL" },
-  --u = { name = "Undo" },
   z = { name = "Fold" },
 
-  -- Leader
   ["<leader>"] = {
     name = "Leader",
 
@@ -95,19 +99,27 @@ local mappings = {
 
     g = { name = "GIT" },
 
+    h = { name = "Harpoon" },
+
     l = {
       name = "LSP",
+      a = "Action",
+      f = "Format",
+      k = "Documentation",
+      -- r = "Rename",
       h = { name = "Help" },
-      m = { name = "Markdown" },
-      r = { name = "Rust" },
       s = { name = "Symbols" },
       u = { name = "Calls" },
     },
+
+    m = { name = "Markdown" },
 
     p = {
       name = "Plugins",
       m = { name = "Mason" },
     },
+
+    r = { name = "Rust" },
 
     t = {
       name = "Telescope",

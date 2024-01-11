@@ -17,28 +17,29 @@ vim.g.rustaceanvim = function()
     dap = {
       adapter = cfg.get_codelldb_adapter(codelldb_path, liblldb_path),
     },
-    tools = {
-      hover_actions = {
-        border = {
-          { "┌", "FloatBorder" },
-          { "─", "FloatBorder" },
-          { "┐", "FloatBorder" },
-          { "│", "FloatBorder" },
-          { "┘", "FloatBorder" },
-          { "─", "FloatBorder" },
-          { "└", "FloatBorder" },
-          { "│", "FloatBorder" },
-        },
-        auto_focus = true,
-      },
-    },
-    inlay_hints = {
-      highlight = "NonText",
-    },
-    server = {
-      on_attach = function(client, bufnr)
-        require("lsp-inlayhints").on_attach(client, bufnr)
-      end
-    }
+    -- tools = {
+    --   hover_actions = {
+    --     auto_focus = true,
+    --     border = {
+    --       { "┌", "FloatBorder" },
+    --       { "─", "FloatBorder" },
+    --       { "┐", "FloatBorder" },
+    --       { "│", "FloatBorder" },
+    --       { "┘", "FloatBorder" },
+    --       { "─", "FloatBorder" },
+    --       { "└", "FloatBorder" },
+    --       { "│", "FloatBorder" },
+    --     },
+    --     replace_builtin_hover = true,
+    --   },
+    -- },
+    -- inlay_hints = {
+    --   highlight = "NonText",
+    -- },
+    -- server = {
+    --   on_attach = function(client, bufnr)
+    --     require("lsp-inlayhints").on_attach(client, bufnr)
+    --   end
+    -- }
   }
 end

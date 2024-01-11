@@ -195,7 +195,7 @@ require("lspsaga").setup({
     title = true,
     expand = "",
     collapse = "",
-    code_action = "󱐋",
+    code_action = "󱐌",
     actionfix = " ",
     lines = { "┗", "┣", "┃", "━", "┏" },
     kind = nil,

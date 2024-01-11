@@ -2,14 +2,12 @@
 -- https://github.com/neovim/nvim-lspconfig
 -- :help lsp-config
 
--- LSP config
-local lspconfig = require('lspconfig')
-
--- Additional capabilities by nvim-cmp
+-- LSP config & Additional capabilities (nvim-cmp)
 -- https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion#nvim-cmp
+-- https://github.com/neovim/nvim-lspconfig/wiki/Snippets#nvim-cmp-and-luasnip
+local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
--- LSP servers
 local servers = {
   "lua_ls",
   "pyright",
@@ -23,72 +21,8 @@ for _, lsp in ipairs(servers) do
   }
 end
 
--- Keymaps
-vim.api.nvim_create_autocmd("LspAttach", {
-  callback = function(args, bufnr)
-    -- Format
-    vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { buffer = args.buf, desc = "Format" })
-
-    -- Codelens
-    --vim.keymap.set("n", "<leader>lxx", vim.lsp.codelens.refresh, { buffer = args.buf, desc = "Codelens Refresh" })
-    --vim.keymap.set("n", "<leader>lxr", vim.lsp.codelens.run, { buffer = args.buf, desc = "Codelens Run" })
-    --vim.keymap.set("n", "<leader>lxc", vim.lsp.codelens.clear, { buffer = args.buf, desc = "Codelens Clear" })
-    --vim.keymap.set("n", "<leader>lxc", vim.lsp.codelens.display, { buffer = bufnr, desc = "Codelens Clear" })
-
-    -- Code Action
-    --vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { buffer = args.buf, desc = "Action" })
-
-    -- Calls
-    --vim.keymap.set("n", "<leader>lci", vim.lsp.buf.incoming_calls, { buffer = args.buf, desc = "Incoming" })
-    --vim.keymap.set("n", "<leader>lco", vim.lsp.buf.outgoing_calls, { buffer = args.buf, desc = "Outgoing" })
-
-    -- Definition
-    --vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition, { buffer = args.buf, desc = "Definition" })
-    --vim.keymap.set("n", "<leader>lt", vim.lsp.buf.type_definition, { buffer = args.buf, desc = "Type" })
-    --vim.keymap.set("n", "<leader>le", vim.lsp.buf.declaration, { buffer = args.buf, desc = "Declaration" })
-
-    -- Hover
-    --vim.keymap.set("n", "<leader>li", vim.lsp.buf.hover, { buffer = args.buf, desc = "Info [Hover]" })
-
-    -- Implementation
-    --vim.keymap.set("n", "<leader>lk", vim.lsp.buf.implementation, { buffer = args.buf, desc = "Implementation" })
-
-    -- Rename
-    --vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, { buffer = args.buf, desc = "Rename" })
-
-    -- References
-    --vim.keymap.set("n", "<leader>lr", vim.lsp.buf.references, { buffer = args.buf, desc = "References" })
-  end,
-})
-
--- Diagnostics
-vim.diagnostic.config({
-  virtual_text = false,
-  signs = true,
-  underline = false,
-  update_in_insert = false,
-  severity_sort = true,
-})
-
--- Signs
-local signs = {
-  Error = "󰬟",
-  Warn = "",
-  Hint = "󰌵",
-  Info = ""
-}
-
-for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, {
-    text = icon,
-    texthl = hl,
-    --numhl = hl
-  })
-end
-
--- UI Customization
--- https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization
+-- Borders
+-- https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization#borders
 local border = {
   {"┌", "FloatBorder"},
   {"─", "FloatBorder"},
@@ -100,14 +34,99 @@ local border = {
   {"│", "FloatBorder"},
 }
 
-local handlers =  {
-  ["textDocument/hover"] =  vim.lsp.with(vim.lsp.handlers.hover, {border = border}),
-  ["textDocument/signatureHelp"] =  vim.lsp.with(vim.lsp.handlers.signature_help, {border = border }),
-}
-
 local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
 function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
   opts = opts or {}
   opts.border = opts.border or border
   return orig_util_open_floating_preview(contents, syntax, opts, ...)
+end
+
+-- vim.cmd [[autocmd! ColorScheme * highlight NormalFloat guibg=#1f2335]]
+-- vim.cmd [[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335]]
+
+-- Keymaps [Global]
+-- :help vim.diagnostic.*
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { opts = opts, desc = "Previous diagnostic" })
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { opts = opts, desc = "Next diagnostic" })
+vim.keymap.set("n", "<leader>ld", vim.diagnostic.open_float, { opts = opts, desc = "Diagnostics" })
+-- vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { opts = opts, desc = "Set localist" })
+
+-- Calls
+-- vim.keymap.set("n", "<leader>lci", vim.lsp.buf.incoming_calls, { buffer = args.buf, desc = "Incoming" })
+-- vim.keymap.set("n", "<leader>lco", vim.lsp.buf.outgoing_calls, { buffer = args.buf, desc = "Outgoing" })
+
+-- Codelens
+-- vim.keymap.set("n", "<leader>lxx", vim.lsp.codelens.refresh, { buffer = args.buf, desc = "Codelens Refresh" })
+-- vim.keymap.set("n", "<leader>lxr", vim.lsp.codelens.run, { buffer = args.buf, desc = "Codelens Run" })
+-- vim.keymap.set("n", "<leader>lxc", vim.lsp.codelens.clear, { buffer = args.buf, desc = "Codelens Clear" })
+-- vim.keymap.set("n", "<leader>lxc", vim.lsp.codelens.display, { buffer = bufnr, desc = "Codelens Clear" })
+
+-- Keymaps [LSP]
+-- :help vim.lsp.*
+-- https://github.com/neovim/nvim-lspconfig#suggested-configuration
+vim.api.nvim_create_autocmd("LspAttach", {
+  group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+  callback = function(ev)
+    vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc" -- Enable completion triggered by <c-x><c-o>
+    local opts = { buffer = ev.buf }
+
+    -- Code action
+    -- vim.keymap.set({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, opts)
+
+    -- Documentation
+    vim.keymap.set("n", "<leader>lk", vim.lsp.buf.hover, opts)
+
+    -- Go-to
+    vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+    -- vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, opts)
+    -- vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
+    -- vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+
+    -- Format
+    vim.keymap.set("n", "<leader>lf", function()
+      vim.lsp.buf.format { async = true }
+    end, opts)
+
+    -- References
+    -- vim.keymap.set("n", "<leader>lv", vim.lsp.buf.references, opts)
+
+    -- Rename
+    -- vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, opts)
+
+    -- Signature help
+    -- vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
+
+    -- Workspace folder
+    -- vim.keymap.set("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, opts)
+    -- vim.keymap.set("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, opts)
+    -- vim.keymap.set("n", "<leader>wl", function()
+    --   print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+    -- end, opts)
+
+  end,
+})
+
+-- Diagnostics
+-- :help vim.diagnostic
+-- https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization#customizing-how-diagnostics-are-displayed
+vim.diagnostic.config({
+  virtual_text = false,
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+})
+
+-- Diagnostics [Symbols]
+-- https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization#change-diagnostic-symbols-in-the-sign-column-gutter
+-- local signs = { Error = "󰬟",   Warn = "", Hint = "", Info = "" }
+--local signs = { Error = "",   Warn = "", Hint = "", Info = "" }
+local signs = { Error = "x",   Warn = "!", Hint = "", Info = "i" }
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, {
+    text = icon,
+    texthl = hl,
+    --numhl = hl
+  })
 end
