@@ -112,8 +112,6 @@ local mappings = {
       u = { name = "Calls" },
     },
 
-    m = { name = "Markdown" },
-
     p = {
       name = "Plugins",
       m = { name = "Mason" },

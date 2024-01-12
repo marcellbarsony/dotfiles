@@ -8,8 +8,8 @@ require("core.options")
 require("core.keymaps")
 
 -- Colors
-require("theme.catppucin")
---require("theme.tokyonight")
+--require("theme.catppucin")
+require("theme.tokyonight")
 
 -- DAP
 require("dap.nvim-dap")

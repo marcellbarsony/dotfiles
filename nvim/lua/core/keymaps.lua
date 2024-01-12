@@ -109,7 +109,7 @@ map("n", "<leader>lp", "<cmd>Lspsaga peek_definition<CR>", { desc = "Peek defini
 map("n", "<leader>lr", "<cmd>Lspsaga rename<CR>", { desc = "Rename" })
 map("n", "<leader>lt", "<cmd>Lspsaga peek_type_definition<CR>", { desc = "Type" })
 map("n", "<Leader>lw", "<cmd>Lspsaga winbar_toggle<CR>", { desc = "Winbar" })
---map("n",         "gd", "<cmd>Lspsaga goto_definition<CR>", { desc = "Definition [Jump]" })
+--map("n",         "gd", "<cmd>Lspsaga goto_definition<CR>", { desc = "Definition [Go-To]" })
 --map("n", "<leader>lb", "<cmd>Lspsaga show_buf_diagnostics<CR>", { desc = "Diagnostics [Buffer] "})
 --map("n", "<leader>ld", "<cmd>Lspsaga show_line_diagnostics<CR>", { desc = "Diagnostics" })
 --map("n", "<leader>lk", "<cmd>Lspsaga hover_doc<CR>", { desc = "Documentation" })
@@ -129,9 +129,9 @@ map("n", "<leader>pmm", "<cmd>Mason<CR>", { desc = "Mason" })
 map("n", "<leader>pmu", "<cmd>MasonUninstallAll<CR>", { desc = "Uninstall all" })
 
 -- Markdown
-map("n", "<leader>mp", "<cmd>MarkdownPreview<CR>", { desc = "Preview" })
-map("n", "<leader>ms", "<cmd>MarkdownPreviewStop<CR>", { desc = "Preiview Stop" })
-map("n", "<leader>mt", "<cmd>MarkdownPreviewToggle<CR>", { desc = "Preiview Toggle" })
+map("n", "<leader>lm", "<cmd>MarkdownPreviewToggle<CR>", { desc = "Markdown" })
+--map("n", "<leader>lm", "<cmd>MarkdownPreview<CR>", { desc = "Markdown Preview" })
+--map("n", "<leader>lm", "<cmd>MarkdownPreviewStop<CR>", { desc = "Markdown Preiview Stop" })
 
 -- Navigation
 -- Conflicts with cursor scrolloff
@@ -191,7 +191,7 @@ map("n", "<leader>tm", "<cmd>Telescope man_pages<CR>", { desc = "Man" })
 map("n", "<leader>ts", "<cmd>Telescope treesitter<CR>", { desc = "Symbols [Treesitter]" })
 
 -- Telescope-DAP
-map("n", "<leader>dtc", "<cmd>lua require'telescope'.extensions.dap.commands{}<CR>", { desc = "Commands"})
+map("n", "<leader>dtc", "<cmd>lua require'telescope'.extensions.dap.commands{}<CR>", { desc = "Commands" })
 map("n", "<leader>dtd", "<cmd>lua require'telescope'.extensions.dap.configurations{}<CR>", { desc = "Config" })
 map("n", "<leader>dtb", "<cmd>lua require'telescope'.extensions.dap.list_breakpoints{}<CR>", { desc = "Breakpoints" })
 map("n", "<leader>dtv", "<cmd>lua require'telescope'.extensions.dap.variables{}<CR>", { desc = "Variables" })
