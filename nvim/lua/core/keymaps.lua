@@ -183,7 +183,6 @@ map("n", "<leader>tc", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = 
 map("n", "<leader>td", "<cmd>Telescope diagnostics<CR>", { desc = "Diagnostics" })
 map("n", "<leader>tf", "<cmd>Telescope find_files<CR>", { desc = "Find Files" })
 map("n", "<leader>tj", "<cmd>Telescope jumplist<CR>", { desc = "Jumplist" })
-map("n", "<leader>tm", "<cmd>Telescope man_pages<CR>", { desc = "Man" })
 map("n", "<leader>ts", "<cmd>Telescope treesitter<CR>", { desc = "Symbols [Treesitter]" })
 
 -- Telescope-DAP
@@ -223,6 +222,7 @@ map("n", "<leader>lsw", "<cmd>Telescope lsp_workspace_symbols<CR>", { desc = "Wo
 map("n", "<leader>tvc", "<cmd>Telescope commands<CR>", { desc = "Commands" })
 map("n", "<leader>tvh", "<cmd>Telescope highlights<CR>", { desc = "Highlights" })
 map("n", "<leader>tvk", "<cmd>Telescope keymaps<CR>", { desc = "Keymaps" })
+map("n", "<leader>tvm", "<cmd>Telescope man_pages<CR>", { desc = "Man" })
 map("n", "<leader>tvo", "<cmd>Telescope vim_options<CR>", { desc = "Options" })
 map("n", "<leader>tvr", "<cmd>Telescope registers<CR>", { desc = "Registers" })
 

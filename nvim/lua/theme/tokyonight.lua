@@ -13,7 +13,7 @@ require("tokyonight").setup({
     functions = {},
     variables = {},
     sidebars = "transparent", -- dark
-    floats = "transparent", -- dark
+    floats = "dark", -- transparent
   },
   sidebars = { "qf", "help" },
   day_brightness = 0.5,
@@ -22,31 +22,26 @@ require("tokyonight").setup({
   lualine_bold = false,
 
   -- Overrides [Colors]
-  -- ~/.local/share/nvim/lazy/tokyonight.nvim/lua/tokyonight/colors.lua
+  -- tokyonight.nvim/lua/tokyonight/colors.lua
   ---@param colors ColorScheme
   on_colors = function(colors)
     --colors.fg_gutter = "#565F89"
   end,
 
-  -- Overrides [Highlights]
-  ---@param highlights Highlights
-  ---@param colors ColorScheme
-  on_highlights = function(highlights, colors)
+  -- Overrides [Theme]
+  -- tokyonight.nvim/lua/tokyonight/theme.lua
+  ---@param hl Highlights
+  ---@param c ColorScheme
+  on_highlights = function(hl, c)
     local transparent = ""
-
-    -- Lualine
-    -- highlights.lualine_c_normal = {
-    --   bg = transparent, -- Set the foreground color
-    --   -- bg = colors.fg_gutter, -- Set the background color
-    -- }
-
-    -- Treesitter [Context]
-    highlights.TreesitterContext = {
-      bg = transparent,
-    }
-
+    hl.IncSearch = { bg = c.magenta, fg = c.black } -- Search (current)
+    hl.LineNr = { fg = c.magenta } -- Gutter line number
+    hl.MatchParen = { fg = c.blue, bold = true } -- Matching parenthesis
+    hl.MsgArea = { fg = c.magenta } -- Message and cmdline area
+    --hl.Pmenu = { bg = transparent } -- Popup menu
+    hl.Search = { bg = c.blue7, fg = c.fg } -- Search
+    hl.TreesitterContext = { bg = transparent } -- Treesitter context menu
   end,
-
 })
 
 vim.cmd[[colorscheme tokyonight]]
