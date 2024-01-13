@@ -12,7 +12,7 @@ require("toggleterm").setup{
     --  guibg = "<VALUE-HERE>",
     --},
     --NormalFloat = {
-    --  link = 'Normal'
+    --  link = "Normal"
     --},
     FloatBorder = {
       guifg = "#FF0000",

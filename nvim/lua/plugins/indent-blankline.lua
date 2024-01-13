@@ -37,12 +37,14 @@ require("ibl").setup {
   debounce = 100,
   -- indent = { char = "|" },
   whitespace = { highlight = { "Whitespace", "NonText" } },
-  scope = { exclude = { language = { "lua" } } },
 
   -- Scope
   -- :help ibl.config.scope
   scope = {
     enabled = true,
+    exclude = {
+      language = { "lua" }
+    },
     show_start = false,
     show_end = false,
     injected_languages = false,

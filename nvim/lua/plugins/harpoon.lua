@@ -12,12 +12,12 @@ harpoon:setup({
 })
 
 -- List
-vim.keymap.set("n", "<leader>hh", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Toggle" })
+vim.keymap.set("n", "<leader>hh", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Harpoon" })
 vim.keymap.set("n", "<leader>ha", function() harpoon:list():append() end, { desc = "Add" })
 
 -- Next & Prev
 vim.keymap.set("n", "<leader>hn", function() harpoon:list():next() end, { desc = "Next" })
-vim.keymap.set("n", "<leader>hp", function() harpoon:list():prev() end, { desc = "Previous "})
+vim.keymap.set("n", "<leader>hp", function() harpoon:list():prev() end, { desc = "Previous" })
 
 -- Hotkeys
 -- vim.keymap.set("n", "<C-h>", function() harpoon:list():select(1) end)

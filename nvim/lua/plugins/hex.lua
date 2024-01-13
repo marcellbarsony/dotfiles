@@ -1,12 +1,12 @@
 -- HEX
 -- https://github.com/RaafatTurki/hex.nvim
 
-require 'hex'.setup {
+require "hex".setup {
   -- cli command used to dump hex data
-  dump_cmd = 'hx',
+  dump_cmd = "hx",
 
   -- cli command used to assemble from hex data
-  assemble_cmd = 'hx',
+  assemble_cmd = "hx",
 
   -- function that runs on BufReadPre to determine if it's binary or not
   is_buf_binary_pre_read = function()

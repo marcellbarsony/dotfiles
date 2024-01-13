@@ -88,7 +88,7 @@ cmp.setup({
   mapping = {
 
     -- Accept selected
-    ['<CR>'] = cmp.mapping.confirm({ select = false }),
+    ["<CR>"] = cmp.mapping.confirm({ select = false }),
 
     -- Luasnips
     -- https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
@@ -113,12 +113,12 @@ cmp.setup({
       end
     end, { "i", "s" }),
     -- CMP
-    ['<C-j>'] = cmp.mapping({ -- Down
+    ["<C-j>"] = cmp.mapping({ -- Down
       c = function()
         if cmp.visible() then
           cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
         else
-          vim.api.nvim_feedkeys(t('<Down>'), 'n', true)
+          vim.api.nvim_feedkeys(t("<Down>"), "n", true)
         end
       end,
       i = function(fallback)
@@ -129,12 +129,12 @@ cmp.setup({
         end
       end
     }),
-    ['<C-k>'] = cmp.mapping({ -- Up
+    ["<C-k>"] = cmp.mapping({ -- Up
       c = function()
         if cmp.visible() then
           cmp.select_prev_item({ behavior = cmp.SelectBehavior.Select })
         else
-          vim.api.nvim_feedkeys(t('<Up>'), 'n', true)
+          vim.api.nvim_feedkeys(t("<Up>"), "n", true)
         end
       end,
       i = function(fallback)
@@ -145,19 +145,19 @@ cmp.setup({
         end
       end
     }),
-    ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), {'i', 'c'}), -- Open
-    ['<C-h>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), {'i', 'c'}), -- Scroll docs
-    ['<C-l>'] = cmp.mapping(cmp.mapping.scroll_docs(4), {'i', 'c'}), -- Scroll docs
-    ['<C-c>'] = cmp.mapping({ i = cmp.mapping.close(), c = cmp.mapping.close() }), -- Close
-    -- ['<Down>'] = cmp.mapping(cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }), {'i'}),
-    -- ['<Up>'] = cmp.mapping(cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }), {'i'}),
+    ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), {"i", "c"}), -- Open
+    ["<C-h>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), {"i", "c"}), -- Scroll docs
+    ["<C-l>"] = cmp.mapping(cmp.mapping.scroll_docs(4), {"i", "c"}), -- Scroll docs
+    ["<C-c>"] = cmp.mapping({ i = cmp.mapping.close(), c = cmp.mapping.close() }), -- Close
+    -- ["<Down>"] = cmp.mapping(cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }), {"i"}),
+    -- ["<Up>"] = cmp.mapping(cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }), {"i"}),
   },
 
   -- Sources
   sources = cmp.config.sources({
-    { name = 'luasnip', max_item_count = 5, priority_weight = 1 },
-    { name = 'nvim_lsp', max_item_count = 100 },
-    { name = 'buffer', keyword_length = 3 , max_item_count = 3 },
+    { name = "luasnip", max_item_count = 5, priority_weight = 1 },
+    { name = "nvim_lsp", max_item_count = 100 },
+    { name = "buffer", keyword_length = 3 , max_item_count = 3 },
   }),
 
   -- Formatting
@@ -186,32 +186,32 @@ cmp.setup({
 
 -- Specific filetypes
 -- https://github.com/hrsh7th/nvim-cmp#setup
-cmp.setup.filetype('gitcommit', {
+cmp.setup.filetype("gitcommit", {
   sources = cmp.config.sources({
-    { name = 'cmp_git' },
+    { name = "cmp_git" },
   }, {
-    { name = 'buffer' },
+    { name = "buffer" },
   })
 })
 
 -- `/` & `?` completions
 -- https://github.com/hrsh7th/cmp-cmdline#setup
 -- Conflicts with `native_menu`
-cmp.setup.cmdline({ '/', '?' }, {
+cmp.setup.cmdline({ "/", "?" }, {
   mapping = cmp.mapping.preset.cmdline(),
   sources = {
-    { name = 'buffer' }
+    { name = "buffer" }
   }
 })
 
 -- `:` completions
 -- https://github.com/hrsh7th/cmp-cmdline#setup
 -- Conflicts with `native_menu`
-cmp.setup.cmdline(':', {
+cmp.setup.cmdline(":", {
   mapping = cmp.mapping.preset.cmdline(),
   sources = cmp.config.sources({
-    { name = 'path' }
+    { name = "path" }
   }, {
-    { name = 'cmdline' }
+    { name = "cmdline" }
   })
 })

@@ -34,8 +34,8 @@ require("which-key").setup {
     group = "",
   },
   popup_mappings = {
-    scroll_down = '<c-j>',
-    scroll_up = '<c-k>',
+    scroll_down = "<c-j>",
+    scroll_up = "<c-k>",
   },
   window = {
     border = "none",
