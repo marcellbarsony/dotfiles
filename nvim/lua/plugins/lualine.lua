@@ -15,7 +15,7 @@ require("lualine").setup {
   -- Options
   options = {
     icons_enabled = true,
-    theme = "auto",
+    theme = "palenight", -- auto
     component_separators = { left = "", right = ""},
     section_separators = { left = "", right = ""},
     disabled_filetypes = {

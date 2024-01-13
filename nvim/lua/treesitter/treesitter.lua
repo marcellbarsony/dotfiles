@@ -2,7 +2,7 @@
 -- https://github.com/nvim-treesitter/nvim-treesitter
 -- https://tree-sitter.github.io/tree-sitter/
 
-require'nvim-treesitter.configs'.setup {
+require"nvim-treesitter.configs".setup {
   -- Modules
   -- https://github.com/nvim-treesitter/nvim-treesitter#modules
   ensure_installed = {
@@ -46,3 +46,11 @@ require'nvim-treesitter.configs'.setup {
     enable = true
   },
 }
+
+-- Overwrite highlights
+-- https://github.com/nvim-treesitter/nvim-treesitter#highlight
+-- ~/.local/share/nvim/lazy/tokyonight.nvim/lua/tokyonight/theme.lua
+vim.api.nvim_set_hl(0, "@lsp.type.selfKeyword", { link = "operator" })
+vim.api.nvim_set_hl(0, "@lsp.type.selfTypeKeyword", { link = "operator" })
+vim.api.nvim_set_hl(0, "@variable.builtin", { link = "operator" })
+vim.api.nvim_set_hl(0, "@namespace.builtin", { link = "operator" })

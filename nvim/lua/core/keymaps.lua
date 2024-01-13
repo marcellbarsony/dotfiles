@@ -69,10 +69,6 @@ map("n", "<leader>gg", "<cmd>Gitsigns toggle_signs<CR>:Gitsigns toggle_numhl<CR>
 --map("n", "<leader>gn", "<cmd>Gitsigns toggle_numhl<CR>", { desc = "Numhl" })
 --map("n", "<leader>gb", "<cmd>Gitsigns toggle_current_line_blame<CR>", { desc = "Blame" })
 
--- Harpoon
-map("n", "<leader>ha", "<cmd>lua require('harpoon.mark').add_file()<CR>", { desc = "Add" })
-map("n", "<leader>hh", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", { desc = "Toggle" })
-
 -- Highlights
 map("n", "<C-c>", "<cmd>nohl<CR>", { desc = "Clear" })
 --map("n", "<leader>cr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "[Highlight] Replace selected" })
@@ -135,8 +131,8 @@ map("n", "<leader>lm", "<cmd>MarkdownPreviewToggle<CR>", { desc = "Markdown" })
 
 -- Navigation
 -- Conflicts with cursor scrolloff
-map("n", "<C-d>", "<C-d>zz<CR>", { desc = "Page down" })
-map("n", "<C-u>", "<C-u>zz<CR>", { desc = "Page up" })
+-- map("n", "<C-d>", "<C-d>zz<CR>", { desc = "Page down" })
+-- map("n", "<C-u>", "<C-u>zz<CR>", { desc = "Page up" })
 
 -- Oil
 map("n", "-", "<cmd>Oil<CR>", { desc = "Open parent directory" })

@@ -23,14 +23,14 @@ require("lazy").setup({
   },
 
   -- Color theme
-  { "catppuccin/nvim",
-    name = "catppuccin",
-    priority = 1000
-  },
   { "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
   },
+  -- { "catppuccin/nvim",
+  --   name = "catppuccin",
+  --   priority = 1000
+  -- },
 
   -- Colorizer
   "NvChad/nvim-colorizer.lua",
@@ -90,7 +90,12 @@ require("lazy").setup({
   "lewis6991/gitsigns.nvim",
 
   -- Harpoon
-  { "ThePrimeagen/harpoon" },
+  { "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    }
+  },
 
   -- HEX
   "RaafatTurki/hex.nvim",

@@ -44,7 +44,7 @@ require("plugins.oil")
 require("plugins.which-key")
 
 -- Plugins
-require("plugins.autopairs")
+-- require("plugins.autopairs")
 require("plugins.colorizer")
 require("plugins.comment")
 require("plugins.hex")

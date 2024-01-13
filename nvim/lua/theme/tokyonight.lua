@@ -22,20 +22,30 @@ require("tokyonight").setup({
   lualine_bold = false,
 
   -- Overrides [Colors]
+  -- ~/.local/share/nvim/lazy/tokyonight.nvim/lua/tokyonight/colors.lua
   ---@param colors ColorScheme
   on_colors = function(colors)
-    colors.fg_gutter = "#BB9AF7"
+    --colors.fg_gutter = "#565F89"
   end,
 
   -- Overrides [Highlights]
   ---@param highlights Highlights
   ---@param colors ColorScheme
   on_highlights = function(highlights, colors)
-    -- highlights.normal = {
-    --   a = { bg = colors.red, fg = colors.black },
-    -- }
-  end,
+    local transparent = ""
 
+    -- Lualine
+    -- highlights.lualine_c_normal = {
+    --   bg = transparent, -- Set the foreground color
+    --   -- bg = colors.fg_gutter, -- Set the background color
+    -- }
+
+    -- Treesitter [Context]
+    highlights.TreesitterContext = {
+      bg = transparent,
+    }
+
+  end,
 
 })
 
