@@ -1,7 +1,7 @@
 -- gitsigns
 -- https://github.com/lewis6991/gitsigns.nvim
 
-require('gitsigns').setup {
+require("gitsigns").setup {
   -- Signs
   signs = {
     add          = {hl = "GitSignsAdd"   , text = "|", numhl="GitSignsAddNr"   , linehl="GitSignsAddLn"},

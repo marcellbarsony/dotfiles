@@ -12,10 +12,9 @@ local function show_macro_recording()
 end
 
 require("lualine").setup {
-  -- Options
   options = {
     icons_enabled = true,
-    theme = "palenight", -- auto
+    theme = "palenight", -- auto / tokyonight
     component_separators = { left = "", right = ""},
     section_separators = { left = "", right = ""},
     disabled_filetypes = {
@@ -31,7 +30,6 @@ require("lualine").setup {
       winbar = 1000,
     }
   },
-  -- Sections
   sections = {
     lualine_a = { "mode" },
     lualine_b = {

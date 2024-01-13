@@ -13,7 +13,7 @@ require("tokyonight").setup({
     functions = {},
     variables = {},
     sidebars = "transparent", -- dark
-    floats = "dark", -- transparent
+    floats = "transparent", -- dark
   },
   sidebars = { "qf", "help" },
   day_brightness = 0.5,
@@ -23,9 +23,9 @@ require("tokyonight").setup({
 
   -- Overrides [Colors]
   -- tokyonight.nvim/lua/tokyonight/colors.lua
-  ---@param colors ColorScheme
-  on_colors = function(colors)
-    --colors.fg_gutter = "#565F89"
+  ---@param c ColorScheme
+  on_colors = function(c)
+    --c.fg_gutter = "#565F89"
   end,
 
   -- Overrides [Theme]
@@ -38,7 +38,7 @@ require("tokyonight").setup({
     hl.LineNr = { fg = c.magenta } -- Gutter line number
     hl.MatchParen = { fg = c.blue, bold = true } -- Matching parenthesis
     hl.MsgArea = { fg = c.magenta } -- Message and cmdline area
-    --hl.Pmenu = { bg = transparent } -- Popup menu
+    hl.Pmenu = { bg = transparent } -- Popup menu
     hl.Search = { bg = c.blue7, fg = c.fg } -- Search
     hl.TreesitterContext = { bg = transparent } -- Treesitter context menu
   end,
