@@ -1,7 +1,9 @@
 -- Which-key
 -- https://github.com/folke/which-key.nvim
 
-require("which-key").setup {
+local wk = require("which-key")
+
+wk.setup {
   plugins = {
     marks = true, -- '
     registers = true, -- "
@@ -51,7 +53,7 @@ require("which-key").setup {
     align = "left",
   },
   ignore_missing = false,
-  hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ "},
+  hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "^:", "^ ", "^call ", "^lua " },
   show_help = false,
   show_keys = true,
   triggers = "auto",
@@ -115,6 +117,8 @@ local mappings = {
     p = {
       name = "Plugins",
       m = { name = "Mason" },
+      t = { name = "Treesitter" },
+      x = { name = "Trouble" },
     },
 
     r = { name = "Rust" },
@@ -124,8 +128,8 @@ local mappings = {
       h = { name = "History" },
       v = { name = "Vim" },
     },
+
   }
 }
 
-local wk = require("which-key")
 wk.register(mappings, opts)

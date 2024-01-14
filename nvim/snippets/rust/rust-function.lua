@@ -64,6 +64,8 @@ ls.add_snippets("rust", {
         sn(nil, {i(1), t"<'", i(2, "lifetime"), t">"}),
       }),
       c(4, {
+        -- no parameter
+        sn(nil, {i(1), t""}),
         -- parameter
         sn(nil, {i(1), i(2, "foo"), t": ", i(3, "Type")}),
         -- self
@@ -74,10 +76,10 @@ ls.add_snippets("rust", {
         sn(nil, {i(1), t"&mut self", i(2, "")}),
         -- self + mut + parameter
         sn(nil, {i(1), t"&mut self, ", i(2, "foo"), t": ", i(3, "Type")}),
-        -- no parameter
-        sn(nil, {i(1), t""}),
       }),
       c(5, {
+        -- no return
+        sn(nil, {i(1), t" "}),
         -- return
         sn(nil, {i(1), t" -> ", i(2, "Type"), t" "}),
         -- where
@@ -95,8 +97,6 @@ ls.add_snippets("rust", {
         end),
         -- result
         sn(nil, {i(1), t" -> Result<", i(2, "Type"), t", ", i(3, "io::Error"), t">"}),
-        -- no return
-        sn(nil, {i(1), t" "}),
       }),
       i(6, "// ..."),
       i(7),

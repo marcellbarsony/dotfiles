@@ -36,7 +36,7 @@ require("tokyonight").setup({
     local transparent = ""
     hl.IncSearch = { bg = c.magenta, fg = c.black } -- Search (current)
     hl.LineNr = { fg = c.magenta } -- Gutter line number
-    hl.MatchParen = { fg = c.blue, bold = true } -- Matching parenthesis
+    hl.MatchParen = { fg = c.magenta, bold = true } -- Matching parenthesis
     hl.MsgArea = { fg = c.magenta } -- Message and cmdline area
     hl.Pmenu = { bg = transparent } -- Popup menu
     hl.Search = { bg = c.blue7, fg = c.fg } -- Search

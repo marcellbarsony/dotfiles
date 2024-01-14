@@ -53,7 +53,7 @@ map("n", "<leader>0", "<cmd>lua require'dap'.step_out()<CR>", { desc = "DAP [Ste
 map("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", { desc = "Breakpoint" })
 map("n", "<leader>dc", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", { desc = "Breakpoint [Condition]" })
 map("n", "<leader>dd", "<cmd>lua require'dap'.set.breakpoint(nul, nul, vim.fn.input('Log point message: '))<CR>", { desc = "Breakpoint [Log point msg]" })
-map("n", "<leader>dq", "<cmd>lua require('dap').disconnect()<CR>", { desc = "Quit"})
+map("n", "<leader>dq", "<cmd>lua require('dap').disconnect()<CR>", { desc = "Quit" })
 map("n", "<leader>dr", "<cmd>lua require'dap'.run_last()<CR>", { desc = "Run last" })
 map("n", "<leader>ds", "<cmd>lua require'dap'.repl.open()<CR>", { desc = "REPL" })
 
@@ -106,7 +106,7 @@ map("n", "<leader>lr", "<cmd>Lspsaga rename<CR>", { desc = "Rename" })
 map("n", "<leader>lt", "<cmd>Lspsaga peek_type_definition<CR>", { desc = "Type" })
 map("n", "<Leader>lw", "<cmd>Lspsaga winbar_toggle<CR>", { desc = "Winbar" })
 --map("n",         "gd", "<cmd>Lspsaga goto_definition<CR>", { desc = "Definition [Go-To]" })
---map("n", "<leader>lb", "<cmd>Lspsaga show_buf_diagnostics<CR>", { desc = "Diagnostics [Buffer] "})
+--map("n", "<leader>lb", "<cmd>Lspsaga show_buf_diagnostics<CR>", { desc = "Diagnostics [Buffer]" })
 --map("n", "<leader>ld", "<cmd>Lspsaga show_line_diagnostics<CR>", { desc = "Diagnostics" })
 --map("n", "<leader>lk", "<cmd>Lspsaga hover_doc<CR>", { desc = "Documentation" })
 --map("n", "<leader>lk", "<cmd>Lspsaga hover_doc ++keep<CR>", { desc = "Documentation" })
@@ -153,7 +153,7 @@ map("n", "<leader>rd", function() vim.cmd.RustLsp("debuggables") end, { desc = "
 map("n", "<leader>rh", "<cmd>checkhealth rustaceanvim<CR>", { desc = "Health" })
 map("n", "<leader>rj", function() vim.cmd.RustLsp("joinLines") end, { desc = "Join lines" })
 map("n", "<leader>rr", function() vim.cmd.RustLsp("runnables") end, { desc = "Runnables" })
---map("n", "<leader>rh", function() vim.cmd.RustLsp("hover", "actions") end, { desc = "Hover actions" })
+-- map("n", "<leader>rh", function() vim.cmd.RustLsp("hover", "actions") end, { desc = "Hover actions" })
 
 -- Search
 map("n", "*", "*N", { desc = "Find word" }) -- Fix *: don't move to next match
@@ -226,6 +226,16 @@ map("n", "<leader>tvm", "<cmd>Telescope man_pages<CR>", { desc = "Man" })
 map("n", "<leader>tvo", "<cmd>Telescope vim_options<CR>", { desc = "Options" })
 map("n", "<leader>tvr", "<cmd>Telescope registers<CR>", { desc = "Registers" })
 
+-- Treesitter (Neovim built-ins)
+map("n", "<leader>pti", "<cmd>Inspect<CR>", { desc = "Inspect" })
+map("n", "<leader>ptt", "<cmd>InspectTree<CR>", { desc = "Inspect [Tree]" })
+
+-- Trouble
+map("n", "<leader>pxx", function() require("trouble").toggle() end, { desc = "Trouble" })
+map("n", "<leader>pxd", function() require("trouble").toggle("document_diagnostics") end, { desc = "Diagnostics" })
+map("n", "<leader>pxq", function() require("trouble").toggle("quickfix") end, { desc = "Quickfix" })
+map("n", "<leader>pxl", function() require("trouble").toggle("loclist") end, { desc = "Loclist" })
+
 -- Undo & Redo
-map("n", "<u>", "<cmd>undo<CR>", { desc = "Undo" }) -- Undo
-map("n", "<C-r>", "<cmd>redo<CR>", { desc = "Redo" }) -- Redo
+map("n", "<u>", "<cmd>undo<CR>", { desc = "Undo" })
+map("n", "<C-r>", "<cmd>redo<CR>", { desc = "Redo" })
