@@ -52,6 +52,8 @@ ls.add_snippets("rust", {
         sn(nil, {i(1), t"const "}),
         -- unsafe
         sn(nil, {i(1), t"unsafe "}),
+        -- public
+        sn(nil, {i(1), t"pub "}),
       }),
       i(2, "function"),
       c(3, {

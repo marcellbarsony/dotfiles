@@ -68,6 +68,8 @@ user_pref("services.sync.prefs.sync.browser.urlbar.suggest.topsites", false);
 /* SIGNON */
 user_pref("signon.rememberSignons", false);  // 5003
 user_pref("signon.rememberSignons.visibilityToggle", false);
+
+/* DOWNLOAD */
 /* [TODO]: Set default download location */
 user_pref("browser.download.folderList", 1);
 
@@ -88,5 +90,5 @@ user_pref("browser.tabs.tabmanager.enabled", false);
 user_pref("layout.css.prefers-color-scheme.content-override", 0);
 
 /* TODO */
-// Disable save login info for...
+// Disable dialog: "save login info for..."
 // Check all default preferences (about:preferences)

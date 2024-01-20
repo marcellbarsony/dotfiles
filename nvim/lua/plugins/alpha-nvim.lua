@@ -91,6 +91,7 @@ dashboard.section.buttons.val = {
   dashboard.button( "l", "󰐱  > Lazy", ":Lazy<CR>"),
   dashboard.button( "m", "󰐱  > Mason", ":Mason<CR>"),
   dashboard.button( "nn", "  > Nvim [News]", ":help news<CR>"),
+  dashboard.button( "no", "  > Nvim [Options]", ":options<CR>"),
   dashboard.button( "nh", "  > Nvim [Health]", ":checkhealth<CR>"),
   dashboard.button( "tt", "󰭎  > Telescope", ":Telescope<CR>"),
   dashboard.button( "tf", "󰭎  > Telescope [Find Files]", ":Telescope find_files<CR>"),
