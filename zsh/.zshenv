@@ -43,8 +43,9 @@ export PATH="/usr/lib/python3.10/site-packages:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
 # Ruby
-#export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
-#export PATH="$PATH:GEM_HOME/bin"
+# export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+export GEM_HOME="$(gem env user_gemhome)"
+export PATH="$PATH:GEM_HOME/bin"
 
 # Rust
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
