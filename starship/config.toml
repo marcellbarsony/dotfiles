@@ -1,4 +1,4 @@
-# Prompt
+# {{{ Prompt
 add_newline = false
 format = '''
 $character
@@ -6,44 +6,51 @@ $character
 right_format = '''
 $directory$all
 '''
+# }}}
 
-# Plugins
-[azure]
+[azure] # {{{
 format = 'via [$symbol($subscription)]($style) '
 symbol = '󰠅 '
 style = 'blue bold'
+# }}}
 
-[c]
+[c] # {{{
 format = 'via [$symbol($version(-$name))]($style) '
 symbol = ' '
+# }}}
 
-[character]
+[character] # {{{
 success_symbol = '[](bold green)'
 error_symbol = '[](bold red)'
+# }}}
 
-[cmd_duration]
+[cmd_duration] # {{{
 min_time = 2_000
 format = 'took [$duration]($style) '
+# }}}
 
-[directory]
+[directory] # {{{
 truncation_symbol = '../'
 truncation_length = 3
 truncate_to_repo = false
 read_only = ' '
 read_only_style = 'red'
+# }}}
 
-[git_branch]
+[git_branch] # {{{
 always_show_remote = true
 format = 'on [$symbol$branch]($style) '
 symbol = ' '
 style = 'bold purple'
+# }}}
 
-[git_commit]
+[git_commit] # {{{
 format = 'via [$hash$tag]($style) '
 tag_disabled = false
 style = 'bold purple'
+# }}}
 
-[git_status]
+[git_status] # {{{
 format = '([\[$all_status$ahead_behind\]]($style) )'
 conflicted = '='
 ahead = '󰁝'
@@ -57,35 +64,44 @@ stashed = '$'
 up_to_date = ''
 untracked = '?'
 style = 'bold purple'
+# }}}
 
-[hostname]
+[hostname] # {{{
 ssh_symbol = ' '
+# }}}
 
-[line_break]
+[line_break] # {{{
 disabled = false
+# }}}
 
-[lua]
+[lua] # {{{
 format = 'via [$symbol($version)]($style) '
 symbol = ' '
 style = 'bold blue'
+# }}}
 
-[nodejs]
+[nodejs] # {{{
 symbol = ' '
 format = 'via [$symbol($version)]($style) '
 style = 'bold green'
+# }}}
 
-[package]
+[package] # {{{
 disabled = true
+# }}}
 
-[python]
+[python] # {{{
 format = 'via [${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
 symbol = ' '
+# }}}
 
-[rust]
+[rust] # {{{
 format = 'via [$symbol($version)]($style) '
 symbol = ' '
 version_format = '${raw}'
+# }}}
 
-[sudo]
+[sudo] # {{{
 disabled = false
 format = 'as [su]($style) '
+# }}}

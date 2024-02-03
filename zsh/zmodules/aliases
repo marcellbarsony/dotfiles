@@ -1,17 +1,20 @@
-# Coreutils
+# {{{ Coreutils
 alias cls="clear"
 alias cp="cp -i"
 alias grep="grep --color=auto"
 alias mv="mv -i"
 alias rm="rm -i"
+# }}}
 
-# Coreutils [Rust]
+# {{{ Coreutils [Rust]
 alias ls="lsd -laF"
+# }}}
 
-# Jekyll
+# {{{ Jekyll
 alias jekyll="bundle exec jekyll serve --livereload"
+# }}}
 
-# Navigation
+# {{{ Navigation
 alias ..="cd .."
 alias ..2="cd ../.."
 alias ..3="cd ../../.."
@@ -20,10 +23,13 @@ alias ..5="cd ../../../../.."
 alias home="clear && cd $HOME && ls"
 alias cfg="clear && cd $HOME/.config && ls"
 alias notes="clear && cd $HOME/.local/git/notes && ls"
+# }}}
 
-# NeoVim
+# {{{ NeoVim
 alias nv="nvim"
 alias vim="nvim"
+# }}}
 
-# Ntfy
+# {{{ Ntfy
 alias notify="ntfy publish teszt01010001"
+# }}}

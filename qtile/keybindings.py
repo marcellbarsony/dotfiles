@@ -8,7 +8,9 @@ from func_audio import audio_increase, audio_decrease, audio_mute
 
 keys = [
 
+# {{{ Bar
     Key([mod], "t", lazy.hide_show_bar(), desc="Bar toggle"),
+# }}}
 
     # {{{ Audio
     Key([mod], "XF86AudioRaiseVolume", lazy.run(audio_increase), desc="Volume +10%"),
@@ -33,13 +35,13 @@ keys = [
     Key([mod, "shift"], "Tab", lazy.prev_layout(), desc="Prev layout"),
     # }}}
 
-    # {{{ Window - Actions
+    # {{{ Window [Actions]
     Key([mod],"q", lazy.window.kill(), desc="Kill window"),
     Key([mod],"f", lazy.window.toggle_fullscreen(), lazy.hide_show_bar(), desc="Fullscreen"),
     Key([mod, "shift"], "f", lazy.window.toggle_floating(), desc="Floating"),
     # }}}
 
-    # {{{ Window - Focus
+    # {{{ Window [Focus]
     Key([mod], "h", lazy.layout.left(), desc="Focus left"),
     Key([mod], "l", lazy.layout.right(), desc="Focus right"),
     Key([mod], "j", lazy.layout.down(), desc="Focus down"),
@@ -47,14 +49,14 @@ keys = [
     Key([mod], "space", lazy.layout.next(), desc="Focus next"),
     # }}}
 
-    # {{{ Window - Move
+    # {{{ Window [Move]
     Key([mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move left"),
     Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move down"),
     Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move up"),
     Key([mod, "shift"], "l", lazy.layout.shuffle_right(), desc="Move right"),
     # }}}
 
-    # {{{ Window - Resize
+    # {{{ Window [Resize]
     Key([mod1], "h", lazy.layout.grow_left(), desc="Grow left"),
     Key([mod1], "l", lazy.layout.grow_right(), desc="Grow right"),
     Key([mod1], "j", lazy.layout.grow_down(), desc="Grow down"),

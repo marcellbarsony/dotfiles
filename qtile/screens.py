@@ -18,7 +18,6 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
-
 screens = [
 
     # {{{ SCREEN-1

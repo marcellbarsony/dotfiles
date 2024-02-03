@@ -5,7 +5,7 @@ from keybindings import *
 from variables import *
 
 
-# Groups [default]
+# {{{ Groups [default]
 groups = [Group(i) for i in "123456789"]
 for i in groups:
     keys.extend(
@@ -18,6 +18,7 @@ for i in groups:
             #    desc="Move window to group {}".format(i.name)),
         ]
     )
+# }}}
 
 # {{{ NOT IN USE - Groups [named]
 #group_names = ' 一 二 三 四 五 六 七 八 九 十'.split()

@@ -1,21 +1,25 @@
-# Beep
+# {{{ Beep
 unsetopt beep
+# }}}
 
-# Bind key
+# {{{ Bind key
 bindkey -e
+# }}}
 
-# Colors
+# {{{ Colors
 # https://i.stack.imgur.com/UQVe5.png
 autoload -U colors && colors
+# }}}
 
-# Git
+# {{{ Git
 autoload -U vcs_info
 precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats 'branch %b'
 setopt PROMPT_SUBST
 RPROMPT=\$vcs_info_msg_0_
+# }}}
 
-# Highlights
+# {{{ Highlights
 typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern regexp cursor root line)
 ZSH_HIGHLIGHT_STYLES[alias]='fg=magenta'
@@ -25,34 +29,39 @@ ZSH_HIGHLIGHT_STYLES[path_pathseparator]='fg=magenta'
 ZSH_HIGHLIGHT_STYLES[regexp]='fg=green'
 #ZSH_HIGHLIGHT_STYLES[line]='fg=white'
 #ZSH_HIGHLIGHT_STYLES[root]='fg=white'
+# }}}
 
-# Highlights (regexp)
+# {{{ Highlights (regexp)
 # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/regexp.md
 typeset -A ZSH_HIGHLIGHT_REGEXP
 #ZSH_HIGHLIGHT_REGEXP+=('"*"' fg=magenta,bold) # Double quote
 #ZSH_HIGHLIGHT_REGEXP+=("'*'" fg=magenta,bold) # Single quote
 #ZSH_HIGHLIGHT_REGEXP+=("'.*" fg=red,bold)
 #ZSH_HIGHLIGHT_REGEXP+=("'.*'" fg=yellow,bold)
+# }}}
 
-# History
+# {{{ History
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.config/zsh/history
+# }}}
 
-# Prompt (Starship)
+# {{{ Prompt (Starship)
 eval "$(starship init zsh)"
+# }}}
 
-# VI mode
+# {{{ VI mode
 bindkey -v
 # Conflicts with Autocomplete
-# export KEYTIMEOUT=1
+# export KEYTIMEOUT=1}}}
 
-# VI mode - Edit line
+# {{{ VI mode [Edit line]
 autoload edit-command-line
 zle -N edit-command-line
 bindkey '^e' edit-command-line # Ctrl + e
+# }}}
 
-# VI mode - Cursor
+# {{{ VI mode [Cursor]
 function zle-keymap-select {
   if [[ ${KEYMAP} == vicmd ]] ||
     [[ $1 = 'block' ]]; then
@@ -82,8 +91,9 @@ preexec() {
 # 4 - Underline (static)
 # 5 - Bar (blinking)
 # 6 - Bar (static)
+# }}}
 
-# Zsh Autocomplete
+# {{{ ZSH [Autocomplete]
 if [[ -f ~/.local/src/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]]; then
   source ~/.local/src/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 else
@@ -103,21 +113,25 @@ zstyle ':autocomplete:*' insert-unambiguous yes
 zstyle ':autocomplete:*' widget-style menu-select
 zstyle ':autocomplete:*' fzf-completion no
 zstyle ':autocomplete:*' add-space executables aliases functions builtins reserved-words commands
+# }}}
 
-# Zsh Autosuggestions
+# {{{ ZSH [Autosuggestions]
 if [[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
   source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 else
   echo "Cannot source ZSH Autosuggestions"
 fi
 bindkey '^ ' autosuggest-accept # Ctrl + Space
+# }}}
 
-# Zsh Syntax Highlighting (source last)
+# {{{ ZSH [Syntax highlight] (source last)
 if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 else
   echo "Cannot source ZSH Syntax Highlighting"
 fi
+# }}}
 
-# zmodules
+# ZSH [zmodules] {{{
 for f in ~/.config/zsh/zmodules/*; do source "$f"; done
+# }}}
