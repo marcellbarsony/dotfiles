@@ -35,7 +35,8 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("lua", {
-  s( -- if
+  -- {{{ if
+  s(
     "if",
     fmt("if {} then\n"..
       "\t{}\n"..
@@ -45,5 +46,6 @@ ls.add_snippets("lua", {
       i(0),
     })
   ),
+  -- }}}
 })
 -- }}}

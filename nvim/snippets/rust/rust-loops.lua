@@ -1,4 +1,4 @@
--- Rust snippets [Loops]
+-- Rust snippets [loops]
 -- Docs: https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
 
 -- SHORTHANDS -- {{{
@@ -35,21 +35,25 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("rust", {
-  s( -- for
-   "for",
-    fmt("for {} in {} {{\n" ..
-      "\t{}\n"..
-      "}}\n"..
-      "{}"
-      , {
-      i(1, "item"),
-      i(2, "iterator"),
-      i(3, "// ..."),
-      i(4),
-      }
-    )
+  -- {{{ for
+  s(
+    "for",
+      fmt("for {} in {} {{\n" ..
+        "\t{}\n"..
+        "}}\n"..
+        "{}"
+        , {
+        i(1, "item"),
+        i(2, "iterator"),
+        i(3, "// ..."),
+        i(4),
+        }
+      )
   ),
-  s( -- loop
+  -- }}}
+
+  -- {{{ loop
+  s(
     "loop",
     fmt("{}\n" ..
       "{}"
@@ -80,7 +84,10 @@ ls.add_snippets("rust", {
       }
     )
   ),
-  s( -- while
+  -- }}}
+
+  -- {{{ while
+  s(
     "while",
     fmt("while {} {{\n" ..
       "\t{}\n"..
@@ -93,5 +100,6 @@ ls.add_snippets("rust", {
       }
     )
   ),
+  -- }}}
 })
 --}}}

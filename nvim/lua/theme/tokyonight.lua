@@ -2,6 +2,7 @@
 -- https://github.com/folke/tokyonight.nvim
 
 require("tokyonight").setup({
+  -- {{{ Options
   style = "night", -- storm/moon/night/day
   light_style = "day",
   transparent = true,
@@ -20,15 +21,17 @@ require("tokyonight").setup({
   hide_inactive_statusline = false,
   dim_inactive = true,
   lualine_bold = false,
+  -- }}}
 
-  -- Overrides [Colors]
+  -- {{{ Overrides [Colors]
   -- tokyonight.nvim/lua/tokyonight/colors.lua
   ---@param c ColorScheme
   on_colors = function(c)
     --c.fg_gutter = "#565F89"
   end,
+  -- }}}
 
-  -- Overrides [Theme]
+  -- {{{ Overrides [Highlights]
   -- tokyonight.nvim/lua/tokyonight/theme.lua
   ---@param hl Highlights
   ---@param c ColorScheme
@@ -42,6 +45,7 @@ require("tokyonight").setup({
     hl.Search = { bg = c.blue7, fg = c.fg } -- Search
     hl.TreesitterContext = { bg = transparent } -- Treesitter context menu
   end,
+  -- }}}
 })
 
 vim.cmd[[colorscheme tokyonight]]

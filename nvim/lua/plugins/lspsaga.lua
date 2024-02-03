@@ -4,18 +4,20 @@
 -- https://github.com/nvimdev/lspsaga.nvim/blob/main/lua/lspsaga/init.lua
 
 require("lspsaga").setup({
-  -- Default options
+  -- {{{ Default options
   -- https://github.com/nvimdev/lspsaga.nvim#default-options
   scroll_preview = {
     scroll_down = "<C-f>",
     scroll_up = "<C-b>",
   },
   request_timeout = 2000,
+  -- }}}
 
-  -- Breadcrumbs
+  -- {{{ Breadcrumbs
   -- https://nvimdev.github.io/lspsaga/breadcrumbs/
+  -- }}}
 
-  -- Callhierarchy
+  -- {{{ Callhierarchy
   -- :Lspsaga incoming_calls / outgoing_calls
   -- https://nvimdev.github.io/lspsaga/callhierarchy/
   callhierarchy = {
@@ -30,8 +32,9 @@ require("lspsaga").setup({
       expand_collapse = "u",
     },
   },
+  -- }}}
 
-  -- Code Action
+  -- {{{ Code Action
   -- :Lspsaga code_action
   -- https://nvimdev.github.io/lspsaga/codeaction/
   code_action = {
@@ -45,8 +48,9 @@ require("lspsaga").setup({
       exec = "<CR>",
     },
   },
+  -- }}}
 
-  -- Definition
+  -- {{{ Definition
   -- :Lspsaga peek_definition
   -- https://nvimdev.github.io/lspsaga/definition/
   definition = {
@@ -63,8 +67,9 @@ require("lspsaga").setup({
       close = "<C-c>k"
     }
   },
+  -- }}}
 
-  -- Diagnostic
+  -- {{{ Diagnostic
   -- :Lspsaga diagnostic_jump_next
   -- https://nvimdev.github.io/lspsaga/diagnostic/
   diagnostic = {
@@ -87,8 +92,9 @@ require("lspsaga").setup({
       quit_in_show = { "q", "<ESC>" },
     },
   },
+  -- }}}
 
-  -- Finder
+  -- {{{ Finder
   -- :Lspsaga finder
   -- https://nvimdev.github.io/lspsaga/finder/
   finder = {
@@ -115,8 +121,9 @@ require("lspsaga").setup({
       close = "<C-c>k",
     },
   },
+  -- }}}
 
-  -- Hover
+  -- {{{ Hover
   -- :Lspasga hover_doc
   -- https://nvimdev.github.io/lspsaga/hover/
   hover = {
@@ -125,8 +132,9 @@ require("lspsaga").setup({
     open_link = "gx",
     open_cmd = "!xdg-open",
   },
+  -- }}}
 
-  -- LightBulb
+  -- {{{ LightBulb
   -- https://nvimdev.github.io/lspsaga/lightbulb/
   lightbulb = {
     enable = true,
@@ -136,8 +144,9 @@ require("lspsaga").setup({
     virtual_text = false,
     enable_in_insert = true,
   },
+  -- }}}
 
-  -- Outline
+  -- {{{ Outline
   -- :Lspsaga outline
   -- https://nvimdev.github.io/lspsaga/outline/
   outline = {
@@ -156,8 +165,9 @@ require("lspsaga").setup({
       jump = "e",
     },
   },
+  -- }}}
 
-  -- Rename
+  -- {{{ Rename
   -- :Lspsaga rename
   -- https://nvimdev.github.io/lspsaga/rename/
   rename = {
@@ -171,8 +181,9 @@ require("lspsaga").setup({
       select = "x",
     },
   },
+  -- }}}
 
-  -- Winbar
+  -- {{{ Winbar
   -- :Lspsaga symbols in winbar
   -- https://github.com/nvimdev/lspsaga.nvim#lspsaga-symbols-in-winbar
   symbol_in_winbar = {
@@ -185,8 +196,9 @@ require("lspsaga").setup({
     color_mode = true,
     dely = 300,
   },
+  -- }}}
 
-  -- :Lspsaga UI
+  -- {{{ :Lspsaga UI
   -- https://nvimdev.github.io/lspsaga/misc/
   ui = {
     border = "single",
@@ -201,16 +213,18 @@ require("lspsaga").setup({
     kind = nil,
     imp_sign = "󰳛 ",
   },
+  -- }}}
 
-  -- UI Beacon
+  -- {{{ UI Beacon
   -- :Lspsaga beacon
   -- https://nvimdev.github.io/lspsaga/misc/
   beacon = {
     enable = true,
     frequency = 7,
   },
+  -- }}}
 
-  -- Implement
+  -- {{{ Implement
   implement = {
     enable = false,
     sign = true,
@@ -218,10 +232,12 @@ require("lspsaga").setup({
     virtual_text = true,
     priority = 100,
   },
+  -- }}}
 
-  -- Floaterm
+  -- {{{ Floaterm
   floaterm = {
     height = 0.7,
     width = 0.7,
   },
+  -- }}}
 })

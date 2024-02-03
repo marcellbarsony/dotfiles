@@ -35,7 +35,8 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("python", {
-  s( -- shebang
+  -- {{{ shebang
+  s(
     "#!",
     fmt('#!/usr/bin/env python3\n'..
       '"""\n'..
@@ -62,7 +63,10 @@ ls.add_snippets("python", {
       i(0),
     })
   ),
-  s( -- if-name 
+  -- }}}
+
+  -- {{{ if-name
+  s(
     "if-name",
     fmt('if __name__ == "__main__":\n'..
       "\t{}{}", {
@@ -70,5 +74,6 @@ ls.add_snippets("python", {
       i(0),
     })
   ),
+  -- }}}
 })
 -- }}}

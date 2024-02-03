@@ -3,21 +3,25 @@
 -- :h telescope.nvim
 
 require("telescope").setup{
+  -- {{{ Defaults
   defaults = {
-    -- Border
+    -- {{{ Border
     border = true,
     borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+    -- }}}
 
-    -- Icons
+    -- {{{ Icons
     entry_prefix = " ",
     multi_icon = "+",
     prompt_prefix = "> ",
     selection_caret = ">",
+    -- }}}
 
-    -- Mode
+    -- {{{ Mode
     initial_mode = "insert",
+    -- }}}
 
-    -- Mappings
+    -- {{{ Mappings
     mappings = {
       i = {
         ["<C-Down>"] = require("telescope.actions").cycle_history_next,
@@ -27,25 +31,32 @@ require("telescope").setup{
         -- e.g. git_{create, delete, ...}_branch for the git_branches picker
       }
     },
+    -- }}}
 
-    -- Opacity
+    -- {{{ Opacity
     winblend = 0,
+    -- }}}
 
-    -- Strategies
+    -- {{{ Strategies
     layout_strategy = "horizontal",
     scroll_strategy = "cycle",
     selection_strategy = "reset",
     sorting_strategy = "descending",
+    -- }}}
 
-    -- Title
+    -- {{{ Title
     dynamic_preview_title = true,
     prompt_title = false,
     results_title = false,
+    -- }}}
 
-    -- Wrap
+    -- {{{ Wrap
     wrap_results = false,
+    -- }}}
   },
+  -- }}}
 
+  -- {{{ Pickers
   pickers = {
     -- picker_name = {
     --   picker_config_key = value,
@@ -55,10 +66,13 @@ require("telescope").setup{
       -- theme = "dropdown",
     }
   },
+  -- }}}
 
+  -- {{{ Extensions
   extensions = {
     -- extension_name = {
     --   extension_config_key = value,
     -- }
   }
+  -- }}}
 }

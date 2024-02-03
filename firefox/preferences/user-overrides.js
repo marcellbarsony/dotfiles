@@ -70,8 +70,9 @@ user_pref("signon.rememberSignons", false);  // 5003
 user_pref("signon.rememberSignons.visibilityToggle", false);
 
 /* DOWNLOAD */
-/* [TODO]: Set default download location */
+user_pref("browser.download.dir", "/home/marci/tmp"); // TODO: Test
 user_pref("browser.download.folderList", 1);
+user_pref("browser.download.lastDir", 0); // TODO: Test
 
 /* SHUTDOWN */
 user_pref("privacy.clearOnShutdown.history", false); // 2811

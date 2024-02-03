@@ -35,7 +35,8 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("rust", {
-  s( -- import
+  -- {{{ import
+  s(
     "crate",
     fmt("{};\n{}"
       , {
@@ -51,7 +52,10 @@ ls.add_snippets("rust", {
       }
     )
   ),
-  s( -- module
+  -- }}}
+
+  -- {{{ module
+  s(
     "mod",
     fmt("{}\n{}", {
       c(1, {
@@ -88,7 +92,10 @@ ls.add_snippets("rust", {
       }
     )
   ),
-  s( -- use
+  -- }}}
+
+  -- {{{ use
+  s(
     "use",
     fmt("use {};\n{}", {
       c(1, {
@@ -113,5 +120,6 @@ ls.add_snippets("rust", {
       }
     )
   ),
+  -- }}}
 })
 -- }}}

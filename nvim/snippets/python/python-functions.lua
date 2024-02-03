@@ -35,7 +35,8 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("python", {
-  s( -- function (+async)
+  -- {{{ function (+async)
+  s(
     "def",
     fmt("{} {}({}):\n"..
       "\t{}{}", {
@@ -49,5 +50,6 @@ ls.add_snippets("python", {
       i(0),
     })
   ),
+  -- }}}
 })
 -- }}}

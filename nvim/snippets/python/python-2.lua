@@ -35,7 +35,8 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("python", {
-  s( -- elif
+  -- {{{ elif
+  s(
     "elif",
     fmt("elif {}:\n"..
       "\t{}{}", {
@@ -44,7 +45,10 @@ ls.add_snippets("python", {
       i(0),
     })
   ),
-  s( -- else
+  -- }}}
+
+  -- {{{ else
+  s(
     "else",
     fmt("else:\n"..
       "\t{}{}", {
@@ -52,7 +56,10 @@ ls.add_snippets("python", {
       i(0),
     })
   ),
-  s( -- for
+  -- }}}
+
+  -- {{{ for
+  s(
     "for",
     fmt("for {} in {}:\n"..
       "\t{}\n"..
@@ -78,7 +85,10 @@ ls.add_snippets("python", {
       i(0),
     })
   ),
-  s( -- import
+  -- }}}
+
+  -- {{{ import
+  s(
     "import",
     fmt('{}import {}{}', {
       c(1, {
@@ -89,7 +99,10 @@ ls.add_snippets("python", {
       i(0),
     })
   ),
-  s( -- if/else
+  -- }}}
+
+  -- {{{ if/else
+  s(
     "if",
     fmt('if {}:\n'..
       '\t{}\n'..
@@ -114,7 +127,10 @@ ls.add_snippets("python", {
       i(0),
     })
   ),
-  s( -- while/else
+  -- }}}
+
+  -- {{{ while/else
+  s(
     "while",
     fmt("while {}:\n" ..
       "\t{}\n"..
@@ -139,5 +155,6 @@ ls.add_snippets("python", {
       i(0),
     })
   ),
+  -- }}}
 })
 -- }}}

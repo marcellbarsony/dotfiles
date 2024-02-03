@@ -3,6 +3,7 @@
 -- https://neovim.io/doc/user/quickref.html
 
 local options = {
+  -- {{{ Misc
   allowrevins = false,
   autochdir = true,
   backspace = "indent,eol,start",
@@ -19,100 +20,121 @@ local options = {
   textwidth = 150,
   --virtualedit = all,
   wrap = false,
+  -- }}}
 
-  -- Backup
+  -- {{{ Backup
   backup = false,
   backupcopy = "auto",
   backupext = "~",
   backupdir = "/tmp/",
   writebackup = false,
+  -- }}}
 
-  -- Buffer
+  -- {{{ Buffer
   bufhidden = "",
   buflisted = true,
   buftype = "",
+  -- }}}
 
-  -- Buffer split
+  -- {{{ Buffer split
   splitright = true,
   splitbelow = true,
+  -- }}}
 
-  -- Cache
+  -- {{{ Cache
   undofile = true,
   swapfile = false,
+  -- }}}
 
-  -- Case sensitivity
+  -- {{{ Case sensitivity
   ignorecase = true,
   smartcase = true,
+  -- }}}
 
-  -- Clipboard
+  -- {{{ Clipboard
   clipboard = "unnamedplus",
+  -- }}}
 
-  -- Colors
+  -- {{{ Colors
   background = "dark",
   termguicolors = true,
+  -- }}}
 
-  -- Command history
+  -- {{{ Command history
   history = 50,
+  -- }}}
 
-  -- Command line
+  -- {{{ Command line
   cdhome = true,
   cmdheight = 0,
   --o.cedit = "CTRL-F",
+  -- }}}
 
-  -- Cursor
+  -- {{{ Cursor
   cursorcolumn = false,
   cursorline = false,
   guicursor = "n:block,i:hor1",
   scrolloff = 100,
   sidescrolloff = 8,
+  -- }}}
 
-  -- Encoding
+  -- {{{ Encoding
   fileencoding = "utf-8",
+  -- }}}
 
-  -- Fold
-  foldmethod = "manual",
+  -- {{{ Fold
+  foldmethod = "marker",
   foldexpr = "nvim_treesitter#foldexpr()",
   -- foldcolumn = "1", -- "0" is not bad
   -- foldlevel = 99, -- Using ufo provider need a large value, feel free to decrease the value
   -- foldlevelstart = 99,
   -- foldenable = true,
+  -- }}}
 
-  -- Highlight
+  -- {{{ Highlight
   hlsearch = true,
+  -- }}}
 
-  -- Indentation
+  -- {{{ Indentation
   autoindent = false,
   cindent = true,
   cinoptions = "",
   cinwords = "if,else,while,do,for,switch",
   --o.cinscopecls = "public,protected,private",
   smartindent = false,
+  -- }}}
 
-  -- Line number
+  -- {{{ Line number
   number = true,
   numberwidth = 2,
   relativenumber = true,
   signcolumn = "yes",
+  -- }}}
 
-  -- Mode
+  -- {{{ Mode
   showmode = false,
+  -- }}}
 
-  -- R/W
+  -- {{{ R/W
   autoread = true,
   autowrite = false,
   autowriteall = false,
+  -- }}}
 
-  -- Statusline
+  -- {{{ Statusline
   laststatus = 3,
+  -- }}}
 
-  -- Tab
+  -- {{{ Tab
   expandtab = true,
   softtabstop = -1,
   tabstop = 2,
+  -- }}}
 
-  -- Update
+  -- {{{ Update
   timeoutlen = 250, -- which-key.nvim
   updatetime = 200,
+  -- }}}
 }
 
 vim.opt.shortmess:append "c"

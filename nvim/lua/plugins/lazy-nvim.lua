@@ -1,7 +1,7 @@
 -- lazy.nvim
 -- https://github.com/folke/lazy.nvim
 
--- Bootstrap
+-- {{{ Bootstrap
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -14,15 +14,17 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
+-- }}}
 
+-- {{{ Setup
 require("lazy").setup({
-
-  -- Auto pair
+  -- {{{ Auto pair
   { "windwp/nvim-autopairs",
     event = "InsertEnter"
   },
+  -- }}}
 
-  -- Color theme
+  -- {{{ Color theme
   { "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
@@ -31,21 +33,25 @@ require("lazy").setup({
   --   name = "catppuccin",
   --   priority = 1000
   -- },
+  -- }}}
 
-  -- Colorizer
+  -- {{{ Colorizer
   "NvChad/nvim-colorizer.lua",
+  -- }}}
 
-  -- Comment
+  -- {{{ Comment
   { "numToStr/Comment.nvim",
     lazy = false,
   },
+  -- }}}
 
-  -- Devicons
+  -- {{{ Devicons
   { "nvim-tree/nvim-web-devicons",
     event = "VeryLazy"
   },
+  -- }}}
 
-  -- CMP
+  -- {{{ CMP
   { "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     dependencies = {
@@ -71,8 +77,9 @@ require("lazy").setup({
       },
     },
   },
+  -- }}}
 
-  -- DAP
+  -- {{{ DAP
   { "mfussenegger/nvim-dap",
     event = "VeryLazy",
     dependencies = {
@@ -82,25 +89,30 @@ require("lazy").setup({
       "theHamsta/nvim-dap-virtual-text", -- Virtual text
     },
   },
+  -- }}}
 
-  -- Greeter
+  -- {{{ Greeter
   "goolord/alpha-nvim",
+  -- }}}
 
-  -- Git
+  -- {{{ Git
   "lewis6991/gitsigns.nvim",
+  -- }}}
 
-  -- Harpoon
+  -- {{{ Harpoon
   { "ThePrimeagen/harpoon",
     branch = "harpoon2",
     dependencies = {
       "nvim-lua/plenary.nvim",
     }
   },
+  -- }}}
 
-  -- HEX
+  -- {{{ HEX
   "RaafatTurki/hex.nvim",
+  -- }}}
 
-  -- Indent lines
+  -- {{{ Indent lines
   { "lukas-reineke/indent-blankline.nvim",
     event = {
       "BufReadPre",
@@ -109,16 +121,18 @@ require("lazy").setup({
     main = "ibl",
     opts = {}
   },
+  -- }}}
 
-  -- LSP
+  -- {{{ LSP
   { "neovim/nvim-lspconfig",
     event = {
       "BufReadPre",
       "BufNewFile",
     },
   },
+  -- }}}
 
-  -- LSP (Mason)
+  -- {{{ LSP (Mason)
   { "williamboman/mason.nvim",
     build = ":MasonUpdate",
     dependencies = {
@@ -127,13 +141,15 @@ require("lazy").setup({
       "onsails/lspkind.nvim",
     },
   },
+  -- }}}
 
-  -- Lspsaga
+  -- {{{ Lspsaga
   { "glepnir/lspsaga.nvim",
     event = "LspAttach"
   },
+  -- }}}
 
-  -- Markdown preview
+  -- {{{ Markdown preview
   { "iamcco/markdown-preview.nvim",
     cmd = {
       "MarkdownPreviewToggle",
@@ -143,29 +159,35 @@ require("lazy").setup({
     ft = { "markdown" },
     build = function() vim.fn["mkdp#util#install"]() end,
   },
+  -- }}}
 
-  -- Oil.nvim
+  -- {{{ Oil.nvim
   { "stevearc/oil.nvim",
     lazy = true
   },
+  -- }}}
 
+  -- {{{ Rust
   { "mrcjkb/rustaceanvim",
     version = "^3",
     ft = { "rust" },
   },
+  --}}}
 
-  -- Snippets
+  -- {{{ Snippets
   { "L3MON4D3/LuaSnip",
     event = "InsertEnter",
     dependencies = {
       "saadparwaiz1/cmp_luasnip",
     },
   },
+  -- }}}
 
-  -- Status line
+  -- {{{ Status line
   "nvim-lualine/lualine.nvim",
+  -- }}}
 
-  -- Telescope
+  -- {{{ Telescope
   { "nvim-telescope/telescope.nvim",
     lazy = true,
     cmd = "Telescope",
@@ -173,8 +195,9 @@ require("lazy").setup({
       "nvim-lua/plenary.nvim",
     }
   },
+  -- }}}
 
-  -- Toggleterm
+  -- {{{ Toggleterm
   { "akinsho/toggleterm.nvim",
     --event = "VeryLazy",
     lazy = true,
@@ -182,8 +205,9 @@ require("lazy").setup({
     version = "*",
     config = true
   },
+  -- }}}
 
-  -- Treesitter
+  -- {{{ Treesitter
   { "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     event = {
@@ -196,11 +220,13 @@ require("lazy").setup({
       "p00f/nvim-ts-rainbow"
     }
   },
+  -- }}}
 
-  -- Trouble
+  -- {{{ Trouble
   "folke/trouble.nvim",
+  -- }}}
 
-  -- Which key
+  -- {{{ Which key
   { "folke/which-key.nvim",
     event = "VeryLazy",
     init = function()
@@ -208,4 +234,6 @@ require("lazy").setup({
       vim.o.timeoutlen = 300
     end,
   },
+  -- }}}
 })
+-- }}}

@@ -1,11 +1,10 @@
 -- Nvim DAP UI
 -- https://github.com/rcarriga/nvim-dap-ui
 
--- Setup
+-- {{{ Setup
 -- :h dapui.setup()
 require("dapui").setup({
-
-  -- Controls
+  -- {{{ Controls
   controls = {
     element = "repl",
     enabled = false,
@@ -21,32 +20,38 @@ require("dapui").setup({
       terminate = "",
     },
   },
+  -- }}}
 
-  -- Element mappings
+  -- {{{ Element mappings
   element_mappings = {},
+  -- }}}
 
-  -- Expand lines
+  -- {{{ Expand lines
   expand_lines = vim.fn.has("nvim-0.7") == 0, --true
+  -- }}}
 
-  -- Floating
+  -- {{{ Floating
   floating = {
     border = "single",
     mappings = {
       close = { "q", "<Esc>" }
     }
   },
+  -- }}}
 
-  -- Force buffers
+  -- {{{ Force buffers
   force_buffers = true,
+  -- }}}
 
-  -- Icons
+  -- {{{ Icons
   icons = {
     expanded = "",
     collapsed = ">", -- 
     current_frame = ">", -- 
   },
+  -- }}}
 
-  -- Layouts
+  -- {{{ Layouts
   layouts = {
     {
       elements = {
@@ -80,8 +85,9 @@ require("dapui").setup({
       size = 8
     }
   },
+  -- }}}
 
-  -- Mappings
+  -- {{{ Mappings
   mappings = {
     edit = "e",
     expand = { "<CR>", "<2-LeftMouse>" },
@@ -90,15 +96,18 @@ require("dapui").setup({
     repl = "r",
     toggle = "t"
   },
+  -- }}}
 
-  -- Render
+  -- {{{ Render
   render = {
     indent = 1,
     max_value_lines = 100
   }
+  -- }}}
 })
+-- }}}
 
--- [TODO] Neodev.nvim
+-- {{{ [TODO] Neodev.nvim
 -- It is highly recommended to use neodev.nvim to enable type checking for
 -- nvim-dap-ui to get type checking, documentation and autocompletion for
 -- all API functions.
@@ -108,8 +117,9 @@ require("dapui").setup({
 --     library = { plugins = { "nvim-dap-ui" }, types = true },
 --     ...
 --   })
+-- }}}
 
--- Event listeners
+-- {{{ Event listeners
 local dap, dapui = require("dap"), require("dapui")
 
 dap.listeners.after.event_initialized["dapui_config"] = function()
@@ -121,3 +131,4 @@ end
 dap.listeners.before.event_exited["dapui_config"] = function()
   dapui.close() -- Close DAP UI
 end
+-- }}}

@@ -35,7 +35,8 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("python", {
-  s( -- with
+  -- {{{ with (context)
+  s(
     "with",
     fmt('with open({}, "{}") as {}:\n' ..
       '\t{} = {}.{}(){}', {
@@ -57,5 +58,6 @@ ls.add_snippets("python", {
       i(0),
     })
   ),
+  -- }}}
 })
 -- }}}

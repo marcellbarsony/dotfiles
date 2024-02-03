@@ -15,6 +15,7 @@ require("trouble").setup({
   fold_open = "",
   fold_closed = "",
   cycle_results = true,
+  -- {{{ Actionkeys
   action_keys = {
     close = "q",
     cancel = "<esc>",
@@ -37,6 +38,7 @@ require("trouble").setup({
     next = "j",
     help = "?",
   },
+  -- }}}
   multiline = true,
   indent_lines = true,
   win_config = { border = "single" },

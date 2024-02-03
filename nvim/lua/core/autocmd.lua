@@ -1,7 +1,7 @@
 local A = vim.api
 local num_au = A.nvim_create_augroup('NUMTOSTR', { clear = true })
 
--- Custom filetypes
+-- {{{ Custom filetypes
 vim.filetype.add({
   extension = {
     eslintrc = "json",
@@ -19,8 +19,9 @@ vim.filetype.add({
     ["yup.lock"] = "yaml",
   },
 })
+-- }}}
 
--- Open help vertically & q to exit
+-- {{{ Open help vertically & q to exit
 A.nvim_create_autocmd("BufEnter", {
   group = num_au,
   pattern = "*.txt",
@@ -31,11 +32,13 @@ A.nvim_create_autocmd("BufEnter", {
     end
   end,
 })
+-- }}}
 
--- Highlight region on yank
+-- {{{ Highlight region on yank
 A.nvim_create_autocmd("TextYankPost", {
   group = num_au,
   callback = function()
     vim.highlight.on_yank({ higroup = "Visual", timeout = 120 })
   end,
 })
+-- }}}

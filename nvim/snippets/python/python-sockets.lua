@@ -35,7 +35,8 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("python", {
-  s( -- Socket creation
+  -- {{{ socket
+  s(
     "socket",
     fmt('{} = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n'..
       "{}.connect(({}, {}))\n"..
@@ -47,5 +48,6 @@ ls.add_snippets("python", {
       i(0),
     })
   ),
+  -- }}}
 })
 -- }}}

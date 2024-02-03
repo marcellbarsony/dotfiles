@@ -1,7 +1,7 @@
 -- Lualine
 -- https://github.com/nvim-lualine/lualine.nvim
 
--- Macro-recording section
+-- {{{ Macro recording section
 local function show_macro_recording()
   local recording_register = vim.fn.reg_recording()
   if recording_register == "" then
@@ -10,8 +10,10 @@ local function show_macro_recording()
     return "Recording @" .. recording_register
   end
 end
+-- }}}
 
 require("lualine").setup {
+  -- {{{ Options
   options = {
     icons_enabled = true,
     theme = "palenight", -- auto / tokyonight
@@ -30,6 +32,9 @@ require("lualine").setup {
       winbar = 1000,
     }
   },
+  -- }}}
+
+  -- {{{ Sections
   sections = {
     lualine_a = { "mode" },
     lualine_b = {
@@ -68,6 +73,9 @@ require("lualine").setup {
     lualine_y = { "progress" },
     lualine_z = { "location" }
   },
+  -- }}}
+
+  -- {{{ NOT IN USE: Inactive sections
   -- inactive_sections = {
   --   lualine_a = {},
   --   lualine_b = {},
@@ -76,6 +84,8 @@ require("lualine").setup {
   --   lualine_y = {},
   --   lualine_z = {}
   -- },
+  -- }}}
+
   tabline = {},
   winbar = {},
   inactive_winbar = {},

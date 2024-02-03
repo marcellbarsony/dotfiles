@@ -4,38 +4,45 @@
 -- Config
 -- https://github.com/williamboman/mason.nvim#configuration
 require("mason").setup({
-  -- Path
+  -- {{{ Path
   PATH = "prepend",
+  -- }}}
 
-  -- Log level
+  -- {{{ Log level
   log_level = vim.log.levels.INFO,
+  -- }}}
 
-  -- Concurrent installers
+  -- {{{ Concurrent installers
   max_concurrent_installers = 5,
+  -- }}}
 
-  -- Registries
+  -- {{{ Registries
   registries = {
     "github:mason-org/mason-registry",
   },
+  -- }}}
 
-  -- Providers
+  -- {{{ Providers
   providers = {
     "mason.providers.registry-api",
     "mason.providers.client",
   },
+  -- }}}
 
-  -- GitHub
+  -- {{{ GitHub
   github = {
     download_url_template = "https://github.com/%s/releases/download/%s/%s",
   },
+  -- }}}
 
-  -- Pip
+  -- {{{ Pip
   pip = {
     upgrade_pip = true,
     install_args = {},
   },
+  -- }}}
 
-  -- UI
+  -- {{{ UI
   ui = {
     check_outdated_packages_on_open = false,
     border = "none",
@@ -58,4 +65,5 @@ require("mason").setup({
       apply_language_filter = "<C-f>",
     },
   },
+  -- }}}
 })

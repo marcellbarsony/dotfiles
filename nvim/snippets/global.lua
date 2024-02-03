@@ -29,7 +29,8 @@ local conds_expand = require("luasnip.extras.conditions.expand")
 
 -- SNIPPETS -- {{{
 ls.add_snippets("all", {
-  s( -- date
+  -- {{{ date
+  s(
     "date",
     fmt("{}", {
       c(1, {
@@ -48,7 +49,10 @@ ls.add_snippets("all", {
       }),
     })
   ),
-  s( -- lorem
+  -- }}}
+
+  -- {{{ lorem
+  s(
     "lorem",
     fmt("{}", {
     c(1, {
@@ -68,7 +72,10 @@ ls.add_snippets("all", {
     }),
     })
   ),
-  s( -- pwd
+  -- }}}
+
+  -- {{{ pwd
+  s(
     "pwd",
     fmt("{}", {
     f(function()
@@ -76,7 +83,10 @@ ls.add_snippets("all", {
     end)
     })
   ),
-  s( -- time
+  -- }}}
+
+  -- {{{ time
+  s(
     "time",
     fmt("{}", {
     c(1, {
@@ -89,5 +99,6 @@ ls.add_snippets("all", {
       }),
     })
   ),
+  -- }}}
 })
 -- }}}

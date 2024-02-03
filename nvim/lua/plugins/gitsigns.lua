@@ -2,7 +2,7 @@
 -- https://github.com/lewis6991/gitsigns.nvim
 
 require("gitsigns").setup {
-  -- Signs
+  -- {{{ Signs
   signs = {
     add          = {hl = "GitSignsAdd"   , text = "|", numhl="GitSignsAddNr"   , linehl="GitSignsAddLn"},
     change       = {hl = "GitSignsChange", text = "│", numhl="GitSignsChangeNr", linehl="GitSignsChangeLn"},
@@ -10,18 +10,21 @@ require("gitsigns").setup {
     topdelete    = {hl = "GitSignsDelete", text = "‾", numhl="GitSignsDeleteNr", linehl="GitSignsDeleteLn"},
     changedelete = {hl = "GitSignsChange", text = "|>", numhl="GitSignsChangeNr", linehl="GitSignsChangeLn"},
   },
+  -- }}}
 
-  -- Signcolumn
+  -- {{{ Signcolumn
   signcolumn = false,
   numhl      = false,
   linehl     = false,
   word_diff  = false,
+  -- }}}
 
-  -- Gitdir
+  -- {{{ Gitdir
   watch_gitdir = {
     interval = 1000,
     follow_files = true
   },
+  -- }}}
 
   attach_to_untracked = false,
   current_line_blame = false,
@@ -47,8 +50,9 @@ require("gitsigns").setup {
     col = 1
   },
 
-  -- yadm
+  -- {{{ yadm
   yadm = {
     enable = false
   },
+  -- }}}
 }

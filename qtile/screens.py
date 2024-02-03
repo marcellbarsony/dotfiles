@@ -21,10 +21,11 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
 
-    # SCREEN1
+    # {{{ SCREEN-1
     Screen(
         top=bar.Bar([
-            ### Groups ###
+
+            # {{{ Groups
             widget.GroupBox(
                 active=PRIMARY,
                 background=None,
@@ -46,7 +47,9 @@ screens = [
                 urgent_border='FF0000',
                 urgent_text='FF0000',
             ),
-            ### Windown Name ###
+            # }}}
+
+            # {{{ Windown Name
             widget.WindowName(
                 background=None,
                 fontsize=font_size,
@@ -59,9 +62,10 @@ screens = [
                 scroll_repeat=True,
                 scroll_step=1,
             ),
-            ### Spacer ###
             widget.Spacer(),
-            ### Settings ###
+            # }}}
+
+            # {{{ Settings
             widget.WidgetBox(
                 button_location='left',
                 close_button_location='right',
@@ -70,7 +74,7 @@ screens = [
                 text_closed='󰄽',
                 text_open='󰄾',
                 widgets=[
-                    ### Weather ###
+                    # {{{ Weather
                     widget.WidgetBox(
                         button_location='left',
                         close_button_location='right',
@@ -91,7 +95,9 @@ screens = [
                             ),
                         ]
                     ),
-                    ### Network ###
+                    # }}}
+
+                    # Network {{{
                     widget.WidgetBox(
                         button_location='left',
                         close_button_location='right',
@@ -104,7 +110,8 @@ screens = [
                                 linewidth=sep_width,
                                 padding=sep_padding,
                             ),
-                            ### Interface
+
+                            # {{{ Interface
                             widget.TextBox(
                                 fmt='󱫋',
                                 fontsize=20,
@@ -116,7 +123,9 @@ screens = [
                                 foreground=PRIMARY,
                                 update_interval=600,
                             ),
-                            ### IP ###
+                            # }}}
+
+                            # {{{ IP
                             widget.TextBox(
                                 fmt='󰩟',
                                 fontsize=20,
@@ -128,7 +137,9 @@ screens = [
                                 foreground=PRIMARY,
                                 update_interval=600,
                             ),
-                            ### Wlan ###
+                            # }}}
+
+                            # {{{ Wlan
                             widget.TextBox(
                                 fmt='󰖩',
                                 fontsize=20,
@@ -141,7 +152,9 @@ screens = [
                                 interface='wlp1s0',
                                 update_interval=60,
                             ),
-                            ### Gateway ###
+                            # }}}
+
+                            # {{{ Gateway
                             widget.TextBox(
                                 fmt='󱇢',
                                 fontsize=20,
@@ -158,9 +171,13 @@ screens = [
                                 linewidth=sep_width,
                                 padding=sep_padding,
                             ),
+                            # }}}
+
                         ]
                     ),
-                    ### XBacklight ###
+                    # }}}
+
+                    # {{{ XBacklight
                     widget.WidgetBox(
                         button_location='left',
                         close_button_location='right',
@@ -192,7 +209,9 @@ screens = [
                             ),
                         ]
                     ),
-                    ### Audio ###
+                    ### }}}
+
+                    # {{{ Audio
                     widget.WidgetBox(
                         button_location='left',
                         close_button_location='right',
@@ -235,6 +254,7 @@ screens = [
                         linewidth=sep_width,
                         padding=sep_padding,
                     ),
+                    # }}}
                 ]
             ),
             widget.Sep(
@@ -242,7 +262,9 @@ screens = [
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
-            ### NETWORK ###
+            # }}}
+
+            # {{{ NETWORK
             widget.Net(
                 format='{down:.0f}{down_suffix}  {up:.0f}{up_suffix}',
                 foreground=PRIMARY,
@@ -254,7 +276,9 @@ screens = [
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
-            ### CPU ###
+            # }}}
+
+            # {{{ CPU
             widget.TextBox(
                 foreground=PRIMARY,
                 fontsize=20,
@@ -279,7 +303,9 @@ screens = [
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
-            ### RAM ###
+            # }}}
+
+            # {{{ RAM
             widget.TextBox(
                 foreground=PRIMARY,
                 fontsize=20,
@@ -298,7 +324,9 @@ screens = [
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
-            ### PACKAGES ###
+            # }}}
+
+            # {{{ PACKAGES
             widget.TextBox(
                 fmt='',
                 foreground=PRIMARY,
@@ -322,7 +350,9 @@ screens = [
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
-            ### BATTERY ###
+            # }}}
+
+            # {{{ BATTERY
             widget.Battery(
                 battery=0,
                 charge_char='󰚥',
@@ -341,13 +371,17 @@ screens = [
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
-            ### CLOCK ###
+            # }}}
+
+            # {{{ CLOCK
             widget.Clock(
                 format='%I:%M %p',
                 foreground=PRIMARY,
                 padding=widget_padding,
                 update_interval=60,
             ),
+            # }}}
+
             ],
             20,
             background='#000000',
@@ -357,11 +391,13 @@ screens = [
             opacity=0.9,
         ),
     ),
+    # }}}
 
-    # SCREEN2
+    # {{{ SCREEN-2
     Screen(
         top=bar.Bar([
-            ### Groups ###
+
+            # {{{ Groups
             widget.GroupBox(
                 active=PRIMARY,
                 background=None,
@@ -383,7 +419,9 @@ screens = [
                 urgent_border='FF0000',
                 urgent_text='FF0000',
             ),
-            ### Windown Name ###
+            # }}}
+
+            # {{{ Windown Name
             widget.WindowName(
                 background=None,
                 fontsize=font_size,
@@ -396,9 +434,10 @@ screens = [
                 scroll_repeat=True,
                 scroll_step=1,
             ),
-            ### Spacer ###
             widget.Spacer(),
-            ### Settings ###
+            # }}}
+
+            # {{{ Settings
             widget.WidgetBox(
                 button_location='left',
                 close_button_location='right',
@@ -407,7 +446,7 @@ screens = [
                 text_closed='󰄽',
                 text_open='󰄾',
                 widgets=[
-                    ### Weather ###
+                    # {{{ Weather
                     widget.WidgetBox(
                         button_location='left',
                         close_button_location='right',
@@ -428,7 +467,9 @@ screens = [
                             ),
                         ]
                     ),
-                    ### Network ###
+                    # }}}
+
+                    # Network {{{
                     widget.WidgetBox(
                         button_location='left',
                         close_button_location='right',
@@ -441,7 +482,8 @@ screens = [
                                 linewidth=sep_width,
                                 padding=sep_padding,
                             ),
-                            ### Interface
+
+                            # {{{ Interface
                             widget.TextBox(
                                 fmt='󱫋',
                                 fontsize=20,
@@ -453,7 +495,9 @@ screens = [
                                 foreground=PRIMARY,
                                 update_interval=600,
                             ),
-                            ### IP ###
+                            # }}}
+
+                            # {{{ IP
                             widget.TextBox(
                                 fmt='󰩟',
                                 fontsize=20,
@@ -465,7 +509,9 @@ screens = [
                                 foreground=PRIMARY,
                                 update_interval=600,
                             ),
-                            ### Wlan ###
+                            # }}}
+
+                            # {{{ Wlan
                             widget.TextBox(
                                 fmt='󰖩',
                                 fontsize=20,
@@ -478,7 +524,9 @@ screens = [
                                 interface='wlp1s0',
                                 update_interval=60,
                             ),
-                            ### Gateway ###
+                            # }}}
+
+                            # {{{ Gateway
                             widget.TextBox(
                                 fmt='󱇢',
                                 fontsize=20,
@@ -495,9 +543,13 @@ screens = [
                                 linewidth=sep_width,
                                 padding=sep_padding,
                             ),
+                            # }}}
+
                         ]
                     ),
-                    ### XBacklight ###
+                    # }}}
+
+                    # {{{ XBacklight
                     widget.WidgetBox(
                         button_location='left',
                         close_button_location='right',
@@ -529,7 +581,9 @@ screens = [
                             ),
                         ]
                     ),
-                    ### Audio ###
+                    ### }}}
+
+                    # {{{ Audio
                     widget.WidgetBox(
                         button_location='left',
                         close_button_location='right',
@@ -572,6 +626,7 @@ screens = [
                         linewidth=sep_width,
                         padding=sep_padding,
                     ),
+                    # }}}
                 ]
             ),
             widget.Sep(
@@ -579,7 +634,9 @@ screens = [
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
-            ### NETWORK ###
+            # }}}
+
+            # {{{ NETWORK
             widget.Net(
                 format='{down:.0f}{down_suffix}  {up:.0f}{up_suffix}',
                 foreground=PRIMARY,
@@ -591,7 +648,9 @@ screens = [
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
-            ### CPU ###
+            # }}}
+
+            # {{{ CPU
             widget.TextBox(
                 foreground=PRIMARY,
                 fontsize=20,
@@ -616,7 +675,9 @@ screens = [
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
-            ### RAM ###
+            # }}}
+
+            # {{{ RAM
             widget.TextBox(
                 foreground=PRIMARY,
                 fontsize=20,
@@ -635,7 +696,9 @@ screens = [
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
-            ### PACKAGES ###
+            # }}}
+
+            # {{{ PACKAGES
             widget.TextBox(
                 fmt='',
                 foreground=PRIMARY,
@@ -659,7 +722,9 @@ screens = [
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
-            ### BATTERY ###
+            # }}}
+
+            # {{{ BATTERY
             widget.Battery(
                 battery=0,
                 charge_char='󰚥',
@@ -678,13 +743,17 @@ screens = [
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
-            ### CLOCK ###
+            # }}}
+
+            # {{{ CLOCK
             widget.Clock(
                 format='%I:%M %p',
                 foreground=PRIMARY,
                 padding=widget_padding,
                 update_interval=60,
             ),
+            # }}}
+
             ],
             20,
             background='#000000',
@@ -694,11 +763,13 @@ screens = [
             opacity=0.9,
         ),
     ),
+    # }}}
 
-    # SCREEN3
+    # {{{ SCREEN-3
     Screen(
         top=bar.Bar([
-            ### Groups ###
+
+            # {{{ Groups
             widget.GroupBox(
                 active=PRIMARY,
                 background=None,
@@ -720,7 +791,9 @@ screens = [
                 urgent_border='FF0000',
                 urgent_text='FF0000',
             ),
-            ### Windown Name ###
+            # }}}
+
+            # {{{ Windown Name
             widget.WindowName(
                 background=None,
                 fontsize=font_size,
@@ -733,9 +806,10 @@ screens = [
                 scroll_repeat=True,
                 scroll_step=1,
             ),
-            ### Spacer ###
             widget.Spacer(),
-            ### Settings ###
+            # }}}
+
+            # {{{ Settings
             widget.WidgetBox(
                 button_location='left',
                 close_button_location='right',
@@ -744,7 +818,7 @@ screens = [
                 text_closed='󰄽',
                 text_open='󰄾',
                 widgets=[
-                    ### Weather ###
+                    # {{{ Weather
                     widget.WidgetBox(
                         button_location='left',
                         close_button_location='right',
@@ -765,7 +839,9 @@ screens = [
                             ),
                         ]
                     ),
-                    ### Network ###
+                    # }}}
+
+                    # Network {{{
                     widget.WidgetBox(
                         button_location='left',
                         close_button_location='right',
@@ -778,7 +854,8 @@ screens = [
                                 linewidth=sep_width,
                                 padding=sep_padding,
                             ),
-                            ### Interface
+
+                            # {{{ Interface
                             widget.TextBox(
                                 fmt='󱫋',
                                 fontsize=20,
@@ -790,7 +867,9 @@ screens = [
                                 foreground=PRIMARY,
                                 update_interval=600,
                             ),
-                            ### IP ###
+                            # }}}
+
+                            # {{{ IP
                             widget.TextBox(
                                 fmt='󰩟',
                                 fontsize=20,
@@ -802,7 +881,9 @@ screens = [
                                 foreground=PRIMARY,
                                 update_interval=600,
                             ),
-                            ### Wlan ###
+                            # }}}
+
+                            # {{{ Wlan
                             widget.TextBox(
                                 fmt='󰖩',
                                 fontsize=20,
@@ -815,7 +896,9 @@ screens = [
                                 interface='wlp1s0',
                                 update_interval=60,
                             ),
-                            ### Gateway ###
+                            # }}}
+
+                            # {{{ Gateway
                             widget.TextBox(
                                 fmt='󱇢',
                                 fontsize=20,
@@ -832,9 +915,13 @@ screens = [
                                 linewidth=sep_width,
                                 padding=sep_padding,
                             ),
+                            # }}}
+
                         ]
                     ),
-                    ### XBacklight ###
+                    # }}}
+
+                    # {{{ XBacklight
                     widget.WidgetBox(
                         button_location='left',
                         close_button_location='right',
@@ -866,7 +953,9 @@ screens = [
                             ),
                         ]
                     ),
-                    ### Audio ###
+                    ### }}}
+
+                    # {{{ Audio
                     widget.WidgetBox(
                         button_location='left',
                         close_button_location='right',
@@ -909,6 +998,7 @@ screens = [
                         linewidth=sep_width,
                         padding=sep_padding,
                     ),
+                    # }}}
                 ]
             ),
             widget.Sep(
@@ -916,7 +1006,9 @@ screens = [
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
-            ### NETWORK ###
+            # }}}
+
+            # {{{ NETWORK
             widget.Net(
                 format='{down:.0f}{down_suffix}  {up:.0f}{up_suffix}',
                 foreground=PRIMARY,
@@ -928,7 +1020,9 @@ screens = [
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
-            ### CPU ###
+            # }}}
+
+            # {{{ CPU
             widget.TextBox(
                 foreground=PRIMARY,
                 fontsize=20,
@@ -953,7 +1047,9 @@ screens = [
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
-            ### RAM ###
+            # }}}
+
+            # {{{ RAM
             widget.TextBox(
                 foreground=PRIMARY,
                 fontsize=20,
@@ -972,7 +1068,9 @@ screens = [
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
-            ### PACKAGES ###
+            # }}}
+
+            # {{{ PACKAGES
             widget.TextBox(
                 fmt='',
                 foreground=PRIMARY,
@@ -985,7 +1083,7 @@ screens = [
                 colour_have_updates=PRIMARY,
                 colour_no_updates=PRIMARY,
                 display_format='{updates}',
-                distro='Arch_Sup',
+                distro='Arch',
                 foreground=PRIMARY,
                 initial_text='Checking updates...',
                 no_update_string='0',
@@ -996,7 +1094,9 @@ screens = [
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
-            ### BATTERY ###
+            # }}}
+
+            # {{{ BATTERY
             widget.Battery(
                 battery=0,
                 charge_char='󰚥',
@@ -1015,13 +1115,17 @@ screens = [
                 linewidth=sep_width,
                 padding=sep_padding,
             ),
-            ### CLOCK ###
+            # }}}
+
+            # {{{ CLOCK
             widget.Clock(
                 format='%I:%M %p',
                 foreground=PRIMARY,
                 padding=widget_padding,
                 update_interval=60,
             ),
+            # }}}
+
             ],
             20,
             background='#000000',
@@ -1031,5 +1135,6 @@ screens = [
             opacity=0.9,
         ),
     ),
+    # }}}
 
 ]

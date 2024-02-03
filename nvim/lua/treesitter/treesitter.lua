@@ -3,7 +3,7 @@
 -- https://tree-sitter.github.io/tree-sitter/
 
 require"nvim-treesitter.configs".setup {
-  -- Modules
+  -- {{{ Modules
   -- https://github.com/nvim-treesitter/nvim-treesitter#modules
   ensure_installed = {
     "javascript",
@@ -16,19 +16,23 @@ require"nvim-treesitter.configs".setup {
   sync_install = false,
   auto_install = true,
   ignore_install = { "" },
+  -- }}}
 
-  -- Highlight
+  -- {{{ Highlights
   -- https://github.com/nvim-treesitter/nvim-treesitter#highlight
   highlight = {
     enable = true,
     disable = { "" },
     additional_vim_regex_highlighting = false,
   },
+  -- }}}
 
+  -- {{{ Modules
   -- Available modules
   -- https://github.com/nvim-treesitter/nvim-treesitter#available-modules
+  -- }}}
 
-  -- Incremental selection
+  -- {{{ Incremental selection
   -- https://github.com/nvim-treesitter/nvim-treesitter#incremental-selection
   incremental_selection = {
     enable = true,
@@ -39,12 +43,14 @@ require"nvim-treesitter.configs".setup {
       node_decremental = "grm",
     },
   },
+  -- }}}
 
-  -- Indentation
+  -- {{{ Indentation
   -- https://github.com/nvim-treesitter/nvim-treesitter#indentation
   indent = {
     enable = true
   },
+  -- }}}
 }
 
 -- Overwrite highlights

@@ -10,6 +10,14 @@ chromium/
 # Dconf
 dconf/
 
+# Dolphin
+baloofileinformationrc
+dolphinrc
+kde.org/
+kiorc
+session/
+trashrc
+
 # GitHub
 gh/
 
@@ -69,6 +77,7 @@ qtile/config/__pycache__
 
 # QT5
 QtProject.conf
+QtProject/
 
 # Spotify
 spotify-tui/client.yml

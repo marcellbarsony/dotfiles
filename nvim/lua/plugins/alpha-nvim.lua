@@ -4,8 +4,9 @@
 local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
 
+-- {{{ Dashboard header
 dashboard.section.header.val = {
-
+-- {{{ Blinky
 -- "            ██████            ",
 -- "        ████▒▒▒▒▒▒████        ",
 -- "      ██▒▒▒▒▒▒▒▒▒▒▒▒▒▒██      ",
@@ -21,7 +22,9 @@ dashboard.section.header.val = {
 -- "██▒▒██▒▒▒▒▒▒██▒▒▒▒▒▒▒▒██▒▒▒▒██",
 -- "████  ██▒▒██  ██▒▒▒▒██  ██▒▒██",
 -- "██      ██      ████      ████",
+-- }}}
 
+-- {{{ Blinky + Pacman
 -- "            ██████                                  ██████                      ",
 -- "        ████▒▒▒▒▒▒████                          ████▒▒▒▒▒▒████                  ",
 -- "      ██▒▒▒▒▒▒▒▒▒▒▒▒▒▒██                      ██▒▒▒▒▒▒▒▒▒▒▒▒▒▒██                ",
@@ -37,7 +40,9 @@ dashboard.section.header.val = {
 -- "██▒▒██▒▒▒▒▒▒██▒▒▒▒▒▒▒▒██▒▒▒▒██                ██▒▒▒▒▒▒▒▒▒▒▒▒▒▒██                ",
 -- "████  ██▒▒██  ██▒▒▒▒██  ██▒▒██                  ████▒▒▒▒▒▒████                  ",
 -- "██      ██      ████      ████                      ██████                      ",
+-- }}}
 
+-- {{{ Neovim
 -- "                                                     ",
 -- "  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
 -- "  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ",
@@ -46,7 +51,9 @@ dashboard.section.header.val = {
 -- "  ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ",
 -- "  ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
 -- "                                                     ",
+-- }}}
 
+-- {{{ Neovim [modern]
 "                                                                       ",
 "                                                                       ",
 "                                                                       ",
@@ -62,7 +69,9 @@ dashboard.section.header.val = {
 "                                                                       ",
 "                                                                       ",
 "                                                                       ",
+-- }}}
 
+-- {{{ Arch
 -- "                   -`                   ",
 -- "                  .o+`                  ",
 -- "                 `ooo/                  ",
@@ -82,9 +91,11 @@ dashboard.section.header.val = {
 -- "  `+sso+:-`                 `.-/+oso:   ",
 -- " `++:.                           `-/+/  ",
 -- " .`                                 `/  ",
-
+-- }}}
 }
+-- }}}
 
+-- {{{ Dashboard options
 dashboard.section.buttons.val = {
   dashboard.button( "f", "󰈔  > File", ":ene <BAR> startinsert <CR>"),
   dashboard.button( "gf", "  > Git Files", ":Telescope git_files<CR>"),
@@ -99,6 +110,7 @@ dashboard.section.buttons.val = {
   dashboard.button( "q", "  > Quit", ":qa<CR>"),
   dashboard.button( "/", "󰍉  > Grep", ":Telescope live_grep<CR>"),
 }
+-- }}}
 
 -- Send config to alpha
 alpha.setup(dashboard.opts)

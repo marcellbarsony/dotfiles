@@ -19,7 +19,7 @@ for i in groups:
         ]
     )
 
-# Groups [named]
+# {{{ NOT IN USE - Groups [named]
 #group_names = ' 一 二 三 四 五 六 七 八 九 十'.split()
 ##group_names = ' A B C D E'.split()
 #groups = [Group(name, layout='max') for name in group_names]
@@ -33,8 +33,9 @@ for i in groups:
 #        #Key([mod, 'shift'], indx, lazy.window.togroup(name),
 #        #    desc="Move window"),
 #    ]
+# }}}
 
-# Groups
+# {{{ NOT IN USE - Groups [numbered]
 # groups = [
 #     Group(" 1 ", layout='Columns'),
 #     Group(" 2 ", layout='Columns'),
@@ -46,3 +47,4 @@ for i in groups:
 #     Group(" 8 ", layout='Columns'),
 #     Group(" 9 ", layout='Columns'),
 # ]
+# }}}

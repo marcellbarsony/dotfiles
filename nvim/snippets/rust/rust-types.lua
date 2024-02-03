@@ -35,7 +35,8 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("rust", {
-  s( -- enum
+  -- {{{ enum
+  s(
     "enum",
     fmt("enum {}\n" ..
       "}}\n"
@@ -72,25 +73,10 @@ ls.add_snippets("rust", {
       }
     )
   ),
-  s( -- impl
-    "impl",
-    fmt("impl {} {{\n" ..
-      "\t{}\n" ..
-      "}}\n" ..
-      "{}"
-      , {
-      c(1, {
-        -- No Trait
-        sn(nil, {i(1), i(2, "Type")}),
-        -- Trait
-        sn(nil, {i(1), i(2, "Trait"), t" for ", i(3, "Type")}),
-      }),
-      i(2, "// ..."),
-      i(3),
-      }
-    )
-  ),
-  s( -- struct
+  -- }}}
+
+  -- {{{ struct
+  s(
     "struct",
     fmt("struct {} {{\n" ..
       "\t{}{}\n" ..
@@ -116,7 +102,10 @@ ls.add_snippets("rust", {
       }
     )
   ),
-  s( -- trait
+  -- }}}
+
+  -- {{{ trait
+  s(
     "trait",
     fmt("{}trait {}{} {{\n" ..
       "\t{}\n" ..
@@ -141,5 +130,6 @@ ls.add_snippets("rust", {
       }
     )
   ),
+  -- }}}
 })
 -- }}}

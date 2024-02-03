@@ -8,6 +8,7 @@
 local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+-- {{{ LSP Servers
 local servers = {
   "lua_ls",
   "pyright",
@@ -20,8 +21,9 @@ for _, lsp in ipairs(servers) do
     flags = lsp_flags,
   }
 end
+-- }}}
 
--- Borders
+-- {{{ Borders
 -- https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization#borders
 local border = {
   {"┌", "FloatBorder"},
@@ -33,7 +35,9 @@ local border = {
   {"└", "FloatBorder"},
   {"│", "FloatBorder"},
 }
+-- }}}
 
+-- {{{ Float
 local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
 function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
   opts = opts or {}
@@ -43,8 +47,9 @@ end
 
 -- vim.cmd [[autocmd! ColorScheme * highlight NormalFloat guibg=#1f2335]]
 -- vim.cmd [[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335]]
+-- }}}
 
--- Keymaps [Global]
+-- {{{ Keymaps [Global]
 -- :help vim.diagnostic.*
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { opts = opts, desc = "Previous diagnostic" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { opts = opts, desc = "Next diagnostic" })
@@ -60,8 +65,9 @@ vim.keymap.set("n", "<leader>ld", vim.diagnostic.open_float, { opts = opts, desc
 -- vim.keymap.set("n", "<leader>lxr", vim.lsp.codelens.run, { buffer = args.buf, desc = "Codelens Run" })
 -- vim.keymap.set("n", "<leader>lxc", vim.lsp.codelens.clear, { buffer = args.buf, desc = "Codelens Clear" })
 -- vim.keymap.set("n", "<leader>lxc", vim.lsp.codelens.display, { buffer = bufnr, desc = "Codelens Clear" })
+-- }}}
 
--- Keymaps [LSP]
+-- {{{ Keymaps [LSP]
 -- :help vim.lsp.*
 -- https://github.com/neovim/nvim-lspconfig#suggested-configuration
 vim.api.nvim_create_autocmd("LspAttach", {
@@ -105,8 +111,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
   end,
 })
+-- }}}
 
--- Diagnostics
+-- {{{ Diagnostics
 -- :help vim.diagnostic
 -- https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization#customizing-how-diagnostics-are-displayed
 vim.diagnostic.config({
@@ -116,8 +123,9 @@ vim.diagnostic.config({
   update_in_insert = false,
   severity_sort = true,
 })
+-- }}}
 
--- Diagnostics [Symbols]
+-- {{{ Diagnostics [Symbols]
 -- https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization#change-diagnostic-symbols-in-the-sign-column-gutter
 -- local signs = { Error = "󰬟",   Warn = "", Hint = "", Info = "" }
 --local signs = { Error = "",   Warn = "", Hint = "", Info = "" }
@@ -130,3 +138,4 @@ for type, icon in pairs(signs) do
     --numhl = hl
   })
 end
+-- }}}

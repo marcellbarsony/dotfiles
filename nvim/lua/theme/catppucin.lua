@@ -2,6 +2,7 @@
 -- https://github.com/catppuccin/nvim
 
 require("catppuccin").setup({
+  -- {{{ Options
   flavour = "mocha", -- latte, frappe, macchiato, mocha
   background = { -- :h background
     light = "latte",
@@ -32,16 +33,25 @@ require("catppuccin").setup({
     types = {},
     operators = {},
   },
+  -- }}}
+
+  -- {{{ Overrides [Colors]
   -- ~/.local/share/nvim/lazy/catppuccin/lua/catppuccin/palettes/mocha.lua
   color_overrides = {
     crust = "#FF0000"
   },
+  -- }}}
+
+  -- {{{ Overrides [Highlights]
   -- ~/.local/share/nvim/lazy/catppuccin/lua/catpuccin/groups/editor.lua
   custom_highlights = function(colors)
     return {
       LineNr = { fg = colors.mauve },
     }
   end,
+  -- }}}
+
+  -- {{{ Integrations
   integrations = {
     cmp = true,
     gitsigns = true,
@@ -54,7 +64,8 @@ require("catppuccin").setup({
     },
     -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
   },
+  -- }}}
 })
 
--- setup must be called before loading
+-- Setup must be called before loading
 vim.cmd.colorscheme "catppuccin"

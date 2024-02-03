@@ -2,6 +2,7 @@
 -- https://github.com/stevearc/oil.nvim
 
 require("oil").setup({
+  -- {{{ File explorer
   -- Oil will take over directory buffers (e.g. `vim .` or `:e src/`)
   -- Set to false if you still want to use netrw.
   default_file_explorer = true,
@@ -13,12 +14,17 @@ require("oil").setup({
     "size",
     -- "mtime",
   },
+  -- }}}
+
+  -- {{{ Buffer options
   -- Buffer-local options to use for oil buffers
   buf_options = {
     buflisted = false,
     bufhidden = "hide",
   },
-  -- Window-local options to use for oil buffers
+  -- }}}
+
+  -- {{{ Window-local options
   win_options = {
     wrap = false,
     signcolumn = "no",
@@ -29,10 +35,18 @@ require("oil").setup({
     conceallevel = 3,
     concealcursor = "nvic",
   },
+  -- }}}
+
+  -- {{{ Options
   delete_to_trash = false,
   skip_confirm_for_simple_edits = false,
   prompt_save_on_select_new_entry = true,
   cleanup_delay_ms = 2000,
+  lsp_rename_autosave = false,
+  constrain_cursor = "editable",
+  -- }}}
+
+  -- {{{ Keymaps
   -- Keymaps in oil buffer. Can be any value that `vim.keymap.set` accepts OR a table of keymap
   -- options with a `callback` (e.g. { callback = function() ... end, desc = "", mode = "n" })
   -- Additionally, if it is a string that matches "actions.<name>",
@@ -57,8 +71,12 @@ require("oil").setup({
     ["g."] = "actions.toggle_hidden",
     ["g\\"] = "actions.toggle_trash",
   },
+
   -- Set to false to disable all of the above keymaps
   use_default_keymaps = true,
+  -- }}}
+
+  -- {{{ View options
   view_options = {
     -- Show files and directories that start with "."
     show_hidden = false,
@@ -77,6 +95,9 @@ require("oil").setup({
       { "name", "asc" },
     },
   },
+  -- }}}
+
+  -- {{{ Float
   -- Configuration for the floating window in oil.open_float
   float = {
     -- Padding around the floating window
@@ -93,6 +114,9 @@ require("oil").setup({
       return conf
     end,
   },
+  -- }}}
+
+  -- {{{ Preview
   -- Configuration for the actions floating preview window
   preview = {
     -- Width dimensions can be integers or a float between 0 and 1 (e.g. 0.4 for 40%)
@@ -116,6 +140,9 @@ require("oil").setup({
       winblend = 0,
     },
   },
+  -- }}}
+
+  -- {{{ Progress
   -- Configuration for the floating progress window
   progress = {
     max_width = 0.9,
@@ -130,4 +157,5 @@ require("oil").setup({
       winblend = 0,
     },
   },
+  -- }}}
 })

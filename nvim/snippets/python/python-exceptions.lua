@@ -35,7 +35,8 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("python", {
-  s( -- try/except/else/finally
+  -- {{{  try/except/else/finally
+  s(
     "try",
     fmt("try:\n"..
       "\t{}\n"..
@@ -93,7 +94,10 @@ ls.add_snippets("python", {
       i(0),
     })
   ),
-  s( -- Except
+  -- }}}
+
+  -- {{{ except
+  s(
     "except",
     fmt("except {}{}\n"..
       "\t{}", {
@@ -122,7 +126,10 @@ ls.add_snippets("python", {
       i(3, "Continue")
     })
   ),
-  s( -- Finally
+  -- }}}
+
+  -- {{{ finally
+  s(
     "finally",
     fmt("finally:\n"..
       "\t{}{}", {
@@ -130,5 +137,6 @@ ls.add_snippets("python", {
       i(0)
     })
   ),
+  -- }}}
 })
 -- }}}

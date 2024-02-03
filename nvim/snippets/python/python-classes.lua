@@ -35,7 +35,8 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("python", {
-  s( -- class
+  -- {{{ class
+  s(
     "class",
     fmt("class {}({}):\n\n" ..
       '\t"""Docstring for {}"""\n\n'..
@@ -54,5 +55,6 @@ ls.add_snippets("python", {
       }
     )
   ),
+  -- }}}
 })
 -- }}}

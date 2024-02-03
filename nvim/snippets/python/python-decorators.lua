@@ -35,7 +35,8 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("python", {
-  s( -- decorator
+  -- {{{ decorator
+  s(
     "@decorator",
     fmt("def {}({}):\n"..
       "\tdef {}({})\n"..
@@ -61,7 +62,10 @@ ls.add_snippets("python", {
       i(1, "decorator"),
     })
   ),
-  s( -- timer
+  -- }}}
+
+  -- {{{ timer
+  s(
     "@timer",
     fmt("def {}({}):\n"..
       "\tdef {}({})\n"..
@@ -95,6 +99,6 @@ ls.add_snippets("python", {
       i(1, "timer"),
     })
   ),
-
+  -- }}}
 })
 -- }}}

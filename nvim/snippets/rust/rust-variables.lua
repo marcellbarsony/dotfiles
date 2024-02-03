@@ -35,7 +35,8 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("rust", {
-  s( -- const
+  -- {{{ const
+  s(
     "const",
     fmt("const {}: {} = {};\n" ..
       "{}"
@@ -47,7 +48,10 @@ ls.add_snippets("rust", {
       }
     )
   ),
-  s( -- let
+  -- }}}
+
+  -- {{{ let
+  s(
     "let",
     fmt("let {}\n" ..
       "{}"
@@ -200,7 +204,10 @@ ls.add_snippets("rust", {
       }
     )
   ),
-  s( -- static
+  -- }}}
+
+  -- {{{ static
+  s(
     "static",
     fmt("static {}: {} = {};\n" ..
       "{}"
@@ -212,5 +219,6 @@ ls.add_snippets("rust", {
       }
     )
   ),
+  -- }}}
 })
 -- }}}

@@ -35,7 +35,8 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("rust", {
-  s( -- if/else-if/else
+  -- {{{ if/else-if/else
+  s(
     "if",
     fmt("if {} {{\n" ..
       "\t{}\n" ..
@@ -77,7 +78,10 @@ ls.add_snippets("rust", {
       }
     )
   ),
-  s( -- if let
+  -- }}}
+
+  -- {{{ if let
+  s(
     "if let",
     fmt("if let {} {{\n" ..
       "\t{}\n"..
@@ -103,7 +107,10 @@ ls.add_snippets("rust", {
       }
     )
   ),
-  s( -- match
+  -- }}}
+
+  -- {{{ match
+  s(
     "match",
     fmt("match {} {{\n" ..
       "\t{}" ..
@@ -161,5 +168,6 @@ ls.add_snippets("rust", {
       }
     )
   ),
+  -- }}}
 })
 -- }}

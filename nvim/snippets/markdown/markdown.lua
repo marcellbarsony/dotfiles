@@ -35,7 +35,7 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("markdown", {
-  -- Table
+  -- {{{ Table
   s({trig = "table(%d+)x(%d+)", regTrig = true}, {
     d(1, function(args, snip)
       local nodes = {}
@@ -65,6 +65,6 @@ ls.add_snippets("markdown", {
       return sn(nil, nodes)
     end),
   })
-
+  -- }}}
 })
 -- }}}

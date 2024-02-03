@@ -6,7 +6,7 @@
 local ls = require("luasnip")
 local types = require("luasnip.util.types")
 
--- Config
+-- {{{ Config
 -- :h luasnip-config-options
 ls.setup({
   history = true,
@@ -26,6 +26,7 @@ ls.setup({
     return vim.split(vim.bo.filetype, ".", true)
   end,
 })
+-- }}}
 
 -- Keymaps --- {{{
 -- https://github.com/L3MON4D3/LuaSnip/#keymaps
@@ -60,10 +61,10 @@ vim.keymap.set({ "i" }, "<c-j>", function()
     ls.change_choice(-1)
   end
 end)
-
 -- }}}
 
--- Source snippets
+-- {{{ Source snippets
 require("luasnip.loaders.from_lua").load({
   paths = "~/.config/nvim/snippets/"
 })
+-- }}}
