@@ -16,7 +16,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 -- }}}
 
--- {{{ Setup
 require("lazy").setup({
   -- {{{ Auto pair
   { "windwp/nvim-autopairs",
@@ -99,7 +98,7 @@ require("lazy").setup({
   "lewis6991/gitsigns.nvim",
   -- }}}
 
-  -- {{{ Harpoon
+  -- {{{ Harpoon 2
   { "ThePrimeagen/harpoon",
     branch = "harpoon2",
     dependencies = {
@@ -236,4 +235,3 @@ require("lazy").setup({
   },
   -- }}}
 })
--- }}}

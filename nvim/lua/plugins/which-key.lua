@@ -120,11 +120,10 @@ local mappings = {
   v = { name = "VISUAL" },
   z = { name = "Fold" },
 
-  -- {{{ Leader
   ["<leader>"] = {
     name = "Leader",
 
-    -- {{{ d
+    -- {{{ d (DAP)
     d = {
       name = "DAP",
       p = { name = "Py test" },
@@ -132,15 +131,15 @@ local mappings = {
     },
     -- }}}
 
-    -- {{{ g
+    -- {{{ g (GIT)
     g = { name = "GIT" },
     -- }}}
 
-    -- {{{ h
+    -- {{{ h (Harpoon)
     h = { name = "Harpoon" },
     -- }}}
 
-    -- {{{ l
+    -- {{{ l (LSP)
     l = {
       name = "LSP",
       a = "Action",
@@ -153,20 +152,11 @@ local mappings = {
     },
     -- }}}
 
-    -- {{{ p
-    p = {
-      name = "Plugins",
-      m = { name = "Mason" },
-      t = { name = "Treesitter" },
-      x = { name = "Trouble" },
-    },
-    -- }}}
-
-    -- {{{ r
+    -- {{{ r (Rust)
     r = { name = "Rust" },
     -- }}}
 
-    -- {{{ t
+    -- {{{ t (Telescope)
     t = {
       name = "Telescope",
       h = { name = "History" },
@@ -175,8 +165,18 @@ local mappings = {
     },
     -- }}}
 
+    -- {{{ v (VIM)
+    v = {
+      name = "VIM",
+      p = {
+        name = "Plugins",
+        m = { name = "Mason" },
+      },
+      t = { name = "Treesitter" },
+      x = { name = "Trouble" },
+    },
+    -- }}}
   }
-  -- }}}
 }
 -- }}}
 

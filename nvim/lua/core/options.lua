@@ -1,139 +1,177 @@
 -- Options
 -- https://neovim.io/doc/user/options.html
 -- https://neovim.io/doc/user/quickref.html
+-- :options
 
 local options = {
-  -- {{{ Misc
-  allowrevins = false,
-  autochdir = true,
-  backspace = "indent,eol,start",
-  binary = false,
-  breakindent = true,
+  -- {{{ 1. Important
+  -- }}}
+
+  -- {{{ 2. Moving around - Searching - Patterns
+  autochdir = false,
   browsedir = "current",
-  confirm = true,
-  conceallevel = 0,
-  list = true,
-  listchars = "trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂",
-  more=true,
-  showtabline = 1,
-  shiftwidth = 2,
-  textwidth = 150,
-  --virtualedit = all,
-  wrap = false,
-  -- }}}
-
-  -- {{{ Backup
-  backup = false,
-  backupcopy = "auto",
-  backupext = "~",
-  backupdir = "/tmp/",
-  writebackup = false,
-  -- }}}
-
-  -- {{{ Buffer
-  bufhidden = "",
-  buflisted = true,
-  buftype = "",
-  -- }}}
-
-  -- {{{ Buffer split
-  splitright = true,
-  splitbelow = true,
-  -- }}}
-
-  -- {{{ Cache
-  undofile = true,
-  swapfile = false,
-  -- }}}
-
-  -- {{{ Case sensitivity
+  cdhome = true,
+  guicursor = "n:block,i:hor1", -- ???
   ignorecase = true,
   smartcase = true,
   -- }}}
 
-  -- {{{ Clipboard
-  clipboard = "unnamedplus",
+  -- {{{ 3. Tags
   -- }}}
 
-  -- {{{ Colors
-  background = "dark",
-  termguicolors = true,
-  -- }}}
-
-  -- {{{ Command history
-  history = 50,
-  -- }}}
-
-  -- {{{ Command line
-  cdhome = true,
+  -- {{{ 4. Displaying text
+  breakindent = true,
+  conceallevel = 0,
   cmdheight = 0,
-  --o.cedit = "CTRL-F",
+  fillchars = "stlnc:_,horiz: ,horizup:┴,horizdown:┬,vert:┃,vertleft:┤,vertright:├,verthoriz:┼,fold: ,foldopen:-,foldclose:+,foldsep:│,diff:-,msgsep: ,eob:~,lastline:@",
+  hlsearch = true,
+
+    -- {{{ Gutter (number)
+    number = true,
+    numberwidth = 2,
+    relativenumber = true,
+    -- }}}
+
+    -- {{{ List
+    list = true,
+    listchars = "trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂",
+    -- }}}
+
+    -- {{{ Scroll
+    scrolloff = 100,
+    sidescrolloff = 8,
+    -- }}}
+
+    -- {{{ Wrap
+    wrap = false,
+    wrapmargin = 0,
+    -- }}}
   -- }}}
 
-  -- {{{ Cursor
+  -- {{{ 5. Syntax - Highlighting - Spelling
+  background = "dark",
   cursorcolumn = false,
   cursorline = false,
-  guicursor = "n:block,i:hor1",
-  scrolloff = 100,
-  sidescrolloff = 8,
   -- }}}
 
-  -- {{{ Encoding
-  fileencoding = "utf-8",
-  -- }}}
-
-  -- {{{ Fold
-  foldenable = true,
-  foldmethod = "marker",
-  -- foldlevel = 99,
-  -- foldexpr = "nvim_treesitter#foldexpr()",
-  -- foldcolumn = "1", -- "0" is not bad
-  -- foldlevelstart = 99,
-  -- }}}
-
-  -- {{{ Highlight
-  hlsearch = true,
-  -- }}}
-
-  -- {{{ Indentation
-  autoindent = false,
-  cindent = true,
-  cinoptions = "",
-  cinwords = "if,else,while,do,for,switch",
-  --o.cinscopecls = "public,protected,private",
-  smartindent = false,
-  -- }}}
-
-  -- {{{ Line number
-  number = true,
-  numberwidth = 2,
-  relativenumber = true,
-  signcolumn = "yes",
-  -- }}}
-
-  -- {{{ Mode
-  showmode = false,
-  -- }}}
-
-  -- {{{ R/W
-  autoread = true,
-  autowrite = false,
-  autowriteall = false,
-  -- }}}
-
-  -- {{{ Statusline
+  -- {{{ 6. Multiple windows (Split)
+  splitbelow = true,
+  splitright = true,
   laststatus = 3,
   -- }}}
 
-  -- {{{ Tab
-  expandtab = true,
-  softtabstop = -1,
-  tabstop = 2,
+  -- {{{ 7. Multiple tab pages
+  showtabline = 1,
   -- }}}
 
-  -- {{{ Update
+  -- {{{ 8. Terminal
+  -- }}}
+
+  -- {{{ 9. Using the mouse
+  -- }}}
+
+  -- {{{ 10. Messages and info
+  confirm = true,
+  more=true,
+  showmode = false,
+  -- }}}
+
+  -- {{{ 11. Selecting text
+  clipboard = "unnamedplus",
+  -- }}}
+
+  -- {{{ 12. Editing text
+  backspace = "indent,eol,start",
+  textwidth = 150,
+  undofile = true,
+  -- }}}
+
+  -- {{{ 13. Tabs - Indenting
+    -- {{{ Tabs
+    autoindent = false,
+    expandtab = true,
+    shiftwidth = 2,
+    softtabstop = -1,
+    tabstop = 2,
+    -- }}}
+
+    -- {{{ Indenting
+    smartindent = false,
+    -- }}}
+
+    -- {{{ C-indent
+    cindent = true,
+    cinoptions = "",
+    cinwords = "if,else,while,do,for,switch",
+    -- }}}
+  -- }}}
+
+  -- {{{ 14. Folding
+  foldenable = true,
+  foldcolumn = "auto",
+  foldlevelstart = 0,
+  foldmethod = "marker",
+  -- }}}
+
+  -- {{{ 15. Diff mode
+  -- }}}
+
+  -- {{{ 16. Mapping
   timeoutlen = 250, -- which-key.nvim
   updatetime = 200,
+  -- }}}
+
+  -- {{{ 17. Reading and Writing files
+    -- {{{ R/W
+    autoread = true,
+    autowrite = false,
+    autowriteall = false,
+    -- }}}
+
+    -- {{{ Backup
+    backup = false,
+    backupcopy = "auto",
+    backupext = "~",
+    backupdir = "/tmp/",
+    writebackup = false,
+    -- }}}
+
+    -- {{{ Binary
+    binary = false,
+    -- }}}
+  -- }}}
+
+  -- {{{ 18. The swap file
+  swapfile = false,
+  -- }}}
+
+  -- {{{ 19. Command line editing
+  history = 50,
+  -- }}}
+
+  -- {{{ 20. Executing external commands
+  -- }}}
+
+  -- {{{ 21. Running make and jumping to errors (quickfix)
+  -- }}}
+
+  -- {{{ 22. Language specific
+  allowrevins = false,
+  -- }}}
+
+  -- {{{ 23. Multi-byte characters
+  fileencoding = "utf-8",
+  -- }}}
+
+  -- {{{ 24. Various
+  --virtualedit = all,
+  signcolumn = "auto",
+
+    -- {{{ Buffer
+    bufhidden = "",
+    buflisted = true,
+    buftype = "",
+    -- }}}
   -- }}}
 }
 

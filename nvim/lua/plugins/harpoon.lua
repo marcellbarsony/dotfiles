@@ -13,6 +13,7 @@ harpoon:setup({
 
 -- {{{ Keymaps
 -- List
+vim.keymap.set("n", "<C-h>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Harpoon" })
 vim.keymap.set("n", "<leader>hh", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Harpoon" })
 vim.keymap.set("n", "<leader>ha", function() harpoon:list():append() end, { desc = "Add" })
 

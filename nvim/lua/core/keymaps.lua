@@ -24,7 +24,7 @@ vim.g.maplocalleader = "\\"
 -- }}}
 
 -- {{{ Alpha
-map("n", "<leader>pa", "<cmd>Alpha<CR>", { desc = "Alpha" })
+map("n", "<leader>vpa", "<cmd>Alpha<CR>", { desc = "Alpha" })
 -- }}}
 
 -- {{{ Arrow keys
@@ -83,7 +83,7 @@ map("n", "<C-c>", "<cmd>nohl<CR>", { desc = "Clear" })
 -- }}}
 
 -- {{{ Lazy
-map("n", "<leader>pl", "<cmd>Lazy<CR>", { desc = "Lazy" })
+map("n", "<leader>vpl", "<cmd>Lazy<CR>", { desc = "Lazy" })
 -- }}}
 
 -- {{{ Lines (Indent)
@@ -134,11 +134,11 @@ map("x", "Q", ":norm @qj<CR>", { desc = "Macro Replay [Block]" })
 -- }}}
 
 -- {{{ Mason
-map("n", "<leader>pmc", "<cmd>checkhealth mason<CR>", { desc = "Health" })
-map("n", "<leader>pmh", "<cmd>h mason<CR>", { desc = "Help" })
-map("n", "<leader>pml", "<cmd>MasonLog<CR>", { desc = "Log" })
-map("n", "<leader>pmm", "<cmd>Mason<CR>", { desc = "Mason" })
-map("n", "<leader>pmu", "<cmd>MasonUninstallAll<CR>", { desc = "Uninstall all" })
+map("n", "<leader>vpmc", "<cmd>checkhealth mason<CR>", { desc = "Health" })
+map("n", "<leader>vpmh", "<cmd>h mason<CR>", { desc = "Help" })
+map("n", "<leader>vpml", "<cmd>MasonLog<CR>", { desc = "Log" })
+map("n", "<leader>vpmm", "<cmd>Mason<CR>", { desc = "Mason" })
+map("n", "<leader>vpmu", "<cmd>MasonUninstallAll<CR>", { desc = "Uninstall all" })
 -- }}}
 
 -- {{{ Markdown
@@ -155,10 +155,10 @@ map("n", "<leader>lm", "<cmd>MarkdownPreviewToggle<CR>", { desc = "Markdown" })
 
 -- {{{ Oil
 map("n", "-", "<cmd>Oil<CR>", { desc = "Open parent directory" })
-map("n", "<leader>po", "<cmd>Oil<CR>", { desc = "Oil" })
+map("n", "<leader>vpo", "<cmd>Oil<CR>", { desc = "Oil" })
 -- }}}
 
--- {{{ NOT IN USE - Py-lsp
+-- {{{ NOT-IN-USE - Py-lsp
 --map("n", "<leader>lva", "<cmd>PyLspActivateVenv<CR>", { desc = "Activate" })
 --map("n", "<leader>lvc", "<cmd>PyLspCurrentVenv<CR>", { desc = "Current" })
 --map("n", "<leader>lvd", "<cmd>PyLspDeactivateVenv<CR>", { desc = "Deactivate" })
@@ -256,23 +256,28 @@ map("n", "<leader>tvc", "<cmd>Telescope commands<CR>", { desc = "Commands" })
 map("n", "<leader>tvh", "<cmd>Telescope highlights<CR>", { desc = "Highlights" })
 map("n", "<leader>tvk", "<cmd>Telescope keymaps<CR>", { desc = "Keymaps" })
 map("n", "<leader>tvm", "<cmd>Telescope man_pages<CR>", { desc = "Man" })
-map("n", "<leader>tvo", "<cmd>Telescope vim_options<CR>", { desc = "Options" })
+map("n", "<leader>tvo", "<cmd>Telescope vim_options<CR>", { desc = "OPluginsptions" })
 map("n", "<leader>tvr", "<cmd>Telescope registers<CR>", { desc = "Registers" })
 -- }}}
 
 -- {{{ Treesitter (Neovim built-ins)
-map("n", "<leader>pti", "<cmd>Inspect<CR>", { desc = "Inspect" })
-map("n", "<leader>ptt", "<cmd>InspectTree<CR>", { desc = "Inspect [Tree]" })
+map("n", "<leader>vti", "<cmd>Inspect<CR>", { desc = "Inspect" })
+map("n", "<leader>vtt", "<cmd>InspectTree<CR>", { desc = "Inspect [Tree]" })
 -- }}}
 
 -- {{{ Trouble
-map("n", "<leader>pxx", function() require("trouble").toggle() end, { desc = "Trouble" })
-map("n", "<leader>pxd", function() require("trouble").toggle("document_diagnostics") end, { desc = "Diagnostics" })
-map("n", "<leader>pxq", function() require("trouble").toggle("quickfix") end, { desc = "Quickfix" })
-map("n", "<leader>pxl", function() require("trouble").toggle("loclist") end, { desc = "Loclist" })
+map("n", "<leader>vxx", function() require("trouble").toggle() end, { desc = "Trouble" })
+map("n", "<leader>vxd", function() require("trouble").toggle("document_diagnostics") end, { desc = "Diagnostics" })
+map("n", "<leader>vxq", function() require("trouble").toggle("quickfix") end, { desc = "Quickfix" })
+map("n", "<leader>vxl", function() require("trouble").toggle("loclist") end, { desc = "Loclist" })
 -- }}}
 
 -- {{{ Undo & Redo
 map("n", "<u>", "<cmd>undo<CR>", { desc = "Undo" })
 map("n", "<C-r>", "<cmd>redo<CR>", { desc = "Redo" })
+-- }}}
+
+-- {{{ VIM
+map("n", "<leader>vo", "<cmd>options<CR>", { desc = "Options" })
+map("n", "<leader>vj", "<cmd>jumps<CR>", { desc = "Jumps" })
 -- }}}
