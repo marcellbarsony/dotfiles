@@ -50,8 +50,12 @@ local options = {
 
   -- {{{ 5. Syntax - Highlighting - Spelling
   background = "dark",
-  cursorcolumn = false,
-  cursorline = false,
+  spell = true,
+
+    -- {{{ Highlighting
+    cursorcolumn = false,
+    cursorline = false,
+    -- }}}
   -- }}}
 
   -- {{{ 6. Multiple windows (Split)
