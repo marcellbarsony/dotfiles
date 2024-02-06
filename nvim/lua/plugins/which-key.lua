@@ -161,18 +161,20 @@ local mappings = {
       name = "Telescope",
       h = { name = "History" },
       -- Jymplist [TODO]
-      v = { name = "Vim" },
     },
     -- }}}
 
     -- {{{ v (VIM)
     v = {
       name = "VIM",
+      f = { name = "Fold" },
+      i = { name = "Treesitter" },
       p = {
         name = "Plugins",
         m = { name = "Mason" },
       },
-      t = { name = "Treesitter" },
+      s = { name = "Spell" },
+      t = { name = "Telescope" },
       x = { name = "Trouble" },
     },
     -- }}}

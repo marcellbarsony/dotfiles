@@ -1,5 +1,11 @@
-usr
-python3
-env
-init
+argparse
 btrfs
+chroot
+efi
+env
+fstab
+init
+pacman
+pacstrap
+python3
+usr

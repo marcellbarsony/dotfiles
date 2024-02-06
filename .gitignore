@@ -43,6 +43,7 @@ nushell/history.txt
 nvim/plugin/
 nvim/lazy-lock.json
 nvim/lua/.luarc.json
+nvim/spell/en.utf-8.add.spl
 
 # OBS
 obs-studio/

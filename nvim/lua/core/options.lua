@@ -50,7 +50,7 @@ local options = {
 
   -- {{{ 5. Syntax - Highlighting - Spelling
   background = "dark",
-  spell = true,
+  spell = false,
 
     -- {{{ Highlighting
     cursorcolumn = false,

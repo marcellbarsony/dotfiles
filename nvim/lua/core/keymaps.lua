@@ -252,17 +252,17 @@ map("n", "<leader>lsw", "<cmd>Telescope lsp_workspace_symbols<CR>", { desc = "Wo
 -- }}}
 
 -- {{{ Telescope-Vim
-map("n", "<leader>tvc", "<cmd>Telescope commands<CR>", { desc = "Commands" })
-map("n", "<leader>tvh", "<cmd>Telescope highlights<CR>", { desc = "Highlights" })
-map("n", "<leader>tvk", "<cmd>Telescope keymaps<CR>", { desc = "Keymaps" })
-map("n", "<leader>tvm", "<cmd>Telescope man_pages<CR>", { desc = "Man" })
-map("n", "<leader>tvo", "<cmd>Telescope vim_options<CR>", { desc = "OPluginsptions" })
-map("n", "<leader>tvr", "<cmd>Telescope registers<CR>", { desc = "Registers" })
+map("n", "<leader>vtc", "<cmd>Telescope commands<CR>", { desc = "Commands" })
+map("n", "<leader>vth", "<cmd>Telescope highlights<CR>", { desc = "Highlights" })
+map("n", "<leader>vtk", "<cmd>Telescope keymaps<CR>", { desc = "Keymaps" })
+map("n", "<leader>vtm", "<cmd>Telescope man_pages<CR>", { desc = "Man" })
+map("n", "<leader>vto", "<cmd>Telescope vim_options<CR>", { desc = "OPluginsptions" })
+map("n", "<leader>vtr", "<cmd>Telescope registers<CR>", { desc = "Registers" })
 -- }}}
 
 -- {{{ Treesitter (Neovim built-ins)
-map("n", "<leader>vti", "<cmd>Inspect<CR>", { desc = "Inspect" })
-map("n", "<leader>vtt", "<cmd>InspectTree<CR>", { desc = "Inspect [Tree]" })
+map("n", "<leader>vii", "<cmd>Inspect<CR>", { desc = "Inspect" })
+map("n", "<leader>vit", "<cmd>InspectTree<CR>", { desc = "Inspect [Tree]" })
 -- }}}
 
 -- {{{ Trouble
@@ -278,6 +278,10 @@ map("n", "<C-r>", "<cmd>redo<CR>", { desc = "Redo" })
 -- }}}
 
 -- {{{ VIM
-map("n", "<leader>vo", "<cmd>options<CR>", { desc = "Options" })
 map("n", "<leader>vj", "<cmd>jumps<CR>", { desc = "Jumps" })
+map("n", "<leader>vo", "<cmd>options<CR>", { desc = "Options" })
+map("n", "<leader>vff", "<cmd>set foldenable!<CR>", { desc = "Fold" })
+map("n", "<leader>vfc", "<cmd>set foldcolumn!<CR>", { desc = "Column" })
+map("n", "<leader>vss", "<cmd>set spell!<CR>", { desc = "Spell" })
+map("n", "<leader>vsm", "<cmd>mkspell! %<CR>", { desc = "Mkspell" })
 -- }}}
