@@ -325,24 +325,14 @@ screens = [
             ),
             # }}}
 
-            # {{{ PACKAGES
-            widget.TextBox(
-                fmt='',
+            # {{{ DF
+            widget.DF(
                 foreground=PRIMARY,
-                fontsize=20,
-                margin=15,
-                mouse_callbacks={'Button1': open_pacman},
-                padding=widget_padding,
-            ),
-            widget.CheckUpdates(
-                colour_have_updates=PRIMARY,
-                colour_no_updates=PRIMARY,
-                display_format='{updates}',
-                distro='Arch',
-                foreground=PRIMARY,
-                initial_text='Checking updates...',
-                no_update_string='0',
-                update_interval=3600,
+                format=' {uf}{m}',
+                partition="/",
+                visible_on_warn=False,
+                warn_color='FF0000',
+                warn_space=20,
             ),
             widget.Sep(
                 foreground=inactive,
@@ -372,10 +362,36 @@ screens = [
             ),
             # }}}
 
+            # {{{ PACKAGES
+            widget.TextBox(
+                fmt='',
+                foreground=PRIMARY,
+                fontsize=20,
+                margin=15,
+                mouse_callbacks={'Button1': open_pacman},
+                padding=widget_padding,
+            ),
+            widget.CheckUpdates(
+                colour_have_updates=PRIMARY,
+                colour_no_updates=PRIMARY,
+                display_format='{updates}',
+                distro='Arch',
+                foreground=PRIMARY,
+                initial_text='Checking updates...',
+                no_update_string='0',
+                update_interval=3600,
+            ),
+            widget.Sep(
+                foreground=inactive,
+                linewidth=sep_width,
+                padding=sep_padding,
+            ),
+            # }}}
+
             # {{{ CLOCK
             widget.Clock(
-                format='%I:%M %p',
                 foreground=PRIMARY,
+                format='%I:%M %p',
                 padding=widget_padding,
                 update_interval=60,
             ),
@@ -697,24 +713,14 @@ screens = [
             ),
             # }}}
 
-            # {{{ PACKAGES
-            widget.TextBox(
-                fmt='',
+            # {{{ DF
+            widget.DF(
                 foreground=PRIMARY,
-                fontsize=20,
-                margin=15,
-                mouse_callbacks={'Button1': open_pacman},
-                padding=widget_padding,
-            ),
-            widget.CheckUpdates(
-                colour_have_updates=PRIMARY,
-                colour_no_updates=PRIMARY,
-                display_format='{updates}',
-                distro='Arch',
-                foreground=PRIMARY,
-                initial_text='Checking updates...',
-                no_update_string='0',
-                update_interval=3600,
+                format=' {uf}{m}',
+                partition="/",
+                visible_on_warn=False,
+                warn_color='FF0000',
+                warn_space=20,
             ),
             widget.Sep(
                 foreground=inactive,
@@ -736,6 +742,32 @@ screens = [
                 padding=widget_padding,
                 show_short_text=False,
                 update_interval=60,
+            ),
+            widget.Sep(
+                foreground=inactive,
+                linewidth=sep_width,
+                padding=sep_padding,
+            ),
+            # }}}
+
+            # {{{ PACKAGES
+            widget.TextBox(
+                fmt='',
+                foreground=PRIMARY,
+                fontsize=20,
+                margin=15,
+                mouse_callbacks={'Button1': open_pacman},
+                padding=widget_padding,
+            ),
+            widget.CheckUpdates(
+                colour_have_updates=PRIMARY,
+                colour_no_updates=PRIMARY,
+                display_format='{updates}',
+                distro='Arch',
+                foreground=PRIMARY,
+                initial_text='Checking updates...',
+                no_update_string='0',
+                update_interval=3600,
             ),
             widget.Sep(
                 foreground=inactive,
@@ -1069,24 +1101,14 @@ screens = [
             ),
             # }}}
 
-            # {{{ PACKAGES
-            widget.TextBox(
-                fmt='',
+            # {{{ DF
+            widget.DF(
                 foreground=PRIMARY,
-                fontsize=20,
-                margin=15,
-                mouse_callbacks={'Button1': open_pacman},
-                padding=widget_padding,
-            ),
-            widget.CheckUpdates(
-                colour_have_updates=PRIMARY,
-                colour_no_updates=PRIMARY,
-                display_format='{updates}',
-                distro='Arch',
-                foreground=PRIMARY,
-                initial_text='Checking updates...',
-                no_update_string='0',
-                update_interval=3600,
+                format=' {uf}{m}',
+                partition="/",
+                visible_on_warn=False,
+                warn_color='FF0000',
+                warn_space=20,
             ),
             widget.Sep(
                 foreground=inactive,
@@ -1108,6 +1130,32 @@ screens = [
                 padding=widget_padding,
                 show_short_text=False,
                 update_interval=60,
+            ),
+            widget.Sep(
+                foreground=inactive,
+                linewidth=sep_width,
+                padding=sep_padding,
+            ),
+            # }}}
+
+            # {{{ PACKAGES
+            widget.TextBox(
+                fmt='',
+                foreground=PRIMARY,
+                fontsize=20,
+                margin=15,
+                mouse_callbacks={'Button1': open_pacman},
+                padding=widget_padding,
+            ),
+            widget.CheckUpdates(
+                colour_have_updates=PRIMARY,
+                colour_no_updates=PRIMARY,
+                display_format='{updates}',
+                distro='Arch',
+                foreground=PRIMARY,
+                initial_text='Checking updates...',
+                no_update_string='0',
+                update_interval=3600,
             ),
             widget.Sep(
                 foreground=inactive,

@@ -1,5 +1,5 @@
 -- Python snippets [Exceptions]
--- https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
+-- Docs: https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
 
 -- SHORTHANDS -- {{{
 local ls = require("luasnip")
@@ -123,7 +123,7 @@ ls.add_snippets("python", {
             })
         end),
       }),
-      i(3, "Continue")
+      i(3, "continue")
     })
   ),
   -- }}}

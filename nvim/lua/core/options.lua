@@ -169,7 +169,7 @@ local options = {
 
   -- {{{ 24. Various
   --virtualedit = all,
-  signcolumn = "auto",
+  signcolumn = "number",
 
     -- {{{ Buffer
     bufhidden = "",
