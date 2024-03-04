@@ -12,6 +12,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local servers = {
   "lua_ls",
   "pyright",
+  "rust_analyzer",
 }
 
 for _, lsp in ipairs(servers) do
@@ -80,7 +81,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     -- vim.keymap.set({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, opts)
 
     -- Documentation
-    vim.keymap.set("n", "<leader>lk", vim.lsp.buf.hover, opts)
+    vim.keymap.set("n", "<leader>lk", vim.lsp.buf.hover, opts) -- !!!
 
     -- Go-to
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
@@ -126,16 +127,17 @@ vim.diagnostic.config({
 -- }}}
 
 -- {{{ Diagnostics [Symbols]
+-- :h diagnostic-signs
 -- https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization#change-diagnostic-symbols-in-the-sign-column-gutter
 -- local signs = { Error = "󰬟",   Warn = "", Hint = "", Info = "" }
---local signs = { Error = "",   Warn = "", Hint = "", Info = "" }
+-- local signs = { Error = "",   Warn = "", Hint = "", Info = "" }
 local signs = { Error = "x",   Warn = "!", Hint = "", Info = "i" }
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, {
-    text = icon,
-    texthl = hl,
-    --numhl = hl
+    numhl = hl,
+    -- text = icon,
+    -- texthl = hl,
   })
 end
 -- }}}

@@ -40,6 +40,7 @@ require("lualine").setup {
     lualine_b = {
       {
         "buffers",
+        icons_enabled=false;
         show_filename_only = true,
         hide_filename_extension = false,
         show_modified_status = true,

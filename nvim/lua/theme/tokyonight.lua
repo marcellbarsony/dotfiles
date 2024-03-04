@@ -37,6 +37,7 @@ require("tokyonight").setup({
   ---@param c ColorScheme
   on_highlights = function(hl, c)
     local transparent = ""
+    hl.Folded = { fg = c.blue, bg = c.none } -- Folds
     hl.IncSearch = { bg = c.magenta, fg = c.black } -- Search (current)
     hl.LineNr = { fg = c.magenta } -- Gutter line number
     hl.MatchParen = { fg = c.magenta, bold = true } -- Matching parenthesis

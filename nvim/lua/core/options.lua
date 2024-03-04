@@ -11,7 +11,7 @@ local options = {
   autochdir = false,
   browsedir = "current",
   cdhome = true,
-  guicursor = "n:block,i:hor1", -- ???
+  guicursor = "n:block,i:hor1,n:binkwait100-blinkoff100-blinkon100",
   ignorecase = true,
   smartcase = true,
   -- }}}
@@ -23,12 +23,12 @@ local options = {
   breakindent = true,
   conceallevel = 0,
   cmdheight = 0,
-  fillchars = "stlnc:_,horiz: ,horizup:┴,horizdown:┬,vert:┃,vertleft:┤,vertright:├,verthoriz:┼,fold: ,foldopen:-,foldclose:+,foldsep:│,diff:-,msgsep: ,eob:~,lastline:@",
+  fillchars = "stlnc:_,horiz: ,horizup:┴,horizdown:┬,vert:┃,vertleft:┤,vertright:├,verthoriz:┼,fold: ,foldopen:,foldclose:,foldsep:│,diff:-,msgsep: ,eob:~,lastline:@",
   hlsearch = true,
 
     -- {{{ Gutter (number)
     number = true,
-    numberwidth = 2,
+    numberwidth = 1,
     relativenumber = true,
     -- }}}
 
@@ -169,7 +169,8 @@ local options = {
 
   -- {{{ 24. Various
   --virtualedit = all,
-  signcolumn = "number",
+  signcolumn = "no", -- auto / number / yes:1
+  statuscolumn = "%=%r%C ",
 
     -- {{{ Buffer
     bufhidden = "",

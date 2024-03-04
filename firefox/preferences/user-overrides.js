@@ -70,9 +70,9 @@ user_pref("signon.rememberSignons", false);  // 5003
 user_pref("signon.rememberSignons.visibilityToggle", false);
 
 /* DOWNLOAD */
-user_pref("browser.download.dir", "/home/marci/tmp"); // TODO: Test
-user_pref("browser.download.folderList", 1);
-user_pref("browser.download.lastDir", 0); // TODO: Test
+user_pref("browser.download.dir", "/home/marci/tmp");
+user_pref("browser.download.folderList", 0);
+user_pref("browser.download.lastDir", 0);
 
 /* SHUTDOWN */
 user_pref("privacy.clearOnShutdown.history", false); // 2811
@@ -92,4 +92,3 @@ user_pref("layout.css.prefers-color-scheme.content-override", 0);
 
 /* TODO */
 // Disable dialog: "save login info for..."
-// Check all default preferences (about:preferences)

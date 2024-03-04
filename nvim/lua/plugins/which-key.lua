@@ -153,7 +153,7 @@ local mappings = {
     -- }}}
 
     -- {{{ r (Rust)
-    r = { name = "Rust" },
+    -- r = { name = "Rust" },
     -- }}}
 
     -- {{{ t (Telescope)

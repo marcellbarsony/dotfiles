@@ -168,12 +168,12 @@ map("n", "<leader>vpo", "<cmd>Oil<CR>", { desc = "Oil" })
 -- }}}
 
 -- {{{ Rust (rustaceanvim)
-local bufnr = vim.api.nvim_get_current_buf()
-map("n", "<leader>ra", function() vim.cmd.RustLsp("codeAction") end, { silent = true, buffer = bufnr, desc = "Action" })
-map("n", "<leader>rd", function() vim.cmd.RustLsp("debuggables") end, { desc = "Debuggables" })
-map("n", "<leader>rh", "<cmd>checkhealth rustaceanvim<CR>", { desc = "Health" })
-map("n", "<leader>rj", function() vim.cmd.RustLsp("joinLines") end, { desc = "Join lines" })
-map("n", "<leader>rr", function() vim.cmd.RustLsp("runnables") end, { desc = "Runnables" })
+-- local bufnr = vim.api.nvim_get_current_buf()
+-- map("n", "<leader>ra", function() vim.cmd.RustLsp("codeAction") end, { silent = true, buffer = bufnr, desc = "Action" })
+-- map("n", "<leader>rd", function() vim.cmd.RustLsp("debuggables") end, { desc = "Debuggables" })
+-- map("n", "<leader>rh", "<cmd>checkhealth rustaceanvim<CR>", { desc = "Health" })
+-- map("n", "<leader>rj", function() vim.cmd.RustLsp("joinLines") end, { desc = "Join lines" })
+-- map("n", "<leader>rr", function() vim.cmd.RustLsp("runnables") end, { desc = "Runnables" })
 -- map("n", "<leader>rh", function() vim.cmd.RustLsp("hover", "actions") end, { desc = "Hover actions" })
 -- }}}
 
@@ -237,7 +237,7 @@ map("n", "<leader>ths", "<cmd>Telescope search_history<CR>", { desc = "Search" }
 -- }}}
 
 -- {{{ Telescope-LSP
-map("n", "<leader>li", "<cmd>Telescope lsp_implementations<CR>", { desc = "Implementations" })
+map("n", "<leader>li", "<cmd>Telescope lsp_implementations<CR>", { desc = "Implementations" }) -- !!!
 map("n", "<leader>ll", "<cmd>Telescope lsp_references<CR>", { desc = "LSP References" })
 -- }}}
 
