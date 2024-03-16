@@ -3,7 +3,7 @@
 -- https://tree-sitter.github.io/tree-sitter/
 
 require"nvim-treesitter.configs".setup {
-  -- {{{ Modules
+  -- {{{ Install
   -- https://github.com/nvim-treesitter/nvim-treesitter#modules
   ensure_installed = {
     "javascript",

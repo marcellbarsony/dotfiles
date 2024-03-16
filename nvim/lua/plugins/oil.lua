@@ -42,8 +42,14 @@ require("oil").setup({
   skip_confirm_for_simple_edits = false,
   prompt_save_on_select_new_entry = true,
   cleanup_delay_ms = 2000,
-  lsp_rename_autosave = false,
   constrain_cursor = "editable",
+  -- }}}
+
+  -- {{{ LSP file methods
+  lsp_file_methods = {
+    autosave_changes = false,
+    timeout_ms = 1000,
+  },
   -- }}}
 
   -- {{{ Keymaps

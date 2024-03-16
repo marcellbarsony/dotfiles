@@ -11,7 +11,7 @@ local options = {
   autochdir = false,
   browsedir = "current",
   cdhome = true,
-  guicursor = "n:block,i:hor1,n:binkwait100-blinkoff100-blinkon100",
+  guicursor = "n:block,i:hor1,n:blinkwait700-blinkoff400-blinkon250",
   ignorecase = true,
   smartcase = true,
   -- }}}
@@ -28,7 +28,7 @@ local options = {
 
     -- {{{ Gutter (number)
     number = true,
-    numberwidth = 1,
+    numberwidth = 2,
     relativenumber = true,
     -- }}}
 
@@ -112,9 +112,12 @@ local options = {
 
   -- {{{ 14. Folding
   foldenable = true,
-  foldcolumn = "auto",
+  foldcolumn = "0", -- auto
   foldlevelstart = 0,
   foldmethod = "marker",
+  foldtext =
+    [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').' ... ' ]],
+  -- [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').' ... '.trim(getline(v:foldend)) ]],
   -- }}}
 
   -- {{{ 15. Diff mode
@@ -170,7 +173,7 @@ local options = {
   -- {{{ 24. Various
   --virtualedit = all,
   signcolumn = "no", -- auto / number / yes:1
-  statuscolumn = "%=%r%C ",
+  -- statuscolumn = "%=%r%C ",
 
     -- {{{ Buffer
     bufhidden = "",

@@ -1,8 +1,0 @@
-# Synthwave '84
-code --install-extension robbowen.synthwave-vscode
-# Vim
-code --install-extension vscodevim.vim
-# GitLens
-VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens
-# Indent Rainbow
-VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow

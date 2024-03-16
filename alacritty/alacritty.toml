@@ -35,7 +35,7 @@ TERM = "alacritty"
 # {{{ Font
 [font]
 builtin_box_drawing = true
-size = 11.0
+size = 12.0
 
 [font.bold]
 family = "monospace"

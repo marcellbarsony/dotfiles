@@ -30,14 +30,14 @@
             },
             "http_message_display":{
                 "font_name":"Monospaced",
-                "font_size":13,
+                "font_size":12,
                 "font_smoothing":true,
                 "highlight_requests":true,
                 "highlight_responses":true,
                 "pretty_print_by_default":true
             },
             "user_interface":{
-                "font_size":13,
+                "font_size":12,
                 "look_and_feel":"Dark"
             }
         },
@@ -276,6 +276,18 @@
                 {
                     "open_by_default":false,
                     "show":true,
+                    "type":"request_headers",
+                    "wrap_text":false
+                },
+                {
+                    "open_by_default":false,
+                    "show":true,
+                    "type":"response_headers",
+                    "wrap_text":false
+                },
+                {
+                    "open_by_default":false,
+                    "show":true,
                     "type":"request_attributes",
                     "wrap_text":false
                 },
@@ -296,26 +308,10 @@
                     "show":true,
                     "type":"request_cookies",
                     "wrap_text":false
-                },
-                {
-                    "open_by_default":false,
-                    "show":true,
-                    "type":"request_headers",
-                    "wrap_text":false
-                },
-                {
-                    "open_by_default":false,
-                    "show":true,
-                    "type":"response_headers",
-                    "wrap_text":false
                 }
             ],
             "log_exceptions_to_local_directory":false,
             "message_editor_request_configurations":[
-                {
-                    "show":true,
-                    "type":"pretty"
-                },
                 {
                     "show":true,
                     "type":"raw"
@@ -323,6 +319,10 @@
                 {
                     "show":true,
                     "type":"hex"
+                },
+                {
+                    "show":true,
+                    "type":"pretty"
                 },
                 {
                     "show":false,
@@ -353,15 +353,15 @@
             "message_editor_response_configurations":[
                 {
                     "show":true,
-                    "type":"pretty"
-                },
-                {
-                    "show":true,
                     "type":"raw"
                 },
                 {
                     "show":true,
                     "type":"hex"
+                },
+                {
+                    "show":true,
+                    "type":"pretty"
                 },
                 {
                     "show":true,

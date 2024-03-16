@@ -40,7 +40,11 @@ require("lazy").setup({
 
   -- {{{ Comment
   { "numToStr/Comment.nvim",
-    lazy = false,
+    event = {
+      "BufReadPre",
+      "BufNewFile"
+    },
+    -- lazy = false,
   },
   -- }}}
 
@@ -54,26 +58,11 @@ require("lazy").setup({
   { "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     dependencies = {
-      {
-        "hrsh7th/cmp-buffer",
-        event = "InsertEnter",
-      },
-      {
-        "hrsh7th/cmp-cmdline",
-        event = "InsertEnter",
-      },
-      {
-        "hrsh7th/cmp-nvim-lsp",
-        event = "InsertEnter",
-      },
-      {
-        "hrsh7th/cmp-nvim-lsp-signature-help",
-        event = "InsertEnter",
-      },
-      {
-        "hrsh7th/cmp-path",
-        event = "InsertEnter",
-      },
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-cmdline",
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-nvim-lsp-signature-help",
+      "hrsh7th/cmp-path",
     },
   },
   -- }}}
@@ -95,7 +84,9 @@ require("lazy").setup({
   -- }}}
 
   -- {{{ Git
-  "lewis6991/gitsigns.nvim",
+  { "lewis6991/gitsigns.nvim",
+    event = "VeryLazy"
+  },
   -- }}}
 
   -- {{{ Harpoon 2
@@ -108,7 +99,9 @@ require("lazy").setup({
   -- }}}
 
   -- {{{ HEX
-  "RaafatTurki/hex.nvim",
+  { "RaafatTurki/hex.nvim",
+    event = "VeryLazy"
+  },
   -- }}}
 
   -- {{{ Indent lines
@@ -222,12 +215,17 @@ require("lazy").setup({
   -- }}}
 
   -- {{{ Trouble
-  "folke/trouble.nvim",
+  { "folke/trouble.nvim",
+    event = {
+      "BufReadPre",
+      "BufNewFile"
+    },
+  },
   -- }}}
 
   -- {{{ Which key
   { "folke/which-key.nvim",
-    event = "VeryLazy",
+    lazy = true,
     init = function()
       vim.o.timeout = true
       vim.o.timeoutlen = 300

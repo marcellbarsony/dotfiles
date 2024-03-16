@@ -1,4 +1,5 @@
 # https://qtile.readthedocs.io/en/stable/manual/config/screens.html
+# https://docs.qtile.org/en/stable/manual/ref/widgets.html
 
 from libqtile import bar, widget
 from libqtile.config import Screen
@@ -341,27 +342,6 @@ screens = [
             ),
             # }}}
 
-            # {{{ BATTERY
-            widget.Battery(
-                battery=0,
-                charge_char='󰚥',
-                discharge_char='󱐋',
-                format='{char} {percent:2.0%}',
-                foreground=PRIMARY,
-                full_char = '󰁹',
-                low_percentage=0.1,
-                low_foregound=battery_low,
-                padding=widget_padding,
-                show_short_text=False,
-                update_interval=60,
-            ),
-            widget.Sep(
-                foreground=inactive,
-                linewidth=sep_width,
-                padding=sep_padding,
-            ),
-            # }}}
-
             # {{{ PACKAGES
             widget.TextBox(
                 fmt='',
@@ -394,6 +374,29 @@ screens = [
                 format='%I:%M %p',
                 padding=widget_padding,
                 update_interval=60,
+            ),
+            # }}}
+
+            # {{{ BATTERY
+            widget.Battery(
+                battery=0,
+                charge_char='󰚥',
+                discharge_char='󱐋',
+                format='{char} {percent:2.0%}',
+                foreground=PRIMARY,
+                full_char = '󰁹',
+                low_percentage=0.2,
+                low_foregound=battery_low,
+                not_charging_char='󰁹',
+                padding=widget_padding,
+                show_short_text=False,
+                update_interval=60,
+                hide_threshold=0.9,
+            ),
+            widget.Sep(
+                foreground=inactive,
+                linewidth=sep_width,
+                padding=sep_padding,
             ),
             # }}}
 
@@ -729,27 +732,6 @@ screens = [
             ),
             # }}}
 
-            # {{{ BATTERY
-            widget.Battery(
-                battery=0,
-                charge_char='󰚥',
-                discharge_char='󱐋',
-                format='{char} {percent:2.0%}',
-                foreground=PRIMARY,
-                full_char = '󰁹',
-                low_percentage=0.1,
-                low_foregound=battery_low,
-                padding=widget_padding,
-                show_short_text=False,
-                update_interval=60,
-            ),
-            widget.Sep(
-                foreground=inactive,
-                linewidth=sep_width,
-                padding=sep_padding,
-            ),
-            # }}}
-
             # {{{ PACKAGES
             widget.TextBox(
                 fmt='',
@@ -782,6 +764,29 @@ screens = [
                 foreground=PRIMARY,
                 padding=widget_padding,
                 update_interval=60,
+            ),
+            widget.Sep(
+                foreground=inactive,
+                linewidth=sep_width,
+                padding=sep_padding,
+            ),
+            # }}}
+
+            # {{{ BATTERY
+            widget.Battery(
+                battery=0,
+                charge_char='󰚥',
+                discharge_char='󱐋',
+                format='{char} {percent:2.0%}',
+                foreground=PRIMARY,
+                full_char = '󰁹',
+                low_percentage=0.2,
+                low_foregound=battery_low,
+                not_charging_char='󰁹',
+                padding=widget_padding,
+                show_short_text=False,
+                update_interval=60,
+                hide_threshold=0.9,
             ),
             # }}}
 
@@ -1117,27 +1122,6 @@ screens = [
             ),
             # }}}
 
-            # {{{ BATTERY
-            widget.Battery(
-                battery=0,
-                charge_char='󰚥',
-                discharge_char='󱐋',
-                format='{char} {percent:2.0%}',
-                foreground=PRIMARY,
-                full_char = '󰁹',
-                low_percentage=0.1,
-                low_foregound=battery_low,
-                padding=widget_padding,
-                show_short_text=False,
-                update_interval=60,
-            ),
-            widget.Sep(
-                foreground=inactive,
-                linewidth=sep_width,
-                padding=sep_padding,
-            ),
-            # }}}
-
             # {{{ PACKAGES
             widget.TextBox(
                 fmt='',
@@ -1170,6 +1154,29 @@ screens = [
                 foreground=PRIMARY,
                 padding=widget_padding,
                 update_interval=60,
+            ),
+            # }}}
+
+            # {{{ BATTERY
+            widget.Battery(
+                battery=0,
+                charge_char='󰚥',
+                discharge_char='󱐋',
+                format='{char} {percent:2.0%}',
+                foreground=PRIMARY,
+                full_char = '󰁹',
+                low_percentage=0.2,
+                low_foregound=battery_low,
+                not_charging_char='󰁹',
+                padding=widget_padding,
+                show_short_text=False,
+                update_interval=60,
+                hide_threshold=0.9,
+            ),
+            widget.Sep(
+                foreground=inactive,
+                linewidth=sep_width,
+                padding=sep_padding,
             ),
             # }}}
 
