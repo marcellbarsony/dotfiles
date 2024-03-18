@@ -375,6 +375,11 @@ screens = [
                 padding=widget_padding,
                 update_interval=60,
             ),
+            widget.Sep(
+                foreground=inactive,
+                linewidth=sep_width,
+                padding=sep_padding,
+            ),
             # }}}
 
             # {{{ BATTERY
@@ -392,11 +397,6 @@ screens = [
                 show_short_text=False,
                 update_interval=60,
                 hide_threshold=0.9,
-            ),
-            widget.Sep(
-                foreground=inactive,
-                linewidth=sep_width,
-                padding=sep_padding,
             ),
             # }}}
 
@@ -1155,6 +1155,11 @@ screens = [
                 padding=widget_padding,
                 update_interval=60,
             ),
+            widget.Sep(
+                foreground=inactive,
+                linewidth=sep_width,
+                padding=sep_padding,
+            ),
             # }}}
 
             # {{{ BATTERY
@@ -1172,11 +1177,6 @@ screens = [
                 show_short_text=False,
                 update_interval=60,
                 hide_threshold=0.9,
-            ),
-            widget.Sep(
-                foreground=inactive,
-                linewidth=sep_width,
-                padding=sep_padding,
             ),
             # }}}
 

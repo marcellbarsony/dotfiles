@@ -169,13 +169,16 @@ local mappings = {
       name = "VIM",
       f = { name = "Fold" },
       i = { name = "Treesitter" },
-      p = {
-        name = "Plugins",
-        m = { name = "Mason" },
-      },
       s = { name = "Spell" },
       t = { name = "Telescope" },
       x = { name = "Trouble" },
+    },
+    -- }}}
+
+    -- {{{ x (Plugins)
+    x = {
+      name = "Plugins",
+      m = { name = "Mason" },
     },
     -- }}}
   }

@@ -24,7 +24,7 @@ vim.g.maplocalleader = "\\"
 -- }}}
 
 -- {{{ Alpha
-map("n", "<leader>vpa", "<cmd>Alpha<CR>", { desc = "Alpha" })
+map("n", "<leader>xa", "<cmd>Alpha<CR>", { desc = "Alpha" })
 -- }}}
 
 -- {{{ Arrow keys
@@ -83,7 +83,7 @@ map("n", "<C-c>", "<cmd>nohl<CR>", { desc = "Clear" })
 -- }}}
 
 -- {{{ Lazy
-map("n", "<leader>vpl", "<cmd>Lazy<CR>", { desc = "Lazy" })
+map("n", "<leader>xl", "<cmd>Lazy<CR>", { desc = "Lazy" })
 -- }}}
 
 -- {{{ Lines (Indent)
@@ -134,11 +134,11 @@ map("x", "Q", ":norm @qj<CR>", { desc = "Macro Replay [Block]" })
 -- }}}
 
 -- {{{ Mason
-map("n", "<leader>vpmc", "<cmd>checkhealth mason<CR>", { desc = "Health" })
-map("n", "<leader>vpmh", "<cmd>h mason<CR>", { desc = "Help" })
-map("n", "<leader>vpml", "<cmd>MasonLog<CR>", { desc = "Log" })
-map("n", "<leader>vpmm", "<cmd>Mason<CR>", { desc = "Mason" })
-map("n", "<leader>vpmu", "<cmd>MasonUninstallAll<CR>", { desc = "Uninstall all" })
+map("n", "<leader>xmc", "<cmd>checkhealth mason<CR>", { desc = "Health" })
+map("n", "<leader>xmh", "<cmd>h mason<CR>", { desc = "Help" })
+map("n", "<leader>xml", "<cmd>MasonLog<CR>", { desc = "Log" })
+map("n", "<leader>xmm", "<cmd>Mason<CR>", { desc = "Mason" })
+map("n", "<leader>xmu", "<cmd>MasonUninstallAll<CR>", { desc = "Uninstall all" })
 -- }}}
 
 -- {{{ Markdown
@@ -155,7 +155,7 @@ map("n", "<leader>lm", "<cmd>MarkdownPreviewToggle<CR>", { desc = "Markdown" })
 
 -- {{{ Oil
 map("n", "-", "<cmd>Oil<CR>", { desc = "Open parent directory" })
-map("n", "<leader>vpo", "<cmd>Oil<CR>", { desc = "Oil" })
+map("n", "<leader>xo", "<cmd>Oil<CR>", { desc = "Oil" })
 -- }}}
 
 -- {{{ NOT-IN-USE - Py-lsp
@@ -219,7 +219,7 @@ map("n", "<leader>dtv", "<cmd>lua require'telescope'.extensions.dap.variables{}<
 map("n", "<leader>dtf", "<cmd>lua require'telescope'.extensions.dap.frames{}<CR>", { desc = "Frames" })
 -- }}}
 
--- {{{ Telescope-Git
+-- {{{ Telescope-GIT
 map("n", "<leader>gb","<cmd>Telescope git_branches<CR>", { desc = "Branches" })
 map("n", "<leader>gc","<cmd>Telescope git_commits<CR>", { desc = "Commits" })
 map("n", "<leader>gf","<cmd>Telescope git_files<CR>", { desc = "Files" })
