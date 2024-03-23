@@ -28,7 +28,7 @@ ls.setup({
 })
 -- }}}
 
--- Keymaps -- {{{
+-- {{{ Keymaps
 -- https://github.com/L3MON4D3/LuaSnip/#keymaps
 
 -- Reload snippets <Ctrl-u>

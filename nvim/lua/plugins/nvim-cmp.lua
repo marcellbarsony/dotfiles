@@ -158,7 +158,7 @@ cmp.setup({
 
   -- Sources
   sources = cmp.config.sources({
-    { name = "luasnip", max_item_count = 5, priority_weight = 1 },
+    { name = "luasnip", max_item_count = 3, priority_weight = 1 },
     { name = "nvim_lsp", max_item_count = 100 },
     { name = "buffer", keyword_length = 3 , max_item_count = 3 },
   }),
@@ -172,8 +172,8 @@ cmp.setup({
       -- Source
       vim_item.menu = ({
         buffer = "[Buf]",
-        nvim_lsp = "[LSP]",
         luasnip = "[Snp]",
+        nvim_lsp = "[LSP]",
         nvim_lua = "[Lua]",
         latex_symbols = "[LaTeX]",
       })[entry.source.name]

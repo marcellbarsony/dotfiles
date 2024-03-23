@@ -4,6 +4,9 @@ Bitwarden CLI/data.json
 # Bpytop
 bpytop/error.log
 
+# Cef user data
+cef_user_data/
+
 # Chromium
 chromium/
 
