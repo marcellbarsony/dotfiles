@@ -1,4 +1,11 @@
+# TTY1 (X11)
 if [[ "$(tty)" = "/dev/tty1" ]]; then
-  startx ${XDG_CONFIG_HOME}/x11/.xinitrc
-  # pgrep qtile || startx "${XDG_CONFIG_HOME}/x11/.xinitrc
+  pgrep qtile || startx "${XDG_CONFIG_HOME}/x11/.xinitrc
+fi
+
+# TTY2 (Wayland)
+if [[ "$(tty)" = "/dev/tty2" ]]; then
+  Hyprland
+  # pgrep Hyprland || Hyprland
+  # pgrep qtile || qtile start -b wayland
 fi

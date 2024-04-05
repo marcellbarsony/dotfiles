@@ -14,6 +14,16 @@ typeset -U path PATH
 path=(~/.local/bin $path)
 export PATH
 
+# Paths
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+export HISTFILE="$XDG_STATE_HOME/zsh/history"
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+export ZDOTDIR="$HOME/.config/zsh/"
+export XINITRC="$HOME/.config/x11/"
+export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_STYLE_OVERRIDE="Adwaita-Dark"
+#export KITTY_CONFIG_DIRECTORY="$XDG_CONFIG_HOME/kitty"
+
 # XDG
 export XDG_APP_HOME="$HOME/.local/share/applications"
 export XDG_BIN_HOME="$HOME/.local/bin"
@@ -24,16 +34,6 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_FONT_HOME="$HOME/.local/share/fonts"
 export XDG_ICON_HOME="$HOME/.local/share/icons"
 export XDG_STATE_HOME="$HOME/.local/state"
-
-# Paths
-export GNUPGHOME="$XDG_DATA_HOME/gnupg"
-export HISTFILE="$XDG_STATE_HOME/zsh/history"
-export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
-export ZDOTDIR="$HOME/.config/zsh/"
-export XINITRC="$HOME/.config/x11/"
-export QT_QPA_PLATFORMTHEME=qt5ct
-export QT_STYLE_OVERRIDE="Adwaita-Dark"
-#export KITTY_CONFIG_DIRECTORY="$XDG_CONFIG_HOME/kitty"
 
 # Java
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java

@@ -9,7 +9,7 @@ run() {
 
 # X compositor
 picom -b &
-#picom --experimental-backends &
+# picom --experimental-backends &
 
 # Autostart
 run alacritty
