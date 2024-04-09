@@ -1,6 +1,6 @@
 from libqtile import layout
 from libqtile.config import Match
-
+from colors import *
 
 auto_fullscreen = True
 auto_minimize = False
@@ -11,6 +11,7 @@ dgroups_app_rules = []  # type: list
 focus_on_window_activation = "smart"
 follow_mouse_focus = False
 floating_layout = layout.Floating(
+    border_focus = PRIMARY,
     float_rules=[
         # Run the utility of `xprop` to see the wm class and name of an X client.
         *layout.Floating.default_float_rules,

@@ -50,6 +50,11 @@ HISTFILE=~/.config/zsh/history
 eval "$(starship init zsh)"
 # }}}
 
+# {{{ Pywal 
+(cat ~/.cache/wal/sequences &) # Terminal
+# source ~/.cache/wal/colors-tty.sh # TTY
+# }}}
+
 # {{{ VI mode
 bindkey -v
 # Conflicts with Autocomplete

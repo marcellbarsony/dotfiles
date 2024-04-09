@@ -1,6 +1,5 @@
 import subprocess
 
-
 def network_ip():
     cmd = "ip addr"
     result = subprocess.run(cmd, shell=True, capture_output=True, text=True)

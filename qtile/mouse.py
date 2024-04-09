@@ -7,10 +7,11 @@ from variables import *
 
 
 # Mouse callbacks
-def open_sysmonitor():
+def open_sysmonitor(): # TODO
     qtile.cmd_spawn(f'kitty --class neofetch --name neofetch sh -c "neofetch; exec bash"')
 
-def open_pacman():
+# TODO
+def open_pacman(): # TODO
     qtile.cmd_spawn(f'kitty --class pacman --name pacman sh -c "sudo pacman -Syu; exec bash"')
 
 # Drag floating layouts

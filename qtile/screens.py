@@ -5,10 +5,10 @@ from libqtile import bar, widget
 from libqtile.config import Screen
 from colors import *
 from mouse import *
-from func_screens import window_name
-from func_audio import audio_increase, audio_decrease, audio_mute
-from func_backlight import backlight_increase, backlight_decrease
-from func_network import network_ip, network_interface, network_gateway
+from scripts.screens import window_name
+from scripts.audio import audio_increase, audio_decrease, audio_mute
+from scripts.backlight import backlight_increase, backlight_decrease
+from scripts.network import network_ip, network_interface, network_gateway
 from variables import font_size, sep_padding, sep_width, widget_padding
 
 
@@ -406,7 +406,7 @@ screens = [
             border_color=[border_top, border_right, border_bottom, border_left],
             border_width=[0, 0, 0, 0],
             margin=[0, 0, 0, 0],
-            opacity=0.9,
+            opacity=0.8,
         ),
     ),
     # }}}
@@ -414,7 +414,6 @@ screens = [
     # {{{ SCREEN-2
     Screen(
         top=bar.Bar([
-
             # {{{ Groups
             widget.GroupBox(
                 active=PRIMARY,
@@ -796,7 +795,7 @@ screens = [
             border_color=[border_top, border_right, border_bottom, border_left],
             border_width=[0, 0, 0, 0],
             margin=[0, 0, 0, 0],
-            opacity=0.9,
+            opacity=0.8,
         ),
     ),
     # }}}
@@ -1186,7 +1185,7 @@ screens = [
             border_color=[border_top, border_right, border_bottom, border_left],
             border_width=[0, 0, 0, 0],
             margin=[0, 0, 0, 0],
-            opacity=0.9,
+            opacity=0.8,
         ),
     ),
     # }}}

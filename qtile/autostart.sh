@@ -7,12 +7,12 @@ run() {
   fi
 }
 
-# X compositor
-picom -b &
-# picom --experimental-backends &
-
 # Autostart
 run alacritty
+
+# X11 [Compositor]
+picom -b &
+# picom --experimental-backends &
 
 # Wallapper
 python /home/marci/.local/bin/xwall.py -r

@@ -4,7 +4,6 @@ from libqtile.config import ScratchPad, DropDown
 from variables import terminal
 from groups import groups
 
-# ScratchPads
 groups.append(
     ScratchPad("scratchpad",
         [
@@ -15,9 +14,9 @@ groups.append(
                 y=0.1,
                 width=0.8,
                 height=0.8,
+                on_focus_lost_hide=False,
                 opacity=1,
                 warp_pointer=True,
-                on_focus_lost_hide=False
             ),
         ]
     ),

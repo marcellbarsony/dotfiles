@@ -1,7 +1,6 @@
 # Lazy objects
 # https://qtile.readthedocs.io/en/stable/manual/config/lazy.html
 
-
 def window_to_prev_group(qtile):
     if qtile.currentWindow is not None:
         i = qtile.groups.index(qtile.currentGroup)

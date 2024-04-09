@@ -2,7 +2,6 @@ from libqtile import layout
 from colors import *
 
 layouts = [
-
     # Bsp
     #layout.Bsp(),
 
@@ -12,15 +11,15 @@ layouts = [
         border_focus_stack = ['#000000', PRIMARY],
         border_normal = ['#000000'],
         border_normal_stack = ['#000000'],
-        border_on_single = False,
+        border_on_single = 1,
         border_width = 1,
         fair = False,
         grow_amount = 10,
         insert_position = 1,
         margin = [3, 3, 3, 3],
-        margin_on_single = 0,
+        margin_on_single = 3,
         num_columns = 2,
-        single_border_width = None,
+        single_border_width = 1,
         split = True,
         wrap_focus_columns = True,
         wrap_focus_rows = True,
@@ -74,5 +73,4 @@ layouts = [
 
     # Zoomy
     #layout.Zoomy(),
-
 ]

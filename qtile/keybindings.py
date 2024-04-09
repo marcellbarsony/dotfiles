@@ -3,14 +3,14 @@
 from libqtile.config import Key
 from libqtile.lazy import lazy
 from variables import *
-from func_keys import *
-from func_audio import audio_increase, audio_decrease, audio_mute
+from scripts.keys import *
+from scripts.audio import *
 
 keys = [
-
-# {{{ Bar
-    Key([mod], "t", lazy.hide_show_bar(), desc="Bar toggle"),
-# }}}
+    # {{{ Actions
+    Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
+    Key([mod, "control"], "r", lazy.reload_config(), desc="Reload config"),
+    # }}}
 
     # {{{ Audio
     Key([mod], "XF86AudioRaiseVolume", lazy.run(audio_increase), desc="Volume +10%"),
@@ -18,16 +18,14 @@ keys = [
     Key([mod], "XF86AudioMute", lazy.run(audio_mute), desc="Toggle audio"),
     # }}}
 
-    # Actions {{{1
-    Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-    Key([mod, "control"], "r", lazy.reload_config(), desc="Reload config"),
+    # {{{ Bar
+    Key([mod], "t", lazy.hide_show_bar(), desc="Bar toggle"),
     # }}}
 
-    # {{{ Spawn
-    Key([mod], "Return", lazy.spawn(terminal), desc="Spawn terminal"),
-    Key([mod], "b", lazy.spawn(browser), desc="Spawn broswer"),
-    Key([mod], "d", lazy.spawn(menu), desc="Spawn menu"),
-    Key([mod], "r", lazy.spawncmd(), desc="Spawn command prompt"),
+    # {{{ Groups
+    Key([mod, "control"], "j", lazy.screen.prev_group(), desc="Prev group"),
+    Key([mod, "control"], "k", lazy.screen.next_group(), desc="Next group"),
+    Key([mod, "control"], "b", lazy.screen.toggle_group(), desc="Toggle last group"),
     # }}}
 
     # {{{ Layouts
@@ -65,14 +63,8 @@ keys = [
     Key([mod], "n", lazy.layout.normalize(), desc="Reset windows"),
     # }}}
 
-    # {{{ Scratchpad
+    # {{{ Scratchpads
     Key([mod], "i", lazy.group["scratchpad"].dropdown_toggle("term"), desc="Scratchpad"),
-    # }}}
-
-    # {{{ Groups
-    Key([mod, "control"], "j", lazy.screen.prev_group(),   desc="Prev group"),
-    Key([mod, "control"], "k", lazy.screen.next_group(),   desc="Next group"),
-    Key([mod, "control"], "b", lazy.screen.toggle_group(), desc="Toggle last group"),
     # }}}
 
     # {{{ Screens
@@ -86,4 +78,10 @@ keys = [
     Key([mod], "s", lazy.function(switch_screens)),
     # }}}
 
+    # {{{ Spawn
+    Key([mod], "Return", lazy.spawn(terminal), desc="Spawn terminal"),
+    Key([mod], "b", lazy.spawn(browser), desc="Spawn broswer"),
+    Key([mod], "d", lazy.spawn(menu), desc="Spawn menu"),
+    Key([mod], "r", lazy.spawncmd(), desc="Spawn command prompt"),
+    # }}}
 ]
