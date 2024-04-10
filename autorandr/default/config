@@ -25,10 +25,10 @@ x-prop-scaling_mode None
 x-prop-underscan off
 x-prop-underscan_hborder 0
 x-prop-underscan_vborder 0
-output DP-8
-crtc 2
+output DP-9
+crtc 3
 mode 1920x1080
-pos 0x1080
+pos 1920x1080
 rate 60.00
 x-prop-max_bpc 8
 x-prop-non_desktop 0
@@ -36,10 +36,10 @@ x-prop-scaling_mode None
 x-prop-underscan off
 x-prop-underscan_hborder 0
 x-prop-underscan_vborder 0
-output DP-9
-crtc 3
+output DP-8
+crtc 2
 mode 1920x1080
-pos 1920x1080
+pos 0x1080
 rate 60.00
 x-prop-max_bpc 8
 x-prop-non_desktop 0

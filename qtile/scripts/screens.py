@@ -1,5 +1,4 @@
-# Lazy objects
-# https://qtile.readthedocs.io/en/stable/manual/config/lazy.html
+# Screens
 
 def window_name(text):
     for string in [" - Chromium", " - Firefox"]:

@@ -13,6 +13,7 @@ from variables import font_size, sep_padding, sep_width, widget_padding
 
 
 # {{{ Widgets
+
 def get_widgets():
     widgets = [
         # {{{ Groups
@@ -69,8 +70,8 @@ def get_widgets():
                 button_location='left',
                 close_button_location='right',
                 foreground=PRIMARY,
-                text_closed='[  Weather ]',
-                text_open='[  Weather ]',
+                text_closed='[ Weather ]',
+                text_open='[ Weather ]',
                 widgets=[
                     widget.OpenWeather(
                         location='Budapest',
@@ -92,8 +93,8 @@ def get_widgets():
                 button_location='left',
                 close_button_location='right',
                 foreground=PRIMARY,
-                text_closed='[  Network ]',
-                text_open='[  Network ]',
+                text_closed='[ Network ]',
+                text_open='[ Network ]',
                 widgets=[
                     widget.Sep(
                         foreground=inactive,
@@ -172,8 +173,8 @@ def get_widgets():
                 button_location='left',
                 close_button_location='right',
                 foreground=PRIMARY,
-                text_closed='[ 󰌵 Xlight ]',
-                text_open='[ 󰌵 Xlight ]',
+                text_closed='[ Xlight ]',
+                text_open='[ Xlight ]',
                 widgets=[
                     widget.Sep(
                         foreground=inactive,
@@ -206,8 +207,8 @@ def get_widgets():
                 button_location='left',
                 close_button_location='right',
                 foreground=PRIMARY,
-                text_closed='[  Audio ]',
-                text_open='[  Audio ]',
+                text_closed='[ Audio ]',
+                text_open='[ Audio ]',
                 widgets=[
                     widget.Sep(
                         foreground=inactive,
@@ -256,7 +257,7 @@ def get_widgets():
 
         # {{{ NETWORK
         widget.Net(
-            format='{down:.0f}{down_suffix}  {up:.0f}{up_suffix}',
+            format='{down:.0f}{down_suffix}  {up:.0f}{up_suffix}',
             foreground=PRIMARY,
             update_interval=10,
             use_bits=True,
@@ -406,11 +407,16 @@ def get_screen_3():
     screen_3 = get_widgets()
     return screen_3
 
+def get_screen_4():
+    screen_4 = get_widgets()
+    return screen_4
+
 def init_screens():
     return [
         Screen(top=bar.Bar(widgets=get_screen_1(), size=25)),
         Screen(top=bar.Bar(widgets=get_screen_2(), size=25)),
         Screen(top=bar.Bar(widgets=get_screen_3(), size=25)),
+        Screen(top=bar.Bar(widgets=get_screen_4(), size=25)),
     ]
 # }}}
 

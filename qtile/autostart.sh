@@ -15,4 +15,4 @@ picom -b &
 # picom --experimental-backends &
 
 # Wallapper
-python /home/marci/.local/bin/xwall.py -r
+# python /home/marci/.local/bin/xwall.py -r

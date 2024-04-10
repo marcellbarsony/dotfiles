@@ -1,9 +1,8 @@
-# https://qtile.readthedocs.io/en/stable/manual/config/groups.html
-
 from libqtile.config import ScratchPad, DropDown
 from variables import terminal
 from groups import groups
 
+# {{{ Scratchpads
 groups.append(
     ScratchPad("scratchpad",
         [
@@ -21,3 +20,4 @@ groups.append(
         ]
     ),
 )
+# }}}
