@@ -75,7 +75,7 @@ rncbc.org/
 
 # Qtile
 qtile/__pycache__
-# qtile/scripts/__pycache__
+qtile/scripts/__pycache__
 
 # QT5
 QtProject.conf

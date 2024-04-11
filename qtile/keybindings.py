@@ -67,6 +67,8 @@ keys = [
     Key([mod], "i", lazy.group["scratchpad"].dropdown_toggle("term"), desc="Scratchpad"),
     # }}}
 
+    Key([mod, "shift"], "l", lazy.screen.set_wallpaper("/home/marci/tmp/backgrounds/2k/cyberpunk/cyberpunk-city-001.png", "stretch"), desc="Set wallpaper"),
+
     # {{{ Screens
     Key([mod, mod1], "h", lazy.prev_screen(), desc="Focus prev monitor"),
     Key([mod, mod1], "j", lazy.function(window_to_previous_screen), lazy.prev_screen(), desc="Move & Focus prev screen"),

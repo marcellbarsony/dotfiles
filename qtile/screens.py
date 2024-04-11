@@ -1,6 +1,8 @@
 # https://qtile.readthedocs.io/en/stable/manual/config/screens.html
 # https://docs.qtile.org/en/stable/manual/ref/widgets.html
 
+import random
+import os
 from libqtile import bar, widget
 from libqtile.config import Screen
 from colors import *
@@ -13,7 +15,6 @@ from variables import font_size, sep_padding, sep_width, widget_padding
 
 
 # {{{ Widgets
-
 def get_widgets():
     widgets = [
         # {{{ Groups
@@ -394,6 +395,19 @@ def get_widgets():
     return widgets
 # }}}
 
+# {{{ Wallpapers
+def get_random_file():
+    path = f"/home/{os.getlogin()}/tmp/backgrounds"
+    files = []
+    for root, _, filenames in os.walk(path):
+        if "mobile" in root or "windows" in root:
+            continue
+        for filename in filenames:
+            files.append(os.path.join(root, filename))
+    file = random.choice(files)
+    return file
+# }}}
+
 # {{{ Screens
 def get_screen_1():
     screen_1 = get_widgets()
@@ -412,11 +426,26 @@ def get_screen_4():
     return screen_4
 
 def init_screens():
+    file1 = get_random_file()
     return [
-        Screen(top=bar.Bar(widgets=get_screen_1(), size=25)),
-        Screen(top=bar.Bar(widgets=get_screen_2(), size=25)),
-        Screen(top=bar.Bar(widgets=get_screen_3(), size=25)),
-        Screen(top=bar.Bar(widgets=get_screen_4(), size=25)),
+        Screen(top=bar.Bar(widgets=get_screen_1(), size=25, opacity=0.8),
+               wallpaper=file1,
+               wallpaper_mode = 'stretch'),
+        Screen(top=bar.Bar(widgets=get_screen_2(), size=25, opacity=0.8),
+               wallpaper=file1,
+               wallpaper_mode = 'stretch'),
+        Screen(
+            top=bar.Bar(
+                widgets=get_screen_3(),
+                size=25,
+                opacity=0.8
+            ),
+            wallpaper=file1,
+            wallpaper_mode = 'stretch'
+        ),
+        Screen(top=bar.Bar(widgets=get_screen_4(), size=25, opacity=0.8),
+               wallpaper=file1,
+               wallpaper_mode = 'stretch'),
     ]
 # }}}
 
