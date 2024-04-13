@@ -1,11 +1,11 @@
 [user]
-	email = barsonymarcell@protonmail.com
-	name = marcellbarsony
+  email = barsonymarcell@protonmail.com
+  name = marcellbarsony
 [usern]
-	name = marcellbarsony
+  name = marcellbarsony
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [advice]
-	detachedHead = false
+  detachedHead = false
 [pull]
-	rebase = false
+  rebase = false

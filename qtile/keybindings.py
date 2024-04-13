@@ -5,10 +5,14 @@ from libqtile.lazy import lazy
 from variables import *
 from scripts.keys import *
 from scripts.audio import *
+from scripts.wallpaper import setwall
+
 
 keys = [
+    # Key([mod, "shift"], "z", lazy.run(setwall), desc="Wallpaper"),
+
     # {{{ Actions
-    Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
+    Key([mod, "control"], "c", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload config"),
     # }}}
 
@@ -34,7 +38,7 @@ keys = [
     # }}}
 
     # {{{ Window [Actions]
-    Key([mod],"q", lazy.window.kill(), desc="Kill window"),
+    Key([mod],"c", lazy.window.kill(), desc="Kill window"),
     Key([mod],"f", lazy.window.toggle_fullscreen(), lazy.hide_show_bar(), desc="Fullscreen"),
     Key([mod, "shift"], "f", lazy.window.toggle_floating(), desc="Floating"),
     # }}}
@@ -66,8 +70,6 @@ keys = [
     # {{{ Scratchpads
     Key([mod], "i", lazy.group["scratchpad"].dropdown_toggle("term"), desc="Scratchpad"),
     # }}}
-
-    Key([mod, "shift"], "l", lazy.screen.set_wallpaper("/home/marci/tmp/backgrounds/2k/cyberpunk/cyberpunk-city-001.png", "stretch"), desc="Set wallpaper"),
 
     # {{{ Screens
     Key([mod, mod1], "h", lazy.prev_screen(), desc="Focus prev monitor"),

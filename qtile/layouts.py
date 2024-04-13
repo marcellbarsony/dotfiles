@@ -5,7 +5,7 @@ layouts = [
     # Bsp
     #layout.Bsp(),
 
-    # Columns
+    # {{{ Columns
     layout.Columns(
         border_focus = [PRIMARY],
         border_focus_stack = ['#000000', PRIMARY],
@@ -25,6 +25,7 @@ layouts = [
         wrap_focus_rows = True,
         wrap_focus_stacks = True,
     ),
+    # }}}
 
     # Floating
     #layout.Floating(),
@@ -32,7 +33,7 @@ layouts = [
     # Matrix
     #layout.Matrix(),
 
-    # Max
+    # {{{ Max
     layout.Max(
         border_focus = PRIMARY,
         border_normal = PRIMARY,
@@ -40,6 +41,7 @@ layouts = [
         margin = [0, 0, 0, 0],
         only_focused = True
     ),
+    # }}}
 
     # MonadTall
     #layout.MonadTall(),

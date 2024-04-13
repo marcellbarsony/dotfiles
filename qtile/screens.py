@@ -1,16 +1,15 @@
 # https://qtile.readthedocs.io/en/stable/manual/config/screens.html
 # https://docs.qtile.org/en/stable/manual/ref/widgets.html
 
-import random
-import os
-from libqtile import bar, widget
-from libqtile.config import Screen
 from colors import *
 from mouse import *
+from libqtile import bar, widget
+from libqtile.config import Screen
 from scripts.screens import window_name
 from scripts.audio import audio_increase, audio_decrease, audio_mute
 from scripts.backlight import backlight_increase, backlight_decrease
 from scripts.network import network_ip, network_interface, network_gateway
+from scripts.wallpaper import random_wallpaper, pywal
 from variables import font_size, sep_padding, sep_width, widget_padding
 
 
@@ -395,19 +394,6 @@ def get_widgets():
     return widgets
 # }}}
 
-# {{{ Wallpapers
-def get_random_file():
-    path = f"/home/{os.getlogin()}/tmp/backgrounds"
-    files = []
-    for root, _, filenames in os.walk(path):
-        if "mobile" in root or "windows" in root:
-            continue
-        for filename in filenames:
-            files.append(os.path.join(root, filename))
-    file = random.choice(files)
-    return file
-# }}}
-
 # {{{ Screens
 def get_screen_1():
     screen_1 = get_widgets()
@@ -426,26 +412,45 @@ def get_screen_4():
     return screen_4
 
 def init_screens():
-    file1 = get_random_file()
+    file = random_wallpaper()
+    # pywal(file)
     return [
-        Screen(top=bar.Bar(widgets=get_screen_1(), size=25, opacity=0.8),
-               wallpaper=file1,
-               wallpaper_mode = 'stretch'),
-        Screen(top=bar.Bar(widgets=get_screen_2(), size=25, opacity=0.8),
-               wallpaper=file1,
-               wallpaper_mode = 'stretch'),
+        Screen(
+            top=bar.Bar(
+                widgets=get_screen_1(),
+                size=25,
+                background="#000000CC",
+            ),
+            wallpaper=file,
+            wallpaper_mode = 'stretch'
+        ),
+        Screen(
+            top=bar.Bar(
+                widgets=get_screen_2(),
+                size=25,
+                background="#000000CC",
+            ),
+            wallpaper=file,
+            wallpaper_mode = 'stretch'
+        ),
         Screen(
             top=bar.Bar(
                 widgets=get_screen_3(),
                 size=25,
-                opacity=0.8
+                background="#000000CC",
             ),
-            wallpaper=file1,
+            wallpaper=file,
             wallpaper_mode = 'stretch'
         ),
-        Screen(top=bar.Bar(widgets=get_screen_4(), size=25, opacity=0.8),
-               wallpaper=file1,
-               wallpaper_mode = 'stretch'),
+        Screen(
+            top=bar.Bar(
+                widgets=get_screen_4(),
+                size=25,
+                background="#000000CC",
+            ),
+            wallpaper=file,
+            wallpaper_mode = 'stretch'
+        ),
     ]
 # }}}
 
@@ -454,12 +459,12 @@ if __name__ in ["screens", "__main__"]:
         font="JetBrainsMono Nerd Font Mono",
         fontsize=14,
         padding=0,
-        background='#000000',
+        background="#000000",
 
         # TODO: Fix
-        border_color=[border_top, border_right, border_bottom, border_left],
-        border_width=[0, 0, 0, 0],
-        margin=[0, 0, 0, 0],
+        # border_color=[border_top, border_right, border_bottom, border_left],
+        # border_width=[0, 0, 0, 0],
+        # margin=[0, 0, 0, 0],
         opacity=0.5,
     )
     extension_defaults = widget_defaults.copy()

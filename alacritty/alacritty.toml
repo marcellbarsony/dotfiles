@@ -11,7 +11,7 @@ cursor = "CellForeground"
 text = "CellBackground"
 
 # [colors.primary]
-# background = "#000000"
+background = "#000000"
 # bright_foreground = "#eaeaea"
 # dim_foreground = "#828482"
 # foreground = "#d5d8d6"

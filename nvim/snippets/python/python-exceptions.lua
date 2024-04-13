@@ -66,7 +66,7 @@ ls.add_snippets("python", {
             })
         end),
       }),
-      i(4, "continue"),
+      i(4, "pass"),
       c(5, {
         d(1, function() -- nothing
           return sn(nil, {
@@ -123,7 +123,7 @@ ls.add_snippets("python", {
             })
         end),
       }),
-      i(3, "continue")
+      i(3, "pass")
     })
   ),
   -- }}}
@@ -133,7 +133,7 @@ ls.add_snippets("python", {
     "finally",
     fmt("finally:\n"..
       "\t{}{}", {
-      i(1, "Continue"),
+      i(1, "pass"),
       i(0)
     })
   ),

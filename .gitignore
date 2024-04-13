@@ -60,6 +60,9 @@ obs-studio/global.ini
 # Pikaur
 pikaur.conf
 
+# Pipewire (QPWgraph)
+rncbc.org/
+
 # Pulse audio
 pulse/
 pavucontrol.ini
@@ -69,9 +72,6 @@ procps/
 
 # qBittorrent
 qBittorrent/
-
-# QPWgraph (Pipewire)
-rncbc.org/
 
 # Qtile
 qtile/__pycache__

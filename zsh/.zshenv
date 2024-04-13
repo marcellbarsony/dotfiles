@@ -63,5 +63,10 @@ export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
 # Sudo
 export SUDO_PROMPT="$(tput bold setaf 4)[sudo]$(tput sgr0) password for %p: "
 
+# Wayland
+# export QT_QPA_PLATFORM=wayland
+# export XDG_CURRENT_DESKTOP=qtile
+# export XDG_SESSION_DESKTOP=qtile
+
 # Disable files
 export LESSHISTFILE=-

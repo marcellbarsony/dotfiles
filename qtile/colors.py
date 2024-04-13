@@ -2,7 +2,7 @@ with open("/home/marci/.cache/wal/colors", "r") as file:
     lines = file.readlines()
 
 PRIMARY = lines[1].strip()
-SECONDARY = lines[4].strip()
+SECONDARY = lines[2].strip()
 
 color1 = lines[0].strip()
 color2 = lines[1].strip()
