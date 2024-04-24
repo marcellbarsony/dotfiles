@@ -1,4 +1,4 @@
-import = ["/home/marci/.config/wal/templates/alacritty.toml"]
+# import = ["/home/marci/.config/wal/templates/alacritty.toml"]
 live_config_reload = true
 
 # {{{ Colors
@@ -10,7 +10,7 @@ transparent_background_colors = false
 cursor = "CellForeground"
 text = "CellBackground"
 
-# [colors.primary]
+[colors.primary]
 background = "#000000"
 # bright_foreground = "#eaeaea"
 # dim_foreground = "#828482"

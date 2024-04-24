@@ -1,39 +1,39 @@
 # https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
-# user: 33
-# group: 32
-# permission:
-#   read: 4
-#   write: 4
-#   exec: blue
-#   exec-sticky: 5
-#   no-access: 245
-#   octal: 6
-#   acl: dark_cyan
-#   context: cyan
-# date:
-#   hour-old: 27
-#   day-old: 26
-#   older: 26
-# size:
-#   none: 40
-#   small: 40
-#   medium: 40
-#   large: 40
-# inode:
-#   valid: 13
-#   invalid: 245
-# links:
-#   valid: 13
-#   invalid: 245
-# tree-edge: 245
-# git-status:
-#   default: 227
-#   unmodified: 227
-#   ignored: 227
-#   new-in-index: 227
-#   new-in-workdir: 227
-#   typechange: 227
-#   deleted: 227
-#   renamed: 227
-#   modified: 227
-#   conflicted: 227
+user: 33
+group: 32
+permission:
+  read: 4
+  write: 4
+  exec: blue
+  exec-sticky: 5
+  no-access: 245
+  octal: 6
+  acl: dark_cyan
+  context: cyan
+date:
+  hour-old: 27
+  day-old: 26
+  older: 26
+size:
+  none: 40
+  small: 40
+  medium: 40
+  large: 40
+inode:
+  valid: 13
+  invalid: 245
+links:
+  valid: 13
+  invalid: 245
+tree-edge: 245
+git-status:
+  default: 227
+  unmodified: 227
+  ignored: 227
+  new-in-index: 227
+  new-in-workdir: 227
+  typechange: 227
+  deleted: 227
+  renamed: 227
+  modified: 227
+  conflicted: 227

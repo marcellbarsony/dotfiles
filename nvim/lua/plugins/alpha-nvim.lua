@@ -56,8 +56,6 @@ dashboard.section.header.val = {
 -- {{{ Neovim [modern]
 "                                                                       ",
 "                                                                       ",
-"                                                                       ",
-"                                                                       ",
 "                                                                     ",
 "       ████ ██████           █████      ██                     ",
 "      ███████████             █████                             ",
@@ -66,7 +64,6 @@ dashboard.section.header.val = {
 "    █████████ ██████████ █████████ █████ █████ ████ █████   ",
 "  ███████████ ███    ███ █████████ █████ █████ ████ █████  ",
 " ██████  █████████████████████ ████ █████ █████ ████ ██████ ",
-"                                                                       ",
 "                                                                       ",
 "                                                                       ",
 -- }}}
@@ -97,6 +94,7 @@ dashboard.section.header.val = {
 
 -- {{{ Dashboard options
 dashboard.section.buttons.val = {
+  dashboard.button( "/", "󰍉  > Grep", ":Telescope live_grep<CR>"),
   dashboard.button( "f", "󰈔  > File", ":ene <BAR> startinsert <CR>"),
   dashboard.button( "gf", "  > Git Files", ":Telescope git_files<CR>"),
   dashboard.button( "l", "󰐱  > Lazy", ":Lazy<CR>"),
@@ -108,7 +106,6 @@ dashboard.section.buttons.val = {
   dashboard.button( "tf", "󰭎  > Telescope [Find Files]", ":Telescope find_files<CR>"),
   dashboard.button( "to", "󰭎  > Telescope [Old Files]", ":Telescope oldfiles<CR>"),
   dashboard.button( "q", "  > Quit", ":qa<CR>"),
-  dashboard.button( "/", "󰍉  > Grep", ":Telescope live_grep<CR>"),
 }
 -- }}}
 

@@ -415,7 +415,7 @@ def init_screens():
     file = random_wallpaper()
     # pywal(file)
     return [
-        Screen(
+        Screen( # 1
             top=bar.Bar(
                 widgets=get_screen_1(),
                 size=25,
@@ -424,7 +424,7 @@ def init_screens():
             wallpaper=file,
             wallpaper_mode = 'stretch'
         ),
-        Screen(
+        Screen( # 2
             top=bar.Bar(
                 widgets=get_screen_2(),
                 size=25,
@@ -433,7 +433,7 @@ def init_screens():
             wallpaper=file,
             wallpaper_mode = 'stretch'
         ),
-        Screen(
+        Screen( # 3
             top=bar.Bar(
                 widgets=get_screen_3(),
                 size=25,
@@ -442,7 +442,7 @@ def init_screens():
             wallpaper=file,
             wallpaper_mode = 'stretch'
         ),
-        Screen(
+        Screen( # 4
             top=bar.Bar(
                 widgets=get_screen_4(),
                 size=25,
@@ -459,7 +459,7 @@ if __name__ in ["screens", "__main__"]:
         font="JetBrainsMono Nerd Font Mono",
         fontsize=14,
         padding=0,
-        background="#000000",
+        # background="#000000",
 
         # TODO: Fix
         # border_color=[border_top, border_right, border_bottom, border_left],
