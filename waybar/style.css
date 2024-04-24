@@ -1,48 +1,67 @@
 /* @import '../../.cache/pywal/..'; */
 
+@define-color teal #40b1b1;
+
 * {
-    border: none;
-    border-radius: 0;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    min-height: 0;
-    padding: 0 5px;
+  border: none;
+  border-radius: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  min-height: 0;
+  padding: 0 5px;
 }
 
 window#waybar {
-    background: rgba(43, 48, 59, 0.5);
-    border-bottom: 0px solid rgba(100, 114, 125, 0.5);
-    color: white;
+  background: rgba(43, 48, 59, 0.5);
+  border-bottom: 0px solid rgba(100, 114, 125, 0.5);
 }
 
-tooltip {
-  background: rgba(43, 48, 59, 0.5);
-  border: 0px solid rgba(100, 114, 125, 0.5);
-}
-tooltip label {
-  color: white;
-}
+/* {{{ Monitors */
+/* window.eDP-1 * { font-size: 10px; } */
+/* }}} */
 
 /* {{{ Workspaces */
 #workspaces button {
-    padding: 0 5px;
-    background: transparent;
-    color: white;
-    border-bottom: 0px solid transparent;
+  padding: 0 0px;
+  color: @teal;
 }
-
-/* #workspaces button.focused { */
-/*     background: #64727D; */
-/*     border-bottom: 0px solid white; */
-/* } */
 
 #workspaces button.active {
-    background: #64727D;
-    border-bottom: 0px solid white;
+  border-top: 2px solid @teal;
 }
+
+#workspaces button.visible {
+  color: @teal;
+}
+
+#workspaces button:hover {
+  color: white;
+  background: white;
+}
+
+#workspaces button.empty {
+  color: gray;
+}
+
+/* #workspaces button.current_output.visible { */
+/*   background: #90b1b1; */
+/*   color: blue; */
+/* } */
+
+/* #workspaces button.current_output.focused { */
+/*   background: #ff0088; */
+/*   color: blue; */
+/* } */
+
+/* #workspaces button.focused { */
+/*     color: red; */
+/*     background: #64F27D; */
+/*     border-top: 5px solid white; */
+/* } */
+
 /* }}} */
 
-/* {{{ */
+/* {{{ Widgets */
 
 #mode, #clock, #battery {
     padding: 0 10px;
@@ -67,13 +86,6 @@ tooltip label {
     background-color: #26A65B;
 }
 
-@keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: black;
-    }
-}
-
 #battery.warning:not(.charging) {
     background: #f53c3c;
     color: white;
@@ -82,5 +94,12 @@ tooltip label {
     animation-timing-function: steps(12);
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
 }
 /* }}} */
