@@ -38,7 +38,7 @@ keys = [
     # }}}
 
     # {{{ Window [Actions]
-    Key([mod],"c", lazy.window.kill(), desc="Kill window"),
+    Key([mod],"q", lazy.window.kill(), desc="Kill window"),
     Key([mod],"f", lazy.window.toggle_fullscreen(), lazy.hide_show_bar(), desc="Fullscreen"),
     Key([mod, "shift"], "f", lazy.window.toggle_floating(), desc="Floating"),
     # }}}

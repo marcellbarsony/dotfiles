@@ -14,6 +14,7 @@
 window#waybar {
   background: rgba(43, 48, 59, 0.5);
   border-bottom: 0px solid rgba(100, 114, 125, 0.5);
+  color: white;
 }
 
 /* {{{ Monitors */
@@ -27,7 +28,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-  border-top: 2px solid @teal;
+  border-top: 1px solid @teal;
 }
 
 #workspaces button.visible {
