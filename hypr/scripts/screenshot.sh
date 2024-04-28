@@ -1,11 +1,12 @@
 #!/bin/bash
 
-folder="/home/marci/tmp/screenshots"
+dir="/home/marci/tmp/screenshots"
+file=$(date +%Y%m%d-%H%M%S)
 
-if [[ ! -d "$folder" ]]; then
-  mkdir -p "$folder"
+if [[ ! -d "$dir" ]]; then
+  mkdir -p "$dir"
 fi
 
-grim -g "$(slurp)" "$folder"/"$(date +%Y%m%d-%H%M%S)".png
+grim -g "$(slurp)" "$dir"/"$file".png
 
 exit 0
