@@ -1,0 +1,28 @@
+* {
+  all: unset;
+}
+
+.bar {
+  color: rgba(0, 200, 200, 1);
+  background-color: rgba(0, 0, 0, 0.0);
+  font-size: 15px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.workspace-entry {
+  color: rgba(0, 200, 200, 1);
+  margin: 2px;
+  &.current {
+    background-color: #2980b9;
+    color: #fff;
+  }
+
+  &.occupied:not(.current) {
+    color: #f90;
+  }
+
+  &.empty {
+    color: rgba(0, 200, 200, 1);
+  }
+}

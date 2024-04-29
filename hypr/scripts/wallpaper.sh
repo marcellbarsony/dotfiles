@@ -32,6 +32,6 @@ swww img $random_file \
     --transition-type=$random_transition \
     --transition-duration=1 \
 
-notify-send "swww :: ${random_file##*/}"
+notify-send "SWWW" "${random_file##*/}"
 
 exit 0
