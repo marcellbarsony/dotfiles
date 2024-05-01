@@ -51,7 +51,7 @@ eval "$(starship init zsh)"
 # }}}
 
 # {{{ Pywal 
-# (cat ~/.cache/wal/sequences &) # Terminal
+(cat ~/.cache/wal/sequences &) # Terminal
 # source ~/.cache/wal/colors-tty.sh # TTY
 # }}}
 

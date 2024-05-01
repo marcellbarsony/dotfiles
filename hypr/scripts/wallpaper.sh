@@ -14,7 +14,7 @@ find_files() {
 dir="/home/marci/tmp/backgrounds"
 files=( $(find_files "$dir") ) # Capture files in an array using process substitution
 
-# Check if any files were found
+# Check if files were found
 if [[ ${#files[@]} -eq 0 ]]; then
   echo "No files found in $dir"
 else
@@ -26,12 +26,17 @@ transitions=("wipe" "outer" "random")
 random_index=$((RANDOM % ${#transitions[@]}))
 random_transition=${transitions[$random_index]}
 
+# Generate color scheme
+wal -i $random_file
+
+# Set wallpaper
 swww img $random_file \
     --transition-bezier .43,0.19,1,.4 \
     --transition-fps=60 \
     --transition-type=$random_transition \
     --transition-duration=1 \
 
+# Send notification
 notify-send "SWWW" "${random_file##*/}"
 
 exit 0

@@ -1,4 +1,4 @@
-(defwidget bar []
+(defwidget bar0 []
   (box :class "bar-widget"
        :orientation "horizontal"
        :space-evenly true
@@ -6,12 +6,81 @@
          :space-evenly false
          :halign "start"
       (workspaces)
-      (window_name)
+      (window_w)
     )
 
     (box :orientation "horizontal"
          :space-evenly false
          :halign "center"
+         :class "center"
+      (music)
+    )
+
+    (box :orientation "horizontal"
+         :space-evenly false
+         :halign "end"
+      (greeter :text "Say hello!"
+               :name "${username}"
+      )
+      (clock)
+      ;; (right)
+      ;; (tray_button)
+      ;; (language)
+      ;; (picker)
+    )
+  )
+)
+
+
+(defwidget bar1 []
+  (box :class "bar-widget"
+       :orientation "horizontal"
+       :space-evenly true
+    (box :orientation "horizontal"
+         :space-evenly false
+         :halign "start"
+      (workspaces)
+      (window_w)
+    )
+
+    (box :orientation "horizontal"
+         :space-evenly false
+         :halign "center"
+         :class "center"
+      (music)
+    )
+
+    (box :orientation "horizontal"
+         :space-evenly false
+         :halign "end"
+      (greeter :text "Say hello!"
+               :name "${username}"
+      )
+      (clock)
+      ;; (right)
+      ;; (tray_button)
+      ;; (language)
+      ;; (picker)
+    )
+  )
+)
+
+
+(defwidget bar2 []
+  (box :class "bar-widget"
+       :orientation "horizontal"
+       :space-evenly true
+    (box :orientation "horizontal"
+         :space-evenly false
+         :halign "start"
+      (workspaces)
+      (window_w)
+    )
+
+    (box :orientation "horizontal"
+         :space-evenly false
+         :halign "center"
+         :class "center"
       (music)
     )
 

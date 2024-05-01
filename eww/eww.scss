@@ -2,12 +2,20 @@
   all: unset;
 }
 
-.bar {
-  color: rgba(0, 200, 200, 1);
+@import "/home/marci/.cache/wal/colors.scss";
+
+.bar-widget {
+  // color: rgba(0, 200, 200, 1);
+  color: $color5;
   background-color: rgba(0, 0, 0, 0.55);
-  font-size: 15px;
-  padding: 0px;
-  margin: 0px;
+  font-size: 1rem;
+  padding: 0rem;
+  margin: 0rem;
 }
 
+
 @import "scss/workspaces.scss";
+@import "scss/window-name.scss"
+
+// @import "scss/center.scss"
+@import "scss/music.scss"
