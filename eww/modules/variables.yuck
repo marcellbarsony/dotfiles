@@ -1,0 +1,10 @@
+;; Variables
+(defvar username "Marci")
+
+;; Polls
+(defpoll time :interval "1s"
+              :initial "initial-value"  ; optional, defaults to poll at startup
+  `date +%H:%M`
+)
+
+;; Listeners

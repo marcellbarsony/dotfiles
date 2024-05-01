@@ -1,0 +1,31 @@
+(defwidget bar []
+  (box :class "bar-widget"
+       :orientation "horizontal"
+       :space-evenly true
+    (box :orientation "horizontal"
+         :space-evenly false
+         :halign "start"
+      (workspaces)
+      (window_name)
+    )
+
+    (box :orientation "horizontal"
+         :space-evenly false
+         :halign "center"
+      (music)
+    )
+
+    (box :orientation "horizontal"
+         :space-evenly false
+         :halign "end"
+      (greeter :text "Say hello!"
+               :name "${username}"
+      )
+      (clock)
+      ;; (right)
+      ;; (tray_button)
+      ;; (language)
+      ;; (picker)
+    )
+  )
+)

@@ -1,0 +1,3 @@
+(defwidget clock []
+    (label :class "clock" :text {formattime(EWW_TIME, "%H:%M")})
+)
