@@ -1,13 +1,13 @@
+@import "/home/marci/.cache/wal/colors.scss";
+
 * {
   all: unset;
 }
 
-@import "/home/marci/.cache/wal/colors.scss";
-
 .bar-widget {
   // color: rgba(0, 200, 200, 1);
   color: $color5;
-  background-color: rgba(0, 0, 0, 0.55);
+  background-color: rgba(0, 0, 0, 0.75);
   font-size: 1rem;
   padding: 0rem;
   margin: 0rem;

@@ -35,6 +35,9 @@ java/
 kdeglobals
 kdenlive*
 
+# Neofetch
+# neofetch
+
 # Npm
 npm/_cacache
 npm/_logs

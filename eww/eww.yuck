@@ -6,7 +6,7 @@
 
 ;; {{{ Left
 (include "modules/workspaces.yuck")
-(include "modules/window_name.yuck")
+(include "modules/window-name.yuck")
 ;; }}}
 
 ;; {{{ Center
