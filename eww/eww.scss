@@ -5,7 +5,6 @@
 }
 
 .bar-widget {
-  // color: rgba(0, 200, 200, 1);
   color: $color5;
   background-color: rgba(0, 0, 0, 0.75);
   font-size: 1rem;
@@ -19,3 +18,9 @@
 
 // @import "scss/center.scss"
 @import "scss/music.scss"
+
+@import "scss/volume.scss"
+@import "scss/battery.scss"
+@import "scss/clock.scss"
+
+@import "scss/control.scss"

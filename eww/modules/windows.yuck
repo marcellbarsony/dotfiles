@@ -1,19 +1,5 @@
-(defwindow bar0
-  :monitor 0
-  :geometry (geometry :x "0px"
-                      :y "0px"
-                      :width "100%"
-                      :height "0px"
-                      :anchor "top center"
-  )
-  :stacking "fg"
-  :exclusive "true"
-  :focusable "false"
-  (bar0)
-)
-
 (defwindow bar1
-  :monitor 1
+  :monitor 0
   :geometry (geometry :x "0px"
                       :y "0px"
                       :width "100%"
@@ -27,7 +13,7 @@
 )
 
 (defwindow bar2
-  :monitor 2
+  :monitor 1
   :geometry (geometry :x "0px"
                       :y "0px"
                       :width "100%"
@@ -38,4 +24,32 @@
   :exclusive "true"
   :focusable "false"
   (bar2)
+)
+
+(defwindow bar3
+  :monitor 2
+  :geometry (geometry :x "0px"
+                      :y "0px"
+                      :width "100%"
+                      :height "0px"
+                      :anchor "top center"
+  )
+  :stacking "fg"
+  :exclusive "true"
+  :focusable "false"
+  (bar3)
+)
+
+(defwindow control
+  :monitor 0
+  :geometry (geometry :x "0px"
+                      :y "0px"
+                      :width "50%"
+                      :height "50%"
+                      :anchor "center"
+  )
+  :stacking "overlay"
+  :exclusive "false"
+  :focusable "false"
+  (control)
 )

@@ -1,3 +1,5 @@
+@import "/home/marci/.cache/wal/colors.scss";
+
 .workspaces-widget {
   // border-width: 1px;
   // border-style: solid;
@@ -8,12 +10,12 @@
   margin: 0rem;
   padding: 0rem 0.5rem 0rem 0.5rem;
   &.current {
-    background-color: rgba(0, 200, 200, 1);
+    background-color: $color5;
     color: rgba(0, 0, 0, 1);
   }
 
   &.occupied:not(.current) {
-    color: rgba(0, 200, 200, 1);
+    color: $color5;
   }
 
   &.empty {

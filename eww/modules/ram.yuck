@@ -1,0 +1,16 @@
+(defwidget ram []
+  (box :class "ram"
+       ;; :orientation "horizontal"
+       ;; :space-evenly false
+       ;; :halign "center"
+       ;; :tooltip "RAM"
+    ;; (metric :label ""
+    ;;        :value {EWW_RAM.used_mem_perc}
+    ;;        :onchange ""
+    ;; )
+    ;; (metric :label "r"
+    ;;         :value {round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)}
+    ;;         :onchange ""
+    ;; )
+  )
+)

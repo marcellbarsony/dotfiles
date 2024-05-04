@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 function clamp {
   min=$1
   max=$2
@@ -8,6 +9,7 @@ function clamp {
 
 direction=$1
 current=$2
+
 if test "$direction" = "down"
 then
   target=$(clamp 1 10 $(($current+1)))

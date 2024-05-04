@@ -14,7 +14,6 @@ find_files() {
 dir="/home/marci/tmp/backgrounds"
 files=( $(find_files "$dir") ) # Capture files in an array using process substitution
 
-# Check if files were found
 if [[ ${#files[@]} -eq 0 ]]; then
   echo "No files found in $dir"
 else

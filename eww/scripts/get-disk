@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# free_space=$(btrfs fi df /)
+
+# Get the data size using grep and awk
+data_size=$(btrfs fi df / | grep "Data, single")
+
+# Print the data size
+echo "Data size (GiB): $data_size"

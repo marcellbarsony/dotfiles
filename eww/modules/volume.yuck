@@ -1,0 +1,37 @@
+;; https://github.com/XXiaoA/dotfiles/blob/main/eww/yuck/bar.yuck
+(defvar vol_reveal false)
+
+(defwidget volume []
+  (eventbox :onhover "eww update vol_reveal=true"
+            :onhoverlost "eww update vol_reveal=false"
+            :cursor "pointer"
+    (box :space-evenly: false
+         :hexpand false
+      (button :halign "fill"
+              :class: "vol-event"
+              ;; :vexpand false
+              ;; :hexpand false
+              ""
+      )
+      (revealer :transition "slideright"
+                :reveal vol_reveal
+                :duration "500ms"
+        (box :space-evenly: true
+             :spacing 5
+          (button :class "volume-button"
+                  :onclick "scripts/volume --down"
+                  "󰍴"
+          )
+          (button :class "volume-button"
+                  :onclick "scripts/volume --up"
+                  ""
+          )
+          (button :class "volume-button"
+                  :onclick "scripts/volume --toggle"
+                  "󰝟"
+          )
+        )
+      )
+    )
+  )
+)

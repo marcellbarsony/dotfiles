@@ -1,43 +1,60 @@
-(deflisten music :initial ""
+(defvar music_reveal false)
+
+(deflisten music
+  :initial ""
   "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || true"
 )
 
-;; (defwidget music []
-;;   (box :class "music"
-;;        :orientation "h"
-;;        :space-evenly false
-;;     {music != "" ? "${music}" : ""}
-;;   )
-;; )
-
 (defwidget music []
-  (box :orientation "horizontal"
-       :class "music"
-       :space-evenly false
-    (box :orientation "horizontal"
+  (eventbox :onhover "eww update music_reveal=true"
+            :onhoverlost "eww update music_reveal=false"
+    (box :class "player_box"
+         :orientation "h"
          :space-evenly false
-      ;; (box :orientation "h" :space-evenly false :class "music-image" :style "background-image: url('${mpris.artUrl}');")
-      (box :orientation "h" :space-evenly false :class "music-text" :hexpand true
-        ;; (box :orientation "h" :space-evenly false :halign "end" :class "music-name"
-        ;;   (label :text {music.name})
-        ;; )
-        (box :orientation "h" :space-evenly false
-          (label :halign "start" :class "music-title" :limit-width 50 :text {music})
-          ;; (label :halign "start" :class "music-artist" :limit-width 20 :text {musict})
+         :vexpand false
+         :hexpand false
+      ;; ;; (box :class "player_cover_art" :vexpand false :hexpand false :style "background-image: url('${cover_art}');")
+      (box :orientation "h"
+           :spacing 5
+           :space-evenly false
+           :vexpand false
+           :hexpand false
+        (label :class "music_title"
+               :halign "end"
+               :wrap true
+               :limit-width 50
+               :text music
+        )
+        (revealer :transition "slideright"
+                  :reveal music_reveal
+                  :duration "500ms"
+          (box :orientation "h"
+               :spacing 0
+               :halign "center"
+               :space-evenly false
+               :vexpand false
+               :hexpand false
+            (eventbox :onclick "playerctl previous"
+                      :cursor "pointer"
+              (label :class "music_btn"
+                     :text "󰒮"
+              )
+            )
+            (eventbox :onclick "playerctl play-pause"
+                      :cursor "pointer"
+              (label :class "music_btn"
+                     :text "󰏤"
+              )
+            )
+            (eventbox :cursor "pointer"
+                      :onclick "playerctl next"
+              (label :class "music_btn"
+                     :text "󰒭"
+              )
+            )
+          )
         )
       )
     )
-    ;; (box :orientation "v" :space-evenly false :class "music-scale-box" :visible {mpris.length == "" ? false : true}
-    ;;     (scale :min 0 :max {mpris.length} :active true :value {mpris_positions[mpris.name].position} :onchange "playerctl position {}" :class "music-scale")
-    ;;     (box :orientation "h" :space-evenly false :hexpand true
-    ;;         (label :hexpand true :class "music-strtime" :text {mpris_positions[mpris.name].positionStr} :halign "start")
-    ;;         (label :hexpand true :class "music-strtime" :text {mpris.lengthStr} :halign "end")
-    ;;     )
-    ;; )
-    ;; (box :orientation "h" :space-evenly false :halign "center" :class "music-actions-box"
-    ;;     (button :class "music-action" :onclick "playerctl previous" "󰒮")
-    ;;     (button :class "music-action" :onclick "playerctl play-pause" {mpris.status == "Playing" ? "󰓛" : "󰐊"})
-    ;;     (button :class "music-action" :onclick "playerctl next" "󰒭")
-    ;; )
   )
 )

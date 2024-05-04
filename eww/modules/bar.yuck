@@ -1,37 +1,3 @@
-(defwidget bar0 []
-  (box :class "bar-widget"
-       :orientation "horizontal"
-       :space-evenly true
-    (box :orientation "horizontal"
-         :space-evenly false
-         :halign "start"
-      (workspaces)
-      (window_w)
-    )
-
-    (box :orientation "horizontal"
-         :space-evenly false
-         :halign "center"
-         :class "center"
-      (music)
-    )
-
-    (box :orientation "horizontal"
-         :space-evenly false
-         :halign "end"
-      (greeter :text "Say hello!"
-               :name "${username}"
-      )
-      (clock)
-      ;; (right)
-      ;; (tray_button)
-      ;; (language)
-      ;; (picker)
-    )
-  )
-)
-
-
 (defwidget bar1 []
   (box :class "bar-widget"
        :orientation "horizontal"
@@ -53,13 +19,9 @@
     (box :orientation "horizontal"
          :space-evenly false
          :halign "end"
-      (greeter :text "Say hello!"
-               :name "${username}"
-      )
+      (battery :id "BAT0")
       (clock)
-      ;; (right)
       ;; (tray_button)
-      ;; (language)
       ;; (picker)
     )
   )
@@ -87,14 +49,41 @@
     (box :orientation "horizontal"
          :space-evenly false
          :halign "end"
+      (battery :id "BAT0")
+      (clock)
+    )
+  )
+)
+
+(defwidget bar3 []
+  (box :class "bar-widget"
+       :orientation "horizontal"
+       :space-evenly true
+    (box :orientation "horizontal"
+         :space-evenly false
+         :halign "start"
+      (workspaces)
+      (window_w)
+    )
+
+    (box :orientation "horizontal"
+         :space-evenly false
+         :halign "center"
+         :class "center"
+      (music)
+    )
+
+    (box :orientation "horizontal"
+         :space-evenly false
+         :halign "end"
       (greeter :text "Say hello!"
                :name "${username}"
       )
+      ;; (ram)
+      ;; (disk)
+      (volume)
+      (battery :id "BAT0")
       (clock)
-      ;; (right)
-      ;; (tray_button)
-      ;; (language)
-      ;; (picker)
     )
   )
 )

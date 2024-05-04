@@ -1,0 +1,9 @@
+(defwidget battery [id]
+  (box :class "battery"
+       :orientation "horizontal"
+       :space-evenly false
+       :halign "center"
+       :tooltip "${id} - ${EWW_BATTERY[id].status}"
+       "󰁹 ${EWW_BATTERY[id].capacity}%"
+  )
+)
