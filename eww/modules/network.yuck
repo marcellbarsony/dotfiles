@@ -1,0 +1,50 @@
+(defvar net_reveal false)
+
+(defpoll ssid :interval "60s"
+              :initial "[]"
+              :run-while true
+  `nmcli -t -f NAME connection show --active | head -n1 | sed 's/\"/\\"/g'`
+)
+
+(defpoll signal :interval "60s"
+                :initial "[]"
+                :run-while true
+  `nmcli -f in-use,signal dev wifi | rg "\*" | awk '{ print $2 }'`
+)
+
+(defpoll interface :interval "60s"
+                   :initial "[]"
+                   :run-while true
+  `ip addr | rg "state UP" | awk '{ print $2 }'`
+)
+
+(defpoll gateway :interval "60s"
+                 :initial "[]"
+                 :run-while true
+  `ip route | rg "default via" | awk '{print $3 }'`
+)
+
+(defwidget network []
+  (eventbox :onhover "eww update net_reveal=true"
+            :onhoverlost "eww update net_reveal=false"
+            :cursor "pointer"
+    (box :space-evenly false
+         :orientation "horizontal"
+         :spacing "10"
+      (label :text "󰖩 ${ssid}")
+      ;; (label :text "${EWW_NET[interface].down}")
+      (revealer :transition "slideleft"
+                :reveal net_reveal
+                :duration "500ms"
+        (box :class "network"
+             :orientation "horizontal"
+             :space-evenly false
+             :halign "center"
+             :spacing "5"
+          (label :text "${interface}")
+          (label :text "via ${gateway}")
+        )
+      )
+    )
+  )
+)

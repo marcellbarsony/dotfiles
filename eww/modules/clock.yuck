@@ -1,5 +1,55 @@
+(defvar date_reveal false)
+(defpoll clock_date :interval "10h" "date '+%Y %b %d'")
+(defpoll calendar_day :interval "20h" "date '+%d'")
+(defpoll calendar_year :interval "20h" "date '+%Y'")
+;; (defpoll clock_time :interval "5m" "date +\%H")
+;; (defpoll clock_minute :interval "5s" "date +\%M")
+
 (defwidget clock []
-  (label :class "clock"
-         :text {formattime(EWW_TIME, "%I:%M")}
+  (eventbox :onhover "eww update date_reveal=true"
+            :onhoverlost "eww update date_reveal=false"
+            :cursor "pointer"
+    (box :space-evenly false
+         :orientation "horizontal"
+         :spacing "3"
+      (label :class "clock"
+             :text {formattime(EWW_TIME, "%I:%M")}
+      )
+      (revealer :transition "slideleft"
+                :reveal date_reveal
+                :duration "500ms"
+        (eventbox :class "date"
+                  :onhover "eww update date_reveal=true"
+                  :onhoverlost "eww update date_reveal=false"
+                  :orientation "horizontal"
+                  :space-evenly false
+                  :halign "center"
+                  :onclick "eww open-many --toggle calendar" clock_date ;; TODO: open-many
+        )
+      )
+    )
   )
+)
+
+(defwidget cal []
+  (box :class "calendar-widget"
+       :orientation "vertical"
+    (box :class "calendar"
+      (calendar :class "calendar"
+                :day calendar_day
+                :year calendar_year
+      )
+    )
+  )
+)
+
+(defwindow calendar
+  :monitor 2 ;; TODO: open-many
+  :geometry (geometry :x "10px"
+                      :y "0px"
+                      :width "300px"
+                      :height "100px"
+                      :anchor "top right"
+  )
+  (cal)
 )

@@ -1,35 +1,47 @@
 ;; https://github.com/XXiaoA/dotfiles/blob/main/eww/yuck/bar.yuck
+(defpoll volume_percent :interval "3s"
+  "wpctl get-volume @DEFAULT_SINK@ | awk '{print $2}'"
+  ;; "wpctl get-volume @DEFAULT_SINK@ | awk '{print int($2 * 10)}'"
+)
+
 (defvar vol_reveal false)
 
 (defwidget volume []
   (eventbox :onhover "eww update vol_reveal=true"
             :onhoverlost "eww update vol_reveal=false"
             :cursor "pointer"
-    (box :space-evenly: false
-         :hexpand false
-      (button :halign "fill"
-              :class: "vol-event"
-              ;; :vexpand false
-              ;; :hexpand false
-              ""
+    (box :space-evenly false
+         :orientation "horizontal"
+         :spacing 5
+      (button :class "volume-btn"
+              :onclick "scripts/volume --toggle"
+        (label :text ""
+               :tooltip volume_percent
+        )
       )
-      (revealer :transition "slideright"
+      (revealer :transition "slideleft"
                 :reveal vol_reveal
-                :duration "500ms"
+                :duration "350ms"
         (box :space-evenly: true
-             :spacing 5
-          (button :class "volume-button"
+             :spacing 0
+          (button :class "volume-btn1"
                   :onclick "scripts/volume --down"
                   "󰍴"
           )
-          (button :class "volume-button"
+          (button :class "volume-btn1"
                   :onclick "scripts/volume --up"
                   ""
           )
-          (button :class "volume-button"
-                  :onclick "scripts/volume --toggle"
-                  "󰝟"
-          )
+          ;; (label :text "${volume_percent}")
+          ;; (scale :class "vol-bar"
+          ;;        :value volume_percent
+          ;;        :orientation "horizontal"
+          ;;        :max 100
+          ;;        :min 0
+          ;;        :tooltip volume_percent
+          ;;        ;; :draw-value true
+          ;;        :onchange "neofetch"
+          ;; )
         )
       )
     )

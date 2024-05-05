@@ -27,7 +27,6 @@
   )
 )
 
-
 (defwidget bar2 []
   (box :class "bar-widget"
        :orientation "horizontal"
@@ -49,6 +48,9 @@
     (box :orientation "horizontal"
          :space-evenly false
          :halign "end"
+      (greeter :text "Say hello!"
+               :name "${username}"
+      )
       (battery :id "BAT0")
       (clock)
     )
@@ -76,11 +78,9 @@
     (box :orientation "horizontal"
          :space-evenly false
          :halign "end"
-      (greeter :text "Say hello!"
-               :name "${username}"
-      )
       ;; (ram)
       ;; (disk)
+      (network)
       (volume)
       (battery :id "BAT0")
       (clock)

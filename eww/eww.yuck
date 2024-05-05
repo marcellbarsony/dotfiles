@@ -18,6 +18,7 @@
 ;; {{{ Right
 ;; (include "modules/ram.yuck")
 ;; (include "modules/disk.yuck")
+(include "modules/network.yuck")
 (include "modules/volume.yuck")
 (include "modules/battery.yuck")
 (include "modules/greeter.yuck")

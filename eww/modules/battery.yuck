@@ -1,9 +1,24 @@
+(defvar bat_reveal false)
+
 (defwidget battery [id]
-  (box :class "battery"
-       :orientation "horizontal"
-       :space-evenly false
-       :halign "center"
-       :tooltip "${id} - ${EWW_BATTERY[id].status}"
-       "󰁹 ${EWW_BATTERY[id].capacity}%"
+  (eventbox :onhover "eww update bat_reveal=true"
+            :onhoverlost "eww update bat_reveal=false"
+            :cursor "pointer"
+    (box :space-evenly false
+         :orientation "h"
+         :spacing "3"
+      (label :text "󰁹 ${EWW_BATTERY[id].capacity}%")
+      (revealer :transition "slideleft"
+                :reveal bat_reveal
+                :duration "500ms"
+        (box :class "battery"
+             :orientation "horizontal"
+             :space-evenly false
+             :halign "center"
+             :tooltip "${id}"
+             "${EWW_BATTERY[id].status}"
+        )
+      )
+    )
   )
 )
