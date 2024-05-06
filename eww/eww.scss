@@ -6,7 +6,7 @@
 
 .bar-widget {
   color: $color5;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.7);
   font-size: 1rem;
   padding: 0rem;
   margin: 0rem;
@@ -16,7 +16,6 @@
 @import "scss/workspaces.scss";
 @import "scss/window-name.scss"
 
-// @import "scss/center.scss"
 @import "scss/music.scss"
 
 @import "scss/volume.scss"

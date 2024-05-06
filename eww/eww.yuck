@@ -2,7 +2,6 @@
 ;; https://github.com/elkowar/eww/tree/master/examples/eww-bar
 ;; https://github.com/XXiaoA/dotfiles/tree/main/eww
 
-(include "modules/variables.yuck")
 (include "modules/windows.yuck")
 (include "modules/bar.yuck")
 
@@ -16,13 +15,13 @@
 ;; }}}
 
 ;; {{{ Right
-;; (include "modules/ram.yuck")
-;; (include "modules/disk.yuck")
+;; (include "modules/cpu.yuck")
+(include "modules/ram.yuck")
+(include "modules/disk.yuck")
 (include "modules/network.yuck")
 (include "modules/volume.yuck")
 (include "modules/battery.yuck")
-(include "modules/greeter.yuck")
-(include "modules/clock.yuck")
+(include "modules/time-date.yuck")
 ;; }}}
 
 (include "modules/control.yuck")

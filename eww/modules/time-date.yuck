@@ -1,9 +1,7 @@
 (defvar date_reveal false)
-(defpoll clock_date :interval "10h" "date '+%Y %b %d'")
-(defpoll calendar_day :interval "20h" "date '+%d'")
-(defpoll calendar_year :interval "20h" "date '+%Y'")
-;; (defpoll clock_time :interval "5m" "date +\%H")
-;; (defpoll clock_minute :interval "5s" "date +\%M")
+(defpoll clock_date :interval "12h" "date '+%Y %b %d (%a)'")
+(defpoll calendar_day :interval "24h" "date '+%d'")
+(defpoll calendar_year :interval "24h" "date '+%Y'")
 
 (defwidget clock []
   (eventbox :onhover "eww update date_reveal=true"

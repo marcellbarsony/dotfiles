@@ -1,5 +1,8 @@
-(deflisten window :initial "..." "sh ~/.config/eww/scripts/get-window-title")
-(defwidget window_w []
+(deflisten window :initial "..."
+  "sh ~/.config/eww/scripts/get-window-title"
+)
+
+(defwidget window_name []
   (box :class "window-name"
     (label :text "${window}"
            :limit-width 45

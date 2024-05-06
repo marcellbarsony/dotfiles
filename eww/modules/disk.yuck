@@ -1,23 +1,6 @@
-;; (defpoll time :interval "1s"
-;;               :initial "initial-value"  ; optional, defaults to poll at startup
-;;               :run-while true   ; optional, defaults to 'true'
-;;   {round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)}
-;; )
-
 (defwidget disk []
-  ;; (box :class "disk"
-  ;;      :orientation "horizontal"
-  ;;      :space-evenly false
-  ;;      :halign "center"
-  ;;      :tooltip "Disk"
-  ;;   ;; (label :text "${foo}")
-  ;;   ;; "iarnst"
-  ;;   "${time}"
-  ;; )
-  ;; (system_progress
-  ;;   :css "ram"
-  ;;   :tip "RAM ${round(EWW_RAM.used_mem / 1048576, 2)}MB"
-  ;;   :data {round(EWW_RAM.used_mem_perc, 0)}
-  ;;   :icon "0"
-  ;; )
+  (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
+    (label :text "󰆼")
+    (label :text {round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)})
+  )
 )

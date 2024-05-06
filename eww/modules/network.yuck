@@ -24,6 +24,12 @@
   `ip route | rg "default via" | awk '{print $3 }'`
 )
 
+(defpoll ip :interval "60s"
+            :initial "[]"
+            :run-while true
+  `ip addr show | grep 'inet ' | grep -v '127.0.0.1' | awk '{print $2}'`
+)
+
 (defwidget network []
   (eventbox :onhover "eww update net_reveal=true"
             :onhoverlost "eww update net_reveal=false"
@@ -31,7 +37,7 @@
     (box :space-evenly false
          :orientation "horizontal"
          :spacing "10"
-      (label :text "󰖩 ${ssid}")
+      (label :text " ${ssid}")
       ;; (label :text "${EWW_NET[interface].down}")
       (revealer :transition "slideleft"
                 :reveal net_reveal
@@ -42,6 +48,7 @@
              :halign "center"
              :spacing "5"
           (label :text "${interface}")
+          (label :text "${ip}")
           (label :text "via ${gateway}")
         )
       )

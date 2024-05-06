@@ -1,3 +1,4 @@
+;; {{{ Bar 1
 (defwidget bar1 []
   (box :class "bar-widget"
        :orientation "horizontal"
@@ -6,16 +7,13 @@
          :space-evenly false
          :halign "start"
       (workspaces)
-      (window_w)
+      ;; (window_name)
     )
-
     (box :orientation "horizontal"
          :space-evenly false
          :halign "center"
-         :class "center"
       (music)
     )
-
     (box :orientation "horizontal"
          :space-evenly false
          :halign "end"
@@ -26,7 +24,9 @@
     )
   )
 )
+;; }}}
 
+;; {{{ Bar 2
 (defwidget bar2 []
   (box :class "bar-widget"
        :orientation "horizontal"
@@ -35,28 +35,26 @@
          :space-evenly false
          :halign "start"
       (workspaces)
-      (window_w)
+      ;; (window_name)
     )
-
     (box :orientation "horizontal"
          :space-evenly false
          :halign "center"
-         :class "center"
       (music)
     )
-
     (box :orientation "horizontal"
          :space-evenly false
          :halign "end"
-      (greeter :text "Say hello!"
-               :name "${username}"
-      )
+      (volume)
+      (network)
       (battery :id "BAT0")
       (clock)
     )
   )
 )
+;; }}}
 
+;; {{{ Bar 3
 (defwidget bar3 []
   (box :class "bar-widget"
        :orientation "horizontal"
@@ -65,25 +63,23 @@
          :space-evenly false
          :halign "start"
       (workspaces)
-      (window_w)
+      ;; (window_name)
     )
-
     (box :orientation "horizontal"
          :space-evenly false
          :halign "center"
-         :class "center"
       (music)
     )
-
     (box :orientation "horizontal"
          :space-evenly false
          :halign "end"
-      ;; (ram)
-      ;; (disk)
-      (network)
+      (disk)
+      (ram)
       (volume)
+      (network)
       (battery :id "BAT0")
       (clock)
     )
   )
 )
+;; }}}
