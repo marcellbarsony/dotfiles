@@ -1,7 +1,6 @@
 ;; https://github.com/XXiaoA/dotfiles/blob/main/eww/yuck/bar.yuck
 (defpoll volume_percent :interval "3s"
-  "wpctl get-volume @DEFAULT_SINK@ | awk '{print $2}'"
-  ;; "wpctl get-volume @DEFAULT_SINK@ | awk '{print int($2 * 10)}'"
+  "wpctl get-volume @DEFAULT_SINK@ | awk '{print int($2 * 100)}'"
 )
 
 (defvar vol_reveal false)
@@ -16,13 +15,14 @@
          :spacing 0
       (button :class "volume-icon"
               :onclick "scripts/volume --toggle"
-        (label :text ""
-               :tooltip volume_percent
-        )
+        (label :text "")
+      )
+      (label :class "volume-percent"
+             :text volume_percent
       )
       (revealer :transition "slideleft"
                 :reveal vol_reveal
-                :duration "350ms"
+                :duration "500ms"
         (box :class "volume-btn"
              :space-evenly: true
              :spacing 10
@@ -32,16 +32,6 @@
           (button :onclick "scripts/volume --up"
             ""
           )
-          ;; (label :text "${volume_percent}")
-          ;; (scale :class "vol-bar"
-          ;;        :value volume_percent
-          ;;        :orientation "horizontal"
-          ;;        :max 100
-          ;;        :min 0
-          ;;        :tooltip volume_percent
-          ;;        ;; :draw-value true
-          ;;        :onchange "neofetch"
-          ;; )
         )
       )
     )

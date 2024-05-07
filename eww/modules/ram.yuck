@@ -3,7 +3,7 @@
        :orientation "horizontal"
        :space-evenly false
        :spacing 0
-       :halign "center"
+       :halign "start"
        :tooltip "RAM"
     (label :text " ")
     (label :text {round((EWW_RAM.used_mem_perc) * 1, 0)})

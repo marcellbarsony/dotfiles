@@ -50,7 +50,7 @@ HISTFILE=~/.config/zsh/history
 eval "$(starship init zsh)"
 # }}}
 
-# {{{ Pywal 
+# {{{ Pywal
 (cat ~/.cache/wal/sequences &) # Terminal
 # source ~/.cache/wal/colors-tty.sh # TTY
 # }}}

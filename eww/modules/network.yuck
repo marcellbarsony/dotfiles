@@ -38,7 +38,10 @@
          :space-evenly false
          :orientation "horizontal"
          :spacing "0"
-      (label :text " ${ssid}")
+      (label :class "network-icon"
+             :text ""
+      )
+      (label :text "${ssid}")
       ;; (label :text "${EWW_NET[interface].down}")
       (revealer :transition "slideleft"
                 :reveal net_reveal

@@ -1,36 +1,35 @@
 (defvar music_reveal false)
 
-(deflisten music
-  :initial ""
+(deflisten music :initial ""
   "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || true"
 )
 
 (defwidget music []
   (eventbox :onhover "eww update music_reveal=true"
             :onhoverlost "eww update music_reveal=false"
-    (box :class "player_box"
-         :orientation "h"
+    (box :class "music"
+         :orientation "horizontal"
          :space-evenly false
          :vexpand false
          :hexpand false
-      ;; ;; (box :class "player_cover_art" :vexpand false :hexpand false :style "background-image: url('${cover_art}');")
-      (box :orientation "h"
-           :spacing 5
+      ;; (box :class "player_cover_art" :vexpand false :hexpand false :style "background-image: url('${cover_art}');")
+      (box :class "music_title" 
+           :orientation "horizontal"
+           :spacing 0
            :space-evenly false
            :vexpand false
            :hexpand false
-        (label :class "music_title"
-               :halign "end"
+        (label :halign "start"
                :wrap true
-               :limit-width 50
+               :limit-width 70
                :text music
         )
-        (revealer :transition "slideright"
-                  :reveal music_reveal
+        (revealer :reveal music_reveal
+                  :transition "slideright"
                   :duration "500ms"
-          (box :orientation "h"
+          (box :orientation "horizontal"
                :spacing 0
-               :halign "center"
+               :halign "start"
                :space-evenly false
                :vexpand false
                :hexpand false
