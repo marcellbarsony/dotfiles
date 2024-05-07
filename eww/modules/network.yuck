@@ -34,21 +34,22 @@
   (eventbox :onhover "eww update net_reveal=true"
             :onhoverlost "eww update net_reveal=false"
             :cursor "pointer"
-    (box :space-evenly false
+    (box :class "network"
+         :space-evenly false
          :orientation "horizontal"
-         :spacing "10"
+         :spacing "0"
       (label :text " ${ssid}")
       ;; (label :text "${EWW_NET[interface].down}")
       (revealer :transition "slideleft"
                 :reveal net_reveal
                 :duration "500ms"
-        (box :class "network"
+        (box :class "network-reveal"
              :orientation "horizontal"
              :space-evenly false
              :halign "center"
              :spacing "5"
-          (label :text "${interface}")
-          (label :text "${ip}")
+             :wrap false
+          (label :text "${interface} ${ip}")
           (label :text "via ${gateway}")
         )
       )

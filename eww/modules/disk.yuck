@@ -1,5 +1,10 @@
 (defwidget disk []
-  (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
+  (box :class "disk"
+       :orientation "horizontal"
+       :space-evenly false
+       :spacing 5
+       :halign "start"
+       :tooltip "DISK"
     (label :text "󰆼")
     (label :text {round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)})
   )

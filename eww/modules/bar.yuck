@@ -17,6 +17,9 @@
     (box :orientation "horizontal"
          :space-evenly false
          :halign "end"
+      (disk)
+      (ram)
+      (volume)
       (battery :id "BAT0")
       (clock)
       ;; (tray_button)
@@ -45,6 +48,8 @@
     (box :orientation "horizontal"
          :space-evenly false
          :halign "end"
+      (disk)
+      (ram)
       (volume)
       (network)
       (battery :id "BAT0")

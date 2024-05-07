@@ -10,10 +10,11 @@
   (eventbox :onhover "eww update vol_reveal=true"
             :onhoverlost "eww update vol_reveal=false"
             :cursor "pointer"
-    (box :space-evenly false
+    (box :class "volume"
+         :space-evenly false
          :orientation "horizontal"
-         :spacing 5
-      (button :class "volume-btn"
+         :spacing 0
+      (button :class "volume-icon"
               :onclick "scripts/volume --toggle"
         (label :text ""
                :tooltip volume_percent
@@ -22,15 +23,14 @@
       (revealer :transition "slideleft"
                 :reveal vol_reveal
                 :duration "350ms"
-        (box :space-evenly: true
-             :spacing 0
-          (button :class "volume-btn1"
-                  :onclick "scripts/volume --down"
-                  "󰍴"
+        (box :class "volume-btn"
+             :space-evenly: true
+             :spacing 10
+          (button :onclick "scripts/volume --down"
+            "󰍴"
           )
-          (button :class "volume-btn1"
-                  :onclick "scripts/volume --up"
-                  ""
+          (button :onclick "scripts/volume --up"
+            ""
           )
           ;; (label :text "${volume_percent}")
           ;; (scale :class "vol-bar"

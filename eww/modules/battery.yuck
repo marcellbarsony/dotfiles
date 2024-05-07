@@ -4,14 +4,15 @@
   (eventbox :onhover "eww update bat_reveal=true"
             :onhoverlost "eww update bat_reveal=false"
             :cursor "pointer"
-    (box :space-evenly false
+    (box :class "battery"
+         :space-evenly false
          :orientation "h"
-         :spacing "3"
+         :spacing "0"
       (label :text "󰁹 ${EWW_BATTERY[id].capacity}%")
       (revealer :transition "slideleft"
                 :reveal bat_reveal
                 :duration "500ms"
-        (box :class "battery"
+        (box :class "battery-reveal"
              :orientation "horizontal"
              :space-evenly false
              :halign "center"

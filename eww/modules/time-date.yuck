@@ -7,22 +7,22 @@
   (eventbox :onhover "eww update date_reveal=true"
             :onhoverlost "eww update date_reveal=false"
             :cursor "pointer"
-    (box :space-evenly false
+    (box :class "clock"
+         :space-evenly false
          :orientation "horizontal"
-         :spacing "3"
-      (label :class "clock"
-             :text {formattime(EWW_TIME, "%I:%M")}
-      )
+         :spacing "0"
+      (label :text {formattime(EWW_TIME, "%I:%M")})
       (revealer :transition "slideleft"
                 :reveal date_reveal
                 :duration "500ms"
-        (eventbox :class "date"
-                  :onhover "eww update date_reveal=true"
-                  :onhoverlost "eww update date_reveal=false"
-                  :orientation "horizontal"
-                  :space-evenly false
-                  :halign "center"
-                  :onclick "eww open-many --toggle calendar" clock_date ;; TODO: open-many
+        (box :class "date"
+          (eventbox :onhover "eww update date_reveal=true"
+                    :onhoverlost "eww update date_reveal=false"
+                    :orientation "horizontal"
+                    :space-evenly false
+                    :halign "center"
+                    :onclick "eww open-many --toggle calendar" clock_date ;; TODO: open-many
+          )
         )
       )
     )
