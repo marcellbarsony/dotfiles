@@ -11,7 +11,7 @@ run() {
 run alacritty
 
 # X11 [Compositor]
-picom -b &
+# picom -b &
 # picom --experimental-backends &
 
 # Wallapper

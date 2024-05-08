@@ -5,7 +5,7 @@
 #xmodmap ~/.config/x11/xmodmap &
 
 # Unclutter
-exec unclutter --timeout 3 &
+# exec unclutter --timeout 3 &
 
 # Window Manager
 qtile start
