@@ -27,7 +27,7 @@
 (defpoll ip :interval "60s"
             :initial "[]"
             :run-while true
-  `ip addr show | grep 'inet ' | grep -v '127.0.0.1' | awk '{print $2}'`
+  `ip addr show | grep 'inet ' -m 1 | grep -v '127.0.0.1' | awk '{print $2}'`
 )
 
 (defwidget network []

@@ -106,10 +106,10 @@ map("x", "J", ":move '>+1<CR>gv=gv", { desc = "Block [Move Down]" })
 -- }}}
 
 -- {{{ LSP Help
-map("n", "<leader>lhi", "<cmd>LspInfo<CR>", { desc = "Info" })
 map("n", "<leader>lhc", "<cmd>help lspconfig.txt<CR>", { desc = "Config" })
-map("n", "<leader>lhr", "<cmd>help lsp-config<CR>", { desc = "Reference" })
+map("n", "<leader>lhi", "<cmd>LspInfo<CR>", { desc = "Info" })
 map("n", "<leader>lhl", "<cmd>LspLog<CR>", { desc = "Log" })
+map("n", "<leader>lhr", "<cmd>help lsp-config<CR>", { desc = "Reference" })
 -- }}}
 
 -- {{{ Lspsaga
@@ -190,14 +190,14 @@ map("i", "<C-E>", "<ESC>A", { desc = "Jump BOL" })
 -- }}}
 
 -- {{{ Splits (Ctrl + w)
-map("n", "<C-k>", "<C-w>k", { desc = "Split [Up]" })
-map("n", "<C-j>", "<C-w>j", { desc = "Split [Down]" })
-map("n", "<C-h>", "<C-w>h", { desc = "Split [Left]" })
-map("n", "<C-l>", "<C-w>l", { desc = "Split [Right]" })
-map("n", "<C-A-k>", "<cmd>resize -5<CR>", { desc = "Split [Hor -]" })
-map("n", "<C-A-j>", "<cmd>resize +5<CR>", { desc = "Split [Hor +]" })
-map("n", "<C-A-h>", "<cmd>vertical resize -5<CR>", { desc = "Split [Ver +]" })
-map("n", "<C-A-l>", "<cmd>vertical resize +5<CR>", { desc = "Split [Ver -]" })
+map("n", "<C-m>", "<C-w>h", { desc = "Split [Left]" })
+map("n", "<C-n>", "<C-w>k", { desc = "Split [Up]" })
+map("n", "<C-e>", "<C-w>j", { desc = "Split [Down]" })
+map("n", "<C-i>", "<C-w>l", { desc = "Split [Right]" })
+map("n", "<C-A-m>", "<cmd>vertical resize -5<CR>", { desc = "Split [Ver +]" })
+map("n", "<C-A-n>", "<cmd>resize +5<CR>", { desc = "Split [Hor +]" })
+map("n", "<C-A-e>", "<cmd>resize -5<CR>", { desc = "Split [Hor -]" })
+map("n", "<C-A-i>", "<cmd>vertical resize +5<CR>", { desc = "Split [Ver -]" })
 -- }}}
 
 -- {{{ Telescope

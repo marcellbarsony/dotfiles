@@ -6,5 +6,5 @@ fi
 
 # TTY2 (X11)
 if [[ "$(tty)" = "/dev/tty2" ]]; then
-  pgrep qtile || startx "${XDG_CONFIG_HOME}/_notinuse/x11/.xinitrc"
+  pgrep qtile || startx "${XDG_CONFIG_HOME}/x11/.xinitrc"
 fi

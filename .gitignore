@@ -28,6 +28,9 @@ gh/
 # GTK
 gtk-3.0/
 
+# Htop
+htop/
+
 # Java
 java/
 
