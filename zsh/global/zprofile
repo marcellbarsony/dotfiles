@@ -1,6 +1,6 @@
 # TTY1 (Wayland)
 if [[ "$(tty)" = "/dev/tty1" ]]; then
-  hyprland
+  Hyprland
   # qtile start -b wayland
 fi
 
