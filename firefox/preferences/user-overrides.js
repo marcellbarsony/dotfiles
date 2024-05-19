@@ -26,6 +26,9 @@ user_pref("full-screen-api.warning.timeout", 0);
 /* LAYOUT */
 // user_pref("layout.css.devPixelsPerPx", "0.9"); // Crashing on Hyprland
 
+/* WEBRTC */
+// user_pref("media.peerconnection.enabled", false); // 7020 (Web Real-Time Communication)
+
 /* MEDIA (DRM)*/
 user_pref("media.eme.enabled", true); // 5508
 

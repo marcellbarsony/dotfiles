@@ -31,7 +31,7 @@ vim.g.rainbow_delimiters = {
 }
 -- }}}
 
--- Config {{{
+-- {{{ Config
 -- :help ibl.config
 require("ibl").setup {
   enabled = true,

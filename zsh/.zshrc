@@ -2,10 +2,6 @@
 unsetopt beep
 # }}}
 
-# {{{ Bind key
-bindkey -e
-# }}}
-
 # {{{ Colors
 # https://i.stack.imgur.com/UQVe5.png
 autoload -U colors && colors
@@ -42,8 +38,18 @@ typeset -A ZSH_HIGHLIGHT_REGEXP
 
 # {{{ History
 HISTSIZE=1000
-SAVEHIST=1000
-HISTFILE=~/.config/zsh/history
+SAVEHIST=$HISTSIZE
+HISTFILE=~/.cache/zsh/history
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_dups
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_find_no_dups
+# bindkey '^n' history-search-backward
+# bindkey '^e' history-search-forward
 # }}}
 
 # {{{ Prompt (Starship)
@@ -57,13 +63,13 @@ eval "$(starship init zsh)"
 
 # {{{ VI mode
 bindkey -v
-# Conflicts with Autocomplete
-# export KEYTIMEOUT=1}}}
+# export KEYTIMEOUT=1 # Conflicts with Autocomplete
+# }}}
 
 # {{{ VI mode [Edit line]
 autoload edit-command-line
 zle -N edit-command-line
-bindkey '^e' edit-command-line # Ctrl + e
+bindkey '^f' edit-command-line # Ctrl + f
 # }}}
 
 # {{{ VI mode [Cursor]
@@ -98,6 +104,10 @@ preexec() {
 # 6 - Bar (static)
 # }}}
 
+# {{{ FZF
+eval "$(fzf --zsh)"
+# }}}
+
 # {{{ ZSH [Autocomplete]
 if [[ -f ~/.local/src/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]]; then
   source ~/.local/src/zsh-autocomplete/zsh-autocomplete.plugin.zsh
@@ -118,6 +128,7 @@ zstyle ':autocomplete:*' insert-unambiguous yes
 zstyle ':autocomplete:*' widget-style menu-select
 zstyle ':autocomplete:*' fzf-completion no
 zstyle ':autocomplete:*' add-space executables aliases functions builtins reserved-words commands
+# zstyle ':autocomplete:*' list-colors "${(s.:.)LS_COLORS}" # ls colors
 # }}}
 
 # {{{ ZSH [Autosuggestions]

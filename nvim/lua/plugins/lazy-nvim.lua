@@ -111,7 +111,8 @@ require("lazy").setup({
       "BufNewFile"
     },
     main = "ibl",
-    opts = {}
+    opts = {},
+    commit = "29be0919b91fb59eca9e90690d76014233392bef",
   },
   -- }}}
 

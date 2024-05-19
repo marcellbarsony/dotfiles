@@ -16,7 +16,7 @@ require("theme.tokyonight")
 
 -- {{{ DAP
 require("dap.nvim-dap")
-require("dap.nvim-dap-ui")
+--require("dap.nvim-dap-ui")
 require("dap.nvim-dap-python")
 require("dap.nvim-dap-vtxt")
 -- }}}
