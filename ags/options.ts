@@ -1,15 +1,15 @@
-import { opt, mkOptions } from "lib/option"
-import { distro } from "lib/variables"
-import { icon } from "lib/utils"
-import icons from "lib/icons"
+import { opt, mkOptions } from "lib/options"
+// import { distro } from "lib/variables"
+// import { icon } from "lib/utils"
+// import icons from "lib/icons"
 
 const options = mkOptions(OPTIONS, {
     autotheme: opt(false),
 
-    wallpaper: {
-        resolution: opt<import("service/wallpaper").Resolution>(1920),
-        market: opt<import("service/wallpaper").Market>("random"),
-    },
+    // wallpaper: {
+    //     resolution: opt<import("service/wallpaper").Resolution>(1920),
+    //     market: opt<import("service/wallpaper").Market>("random"),
+    // },
 
     theme: {
         dark: {
@@ -52,7 +52,7 @@ const options = mkOptions(OPTIONS, {
         shadows: opt(true),
         padding: opt(7),
         spacing: opt(12),
-        radius: opt(1),
+        radius: opt(11),
     },
 
     transition: opt(200),
@@ -233,9 +233,9 @@ const options = mkOptions(OPTIONS, {
     },
 
     hyprland: {
-        gaps: opt(1),
+        gaps: opt(2.4),
         inactiveBorder: opt("#282828"),
-        gapsWhenOnly: opt(true),
+        gapsWhenOnly: opt(false),
     },
 })
 

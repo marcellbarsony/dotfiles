@@ -71,10 +71,11 @@ require("lazy").setup({
   { "mfussenegger/nvim-dap",
     event = "VeryLazy",
     dependencies = {
-      "mfussenegger/nvim-dap-python", -- Python
-      "nvim-telescope/telescope-dap.nvim", -- Telescope
-      "rcarriga/nvim-dap-ui", -- UI
-      "theHamsta/nvim-dap-virtual-text", -- Virtual text
+      "mfussenegger/nvim-dap-python",
+      "nvim-telescope/telescope-dap.nvim",
+      "nvim-neotest/nvim-nio",
+      "rcarriga/nvim-dap-ui",
+      "theHamsta/nvim-dap-virtual-text",
     },
   },
   -- }}}
