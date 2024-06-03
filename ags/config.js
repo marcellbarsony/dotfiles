@@ -1,21 +1,18 @@
-function Bar(monitor = 0) {
-    const myLabel = Widget.Label({
-        label: 'some example content',
-    })
+const main = "/tmp/ags/main.js"
+const entry = `${App.configDir}/main.ts`
 
-    return Widget.Window({
-        monitor,
-        name: `bar${monitor}`, // this name has to be unique
-        anchor: ['top', 'left', 'right'],
-        child: myLabel,
-    })
+try {
+    await Utils.execAsync([
+        "bun", "build", entry,
+        "--outfile", main,
+        "--external", "resource://*",
+        "--external", "gi://*",
+        "--external", "file://*",
+    ])
+    await import(`file://${main}`)
+} catch (error) {
+    console.error(error)
+    App.quit()
 }
 
-App.config({
-    windows: () => [
-        Bar(0),
-        Bar(1),
-        Bar(2),
-        // ...forMonitors(Bar)
-    ],
-})
+export { }

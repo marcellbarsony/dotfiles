@@ -1,8 +1,6 @@
-# AGS Config
+# Config
 
-Types are symlinked to `/usr/share/com.github.Aylur.ags/types`
-
-## Options
+Types are symlinked to: `/usr/share/com.github.Aylur.ags/types`
 
 Suggestions only (no typechecking)
 

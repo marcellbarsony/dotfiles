@@ -1,7 +1,7 @@
 import { opt, mkOptions } from "lib/options"
-// import { distro } from "lib/variables"
-// import { icon } from "lib/utils"
-// import icons from "lib/icons"
+import { distro } from "lib/variables"
+import { icon } from "lib/utils"
+import icons from "lib/icons"
 
 const options = mkOptions(OPTIONS, {
     autotheme: opt(false),
@@ -68,17 +68,17 @@ const options = mkOptions(OPTIONS, {
         corners: opt(true),
         transparent: opt(false),
         layout: {
-            start: opt<Array<import("widget/bar/Bar").BarWidget>>([
+            start: opt<Array<import("widgets/bar/Bar").BarWidget>>([
                 "launcher",
                 "workspaces",
                 "taskbar",
                 "expander",
                 "messages",
             ]),
-            center: opt<Array<import("widget/bar/Bar").BarWidget>>([
+            center: opt<Array<import("widgets/bar/Bar").BarWidget>>([
                 "date",
             ]),
-            end: opt<Array<import("widget/bar/Bar").BarWidget>>([
+            end: opt<Array<import("widgets/bar/Bar").BarWidget>>([
                 "media",
                 "expander",
                 "systray",
