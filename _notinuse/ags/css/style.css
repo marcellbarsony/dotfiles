@@ -33,6 +33,11 @@ label {
     border-bottom: 3px solid @theme_selected_bg_color;
 }
 
+.workspace {
+    background-color: #FF0000;
+    color: #FF0000;
+}
+
 .client-title {
     color: @theme_selected_bg_color;
 }

@@ -3,7 +3,7 @@ export BROWSER="Firefox"
 export EDITOR="nvim"
 export TERMINAL="alacritty"
 export VISUAL="nvim"
-export WM="Hyprland" # qtile
+export WM="Hyprland"
 
 # Language
 export LANG=en_US.UTF-8
@@ -63,8 +63,9 @@ export SUDO_PROMPT="$(tput bold setaf 4)[sudo]$(tput sgr0) password for %p: "
 
 # Wayland
 export QT_QPA_PLATFORM=wayland
-export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_QPA_PLATFORMTHEME=qt5ct:qt6ct
 export QT_STYLE_OVERRIDE="Adwaita-Dark"
+export XDG_CURRENT_DESKTOP=KDE
 # export XDG_CURRENT_DESKTOP=qtile
 # export XDG_SESSION_DESKTOP=qtile
 

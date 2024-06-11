@@ -1,16 +1,20 @@
-import { opt, mkOptions } from "lib/options"
+import { opt, mkOptions } from "lib/option"
 import { distro } from "lib/variables"
 import { icon } from "lib/utils"
 import icons from "lib/icons"
 
 const options = mkOptions(OPTIONS, {
     autotheme: opt(false),
+    transition: opt(200),
 
-    // wallpaper: {
-    //     resolution: opt<import("service/wallpaper").Resolution>(1920),
-    //     market: opt<import("service/wallpaper").Market>("random"),
-    // },
+    // {{{ Wallpaper
+    wallpaper: {
+        resolution: opt<import("service/wallpaper").Resolution>(1920),
+        market: opt<import("service/wallpaper").Market>("random"),
+    },
+    // }}}
 
+    // {{{ Theme
     theme: {
         dark: {
             primary: {
@@ -52,41 +56,43 @@ const options = mkOptions(OPTIONS, {
         shadows: opt(true),
         padding: opt(7),
         spacing: opt(12),
-        radius: opt(11),
+        radius: opt(0),
     },
+    // }}}
 
-    transition: opt(200),
-
+    // {{{ Font
     font: {
-        size: opt(13),
+        size: opt(11),
         name: opt("Ubuntu Nerd Font"),
     },
+    // }}}
 
+    // {{{ Bar
     bar: {
         flatButtons: opt(true),
         position: opt<"top" | "bottom">("top"),
         corners: opt(true),
         transparent: opt(false),
         layout: {
-            start: opt<Array<import("widgets/bar/Bar").BarWidget>>([
-                "launcher",
+            start: opt<Array<import("widget/bar/Bar").BarWidget>>([
                 "workspaces",
-                "taskbar",
                 "expander",
                 "messages",
+                // "launcher",
+                // "taskbar",
             ]),
-            center: opt<Array<import("widgets/bar/Bar").BarWidget>>([
-                "date",
-            ]),
-            end: opt<Array<import("widgets/bar/Bar").BarWidget>>([
+            center: opt<Array<import("widget/bar/Bar").BarWidget>>([
                 "media",
+            ]),
+            end: opt<Array<import("widget/bar/Bar").BarWidget>>([
                 "expander",
-                "systray",
-                "colorpicker",
                 "screenrecord",
                 "system",
                 "battery",
+                "date",
                 "powermenu",
+                // "systray",
+                // "colorpicker",
             ]),
         },
         launcher: {
@@ -101,11 +107,11 @@ const options = mkOptions(OPTIONS, {
             action: opt(() => App.toggleWindow("launcher")),
         },
         date: {
-            format: opt("%H:%M - %A %e."),
+            format: opt("%H:%M"),
             action: opt(() => App.toggleWindow("datemenu")),
         },
         battery: {
-            bar: opt<"hidden" | "regular" | "whole">("regular"),
+            bar: opt<"hidden" | "regular" | "whole">("hidden"),
             charging: opt("#00D787"),
             percentage: opt(true),
             blocks: opt(7),
@@ -113,7 +119,7 @@ const options = mkOptions(OPTIONS, {
             low: opt(30),
         },
         workspaces: {
-            workspaces: opt(7),
+            workspaces: opt(10),
         },
         taskbar: {
             iconSize: opt(0),
@@ -141,7 +147,9 @@ const options = mkOptions(OPTIONS, {
             action: opt(() => App.toggleWindow("powermenu")),
         },
     },
+    // }}}
 
+    // {{{ Launcher
     launcher: {
         width: opt(0),
         margin: opt(80),
@@ -166,13 +174,17 @@ const options = mkOptions(OPTIONS, {
             ]),
         },
     },
+    // }}}
 
+    // {{{ Overview
     overview: {
         scale: opt(9),
         workspaces: opt(7),
         monochromeIcon: opt(true),
     },
+    // }}}
 
+    // {{{ Powermenu
     powermenu: {
         sleep: opt("systemctl suspend"),
         reboot: opt("systemctl reboot"),
@@ -181,7 +193,9 @@ const options = mkOptions(OPTIONS, {
         layout: opt<"line" | "box">("line"),
         labels: opt(true),
     },
+    // }}}
 
+    // {{{ Quicksettings
     quicksettings: {
         avatar: {
             image: opt(`/var/lib/AccountsService/icons/${Utils.USER}`),
@@ -195,9 +209,11 @@ const options = mkOptions(OPTIONS, {
             coverSize: opt(100),
         },
     },
+    // }}}
 
+    // {{{ Datemenu
     datemenu: {
-        position: opt<"left" | "center" | "right">("center"),
+        position: opt<"left" | "center" | "right">("right"),
         weather: {
             interval: opt(60_000),
             unit: opt<"metric" | "imperial" | "standard">("metric"),
@@ -209,7 +225,9 @@ const options = mkOptions(OPTIONS, {
             ),
         },
     },
+    // }}}
 
+    // {{{ OSD
     osd: {
         progress: {
             vertical: opt(true),
@@ -225,18 +243,23 @@ const options = mkOptions(OPTIONS, {
             },
         },
     },
+    // }}}
 
+    // {{{ Notifications
     notifications: {
         position: opt<Array<"top" | "bottom" | "left" | "right">>(["top", "right"]),
         blacklist: opt(["Spotify"]),
         width: opt(440),
     },
+    // }}}
 
+    // {{{ Hyprland
     hyprland: {
-        gaps: opt(2.4),
+        gaps: opt(1),
         inactiveBorder: opt("#282828"),
-        gapsWhenOnly: opt(false),
+        gapsWhenOnly: opt(true),
     },
+    // }}}
 })
 
 globalThis["options"] = options
