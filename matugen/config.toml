@@ -1,0 +1,23 @@
+[config]
+reload_apps = true
+set_wallpaper = false
+# wallpaper_tool = 'Swww'
+# prefix = '@'
+# swww_options = [
+#     "--transition-type",
+#     "center",
+# ]
+
+[config.reload_apps_list]
+waybar = true
+kitty = true
+gtk_theme = true
+dunst = true
+
+[templates.hyprland]
+input_path = '~/.config/matugen/template/hyprland.template'
+output_path = '~/.cache/matugen/colors-hyprland.conf'
+
+[templates.scss]
+input_path = '~/.config/matugen/template/scss.template'
+output_path = '~/.cache/matugen/colors.scss'

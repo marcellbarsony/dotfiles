@@ -1,4 +1,4 @@
-@import "/home/marci/.cache/wal/colors.scss";
+@import "/home/marci/.cache/matugen/colors.scss";
 
 .workspaces-widget {
   // border-width: 1px;
@@ -10,12 +10,12 @@
   margin: 0rem;
   padding: 0rem 0.5rem 0rem 0.5rem;
   &.current {
-    background-color: $color5;
+    background-color: $color1;
     color: rgba(0, 0, 0, 1);
   }
 
   &.occupied:not(.current) {
-    color: $color5;
+    color: $color1;
   }
 
   &.empty {

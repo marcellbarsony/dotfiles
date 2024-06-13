@@ -1,0 +1,11 @@
+$background = rgb(000000)
+
+$color1 = rgb({{colors.primary.default.hex_stripped}})
+$color2 = rgb({{colors.on_primary.default.hex_stripped}})
+$color3 = rgb({{colors.primary_container.default.hex_stripped}})
+$color4 = rgb({{colors.secondary.default.hex_stripped}})
+$color5 = rgb({{colors.on_secondary.default.hex_stripped}})
+$color6 = rgb({{colors.secondary_container.default.hex_stripped}})
+$color7 = rgb({{colors.tertiary.default.hex_stripped}})
+$color8 = rgb({{colors.on_tertiary.default.hex_stripped}})
+$color9 = rgb({{colors.tertiary_container.default.hex_stripped}})

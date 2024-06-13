@@ -1,0 +1,11 @@
+$background: #000000;
+
+$color1: {{colors.primary.default.hex}};
+$color2: {{colors.on_primary.default.hex}};
+$color3: {{colors.primary_container.default.hex}};
+$color4: {{colors.secondary.default.hex}};
+$color5: {{colors.on_secondary.default.hex}};
+$color6: {{colors.secondary_container.default.hex}};
+$color7: {{colors.tertiary.default.hex}};
+$color8: {{colors.on_tertiary.default.hex}};
+$color9: {{colors.tertiary_container.default.hex}};

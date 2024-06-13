@@ -25,17 +25,17 @@ transitions=("wipe" "outer" "random")
 random_index=$((RANDOM % ${#transitions[@]}))
 random_transition=${transitions[$random_index]}
 
-# Swww: Set wallpaper
+# Wallpaper
 swww img $random_file \
     --transition-bezier .43,0.19,1,.4 \
     --transition-fps=60 \
     --transition-type=$random_transition \
     --transition-duration=1 \
 
-# Pywal: Generate color scheme
-wal -i $random_file -b "#000000"
+# Color scheme
+matugen image $random_file
 
-# Send notification
+# Notification
 notify-send "SWWW" "${random_file##*/}"
 
 exit 0
