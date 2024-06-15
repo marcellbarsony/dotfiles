@@ -1,7 +1,12 @@
-import = [ "~/.config/alacritty/themes/nord.toml" ]
 live_config_reload = true
 
 # {{{ Colors
+# https://github.com/alacritty/alacritty-theme
+
+# import = [ "~/.config/alacritty/themes/nord.toml" ]
+# import = [ "~/.config/alacritty/themes/cyberpunk-neon.toml" ]
+import = [ "~/.config/alacritty/themes/tokyo-night.toml" ]
+
 [colors]
 draw_bold_text_with_bright_colors = false
 transparent_background_colors = false
@@ -12,9 +17,6 @@ text = "CellBackground"
 
 [colors.primary]
 background = "#000000"
-# bright_foreground = "#eaeaea"
-# dim_foreground = "#828482"
-# foreground = "#d5d8d6"
 # }}}
 
 # {{{ Cursor

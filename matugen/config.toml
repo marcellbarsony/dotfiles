@@ -1,17 +1,8 @@
 [config]
 reload_apps = true
 set_wallpaper = false
-# wallpaper_tool = 'Swww'
-# prefix = '@'
-# swww_options = [
-#     "--transition-type",
-#     "center",
-# ]
 
 [config.reload_apps_list]
-waybar = true
-kitty = true
-gtk_theme = true
 dunst = true
 
 [templates.hyprland]
