@@ -8,28 +8,33 @@ $directory$all
 '''
 # }}}
 
-[azure] # {{{
+# {{{ Azure
+[azure]
 format = 'via [$symbol($subscription)]($style) '
 symbol = '󰠅 '
 style = 'blue bold'
 # }}}
 
-[c] # {{{
+# {{{ C
+[c]
 format = 'via [$symbol($version(-$name))]($style) '
 symbol = ' '
 # }}}
 
-[character] # {{{
+# {{{ Character
+[character]
 success_symbol = '[](bold green)'
 error_symbol = '[](bold red)'
 # }}}
 
-[cmd_duration] # {{{
+# {{{ CMD duration
+[cmd_duration]
 min_time = 2_000
 format = 'took [$duration]($style) '
 # }}}
 
-[directory] # {{{
+# {{{ Directory
+[directory]
 truncation_symbol = '../'
 truncation_length = 3
 truncate_to_repo = false
@@ -37,20 +42,23 @@ read_only = ' '
 read_only_style = 'red'
 # }}}
 
-[git_branch] # {{{
+# {{{ GIT Branch
+[git_branch]
 always_show_remote = true
 format = 'on [$symbol$branch]($style) '
 symbol = ' '
 style = 'bold purple'
 # }}}
 
-[git_commit] # {{{
+# {{{ GIT Commit
+[git_commit]
 format = 'via [$hash$tag]($style) '
 tag_disabled = false
 style = 'bold purple'
 # }}}
 
-[git_status] # {{{
+# {{{ GIT Status
+[git_status]
 format = '([\[$all_status$ahead_behind\]]($style) )'
 conflicted = '='
 ahead = '󰁝'
@@ -66,42 +74,50 @@ untracked = '?'
 style = 'bold purple'
 # }}}
 
-[hostname] # {{{
+# {{{ Hostname
+[hostname]
 ssh_symbol = ' '
 # }}}
 
-[line_break] # {{{
+# {{{ Line break
+[line_break]
 disabled = false
 # }}}
 
-[lua] # {{{
+# {{{ Lua
+[lua]
 format = 'via [$symbol($version)]($style) '
 symbol = ' '
 style = 'bold blue'
 # }}}
 
-[nodejs] # {{{
+# {{{ Node JS
+[nodejs]
 symbol = ' '
 format = 'via [$symbol($version)]($style) '
 style = 'bold green'
 # }}}
 
-[package] # {{{
+# {{{ Package
+[package]
 disabled = true
 # }}}
 
-[python] # {{{
+# {{{ Python
+[python]
 format = 'via [${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
 symbol = ' '
 # }}}
 
-[rust] # {{{
+# {{{ Rust
+[rust]
 format = 'via [$symbol($version)]($style) '
 symbol = ' '
 version_format = '${raw}'
 # }}}
 
-[sudo] # {{{
+# {{{ Sudo
+[sudo]
 disabled = false
 format = 'as [su]($style) '
 # }}}

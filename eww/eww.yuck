@@ -23,5 +23,3 @@
 (include "modules/battery.yuck")
 (include "modules/time-date.yuck")
 ;; }}}
-
-(include "modules/control.yuck")

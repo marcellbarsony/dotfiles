@@ -16,7 +16,7 @@ color:
   theme: custom
 
 # == Date ==
-date: "+%a %d %b %Y %X"
+date: "+%Y %b %d %a %X"
 
 # == Dereference ==
 dereference: false
@@ -41,14 +41,14 @@ recursion:
 # == Size ==
 size: default
 
+# == Permission ==
+permission: rwx
+
 # == Sorting ==
 sorting:
   column: name
   reverse: false
   dir-grouping: first
-
-# == Permission ==
-permission: rwx
 
 # == No Symlink ==
 no-symlink: false
@@ -64,3 +64,11 @@ symlink-arrow: ⇒
 
 # == Header ==
 header: false
+
+# == Literal ==
+literal: false
+
+# == Truncate owner ==
+truncate-owner:
+  after:
+  marker: ""

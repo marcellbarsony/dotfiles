@@ -2,7 +2,6 @@
 
 Rofi is a window switcher, application launcher and dmenu replacement
 
-
 **GitHub repository**
 ```
 https://github.com/davatorium/rofi

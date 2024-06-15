@@ -1,0 +1,10 @@
+
+* {
+    background:     #15161EFF;
+    background-alt: #1A1B26FF;
+    foreground:     {{colors.secondary.default.hex}}FF;
+    selected:       {{colors.primary.default.hex}}FF;
+    active:         #414868FF;
+    urgent:         #F7768EFF;
+}
+
