@@ -1,6 +1,6 @@
 * {
-    background:     #15161EFF;
-    background-alt: #1A1B26FF;
+    background:     #151515FF;
+    background-alt: {{colors.on_primary_fixed.default.hex}}FF;
     foreground:     {{colors.secondary.default.hex}}FF;
     selected:       {{colors.primary.default.hex}}FF;
     active:         #414868FF;
