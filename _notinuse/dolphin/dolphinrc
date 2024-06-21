@@ -1,0 +1,25 @@
+MenuBar=Disabled
+
+[Colors:View]
+BackgroundNormal=#2E2E2E
+
+[DetailsMode]
+PreviewSize=64
+
+[General]
+RememberOpenedTabs=false
+ShowFullPathInTitlebar=true
+SortingChoice=CaseInsensitiveSorting
+Version=202
+ViewPropsTimestamp=2024,5,26,1,8,55.305
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[MainWindow]
+MenuBar=Disabled
+ToolBarsMovable=Disabled
+
+[PreviewSettings]
+Plugins=appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,svgthumbnail

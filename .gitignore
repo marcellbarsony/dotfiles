@@ -14,8 +14,10 @@ chromium/
 dconf/
 
 # Dolphin
+kdeglobals
 baloofileinformationrc
-dolphinrc
+kservicemenurc
+# dolphinrc
 kde.org/
 kiorc
 ktrashrc
@@ -35,11 +37,10 @@ htop/
 java/
 
 # Kdenlive
-kdeglobals
 kdenlive*
 
 # Neofetch
-# neofetch
+neofetch
 
 # Npm
 npm/_cacache

@@ -4,6 +4,7 @@ alias cp="cp -i"
 alias grep="grep --color=auto"
 alias mv="mv -i"
 alias rm="rm -i"
+alias yz="yazi"
 # }}}
 
 # {{{ Coreutils [Rust]
