@@ -107,18 +107,6 @@ require("dapui").setup({
 })
 -- }}}
 
--- {{{ [TODO] Neodev.nvim
--- It is highly recommended to use neodev.nvim to enable type checking for
--- nvim-dap-ui to get type checking, documentation and autocompletion for
--- all API functions.
---
--- >lua
---   require("neodev").setup({
---     library = { plugins = { "nvim-dap-ui" }, types = true },
---     ...
---   })
--- }}}
-
 -- {{{ Event listeners
 local dap, dapui = require("dap"), require("dapui")
 
@@ -131,4 +119,16 @@ end
 dap.listeners.before.event_exited["dapui_config"] = function()
   dapui.close() -- Close DAP UI
 end
+-- }}}
+
+-- {{{ [TODO] Neodev.nvim
+-- It is highly recommended to use neodev.nvim to enable type checking for
+-- nvim-dap-ui to get type checking, documentation and autocompletion for
+-- all API functions.
+--
+-- >lua
+--   require("neodev").setup({
+--     library = { plugins = { "nvim-dap-ui" }, types = true },
+--     ...
+--   })
 -- }}}

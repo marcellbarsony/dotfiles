@@ -1,20 +1,22 @@
 "$schema" = "https://yazi-rs.github.io/schemas/theme.json"
 
-# Flavor {{{
+# vim:fileencoding=utf-8:foldmethod=marker
+
+# : Flavor {{{
 [flavor]
 use = ""
-# }}}
+# : }}}
 
-# Manager {{{
+# : Manager {{{
 [manager]
 cwd = { fg = "cyan" }
 
 # Hovered
 hovered         = { reversed = true }
-preview_hovered = { underline = false }
+preview_hovered = { underline = true }
 
 # Find
-find_keyword  = { fg = "yellow", bold = true, italic = true, underline = false }
+find_keyword  = { fg = "yellow", bold = true, italic = true, underline = true }
 find_position = { fg = "magenta", bg = "reset", bold = true, italic = true }
 
 # Marker
@@ -39,9 +41,9 @@ border_style  = { fg = "gray" }
 
 # Highlighting
 syntect_theme = ""
-# }}}
+# : }}}
 
-# Status {{{
+# : Status {{{
 [status]
 separator_open  = ""
 separator_close = ""
@@ -63,24 +65,24 @@ permissions_r = { fg = "yellow" }
 permissions_w = { fg = "red" }
 permissions_x = { fg = "cyan" }
 permissions_s = { fg = "darkgray" }
-# }}}
+# : }}}
 
-# Select {{{
+# : Select {{{
 [select]
 border   = { fg = "blue" }
 active   = { fg = "magenta", bold = true }
 inactive = {}
-# }}}
+# : }}}
 
-# Input {{{
+# : Input {{{
 [input]
 border   = { fg = "blue" }
 title    = {}
 value    = {}
 selected = { reversed = true }
-# }}}
+# : }}}
 
-# Completion {{{
+# : Completion {{{
 [completion]
 border   = { fg = "blue" }
 active   = { reversed = true }
@@ -90,16 +92,16 @@ inactive = {}
 icon_file    = ""
 icon_folder  = ""
 icon_command = ""
-# }}}
+# : }}}
 
-# Tasks {{{
+# : Tasks {{{
 [tasks]
 border  = { fg = "blue" }
 title   = {}
 hovered = { fg = "magenta", underline = true }
-# }}}
+# : }}}
 
-# Which {{{
+# : Which {{{
 [which]
 cols            = 3
 mask            = { bg = "black" }
@@ -108,18 +110,18 @@ rest            = { fg = "darkgray" }
 desc            = { fg = "lightmagenta" }
 separator       = "  "
 separator_style = { fg = "darkgray" }
-# }}}
+# : }}}
 
-# Help {{{
+# : Help {{{
 [help]
 on      = { fg = "cyan" }
 run     = { fg = "magenta" }
 desc    = {}
 hovered = { reversed = true, bold = true }
 footer  = { fg = "black", bg = "white" }
-# }}}
+# : }}}
 
-# Notify {{{
+# : Notify {{{
 [notify]
 title_info  = { fg = "green" }
 title_warn  = { fg = "yellow" }
@@ -129,9 +131,9 @@ title_error = { fg = "red" }
 icon_info  = ""
 icon_warn  = ""
 icon_error = ""
-# }}}
+# : }}}
 
-# File-specific styles {{{
+# : File-specific styles {{{
 [filetype]
 
 rules = [
@@ -305,4 +307,4 @@ rules = [
   { name = "*" , text = "" },
   { name = "*/", text = "" },
 ]
-# }}}
+# : }}}
