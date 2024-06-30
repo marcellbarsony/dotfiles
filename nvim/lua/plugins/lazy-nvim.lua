@@ -38,16 +38,6 @@ require("lazy").setup({
   "NvChad/nvim-colorizer.lua",
   -- }}}
 
-  -- {{{ Comment
-  { "numToStr/Comment.nvim",
-    event = {
-      "BufReadPre",
-      "BufNewFile"
-    },
-    -- lazy = false,
-  },
-  -- }}}
-
   -- {{{ Devicons
   { "nvim-tree/nvim-web-devicons",
     event = "VeryLazy"

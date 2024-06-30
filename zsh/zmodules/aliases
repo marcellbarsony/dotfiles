@@ -4,7 +4,6 @@ alias cp="cp -i"
 alias grep="grep --color=auto"
 alias mv="mv -i"
 alias rm="rm -i"
-alias yz="yazi"
 # }}}
 
 # {{{ Coreutils [Rust]
@@ -17,10 +16,12 @@ alias jekyll="bundle exec jekyll serve --livereload"
 
 # {{{ Navigation
 alias ..="cd .."
+alias ..1="cd .."
 alias ..2="cd ../.."
 alias ..3="cd ../../.."
 alias ..4="cd ../../../.."
 alias ..5="cd ../../../../.."
+alias ..10="cd ../../../../../../../../../.."
 alias home="clear && cd $HOME && ls"
 alias cfg="clear && cd $HOME/.config && ls"
 alias notes="clear && cd $HOME/.local/git/notes && ls"

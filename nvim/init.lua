@@ -56,7 +56,6 @@ require("plugins.which-key")
 -- {{{ Plugins
 require("plugins.autopairs")
 require("plugins.colorizer")
-require("plugins.comment")
 require("plugins.hex")
 require("plugins.indent-blankline")
 require("plugins.lualine")
