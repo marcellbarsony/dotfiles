@@ -6,7 +6,9 @@
 require("mason-lspconfig").setup({
   -- Bootstrap LSP servers
   ensure_installed = {
-    "bashls", -- Bash (Shell script)
+    "asm_lsp", -- Assembly
+    "bashls", -- Bash
+    "clangd", -- C/C++
     "lua_ls", -- Lua
     "rust_analyzer", -- Rust
     "tsserver", -- Typescript / JavaScript

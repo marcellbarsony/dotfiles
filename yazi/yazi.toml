@@ -1,7 +1,7 @@
 "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
 [manager]
-ratio          = [ 1, 2, 2 ]
+ratio          = [ 1, 1, 1 ]
 sort_by        = "alphabetical"
 sort_sensitive = false
 sort_reverse   = false

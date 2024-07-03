@@ -10,9 +10,12 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 -- {{{ LSP Servers
 local servers = {
+  "asm_lsp",
+  "bashls",
+  "clangd",
   "lua_ls",
   "pyright",
-  "rust_analyzer",
+  -- "rust_analyzer",
 }
 
 for _, lsp in ipairs(servers) do

@@ -31,6 +31,7 @@ require("plugins.gitsigns")
 -- }}}
 
 -- {{{ Lang
+require("lang.langc")
 require("lang.rustaceanvim")
 require("lang.tsserver")
 -- }}}

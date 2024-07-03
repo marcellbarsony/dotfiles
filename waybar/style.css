@@ -1,48 +1,52 @@
-/* @import '../../.cache/pywal/..'; */
-
-@define-color teal #40b1b1;
+ @import '../../.cache/matugen/colors.css'; 
 
 * {
   border: none;
   border-radius: 0;
   font-family: Roboto, Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  min-height: 0;
+  font-size: 15px;
+  min-height: 20px;
   padding: 0 0px;
 }
 
 window#waybar {
-  background: rgba(43, 48, 59, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   border-bottom: 0px solid rgba(100, 114, 125, 0.5);
-  color: white;
+  color: @primary;
 }
 
+/* font-family: Noto Sans Mono, Roboto, Helvetica, Arial, monospace; */
 /* {{{ Monitors */
 /* window.eDP-1 * { font-size: 10px; } */
 /* }}} */
 
 /* {{{ Workspaces */
 #workspaces button {
+  background-color: transparent;
+  color: @primary;
   padding: 0 3px;
-  color: @teal;
-}
-
-#workspaces button.active {
-  background-color: @teal;
-  /*border-top: 1px solid @teal;*/
-}
-
-#workspaces button.visible {
-  color: @teal;
-}
-
-#workspaces button:hover {
-  color: white;
-  background: white;
 }
 
 #workspaces button.empty {
+  /*color: @primary_container;*/
+  /*color: @on_secondary;*/
   color: gray;
+  background-color: transparent;
+}
+
+#workspaces button.visible {
+  background-color: transparent;
+}
+
+#workspaces button.active {
+  color: black;
+  background-color: @primary;
+}
+
+#workspaces button:hover {
+  border-top: 0px solid;
+  background: black;
+  color: white;
 }
 
 /* #workspaces button.current_output.visible { */
@@ -55,18 +59,23 @@ window#waybar {
 /*   color: blue; */
 /* } */
 
-/* #workspaces button.focused { */
-/*     color: red; */
-/*     background: #64F27D; */
-/*     border-top: 5px solid white; */
-/* } */
-
+/*#workspaces button.focused { */
+/*    color: red; */
+/*    background: #64F27D; */
+/*    border-top: 5px solid white; */
+/*}*/
 /* }}} */
 
 /* {{{ Widgets */
-
-#mode, #clock, #battery {
-    padding: 0 10px;
+#mode,
+#clock,
+#battery,
+#network,
+#cpu,
+#disk,
+#memory,
+#wireplumber {
+    padding: 0 2px;
 }
 
 #mode {
@@ -75,27 +84,43 @@ window#waybar {
 }
 
 #clock {
-    background-color: #64727D;
+    background-color: @on_secondary;
 }
 
 #battery {
-    background-color: #ffffff;
-    color: black;
+    background-color: @secondary_container;
+    color: @primary;
 }
 
 #battery.charging {
-    color: white;
-    background-color: #26A65B;
+    background-color: @secondary_container;
+    color: @primary;
 }
 
 #battery.warning:not(.charging) {
-    background: #f53c3c;
-    color: white;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    background: #f53c3c;
+    color: @primary;
+}
+
+#network {
+
+}
+
+#wireplumber {
+
+}
+
+#cpu {
+
+}
+
+#disk {
+
 }
 
 @keyframes blink {

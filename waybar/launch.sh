@@ -1,4 +1,5 @@
 # Launch Waybar
+# https://github.com/Alexays/Waybar
 
 killall waybar
 

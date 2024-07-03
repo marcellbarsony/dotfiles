@@ -1,5 +1,5 @@
 -- Lspsaga
--- https://github.com/glepnir/lspsaga.nvim
+-- https://github.com/nvimdev/lspsaga.nvim
 -- https://nvimdev.github.io/lspsaga
 -- https://github.com/nvimdev/lspsaga.nvim/blob/main/lua/lspsaga/init.lua
 

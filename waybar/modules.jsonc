@@ -35,15 +35,16 @@
   // {{{ Modules - Right
   // {{{ Clock
   "clock": {
-    "format": "{:%I:%M %p}",
+    "format": "{:%I:%M}",
     "format-alt": "{:%b %d %a}",
     "interval": 60,
-    // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "mode"         : "year",
       "mode-mon-col" : 3,
       "on-scroll"    : 1,
+      //"weeks-pos"     : "right",
       "format": {
         "months":   "<span color='#ffead3'><b>{}</b></span>",
         "days":     "<span color='#ecc6d9'><b>{}</b></span>",
@@ -54,10 +55,8 @@
     },
     "actions":  {
       "on-click-right": "mode",
-      "on-click-forward": "tz_up",
-      "on-click-backward": "tz_down",
-      "on-scroll-up": "shift_up",
-      "on-scroll-down": "shift_down"
+      "on-scroll-up": "tz_up",
+      "on-scroll-down": "tz_down"
     }
   },
   // }}}
@@ -65,6 +64,7 @@
   // {{{ Battery
   "battery": {
       "bat": "BAT0",
+      "full-at": "99",
       "states": {
           "good": 90,
           "warning": 20,
@@ -72,122 +72,66 @@
       },
       "format": "{capacity}%",
       "format-full": "{capacity}%",
-      "format-charging": "{capacity}% ",
-      "format-plugged": "{capacity}% ",
-      "format-alt": "{time} {icon}",
-      // "format-good": "",
-      // "format-full": "",
-      "format-icons": ["", "", "", "", ""]
-  },
-  "battery#bat2": {
+      "format-charging": "󱐋 {capacity}%",
+      "format-plugged": " {capacity}%",
   },
   // }}}
 
   // {{{ Network
   "network": {
-    // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format-wifi": " {essid} ({signalStrength})",
-    "format-ethernet": "{ipaddr}/{cidr} ",
-    "tooltip-format": "{ifname} via {gwaddr} ",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "Disconnected ⚠",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    "interval": 60,
+    "interface": "wlp0s2*",
+    "format-alt": "",
+    "format-disconnected": "Disconnected",
+    "format-icons": " ",
+    "format-ethernet": "{ipaddr}/{cidr}",
+    "format-linked": "{ifname} (No IP)",
+    "format-wifi": "{icon}",
+    "tooltip-format": "{ifname}: {ipaddr}/{cidr} @ {essid}({signalStrength})",
   },
   // }}}
 
   // {{{ Audio (Wireplumber)
   "wireplumber": {
-    "format": "{volume}%",
+    "format": "{icon} ",
     "format-muted": "",
-    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    //"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%+",
+    "on-click-right": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%-",
+    "format-icons": ["", "", ""],
     "max-volume": 150,
-    "scroll-step": 1.0
-  },
-  // }}}
-  // }}}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  "tray": {
-      // "icon-size": 21,
-      "spacing": 10
-  },
-
-  "cpu": {
-      "format": "{usage}% ",
-      "tooltip": false
-  },
-  "memory": {
-      "format": "{}% "
-  },
-  "temperature": {
-      // "thermal-zone": 2,
-      // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-      "critical-threshold": 80,
-      // "format-critical": "{temperatureC}°C {icon}",
-      "format": "{temperatureC}°C {icon}",
-      "format-icons": ["", "", ""]
-  },
-  "backlight": {
-      // "device": "acpi_video1",
-      "format": "{percent}% {icon}",
-      "format-icons": ["", "", "", "", "", "", "", "", ""]
-  },
-  "power-profiles-daemon": {
-    "format": "{icon}",
-    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "scroll-step": 5.0,
     "tooltip": true,
-    "format-icons": {
-      "default": "",
-      "performance": "",
-      "balanced": "",
-      "power-saver": ""
-    }
+    "tooltip-format": "{volume}%",
   },
-  "custom/media": {
-      "format": "{icon} {}",
-      "return-type": "json",
-      "max-length": 40,
-      "format-icons": {
-          "spotify": "",
-          "default": "🎜"
-      },
-      "escape": true,
-      "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-      // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-  }
+  // }}}
+
+  // {{{ CPU
+  "cpu": {
+      "interval": 10,
+      "format": "",
+      "max-length": 10,
+      "tooltip": false,
+      "tooltip-format": "{usage}%"
+  },
+  // }}}
+
+  // {{{ Disk
+  "disk": {
+      "interval": 60,
+      "format": " ",
+      "path": "/",
+      "tooltip-format": "{path}: {percentage_used}%",
+  },
+  // }}}
+
+  // {{{ RAM
+  "memory": {
+      "interval": 30,
+      "format": " ",
+      "max-length": 10,
+      "tooltip-format": "{percentage}%"
+  },
+  // }}}
+  // }}}
 }
