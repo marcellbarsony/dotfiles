@@ -116,7 +116,6 @@ local options = {
   foldmethod = "marker",
   foldtext =
     [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').' ... ' ]],
-  -- [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').' ... '.trim(getline(v:foldend)) ]],
   -- }}}
 
   -- {{{ 15. Diff mode

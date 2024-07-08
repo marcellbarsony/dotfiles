@@ -112,7 +112,6 @@ local mappings = {
   ["]"] = { name = "Next" },
   g = {
     name = "Go-To",
-    d = "Definition",
     D = "Declaration",
     i = "Implementation",
     t = "Type",
@@ -142,18 +141,10 @@ local mappings = {
     -- {{{ l (LSP)
     l = {
       name = "LSP",
-      a = "Action",
-      f = "Format",
-      k = "Documentation",
-      -- r = "Rename",
       h = { name = "Help" },
       s = { name = "Symbols" },
       u = { name = "Calls" },
     },
-    -- }}}
-
-    -- {{{ r (Rust)
-    -- r = { name = "Rust" },
     -- }}}
 
     -- {{{ t (Telescope)
@@ -171,7 +162,6 @@ local mappings = {
       i = { name = "Treesitter" },
       s = { name = "Spell" },
       t = { name = "Telescope" },
-      x = { name = "Trouble" },
     },
     -- }}}
 
@@ -179,6 +169,7 @@ local mappings = {
     x = {
       name = "Plugins",
       m = { name = "Mason" },
+      x = { name = "Trouble" },
     },
     -- }}}
   }

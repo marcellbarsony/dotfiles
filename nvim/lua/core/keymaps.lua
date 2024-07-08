@@ -105,6 +105,63 @@ map("x", "J", ":move '>+1<CR>gv=gv", { desc = "Block [Move Down]" })
 --map("n", "J", ":move .+1<CR>", { desc = "Line [Move Down]" })
 -- }}}
 
+-- {{{ LSP
+-- Calls
+-- map("n", "<leader>lci", vim.lsp.buf.incoming_calls, { buffer = args.buf, desc = "Incoming" })
+-- map("n", "<leader>lco", vim.lsp.buf.outgoing_calls, { buffer = args.buf, desc = "Outgoing" })
+
+-- Codelens
+-- map("n", "<leader>lxx", vim.lsp.codelens.refresh, { buffer = args.buf, desc = "Codelens Refresh" })
+-- map("n", "<leader>lxr", vim.lsp.codelens.run, { buffer = args.buf, desc = "Codelens Run" })
+-- map("n", "<leader>lxc", vim.lsp.codelens.clear, { buffer = args.buf, desc = "Codelens Clear" })
+-- map("n", "<leader>lxc", vim.lsp.codelens.display, { buffer = bufnr, desc = "Codelens Clear" })
+
+-- Code action
+map({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, { desc = "Action" })
+
+-- Diagnostics
+map("n", "<leader>ld", vim.diagnostic.open_float, { opts = opts, desc = "Diagnostics" })
+-- map("n", "]d", vim.diagnostic.goto_next, { opts = opts, desc = "Next diagnostic" }) -- default map
+-- map("n", "[d", vim.diagnostic.goto_prev, { opts = opts, desc = "Previous diagnostic" }) -- default map
+-- map("n", "<leader>q", vim.diagnostic.setloclist, { opts = opts, desc = "Set localist" })
+
+-- Documentation
+map("n", "<leader>lk", vim.lsp.buf.hover, { desc = "Documentation" })
+
+-- Formatting
+map("n", "<leader>lf", function()
+  vim.lsp.buf.format { async = true }
+end, { desc = "Format" })
+
+-- Go-To
+map("n", "gd", vim.lsp.buf.definition, { desc = "Definition" })
+-- map("n", "gt", vim.lsp.buf.type_definition, { desc = "Type definition" })
+-- map("n", "gD", vim.lsp.buf.declaration, { desc = "Declaration" })
+-- map("n", "gi", vim.lsp.buf.implementation, { desc = "Implementation" })
+
+-- Inlay hints
+map("n", "<leader>lv", function()
+  vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = 0 }, { bufnr = 0 })
+end, {desc = "Inlay hints"})
+
+-- References
+map("n", "<leader>lx", vim.lsp.buf.references, { desc = "References" })
+-- map("n", "<leader>lv", vim.lsp.buf.clear_references, { desc = "Clear references" })
+
+-- Rename
+map("n", "<leader>lr", vim.lsp.buf.rename, { desc = "Rename" })
+
+-- Signature help
+-- map("n", "<C-k>", vim.lsp.buf.signature_help, { desc = "Signature help" })
+
+-- Workspace folder
+-- map("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, { desc = "Workspace folder [Add]"})
+-- map("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, { desc = "Workspace folder [Remove]"})
+-- map("n", "<leader>wl", function()
+--   print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+-- end, opts)
+-- }}}
+
 -- {{{ LSP Help
 map("n", "<leader>lhc", "<cmd>help lspconfig.txt<CR>", { desc = "Config" })
 map("n", "<leader>lhi", "<cmd>LspInfo<CR>", { desc = "Info" })
@@ -113,19 +170,19 @@ map("n", "<leader>lhr", "<cmd>help lsp-config<CR>", { desc = "Reference" })
 -- }}}
 
 -- {{{ Lspsaga
-map("n", "<leader>la", "<cmd>Lspsaga code_action<CR>", { desc = "Action" })
-map("n", "<leader>lo", "<cmd>Lspsaga outline<CR>", { desc = "Outline" })
-map("n", "<leader>lp", "<cmd>Lspsaga peek_definition<CR>", { desc = "Peek definition" })
-map("n", "<leader>lr", "<cmd>Lspsaga rename<CR>", { desc = "Rename" })
-map("n", "<leader>lt", "<cmd>Lspsaga peek_type_definition<CR>", { desc = "Type" })
-map("n", "<Leader>lw", "<cmd>Lspsaga winbar_toggle<CR>", { desc = "Winbar" })
---map("n",         "gd", "<cmd>Lspsaga goto_definition<CR>", { desc = "Definition [Go-To]" })
---map("n", "<leader>lb", "<cmd>Lspsaga show_buf_diagnostics<CR>", { desc = "Diagnostics [Buffer]" })
---map("n", "<leader>ld", "<cmd>Lspsaga show_line_diagnostics<CR>", { desc = "Diagnostics" })
---map("n", "<leader>lk", "<cmd>Lspsaga hover_doc<CR>", { desc = "Documentation" })
---map("n", "<leader>lk", "<cmd>Lspsaga hover_doc ++keep<CR>", { desc = "Documentation" })
---map("n", "<Leader>lci", "<cmd>Lspsaga incoming_calls<CR>", { desc = "Incoming" })
---map("n", "<Leader>lco", "<cmd>Lspsaga outgoing_calls<CR>", { desc = "Outgoing" })
+-- map("n", "<leader>la", "<cmd>Lspsaga code_action<CR>", { desc = "Action" })
+-- map("n", "<leader>lo", "<cmd>Lspsaga outline<CR>", { desc = "Outline" })
+-- map("n", "<leader>lp", "<cmd>Lspsaga peek_definition<CR>", { desc = "Peek definition" })
+-- map("n", "<leader>lr", "<cmd>Lspsaga rename<CR>", { desc = "Rename" })
+-- map("n", "<leader>lt", "<cmd>Lspsaga peek_type_definition<CR>", { desc = "Type" })
+-- map("n", "<Leader>lw", "<cmd>Lspsaga winbar_toggle<CR>", { desc = "Winbar" })
+-- map("n",         "gd", "<cmd>Lspsaga goto_definition<CR>", { desc = "Definition [Go-To]" })
+-- map("n", "<leader>lb", "<cmd>Lspsaga show_buf_diagnostics<CR>", { desc = "Diagnostics [Buffer]" })
+-- map("n", "<leader>ld", "<cmd>Lspsaga show_line_diagnostics<CR>", { desc = "Diagnostics" })
+-- map("n", "<leader>lk", "<cmd>Lspsaga hover_doc<CR>", { desc = "Documentation" })
+-- map("n", "<leader>lk", "<cmd>Lspsaga hover_doc ++keep<CR>", { desc = "Documentation" })
+-- map("n", "<Leader>lci", "<cmd>Lspsaga incoming_calls<CR>", { desc = "Incoming" })
+-- map("n", "<Leader>lco", "<cmd>Lspsaga outgoing_calls<CR>", { desc = "Outgoing" })
 -- }}}
 
 -- {{{ Macro
@@ -256,7 +313,7 @@ map("n", "<leader>vtc", "<cmd>Telescope commands<CR>", { desc = "Commands" })
 map("n", "<leader>vth", "<cmd>Telescope highlights<CR>", { desc = "Highlights" })
 map("n", "<leader>vtk", "<cmd>Telescope keymaps<CR>", { desc = "Keymaps" })
 map("n", "<leader>vtm", "<cmd>Telescope man_pages<CR>", { desc = "Man" })
-map("n", "<leader>vto", "<cmd>Telescope vim_options<CR>", { desc = "OPluginsptions" })
+map("n", "<leader>vto", "<cmd>Telescope vim_options<CR>", { desc = "Vim options" })
 map("n", "<leader>vtr", "<cmd>Telescope registers<CR>", { desc = "Registers" })
 -- }}}
 
@@ -266,10 +323,10 @@ map("n", "<leader>vit", "<cmd>InspectTree<CR>", { desc = "Inspect [Tree]" })
 -- }}}
 
 -- {{{ Trouble
-map("n", "<leader>vxx", function() require("trouble").toggle() end, { desc = "Trouble" })
-map("n", "<leader>vxd", function() require("trouble").toggle("document_diagnostics") end, { desc = "Diagnostics" })
-map("n", "<leader>vxq", function() require("trouble").toggle("quickfix") end, { desc = "Quickfix" })
-map("n", "<leader>vxl", function() require("trouble").toggle("loclist") end, { desc = "Loclist" })
+map("n", "<leader>xxx", function() require("trouble").toggle() end, { desc = "Trouble" })
+map("n", "<leader>xxd", function() require("trouble").toggle("document_diagnostics") end, { desc = "Diagnostics" })
+map("n", "<leader>xxq", function() require("trouble").toggle("quickfix") end, { desc = "Quickfix" })
+map("n", "<leader>xxl", function() require("trouble").toggle("loclist") end, { desc = "Loclist" })
 -- }}}
 
 -- {{{ Undo & Redo

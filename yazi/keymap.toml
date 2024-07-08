@@ -146,12 +146,12 @@ keymap = [
   { on = [ "w" ], run = "tasks_show", desc = "Tasks manager" },
 
   # {{{ Goto
-  { on = [ "g", "~" ], run = "cd ~",             desc = "~" },
   { on = [ "g", "c" ], run = "cd ~/.config",     desc = "~/.config" },
   { on = [ "g", "d" ], run = "cd ~/Downloads",   desc = "~/Downloads" },
+  { on = [ "g", "h" ], run = "cd ~",             desc = "$HOME" },
+  { on = [ "g", "i" ], run = "cd --interactive", desc = "interactive" },
   { on = [ "g", "l" ], run = "cd ~/.local",      desc = "~/.local" },
   { on = [ "g", "t" ], run = "cd ~/tmp",         desc = "~/tmp" },
-  { on = [ "g", "i" ], run = "cd --interactive", desc = "interactive" },
   # }}}
 
   # Help
