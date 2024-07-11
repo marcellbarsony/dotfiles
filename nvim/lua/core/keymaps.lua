@@ -106,6 +106,8 @@ map("x", "J", ":move '>+1<CR>gv=gv", { desc = "Block [Move Down]" })
 -- }}}
 
 -- {{{ LSP
+-- :h lspconfig-keybindings
+
 -- Calls
 -- map("n", "<leader>lci", vim.lsp.buf.incoming_calls, { buffer = args.buf, desc = "Incoming" })
 -- map("n", "<leader>lco", vim.lsp.buf.outgoing_calls, { buffer = args.buf, desc = "Outgoing" })
@@ -121,8 +123,8 @@ map({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, { desc = "Action" })
 
 -- Diagnostics
 map("n", "<leader>ld", vim.diagnostic.open_float, { opts = opts, desc = "Diagnostics" })
--- map("n", "]d", vim.diagnostic.goto_next, { opts = opts, desc = "Next diagnostic" }) -- default map
--- map("n", "[d", vim.diagnostic.goto_prev, { opts = opts, desc = "Previous diagnostic" }) -- default map
+map("n", "]d", vim.diagnostic.goto_next, { opts = opts, desc = "Next diagnostic" }) -- default map
+map("n", "[d", vim.diagnostic.goto_prev, { opts = opts, desc = "Previous diagnostic" }) -- default map
 -- map("n", "<leader>q", vim.diagnostic.setloclist, { opts = opts, desc = "Set localist" })
 
 -- Documentation

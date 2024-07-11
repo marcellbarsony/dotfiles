@@ -5,10 +5,10 @@
 -- LSP config & Additional capabilities (nvim-cmp)
 -- https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion#nvim-cmp
 -- https://github.com/neovim/nvim-lspconfig/wiki/Snippets#nvim-cmp-and-luasnip
-local lspconfig = require("lspconfig")
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 -- {{{ LSP Servers
+local lspconfig = require("lspconfig")
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local servers = {
   "asm_lsp",
   "bashls",
