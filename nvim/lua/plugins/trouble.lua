@@ -1,7 +1,6 @@
 -- Trouble
 -- https://github.com/folke/trouble.nvim
 
-
 ---@class trouble.Mode: trouble.Config,trouble.Section.spec
 ---@field desc? string
 ---@field sections? string[]
@@ -12,15 +11,16 @@
 ---@field formatters? table<string,trouble.Formatter> custom formatters
 ---@field filters? table<string, trouble.FilterFn> custom filters
 ---@field sorters? table<string, trouble.SorterFn> custom sorters
+
 local defaults = {
   auto_close = false, -- auto close when there are no items
   auto_open = false, -- auto open when there are items
   auto_preview = true, -- automatically open preview when on an item
   auto_refresh = true, -- auto refresh when open
   auto_jump = false, -- auto jump to the item when there's only one
-  focus = false, -- Focus the window when opened
+  focus = true, -- focus the window when opened
   restore = true, -- restores the last location in the list when opening
-  follow = true, -- Follow the current item
+  follow = true, -- follow the current item
   indent_guides = true, -- show indent guides
   max_items = 200, -- limit number of items that can be displayed per section
   multiline = true, -- render multi-line messages

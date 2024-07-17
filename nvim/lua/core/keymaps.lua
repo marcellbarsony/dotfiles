@@ -72,14 +72,14 @@ map("n", "<leader>dpm", "<cmd>lua require('dap-python').test_method()<CR>", { de
 
 -- {{{ Gitsigns
 map("n", "<leader>gg", "<cmd>Gitsigns toggle_signs<CR><cmd>Gitsigns toggle_numhl<CR><cmd>Gitsigns toggle_current_line_blame<CR>", { desc = "Gitsigns" })
---map("n", "<leader>gs", "<cmd>Gitsigns toggle_signs<CR>", { desc = "Signs" })
---map("n", "<leader>gn", "<cmd>Gitsigns toggle_numhl<CR>", { desc = "Numhl" })
---map("n", "<leader>gb", "<cmd>Gitsigns toggle_current_line_blame<CR>", { desc = "Blame" })
+-- map("n", "<leader>gs", "<cmd>Gitsigns toggle_signs<CR>", { desc = "Signs" })
+-- map("n", "<leader>gn", "<cmd>Gitsigns toggle_numhl<CR>", { desc = "Numhl" })
+-- map("n", "<leader>gb", "<cmd>Gitsigns toggle_current_line_blame<CR>", { desc = "Blame" })
 -- }}}
 
 -- {{{ Highlights
 map("n", "<C-c>", "<cmd>nohl<CR>", { desc = "Clear" })
---map("n", "<leader>cr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "[Highlight] Replace selected" })
+-- map("n", "<leader>cr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "[Highlight] Replace selected" })
 -- }}}
 
 -- {{{ Lazy
@@ -101,8 +101,8 @@ map("v", "K", ":move '<-2<CR>gv=gv", { desc = "Move [Up]" })
 map("v", "J", ":move '>+1<CR>gv=gv", { desc = "Move [Down]" })
 map("x", "K", ":move '<-2<CR>gv=gv", { desc = "Block [Move Up]" })
 map("x", "J", ":move '>+1<CR>gv=gv", { desc = "Block [Move Down]" })
---map("n", "K", ":move .-2<CR>", { desc = "Line [Move Up]" })
---map("n", "J", ":move .+1<CR>", { desc = "Line [Move Down]" })
+-- map("n", "K", ":move .-2<CR>", { desc = "Line [Move Up]" })
+-- map("n", "J", ":move .+1<CR>", { desc = "Line [Move Down]" })
 -- }}}
 
 -- {{{ LSP
@@ -202,8 +202,8 @@ map("n", "<leader>xmu", "<cmd>MasonUninstallAll<CR>", { desc = "Uninstall all" }
 
 -- {{{ Markdown
 map("n", "<leader>lm", "<cmd>MarkdownPreviewToggle<CR>", { desc = "Markdown" })
---map("n", "<leader>lm", "<cmd>MarkdownPreview<CR>", { desc = "Markdown Preview" })
---map("n", "<leader>lm", "<cmd>MarkdownPreviewStop<CR>", { desc = "Markdown Preiview Stop" })
+-- map("n", "<leader>lm", "<cmd>MarkdownPreview<CR>", { desc = "Markdown Preview" })
+-- map("n", "<leader>lm", "<cmd>MarkdownPreviewStop<CR>", { desc = "Markdown Preiview Stop" })
 -- }}}
 
 -- {{{ Navigation
@@ -218,12 +218,12 @@ map("n", "<leader>xo", "<cmd>Oil<CR>", { desc = "Oil" })
 -- }}}
 
 -- {{{ NOT-IN-USE - Py-lsp
---map("n", "<leader>lva", "<cmd>PyLspActivateVenv<CR>", { desc = "Activate" })
---map("n", "<leader>lvc", "<cmd>PyLspCurrentVenv<CR>", { desc = "Current" })
---map("n", "<leader>lvd", "<cmd>PyLspDeactivateVenv<CR>", { desc = "Deactivate" })
---map("n", "<leader>lvf", "<cmd>PyLspFindVenvs<CR>", { desc = "Find" })
---map("n", "<leader>lvn", "<cmd>PyLspCreateVenv<CR>", { desc = "New" })
---map("n", "<leader>lvi", "<cmd>PyRun -m pip install -r requirements.txt<CR>", { desc = "Install dependencies" })
+-- map("n", "<leader>lva", "<cmd>PyLspActivateVenv<CR>", { desc = "Activate" })
+-- map("n", "<leader>lvc", "<cmd>PyLspCurrentVenv<CR>", { desc = "Current" })
+-- map("n", "<leader>lvd", "<cmd>PyLspDeactivateVenv<CR>", { desc = "Deactivate" })
+-- map("n", "<leader>lvf", "<cmd>PyLspFindVenvs<CR>", { desc = "Find" })
+-- map("n", "<leader>lvn", "<cmd>PyLspCreateVenv<CR>", { desc = "New" })
+-- map("n", "<leader>lvi", "<cmd>PyRun -m pip install -r requirements.txt<CR>", { desc = "Install dependencies" })
 -- }}}
 
 -- {{{ Rust (rustaceanvim)

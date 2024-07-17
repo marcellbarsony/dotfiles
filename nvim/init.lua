@@ -27,7 +27,7 @@ require("plugins.luasnip")
 -- }}}
 
 -- {{{ GIT
-require("plugins.gitsigns")
+-- require("plugins.gitsigns")
 -- }}}
 
 -- {{{ Lang
