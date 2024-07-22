@@ -27,8 +27,7 @@ require("tokyonight").setup({
   -- tokyonight.nvim/lua/tokyonight/colors.lua
   ---@param c ColorScheme
   on_colors = function(c)
-    -- c.fg_gutter = "#565F89"
-    c.fg_gutter = "#9D7CD8"
+    c.fg_gutter = "#9D7CD8" -- #565F89
   end,
   -- }}}
 
@@ -46,6 +45,7 @@ require("tokyonight").setup({
     hl.Pmenu = { bg = transparent } -- Popup menu
     hl.Search = { bg = c.blue7, fg = c.fg } -- Search
     hl.TreesitterContext = { bg = transparent } -- Treesitter context menu
+    hl.LspInlayHint = { bg = transparent, fg = c.comment } -- LSP Inlay hint
   end,
   -- }}}
 })

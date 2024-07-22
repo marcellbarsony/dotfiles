@@ -187,3 +187,6 @@ vim.opt.shortmess:append "c"
 for key, value in pairs(options) do
   vim.opt[key] = value
 end
+
+-- LSP
+vim.lsp.inlay_hint.enable()
