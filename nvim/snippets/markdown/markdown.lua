@@ -27,70 +27,70 @@ local conds_expand = require("luasnip.extras.conditions.expand")
 -- FUNCTIONS -- {{{
 -- Same
 local same = function(index)
-  return f(function(arg)
-    return arg[1]
-  end, { index })
+    return f(function(arg)
+        return arg[1]
+    end, { index })
 end
 -- }}}
 
 -- SNIPPETS -- {{{
 ls.add_snippets("markdown", {
-  -- {{{ Table
-  s({trig = "table(%d+)x(%d+)", regTrig = true}, {
-    d(1, function(args, snip)
-      local nodes = {}
-      local i_counter = 0
-      local hlines = ""
-      for _ = 1, snip.captures[2] do
-        i_counter = i_counter + 1
-        table.insert(nodes, t("| "))
-        table.insert(nodes, i(i_counter, "Column" .. i_counter))
-        table.insert(nodes, t(" "))
-        hlines = hlines .. "|---"
-      end
-      table.insert(nodes, t{"|", ""})
-      hlines = hlines .. "|"
-      table.insert(nodes, t{hlines, ""})
+    -- {{{ Table
+    s({ trig = "table(%d+)x(%d+)", regTrig = true }, {
+        d(1, function(args, snip)
+            local nodes = {}
+            local i_counter = 0
+            local hlines = ""
+            for _ = 1, snip.captures[2] do
+                i_counter = i_counter + 1
+                table.insert(nodes, t("| "))
+                table.insert(nodes, i(i_counter, "Column" .. i_counter))
+                table.insert(nodes, t(" "))
+                hlines = hlines .. "|---"
+            end
+            table.insert(nodes, t { "|", "" })
+            hlines = hlines .. "|"
+            table.insert(nodes, t { hlines, "" })
 
-      for _ = 1, snip.captures[1] do
-        for _ = 1, snip.captures[2] do
-          i_counter = i_counter + 1
-          table.insert(nodes, t("| "))
-          table.insert(nodes, i(i_counter))
-          print(i_counter)
-          table.insert(nodes, t(" "))
-        end
-        table.insert(nodes, t{"|", ""})
-      end
-      return sn(nil, nodes)
-    end),
-  }),
-  -- }}}
+            for _ = 1, snip.captures[1] do
+                for _ = 1, snip.captures[2] do
+                    i_counter = i_counter + 1
+                    table.insert(nodes, t("| "))
+                    table.insert(nodes, i(i_counter))
+                    print(i_counter)
+                    table.insert(nodes, t(" "))
+                end
+                table.insert(nodes, t { "|", "" })
+            end
+            return sn(nil, nodes)
+        end),
+    }),
+    -- }}}
 
-  -- {{{ vuln
-  s(
-    "vuln",
-    fmt("# {}\n\n" ..
-      "## Resources\n\n" ..
-      "[{}]({}){}\n\n" ..
-      "## Description\n\n" ..
-      "{}\n\n" ..
-      "## Exploitation\n\n" ..
-      "{}\n\n" ..
-      "## Remediation\n\n" ..
-      "{}\n" ..
-      "\n"
-      , {
-      i(1, "Title"),
-      i(2, "CVE-XXXX-XXXX"),
-      i(3, "https://www.example.com/"),
-      i(4, ""),
-      i(5, ""),
-      i(6, ""),
-      i(7, ""),
-      }
-    )
-  ),
-  -- }}}
+    -- {{{ vuln
+    s(
+        "vuln",
+        fmt("# {}\n\n" ..
+            "## Resources\n\n" ..
+            "[{}]({}){}\n\n" ..
+            "## Description\n\n" ..
+            "{}\n\n" ..
+            "## Exploitation\n\n" ..
+            "{}\n\n" ..
+            "## Remediation\n\n" ..
+            "{}\n" ..
+            "\n"
+            , {
+                i(1, "Title"),
+                i(2, "CVE-XXXX-XXXX"),
+                i(3, "https://www.example.com/"),
+                i(4, ""),
+                i(5, ""),
+                i(6, ""),
+                i(7, ""),
+            }
+        )
+    ),
+    -- }}}
 })
 -- }}}

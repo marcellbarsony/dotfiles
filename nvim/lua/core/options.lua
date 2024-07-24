@@ -4,189 +4,175 @@
 -- :options
 
 local options = {
-  -- {{{ 1. Important
-  -- }}}
+    -- {{{ 1. Important
+    -- }}}
 
-  -- {{{ 2. Moving around - Searching - Patterns
-  autochdir = false,
-  cdhome = true,
-  guicursor = "n:block,i:hor1,n:blinkwait700-blinkoff400-blinkon250",
-  ignorecase = true,
-  smartcase = true,
-  -- }}}
+    -- {{{ 2. Moving around - Searching - Patterns
+    autochdir = false,
+    cdhome = true,
+    guicursor = "n:block,i:hor1,n:blinkwait700-blinkoff400-blinkon250",
+    ignorecase = true,
+    smartcase = true,
+    -- }}}
 
-  -- {{{ 3. Tags
-  -- }}}
+    -- {{{ 3. Tags
+    -- }}}
 
-  -- {{{ 4. Displaying text
-  breakindent = true,
-  conceallevel = 0,
-  cmdheight = 0,
-  fillchars = "stlnc:_,horiz: ,horizup:┴,horizdown:┬,vert:┃,vertleft:┤,vertright:├,verthoriz:┼,fold: ,foldopen:,foldclose:,foldsep:│,diff:-,msgsep: ,eob:~,lastline:@",
-  hlsearch = true,
+    -- {{{ 4. Displaying text
+    breakindent = true,
+    conceallevel = 0,
+    cmdheight = 0,
+    fillchars =
+    "stlnc:_,horiz: ,horizup:┴,horizdown:┬,vert:┃,vertleft:┤,vertright:├,verthoriz:┼,fold: ,foldopen:,foldclose:,foldsep:│,diff:-,msgsep: ,eob:~,lastline:@",
+    hlsearch = true,
 
-    -- {{{ Gutter (number)
+    -- Gutter (number)
     number = true,
     numberwidth = 2,
     relativenumber = true,
-    -- }}}
 
-    -- {{{ List
+    -- List
     list = true,
     listchars = "trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂",
-    -- }}}
 
-    -- {{{ Scroll
+    -- Scroll
     scrolloff = 100,
     sidescrolloff = 8,
-    -- }}}
 
-    -- {{{ Wrap
+    -- Wrap
     wrap = false,
     wrapmargin = 0,
     -- }}}
-  -- }}}
 
-  -- {{{ 5. Syntax - Highlighting - Spelling
-  background = "dark",
-  spell = false,
+    -- {{{ 5. Syntax - Highlighting - Spelling
+    background = "dark",
+    spell = false,
 
-    -- {{{ Highlighting
+    -- Highlighting
     cursorcolumn = false,
     cursorline = false,
     -- }}}
-  -- }}}
 
-  -- {{{ 6. Multiple windows (Split)
-  splitbelow = true,
-  splitright = true,
-  laststatus = 3,
-  -- }}}
+    -- {{{ 6. Multiple windows (Split)
+    splitbelow = true,
+    splitright = true,
+    laststatus = 3,
+    -- }}}
 
-  -- {{{ 7. Multiple tab pages
-  showtabline = 1,
-  -- }}}
+    -- {{{ 7. Multiple tab pages
+    showtabline = 1,
+    -- }}}
 
-  -- {{{ 8. Terminal
-  -- }}}
+    -- {{{ 8. Terminal
+    -- }}}
 
-  -- {{{ 9. Using the mouse
-  -- }}}
+    -- {{{ 9. Using the mouse
+    -- }}}
 
-  -- {{{ 10. Messages and info
-  confirm = true,
-  more=true,
-  showmode = false,
-  -- }}}
+    -- {{{ 10. Messages and info
+    confirm = true,
+    more = true,
+    showmode = false,
+    -- }}}
 
-  -- {{{ 11. Selecting text
-  clipboard = "unnamedplus",
-  -- }}}
+    -- {{{ 11. Selecting text
+    clipboard = "unnamedplus",
+    -- }}}
 
-  -- {{{ 12. Editing text
-  backspace = "indent,eol,start",
-  textwidth = 150,
-  undofile = true,
-  -- }}}
+    -- {{{ 12. Editing text
+    backspace = "indent,eol,start",
+    textwidth = 150,
+    undofile = true,
+    -- }}}
 
-  -- {{{ 13. Tabs - Indenting
-    -- {{{ Tabs
+    -- {{{ 13. Tabs - Indenting
+    -- Tabs
     autoindent = false,
     expandtab = true,
-    shiftwidth = 2,
+    shiftwidth = 4,
     softtabstop = -1,
     tabstop = 2,
-    -- }}}
 
-    -- {{{ Indenting
+    -- Indenting
     smartindent = false,
-    -- }}}
 
-    -- {{{ C-indent
+    -- C-indent
     cindent = true,
     cinoptions = "",
     cinwords = "if,else,while,do,for,switch",
     -- }}}
-  -- }}}
 
-  -- {{{ 14. Folding
-  foldenable = true,
-  foldcolumn = "0", -- auto
-  foldlevelstart = 0,
-  foldmethod = "marker",
-  foldtext =
+    -- {{{ 14. Folding
+    foldenable = true,
+    foldcolumn = "0", -- auto
+    foldlevelstart = 0,
+    foldmethod = "marker",
+    foldtext =
     [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').' ... ' ]],
-  -- }}}
+    -- }}}
 
-  -- {{{ 15. Diff mode
-  -- }}}
+    -- {{{ 15. Diff mode
+    -- }}}
 
-  -- {{{ 16. Mapping
-  timeoutlen = 250, -- which-key.nvim
-  updatetime = 200,
-  -- }}}
+    -- {{{ 16. Mapping
+    timeoutlen = 250, -- which-key.nvim
+    updatetime = 200,
+    -- }}}
 
-  -- {{{ 17. Reading and Writing files
-    -- {{{ R/W
+    -- {{{ 17. Reading and Writing files
+    -- R/W
     autoread = true,
     autowrite = false,
     autowriteall = false,
-    -- }}}
 
-    -- {{{ Backup
+    -- Backup
     backup = false,
     backupcopy = "auto",
     backupext = "~",
     backupdir = "/tmp/",
     writebackup = false,
-    -- }}}
 
-    -- {{{ Binary
+    -- Binary
     binary = false,
     -- }}}
-  -- }}}
 
-  -- {{{ 18. The swap file
-  swapfile = false,
-  -- }}}
+    -- {{{ 18. The swap file
+    swapfile = false,
+    -- }}}
 
-  -- {{{ 19. Command line editing
-  history = 50,
-  -- }}}
+    -- {{{ 19. Command line editing
+    history = 50,
+    -- }}}
 
-  -- {{{ 20. Executing external commands
-  -- }}}
+    -- {{{ 20. Executing external commands
+    -- }}}
 
-  -- {{{ 21. Running make and jumping to errors (quickfix)
-  -- }}}
+    -- {{{ 21. Running make and jumping to errors (quickfix)
+    -- }}}
 
-  -- {{{ 22. Language specific
-  allowrevins = false,
-  -- }}}
+    -- {{{ 22. Language specific
+    allowrevins = false,
+    -- }}}
 
-  -- {{{ 23. Multi-byte characters
-  fileencoding = "utf-8",
-  -- }}}
+    -- {{{ 23. Multi-byte characters
+    fileencoding = "utf-8",
+    -- }}}
 
-  -- {{{ 24. Various
-  --virtualedit = all,
-  signcolumn = "no", -- auto / number / yes:1
-  -- statuscolumn = "%=%r%C ",
+    -- {{{ 24. Various
+    --virtualedit = all,
+    signcolumn = "no", -- auto / number / yes:1
+    -- statuscolumn = "%=%r%C ",
 
-    -- {{{ Buffer
+    -- Buffer
     bufhidden = "",
     buflisted = true,
     buftype = "",
     -- }}}
-  -- }}}
 }
 
 vim.opt.shortmess:append "c"
 
 -- Loop through options
 for key, value in pairs(options) do
-  vim.opt[key] = value
+    vim.opt[key] = value
 end
-
--- LSP
-vim.lsp.inlay_hint.enable()

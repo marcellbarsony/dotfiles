@@ -74,15 +74,15 @@ bindkey '^f' edit-command-line # Ctrl + f
 
 # {{{ VI mode [Cursor]
 function zle-keymap-select {
-  if [[ ${KEYMAP} == vicmd ]] ||
-    [[ $1 = 'block' ]]; then
-    echo -ne '\e[1 q'
-  elif [[ ${KEYMAP} == main ]] ||
-      [[ ${KEYMAP} == viins ]] ||
-      [[ ${KEYMAP} = '' ]] ||
-      [[ $1 = 'beam' ]]; then
-    echo -ne '\e[3 q'
-  fi
+    if [[ ${KEYMAP} == vicmd ]] ||
+        [[ $1 = 'block' ]]; then
+        echo -ne '\e[1 q'
+    elif [[ ${KEYMAP} == main ]] ||
+          [[ ${KEYMAP} == viins ]] ||
+          [[ ${KEYMAP} = '' ]] ||
+          [[ $1 = 'beam' ]]; then
+        echo -ne '\e[3 q'
+    fi
 }
 zle -N zle-keymap-select
 
@@ -92,7 +92,7 @@ zle-line-init() {
 zle -N zle-line-init
 
 preexec() {
-  echo -ne '\e[3 q'
+    echo -ne '\e[3 q'
 }
 
 # 0 - Block (blinking)
@@ -108,12 +108,12 @@ preexec() {
 # Shell wrapper
 # https://yazi-rs.github.io/docs/quick-start#shell-wrapper
 function yy() {
-  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-  yazi "$@" --cwd-file="$tmp"
-  if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-    cd -- "$cwd"
-  fi
-  rm -f -- "$tmp"
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+    yazi "$@" --cwd-file="$tmp"
+    if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+        cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
 }
 # }}}
 
@@ -123,9 +123,9 @@ eval "$(fzf --zsh)"
 
 # {{{ ZSH [Autocomplete]
 if [[ -f ~/.local/src/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]]; then
-  source ~/.local/src/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+    source ~/.local/src/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 else
-  echo "Cannot source ZSH Autocomplete"
+    echo "Cannot source ZSH Autocomplete"
 fi
 bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
 bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
@@ -146,18 +146,18 @@ zstyle ':autocomplete:*' add-space executables aliases functions builtins reserv
 
 # {{{ ZSH [Autosuggestions]
 if [[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
-  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 else
-  echo "Cannot source ZSH Autosuggestions"
+    echo "Cannot source ZSH Autosuggestions"
 fi
 bindkey '^ ' autosuggest-accept # Ctrl + Space
 # }}}
 
 # {{{ ZSH [Syntax highlight] (source last)
 if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
-  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 else
-  echo "Cannot source ZSH Syntax Highlighting"
+    echo "Cannot source ZSH Syntax Highlighting"
 fi
 # }}}
 

@@ -10,11 +10,11 @@
 --  c - command_mode
 
 local function map(mode, lhs, rhs, opts)
-  local options = { noremap = true, silent = true }
-  if opts then
-    options = vim.tbl_extend("force", options, opts)
-  end
-  vim.keymap.set(mode, lhs, rhs, options)
+    local options = { noremap = true, silent = true }
+    if opts then
+        options = vim.tbl_extend("force", options, opts)
+    end
+    vim.keymap.set(mode, lhs, rhs, options)
 end
 
 -- {{{ Leader
@@ -39,7 +39,7 @@ map("n", "<Tab>", "<cmd>bn<CR>", { desc = "Buffer [Next]" })
 map("n", "<S-Tab>", "<cmd>bp<CR>", { desc = "Buffer [Prev]" })
 map("n", "<C-'>", "<cmd>b#<CR>", { desc = "Buffer [To last]" })
 map("n", "<C-q>", "<cmd>bdelete<CR>", { desc = "Buffer [Delete]" }) -- :bd!<CR>
-map("n", "<C-^>", "<cmd>e #<CR>", { desc = "Alternate file" }) -- :help alternate-file
+map("n", "<C-^>", "<cmd>e #<CR>", { desc = "Alternate file" })      -- :help alternate-file
 -- }}}
 
 -- {{{ Clipboard
@@ -56,8 +56,10 @@ map("n", "<leader>3", "<cmd>lua require'dap'.step_over()<CR>", { desc = "DAP [St
 map("n", "<leader>2", "<cmd>lua require'dap'.step_into()<CR>", { desc = "DAP [Step into]" })
 map("n", "<leader>0", "<cmd>lua require'dap'.step_out()<CR>", { desc = "DAP [Step out]" })
 map("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", { desc = "Breakpoint" })
-map("n", "<leader>dc", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", { desc = "Breakpoint [Condition]" })
-map("n", "<leader>dd", "<cmd>lua require'dap'.set.breakpoint(nul, nul, vim.fn.input('Log point message: '))<CR>", { desc = "Breakpoint [Log point msg]" })
+map("n", "<leader>dc", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>",
+    { desc = "Breakpoint [Condition]" })
+map("n", "<leader>dd", "<cmd>lua require'dap'.set.breakpoint(nul, nul, vim.fn.input('Log point message: '))<CR>",
+    { desc = "Breakpoint [Log point msg]" })
 map("n", "<leader>dq", "<cmd>lua require('dap').disconnect()<CR>", { desc = "Quit" })
 map("n", "<leader>dr", "<cmd>lua require'dap'.run_last()<CR>", { desc = "Run last" })
 map("n", "<leader>ds", "<cmd>lua require'dap'.repl.open()<CR>", { desc = "REPL" })
@@ -71,7 +73,9 @@ map("n", "<leader>dpm", "<cmd>lua require('dap-python').test_method()<CR>", { de
 -- }}}
 
 -- {{{ Gitsigns
-map("n", "<leader>gg", "<cmd>Gitsigns toggle_signs<CR><cmd>Gitsigns toggle_numhl<CR><cmd>Gitsigns toggle_current_line_blame<CR>", { desc = "Gitsigns" })
+map("n", "<leader>gg",
+    "<cmd>Gitsigns toggle_signs<CR><cmd>Gitsigns toggle_numhl<CR><cmd>Gitsigns toggle_current_line_blame<CR>",
+    { desc = "Gitsigns" })
 -- map("n", "<leader>gs", "<cmd>Gitsigns toggle_signs<CR>", { desc = "Signs" })
 -- map("n", "<leader>gn", "<cmd>Gitsigns toggle_numhl<CR>", { desc = "Numhl" })
 -- map("n", "<leader>gb", "<cmd>Gitsigns toggle_current_line_blame<CR>", { desc = "Blame" })
@@ -123,7 +127,7 @@ map({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, { desc = "Action" })
 
 -- Diagnostics
 map("n", "<leader>ld", vim.diagnostic.open_float, { opts = opts, desc = "Diagnostics" })
-map("n", "]d", vim.diagnostic.goto_next, { opts = opts, desc = "Next diagnostic" }) -- default map
+map("n", "]d", vim.diagnostic.goto_next, { opts = opts, desc = "Next diagnostic" })     -- default map
 map("n", "[d", vim.diagnostic.goto_prev, { opts = opts, desc = "Previous diagnostic" }) -- default map
 -- map("n", "<leader>q", vim.diagnostic.setloclist, { opts = opts, desc = "Set localist" })
 
@@ -132,7 +136,7 @@ map("n", "<leader>lk", vim.lsp.buf.hover, { desc = "Documentation" })
 
 -- Formatting
 map("n", "<leader>lf", function()
-  vim.lsp.buf.format { async = true }
+    vim.lsp.buf.format { async = true }
 end, { desc = "Format" })
 
 -- Go-To
@@ -143,8 +147,8 @@ map("n", "gd", vim.lsp.buf.definition, { desc = "Definition" })
 
 -- Inlay hints
 map("n", "<leader>lv", function()
-  vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = 0 }, { bufnr = 0 })
-end, {desc = "Inlay hints"})
+    vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = 0 }, { bufnr = 0 })
+end, { desc = "Inlay hints" })
 
 -- References
 map("n", "<leader>lx", vim.lsp.buf.references, { desc = "References" })
@@ -237,9 +241,9 @@ map("n", "<leader>xo", "<cmd>Oil<CR>", { desc = "Oil" })
 -- }}}
 
 -- {{{ Search
-map("n", "*", "*N", { desc = "Find word" }) -- Fix *: don't move to next match
-map("n", "#", "#N", { desc = "Find word" }) -- Fix #: don't move to next match
-map("n", "n", "nzzzv", { desc = "Search [Next]" }) -- Fix n: keep cursor in center
+map("n", "*", "*N", { desc = "Find word" })            -- Fix *: don't move to next match
+map("n", "#", "#N", { desc = "Find word" })            -- Fix #: don't move to next match
+map("n", "n", "nzzzv", { desc = "Search [Next]" })     -- Fix n: keep cursor in center
 map("n", "N", "Nzzzv", { desc = "Search [Previous]" }) -- Fix N: keep cursor in center
 -- }}}
 
@@ -279,10 +283,10 @@ map("n", "<leader>dtf", "<cmd>lua require'telescope'.extensions.dap.frames{}<CR>
 -- }}}
 
 -- {{{ Telescope-GIT
-map("n", "<leader>gb","<cmd>Telescope git_branches<CR>", { desc = "Branches" })
-map("n", "<leader>gc","<cmd>Telescope git_commits<CR>", { desc = "Commits" })
-map("n", "<leader>gf","<cmd>Telescope git_files<CR>", { desc = "Files" })
-map("n", "<leader>gs","<cmd>Telescope git_status<CR>", { desc = "Status" })
+map("n", "<leader>gb", "<cmd>Telescope git_branches<CR>", { desc = "Branches" })
+map("n", "<leader>gc", "<cmd>Telescope git_commits<CR>", { desc = "Commits" })
+map("n", "<leader>gf", "<cmd>Telescope git_files<CR>", { desc = "Files" })
+map("n", "<leader>gs", "<cmd>Telescope git_status<CR>", { desc = "Status" })
 -- }}}
 
 -- {{{ Telescope-Grep

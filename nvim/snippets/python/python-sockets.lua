@@ -27,27 +27,27 @@ local conds_expand = require("luasnip.extras.conditions.expand")
 -- FUNCTIONS -- {{{
 -- Same
 local same = function(index)
-  return f(function(arg)
-    return arg[1]
-  end, { index })
+    return f(function(arg)
+        return arg[1]
+    end, { index })
 end
 -- }}}
 
 -- SNIPPETS -- {{{
 ls.add_snippets("python", {
-  -- {{{ socket
-  s(
-    "socket",
-    fmt('{} = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n'..
-      "{}.connect(({}, {}))\n"..
-      "{}", {
-      i(1, "s"),
-      same(1),
-      i(2, "target_ip"),
-      i(3, "target_port"),
-      i(0),
-    })
-  ),
-  -- }}}
+    -- {{{ socket
+    s(
+        "socket",
+        fmt('{} = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n' ..
+            "{}.connect(({}, {}))\n" ..
+            "{}", {
+                i(1, "s"),
+                same(1),
+                i(2, "target_ip"),
+                i(3, "target_port"),
+                i(0),
+            })
+    ),
+    -- }}}
 })
 -- }}}
