@@ -1,18 +1,18 @@
  @import '../../.cache/matugen/colors.css'; 
 
 * {
-  border: none;
-  border-radius: 0;
-  font-family: Roboto, Helvetica, Arial, sans-serif;
-  font-size: 15px;
-  min-height: 20px;
-  padding: 0 0px;
+    border: none;
+    border-radius: 0;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    min-height: 20px;
+    padding: 0 0px;
 }
 
 window#waybar {
-  background: rgba(0, 0, 0, 0.7);
-  border-bottom: 0px solid rgba(100, 114, 125, 0.5);
-  color: @primary;
+    background: rgba(0, 0, 0, 0.7);
+    border-bottom: 0px solid rgba(100, 114, 125, 0.5);
+    color: @primary;
 }
 
 /* font-family: Noto Sans Mono, Roboto, Helvetica, Arial, monospace; */
@@ -22,47 +22,47 @@ window#waybar {
 
 /* {{{ Workspaces */
 #workspaces button {
-  background-color: transparent;
-  color: @primary;
-  padding: 0 3px;
+    background-color: transparent;
+    color: @primary;
+    padding: 0 3px;
 }
 
 #workspaces button.empty {
-  /*color: @primary_container;*/
-  /*color: @on_secondary;*/
-  color: gray;
-  background-color: transparent;
+    /*color: @primary_container;*/
+    /*color: @on_secondary;*/
+    color: gray;
+    background-color: transparent;
 }
 
 #workspaces button.visible {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 #workspaces button.active {
-  color: black;
-  background-color: @primary;
+    color: black;
+    background-color: @primary;
 }
 
 #workspaces button:hover {
-  border-top: 0px solid;
-  background: black;
-  color: white;
+    border-top: 0px solid;
+    background: black;
+    color: white;
 }
 
 /* #workspaces button.current_output.visible { */
-/*   background: #90b1b1; */
-/*   color: blue; */
+/*     background: #90b1b1; */
+/*     color: blue; */
 /* } */
 
 /* #workspaces button.current_output.focused { */
-/*   background: #ff0088; */
-/*   color: blue; */
+/*     background: #ff0088; */
+/*     color: blue; */
 /* } */
 
 /*#workspaces button.focused { */
-/*    color: red; */
-/*    background: #64F27D; */
-/*    border-top: 5px solid white; */
+/*     color: red; */
+/*     background: #64F27D; */
+/*     border-top: 5px solid white; */
 /*}*/
 /* }}} */
 

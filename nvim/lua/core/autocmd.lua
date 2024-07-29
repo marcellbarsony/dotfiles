@@ -1,5 +1,5 @@
 local A = vim.api
-local num_au = A.nvim_create_augroup('NUMTOSTR', { clear = true })
+local num_au = A.nvim_create_augroup("NUMTOSTR", { clear = true })
 
 -- {{{ Custom filetypes
 vim.filetype.add({
@@ -21,7 +21,7 @@ vim.filetype.add({
 })
 -- }}}
 
--- {{{ Open help vertically & q to exit
+-- {{{ Open help vertically & `q` to exit
 A.nvim_create_autocmd("BufEnter", {
     group = num_au,
     pattern = "*.txt",
@@ -34,7 +34,7 @@ A.nvim_create_autocmd("BufEnter", {
 })
 -- }}}
 
--- {{{ Highlight region on yank
+-- {{{ Highlight region on Yank
 A.nvim_create_autocmd("TextYankPost", {
     group = num_au,
     callback = function()

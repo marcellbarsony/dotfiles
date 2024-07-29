@@ -79,6 +79,23 @@ map("n", "<leader>gg",
 -- map("n", "<leader>gs", "<cmd>Gitsigns toggle_signs<CR>", { desc = "Signs" })
 -- map("n", "<leader>gn", "<cmd>Gitsigns toggle_numhl<CR>", { desc = "Numhl" })
 -- map("n", "<leader>gb", "<cmd>Gitsigns toggle_current_line_blame<CR>", { desc = "Blame" })
+
+-- Actions
+-- map("n", "<leader>gs", "<cmd>Gitsigns stage_hunk<CR>", { desc = "Stage hunk" })
+-- map("n", "<leader>gs", "<cmd>Gitsigns undo_stage_hunk<CR>", { desc = "Stage hunk [Undo]" })
+-- map("n", "<leader>gs", "<cmd>Gitsigns reset_hunk<CR>", { desc = "Reset hunk" })
+-- map("n", "<leader>gs", "<cmd>Gitsigns stage_buffer<CR>", { desc = "Stage buffer" })
+-- map("n", "<leader>gs", "<cmd>Gitsigns preview_hunk<CR>", { desc = "Preview hunk" })
+-- map("n", "<leader>gs", "<cmd>Gitsigns diffthis<CR>", { desc = "Diffthis" })
+-- map("n", "<leader>gs", "<cmd>Gitsigns toggle_deleted<CR>", { desc = "Toggle deleted" })
+
+
+-- Navigation
+-- map('n', ']c', "&diff ? ']c' : '<cmd>Gitsigns next_hunk<CR>'", {expr=true})
+-- map('n', '[c', "&diff ? '[c' : '<cmd>Gitsigns prev_hunk<CR>'", {expr=true})
+
+-- Tect object
+-- map("n", "<leader>gs", "<cmd>Gitsigns select_hunk<CR>", { desc = "Select hunk" })
 -- }}}
 
 -- {{{ Highlights
@@ -267,10 +284,11 @@ map("n", "<C-A-i>", "<cmd>vertical resize +5<CR>", { desc = "Split [Ver -]" })
 map("n", "<leader>tt", "<cmd>Telescope<CR>", { desc = "Telescope" })
 map("n", "<leader>ta", "<cmd>Telescope autocommands<CR>", { desc = "Autocommands" })
 map("n", "<leader>tb", "<cmd>Telescope buffers<CR>", { desc = "Buffers" })
-map("n", "<leader>tc", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Buffer [Fuzzy Current]" })
+map("n", "<leader>tc", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Buffer [Fuzzy current]" })
 map("n", "<leader>td", "<cmd>Telescope diagnostics<CR>", { desc = "Diagnostics" })
 map("n", "<leader>tf", "<cmd>Telescope find_files<CR>", { desc = "Find Files" })
 map("n", "<leader>tj", "<cmd>Telescope jumplist<CR>", { desc = "Jumplist" })
+map("n", "<leader>tr", "<cmd>Telescope registers<CR>", { desc = "Registers" })
 map("n", "<leader>ts", "<cmd>Telescope treesitter<CR>", { desc = "Symbols [Treesitter]" })
 -- }}}
 
@@ -319,8 +337,7 @@ map("n", "<leader>vtc", "<cmd>Telescope commands<CR>", { desc = "Commands" })
 map("n", "<leader>vth", "<cmd>Telescope highlights<CR>", { desc = "Highlights" })
 map("n", "<leader>vtk", "<cmd>Telescope keymaps<CR>", { desc = "Keymaps" })
 map("n", "<leader>vtm", "<cmd>Telescope man_pages<CR>", { desc = "Man" })
-map("n", "<leader>vto", "<cmd>Telescope vim_options<CR>", { desc = "Vim options" })
-map("n", "<leader>vtr", "<cmd>Telescope registers<CR>", { desc = "Registers" })
+map("n", "<leader>vto", "<cmd>Telescope vim_options<CR>", { desc = "Options" })
 -- }}}
 
 -- {{{ Treesitter (Neovim built-ins)
@@ -347,4 +364,5 @@ map("n", "<leader>vff", "<cmd>set foldenable!<CR>", { desc = "Fold" })
 map("n", "<leader>vfc", "<cmd>set foldcolumn!<CR>", { desc = "Column" })
 map("n", "<leader>vss", "<cmd>set spell!<CR>", { desc = "Spell" })
 map("n", "<leader>vsm", "<cmd>mkspell! %<CR>", { desc = "Mkspell" })
+map("n", "<leader>vn", "<cmd>sort n<CR>", { desc = "Mkspell" })
 -- }}}

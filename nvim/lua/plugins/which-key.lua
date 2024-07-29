@@ -36,7 +36,7 @@ wk.add({
     { "<leader>t",  group = "Telescope" },
     { "<leader>th", desc = "History" },
 
-    { "<leader>v",  group = "LSP" },
+    { "<leader>v",  group = "VIM" },
     { "<leader>vf", desc = "Fold" },
     { "<leader>vi", desc = "Treesitter" },
     { "<leader>vs", desc = "Spell" },

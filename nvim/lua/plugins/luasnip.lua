@@ -9,8 +9,11 @@ local types = require("luasnip.util.types")
 -- {{{ Config
 -- :h luasnip-config-options
 ls.setup({
-    history = true,
+    keep_roots = true,
+    link_roots = true,
+    link_children = true,
     updateevents = "TextChanged,TextChangedI", -- :h events
+    delete_check_events = "TextChanged",
     ext_opts = {
         [types.choiceNode] = {
             active = {

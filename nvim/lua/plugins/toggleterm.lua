@@ -2,7 +2,13 @@
 -- https://github.com/akinsho/toggleterm.nvim
 
 require("toggleterm").setup {
-    size = 20,
+    size = function(term)
+        if term.direction == "horizontal" then
+            return 15
+        elseif term.direction == "vertical" then
+            return vim.o.columns * 0.5
+        end
+    end,
     direction = "float",
     open_mapping = [[<c-\>]],
     hide_numbers = true,
@@ -18,5 +24,8 @@ require("toggleterm").setup {
         --     guifg = "Normal",
         --     guibg = "Normal",
         -- },
+    },
+    float_opts = {
+        winblend = 0,
     },
 }

@@ -17,26 +17,30 @@ vim.opt.rtp:prepend(lazypath)
 -- }}}
 
 require("lazy").setup({
-    -- {{{ Auto pair
+    -- {{{ Autopairs
     {
         "windwp/nvim-autopairs",
         event = "InsertEnter"
     },
     -- }}}
 
-    -- {{{ Color theme
+    -- {{{ Colors
     {
         "folke/tokyonight.nvim",
         lazy = false,
         priority = 1000,
+        opts = {
+
+
+
+        },
     },
+
     -- { "catppuccin/nvim",
     --   name = "catppuccin",
     --   priority = 1000
     -- },
-    -- }}}
 
-    -- {{{ Colorizer
     "NvChad/nvim-colorizer.lua",
     -- }}}
 
@@ -79,14 +83,14 @@ require("lazy").setup({
     "goolord/alpha-nvim",
     -- }}}
 
-    -- {{{ Git
+    -- {{{ GIT
     {
         "lewis6991/gitsigns.nvim",
         event = "VeryLazy"
     },
     -- }}}
 
-    -- {{{ Harpoon 2
+    -- {{{ Harpoon
     {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
@@ -103,7 +107,7 @@ require("lazy").setup({
     },
     -- }}}
 
-    -- {{{ Indent lines
+    -- {{{ Indent blankline
     {
         "lukas-reineke/indent-blankline.nvim",
         event = {
@@ -126,7 +130,7 @@ require("lazy").setup({
     },
     -- }}}
 
-    -- {{{ LSP (Mason)
+    -- {{{ LSP [Mason]
     {
         "williamboman/mason.nvim",
         build = ":MasonUpdate",
@@ -158,7 +162,7 @@ require("lazy").setup({
     },
     -- }}}
 
-    -- {{{ Oil.nvim
+    -- {{{ Oil
     {
         "stevearc/oil.nvim",
         lazy = true
@@ -241,7 +245,6 @@ require("lazy").setup({
         opts = {
             ---@type false | "classic" | "modern" | "helix"
             preset = "classic",
-            -- Delay before showing the popup. Can be a number or a function that returns a number
             ---@type number | fun(ctx: { keys: string, mode: string, plugin?: string }):number
             delay = function(ctx)
                 return ctx.plugin and 0 or 200
@@ -252,21 +255,19 @@ require("lazy").setup({
                 -- return mapping.desc and mapping.desc ~= ""
                 return true
             end,
-            --- You can add any mappings here, or use `require('which-key').add()` later
             ---@type wk.Spec
             spec = {},
-            -- Show mapping warnings
-            notify = true,
-            -- Toggle WhichKey for mapping modes
-            modes = {
-                n = true, -- Normal mode
-                i = true, -- Insert mode
-                x = true, -- Visual mode
-                s = true, -- Select mode
-                o = true, -- Operator pending mode
-                t = true, -- Terminal mode
-                c = true, -- Command mode
+            notify = true, -- Show mapping warnings
+            ---@type wk.Spec
+            triggers = {
+                { "<auto>", mode = "nxsot" },
             },
+            -- Start hidden and wait for a key to be pressed before showing the popup
+            -- Only used by enabled xo mapping modes.
+            ---@param ctx { mode: string, operator: string }
+            defer = function(ctx)
+                return ctx.mode == "V" or ctx.mode == "<C-V>"
+            end,
             plugins = {
                 marks = true,     -- shows a list of your marks on ' and `
                 registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
@@ -288,38 +289,34 @@ require("lazy").setup({
             },
             ---@type wk.Win
             win = {
-                -- don't allow the popup to overlap with the cursor
-                no_overlap = true,
+                no_overlap = true, -- don't allow the popup to overlap with the cursor
                 -- width = 1,
-                height = { min = 4, max = 10 },
+                height = { min = 5, max = 25 },
                 -- col = 0,
                 -- row = math.huge,
                 -- border = "none",
-                padding = { 1, 2 }, -- extra window padding [top/bottom, right/left]
-                title = true,
+                padding = { 1, 3 }, -- { top/bottom, right/left }
+                title = false,
                 title_pos = "center",
                 zindex = 1000,
                 -- Additional vim.wo and vim.bo options
                 bo = {},
                 wo = {
-                    -- winblend = 100, -- value between 0-100 0 for fully opaque and 100 for fully transparent
+                    winblend = 0, -- value between 0-100 0 for fully opaque and 100 for fully transparent
                 },
             },
             layout = {
-                width = { min = 5, max = 20 }, -- min and max width of the columns
-                spacing = 3,                   -- spacing between columns
-                align = "left",                -- left | center | right
+                width = { min = 10, max = 30 }, -- min and max width of the columns
+                spacing = 3,                    -- spacing between columns
             },
             keys = {
                 scroll_down = "<c-d>", -- binding to scroll down inside the popup
                 scroll_up = "<c-u>",   -- binding to scroll up inside the popup
             },
             ---@type (string|wk.Sorter)[]
-            --- Add "manual" as the first element to use the order the mappings were registered
-            --- Other sorters: "desc"
-            sort = { "local", "order", "group", "alphanum", "mod", "lower", "icase" },
+            sort = { "group", "local", "order", "alphanum", "mod", "lower", "icase" },
             ---@type number|fun(node: wk.Node):boolean?
-            expand = 1, -- expand groups when <= n mappings
+            expand = 0, -- expand groups when <= n mappings
             -- expand = function(node)
             --   return not node.desc -- expand all nodes without a description
             -- end,
@@ -347,6 +344,7 @@ require("lazy").setup({
                 separator = "➜", -- symbol used between a key and it's label
                 group = "", -- symbol prepended to a group
                 ellipsis = "…",
+                mappings = false,
                 --- See `lua/which-key/icons.lua` for more details
                 --- Set to `false` to disable keymap icons
                 ---@type wk.IconRule[]|false
@@ -375,19 +373,11 @@ require("lazy").setup({
             },
             show_help = false, -- show a help message in the command line for using WhichKey
             show_keys = true,  -- show the currently pressed key and its label as a message in the command line
-            -- Which-key automatically sets up triggers for your mappings.
-            -- But you can disable this and setup the triggers yourself.
-            -- Be aware, that triggers are not needed for visual and operator pending mode.
-            triggers = true, -- automatically setup triggers
+            triggers = true,   -- automatically setup triggers
             disable = {
                 -- disable WhichKey for certain buf types and file types.
                 ft = {},
                 bt = {},
-                -- disable a trigger for a certain context by returning true
-                ---@type fun(ctx: { keys: string, mode: string, plugin?: string }):boolean?
-                trigger = function(ctx)
-                    return false
-                end,
             },
             debug = false, -- enable wk.log in the current directory
 

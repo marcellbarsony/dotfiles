@@ -2,7 +2,7 @@
 -- https://github.com/hrsh7th/nvim-cmp
 
 -- Require
-local cmp = require "cmp"
+local cmp = require("cmp")
 local luasnip = require("luasnip")
 
 -- {{{ Kind icons
@@ -71,10 +71,10 @@ cmp.setup({
         },
         -- -- Border
         -- documentation = cmp.config.window.bordered {
-        --   winhighlight = 'Normal:CmpPmenu,CursorLine:PmenuSel,Search:None'
+        --     winhighlight = 'Normal:CmpPmenu,CursorLine:PmenuSel,Search:None'
         -- },
         -- completion = cmp.config.window.bordered({
-        --   winhighlight = 'Normal:CmpPmenu,CursorLine:PmenuSel,Search:None'
+        --     winhighlight = 'Normal:CmpPmenu,CursorLine:PmenuSel,Search:None'
         -- }),
     },
 
@@ -187,7 +187,8 @@ cmp.setup({
 })
 -- }}}
 
--- {{{ CMP Setup [Specific filetypes]
+-- {{{ CMP Setup (filetype + cmd line)
+-- Specific filetypes
 -- https://github.com/hrsh7th/nvim-cmp#setup
 cmp.setup.filetype("gitcommit", {
     sources = cmp.config.sources({
@@ -196,10 +197,8 @@ cmp.setup.filetype("gitcommit", {
         { name = "buffer" },
     })
 })
--- }}}
 
--- {{{ CMP Setup [`/` & `?` completions]
--- https://github.com/hrsh7th/cmp-cmdline#setup
+-- `/` & `?` completions
 -- Conflicts with `native_menu`
 cmp.setup.cmdline({ "/", "?" }, {
     mapping = cmp.mapping.preset.cmdline(),
@@ -207,10 +206,8 @@ cmp.setup.cmdline({ "/", "?" }, {
         { name = "buffer" }
     }
 })
--- }}}
 
--- {{{ CMP Setup [`:` completions]
--- https://github.com/hrsh7th/cmp-cmdline#setup
+-- `:` completions
 -- Conflicts with `native_menu`
 cmp.setup.cmdline(":", {
     mapping = cmp.mapping.preset.cmdline(),
@@ -219,4 +216,5 @@ cmp.setup.cmdline(":", {
     }, {
         { name = "cmdline" }
     })
-}) -- }}}
+})
+-- }}}

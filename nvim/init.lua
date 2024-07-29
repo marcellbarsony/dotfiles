@@ -1,73 +1,58 @@
--- {{{ Lazy
+-- Core
+require("core.keymaps")
 require("plugins.lazy-nvim")
--- }}}
-
--- {{{ Nvim Core
 require("core.autocmd")
 require("core.lspconfig")
 require("core.options")
-require("core.keymaps")
--- }}}
 
--- {{{ Colors
+-- Colors
 --require("theme.catppucin")
 require("theme.tokyonight")
--- }}}
 
--- {{{ DAP
+-- DAP
 require("dap.nvim-dap")
 require("dap.nvim-dap-ui")
 require("dap.nvim-dap-python")
 require("dap.nvim-dap-vtxt")
--- }}}
 
--- {{{ CMP & Snipppet
+-- CMP & Snipppet
 require("plugins.nvim-cmp")
 require("plugins.luasnip")
--- }}}
 
--- {{{ GIT
--- require("plugins.gitsigns")
--- }}}
+-- GIT
+require("plugins.gitsigns")
 
--- {{{ Lang
+-- Lang
 require("lang.langc")
 require("lang.rustaceanvim")
 require("lang.tsserver")
--- }}}
 
--- {{{ LSP
+-- LSP
 require("plugins.lspsaga")
 require("plugins.trouble")
--- }}}
 
--- {{{ Mason
+-- Mason
 require("mason.mason")
 require("mason.mason-lspconfig")
 require("mason.mason-nvim-dap")
--- }}}
 
--- {{{ Navigation
+-- Navigation
 require("plugins.alpha-nvim")
 require("plugins.harpoon")
 require("plugins.oil")
 require("plugins.which-key")
--- }}}
 
--- {{{ Plugins
+-- Plugins
 require("plugins.autopairs")
 require("plugins.colorizer")
 require("plugins.hex")
 require("plugins.indent-blankline")
 require("plugins.lualine")
 require("plugins.toggleterm")
--- }}}
 
--- {{{ Telescope
+-- Telescope
 require("plugins.telescope")
--- }}}
 
--- {{{ Treesitter
+-- Treesitter
 require("treesitter.treesitter")
 require("treesitter.treesitter-context")
--- }}}

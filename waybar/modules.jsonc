@@ -1,137 +1,135 @@
 {
-  // {{{ Modules - Left
-  "hyprland/workspaces": {
-    "all-outputs": true,
-    "format": "{name}",
-    "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": "",
-      "urgent": "",
-      "active": "",
-      "default": ""
+    // {{{ Modules - Left
+    "hyprland/workspaces": {
+        "all-outputs": true,
+        "format": "{name}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "urgent": "",
+            "active": "",
+            "default": ""
+        },
+        "on-click": "activate",
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [],
+        },
+        "sort-by-number": true,
     },
-    "on-click": "activate",
-    "persistent-workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": [],
-      "6": [],
-      "7": [],
-      "8": [],
-      "9": [],
+    // }}}
+
+    // {{{ Modules - Center
+    // }}}
+
+    // {{{ Modules - Right
+    // {{{ Clock
+    "clock": {
+        "format": "{:%I:%M}",
+        "format-alt": "{:%b %d %a}",
+        "interval": 60,
+        //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode"         : "year",
+            "mode-mon-col" : 3,
+            "on-scroll"    : 1,
+            //"weeks-pos"     : "right",
+            "format": {
+                "months":   "<span color='#ffead3'><b>{}</b></span>",
+                "days":     "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks":    "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today":    "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions":  {
+            "on-click-right": "mode",
+            "on-scroll-up": "tz_up",
+            "on-scroll-down": "tz_down"
+        }
     },
-    "sort-by-number": true,
-  },
-  // }}}
+    // }}}
 
-  // {{{ Modules - Center
-  // }}}
-
-  // {{{ Modules - Right
-  // {{{ Clock
-  "clock": {
-    "format": "{:%I:%M}",
-    "format-alt": "{:%b %d %a}",
-    "interval": 60,
-    //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "tooltip-format": "<tt><small>{calendar}</small></tt>",
-    "calendar": {
-      "mode"         : "year",
-      "mode-mon-col" : 3,
-      "on-scroll"    : 1,
-      //"weeks-pos"     : "right",
-      "format": {
-        "months":   "<span color='#ffead3'><b>{}</b></span>",
-        "days":     "<span color='#ecc6d9'><b>{}</b></span>",
-        "weeks":    "<span color='#99ffdd'><b>W{}</b></span>",
-        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "today":    "<span color='#ff6699'><b><u>{}</u></b></span>"
-      }
+    // {{{ Battery
+    "battery": {
+        "bat": "BAT0",
+        "full-at": "99",
+        "states": {
+            "good": 90,
+            "warning": 20,
+            "critical": 10
+        },
+        "format": "{capacity}%",
+        "format-full": "{capacity}%",
+        "format-charging": "󱐋 {capacity}%",
+        "format-plugged": "{capacity}%",
     },
-    "actions":  {
-      "on-click-right": "mode",
-      "on-scroll-up": "tz_up",
-      "on-scroll-down": "tz_down"
-    }
-  },
-  // }}}
+    // }}}
 
-  // {{{ Battery
-  "battery": {
-      "bat": "BAT0",
-      "full-at": "99",
-      "states": {
-          "good": 90,
-          "warning": 20,
-          "critical": 10
-      },
-      "format": "{capacity}%",
-      "format-full": "{capacity}%",
-      "format-charging": "󱐋 {capacity}%",
-      "format-plugged": " {capacity}%",
-  },
-  // }}}
+    // {{{ Network
+    "network": {
+        "interval": 60,
+        "interface": "wlp0s2*",
+        "format-alt": "",
+        "format-disconnected": "Disconnected",
+        "format-icons": "[ NET ]",
+        "format-ethernet": "{ipaddr}/{cidr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-wifi": "{icon}",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr} @ {essid}({signalStrength})",
+    },
+    // }}}
 
-  // {{{ Network
-  "network": {
-    "interval": 60,
-    "interface": "wlp0s2*",
-    "format-alt": "",
-    "format-disconnected": "Disconnected",
-    "format-icons": " ",
-    "format-ethernet": "{ipaddr}/{cidr}",
-    "format-linked": "{ifname} (No IP)",
-    "format-wifi": "{icon}",
-    "tooltip-format": "{ifname}: {ipaddr}/{cidr} @ {essid}({signalStrength})",
-  },
-  // }}}
+    // {{{ Audio (Wireplumber)
+    "wireplumber": {
+        "format": "[ VOL: {volume} ]",
+        "format-muted": "[ Muted ]",
+        //"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%+",
+        "on-click-right": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%-",
+        "format-icons": ["", "", ""],
+        "max-volume": 150,
+        "scroll-step": 5.0,
+        "tooltip": true,
+        "tooltip-format": "{volume}%",
+    },
+    // }}}
 
-  // {{{ Audio (Wireplumber)
-  "wireplumber": {
-    "format": "{icon} ",
-    "format-muted": "",
-    //"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-    "on-click": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%+",
-    "on-click-right": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%-",
-    "format-icons": ["", "", ""],
-    "max-volume": 150,
-    "scroll-step": 5.0,
-    "tooltip": true,
-    "tooltip-format": "{volume}%",
-  },
-  // }}}
+    // {{{ CPU
+    "cpu": {
+        "interval": 10,
+        "format": "[ CPU: {usage}% ]",
+        "tooltip": false,
+        "tooltip-format": "{usage}%"
+    },
+    // }}}
 
-  // {{{ CPU
-  "cpu": {
-      "interval": 10,
-      "format": "",
-      "max-length": 10,
-      "tooltip": false,
-      "tooltip-format": "{usage}%"
-  },
-  // }}}
+    // {{{ Disk
+    "disk": {
+        "interval": 60,
+        "format": "[ Disk: {percentage_used}% ]",
+        "path": "/",
+        "tooltip-format": "{path}: {percentage_used}%",
+    },
+    // }}}
 
-  // {{{ Disk
-  "disk": {
-      "interval": 60,
-      "format": " ",
-      "path": "/",
-      "tooltip-format": "{path}: {percentage_used}%",
-  },
-  // }}}
-
-  // {{{ RAM
-  "memory": {
-      "interval": 30,
-      "format": " ",
-      "max-length": 10,
-      "tooltip-format": "{percentage}%"
-  },
-  // }}}
-  // }}}
+    // {{{ RAM
+    "memory": {
+        "interval": 30,
+        "format": "[ RAM: {percentage}% ]",
+        "tooltip-format": "{percentage}%"
+    },
+    // }}}
+    // }}}
 }
