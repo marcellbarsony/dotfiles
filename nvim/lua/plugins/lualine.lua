@@ -16,7 +16,7 @@ require("lualine").setup {
     -- {{{ Options
     options = {
         icons_enabled = true,
-        theme = "palenight", -- auto | tokyonight
+        theme = "palenight", -- auto | tokyonight | palenight
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
         disabled_filetypes = {

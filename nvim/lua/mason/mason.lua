@@ -48,6 +48,8 @@ require("mason").setup({
             uninstall_package = "x",
             cancel_installation = "<C-c>",
             apply_language_filter = "<C-f>",
+            toggle_package_install_log = "<CR>",
+            toggle_help = "g?",
         },
     },
 })

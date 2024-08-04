@@ -1,7 +1,7 @@
 -- Options
+-- :options
 -- https://neovim.io/doc/user/options.html
 -- https://neovim.io/doc/user/quickref.html
--- :options
 
 local options = {
     -- {{{ 1. Important
@@ -172,7 +172,6 @@ local options = {
 
 vim.opt.shortmess:append "c"
 
--- Loop through options
 for key, value in pairs(options) do
     vim.opt[key] = value
 end

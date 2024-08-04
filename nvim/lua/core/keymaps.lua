@@ -65,17 +65,11 @@ map("n", "<leader>dr", "<cmd>lua require'dap'.run_last()<CR>", { desc = "Run las
 map("n", "<leader>ds", "<cmd>lua require'dap'.repl.open()<CR>", { desc = "REPL" })
 -- }}}
 
--- {{{ DAP-Python
--- h: dap-python
-map("n", "<leader>dpc", "<cmd>lua require('dap-python').test_class()<CR>", { desc = "Class" })
-map("n", "<leader>dps", "<cmd>lua require('dap-python').debug_selection()<CR>", { desc = "Selection" })
-map("n", "<leader>dpm", "<cmd>lua require('dap-python').test_method()<CR>", { desc = "Method" })
--- }}}
-
 -- {{{ Gitsigns
 map("n", "<leader>gg",
     "<cmd>Gitsigns toggle_signs<CR><cmd>Gitsigns toggle_numhl<CR><cmd>Gitsigns toggle_current_line_blame<CR>",
-    { desc = "Gitsigns" })
+    { desc = "Gitsigns" }
+)
 -- map("n", "<leader>gs", "<cmd>Gitsigns toggle_signs<CR>", { desc = "Signs" })
 -- map("n", "<leader>gn", "<cmd>Gitsigns toggle_numhl<CR>", { desc = "Numhl" })
 -- map("n", "<leader>gb", "<cmd>Gitsigns toggle_current_line_blame<CR>", { desc = "Blame" })
@@ -94,8 +88,9 @@ map("n", "<leader>gg",
 -- map('n', ']c', "&diff ? ']c' : '<cmd>Gitsigns next_hunk<CR>'", {expr=true})
 -- map('n', '[c', "&diff ? '[c' : '<cmd>Gitsigns prev_hunk<CR>'", {expr=true})
 
--- Tect object
--- map("n", "<leader>gs", "<cmd>Gitsigns select_hunk<CR>", { desc = "Select hunk" })
+-- Text object
+map("o", "<leader>gh", "<cmd>Gitsigns select_hunk<CR>", { desc = "Select hunk" })
+map("x", "<leader>gh", "<cmd>Gitsigns select_hunk<CR>", { desc = "Select hunk" })
 -- }}}
 
 -- {{{ Highlights
@@ -221,12 +216,6 @@ map("n", "<leader>xmm", "<cmd>Mason<CR>", { desc = "Mason" })
 map("n", "<leader>xmu", "<cmd>MasonUninstallAll<CR>", { desc = "Uninstall all" })
 -- }}}
 
--- {{{ Markdown
-map("n", "<leader>lm", "<cmd>MarkdownPreviewToggle<CR>", { desc = "Markdown" })
--- map("n", "<leader>lm", "<cmd>MarkdownPreview<CR>", { desc = "Markdown Preview" })
--- map("n", "<leader>lm", "<cmd>MarkdownPreviewStop<CR>", { desc = "Markdown Preiview Stop" })
--- }}}
-
 -- {{{ Navigation
 -- Conflicts with cursor scrolloff
 -- map("n", "<C-d>", "<C-d>zz<CR>", { desc = "Page down" })
@@ -236,25 +225,6 @@ map("n", "<leader>lm", "<cmd>MarkdownPreviewToggle<CR>", { desc = "Markdown" })
 -- {{{ Oil
 map("n", "-", "<cmd>Oil<CR>", { desc = "Open parent directory" })
 map("n", "<leader>xo", "<cmd>Oil<CR>", { desc = "Oil" })
--- }}}
-
--- {{{ NOT-IN-USE - Py-lsp
--- map("n", "<leader>lva", "<cmd>PyLspActivateVenv<CR>", { desc = "Activate" })
--- map("n", "<leader>lvc", "<cmd>PyLspCurrentVenv<CR>", { desc = "Current" })
--- map("n", "<leader>lvd", "<cmd>PyLspDeactivateVenv<CR>", { desc = "Deactivate" })
--- map("n", "<leader>lvf", "<cmd>PyLspFindVenvs<CR>", { desc = "Find" })
--- map("n", "<leader>lvn", "<cmd>PyLspCreateVenv<CR>", { desc = "New" })
--- map("n", "<leader>lvi", "<cmd>PyRun -m pip install -r requirements.txt<CR>", { desc = "Install dependencies" })
--- }}}
-
--- {{{ Rust (rustaceanvim)
--- local bufnr = vim.api.nvim_get_current_buf()
--- map("n", "<leader>ra", function() vim.cmd.RustLsp("codeAction") end, { silent = true, buffer = bufnr, desc = "Action" })
--- map("n", "<leader>rd", function() vim.cmd.RustLsp("debuggables") end, { desc = "Debuggables" })
--- map("n", "<leader>rh", "<cmd>checkhealth rustaceanvim<CR>", { desc = "Health" })
--- map("n", "<leader>rj", function() vim.cmd.RustLsp("joinLines") end, { desc = "Join lines" })
--- map("n", "<leader>rr", function() vim.cmd.RustLsp("runnables") end, { desc = "Runnables" })
--- map("n", "<leader>rh", function() vim.cmd.RustLsp("hover", "actions") end, { desc = "Hover actions" })
 -- }}}
 
 -- {{{ Search

@@ -2,9 +2,9 @@
 
 # Check if application is running
 run() {
-  if ! pgrep $1 ; then
-      $@&
-  fi
+    if ! pgrep $1 ; then
+        $@&
+    fi
 }
 
 # Autostart
