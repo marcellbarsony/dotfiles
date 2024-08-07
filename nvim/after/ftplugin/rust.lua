@@ -1,3 +1,6 @@
+-- Rust
+-- https://neovim.io/doc/user/ft_rust.html#ft_rust.txt
+
 -- Options
 vim.opt_local.shiftwidth = 4
 

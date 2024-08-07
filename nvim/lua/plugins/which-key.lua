@@ -157,12 +157,14 @@ wk.add({
     -- { "gi", desc = "Implementation" },
     -- { "gtd", desc = "Type" },
 
+    { "<leader>b",  group = "Harpoon" },
+
     { "<leader>d",  group = "DAP" },
     { "<leader>dt", group = "Telescope" },
 
     { "<leader>g",  group = "GIT" },
 
-    { "<leader>h",  group = "Harpoon" },
+    { "<leader>h",  group = "HEX" },
 
     { "<leader>l",  group = "LSP" },
     { "<leader>lh", desc = "Help" },

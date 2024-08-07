@@ -1,12 +1,8 @@
--- Core
-require("core.keymaps")
+-- Lazy
 require("plugins.lazy-nvim")
-require("core.autocmd")
-require("core.lspconfig")
-require("core.options")
 
 -- Colors
---require("theme.catppucin")
+-- require("theme.catppucin")
 require("theme.tokyonight")
 
 -- DAP

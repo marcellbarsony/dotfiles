@@ -1,0 +1,2 @@
+-- ASM-Syntax
+-- https://neovim.io/doc/user/syntax.html#ft-asm-syntax
