@@ -37,7 +37,7 @@ TERM = "alacritty"
 # {{{ Font
 [font]
 builtin_box_drawing = true
-size = 12.0
+size = 12
 
 [font.bold]
 family = "monospace"
@@ -61,7 +61,7 @@ style = "Regular"
 
 [font.offset]
 x = 0
-y = 1
+y = 0
 # }}}
 
 # {{{ Scrolling
@@ -76,7 +76,7 @@ decorations = "full"
 decorations_theme_variant = "Dark"
 dynamic_padding = false
 dynamic_title = true
-opacity = 0.8
+opacity = 0.7
 resize_increments = false
 startup_mode = "Windowed"
 title = "Alacritty"

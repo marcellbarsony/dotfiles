@@ -18,11 +18,9 @@ require("plugins.luasnip")
 -- GIT
 require("plugins.gitsigns")
 
--- Lang
-require("lang.rustaceanvim")
-require("lang.tsserver")
-
 -- LSP
+require("lsp.rustaceanvim")
+require("lsp.tsserver")
 require("plugins.lspsaga")
 require("plugins.trouble")
 
@@ -51,3 +49,11 @@ require("plugins.telescope")
 -- Treesitter
 require("treesitter.treesitter")
 require("treesitter.treesitter-context")
+
+-- TEST
+-- require("lazy").setup({
+--     spec = {
+--         { import = "plugins" }, -- ~/.config/nvim/lua/plugins/
+--     },
+--     checker = { enabled = false },
+-- })

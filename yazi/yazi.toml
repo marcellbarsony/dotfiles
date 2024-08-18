@@ -10,7 +10,7 @@ sort_dir_first = true
 linemode       = "none"
 show_hidden    = true
 show_symlink   = true
-scrolloff      = 5
+scrolloff      = 10
 mouse_events   = [ "click", "scroll" ]
 
 [preview]
@@ -35,7 +35,7 @@ preloaders = [
     { mime = "image/{avif,heic,jxl,svg+xml}", run = "magick" },
     { mime = "image/*", run = "image" },
     # Video
-    { mime = "video/*", run = "video" },
+    { mime = "video/*", run = "vlc" },
     # PDF
     { mime = "application/pdf", run = "pdf" },
     # Font
@@ -53,7 +53,7 @@ previewers = [
     { mime = "image/{avif,heic,jxl,svg+xml}", run = "magick" },
     { mime = "image/*", run = "image" },
     # Video
-    { mime = "video/*", run = "video" },
+    { mime = "video/*", run = "vlc" },
     # PDF
     { mime = "application/pdf", run = "pdf" },
     # Archive
