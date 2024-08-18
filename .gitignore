@@ -121,7 +121,6 @@ wireshark/profiles/Classic/recent
 
 # XDG
 filetypesrc
-mimeapps.list
 user-dirs.dirs
 user-dirs.locale
 

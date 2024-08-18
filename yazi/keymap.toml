@@ -2,7 +2,6 @@
 
 # {{{ Manager
 [manager]
-
 keymap = [
     { on = [ "<Esc>" ], run = "escape",             desc = "Exit visual mode, clear selected, or cancel search" },
     { on = [ "<C-[>" ], run = "escape",             desc = "Exit visual mode, clear selected, or cancel search" },
@@ -162,7 +161,6 @@ keymap = [
 
 # {{{ Task
 [tasks]
-
 keymap = [
     { on = [ "<Esc>" ], run = "close", desc = "Hide the task manager" },
     { on = [ "<C-q>" ], run = "close", desc = "Hide the task manager" },
@@ -183,7 +181,6 @@ keymap = [
 
 # {{{ Select
 [select]
-
 keymap = [
     { on = [ "<Esc>" ],   run = "close",          desc = "Cancel selection" },
     { on = [ "<C-[>" ],   run = "close",          desc = "Cancel selection" },
@@ -208,7 +205,6 @@ keymap = [
 
 # {{{ Input
 [input]
-
 keymap = [
     { on = [ "<C-q>" ],   run = "close",          desc = "Cancel input" },
     { on = [ "<Enter>" ], run = "close --submit", desc = "Submit the input" },
@@ -279,7 +275,6 @@ keymap = [
 
 # {{{ Completion
 [completion]
-
 keymap = [
     { on = [ "<C-q>" ],   run = "close",                                      desc = "Cancel completion" },
     { on = [ "<Tab>" ],   run = "close --submit",                             desc = "Submit the completion" },
@@ -300,7 +295,6 @@ keymap = [
 
 # {{{ Help
 [help]
-
 keymap = [
     { on = [ "<Esc>" ], run = "escape", desc = "Hide help" },
     { on = [ "q" ],     run = "close",  desc = "Hide help " },

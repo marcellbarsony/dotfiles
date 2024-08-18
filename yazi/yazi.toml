@@ -66,6 +66,25 @@ previewers = [
     { name = "*", run = "file" },
 ]
 
+[opener]
+edit = [
+    { run = 'nvim "$@"', block = true },
+]
+play = [
+    { run = 'vlc "$@"', orphan = true, for = "unix" },
+]
+open = [
+    { run = 'xdg-open "$@"', desc = "Open" },
+]
+
+[open]
+rules = [
+    { mime = "text/*", use = "edit" },
+    { mime = "image/*", use = "open" },
+    { mime = "video/*", use = "play" },
+    { name = "*.html", use = [ "open", "edit" ] },
+]
+
 [input]
 cursor_blink = false
 
