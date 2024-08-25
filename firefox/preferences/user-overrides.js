@@ -69,7 +69,7 @@ user_pref("services.sync.prefs.sync.browser.urlbar.suggest.searches", false);
 user_pref("services.sync.prefs.sync.browser.urlbar.suggest.topsites", false);
 
 /* SIGNON */
-user_pref("signon.rememberSignons", false);  // 5003
+user_pref("signon.rememberSignons", false); // 5003
 user_pref("signon.rememberSignons.visibilityToggle", false);
 
 /* DOWNLOAD */
@@ -82,7 +82,7 @@ user_pref("privacy.clearOnShutdown.history", false); // 2811
 user_pref("privacy.clearOnShutdown.sessions", false); // 2811
 
 /* STARTUP */
-user_pref("browser.startup.page", 1);  // 0102
+user_pref("browser.startup.page", 1); // 0102
 user_pref("browser.startup.homepage", "https://marcellbarsony.github.io/homepage"); // 0103
 
 /* TOOLBAR */

@@ -35,7 +35,7 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("python", {
-  -- {{{  try/except/else/finally
+  -- {{{ try/except/else/finally
   s(
     "try",
     fmt("try:\n"..
@@ -128,15 +128,16 @@ ls.add_snippets("python", {
   ),
   -- }}}
 
-  -- {{{ finally
-  s(
-    "finally",
-    fmt("finally:\n"..
-      "\t{}{}", {
-      i(1, "pass"),
-      i(0)
-    })
-  ),
-  -- }}}
+    -- {{{ finally
+    s(
+        "finally",
+        fmt("finally:\n"..
+            "\t{}{}", {
+                i(1, "pass"),
+                i(0)
+            }
+        )
+    ),
+    -- }}}
 })
 -- }}}

@@ -12,7 +12,7 @@ require("mason-lspconfig").setup({
         "lua_ls",        -- Lua
         "rust_analyzer", -- Rust
         "tsserver",      -- Typescript / JavaScript
-        -- "pyright", -- Python (requires npm)
+        -- "pyright",    -- Python (requires npm)
     },
     automatic_installation = false,
     handlers = nil,

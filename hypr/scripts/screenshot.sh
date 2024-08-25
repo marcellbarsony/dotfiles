@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-dir="/home/marci/tmp/screenshots"
+dir="/home/$USER/tmp/screenshots"
 file=$(date +%Y%m%d-%H%M%S)
 
 if [[ ! -d "$dir" ]]; then

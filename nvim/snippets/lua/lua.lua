@@ -44,7 +44,8 @@ ls.add_snippets("lua", {
                 i(1, "condition"),
                 i(2, "pass"),
                 i(0),
-            })
+            }
+        )
     ),
     -- }}}
 })

@@ -2,4 +2,4 @@
 image/gif=firefox.desktop
 image/jpeg=firefox.desktop
 image/png=firefox.desktop
-video/x-matroska=vlc.desktop
+video/*=vlc.desktop

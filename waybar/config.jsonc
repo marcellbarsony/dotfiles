@@ -23,13 +23,4 @@
     ],
 
     "include": ["~/.config/waybar/modules.jsonc"],
-
-    //"group/hardware": {
-    //    "orientation": "horizontal",
-    //    "modules": [
-    //        "disk",
-    //        "cpu",
-    //        "memory"
-    //    ]
-    //}
 }

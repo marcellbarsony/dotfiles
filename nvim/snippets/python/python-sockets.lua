@@ -35,7 +35,6 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("python", {
-    -- {{{ socket
     s(
         "socket",
         fmt('{} = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n' ..
@@ -46,8 +45,8 @@ ls.add_snippets("python", {
                 i(2, "target_ip"),
                 i(3, "target_port"),
                 i(0),
-            })
+            }
+        )
     ),
-    -- }}}
 })
 -- }}}

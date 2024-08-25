@@ -2,16 +2,18 @@
 "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
 [manager]
-ratio          = [ 1, 1, 1 ]
+ratio          = [ 3, 4, 4 ]
 sort_by        = "alphabetical"
 sort_sensitive = false
 sort_reverse   = false
 sort_dir_first = true
+sort_translit  = false
 linemode       = "none"
 show_hidden    = true
 show_symlink   = true
 scrolloff      = 10
 mouse_events   = [ "click", "scroll" ]
+title_format   = "Yazi: {cwd}"
 
 [preview]
 tab_size        = 2
@@ -24,8 +26,37 @@ sixel_fraction  = 15
 ueberzug_scale  = 1
 ueberzug_offset = [ 0, 0, 0, 0 ]
 
-[plugin]
+[opener]
+edit = [
+    { run = 'nvim "$@"', desc = "$EDITOR", block = true },
+]
+play = [
+    { run = 'vlc "$@"', desc = "PLAY", orphan = true },
+]
+open = [
+    { run = 'xdg-open "$@"', desc = "OPEN" },
+]
 
+[open]
+rules = [
+    { name = "*.html", use = "edit" },
+    { name = "*.json", use = "edit" },
+    { name = "*.lua", use = "edit" },
+    { name = "*.txt", use = "edit" },
+    { mime = "{audio,video}/*", use = "play" },
+    { mime = "image/*", use = "open" },
+    { mime = "text/*", use = "edit" },
+]
+
+[tasks]
+micro_workers    = 10
+macro_workers    = 25
+bizarre_retry    = 5
+image_alloc      = 536870912  # 512MB
+image_bound      = [ 0, 0 ]
+suppress_preload = false
+
+[plugin]
 fetchers = [
     # Mimetype
     { id = "mime", name = "*", run = "mime", if = "!mime", prio = "high" },
@@ -64,25 +95,6 @@ previewers = [
     { mime = "application/vnd.ms-opentype", run = "font" },
     # Fallback
     { name = "*", run = "file" },
-]
-
-[opener]
-edit = [
-    { run = 'nvim "$@"', block = true },
-]
-play = [
-    { run = 'vlc "$@"', orphan = true, for = "unix" },
-]
-open = [
-    { run = 'xdg-open "$@"', desc = "Open" },
-]
-
-[open]
-rules = [
-    { mime = "text/*", use = "edit" },
-    { mime = "image/*", use = "open" },
-    { mime = "video/*", use = "play" },
-    { name = "*.html", use = [ "open", "edit" ] },
 ]
 
 [input]

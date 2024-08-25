@@ -133,7 +133,6 @@ icon_error = ""
 
 # File-specific styles {{{
 [filetype]
-
 rules = [
     # Images
     { mime = "image/*", fg = "cyan" },
@@ -154,7 +153,6 @@ rules = [
 ]
 
 [icon]
-
 rules = [
     # Programming
     { name = "*.c"    , text = "", fg = "#599eff" },
