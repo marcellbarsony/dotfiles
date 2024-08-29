@@ -1,4 +1,4 @@
--- Python snippets [Exceptions]
+-- Python snippets
 -- Docs: https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
 
 -- SHORTHANDS -- {{{
@@ -35,38 +35,36 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("python", {
-  s( "try", -- try/except/else/finally
-    fmt("try:\n" ..
-      "\t{}\n" ..
-      "except {}{}\n" ..
+  s( "elif",
+    fmt("elif {}:\n" ..
+      "\t{}{}",
+      {
+        i(1, "expression"),
+        i(2, "pass"),
+        i(0),
+      }
+    )
+  ),
+
+  s( "else",
+    fmt("else:\n" ..
+      "\t{}{}",
+      {
+        i(1, "pass"),
+        i(0),
+      }
+    )
+  ),
+
+  s( "for",
+    fmt("for {} in {}:\n" ..
       "\t{}\n" ..
       "{}{}",
       {
-        i(1, "pass"),
-        c(2, { -- Errors
-          t { "Exception" },
-          t { "NameError" },
-          t { "TypeError" },
-          t { "ValueError" },
-        }),
-        c(3, {
-          d(1, function() -- nothing
-            return sn(nil, {
-              i(1),
-              t({ ':' }),
-            })
-          end),
-          d(1, function() -- as err:
-            return sn(nil, {
-              i(1),
-              t({ " as " }),
-              i(2, "err"),
-              t({ ":" }),
-            })
-          end),
-        }),
-        i(4, "pass"),
-        c(5, {
+        i(1, "value"),
+        i(2, "iterable"),
+        i(3, "pass"),
+        c(4, {
           d(1, function() -- nothing
             return sn(nil, {
               i(1),
@@ -80,13 +78,30 @@ ls.add_snippets("python", {
               i(2, "pass"),
             })
           end),
-          d(1, function() -- finally
+        }),
+        i(0),
+      }
+    )
+  ),
+
+  s( "if", -- if-else
+    fmt('if {}:\n' ..
+      '\t{}\n' ..
+      '{}{}', {
+        i(1, "condition"),
+        i(2, "pass"),
+        c(3, {
+          d(1, function() -- nothing
+            return sn(nil, {
+              i(1),
+              t({ '' }),
+            })
+          end),
+          d(1, function() -- else
             return sn(nil, {
               i(1),
               t({ "else:", "\t" }),
               i(2, "pass"),
-              t({ "", "finally:", "\t" }),
-              i(3, "pass"),
             })
           end),
         }),
@@ -95,43 +110,29 @@ ls.add_snippets("python", {
     )
   ),
 
-  s( "except",
-    fmt("except {}{}\n" ..
-      "\t{}",
+  s( "while", -- while-else
+    fmt("while {}:\n" ..
+      "\t{}\n" ..
+      "{}{}",
       {
-        c(1, { -- Errors
-          t { "Exception" },
-          t { "NameError" },
-          t { "TypeError" },
-          t { "ValueError" },
-        }),
-        c(2, {
+        i(1, "condition"),
+        i(2, "pass"),
+        c(3, {
           d(1, function() -- nothing
             return sn(nil, {
               i(1),
-              t({ ':' }),
+              t({ '' }),
             })
           end),
-          d(1, function() -- as err:
+          d(1, function() -- else
             return sn(nil, {
               i(1),
-              t({ " as " }),
-              i(2, "err"),
-              t({ ":" }),
+              t({ "else:", "\t" }),
+              i(2, "pass"),
             })
           end),
         }),
-        i(3, "pass")
-      }
-    )
-  ),
-
-  s( "finally",
-    fmt("finally:\n" ..
-      "\t{}{}",
-      {
-        i(1, "pass"),
-        i(0)
+        i(0),
       }
     )
   ),

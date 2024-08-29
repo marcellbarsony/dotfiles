@@ -35,139 +35,130 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("rust", {
-  -- {{{ if/else-if/else
-  s(
-    "if",
+  s( "if",
     fmt("if {} {{\n" ..
       "\t{}\n" ..
       "}}{}\n" ..
-      "{}"
-      , {
-      i(1, "condition"),
-      i(2, "// ..."),
-      c(3, {
-        d(1, function() -- nothing
-          return sn(nil, {
-            i(1),
-            t({""}),
-          })
-        end),
-        d(1, function() -- else
-          return sn(nil, {
-            i(1),
-            t({" else {", "\t"}),
-            i(2, "// ..."),
-            t({"", "}"}),
+      "{}",
+      {
+        i(1, "condition"),
+        i(2, "// ..."),
+        c(3, {
+          d(1, function() -- nothing
+            return sn(nil, {
+              i(1),
+              t({ "" }),
             })
-        end),
-        d(1, function() -- else-if
-          return sn(nil, {
-            i(1),
-            t({" else if "}),
-            i(2, "condition"),
-            t({" {", "\t"}),
-            i(3, "// ..."),
-            t({"", "} else {"}),
-            t({"", "\t"}),
-            i(4, "// ..."),
-            t({"", "}"}),
+          end),
+          d(1, function() -- else
+            return sn(nil, {
+              i(1),
+              t({ " else {", "\t" }),
+              i(2, "// ..."),
+              t({ "", "}" }),
             })
-        end),
-      }),
-      i(4),
+          end),
+          d(1, function() -- else-if
+            return sn(nil, {
+              i(1),
+              t({ " else if " }),
+              i(2, "condition"),
+              t({ " {", "\t" }),
+              i(3, "// ..."),
+              t({ "", "} else {" }),
+              t({ "", "\t" }),
+              i(4, "// ..."),
+              t({ "", "}" }),
+            })
+          end),
+        }),
+        i(4),
       }
     )
   ),
-  -- }}}
 
-  -- {{{ if let
-  s(
-    "if let",
+  s( "if let",
     fmt("if let {} {{\n" ..
-      "\t{}\n"..
-      "}}{}\n"
-      , {
-      c(1, {
-        -- Custom
-        sn(nil, {i(1),  i(2, "pattern"), t" = ", i(3, "var") }),
-        -- Option
-        sn(nil, {i(1), t"Some(", i(2), t") = ", i(3, "var") }),
-        sn(nil, {i(1), t"None(", i(2), t") = ", i(3, "var") }),
-        -- Error
-        sn(nil, {i(1), t"Ok(", i(2), t") = ", i(3, "var") }),
-        sn(nil, {i(1), t"Err(", i(2), t") = ", i(3, "var") }),
-        -- Boolean
-        sn(nil, {i(1), t"true = ", i(2, "var") }),
-        sn(nil, {i(1), t"false = ", i(2, "var") }),
-        -- Tuple
-        sn(nil, {i(1), t"(", i(2, "foo, bar"), t") = ", i(3, "var") }),
-      }),
-      i(2, "// ..."),
-      i(3),
+      "\t{}\n" ..
+      "}}{}\n",
+      {
+        c(1, {
+          -- Custom
+          sn(nil, { i(1), i(2, "pattern"), t " = ", i(3, "var") }),
+          -- Option
+          sn(nil, { i(1), t "Some(", i(2), t ") = ", i(3, "var") }),
+          sn(nil, { i(1), t "None(", i(2), t ") = ", i(3, "var") }),
+          -- Error
+          sn(nil, { i(1), t "Ok(", i(2), t ") = ", i(3, "var") }),
+          sn(nil, { i(1), t "Err(", i(2), t ") = ", i(3, "var") }),
+          -- Boolean
+          sn(nil, { i(1), t "true = ", i(2, "var") }),
+          sn(nil, { i(1), t "false = ", i(2, "var") }),
+          -- Tuple
+          sn(nil, { i(1), t "(", i(2, "foo, bar"), t ") = ", i(3, "var") }),
+        }),
+        i(2, "// ..."),
+        i(3),
       }
     )
   ),
-  -- }}}
 
-  -- {{{ match
-  s(
-    "match",
+  s( "match",
     fmt("match {} {{\n" ..
       "\t{}" ..
       "\n}}{}\n" ..
-      "{}"
-      , {
-      i(1, "pattern"),
-      c(2, {
-        d(1, function() -- action
-          return sn(nil, {
-            i(1),
-            i(2, "Variant"),
-            t({" => "}),
-            i(3, "action"),
-            i(4),
+      "{}",
+      {
+        i(1, "pattern"),
+        c(2, {
+          d(1, function() -- action
+            return sn(nil, {
+              i(1),
+              i(2, "Variant"),
+              t({ " => " }),
+              i(3, "action"),
+              i(4),
             })
-        end),
-        d(1, function() -- action case
-          return sn(nil, {
-            i(1),
-            i(2, "Variant"),
-            t({" => {", "\t\t"}),
-            i(3, "// ..."),
-            t({"", "\t}"}),
-            i(4)
+          end),
+          d(1, function() -- action case
+            return sn(nil, {
+              i(1),
+              i(2, "Variant"),
+              t({ " => {", "\t\t" }),
+              i(3, "// ..."),
+              t({ "", "\t}" }),
+              i(4)
             })
-        end),
-        d(1, function() -- error handling
-          return sn(nil, {
-            i(1),
-            t({"Ok("}),
-            i(2, "foo"),
-            t({") => "}),
-            i(3, "action"),
-            t({",", "\tErr("}),
-            i(4, "err"),
-            t({") => "}),
-            i(5, "action"),
+          end),
+          d(1, function() -- error handling
+            return sn(nil, {
+              i(1),
+              t({ "Ok(" }),
+              i(2, "foo"),
+              t({ ") => " }),
+              i(3, "action"),
+              t({ ",", "\tErr(" }),
+              i(4, "err"),
+              t({ ") => " }),
+              i(5, "action"),
             })
-        end),
-        d(1, function() -- option
-          return sn(nil, {
-            i(1),
-            t({"Some("}),
-            i(2, "foo"),
-            t({") => "}),
-            i(3, "action"),
-            t({",", "\tNone => "}),
-            i(4, "action"),
+          end),
+          d(1, function() -- option
+            return sn(nil, {
+              i(1),
+              t({ "Some(" }),
+              i(2, "foo"),
+              t({ ") => " }),
+              i(3, "action"),
+              t({ ",", "\tNone => " }),
+              i(4, "action"),
             })
-        end),
-      }),
-      i(3),
-      i(4),
+          end),
+        }),
+        i(3),
+        i(4),
       }
     )
   ),
-  -- }}}
 })
 -- }}

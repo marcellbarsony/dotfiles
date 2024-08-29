@@ -35,70 +35,68 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("python", {
-  -- {{{ decorator
-  s(
-    "@decorator",
-    fmt("def {}({}):\n"..
-      "\tdef {}({})\n"..
-      "\t\t{}\n"..
-      "{}{}\n"..
-      "\n"..
-      "\n"..
-      "@{}", {
-      same(1),
-      i(2, "func"),
-      i(3, "wrapper"),
-      c(4, {
-        t{""},
-        t{"*args"},
-        t{"*args, **kwargs"},
+  s( "@decorator",
+    fmt("def {}({}):\n" ..
+      "\tdef {}({})\n" ..
+      "\t\t{}\n" ..
+      "{}{}\n" ..
+      "\n" ..
+      "\n" ..
+      "@{}",
+      {
+        same(1),
+        i(2, "func"),
+        i(3, "wrapper"),
+        c(4, {
+          t { "" },
+          t { "*args" },
+          t { "*args, **kwargs" },
         }),
-      i(5, "pass"),
-      c(6, {
-        sn(nil, {i(1), t""}),
-        sn(nil, {i(1), t"\t", t"return ", i(2, "")})
+        i(5, "pass"),
+        c(6, {
+          sn(nil, { i(1), t "" }),
+          sn(nil, { i(1), t "\t", t "return ", i(2, "") })
         }),
-      i(0),
-      i(1, "decorator"),
-    })
+        i(0),
+        i(1, "decorator"),
+      }
+    )
   ),
-  -- }}}
 
-  -- {{{ timer
-  s(
-    "@timer",
-    fmt("def {}({}):\n"..
-      "\tdef {}({})\n"..
-      "\t\t{} = time.time()\n"..
-      "\t\t{}()\n"..
-      '\t\tprint("{}", time.time() - {}, "{}")\n'..
-      "\t\t{}\n"..
-      "{}{}\n"..
-      "\n"..
-      "\n"..
-      "@{}", {
-      same(1),
-      i(2, "func"),
-      i(3, "wrapper"),
-      c(4, {
-        t{""},
-        t{"*args"},
-        t{"*args, **kwargs"},
+  s( "@timer",
+    fmt("def {}({}):\n" ..
+      "\tdef {}({})\n" ..
+      "\t\t{} = time.time()\n" ..
+      "\t\t{}()\n" ..
+      '\t\tprint("{}", time.time() - {}, "{}")\n' ..
+      "\t\t{}\n" ..
+      "{}{}\n" ..
+      "\n" ..
+      "\n" ..
+      "@{}",
+      {
+        same(1),
+        i(2, "func"),
+        i(3, "wrapper"),
+        c(4, {
+          t { "" },
+          t { "*args" },
+          t { "*args, **kwargs" },
         }),
-      i(5, "before"),
-      same(2),
-      i(6, "Function took"),
-      same(5),
-      i(7, "seconds"),
-      i(8, "pass"),
-      c(9, {
-        sn(nil, {i(1), t""}),
-        sn(nil, {i(1), t"\t", t"return ", i(2, "")})
+        i(5, "before"),
+        same(2),
+        i(6, "Function took"),
+        same(5),
+        i(7, "seconds"),
+        i(8, "pass"),
+        c(9, {
+          sn(nil, { i(1), t "" }),
+          sn(nil, { i(1), t "\t", t "return ", i(2, "") })
         }),
-      i(0),
-      i(1, "timer"),
-    })
+        i(0),
+        i(1, "timer"),
+      }
+    )
   ),
-  -- }}}
 })
 -- }}}

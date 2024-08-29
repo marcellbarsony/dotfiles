@@ -27,26 +27,23 @@ local conds_expand = require("luasnip.extras.conditions.expand")
 -- FUNCTIONS -- {{{
 -- Same
 local same = function(index)
-    return f(function(arg)
-        return arg[1]
-    end, { index })
+  return f(function(arg)
+    return arg[1]
+  end, { index })
 end
 -- }}}
 
 -- SNIPPETS -- {{{
 ls.add_snippets("lua", {
-    -- {{{ if
-    s(
-        "if",
-        fmt("if {} then\n" ..
-            "\t{}\n" ..
-            "end\n{}", {
-                i(1, "condition"),
-                i(2, "pass"),
-                i(0),
-            }
-        )
-    ),
-    -- }}}
+  s( "if",
+    fmt("if {} then\n" ..
+      "\t{}\n" ..
+      "end\n{}", {
+        i(1, "condition"),
+        i(2, "pass"),
+        i(0),
+      }
+    )
+  ),
 })
 -- }}}

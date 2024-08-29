@@ -35,29 +35,28 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("python", {
-  -- {{{ with (context)
-  s(
-    "with",
+  s( "with", -- with context
     fmt('with open({}, "{}") as {}:\n' ..
-      '\t{} = {}.{}(){}', {
-      i(1, "file"),
-      c(2, {
-        t{"r"},
-        t{"w"},
-        t{"rw"},
-        t{"wb"},
-        t{"rb"},
+      '\t{} = {}.{}(){}',
+      {
+        i(1, "file"),
+        c(2,{
+          t { "r" },
+          t { "w" },
+          t { "rw" },
+          t { "wb" },
+          t { "rb" },
         }),
-      i(3, "file"),
-      i(4, "content"),
-      same(3),
-      c(5, {
-        t{"read"},
-        t{"write"},
-      }),
-      i(0),
-    })
+        i(3, "file"),
+        i(4, "content"),
+        same(3),
+        c(5, {
+          t { "read" },
+          t { "write" },
+        }),
+        i(0),
+      }
+    )
   ),
-  -- }}}
 })
 -- }}}

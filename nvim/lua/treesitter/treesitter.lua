@@ -3,49 +3,49 @@
 -- https://tree-sitter.github.io/tree-sitter/
 
 require "nvim-treesitter.configs".setup {
-    -- Install
-    -- https://github.com/nvim-treesitter/nvim-treesitter#modules
-    ensure_installed = {
-        "javascript",
-        "lua",
-        "markdown",
-        "markdown_inline",
-        "python",
-        "rust"
-    },
-    sync_install = false,
-    auto_install = true,
-    ignore_install = { "" },
+  -- Install
+  -- https://github.com/nvim-treesitter/nvim-treesitter#modules
+  ensure_installed = {
+    "javascript",
+    "lua",
+    "markdown",
+    "markdown_inline",
+    "python",
+    "rust"
+  },
+  sync_install = false,
+  auto_install = true,
+  ignore_install = { "" },
 
-    -- Highlights
-    -- https://github.com/nvim-treesitter/nvim-treesitter#highlight
-    highlight = {
-        enable = true,
-        disable = { "" },
-        additional_vim_regex_highlighting = false,
-    },
+  -- Highlights
+  -- https://github.com/nvim-treesitter/nvim-treesitter#highlight
+  highlight = {
+    enable = true,
+    disable = { "" },
+    additional_vim_regex_highlighting = false,
+  },
 
-    -- Modules
-    -- Available modules
-    -- https://github.com/nvim-treesitter/nvim-treesitter#available-modules
+  -- Modules
+  -- Available modules
+  -- https://github.com/nvim-treesitter/nvim-treesitter#available-modules
 
-    -- Incremental selection
-    -- https://github.com/nvim-treesitter/nvim-treesitter#incremental-selection
-    incremental_selection = {
-        enable = true,
-        keymaps = {
-            init_selection = "gnn",
-            node_incremental = "grn",
-            scope_incremental = "grc",
-            node_decremental = "grm",
-        },
+  -- Incremental selection
+  -- https://github.com/nvim-treesitter/nvim-treesitter#incremental-selection
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "gnn",
+      node_incremental = "grn",
+      scope_incremental = "grc",
+      node_decremental = "grm",
     },
+  },
 
-    -- Indentation
-    -- https://github.com/nvim-treesitter/nvim-treesitter#indentation
-    indent = {
-        enable = true
-    },
+  -- Indentation
+  -- https://github.com/nvim-treesitter/nvim-treesitter#indentation
+  indent = {
+    enable = true
+  },
 }
 
 -- Overwrite highlights

@@ -35,26 +35,23 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("python", {
-  -- {{{ class
-  s(
-    "class",
+  s( "class",
     fmt("class {}({}):\n\n" ..
       '\t"""Docstring for {}"""\n\n'..
       '\tdef __init__(self, {}):\n'..
       '\t\t{}({}, self).__init__()\n' ..
-      '\t\tself.arg = {}{}'
-      , {
-      i(1, "ClassName"),
-      i(2, "object"),
-      same(1),
-      i(3, "arg"),
-      i(4, "super"),
-      same(1),
-      same(3),
-      i(0),
+      '\t\tself.arg = {}{}\n',
+      {
+        i(1, "ClassName"),
+        i(2, "object"),
+        same(1),
+        i(3, "arg"),
+        i(4, "super"),
+        same(1),
+        same(3),
+        i(0),
       }
     )
   ),
-  -- }}}
 })
 -- }}}

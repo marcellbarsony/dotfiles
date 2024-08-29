@@ -36,72 +36,71 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("rust", {
-  s( -- function
-    "fn",
+  s( "fn", -- function
     fmt("{}fn {}{}({}){}{{\n" ..
       "\t{}\n" ..
       "}}\n" ..
-      "{}"
-      , {
-      c(1, {
-        -- no qualifier
-        sn(nil, {i(1)}),
-        -- async
-        sn(nil, {i(1), t"async "}),
-        -- const
-        sn(nil, {i(1), t"const "}),
-        -- unsafe
-        sn(nil, {i(1), t"unsafe "}),
-        -- public
-        sn(nil, {i(1), t"pub "}),
-      }),
-      i(2, "function"),
-      c(3, {
-        sn(nil, {i(1)}),
-        -- generic
-        sn(nil, {i(1), t"<", i(2, "T"), t">"}),
-        -- generic + trait
-        sn(nil, {i(1), t"<", i(2, "T: Trait"), t">"}),
-        -- lifetime
-        sn(nil, {i(1), t"<'", i(2, "lifetime"), t">"}),
-      }),
-      c(4, {
-        -- no parameter
-        sn(nil, {i(1), t""}),
-        -- parameter
-        sn(nil, {i(1), i(2, "foo"), t": ", i(3, "Type")}),
-        -- self
-        sn(nil, {i(1), t"&self"}),
-        -- self + parameter
-        sn(nil, {i(1), t"&self, ", i(2, "foo"), t": ", i(3, "Type")}),
-        -- self + mut
-        sn(nil, {i(1), t"&mut self", i(2, "")}),
-        -- self + mut + parameter
-        sn(nil, {i(1), t"&mut self, ", i(2, "foo"), t": ", i(3, "Type")}),
-      }),
-      c(5, {
-        -- no return
-        sn(nil, {i(1), t" "}),
-        -- return
-        sn(nil, {i(1), t" -> ", i(2, "Type"), t" "}),
-        -- where
-        d(1, function()
-          return sn(nil, {
-            i(1),
-            t({" -> "}),
-            i(2, "Type"),
-            t({"", "\twhere "}),
-            i(3, "T"),
-            t({": "}),
-            i(4, "Trait"),
-            t({"", ""}),
-          })
-        end),
-        -- result
-        sn(nil, {i(1), t" -> Result<", i(2, "Type"), t", ", i(3, "io::Error"), t">"}),
-      }),
-      i(6, "// ..."),
-      i(7),
+      "{}",
+      {
+        c(1, {
+          -- no qualifier
+          sn(nil, { i(1) }),
+          -- async
+          sn(nil, { i(1), t "async " }),
+          -- const
+          sn(nil, { i(1), t "const " }),
+          -- unsafe
+          sn(nil, { i(1), t "unsafe " }),
+          -- public
+          sn(nil, { i(1), t "pub " }),
+        }),
+        i(2, "function"),
+        c(3, {
+          sn(nil, { i(1) }),
+          -- generic
+          sn(nil, { i(1), t "<", i(2, "T"), t ">" }),
+          -- generic + trait
+          sn(nil, { i(1), t "<", i(2, "T: Trait"), t ">" }),
+          -- lifetime
+          sn(nil, { i(1), t "<'", i(2, "lifetime"), t ">" }),
+        }),
+        c(4, {
+          -- no parameter
+          sn(nil, { i(1), t "" }),
+          -- parameter
+          sn(nil, { i(1), i(2, "foo"), t ": ", i(3, "Type") }),
+          -- self
+          sn(nil, { i(1), t "&self" }),
+          -- self + parameter
+          sn(nil, { i(1), t "&self, ", i(2, "foo"), t ": ", i(3, "Type") }),
+          -- self + mut
+          sn(nil, { i(1), t "&mut self", i(2, "") }),
+          -- self + mut + parameter
+          sn(nil, { i(1), t "&mut self, ", i(2, "foo"), t ": ", i(3, "Type") }),
+        }),
+        c(5, {
+          -- no return
+          sn(nil, { i(1), t " " }),
+          -- return
+          sn(nil, { i(1), t " -> ", i(2, "Type"), t " " }),
+          -- where
+          d(1, function()
+            return sn(nil, {
+              i(1),
+              t({ " -> " }),
+              i(2, "Type"),
+              t({ "", "\twhere " }),
+              i(3, "T"),
+              t({ ": " }),
+              i(4, "Trait"),
+              t({ "", "" }),
+            })
+          end),
+          -- result
+          sn(nil, { i(1), t " -> Result<", i(2, "Type"), t ", ", i(3, "io::Error"), t ">" }),
+        }),
+        i(6, "// ..."),
+        i(7),
       }
     )
   ),

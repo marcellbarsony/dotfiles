@@ -27,53 +27,61 @@ local conds_expand = require("luasnip.extras.conditions.expand")
 -- {{{ FUNCTIONS
 -- Same
 local same = function(index)
-    return f(function(arg)
-        return arg[1]
-    end, { index })
+  return f(function(arg)
+    return arg[1]
+  end, { index })
 end
 -- }}}
 
 -- {{{ SNIPPETS
 ls.add_snippets("python", {
-    -- {{{ shebang
-    s(
-        "#!",
-        fmt('#!/usr/bin/env python3\n' ..
-            '"""\n' ..
-            "Author: {}\n" ..
-            "Date  : {}\n" ..
-            "Desc  : {}\n" ..
-            '"""\n\n\n{}', {
-                i(1, "Name"),
-                c(2, {
-                    f(function()
-                        return os.date("%D")
-                    end),
-                    f(function()
-                        return os.date("%d-%m-%Y")
-                    end),
-                    f(function()
-                        return os.date("%d %B %Y")
-                    end),
-                    f(function()
-                        return os.date("%Y %B %d")
-                    end),
-                }),
-                i(3, "Description"),
-                i(0),
-            })
-    ),
-    -- }}}
+  s( "#!", -- shbang
+    fmt('#!/usr/bin/env python3\n' ..
+      '"""\n' ..
+      "Author: {}\n" ..
+      "Date  : {}\n" ..
+      "Desc  : {}\n" ..
+      '"""\n\n\n{}',
+      {
+        i(1, "Name"),
+        c(2, {
+          f(function()
+            return os.date("%D")
+          end),
+          f(function()
+            return os.date("%d-%m-%Y")
+          end),
+          f(function()
+            return os.date("%d %B %Y")
+          end),
+          f(function()
+            return os.date("%Y %B %d")
+          end),
+        }),
+        i(3, "Description"),
+        i(0),
+      }
+    )
+  ),
 
-    -- {{{ if-name
-    s(
-        "if-name",
-        fmt('if __name__ == "__main__":\n' ..
-            "\t{}{}", {
-                i(1, "main()"),
-                i(0),
-            })
-    ),
-    -- }}}
+  s( "if-name",
+    fmt('if __name__ == "__main__":\n' ..
+      "\t{}{}", {
+        i(1, "main()"),
+        i(0),
+      }
+    )
+  ),
+
+  s( "import",
+    fmt('{}import {}{}', {
+      c(1, {
+        sn(nil, { i(1), t "" }),                         -- 1st opt
+        sn(nil, { i(1), t "from ", i(2, "package"), t " " }) -- 2nd opt
+      }),
+      i(2, "module"),
+      i(0),
+    })
+  ),
 })
 -- }}}

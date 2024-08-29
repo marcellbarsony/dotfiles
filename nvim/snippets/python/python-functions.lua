@@ -35,22 +35,20 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("python", {
-    -- {{{ function (+async)
-    s(
-        "def",
-        fmt("{} {}({}):\n"..
-            "\t{}{}", {
-                c(1, {
-                    t{"def"},
-                    t{"async def"},
-                }),
-                i(2, "name"),
-                i(3, "arg"),
-                i(4, "pass"),
-                i(0),
-            }
-        )
-    ),
-    -- }}}
+  s( "def", -- function (+async)
+    fmt("{} {}({}):\n" ..
+      "\t{}{}",
+      {
+        c(1, {
+          t { "def" },
+          t { "async def" },
+        }),
+        i(2, "name"),
+        i(3, "arg"),
+        i(4, "pass"),
+        i(0),
+      }
+    )
+  ),
 })
 -- }}}

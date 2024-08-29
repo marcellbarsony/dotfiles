@@ -9,25 +9,25 @@ local types = require("luasnip.util.types")
 -- {{{ Config
 -- :h luasnip-config-options
 ls.setup({
-    keep_roots = true,
-    link_roots = true,
-    link_children = true,
-    updateevents = "TextChanged,TextChangedI", -- :h events
-    delete_check_events = "TextChanged",
-    ext_opts = {
-        [types.choiceNode] = {
-            active = {
-                virt_text = { { "󰁎", "GruvboxOrange" } },
-            },
-        },
+  keep_roots = true,
+  link_roots = true,
+  link_children = true,
+  updateevents = "TextChanged,TextChangedI",   -- :h events
+  delete_check_events = "TextChanged",
+  ext_opts = {
+    [types.choiceNode] = {
+      active = {
+        virt_text = { { "󰁎", "GruvboxOrange" } },
+      },
     },
-    ext_base_prio = 300,
-    ext_prio_increase = 1,
-    enable_autosnippets = true,
-    store_selection_keys = "<Tab>",
-    ft_func = function()
-        return vim.split(vim.bo.filetype, ".", true)
-    end,
+  },
+  ext_base_prio = 300,
+  ext_prio_increase = 1,
+  enable_autosnippets = true,
+  store_selection_keys = "<Tab>",
+  ft_func = function()
+    return vim.split(vim.bo.filetype, ".", true)
+  end,
 })
 -- }}}
 
@@ -39,35 +39,35 @@ vim.keymap.set({ "i", "s" }, "<c-u>", "<cmd>source ~/.config/nvim/lua/user/plugi
 
 -- Jump (forward)
 vim.keymap.set({ "i", "s" }, "<c-l>", function()
-    if ls.expand_or_jumpable() then
-        ls.expand_or_jump()
-    end
+  if ls.expand_or_jumpable() then
+    ls.expand_or_jump()
+  end
 end, { silent = true })
 
 -- Jump (backward)
 vim.keymap.set({ "i", "s" }, "<c-h>", function()
-    if ls.jumpable() then
-        ls.jump(-1)
-    end
+  if ls.jumpable() then
+    ls.jump(-1)
+  end
 end, { silent = true })
 
 -- Choice (+)
 vim.keymap.set("i", "<c-k>", function()
-    if ls.choice_active() then
-        ls.change_choice(1)
-    end
+  if ls.choice_active() then
+    ls.change_choice(1)
+  end
 end)
 
 -- Choice (-)
 vim.keymap.set({ "i" }, "<c-j>", function()
-    if ls.choice_active() then
-        ls.change_choice(-1)
-    end
+  if ls.choice_active() then
+    ls.change_choice(-1)
+  end
 end)
 -- }}}
 
 -- {{{ Source snippets
 require("luasnip.loaders.from_lua").load({
-    paths = "~/.config/nvim/snippets/"
+  paths = "~/.config/nvim/snippets/"
 })
 -- }}}

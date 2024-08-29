@@ -27,48 +27,46 @@ local conds_expand = require("luasnip.extras.conditions.expand")
 -- FUNCTIONS -- {{{
 -- Same
 local same = function(index)
-    return f(function(arg)
-        return arg[1]
-    end, { index })
+  return f(function(arg)
+    return arg[1]
+  end, { index })
 end
 -- }}}
 
 -- SNIPPETS -- {{{
 ls.add_snippets("c", {
-    -- {{{ integer
-    s(
-        "int",
-        fmt("int {};\n" ..
-            "{}",
-            {
-                c(1, {
-                    -- A
-                    sn(nil, {
-                        t"aaaaa"
-                    }),
-                    -- B
-                    sn(nil, {
-                        t"bbbbb"
-                    })
-                }),
-                i(2)
-            }
-        )
-    ),
-    -- }}}
+  -- {{{ integer
+  s( "int",
+    fmt("int {};\n" ..
+      "{}",
+      {
+        c(1, {
+          -- A
+          sn(nil, {
+            t "aaaaa"
+          }),
+          -- B
+          sn(nil, {
+            t "bbbbb"
+          })
+        }),
+        i(2)
+      }
+    )
+  ),
+  -- }}}
 
-    -- {{{ printf
-    s(
-        "printf",
-        fmt('printf("{}", {});\n' ..
-            "{}",
-            {
-                i(1, ""),
-                i(2, ""),
-                i(3),
-            }
-        )
-    ),
-    -- }}}
+  -- {{{ printf
+  s( "printf",
+    fmt('printf("{}", {});\n' ..
+      "{}",
+      {
+        i(1, ""),
+        i(2, ""),
+        i(3),
+      }
+    )
+  ),
+  -- }}}
 })
 -- }}}

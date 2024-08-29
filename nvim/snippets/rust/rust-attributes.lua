@@ -35,34 +35,32 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("rust", {
-  s(
-    "#[attr]",
+  s( "#[attr]",
     fmt("#[{}{}", {
       c(1, {
         d(1, function() -- derive-debug
           return sn(nil, {
             i(1),
-            t({"derive(Debug)]"}),
+            t({ "derive(Debug)]" }),
           })
         end),
         d(1, function() -- test
           return sn(nil, {
             i(1),
-            t({"test]"}),
+            t({ "test]" }),
           })
         end),
         d(1, function() -- ignore test
           return sn(nil, {
             i(1),
-            t({"test]", '#[ignore = "'}),
+            t({ "test]", '#[ignore = "' }),
             i(2, "reason"),
-            t({'"]'}),
-            })
+            t({ '"]' }),
+          })
         end),
       }),
       i(2),
-      }
-    )
+    })
   ),
 })
 -- }}}

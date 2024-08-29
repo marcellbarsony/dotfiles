@@ -35,71 +35,62 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("rust", {
-  -- {{{ for
-  s(
-    "for",
-      fmt("for {} in {} {{\n" ..
-        "\t{}\n"..
-        "}}\n"..
-        "{}"
-        , {
+  s( "for",
+    fmt("for {} in {} {{\n" ..
+      "\t{}\n" ..
+      "}}\n" ..
+      "{}",
+      {
         i(1, "item"),
         i(2, "iterator"),
         i(3, "// ..."),
         i(4),
-        }
-      )
+      }
+    )
   ),
-  -- }}}
 
-  -- {{{ loop
-  s(
-    "loop",
+  s( "loop",
     fmt("{}\n" ..
-      "{}"
-      , {
-      c(1, {
-        d(1, function()
-          return sn(nil, {
-            i(1),
-            t({"'"}),
-            i(2, "label"),
-            t({" loop {", "\t"}),
-            i(3, "// ..."),
-            t({"", "\tbreak '"}),
-            same(2),
-            t({";", "}"}),
-          })
-        end),
-        d(1, function()
-          return sn(nil, {
-            i(1),
-            t({"loop {", "\t"}),
-            i(2, "// ..."),
-            t({"", "}"}),
-          })
-        end),
-      }),
-      i(2),
+      "{}",
+      {
+        c(1, {
+          d(1, function()
+            return sn(nil, {
+              i(1),
+              t({ "'" }),
+              i(2, "label"),
+              t({ " loop {", "\t" }),
+              i(3, "// ..."),
+              t({ "", "\tbreak '" }),
+              same(2),
+              t({ ";", "}" }),
+            })
+          end),
+          d(1, function()
+            return sn(nil, {
+              i(1),
+              t({ "loop {", "\t" }),
+              i(2, "// ..."),
+              t({ "", "}" }),
+            })
+          end),
+        }),
+        i(2),
       }
     )
   ),
-  -- }}}
 
-  -- {{{ while
-  s(
-    "while",
+  s( "while",
     fmt("while {} {{\n" ..
-      "\t{}\n"..
-      "}}\n"..
-      "{}"
-      , {
-      i(1, "bool_condition"),
-      i(2, "// ..."),
-      i(3),
+      "\t{}\n" ..
+      "}}\n" ..
+      "{}",
+      {
+        i(1, "bool_condition"),
+        i(2, "// ..."),
+        i(3),
       }
     )
   ),
-  -- }}}
 })
 --}}}

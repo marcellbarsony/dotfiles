@@ -29,76 +29,64 @@ local conds_expand = require("luasnip.extras.conditions.expand")
 
 -- SNIPPETS -- {{{
 ls.add_snippets("all", {
-    -- {{{ date
-    s(
-        "date",
-        fmt("{}", {
-            c(1, {
-                f(function()
-                    return os.date("%D")
-                end),
-                f(function()
-                    return os.date("%d-%m-%Y")
-                end),
-                f(function()
-                    return os.date("%d %B %Y")
-                end),
-                f(function()
-                    return os.date("%Y %B %d")
-                end),
-            }),
-        })
-    ),
-    -- }}}
+  s( "date",
+    fmt("{}", {
+      c(1, {
+        f(function()
+          return os.date("%D")
+        end),
+        f(function()
+          return os.date("%d-%m-%Y")
+        end),
+        f(function()
+          return os.date("%d %B %Y")
+        end),
+        f(function()
+          return os.date("%Y %B %d")
+        end),
+      }),
+    })
+  ),
 
-    -- {{{ lorem
-    s(
-        "lorem",
-        fmt("{}", {
-            c(1, {
-                t { "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "" },
-                t { "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                    "Proin nec condimentum massa. Quisque tempus tempus malesuada.",
-                    "Vivamus justo leo, mattis vel viverra ac, mattis sit amet ex.",
-                    "Maecenas vel scelerisque leo. Duis in congue urna. Praesent non est",
-                    "et nunc feugiat porttitor id quis nisi. Maecenas et lacinia ex.",
-                    "Donec mollis sapien accumsan elit aliquet dignissim eu volutpat massa.",
-                    "Nulla tempor mi a consequat rutrum. Praesent vitae scelerisque augue.",
-                    "Donec imperdiet lorem metus, id facilisis lectus fringilla a.",
-                    "Vivamus egestas, nunc et fringilla egestas, velit dui finibus purus,",
-                    "et congue odio felis quis elit. Nunc at risus velit. Proin ex mauris,",
-                    "pellentesque eu sem nec, lobortis aliquam ligula.",
-                },
-            }),
-        })
-    ),
-    -- }}}
+  s( "lorem",
+    fmt("{}", {
+      c(1, {
+        t { "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "" },
+        t { "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "Proin nec condimentum massa. Quisque tempus tempus malesuada.",
+          "Vivamus justo leo, mattis vel viverra ac, mattis sit amet ex.",
+          "Maecenas vel scelerisque leo. Duis in congue urna. Praesent non est",
+          "et nunc feugiat porttitor id quis nisi. Maecenas et lacinia ex.",
+          "Donec mollis sapien accumsan elit aliquet dignissim eu volutpat massa.",
+          "Nulla tempor mi a consequat rutrum. Praesent vitae scelerisque augue.",
+          "Donec imperdiet lorem metus, id facilisis lectus fringilla a.",
+          "Vivamus egestas, nunc et fringilla egestas, velit dui finibus purus,",
+          "et congue odio felis quis elit. Nunc at risus velit. Proin ex mauris,",
+          "pellentesque eu sem nec, lobortis aliquam ligula.",
+        },
+      }),
+    })
+  ),
 
-    -- {{{ pwd
-    s(
-        "pwd",
-        fmt("{}", {
-            f(function()
-                return os.getenv("PWD")
-            end)
-        })
-    ),
-    -- }}}
+  s( "pwd",
+    fmt("{}", {
+      f(function()
+        return os.getenv("PWD")
+      end)
+    })
+  ),
 
-    -- {{{ time
-    s(
-        "time",
-        fmt("{}", {
-            c(1, {
-                f(function()
-                    return os.date("%I:%M %p")
-                end),
-                f(function()
-                    return os.date("%H:%M")
-                end),
-            }),
-        })
-    ),
-    -- }}}
+  s( "time",
+    fmt("{}", {
+      c(1, {
+        f(function()
+          return os.date("%I:%M %p")
+        end),
+        f(function()
+          return os.date("%H:%M")
+        end),
+      }),
+    })
+  ),
 })
 -- }}}

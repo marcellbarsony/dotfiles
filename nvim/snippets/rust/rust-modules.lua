@@ -35,91 +35,78 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("rust", {
-  -- {{{ import
-  s(
-    "crate",
-    fmt("{};\n{}"
-      , {
+  s( "crate",
+    fmt("{};\n{}", {
       c(1, {
         -- Absolute path
-        sn(nil, {i(1), t"crate::", i(2, "module::function()")}),
+        sn(nil, { i(1), t "crate::", i(2, "module::function()") }),
         -- Relative path
-        sn(nil, {i(1), i(2, "module::function()")}),
+        sn(nil, { i(1), i(2, "module::function()") }),
         -- Parent module
-        sn(nil, {i(1), t"super::", i(2, "module::function()")}),
+        sn(nil, { i(1), t "super::", i(2, "module::function()") }),
       }),
       i(2),
-      }
-    )
+    })
   ),
-  -- }}}
 
-  -- {{{ module
-  s(
-    "mod",
+  s( "mod",
     fmt("{}\n{}", {
       c(1, {
         d(1, function() -- mod (private)
           return sn(nil, {
             i(1),
-            t({"mod "}),
+            t({ "mod " }),
             i(2, "mod_name"),
-            t({" {", "\t"}),
+            t({ " {", "\t" }),
             i(3, "// ..."),
-            t({"", "}"}),
+            t({ "", "}" }),
           })
         end),
         d(1, function() -- mod (public)
           return sn(nil, {
             i(1),
-            t({"pub mod "}),
+            t({ "pub mod " }),
             i(2, "mod_name"),
-            t({" {", "\t"}),
+            t({ " {", "\t" }),
             i(3, "// ..."),
-            t({"", "}"}),
-            })
+            t({ "", "}" }),
+          })
         end),
         d(1, function() -- mod (file)
           return sn(nil, {
             i(1),
-            t({"mod "}),
+            t({ "mod " }),
             i(2, "file_name"),
-            t({";"}),
-            })
+            t({ ";" }),
+          })
         end),
       }),
       i(2),
-      }
-    )
+    })
   ),
-  -- }}}
 
-  -- {{{ use
-  s(
-    "use",
+  s( "use",
     fmt("use {};\n{}", {
       c(1, {
         -- Module
-        sn(nil, {i(1), i(2, "module::module")}),
+        sn(nil, { i(1), i(2, "module::module") }),
         -- Alias
-        sn(nil, {i(1), i(2, "module::module"), t" as ", i(3, "name")}),
+        sn(nil, { i(1), i(2, "module::module"), t " as ", i(3, "name") }),
         -- Glob operator
-        sn(nil, {i(1), i(2, "module::module"), t"::*"}),
+        sn(nil, { i(1), i(2, "module::module"), t "::*" }),
         -- Nested path
-        sn(nil, {i(1), i(2, "module::module"), t"::{", i(3, "foo, bar, baz"), t"}"}),
+        sn(nil, { i(1), i(2, "module::module"), t "::{", i(3, "foo, bar, baz"), t "}" }),
         -- Nested path (with self reference)
-        sn(nil, {i(1), i(2, "module::module"), t"::{self, ", i(3, "foo, bar, baz"), t"}"}),
+        sn(nil, { i(1), i(2, "module::module"), t "::{self, ", i(3, "foo, bar, baz"), t "}" }),
         -- Crate [Absolute path]
-        sn(nil, {i(1), t"crate::", i(2, "module")}),
+        sn(nil, { i(1), t "crate::", i(2, "module") }),
         -- Self [Relative path]
-        sn(nil, {i(1), t"self::", i(2, "module")}),
+        sn(nil, { i(1), t "self::", i(2, "module") }),
         -- Super [TODO]
-        sn(nil, {i(1), t"super::", i(2, "module")}),
+        sn(nil, { i(1), t "super::", i(2, "module") }),
       }),
       i(2),
-      }
-    )
+    })
   ),
-  -- }}}
 })
 -- }}}
