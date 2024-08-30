@@ -38,8 +38,8 @@ local kind_icons = {
 
 -- {{{ SuperTab (check backspace)
 -- local check_backspace = function()
---     local col = vim.fn.col "." - 1
---     return col == 0 or vim.fn.getlin("."):sub(col, col):match "%s"
+--   local col = vim.fn.col "." - 1
+--   return col == 0 or vim.fn.getlin("."):sub(col, col):match "%s"
 -- end
 -- }}}
 
@@ -58,7 +58,7 @@ cmp.setup({
   -- Snippet
   snippet = {
     expand = function(args)
-      luasnip.lsp_expand(args.body)       -- Luasnip
+      luasnip.lsp_expand(args.body) -- Luasnip
     end,
   },
 
@@ -69,12 +69,12 @@ cmp.setup({
       side_padding = 0,
       winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
     },
-    -- -- Border
+    -- Border
     -- documentation = cmp.config.window.bordered {
-    --     winhighlight = 'Normal:CmpPmenu,CursorLine:PmenuSel,Search:None'
+    --   winhighlight = 'Normal:CmpPmenu,CursorLine:PmenuSel,Search:None'
     -- },
     -- completion = cmp.config.window.bordered({
-    --     winhighlight = 'Normal:CmpPmenu,CursorLine:PmenuSel,Search:None'
+    --   winhighlight = 'Normal:CmpPmenu,CursorLine:PmenuSel,Search:None'
     -- }),
   },
 
@@ -88,9 +88,13 @@ cmp.setup({
   },
 
   -- Mapping
+  -- :h ins-completion
   mapping = {
-    -- Accept selected
-    ["<CR>"] = cmp.mapping.confirm({ select = false }),
+    ["<CR>"] = cmp.mapping.confirm({ select = false }),                            -- Accept selected
+    ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),             -- Open
+    ["<C-c>"] = cmp.mapping({ i = cmp.mapping.close(), c = cmp.mapping.close() }), -- Close
+    ["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-5), { "i", "c" }),            -- Scroll docs
+    ["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(5), { "i", "c" }),             -- Scroll docs
 
     -- Luasnips
     -- https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
@@ -115,7 +119,7 @@ cmp.setup({
       end
     end, { "i", "s" }),
     -- CMP
-    ["<C-j>"] = cmp.mapping({     -- Down
+    ["<C-j>"] = cmp.mapping({ -- Down
       c = function()
         if cmp.visible() then
           cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
@@ -131,7 +135,7 @@ cmp.setup({
         end
       end
     }),
-    ["<C-k>"] = cmp.mapping({     -- Up
+    ["<C-k>"] = cmp.mapping({ -- Up
       c = function()
         if cmp.visible() then
           cmp.select_prev_item({ behavior = cmp.SelectBehavior.Select })
@@ -147,19 +151,13 @@ cmp.setup({
         end
       end
     }),
-    ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),                 -- Open
-    ["<C-h>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),                -- Scroll docs
-    ["<C-l>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),                 -- Scroll docs
-    ["<C-c>"] = cmp.mapping({ i = cmp.mapping.close(), c = cmp.mapping.close() }),     -- Close
-    -- ["<Down>"] = cmp.mapping(cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }), {"i"}),
-    -- ["<Up>"] = cmp.mapping(cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }), {"i"}),
   },
 
   -- Sources
   sources = cmp.config.sources({
     { name = "luasnip",  max_item_count = 3,  priority_weight = 1 },
     { name = "nvim_lsp", max_item_count = 100 },
-    { name = "buffer",   keyword_length = 3,  max_item_count = 3 },
+    { name = "buffer",   max_item_count = 3, keyword_length = 3 },
   }),
 
   -- Formatting
@@ -167,7 +165,7 @@ cmp.setup({
     fields = { "abbr", "kind", "menu" },
     format = function(entry, vim_item)
       -- Kind icons
-      vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind)       -- Concatonate icons with item kind name
+      vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- Concatonate icons with item kind name
       -- Source
       vim_item.menu = ({
         buffer = "[Buf]",

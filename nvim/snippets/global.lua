@@ -29,7 +29,7 @@ local conds_expand = require("luasnip.extras.conditions.expand")
 
 -- SNIPPETS -- {{{
 ls.add_snippets("all", {
-  s( "date",
+  s("date",
     fmt("{}", {
       c(1, {
         f(function()
@@ -48,10 +48,10 @@ ls.add_snippets("all", {
     })
   ),
 
-  s( "lorem",
+  s("lorem",
     fmt("{}", {
       c(1, {
-        t { "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "" },
+        t { "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
         t { "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           "Proin nec condimentum massa. Quisque tempus tempus malesuada.",
           "Vivamus justo leo, mattis vel viverra ac, mattis sit amet ex.",
@@ -68,7 +68,7 @@ ls.add_snippets("all", {
     })
   ),
 
-  s( "pwd",
+  s("pwd",
     fmt("{}", {
       f(function()
         return os.getenv("PWD")
@@ -76,7 +76,7 @@ ls.add_snippets("all", {
     })
   ),
 
-  s( "time",
+  s("time",
     fmt("{}", {
       c(1, {
         f(function()
@@ -86,6 +86,14 @@ ls.add_snippets("all", {
           return os.date("%H:%M")
         end),
       }),
+    })
+  ),
+
+  s("user",
+    fmt("{}", {
+      f(function()
+        return os.getenv("USER")
+      end)
     })
   ),
 })
