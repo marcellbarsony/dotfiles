@@ -1,4 +1,4 @@
--- nvim-dap-python
+-- Nvim DAP Python
 -- https://github.com/mfussenegger/nvim-dap-python
 
 -- Adapter config

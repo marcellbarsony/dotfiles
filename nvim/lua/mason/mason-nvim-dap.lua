@@ -1,4 +1,4 @@
--- Mason-nvim-dap
+-- Mason-Nvim-DAP
 -- https://github.com/jay-babu/mason-nvim-dap.nvim
 
 local dap = require("dap")

@@ -1,4 +1,4 @@
--- mason.nvim
+-- Mason
 -- https://github.com/williamboman/mason.nvim
 
 -- Config

@@ -1,4 +1,4 @@
--- mason-lspconfig.nvim
+-- Mason-Lspconfig
 -- https://github.com/williamboman/mason-lspconfig.nvim
 
 -- Lspconfig
@@ -6,13 +6,13 @@
 require("mason-lspconfig").setup({
   -- Bootstrap LSP servers
   ensure_installed = {
-    "asm_lsp",           -- Assembly
-    "bashls",            -- Bash
-    "clangd",            -- C/C++
-    "lua_ls",            -- Lua
-    "rust_analyzer",     -- Rust
-    "tsserver",          -- Typescript / JavaScript
-    -- "pyright",    -- Python (requires npm)
+    "asm_lsp",       -- Assembly
+    "bashls",        -- Bash
+    "clangd",        -- C/C++
+    "lua_ls",        -- Lua
+    "rust_analyzer", -- Rust
+    "tsserver",      -- Typescript / JavaScript
+    "pyright",       -- Python (requires npm)
   },
   automatic_installation = false,
   handlers = nil,
