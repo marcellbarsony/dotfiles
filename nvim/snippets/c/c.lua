@@ -35,8 +35,7 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("c", {
-  -- {{{ integer
-  s( "int",
+  s("int",  -- integer
     fmt("int {};\n" ..
       "{}",
       {
@@ -54,10 +53,8 @@ ls.add_snippets("c", {
       }
     )
   ),
-  -- }}}
 
-  -- {{{ printf
-  s( "printf",
+  s("printf",  -- printf
     fmt('printf("{}", {});\n' ..
       "{}",
       {
@@ -67,6 +64,19 @@ ls.add_snippets("c", {
       }
     )
   ),
-  -- }}}
+
+  s("int",
+    fmt("int {}({}) {{\n" ..
+      "\t{}\n" ..
+      "}}\n" ..
+      "{}",
+      {
+        i(1, "main"),
+        i(2, "void"),
+        i(3, "lorem"),
+        i(4)
+      }
+    )
+  ),
 })
 -- }}}

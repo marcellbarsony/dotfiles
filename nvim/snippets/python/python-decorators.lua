@@ -1,5 +1,5 @@
 -- Python snippets [Decorators]
--- https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
+-- Docs: https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
 
 -- SHORTHANDS -- {{{
 local ls = require("luasnip")

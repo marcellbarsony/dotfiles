@@ -1,4 +1,4 @@
--- Python snippets
+-- Python snippets [Control]
 -- Docs: https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
 
 -- SHORTHANDS -- {{{

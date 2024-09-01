@@ -35,11 +35,11 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("python", {
-  s(
-    "socket",
+  s( "socket",
     fmt('{} = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n' ..
       "{}.connect(({}, {}))\n" ..
-      "{}", {
+      "{}",
+      {
         i(1, "s"),
         same(1),
         i(2, "target_ip"),
