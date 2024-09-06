@@ -41,6 +41,7 @@ require("plugins.colorizer")
 require("plugins.hex")
 require("plugins.indent-blankline")
 require("plugins.lualine")
+require("plugins.markdown")
 require("plugins.toggleterm")
 
 -- Telescope

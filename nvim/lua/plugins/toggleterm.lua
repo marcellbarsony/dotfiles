@@ -9,7 +9,7 @@ require("toggleterm").setup {
       return vim.o.columns * 0.5
     end
   end,
-  direction = "float",
+  direction = "horizontal", -- vertical / float
   open_mapping = [[<c-\>]],
   hide_numbers = true,
   autochdir = false,
@@ -28,4 +28,5 @@ require("toggleterm").setup {
   float_opts = {
     winblend = 0,
   },
+  start_in_insert = true,
 }

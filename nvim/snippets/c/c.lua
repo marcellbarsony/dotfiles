@@ -65,7 +65,7 @@ ls.add_snippets("c", {
     )
   ),
 
-  s("int",
+  s("int", -- function
     fmt("int {}({}) {{\n" ..
       "\t{}\n" ..
       "}}\n" ..
