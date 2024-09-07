@@ -1,3 +1,6 @@
+-- Markdown
+-- https://neovim.io/doc/user/filetype.html#ft-markdown-plugin
+
 -- Options
 vim.opt.shiftwidth = 4
 

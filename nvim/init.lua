@@ -1,3 +1,30 @@
+-- {{{ TEST
+-- vim.g.mapleader = "\\"
+-- vim.g.maplocalleader = "\\"
+--
+-- -- Bootstrap
+-- local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+-- if not vim.loop.fs_stat(lazypath) then
+--   vim.fn.system({
+--     "git",
+--     "clone",
+--     "--filter=blob:none",
+--     "https://github.com/folke/lazy.nvim.git",
+--     "--branch=stable",
+--     lazypath,
+--   })
+-- end
+--
+-- -- Add lazy to the `runtimepath`
+-- vim.opt.rtp:prepend(lazypath)
+-- require("lazy").setup({
+--   spec = {
+--     { import = "custom" }, -- ~/.config/nvim/lua/plugins/
+--   },
+--   checker = { enabled = false },
+-- })
+-- }}}
+
 -- Lazy
 require("plugins.lazy-nvim")
 
@@ -21,8 +48,8 @@ require("plugins.gitsigns")
 -- LSP
 require("lsp.rustaceanvim")
 require("lsp.tsserver")
-require("plugins.lspsaga")
-require("plugins.trouble")
+-- require("plugins.lspsaga")
+-- require("plugins.trouble")
 
 -- Mason
 require("mason.mason")
@@ -30,9 +57,9 @@ require("mason.mason-lspconfig")
 require("mason.mason-nvim-dap")
 
 -- Navigation
+require("plugins.oil")
 require("plugins.alpha-nvim")
 require("plugins.harpoon")
-require("plugins.oil")
 require("plugins.which-key")
 
 -- Plugins
@@ -50,11 +77,3 @@ require("plugins.telescope")
 -- Treesitter
 require("treesitter.treesitter")
 require("treesitter.treesitter-context")
-
--- TEST
--- require("lazy").setup({
---     spec = {
---         { import = "plugins" }, -- ~/.config/nvim/lua/plugins/
---     },
---     checker = { enabled = false },
--- })

@@ -33,7 +33,7 @@ end
 -- {{{ Keymaps
 -- Menu
 vim.keymap.set("n", "<C-b>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Harpoon" })
-vim.keymap.set("n", "<leader>bh", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Harpoon" })
+vim.keymap.set("n", "<leader>bb", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Harpoon" })
 vim.keymap.set("n", "<leader>ba", function() harpoon:list():append() end, { desc = "Add" })
 
 -- Telescope

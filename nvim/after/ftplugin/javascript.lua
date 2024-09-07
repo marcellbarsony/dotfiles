@@ -1,3 +1,5 @@
+-- JavaScript
+
 -- Options
 vim.opt.shiftwidth = 4
 

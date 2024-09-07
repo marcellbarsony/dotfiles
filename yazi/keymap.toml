@@ -139,6 +139,7 @@ keymap = [
     { on = [ "g", "i" ], run = "cd --interactive", desc = "interactive" },
     { on = [ "g", "l" ], run = "cd ~/.local",      desc = "~/.local" },
     { on = [ "g", "t" ], run = "cd ~/tmp",         desc = "~/tmp" },
+    { on = [ "g", "/" ], run = "cd /",             desc = "/" },
 
     # Help
     { on = [ "h" ], run = "help", desc = "Open help" },

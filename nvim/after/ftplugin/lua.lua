@@ -1,3 +1,5 @@
+-- Lua
+
 -- Options
 vim.opt.shiftwidth = 2
 

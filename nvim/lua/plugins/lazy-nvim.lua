@@ -1,7 +1,7 @@
 -- lazy.nvim
 -- https://github.com/folke/lazy.nvim
 
--- {{{ Bootstrap
+-- Bootstrap
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -14,15 +14,16 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 
--- Add lazy to the `runtimepath`
+-- Add lazy to `runtimepath`
+---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
--- }}}
 
 require("lazy").setup({
   -- {{{ Autopairs
   {
     "windwp/nvim-autopairs",
-    event = "InsertEnter"
+    event = "InsertEnter",
+    config = true
   },
   -- }}}
 
@@ -189,7 +190,7 @@ require("lazy").setup({
         allFeatures = true
       }
     }
-},
+  },
   --}}}
 
   -- {{{ Snippets

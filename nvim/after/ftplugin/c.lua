@@ -1,4 +1,6 @@
 -- C
+-- https://neovim.io/doc/user/syntax.html#ft-c-syntax
+
 -- Options
 vim.opt_local.shiftwidth = 4
 

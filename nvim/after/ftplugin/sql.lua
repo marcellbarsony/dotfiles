@@ -1,0 +1,2 @@
+-- SQL
+-- https://neovim.io/doc/user/ft_sql.html#ft_sql.txt

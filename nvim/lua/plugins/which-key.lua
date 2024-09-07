@@ -6,7 +6,7 @@ local wk = require("which-key")
 -- {{{ Config
 wk.setup {
   ---@type false | "classic" | "modern" | "helix"
-  preset = "classic",
+  preset = "helix",
   ---@type number | fun(ctx: { keys: string, mode: string, plugin?: string }):number
   delay = function(ctx)
     return ctx.plugin and 0 or 200
@@ -37,7 +37,7 @@ wk.setup {
     -- No actual key bindings are created
     spelling = {
       enabled = true,   -- enabling this will show WhichKey when pressing z= to select spelling suggestions
-      suggestions = 20, -- how many suggestions should be shown in the list?
+      suggestions = 25, -- how many suggestions should be shown in the list?
     },
     presets = {
       operators = true,    -- adds help for operators like d, y, ...
@@ -52,11 +52,11 @@ wk.setup {
   win = {
     no_overlap = true, -- don't allow the popup to overlap with the cursor
     -- width = 1,
-    height = { min = 5, max = 25 },
+    -- height = { min = 5, max = 25 },
     -- col = 0,
     -- row = math.huge,
     -- border = "none",
-    padding = { 1, 3 }, -- { top/bottom, right/left }
+    padding = { 2, 2 }, -- { top/bottom, right/left }
     title = false,
     title_pos = "center",
     zindex = 1000,
@@ -67,7 +67,7 @@ wk.setup {
     },
   },
   layout = {
-    width = { min = 10, max = 30 }, -- min and max width of the columns
+    width = { min = 20, max = 30 }, -- min and max width of the columns
     spacing = 3,                    -- spacing between columns
   },
   keys = {
@@ -150,8 +150,49 @@ wk.add({
   { "]",          desc = "Next" },
   { "v",          desc = "VISUAL" },
   { "z",          desc = "Fold" },
+  { "K",          desc = "Documentation" },
+
+  { "<C-W>",      group = "Window"},
+  { "<C-W>d",     desc = "Documentation [Float]"},
+  { "<C-W>q",     desc = "Quit window"},
+  { "<C-W>h",     desc = "Go to [Left]"},
+  { "<C-W>j",     desc = "Go to [Down]"},
+  { "<C-W>k",     desc = "Go to [Up]"},
+  { "<C-W>l",     desc = "Go to [Right]"},
+  { "<C-W>o",     desc = "Close others"},
+  { "<C-W>s",     desc = "Split [Horizontal]"},
+  { "<C-W>v",     desc = "Split [Vertical]"},
+  { "<C-W>+",     desc = "Height [Increase]"},
+  { "<C-W>-",     desc = "Height [Decrease]"},
+  { "<C-W>>",     desc = "Width [Increase]"},
+  { "<C-W><",     desc = "Width [Decrease]"},
+  { "<C-W>_",     desc = "Height [Max]"},
+  { "<C-W>|",     desc = "Width [Max]"},
+  { "<C-W>T",     desc = "New tab [Break]"},
 
   { "g",          group = "Go-To" },
+  { "gf",         desc = "File" },
+  { "gi",         desc = "Last insert" },
+  { "gt",         desc = "Tab page [Next]" },
+  { "gx",         desc = "Open URL" },
+  { "gT",         desc = "Tab page [Previous]" },
+  { "gT",         desc = "Tab page [Previous]" },
+  { "g'",         desc = "Marks" },
+  { "g`",         desc = "Marks" },
+
+  { "za",         desc = "Toggle" },
+  { "zA",         desc = "Toggle [All]" },
+  { "zc",         desc = "Close" },
+  { "zC",         desc = "Close [All]" },
+  { "zd",         desc = "Delete" },
+  { "zD",         desc = "Delete [All]" },
+  { "zo",         desc = "Open" },
+  { "zO",         desc = "Open [All]" },
+  { "zR",         desc = "Open [All]" },
+  { "zz",         desc = "Center line" },
+
+  { "gc",         group = "Comment" },
+  { "gcc",        desc = "Toggle line" },
 
   { "<leader>b",  group = "Harpoon" },
 
