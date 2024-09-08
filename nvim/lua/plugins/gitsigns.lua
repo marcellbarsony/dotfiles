@@ -10,24 +10,24 @@ require("gitsigns").setup {
   --   changedelete = { hl = "GitSignsChange", text = "|>", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
   -- },
 
-  signs_staged_enable          = true,
-  signcolumn                   = false,
-  numhl                        = false,
-  linehl                       = false,
-  word_diff                    = false,
+  signs_staged_enable     = true,
+  signcolumn              = false,
+  numhl                   = false,
+  linehl                  = false,
+  word_diff               = false,
 
-  watch_gitdir                 = {
+  watch_gitdir = {
     follow_files = true
   },
 
-  auto_attach                  = true,
-  attach_to_untracked          = false,
-  current_line_blame           = false,
-  current_line_blame_opts      = {
-    virt_text = true,
-    virt_text_pos = "eol",
-    delay = 1000,
-    ignore_whitespace = false,
+  auto_attach             = true,
+  attach_to_untracked     = false,
+  current_line_blame      = false,
+  current_line_blame_opts = {
+    virt_text          = true,
+    virt_text_pos      = "eol",
+    delay              = 1000,
+    ignore_whitespace  = false,
     virt_text_priority = 100,
   },
 
@@ -38,7 +38,7 @@ require("gitsigns").setup {
   max_file_length              = 10000,
 
   -- Options passwd to nvim_open_win
-  preview_config               = {
+  preview_config = {
     border = "single",
     style = "minimal",
     relative = "cursor",

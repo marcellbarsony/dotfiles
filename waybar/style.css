@@ -75,7 +75,7 @@ window#waybar {
 #disk,
 #memory,
 #wireplumber {
-    padding: 0 2px;
+    padding: 0 5px;
 }
 
 #mode {
@@ -108,19 +108,15 @@ window#waybar {
 }
 
 #network {
-
 }
 
 #wireplumber {
-
 }
 
 #cpu {
-
 }
 
 #disk {
-
 }
 
 @keyframes blink {

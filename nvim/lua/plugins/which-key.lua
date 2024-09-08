@@ -37,7 +37,7 @@ wk.setup {
     -- No actual key bindings are created
     spelling = {
       enabled = true,   -- enabling this will show WhichKey when pressing z= to select spelling suggestions
-      suggestions = 25, -- how many suggestions should be shown in the list?
+      suggestions = 50, -- how many suggestions should be shown in the list?
     },
     presets = {
       operators = true,    -- adds help for operators like d, y, ...
@@ -146,11 +146,69 @@ wk.setup {
 
 -- {{{ Keymaps
 wk.add({
-  { "[",          desc = "Previous" },
   { "]",          desc = "Next" },
-  { "v",          desc = "VISUAL" },
-  { "z",          desc = "Fold" },
+  { "]m",         desc = "Method [Start]" },
+  { "]M",         desc = "Method [End]" },
+  { "]d",         desc = "Diagnostic" },
+  { "]s",         desc = "Mispelled word" },
+  { "]%",         desc = "Unmatched group" },
+
+  { "[",          desc = "Previous" },
+  { "[m",         desc = "Method [Start]" },
+  { "[M",         desc = "Method [End]" },
+  { "[d",         desc = "Diagnostic" },
+  { "[s",         desc = "Mispelled word" },
+  { "[%",         desc = "Unmatched group" },
+
+  { "b",          desc = "Word [Previous]" },
+  { "B",          desc = "Word [PREVIOUS]" },
+  { "e",          desc = "Word [End]" },
+  { "E",          desc = "Word [END]" },
+  { "f",          desc = "Char [Next]" },
+  { "F",          desc = "Char [Previous]" },
+  { "G",          desc = "Bottom" },
+  { "H",          desc = "Home" },
   { "K",          desc = "Documentation" },
+  { "L",          desc = "Last line" },
+  { "M",          desc = "Middle line" },
+  { "v",          desc = "VISUAL" },
+  { "V",          desc = "VISUAL Line" },
+  { "w",          desc = "Word [Next]" },
+  { "W",          desc = "Word [NEXT]" },
+
+  { "g",          group = "Go-To" },
+  { "ge",         desc = "Word [Previous end]" },
+  { "gf",         desc = "File" },
+  { "gg",         desc = "Top" },
+  { "gi",         desc = "Insert [Last]" },
+  { "gt",         desc = "Tab page [Next]" },
+  { "gT",         desc = "Tab page [Previous]" },
+  { "gv",         desc = "Visual selection" },
+  { "gx",         desc = "Open URL" },
+  { "g'",         desc = "Marks" },
+  { "g`",         desc = "Marks" },
+  { "g~",         desc = "Case [Toggle]" },
+  { "g%",         desc = "Result [Cycle backward]" },
+
+  { "gc",         group = "Comment" },
+  { "gcc",        desc = "Toggle line" },
+
+  { "z",          desc = "Fold" },
+  { "za",         desc = "Toggle" },
+  { "zA",         desc = "Toggle all [Cursor]" },
+  { "zc",         desc = "Close [Cursor]" },
+  { "zC",         desc = "Close all [Cursor]" },
+  { "zd",         desc = "Delete [Cursor]" },
+  { "zD",         desc = "Delete all [Cursor]" },
+  { "zE",         desc = "Delete all [File]" },
+  { "zg",         desc = "Spelling [Add word]" },
+  { "zH",         desc = "Move left" },
+  { "zL",         desc = "Move right" },
+  { "zo",         desc = "Open" },
+  { "zO",         desc = "Open [All]" },
+  { "zR",         desc = "Open [All]" },
+  { "zw",         desc = "Spelling [Mark as misspelled]" },
+  { "zz",         desc = "Center line" },
 
   { "<C-W>",      group = "Window"},
   { "<C-W>d",     desc = "Documentation [Float]"},
@@ -161,6 +219,7 @@ wk.add({
   { "<C-W>l",     desc = "Go to [Right]"},
   { "<C-W>o",     desc = "Close others"},
   { "<C-W>s",     desc = "Split [Horizontal]"},
+  { "<C-W>T",     desc = "New tab [Break]"},
   { "<C-W>v",     desc = "Split [Vertical]"},
   { "<C-W>+",     desc = "Height [Increase]"},
   { "<C-W>-",     desc = "Height [Decrease]"},
@@ -168,31 +227,6 @@ wk.add({
   { "<C-W><",     desc = "Width [Decrease]"},
   { "<C-W>_",     desc = "Height [Max]"},
   { "<C-W>|",     desc = "Width [Max]"},
-  { "<C-W>T",     desc = "New tab [Break]"},
-
-  { "g",          group = "Go-To" },
-  { "gf",         desc = "File" },
-  { "gi",         desc = "Last insert" },
-  { "gt",         desc = "Tab page [Next]" },
-  { "gx",         desc = "Open URL" },
-  { "gT",         desc = "Tab page [Previous]" },
-  { "gT",         desc = "Tab page [Previous]" },
-  { "g'",         desc = "Marks" },
-  { "g`",         desc = "Marks" },
-
-  { "za",         desc = "Toggle" },
-  { "zA",         desc = "Toggle [All]" },
-  { "zc",         desc = "Close" },
-  { "zC",         desc = "Close [All]" },
-  { "zd",         desc = "Delete" },
-  { "zD",         desc = "Delete [All]" },
-  { "zo",         desc = "Open" },
-  { "zO",         desc = "Open [All]" },
-  { "zR",         desc = "Open [All]" },
-  { "zz",         desc = "Center line" },
-
-  { "gc",         group = "Comment" },
-  { "gcc",        desc = "Toggle line" },
 
   { "<leader>b",  group = "Harpoon" },
 
