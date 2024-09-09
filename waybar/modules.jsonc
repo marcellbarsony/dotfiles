@@ -82,19 +82,19 @@
     "network": {
         "interval": 60,
         "interface": "wlp0s2*",
-        "format-alt": "",
+        "format-alt": "󰖩  {ifname}: {ipaddr}/{cidr} @ {essid}({signalStrength})",
         "format-disconnected": "Disconnected",
         "format-icons": "󰖩 ",
         "format-ethernet": "{ipaddr}/{cidr}",
         "format-linked": "{ifname} (No IP)",
         "format-wifi": "{icon} {essid}",
-        "tooltip-format": "{ifname}: {ipaddr}/{cidr} @ {essid}({signalStrength})",
+        "tooltip": false,
     },
     // }}}
 
     // {{{ Audio (Wireplumber)
     "wireplumber": {
-        "format": "  {volume}",
+        "format": "   {volume}",
         "format-muted": "󰝟",
         //"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "on-click": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%+",
@@ -119,7 +119,7 @@
     // {{{ Disk
     "disk": {
         "interval": 60,
-        "format": "󰨣 {percentage_used}%",
+        "format": " {percentage_used}%",
         "path": "/",
         "tooltip": false,
         "tooltip-format": "Disk {path} {percentage_used}%",

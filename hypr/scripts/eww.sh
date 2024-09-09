@@ -2,7 +2,7 @@
 
 killall eww
 
-MONITORS=$(hyprctl monitors -j | jq '.[] | .id')
+MONITORS=$(hyprctl monitors -j | jq '.[] | .id') # jq > jaq
 
 for num in $MONITORS; do
     eww open bar$num
