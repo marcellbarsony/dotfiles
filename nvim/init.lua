@@ -24,6 +24,7 @@
 --   checker = { enabled = false },
 -- })
 -- }}}
+-- airnstiaenstoinasotnaoi
 
 -- Lazy
 require("plugins.lazy-nvim")
