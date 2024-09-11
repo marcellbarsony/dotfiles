@@ -6,9 +6,9 @@ keymap = [
     { on = [ "<Esc>" ], run = "escape",             desc = "Exit visual mode, clear selected, or cancel search" },
     { on = [ "<C-[>" ], run = "escape",             desc = "Exit visual mode, clear selected, or cancel search" },
     { on = [ "q" ],     run = "quit",               desc = "Exit" },
-    { on = [ "Q" ],     run = "quit --no-cwd-file", desc = "Exit without writing cwd-file" },
-    { on = [ "<C-q>" ], run = "close",              desc = "Close tab/Quit" },
-    { on = [ "<C-z>" ], run = "suspend",            desc = "Suspend the process" },
+    { on = [ "Q" ],     run = "quit --no-cwd-file", desc = "Exit [No cwd]" },
+    { on = [ "<C-q>" ], run = "close",              desc = "Quit/Close tab" },
+    { on = [ "<C-z>" ], run = "suspend",            desc = "Suspend process" },
 
     # Navigation
     { on = [ "e" ], run = "arrow -1", desc = "Move [Up]" },
@@ -16,10 +16,10 @@ keymap = [
     { on = [ "n" ], run = "arrow 1",  desc = "Move [Down]" },
     { on = [ "N" ], run = "arrow 5",  desc = "Move [Down 5]" },
 
-    { on = [ "m" ], run = "leave",   desc = "Go back to the parent directory" },
-    { on = [ "M" ], run = "back",    desc = "Go back to the previous directory" },
-    { on = [ "i" ], run = "enter",   desc = "Enter the child directory" },
-    { on = [ "I" ], run = "forward", desc = "Go forward to the next directory" },
+    { on = [ "m" ], run = "leave",   desc = "Parent directory" },
+    { on = [ "M" ], run = "back",    desc = "Previous directory" },
+    { on = [ "i" ], run = "enter",   desc = "Child directory" },
+    { on = [ "I" ], run = "forward", desc = "Next directory" },
 
     { on = [ "g", "g" ], run = "arrow -99999999", desc = "Move [Top]" },
     { on = [ "G" ],      run = "arrow 99999999",  desc = "Move [Bottom]" },
@@ -37,36 +37,36 @@ keymap = [
 
     # Selection
     { on = [ "<Space>" ], run = [ "select --state=none", "arrow 1" ], desc = "Select" },
-    { on = [ "v" ],       run = "visual_mode",                        desc = "Visual mode (selection mode)" },
-    { on = [ "V" ],       run = "visual_mode --unset",                desc = "Visual mode (unset mode)" },
+    { on = [ "v" ],       run = "visual_mode",                        desc = "Visual [Select]" },
+    { on = [ "V" ],       run = "visual_mode --unset",                desc = "Visual [Unset]" },
     { on = [ "<C-a>" ],   run = "select_all --state=true",            desc = "Select [All]" },
     { on = [ "<C-r>" ],   run = "select_all --state=none",            desc = "Select [All - Inverze]" },
 
     # Operation
-    { on = [ "o" ],         run = "open",                        desc = "Open selected" },
-    { on = [ "O" ],         run = "open --interactive",          desc = "Open selected interactively" },
-    { on = [ "<Enter>" ],   run = "open",                        desc = "Open selected" },
-    { on = [ "<C-Enter>" ], run = "open --interactive",          desc = "Open selected interactively" },
-    { on = [ "y" ],         run = "yank",                        desc = "Copy selected" },
-    { on = [ "Y" ],         run = "unyank",                      desc = "Cancel the yank status of files" },
-    { on = [ "x" ],         run = "yank --cut",                  desc = "Cut the selected files" },
-    { on = [ "X" ],         run = "unyank",                      desc = "Cancel the yank status of files" },
-    { on = [ "p" ],         run = "paste",                       desc = "Paste the files" },
-    { on = [ "P" ],         run = "paste --force",               desc = "Paste the files (overwrite if the destination exists)" },
-    { on = [ "-" ],         run = "link",                        desc = "Symlink the absolute path of files" },
-    { on = [ "_" ],         run = "link --relative",             desc = "Symlink the relative path of files" },
-    { on = [ "d" ],         run = "remove --permanently",        desc = "Delete file(s)" },
-    { on = [ "D" ],         run = "remove",                      desc = "Move the files to the trash" },
-    { on = [ "a" ],         run = "create",                      desc = "Create a file or directory (ends with / for directories)" },
-    { on = [ "r" ],         run = "rename --cursor=before_ext",  desc = "Rename a file or directory" },
-    { on = [ ";" ],         run = "shell --interactive",         desc = "Run a shell command" },
-    { on = [ ":" ],         run = "shell --interactive --block", desc = "Run a shell command (block the UI until the command finishes)" },
-    { on = [ "." ],         run = "hidden toggle",               desc = "Toggle the visibility of hidden files" },
-    { on = [ "s" ],         run = "search fd",                   desc = "Search files by name using fd" },
-    { on = [ "S" ],         run = "search rg",                   desc = "Search files by content using ripgrep" },
-    { on = [ "<C-s>" ],     run = "search none",                 desc = "Cancel the ongoing search" },
-    { on = [ "z" ],         run = "plugin zoxide",               desc = "Jump to a directory using zoxide" },
-    { on = [ "Z" ],         run = "plugin fzf",                  desc = "Jump to a directory, or reveal a file using fzf" },
+    { on = [ "o" ],         run = "open",                        desc = "Open" },
+    { on = [ "O" ],         run = "open --interactive",          desc = "Open [Interactively]" },
+    { on = [ "<Enter>" ],   run = "open",                        desc = "Open" },
+    { on = [ "<C-Enter>" ], run = "open --interactive",          desc = "Open [Interactively]" },
+    { on = [ "y" ],         run = "yank",                        desc = "Copy" },
+    { on = [ "Y" ],         run = "unyank",                      desc = "Copy [Cancel]" },
+    { on = [ "x" ],         run = "yank --cut",                  desc = "Cut" },
+    { on = [ "X" ],         run = "unyank",                      desc = "Cut [Cancel]" },
+    { on = [ "p" ],         run = "paste",                       desc = "Paste" },
+    { on = [ "P" ],         run = "paste --force",               desc = "Paste [Force]" },
+    { on = [ "-" ],         run = "link",                        desc = "Symlink [Absolute path]" },
+    { on = [ "_" ],         run = "link --relative",             desc = "Symlink [Relative path]" },
+    { on = [ "d" ],         run = "remove --permanently",        desc = "Delete" },
+    { on = [ "D" ],         run = "remove",                      desc = "Trash" },
+    { on = [ "a" ],         run = "create",                      desc = "Create file/dir" },
+    { on = [ "r" ],         run = "rename --cursor=before_ext",  desc = "Rename file/dir" },
+    { on = [ ";" ],         run = "shell --interactive",         desc = "Shell" },
+    { on = [ ":" ],         run = "shell --interactive --block", desc = "Shell [Block]" },
+    { on = [ "." ],         run = "hidden toggle",               desc = "Toggle hidden" },
+    { on = [ "s" ],         run = "search fd",                   desc = "Search [fd]" },
+    { on = [ "S" ],         run = "search rg",                   desc = "Search [rg]" },
+    { on = [ "<C-s>" ],     run = "search none",                 desc = "Search [Cancel]" },
+    { on = [ "z" ],         run = "plugin zoxide",               desc = "Jump [zoxide]" },
+    { on = [ "Z" ],         run = "plugin fzf",                  desc = "Jump [fzf]" },
 
     # Linemode
     { on = [ "l", "s" ], run = "linemode size",        desc = "Linemode [Size]" },
@@ -75,19 +75,19 @@ keymap = [
     { on = [ "l", "n" ], run = "linemode none",        desc = "Linemode [None]" },
 
     # Copy
-    { on = [ "c", "c" ], run = "copy path",             desc = "Copy path [absolute]" },
-    { on = [ "c", "d" ], run = "copy dirname",          desc = "Copy path [parent dir]" },
-    { on = [ "c", "f" ], run = "copy filename",         desc = "Copy filemame" },
-    { on = [ "c", "n" ], run = "copy name_without_ext", desc = "Copy filename + extension" },
+    { on = [ "c", "c" ], run = "copy path",             desc = "Copy path [Absolute]" },
+    { on = [ "c", "d" ], run = "copy dirname",          desc = "Copy path [Parent dir]" },
+    { on = [ "c", "f" ], run = "copy filename",         desc = "Copy [Filemame" },
+    { on = [ "c", "n" ], run = "copy name_without_ext", desc = "Copy [Filename + Extension]" },
 
     # Filter
     { on = [ "f" ], run = "filter --smart", desc = "Filter" },
 
     # Find
-    { on = [ "/" ], run = "find --smart",            desc = "Find next" },
-    { on = [ "?" ], run = "find --previous --smart", desc = "Find previous" },
-    { on = [ "k" ], run = "find_arrow",              desc = "Next found file" },
-    { on = [ "k" ], run = "find_arrow --previous",   desc = "Previous found file" },
+    { on = [ "/" ], run = "find --smart",            desc = "Find [Next]" },
+    { on = [ "?" ], run = "find --previous --smart", desc = "Find [Previous]" },
+    { on = [ "k" ], run = "find_arrow",              desc = "Next file" },
+    { on = [ "k" ], run = "find_arrow --previous",   desc = "Previous file" },
 
     # Sorting
     { on = [ ",", "a" ], run = "sort alphabetical --dir-first",           desc = "Alphabetically" },
@@ -104,23 +104,23 @@ keymap = [
     { on = [ ",", "S" ], run = "sort size --reverse --dir-first",         desc = "Size [Reverse]" },
 
     # Tabs
-    { on = [ "t" ], run = "tab_create --current", desc = "Create a new tab using the current path" },
+    { on = [ "t" ], run = "tab_create --current", desc = "Tab [New]" },
 
-    { on = [ "1" ], run = "tab_switch 0", desc = "1st tab" },
-    { on = [ "2" ], run = "tab_switch 1", desc = "2nd tab" },
-    { on = [ "3" ], run = "tab_switch 2", desc = "3rd tab" },
-    { on = [ "4" ], run = "tab_switch 3", desc = "4th tab" },
-    { on = [ "5" ], run = "tab_switch 4", desc = "5th tab" },
-    { on = [ "6" ], run = "tab_switch 5", desc = "6th tab" },
-    { on = [ "7" ], run = "tab_switch 6", desc = "7th tab" },
-    { on = [ "8" ], run = "tab_switch 7", desc = "8th tab" },
-    { on = [ "9" ], run = "tab_switch 8", desc = "9th tab" },
+    { on = [ "1" ], run = "tab_switch 0", desc = "Tab [1st]" },
+    { on = [ "2" ], run = "tab_switch 1", desc = "Tab [2nd]" },
+    { on = [ "3" ], run = "tab_switch 2", desc = "Tab [3rd]" },
+    { on = [ "4" ], run = "tab_switch 3", desc = "Tab [4th]" },
+    { on = [ "5" ], run = "tab_switch 4", desc = "Tab [5th]" },
+    { on = [ "6" ], run = "tab_switch 5", desc = "Tab [6th]" },
+    { on = [ "7" ], run = "tab_switch 6", desc = "Tab [7th]" },
+    { on = [ "8" ], run = "tab_switch 7", desc = "Tab [8th]" },
+    { on = [ "9" ], run = "tab_switch 8", desc = "Tab [9th]" },
 
-    { on = [ "]" ], run = "tab_switch 1 --relative",  desc = "Next tab" },
-    { on = [ "[" ], run = "tab_switch -1 --relative", desc = "Previous tab" },
+    { on = [ "]" ], run = "tab_switch 1 --relative",  desc = "Tab [Next]" },
+    { on = [ "[" ], run = "tab_switch -1 --relative", desc = "Tab [Previous]" },
 
-    { on = [ "}" ], run = "tab_swap 1",  desc = "Swap current tab with next tab" },
-    { on = [ "{" ], run = "tab_swap -1", desc = "Swap current tab with previous tab" },
+    { on = [ "}" ], run = "tab_swap 1",  desc = "Tab [Swap current with next]" },
+    { on = [ "{" ], run = "tab_swap -1", desc = "Tab [Swap current with previous]" },
 
     # Tasks
     { on = [ "w" ], run = "tasks_show", desc = "Tasks manager" },
@@ -135,7 +135,7 @@ keymap = [
     { on = [ "g", "/" ], run = "cd /",             desc = "/" },
 
     # Help
-    { on = [ "h" ], run = "help", desc = "Open help" },
+    { on = [ "h" ], run = "help", desc = "Help" },
 ]
 # }}}
 
