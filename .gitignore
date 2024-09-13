@@ -1,40 +1,20 @@
 # Bitwarden CLI
 Bitwarden CLI/data.json
 
-# Bpytop
-bpytop/error.log
-
-# Cef user data
-cef_user_data/
-
 # Chromium
 chromium/
 
-# Dconf
-dconf/
-
-# Dolphin
-kdeglobals
-baloofileinformationrc
-kservicemenurc
-# dolphinrc
-kde.org/
-kiorc
-ktrashrc
-session/
-trashrc
-
 # GitHub
 gh/
+
+# GNOME
+dconf/
 
 # GTK
 gtk-3.0/
 
 # Htop
 htop/
-
-# Java
-java/
 
 # Kdenlive
 kdenlive*
@@ -52,7 +32,6 @@ nushell/history.txt
 
 # Nvim
 nvim/lazy-lock.json
-nvim/lua/.luarc.json
 nvim/spell/en.utf-8.add.spl
 
 # OBS
@@ -63,18 +42,12 @@ obs-studio/plugin_config/
 obs-studio/profiler_data/
 obs-studio/global.ini
 
-# Pikaur
-pikaur.conf
-
 # Pipewire (QPWgraph)
 rncbc.org/
 
 # Pulse audio
 pulse/
 pavucontrol.ini
-
-# Procps
-procps/
 
 # qBittorrent
 qBittorrent/
@@ -99,9 +72,6 @@ sqlitebrowser/
 # Starship
 starship/*.log
 
-# Thunar
-Thunar/
-
 # VirtualBox
 VirtualBox/
 
@@ -122,9 +92,6 @@ wireshark/profiles/Classic/recent
 filetypesrc
 user-dirs.dirs
 user-dirs.locale
-
-# XFCE
-xfce4/
 
 # ZSH
 zsh/.zcompdump

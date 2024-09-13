@@ -104,7 +104,7 @@ local options = {
 
   -- {{{ 14. Folding
   foldenable = true,
-  foldcolumn = "0",   -- auto
+  foldcolumn = "0", -- auto
   foldlevelstart = 0,
   foldmethod = "marker",
   foldtext =

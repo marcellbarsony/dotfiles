@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 dir="/home/$USER/tmp/screenshots"
 file=$(date +%Y%m%d-%H%M%S)

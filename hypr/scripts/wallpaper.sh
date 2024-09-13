@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 find_files() {
     shopt -s nullglob dotglob  # Hidden files and empty directories

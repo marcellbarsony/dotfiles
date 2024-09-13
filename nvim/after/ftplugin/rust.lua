@@ -18,8 +18,8 @@ vim.keymap.set("n", "<leader>rh",
 
 vim.keymap.set("n", "<leader>ra",
   function()
-    vim.cmd.RustLsp("codeAction")     -- support grouping
-    -- vim.lsp.buf.codeAction() -- no grouping
+    vim.cmd.RustLsp("codeAction") -- grouping
+    -- vim.lsp.buf.codeAction()   -- no grouping
   end,
   { silent = true, buffer = bufnr, desc = "Code action" }
 )
