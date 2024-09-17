@@ -4,6 +4,9 @@ user_pref("browser.backspace_action", 0);
 /* BOOKMARKS */
 user_pref("browser.toolbars.bookmarks.visibility", "never");
 
+/* BROWSER TOOLBOX */
+//user_pref("devtools.debugger.remote-enabled", true); // 2608
+
 /* CONTAINERS */
 user_pref("privacy.userContext.newTabContainersOnLeftClick.enabled", true);
 
@@ -11,6 +14,9 @@ user_pref("privacy.userContext.newTabContainersOnLeftClick.enabled", true);
 // user_pref("network.auth.subresource-http-auth-allow", 0); // 0905
 // user_pref("network.http.referer.XOriginPolicy", 0); // 1601
 // user_pref("network.http.referer.XOriginTrimmingPolicy", 0); // 1602
+
+/* CSS */
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", 1);
 
 /* EXTENSIONS */
 // https://support.mozilla.org/en-US/kb/disable-or-re-enable-pocket-for-firefox

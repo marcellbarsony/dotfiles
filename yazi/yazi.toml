@@ -40,6 +40,8 @@ open = [
 [open]
 rules = [
     { name = "*.c", use = "edit" },
+    { name = "*.conf", use = "edit" },
+    { name = "*.cfg", use = "edit" },
     { name = "*.cpp", use = "edit" },
     { name = "*.css", use = "edit" },
     { name = "*.html", use = "edit" },

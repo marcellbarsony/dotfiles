@@ -4,7 +4,7 @@
 
 Install dependencies
 
-```
+```sh
 sudo pacman -S firefox pipewire-jack
 ```
 
@@ -12,7 +12,7 @@ sudo pacman -S firefox pipewire-jack
 
 1. Sign in to Firefox
 
-2. Sign in to containers & enable sync
+2. Sign in to Containers & enable sync
 
 3. Wait until settings & plugin sync
 
@@ -20,9 +20,11 @@ sudo pacman -S firefox pipewire-jack
 
 ### Containers
 
-- Copy `containers.json` to `~/.mozilla/firefox/<user_profile>
+- Copy `containers.json` to `~/.mozilla/firefox/<user_profile>`
 
-- **NOTE**: Do not edit the values in `containers.json` manually.
+### Custom CSS
+
+- Copy `chrome/` to `~/.mozilla/firefox/<user_profile>`
 
 ### Preferences [ArkenFox]
 
@@ -36,6 +38,6 @@ cp updater.sh user.js user-overrides.js ~/.mozilla/firefox/<user_profile>/
 
 - Run 'updater.sh'
 
-```
+```sh
 ./updater.sh
 ```
