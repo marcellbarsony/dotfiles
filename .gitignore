@@ -18,6 +18,7 @@ htop/
 
 # Kdenlive
 kdenlive*
+kdeglobals
 
 # Neofetch
 neofetch
@@ -47,7 +48,6 @@ rncbc.org/
 
 # Pulse audio
 pulse/
-pavucontrol.ini
 
 # qBittorrent
 qBittorrent/

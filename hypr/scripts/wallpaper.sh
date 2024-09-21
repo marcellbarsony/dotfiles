@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 find_files() {
-    shopt -s nullglob dotglob  # Hidden files and empty directories
+    shopt -s nullglob dotglob # Hidden files & empty directories
     for file in "$1"/*; do
         if [ -d "$file" ]; then
-            find_files "$file"  # Recursively call for subdirectories
+            find_files "$file" # Recursively call for subdirectories
         else
-            echo "$file"  # Print each file path
+            echo "$file" # Print each file path
         fi
     done
 }
