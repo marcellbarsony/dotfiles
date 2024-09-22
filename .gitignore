@@ -93,6 +93,9 @@ filetypesrc
 user-dirs.dirs
 user-dirs.locale
 
+# XFCE
+xfce4/
+
 # ZSH
 zsh/.zcompdump
 zsh/history
