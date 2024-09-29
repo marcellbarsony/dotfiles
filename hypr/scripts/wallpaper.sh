@@ -35,7 +35,7 @@ swww img $random_file \
 # Color scheme
 matugen image $random_file
 
-# Notification
-notify-send "SWWW" "${random_file##*/}"
+# Notification (dunst)
+# notify-send "SWWW" "${random_file##*/}"
 
 exit 0
