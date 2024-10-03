@@ -1,7 +1,7 @@
 -- C snippets [Variables]
 -- Docs: https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
 
--- SHORTHANDS -- {{{
+-- SHORTHANDS {{{
 local ls = require("luasnip")
 local s = ls.snippet
 local sn = ls.snippet_node
@@ -24,7 +24,7 @@ local conds = require("luasnip.extras.conditions")
 local conds_expand = require("luasnip.extras.conditions.expand")
 -- }}}
 
--- FUNCTIONS -- {{{
+-- FUNCTIONS {{{
 -- Same
 local same = function(index)
   return f(function(arg)
@@ -33,7 +33,7 @@ local same = function(index)
 end
 -- }}}
 
--- SNIPPETS -- {{{
+-- SNIPPETS {{{
 ls.add_snippets("c", {
   s("int",  -- integer
     fmt("int {};\n" ..

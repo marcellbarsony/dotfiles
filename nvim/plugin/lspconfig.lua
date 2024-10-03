@@ -6,7 +6,7 @@
 -- https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion#nvim-cmp
 -- https://github.com/neovim/nvim-lspconfig/wiki/Snippets#nvim-cmp-and-luasnip
 
--- {{{ LSP Servers
+-- LSP Servers {{{
 local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local servers = {
@@ -26,7 +26,7 @@ for _, lsp in ipairs(servers) do
 end
 -- }}}
 
--- {{{ Diagnostics
+-- Diagnostics {{{
 -- :help vim.diagnostic
 -- https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization#customizing-how-diagnostics-are-displayed
 vim.diagnostic.config({
@@ -38,7 +38,7 @@ vim.diagnostic.config({
 })
 -- }}}
 
--- {{{ Diagnostics [Signs]
+-- Diagnostics [Signs] {{{
 -- :h diagnostic-signs
 -- https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization#change-diagnostic-symbols-in-the-sign-column-gutter
 local signs = { Error = "x", Warn = "!", Hint = "", Info = "i" }
@@ -52,7 +52,7 @@ for type, icon in pairs(signs) do
 end
 -- }}}
 
--- {{{ Floats
+-- Floats {{{
 -- https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization#borders
 local border = {
   { "┌", "FloatBorder" },

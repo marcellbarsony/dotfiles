@@ -28,15 +28,15 @@ sudo pacman -S firefox pipewire-jack
 
 ### Preferences [ArkenFox]
 
-- Clone the [ArkenFox repository](https://github.com/arkenfox/user.js)
+1. Clone the [ArkenFox repository](https://github.com/arkenfox/user.js)
 
-- Copy `updater.sh`, `user.js` and `user-overrides.js` to `~/.mozilla/firefox/<user_profile>/`
+2. Copy `updater.sh`, `user.js` and `user-overrides.js` to `~/.mozilla/firefox/<user_profile>/`
 
 ```
 cp updater.sh user.js user-overrides.js ~/.mozilla/firefox/<user_profile>/
 ```
 
-- Run 'updater.sh'
+3. Run `updater.sh`
 
 ```sh
 ./updater.sh

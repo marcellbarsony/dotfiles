@@ -1,4 +1,4 @@
--- {{{ TEST
+-- TEST {{{
 -- vim.g.mapleader = "\\"
 -- vim.g.maplocalleader = "\\"
 --
@@ -24,7 +24,6 @@
 --   checker = { enabled = false },
 -- })
 -- }}}
--- airnstiaenstoinasotnaoi
 
 -- Lazy
 require("plugins.lazy-nvim")

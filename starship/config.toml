@@ -1,4 +1,4 @@
-# {{{ Prompt
+# Prompt {{{
 add_newline = false
 format = '''
 $character
@@ -8,32 +8,32 @@ $directory$all
 '''
 # }}}
 
-# {{{ Azure
+# Azure {{{
 [azure]
 format = 'via [$symbol($subscription)]($style) '
 symbol = '󰠅 '
 style = 'blue bold'
 # }}}
 
-# {{{ C
+# C {{{
 [c]
 format = 'via [$symbol($version(-$name))]($style) '
 symbol = ' '
 # }}}
 
-# {{{ Character
+# Character {{{
 [character]
 success_symbol = '[](bold green)'
 error_symbol = '[](bold red)'
 # }}}
 
-# {{{ CMD duration
+# CMD duration {{{
 [cmd_duration]
 min_time = 2_000
 format = 'took [$duration]($style) '
 # }}}
 
-# {{{ Directory
+# Directory {{{
 [directory]
 truncation_symbol = '../'
 truncation_length = 3
@@ -42,7 +42,7 @@ read_only = ' '
 read_only_style = 'red'
 # }}}
 
-# {{{ GIT Branch
+# GIT Branch {{{
 [git_branch]
 always_show_remote = true
 format = 'on [$symbol$branch]($style) '
@@ -50,14 +50,14 @@ symbol = ' '
 style = 'bold purple'
 # }}}
 
-# {{{ GIT Commit
+# GIT Commit {{{
 [git_commit]
 format = 'via [$hash$tag]($style) '
 tag_disabled = false
 style = 'bold purple'
 # }}}
 
-# {{{ GIT Status
+# GIT Status {{{
 [git_status]
 format = '([\[$all_status$ahead_behind\]]($style) )'
 conflicted = '='
@@ -74,49 +74,49 @@ untracked = '?'
 style = 'bold purple'
 # }}}
 
-# {{{ Hostname
+# Hostname {{{
 [hostname]
 ssh_symbol = ' '
 # }}}
 
-# {{{ Line break
+# Line break {{{
 [line_break]
 disabled = false
 # }}}
 
-# {{{ Lua
+# Lua {{{
 [lua]
 format = 'via [$symbol($version)]($style) '
 symbol = ' '
 style = 'bold blue'
 # }}}
 
-# {{{ Node JS
+# Node JS {{{
 [nodejs]
 symbol = ' '
 format = 'via [$symbol($version)]($style) '
 style = 'bold green'
 # }}}
 
-# {{{ Package
+# Package {{{
 [package]
 disabled = true
 # }}}
 
-# {{{ Python
+# Python {{{
 [python]
 format = 'via [${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
 symbol = ' '
 # }}}
 
-# {{{ Rust
+# Rust {{{
 [rust]
 format = 'via [$symbol($version)]($style) '
 symbol = ' '
 version_format = '${raw}'
 # }}}
 
-# {{{ Sudo
+# Sudo {{{
 [sudo]
 disabled = false
 format = 'as [su]($style) '

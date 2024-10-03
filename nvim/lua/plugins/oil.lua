@@ -2,7 +2,7 @@
 -- https://github.com/stevearc/oil.nvim
 
 require("oil").setup({
-  -- {{{ File explorer
+  -- File explorer {{{
   -- Oil will take over directory buffers (e.g. `vim .` or `:e src/`)
   -- Set to false if you still want to use netrw.
   default_file_explorer = true,
@@ -16,7 +16,7 @@ require("oil").setup({
   },
   -- }}}
 
-  -- {{{ Buffer options
+  -- Buffer options {{{
   -- Buffer-local options to use for oil buffers
   buf_options = {
     buflisted = false,
@@ -24,7 +24,7 @@ require("oil").setup({
   },
   -- }}}
 
-  -- {{{ Window-local options
+  -- Window-local options {{{
   win_options = {
     wrap = false,
     signcolumn = "no",
@@ -37,7 +37,7 @@ require("oil").setup({
   },
   -- }}}
 
-  -- {{{ Options
+  -- Options {{{
   delete_to_trash = false,
   skip_confirm_for_simple_edits = false,
   prompt_save_on_select_new_entry = true,
@@ -45,14 +45,14 @@ require("oil").setup({
   constrain_cursor = "editable",
   -- }}}
 
-  -- {{{ LSP file methods
+  -- LSP file methods {{{
   lsp_file_methods = {
     autosave_changes = false,
     timeout_ms = 1000,
   },
   -- }}}
 
-  -- {{{ Keymaps
+  -- Keymaps {{{
   -- Keymaps in oil buffer. Can be any value that `vim.keymap.set` accepts OR a table of keymap
   -- options with a `callback` (e.g. { callback = function() ... end, desc = "", mode = "n" })
   -- Additionally, if it is a string that matches "actions.<name>",
@@ -82,7 +82,7 @@ require("oil").setup({
   use_default_keymaps = true,
   -- }}}
 
-  -- {{{ View options
+  -- View options {{{
   view_options = {
     -- Show files and directories that start with "."
     show_hidden = true,
@@ -103,7 +103,7 @@ require("oil").setup({
   },
   -- }}}
 
-  -- {{{ Float
+  -- Float {{{
   -- Configuration for the floating window in oil.open_float
   float = {
     -- Padding around the floating window
@@ -122,7 +122,7 @@ require("oil").setup({
   },
   -- }}}
 
-  -- {{{ Preview
+  -- Preview {{{
   -- Configuration for the actions floating preview window
   preview = {
     -- Width dimensions can be integers or a float between 0 and 1 (e.g. 0.4 for 40%)
@@ -148,7 +148,7 @@ require("oil").setup({
   },
   -- }}}
 
-  -- {{{ Progress
+  -- Progress {{{
   -- Configuration for the floating progress window
   progress = {
     max_width = 0.9,

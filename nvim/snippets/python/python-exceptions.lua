@@ -1,7 +1,7 @@
 -- Python snippets [Exceptions]
 -- Docs: https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
 
--- SHORTHANDS -- {{{
+-- SHORTHANDS {{{
 local ls = require("luasnip")
 local s = ls.snippet
 local sn = ls.snippet_node
@@ -24,7 +24,7 @@ local conds = require("luasnip.extras.conditions")
 local conds_expand = require("luasnip.extras.conditions.expand")
 -- }}}
 
--- FUNCTIONS -- {{{
+-- FUNCTIONS {{{
 -- Same
 local same = function(index)
   return f(function(arg)
@@ -33,8 +33,9 @@ local same = function(index)
 end
 -- }}}
 
--- SNIPPETS -- {{{
+-- SNIPPETS {{{
 ls.add_snippets("python", {
+  -- try {{{
   s( "try", -- try/except/else/finally
     fmt("try:\n" ..
       "\t{}\n" ..
@@ -94,7 +95,9 @@ ls.add_snippets("python", {
       }
     )
   ),
+  -- }}}
 
+  -- except {{{
   s( "except",
     fmt("except {}{}\n" ..
       "\t{}",
@@ -125,7 +128,9 @@ ls.add_snippets("python", {
       }
     )
   ),
+  -- }}}
 
+  -- finally {{{
   s( "finally",
     fmt("finally:\n" ..
       "\t{}{}",
@@ -135,5 +140,6 @@ ls.add_snippets("python", {
       }
     )
   ),
+  -- }}}
 })
 -- }}}

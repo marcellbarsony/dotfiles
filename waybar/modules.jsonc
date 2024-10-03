@@ -1,5 +1,5 @@
 {
-    // {{{ Modules - Left
+    // Modules - Left {{{
     "hyprland/workspaces": {
         "all-outputs": true,
         "format": "{name}",
@@ -29,11 +29,11 @@
     },
     // }}}
 
-    // {{{ Modules - Center
+    // Modules - Center {{{
     // }}}
 
-    // {{{ Modules - Right
-    // {{{ Clock
+    // Modules - Right {{{
+    // Clock {{{
     "clock": {
         "format": "{:%I:%M}",
         "format-alt": "{:%b %d %a}",
@@ -61,7 +61,7 @@
     },
     // }}}
 
-    // {{{ Battery
+    // Battery {{{
     "battery": {
         "bat": "BAT0",
         "full-at": "99",
@@ -78,7 +78,7 @@
     },
     // }}}
 
-    // {{{ Network
+    // Network {{{
     "network": {
         "interval": 60,
         "interface": "wlp0s2*",
@@ -92,7 +92,7 @@
     },
     // }}}
 
-    // {{{ Audio (Wireplumber)
+    // Audio (Wireplumber) {{{
     "wireplumber": {
         "format": "   {volume}",
         "format-muted": "󰝟",
@@ -107,7 +107,7 @@
     },
     // }}}
 
-    // {{{ CPU
+    // CPU {{{
     "cpu": {
         "interval": 10,
         "format": "  {usage}%",
@@ -116,7 +116,7 @@
     },
     // }}}
 
-    // {{{ Disk
+    // Disk {{{
     "disk": {
         "interval": 60,
         "format": " {percentage_used}%",
@@ -126,7 +126,7 @@
     },
     // }}}
 
-    // {{{ RAM
+    // RAM {{{
     "memory": {
         "interval": 30,
         "format": "   {percentage}%",

@@ -1,6 +1,6 @@
 @import ".cache/matugen/colors.rasi"
 
-// {{{ /**-- Configuration --**/
+// Configuration {{{
 configuration {
     modi:                       "drun,run,filebrowser,window";
         show-icons:               true;
@@ -13,7 +13,7 @@ configuration {
 }
 // }}}
 
-// {{{ /**-- Global Properties --**/
+// Global Properties {{{
 * {
     border-colour:               var(selected);
     handle-colour:               var(selected);
@@ -41,7 +41,7 @@ configuration {
 }
 // }}}
 
-// {{{ /**-- Main Window --**/
+// Main Window {{{
 window {
     /* properties for window widget */
     transparency:                "real";
@@ -64,7 +64,7 @@ window {
 }
 // }}}
 
-// {{{ /**-- Main Box --**/
+// Main Box {{{
 mainbox {
     enabled:                     true;
     spacing:                     0px;
@@ -78,7 +78,7 @@ mainbox {
 }
 // }}}
 
-// {{{ /**-- Inputbar --**/
+// Inputbar {{{
 inputbar {
     enabled:                     true;
     spacing:                     5px;
@@ -140,7 +140,7 @@ case-indicator {
 }
 // }}}
 
-// {{{ /**-- Listview --**/
+// Listview {{{
 listview {
     enabled:                     true;
     columns:                     1;
@@ -171,7 +171,7 @@ scrollbar {
 }
 // }}}
 
-// {{{ /**-- Elements --**/
+// Elements {{{
 element {
     enabled:                     true;
     spacing:                     10px;
@@ -236,7 +236,7 @@ element-text {
 }
 // }}}
 
-// {{{ /**-- Mode Switcher --**/
+// Mode Switcher {{{
 mode-switcher{
     enabled:                     false;
     expand:                      false;
@@ -267,7 +267,7 @@ button selected {
 }
 // }}}
 
-// {{{ /**-- Message --**/
+// Message {{{
 message {
     enabled:                     true;
     margin:                      0px 0px 10px 0px;

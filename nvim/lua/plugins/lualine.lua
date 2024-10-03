@@ -13,7 +13,7 @@ end
 -- }}}
 
 require("lualine").setup {
-  -- {{{ Options
+  -- Options {{{
   options = {
     icons_enabled = true,
     theme = "palenight",     -- auto | tokyonight | palenight
@@ -34,7 +34,7 @@ require("lualine").setup {
   },
   -- }}}
 
-  -- {{{ Sections
+  -- Sections {{{
   sections = {
     lualine_a = { "mode" },
     lualine_b = {

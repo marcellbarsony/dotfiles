@@ -3,7 +3,7 @@
 
 -- :h dapui.setup()
 require("dapui").setup({
-  -- {{{ Controls
+  -- Controls {{{
   controls = {
     element = "repl",
     enabled = false,
@@ -21,15 +21,15 @@ require("dapui").setup({
   },
   -- }}}
 
-  -- {{{ Element mappings
+  -- Element mappings {{{
   element_mappings = {},
   -- }}}
 
-  -- {{{ Expand lines
+  -- Expand lines {{{
   expand_lines = vim.fn.has("nvim-0.7") == 0,   --true
   -- }}}
 
-  -- {{{ Floating
+  -- Floating {{{
   floating = {
     border = "single",
     mappings = {
@@ -38,11 +38,11 @@ require("dapui").setup({
   },
   -- }}}
 
-  -- {{{ Force buffers
+  -- Force buffers {{{
   force_buffers = true,
   -- }}}
 
-  -- {{{ Icons
+  -- Icons {{{
   icons = {
     expanded = "",
     collapsed = ">",         -- 
@@ -50,7 +50,7 @@ require("dapui").setup({
   },
   -- }}}
 
-  -- {{{ Layouts
+  -- Layouts {{{
   layouts = {
     {
       elements = {
@@ -91,7 +91,7 @@ require("dapui").setup({
   },
   -- }}}
 
-  -- {{{ Mappings
+  -- Mappings {{{
   mappings = {
     edit = "e",
     expand = { "<CR>", "<2-LeftMouse>" },
@@ -102,7 +102,7 @@ require("dapui").setup({
   },
   -- }}}
 
-  -- {{{ Render
+  -- Render {{{
   render = {
     indent = 1,
     max_value_lines = 100

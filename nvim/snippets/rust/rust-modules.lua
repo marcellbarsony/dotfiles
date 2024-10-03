@@ -1,7 +1,7 @@
 -- Rust snippets [Modules]
 -- Docs: https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
 
--- SHORTHANDS -- {{{
+-- SHORTHANDS {{{
 local ls = require("luasnip")
 local s = ls.snippet
 local sn = ls.snippet_node
@@ -24,7 +24,7 @@ local conds = require("luasnip.extras.conditions")
 local conds_expand = require("luasnip.extras.conditions.expand")
 -- }}}
 
--- FUNCTIONS -- {{{
+-- FUNCTIONS {{{
 -- Same
 local same = function(index)
   return f(function(arg)
@@ -35,6 +35,7 @@ end
 
 -- SNIPPETS -- {{{
 ls.add_snippets("rust", {
+  -- crate {{{
   s("crate",
     fmt("{};\n" ..
       "{}",
@@ -51,7 +52,9 @@ ls.add_snippets("rust", {
       }
     )
   ),
+  -- }}}
 
+  -- mod {{{
   s("mod",
     fmt("{}\n" ..
       "{}",
@@ -90,7 +93,9 @@ ls.add_snippets("rust", {
       }
     )
   ),
+  -- }}}
 
+  -- use {{{
   s("use",
     fmt("use {};\n" ..
       "{}",
@@ -117,5 +122,6 @@ ls.add_snippets("rust", {
       }
     )
   ),
+  -- }}}
 })
 -- }}}

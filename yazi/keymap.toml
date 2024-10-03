@@ -1,6 +1,6 @@
 "$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
 
-# {{{ Manager
+# Manager {{{
 [manager]
 keymap = [
     { on = [ "<Esc>" ], run = "escape",             desc = "Exit visual mode, clear selected, or cancel search" },
@@ -139,7 +139,7 @@ keymap = [
 ]
 # }}}
 
-# {{{ Task
+# Task {{{
 [tasks]
 keymap = [
     { on = [ "<Esc>" ], run = "close", desc = "Hide the task manager" },
@@ -159,7 +159,7 @@ keymap = [
 ]
 # }}}
 
-# {{{ Select
+# Select {{{
 [select]
 keymap = [
     { on = [ "<Esc>" ],   run = "close",          desc = "Cancel selection" },
@@ -183,7 +183,7 @@ keymap = [
 ]
 # }}}
 
-# {{{ Input
+# Input {{{
 [input]
 keymap = [
     { on = [ "<C-q>" ],   run = "close",          desc = "Cancel input" },
@@ -253,7 +253,7 @@ keymap = [
 ]
 # }}}
 
-# {{{ Completion
+# Completion {{{
 [completion]
 keymap = [
     { on = [ "<C-q>" ],   run = "close",                                      desc = "Cancel completion" },
@@ -273,7 +273,7 @@ keymap = [
 ]
 # }}}
 
-# {{{ Help
+# Help {{{
 [help]
 keymap = [
     { on = [ "<Esc>" ], run = "escape", desc = "Hide help" },

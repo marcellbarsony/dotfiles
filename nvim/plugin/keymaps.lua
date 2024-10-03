@@ -17,24 +17,24 @@ local function map(mode, lhs, rhs, opts)
   vim.keymap.set(mode, lhs, rhs, options)
 end
 
--- {{{ Leader
+-- Leader {{{
 map("n", "<Bslash>", "", { desc = "LEADER" })
 vim.g.mapleader = "\\"
 vim.g.maplocalleader = "\\"
 -- }}}
 
--- {{{ Alpha
+-- Alpha {{{
 map("n", "<leader>xa", "<cmd>Alpha<CR>", { desc = "Alpha" })
 -- }}}
 
--- {{{ Arrow keys
+-- Arrow keys {{{
 map("", "<up>", "<nop>")
 map("", "<down>", "<nop>")
 map("", "<left>", "<nop>")
 map("", "<right>", "<nop>")
 -- }}}
 
--- {{{ Buffers
+-- Buffers {{{
 map("n", "<Tab>", "<cmd>bn<CR>", { desc = "Buffer [Next]" })
 map("n", "<S-Tab>", "<cmd>bp<CR>", { desc = "Buffer [Prev]" })
 map("n", "<C-^>", "<cmd>e #<CR>", { desc = "Alternate file" })      -- :help alternate-file
@@ -42,13 +42,13 @@ map("n", "<C-'>", "<cmd>b#<CR>", { desc = "Buffer [To last]" })
 map("n", "<C-q>", "<cmd>bdelete<CR>", { desc = "Buffer [Delete]" }) -- :bd!<CR>
 -- }}}
 
--- {{{ Clipboard
+-- Clipboard {{{
 map("n", "y", "\"+y", { desc = "Yank [Global]" })
 map("v", "y", "\"+y", { desc = "Yank [Global]" })
 map("x", "p", [["_dp]], { desc = "Paste [Global]" })
 -- }}}
 
--- {{{ DAP
+-- DAP {{{
 -- :h dap-api
 -- :h dap-mappings
 map("n", "<leader>d5", "<cmd>lua require'dap'.continue()<CR>", { desc = "DAP [Continue]" })
@@ -65,7 +65,7 @@ map("n", "<leader>dr", "<cmd>lua require'dap'.run_last()<CR>", { desc = "Run las
 map("n", "<leader>ds", "<cmd>lua require'dap'.repl.open()<CR>", { desc = "REPL" })
 -- }}}
 
--- {{{ Gitsigns
+-- Gitsigns {{{
 map("n", "<leader>gg",
   "<cmd>Gitsigns toggle_signs<CR><cmd>Gitsigns toggle_numhl<CR><cmd>Gitsigns toggle_current_line_blame<CR>",
   { desc = "Gitsigns" }
@@ -93,31 +93,31 @@ map("o", "<leader>gh", "<cmd>Gitsigns select_hunk<CR>", { desc = "Select hunk" }
 map("x", "<leader>gh", "<cmd>Gitsigns select_hunk<CR>", { desc = "Select hunk" })
 -- }}}
 
--- {{{ HEX
+-- HEX {{{
 map("n", "<leader>hd", "<cmd>HexDump<CR>", { desc = "Dump" })
 map("n", "<leader>ht", "<cmd>HexToggle<CR>", { desc = "Toggle" })
 map("n", "<leader>ha", "<cmd>HexAssemble<CR>", { desc = "Assemble" })
 -- }}}
 
--- {{{ Highlights
+-- Highlights {{{
 map("n", "<C-c>", "<cmd>nohl<CR>", { desc = "Clear" })
 -- map("n", "<leader>cr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "[Highlight] Replace selected" })
 -- }}}
 
--- {{{ Lazy
+-- Lazy {{{
 map("n", "<leader>xl", "<cmd>Lazy<CR>", { desc = "Lazy" })
 -- }}}
 
--- {{{ Lines (Indent)
+-- Lines (Indent) {{{
 map("v", "<", "<gv", { desc = "Indent [Left]" })
 map("v", ">", ">gv", { desc = "Indent [Right]" })
 -- }}}
 
--- {{{ Lines (Misc)
+-- Lines (Misc) {{{
 map("n", "J", "mzJ`z", { desc = "Append line below" })
 -- }}}
 
--- {{{ Lines (Move)
+-- Lines (Move) {{{
 -- https://vim.fandom.com/wiki/Moving_lines_up_or_down
 map("v", "K", ":move '<-2<CR>gv=gv", { desc = "Move [Up]" })
 map("v", "J", ":move '>+1<CR>gv=gv", { desc = "Move [Down]" })
@@ -127,7 +127,7 @@ map("x", "J", ":move '>+1<CR>gv=gv", { desc = "Block [Move Down]" })
 -- map("n", "J", ":move .+1<CR>", { desc = "Line [Move Down]" })
 -- }}}
 
--- {{{ LSP
+-- LSP {{{
 -- :h lspconfig-keybindings
 
 -- Calls
@@ -187,14 +187,14 @@ map("n", "<leader>lr", vim.lsp.buf.rename, { desc = "Rename" })
 -- end, opts)
 -- }}}
 
--- {{{ LSP Help
+-- LSP Help {{{
 map("n", "<leader>lhc", "<cmd>help lspconfig.txt<CR>", { desc = "Config" })
 map("n", "<leader>lhi", "<cmd>LspInfo<CR>", { desc = "Info" })
 map("n", "<leader>lhl", "<cmd>LspLog<CR>", { desc = "Log" })
 map("n", "<leader>lhr", "<cmd>help lsp-config<CR>", { desc = "Reference" })
 -- }}}
 
--- {{{ Lspsaga
+-- Lspsaga {{{
 -- map("n", "<leader>la", "<cmd>Lspsaga code_action<CR>", { desc = "Action" })
 -- map("n", "<leader>lo", "<cmd>Lspsaga outline<CR>", { desc = "Outline" })
 -- map("n", "<leader>lp", "<cmd>Lspsaga peek_definition<CR>", { desc = "Peek definition" })
@@ -210,12 +210,12 @@ map("n", "<leader>lhr", "<cmd>help lsp-config<CR>", { desc = "Reference" })
 -- map("n", "<Leader>lco", "<cmd>Lspsaga outgoing_calls<CR>", { desc = "Outgoing" })
 -- }}}
 
--- {{{ Macro
+-- Macro {{{
 map("n", "Q", "@qj", { desc = "Macro Replay" })
 map("x", "Q", ":norm @qj<CR>", { desc = "Macro Replay [Block]" })
 -- }}}
 
--- {{{ Mason
+-- Mason {{{
 map("n", "<leader>xmc", "<cmd>checkhealth mason<CR>", { desc = "Health" })
 map("n", "<leader>xmh", "<cmd>h mason<CR>", { desc = "Help" })
 map("n", "<leader>xml", "<cmd>MasonLog<CR>", { desc = "Log" })
@@ -223,30 +223,30 @@ map("n", "<leader>xmm", "<cmd>Mason<CR>", { desc = "Mason" })
 map("n", "<leader>xmu", "<cmd>MasonUninstallAll<CR>", { desc = "Uninstall all" })
 -- }}}
 
--- {{{ Navigation
+-- Navigation {{{
 -- Conflicts with cursor scrolloff
 -- map("n", "<C-d>", "<C-d>zz<CR>", { desc = "Page down" })
 -- map("n", "<C-u>", "<C-u>zz<CR>", { desc = "Page up" })
 -- }}}
 
--- {{{ Oil
+-- Oil {{{
 map("n", "-", "<cmd>Oil<CR>", { desc = "Oil" })
 map("n", "<leader>xo", "<cmd>Oil<CR>", { desc = "Oil" })
 -- }}}
 
--- {{{ Search
+-- Search {{{
 map("n", "*", "*N", { desc = "Find word" })             -- Fix *: don't move to next match
 map("n", "#", "#N", { desc = "Find word [Backwards]" }) -- Fix #: don't move to next match
 map("n", "n", "nzzzv", { desc = "Search [Next]" })      -- Fix n: keep cursor in center
 map("n", "N", "Nzzzv", { desc = "Search [Previous]" })  -- Fix N: keep cursor in center
 -- }}}
 
--- {{{ Shell movements
+-- Shell movements {{{
 map("i", "<C-A>", "<ESC>I", { desc = "Jump EOL" })
 map("i", "<C-E>", "<ESC>A", { desc = "Jump BOL" })
 -- }}}
 
--- {{{ Splits (Ctrl + w)
+-- Splits (Ctrl + w) {{{
 map("n", "<C-m>", "<C-w>h", { desc = "Split [Left]" })
 map("n", "<C-n>", "<C-w>j", { desc = "Split [Up]" })
 map("n", "<C-e>", "<C-w>k", { desc = "Split [Down]" })
@@ -257,7 +257,7 @@ map("n", "<C-A-e>", "<cmd>resize -5<CR>", { desc = "Split [Hor -]" })
 map("n", "<C-A-i>", "<cmd>vertical resize +5<CR>", { desc = "Split [Ver -]" })
 -- }}}
 
--- {{{ Telescope
+-- Telescope {{{
 map("n", "<leader>tt", "<cmd>Telescope<CR>", { desc = "Telescope" })
 map("n", "<leader>ta", "<cmd>Telescope autocommands<CR>", { desc = "Autocommands" })
 map("n", "<leader>tb", "<cmd>Telescope buffers<CR>", { desc = "Buffers" })
@@ -309,24 +309,24 @@ map("n", "<leader>vtm", "<cmd>Telescope man_pages<CR>", { desc = "Man" })
 map("n", "<leader>vto", "<cmd>Telescope vim_options<CR>", { desc = "Options" })
 -- }}}
 
--- {{{ Treesitter (Neovim built-ins)
+-- Treesitter (Neovim built-ins) {{{
 map("n", "<leader>vii", "<cmd>Inspect<CR>", { desc = "Inspect" })
 map("n", "<leader>vit", "<cmd>InspectTree<CR>", { desc = "Inspect [Tree]" })
 -- }}}
 
--- {{{ Trouble
+-- Trouble {{{
 map("n", "<leader>xxx", function() require("trouble").toggle() end, { desc = "Trouble" })
 map("n", "<leader>xxd", function() require("trouble").toggle("document_diagnostics") end, { desc = "Diagnostics" })
 map("n", "<leader>xxq", function() require("trouble").toggle("quickfix") end, { desc = "Quickfix" })
 map("n", "<leader>xxl", function() require("trouble").toggle("loclist") end, { desc = "Loclist" })
 -- }}}
 
--- {{{ Undo & Redo
+-- Undo & Redo {{{
 map("n", "<u>", "<cmd>undo<CR>", { desc = "Undo" })
 map("n", "<C-r>", "<cmd>redo<CR>", { desc = "Redo" })
 -- }}}
 
--- {{{ VIM
+-- VIM {{{
 map("n", "<leader>vj", "<cmd>jumps<CR>", { desc = "Jumps" })
 map("n", "<leader>vd", "<cmd>sort n<CR>", { desc = "Sort %d" })
 map("n", "<leader>vo", "<cmd>options<CR>", { desc = "Options" })

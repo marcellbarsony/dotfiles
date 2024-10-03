@@ -1,13 +1,13 @@
-# {{{ Beep
+# Beep {{{
 unsetopt beep
 # }}}
 
-# {{{ Colors
+# Colors {{{
 # https://i.stack.imgur.com/UQVe5.png
 autoload -U colors && colors
 # }}}
 
-# {{{ Git
+# Git {{{
 autoload -U vcs_info
 precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats 'branch %b'
@@ -15,7 +15,7 @@ setopt PROMPT_SUBST
 RPROMPT=\$vcs_info_msg_0_
 # }}}
 
-# {{{ Highlights
+# Highlights {{{
 typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern regexp cursor root line)
 ZSH_HIGHLIGHT_STYLES[alias]='fg=magenta'
@@ -27,7 +27,7 @@ ZSH_HIGHLIGHT_STYLES[regexp]='fg=green'
 #ZSH_HIGHLIGHT_STYLES[root]='fg=white'
 # }}}
 
-# {{{ Highlights (regexp)
+# Highlights (regexp) {{{
 # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/regexp.md
 typeset -A ZSH_HIGHLIGHT_REGEXP
 #ZSH_HIGHLIGHT_REGEXP+=('"*"' fg=magenta,bold) # Double quote
@@ -36,7 +36,7 @@ typeset -A ZSH_HIGHLIGHT_REGEXP
 #ZSH_HIGHLIGHT_REGEXP+=("'.*'" fg=yellow,bold)
 # }}}
 
-# {{{ History
+# History {{{
 HISTSIZE=1000
 SAVEHIST=$HISTSIZE
 HISTFILE=~/.cache/zsh/history
@@ -52,27 +52,27 @@ setopt hist_find_no_dups
 # bindkey '^e' history-search-forward
 # }}}
 
-# {{{ Prompt (Starship)
+# Prompt (Starship) {{{
 eval "$(starship init zsh)"
 # }}}
 
-# {{{ Pywal
+# Pywal {{{
 # (cat ~/.cache/wal/sequences &) # Terminal
 # source ~/.cache/wal/colors-tty.sh # TTY
 # }}}
 
-# {{{ VI mode
+# VI mode {{{
 bindkey -v
 # export KEYTIMEOUT=1 # Conflicts with Autocomplete
 # }}}
 
-# {{{ VI mode [Edit line]
+# VI mode [Edit line] {{{
 autoload edit-command-line
 zle -N edit-command-line
 bindkey '^f' edit-command-line # Ctrl + f
 # }}}
 
-# {{{ VI mode [Cursor]
+# VI mode [Cursor] {{{
 function zle-keymap-select {
     if [[ ${KEYMAP} == vicmd ]] ||
         [[ $1 = 'block' ]]; then
@@ -104,7 +104,7 @@ preexec() {
 # 6 - Bar (static)
 # }}}
 
-# {{{ Yazi
+# Yazi {{{
 # Shell wrapper
 # https://yazi-rs.github.io/docs/quick-start#shell-wrapper
 function yy() {
@@ -117,11 +117,11 @@ function yy() {
 }
 # }}}
 
-# {{{ FZF
+# FZF {{{
 eval "$(fzf --zsh)"
 # }}}
 
-# {{{ ZSH [Autocomplete]
+# ZSH [Autocomplete] {{{
 if [[ -f ~/.local/src/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]]; then
     source ~/.local/src/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 else
@@ -144,7 +144,7 @@ zstyle ':autocomplete:*' add-space executables aliases functions builtins reserv
 # zstyle ':autocomplete:*' list-colors "${(s.:.)LS_COLORS}" # ls colors
 # }}}
 
-# {{{ ZSH [Autosuggestions]
+# ZSH [Autosuggestions] {{{
 if [[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
     source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 else
@@ -153,7 +153,7 @@ fi
 bindkey '^ ' autosuggest-accept # Ctrl + Space
 # }}}
 
-# {{{ ZSH [Syntax highlight] (source last)
+# ZSH [Syntax highlight] (source last) {{{
 if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
     source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 else

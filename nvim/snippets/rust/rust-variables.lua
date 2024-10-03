@@ -1,7 +1,7 @@
 -- Rust snippets [Variables]
 -- Docs: https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
 
--- SHORTHANDS -- {{{
+-- SHORTHANDS {{{
 local ls = require("luasnip")
 local s = ls.snippet
 local sn = ls.snippet_node
@@ -24,7 +24,7 @@ local conds = require("luasnip.extras.conditions")
 local conds_expand = require("luasnip.extras.conditions.expand")
 -- }}}
 
--- FUNCTIONS -- {{{
+-- FUNCTIONS {{{
 -- Same
 local same = function(index)
   return f(function(arg)
@@ -33,8 +33,9 @@ local same = function(index)
 end
 -- }}}
 
--- SNIPPETS -- {{{
+-- SNIPPETS {{{
 ls.add_snippets("rust", {
+  -- const {{{
   s( "const",
     fmt("const {}: {} = {};\n" ..
       "{}",
@@ -46,7 +47,9 @@ ls.add_snippets("rust", {
       }
     )
   ),
+  -- }}}
 
+  -- let {{{
   s( "let",
     fmt("let {}\n" ..
       "{}",
@@ -199,7 +202,9 @@ ls.add_snippets("rust", {
       }
     )
   ),
+  -- }}}
 
+  -- static {{{
   s( "static",
     fmt("static {}: {} = {};\n" ..
       "{}",
@@ -211,5 +216,6 @@ ls.add_snippets("rust", {
       }
     )
   ),
+  -- }}}
 })
 -- }}}

@@ -4,10 +4,10 @@
 -- https://neovim.io/doc/user/quickref.html
 
 local options = {
-  -- {{{ 1. Important
+  -- 1. Important {{{
   -- }}}
 
-  -- {{{ 2. Moving around - Searching - Patterns
+  -- 2. Moving around - Searching - Patterns {{{
   autochdir = false,
   cdhome = true,
   guicursor = "n:block,i:hor1,n:blinkwait700-blinkoff400-blinkon250",
@@ -15,15 +15,15 @@ local options = {
   smartcase = true,
   -- }}}
 
-  -- {{{ 3. Tags
+  -- 3. Tags {{{
   -- }}}
 
-  -- {{{ 4. Displaying text
+  -- 4. Displaying text {{{
   breakindent = true,
   conceallevel = 0,
   cmdheight = 0,
   fillchars =
-  "stlnc:_,horiz: ,horizup:┴,horizdown:┬,vert:┃,vertleft:┤,vertright:├,verthoriz:┼,fold: ,foldopen:,foldclose:,foldsep:│,diff:-,msgsep: ,eob:~,lastline:@",
+    "stlnc:_,horiz: ,horizup:┴,horizdown:┬,vert:┃,vertleft:┤,vertright:├,verthoriz:┼,fold: ,foldopen:,foldclose:,foldsep:│,diff:-,msgsep: ,eob:~,lastline:@",
   hlsearch = true,
 
   -- Gutter (number)
@@ -44,7 +44,7 @@ local options = {
   wrapmargin = 0,
   -- }}}
 
-  -- {{{ 5. Syntax - Highlighting - Spelling
+  -- 5. Syntax - Highlighting - Spelling {{{
   background = "dark",
   spell = false,
 
@@ -53,39 +53,39 @@ local options = {
   cursorline = false,
   -- }}}
 
-  -- {{{ 6. Multiple windows (Split)
+  -- 6. Multiple windows (Split) {{{
   splitbelow = true,
   splitright = true,
   laststatus = 3,
   -- }}}
 
-  -- {{{ 7. Multiple tab pages
+  -- 7. Multiple tab pages {{{
   showtabline = 1,
   -- }}}
 
-  -- {{{ 8. Terminal
+  -- 8. Terminal {{{
   -- }}}
 
-  -- {{{ 9. Using the mouse
+  -- 9. Using the mouse {{{
   -- }}}
 
-  -- {{{ 10. Messages and info
+  -- 10. Messages and info {{{
   confirm = true,
   more = true,
   showmode = false,
   -- }}}
 
-  -- {{{ 11. Selecting text
+  -- 11. Selecting text {{{
   clipboard = "unnamedplus",
   -- }}}
 
-  -- {{{ 12. Editing text
+  -- 12. Editing text {{{
   backspace = "indent,eol,start",
   textwidth = 90,
   undofile = true,
   -- }}}
 
-  -- {{{ 13. Tabs - Indenting
+  -- 13. Tabs - Indenting {{{
   -- Tabs
   autoindent = false,
   expandtab = true,
@@ -102,13 +102,15 @@ local options = {
   cinwords = "if,else,while,do,for,switch",
   -- }}}
 
-  -- {{{ 14. Folding
+  -- 14. Folding  {{{
   foldenable = true,
   foldcolumn = "0", -- auto
   foldlevelstart = 0,
   foldmethod = "marker",
   foldtext =
-  [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').' ... ' ]],
+    [[substitute(getline(v:foldstart), '{{{', '', 'g').'...' ]], -- Sexy folds v1
+    -- [[substitute(getline(v:foldstart), '\\t', repeat('\ ',&tabstop), 'g').' ...' ]],
+    -- substitute(string, pattern, replacement, flags)
   -- }}}
 
   -- {{{ 15. Diff mode

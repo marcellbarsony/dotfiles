@@ -1,7 +1,7 @@
 -- Python snippets
 -- Docs: https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
 
--- SHORTHANDS -- {{{
+-- SHORTHANDS {{{
 local ls = require("luasnip")
 local s = ls.snippet
 local sn = ls.snippet_node
@@ -24,7 +24,7 @@ local conds = require("luasnip.extras.conditions")
 local conds_expand = require("luasnip.extras.conditions.expand")
 -- }}}
 
--- FUNCTIONS -- {{{
+-- FUNCTIONS {{{
 -- Same
 local same = function(index)
   return f(function(arg)
@@ -33,9 +33,10 @@ local same = function(index)
 end
 -- }}}
 
--- SNIPPETS -- {{{
+-- SNIPPETS {{{
 ls.add_snippets("python", {
-  s( "#!", -- shbang
+  -- #! (shbang) {{{
+  s( "#!",
     fmt('#!/usr/bin/env python3\n' ..
       '"""\n' ..
       "Author: {}\n" ..
@@ -63,7 +64,9 @@ ls.add_snippets("python", {
       }
     )
   ),
+  -- }}}
 
+  -- if-name {{{
   s( "if-name",
     fmt('if __name__ == "__main__":\n' ..
       "\t{}{}", {
@@ -72,7 +75,9 @@ ls.add_snippets("python", {
       }
     )
   ),
+  -- }}}
 
+  -- import {{{
   s( "import",
     fmt('{}import {}{}', {
       c(1, {
@@ -83,5 +88,6 @@ ls.add_snippets("python", {
       i(0),
     })
   ),
+  -- }}}
 })
 -- }}}

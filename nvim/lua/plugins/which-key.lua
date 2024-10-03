@@ -3,7 +3,7 @@
 
 local wk = require("which-key")
 
--- {{{ Config
+-- Config {{{
 wk.setup {
   ---@type false | "classic" | "modern" | "helix"
   preset = "helix",
@@ -144,7 +144,7 @@ wk.setup {
 }
 -- }}}
 
--- {{{ Keymaps
+-- Keymaps {{{
 wk.add({
   { "]",          desc = "Next" },
   { "]m",         desc = "Method [Start]" },

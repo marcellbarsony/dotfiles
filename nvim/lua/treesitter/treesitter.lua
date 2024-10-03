@@ -2,7 +2,7 @@
 -- https://github.com/nvim-treesitter/nvim-treesitter
 -- https://tree-sitter.github.io/tree-sitter/
 
-require "nvim-treesitter.configs".setup {
+require("nvim-treesitter.configs").setup {
   -- Install
   -- https://github.com/nvim-treesitter/nvim-treesitter#modules
   ensure_installed = {

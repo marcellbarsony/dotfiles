@@ -2,7 +2,7 @@
 -- Docs: https://doc.rust-lang.org/reference/items/functions.html
 -- Book: https://doc.rust-lang.org/book/ch03-03-how-functions-work.html
 
--- SHORTHANDS -- {{{
+-- SHORTHANDS {{{
 local ls = require("luasnip")
 local s = ls.snippet
 local sn = ls.snippet_node
@@ -25,7 +25,7 @@ local conds = require("luasnip.extras.conditions")
 local conds_expand = require("luasnip.extras.conditions.expand")
 -- }}}
 
--- FUNCTIONS -- {{{
+-- FUNCTIONS {{{
 -- Same
 local same = function(index)
   return f(function(arg)
@@ -34,7 +34,7 @@ local same = function(index)
 end
 -- }}}
 
--- SNIPPETS -- {{{
+-- SNIPPETS {{{
 ls.add_snippets("rust", {
   s( "fn", -- function
     fmt("{}fn {}{}({}){}{{\n" ..

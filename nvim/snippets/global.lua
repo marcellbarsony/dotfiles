@@ -1,7 +1,7 @@
 -- Global snippets
 -- https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
 
--- SHORTHANDS -- {{{
+-- SHORTHANDS {{{
 local ls = require("luasnip")
 local s = ls.snippet
 local sn = ls.snippet_node
@@ -24,11 +24,18 @@ local conds = require("luasnip.extras.conditions")
 local conds_expand = require("luasnip.extras.conditions.expand")
 -- }}}
 
--- FUNCTIONS -- {{{
+-- FUNCTIONS {{{
+-- Same
+local same = function(index)
+  return f(function(arg)
+    return arg[1]
+  end, { index })
+end
 -- }}}
 
--- SNIPPETS -- {{{
+-- SNIPPETS {{{
 ls.add_snippets("all", {
+  -- date {{{
   s("date",
     fmt("{}", {
       c(1, {
@@ -47,7 +54,9 @@ ls.add_snippets("all", {
       }),
     })
   ),
+  -- }}}
 
+  -- lorem {{{
   s("lorem",
     fmt("{}", {
       c(1, {
@@ -67,7 +76,9 @@ ls.add_snippets("all", {
       }),
     })
   ),
+  -- }}}
 
+  -- pwd {{{
   s("pwd",
     fmt("{}", {
       f(function()
@@ -75,7 +86,9 @@ ls.add_snippets("all", {
       end)
     })
   ),
+  -- }}}
 
+  -- time {{{
   s("time",
     fmt("{}", {
       c(1, {
@@ -88,7 +101,9 @@ ls.add_snippets("all", {
       }),
     })
   ),
+  -- }}}
 
+  -- user {{{
   s("user",
     fmt("{}", {
       f(function()
@@ -96,5 +111,6 @@ ls.add_snippets("all", {
       end)
     })
   ),
+  -- }}}
 })
 -- }}}

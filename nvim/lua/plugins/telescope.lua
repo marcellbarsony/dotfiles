@@ -6,7 +6,7 @@ local telescope = require("telescope")
 local actions = require "telescope.actions"
 
 telescope.setup {
-  -- {{{ Defaults
+  -- Defaults {{{
   defaults = {
     -- Border
     border = true,
@@ -122,7 +122,7 @@ telescope.setup {
   },
   -- }}}
 
-  -- {{{ Pickers
+  -- Pickers {{{
   pickers = {
     -- picker_name = {
     --   picker_config_key = value,
@@ -134,7 +134,7 @@ telescope.setup {
   },
   -- }}}
 
-  -- {{{ Extensions
+  -- Extensions {{{
   extensions = {
     -- extension_name = {
     --   extension_config_key = value,

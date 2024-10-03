@@ -5,7 +5,7 @@ local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
 
 dashboard.section.header.val = {
-  -- {{{ Blinky
+  -- Blinky {{{
   -- "            ██████            ",
   -- "        ████▒▒▒▒▒▒████        ",
   -- "      ██▒▒▒▒▒▒▒▒▒▒▒▒▒▒██      ",
@@ -23,7 +23,7 @@ dashboard.section.header.val = {
   -- "██      ██      ████      ████",
   -- }}}
 
-  -- {{{ Blinky + Pacman
+  -- Blinky + Pacman {{{
   -- "            ██████                                  ██████                      ",
   -- "        ████▒▒▒▒▒▒████                          ████▒▒▒▒▒▒████                  ",
   -- "      ██▒▒▒▒▒▒▒▒▒▒▒▒▒▒██                      ██▒▒▒▒▒▒▒▒▒▒▒▒▒▒██                ",
@@ -41,7 +41,7 @@ dashboard.section.header.val = {
   -- "██      ██      ████      ████                      ██████                      ",
   -- }}}
 
-  -- {{{ Neovim
+  -- Neovim {{{
   -- "                                                     ",
   -- "  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
   -- "  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ",
@@ -52,7 +52,7 @@ dashboard.section.header.val = {
   -- "                                                     ",
   -- }}}
 
-  -- {{{ Neovim [modern]
+  -- Neovim [modern] {{{
   "                                                                     ",
   "       ████ ██████           █████      ██                     ",
   "      ███████████             █████                             ",
@@ -65,7 +65,7 @@ dashboard.section.header.val = {
   "                                                                       ",
   -- }}}
 
-  -- {{{ Arch
+  -- Arch {{{
   -- "                   -`                   ",
   -- "                  .o+`                  ",
   -- "                 `ooo/                  ",
@@ -107,6 +107,6 @@ dashboard.section.buttons.val = {
 alpha.setup(dashboard.opts)
 
 -- Disable folding on alpha buffer
-vim.cmd([[
-    autocmd FileType alpha setlocal nofoldenable
-]])
+vim.cmd(
+  [[autocmd FileType alpha setlocal nofoldenable]]
+)

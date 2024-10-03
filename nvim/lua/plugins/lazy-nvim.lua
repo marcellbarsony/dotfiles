@@ -19,7 +19,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  -- {{{ Autopairs
+  -- Autopairs {{{
   {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
@@ -27,7 +27,7 @@ require("lazy").setup({
   },
   -- }}}
 
-  -- {{{ Colors
+  -- Colors {{{
   {
     "folke/tokyonight.nvim",
     lazy = false,
@@ -47,14 +47,14 @@ require("lazy").setup({
   "NvChad/nvim-colorizer.lua",
   -- }}}
 
-  -- {{{ Devicons
+  -- Devicons {{{
   {
     "nvim-tree/nvim-web-devicons",
     event = "VeryLazy"
   },
   -- }}}
 
-  -- {{{ CMP
+  -- CMP {{{
   {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
@@ -68,7 +68,7 @@ require("lazy").setup({
   },
   -- }}}
 
-  -- {{{ DAP
+  -- DAP {{{
   {
     "mfussenegger/nvim-dap",
     event = "VeryLazy",
@@ -82,18 +82,18 @@ require("lazy").setup({
   },
   -- }}}
 
-  -- {{{ Greeter
+  -- Greeter {{{
   "goolord/alpha-nvim",
   -- }}}
 
-  -- {{{ GIT
+  -- GIT {{{
   {
     "lewis6991/gitsigns.nvim",
     event = "VeryLazy"
   },
   -- }}}
 
-  -- {{{ Harpoon
+  -- Harpoon {{{
   {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
@@ -103,14 +103,14 @@ require("lazy").setup({
   },
   -- }}}
 
-  -- {{{ HEX
+  -- HEX {{{
   {
     "RaafatTurki/hex.nvim",
     event = "VeryLazy"
   },
   -- }}}
 
-  -- {{{ Indent blankline
+  -- Indent blankline {{{
   {
     "lukas-reineke/indent-blankline.nvim",
     event = {
@@ -123,7 +123,7 @@ require("lazy").setup({
   },
   -- }}}
 
-  -- {{{ LSP
+  -- LSP {{{
   {
     "neovim/nvim-lspconfig",
     event = {
@@ -133,7 +133,7 @@ require("lazy").setup({
   },
   -- }}}
 
-  -- {{{ LSP [Mason]
+  -- LSP [Mason] {{{
   {
     "williamboman/mason.nvim",
     build = ":MasonUpdate",
@@ -145,14 +145,14 @@ require("lazy").setup({
   },
   -- }}}
 
-  -- {{{ Lspsaga
+  -- Lspsaga {{{
   {
     "glepnir/lspsaga.nvim",
     event = "LspAttach"
   },
   -- }}}
 
-  -- {{{ Markdown
+  -- Markdown {{{
   {
     "tadmccorkle/markdown.nvim",
     ft = "markdown", -- or 'event = "VeryLazy"'
@@ -173,14 +173,14 @@ require("lazy").setup({
   -- },
   -- }}}
 
-  -- {{{ Oil
+  -- Oil {{{
   {
     "stevearc/oil.nvim",
     lazy = true
   },
   -- }}}
 
-  -- {{{ Rust
+  -- Rust {{{
   {
     "mrcjkb/rustaceanvim",
     version = '^4',
@@ -193,7 +193,7 @@ require("lazy").setup({
   },
   --}}}
 
-  -- {{{ Snippets
+  -- Snippets {{{
   {
     "L3MON4D3/LuaSnip",
     event = "InsertEnter",
@@ -203,11 +203,11 @@ require("lazy").setup({
   },
   -- }}}
 
-  -- {{{ Status line
+  -- Status line {{{
   "nvim-lualine/lualine.nvim",
   -- }}}
 
-  -- {{{ Telescope
+  -- Telescope {{{
   {
     "nvim-telescope/telescope.nvim",
     lazy = true,
@@ -218,7 +218,7 @@ require("lazy").setup({
   },
   -- }}}
 
-  -- {{{ Toggleterm
+  -- Toggleterm {{{
   {
     "akinsho/toggleterm.nvim",
     lazy = true,
@@ -228,7 +228,7 @@ require("lazy").setup({
   },
   -- }}}
 
-  -- {{{ Treesitter
+  -- Treesitter {{{
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
@@ -244,7 +244,7 @@ require("lazy").setup({
   },
   -- }}}
 
-  -- {{{ Trouble
+  -- Trouble {{{
   {
     "folke/trouble.nvim",
     event = {
@@ -254,7 +254,7 @@ require("lazy").setup({
   },
   -- }}}
 
-  -- {{{ Which key
+  -- Which key {{{
   {
     "folke/which-key.nvim",
     event = "VeryLazy",

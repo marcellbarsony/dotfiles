@@ -5,7 +5,7 @@
 local cmp = require("cmp")
 local luasnip = require("luasnip")
 
--- {{{ Kind icons
+-- Kind icons {{{
 -- https://github.com/hrsh7th/nvim-cmp/wiki/Menu-Appearance#how-to-add-visual-studio-code-codicons-to-the-menu
 local kind_icons = {
   Class = "",
@@ -36,14 +36,14 @@ local kind_icons = {
 }
 -- }}}
 
--- {{{ SuperTab (check backspace)
+-- SuperTab (check backspace) {{{
 -- local check_backspace = function()
 --   local col = vim.fn.col "." - 1
 --   return col == 0 or vim.fn.getlin("."):sub(col, col):match "%s"
 -- end
 -- }}}
 
--- {{{ Luasnip (Tab)
+-- Luasnip (Tab) {{{
 local has_words_before = function()
   unpack = unpack or table.unpack
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -51,7 +51,7 @@ local has_words_before = function()
 end
 -- }}}
 
--- {{{ CMP Setup
+-- CMP Setup {{{
 -- https://github.com/hrsh7th/nvim-cmp#setup
 cmp.setup({
 
@@ -185,7 +185,7 @@ cmp.setup({
 })
 -- }}}
 
--- {{{ CMP Setup (filetype + cmd line)
+-- CMP Setup (filetype + cmd line) {{{
 -- Specific filetypes
 -- https://github.com/hrsh7th/nvim-cmp#setup
 cmp.setup.filetype("gitcommit", {

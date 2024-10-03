@@ -1,7 +1,7 @@
 -- Indent Blankline
 -- https://github.com/lukas-reineke/indent-blankline.nvim
 
--- {{{ Colors
+-- Colors {{{
 -- rainbow-delimeters.nvim integration
 -- https://github.com/lukas-reineke/indent-blankline.nvim#rainbow-delimitersnvim-integration
 local highlight = {
@@ -31,7 +31,7 @@ vim.g.rainbow_delimiters = {
 }
 -- }}}
 
--- {{{ Config
+-- Config {{{
 -- :help ibl.config
 require("ibl").setup {
   enabled = true,
@@ -55,7 +55,7 @@ require("ibl").setup {
 }
 -- }}}
 
--- {{{ Hooks
+-- Hooks {{{
 hooks.register(
   hooks.type.SCOPE_HIGHLIGHT,
   hooks.builtin.scope_highlight_from_extmark
