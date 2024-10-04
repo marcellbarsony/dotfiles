@@ -27,24 +27,74 @@ require("lazy").setup({
   },
   -- }}}
 
-  -- Colors {{{
+  -- Colorizer {{{
+  "NvChad/nvim-colorizer.lua",
+  -- }}}
+
+  -- Color themes {{{
+  -- Tokyonight {{{
   {
     "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
-    opts = {
-
-
-
-    },
+    opts = {},
   },
+  -- }}}
 
-  -- { "catppuccin/nvim",
+  -- Catppuccin {{{
+  -- {
+  --   "catppuccin/nvim",
   --   name = "catppuccin",
   --   priority = 1000
   -- },
+  -- }}}
 
-  "NvChad/nvim-colorizer.lua",
+  -- Darkvoid {{{
+  -- https://github.com/Aliqyan-21/darkvoid.nvim
+  -- {
+  --   "aliqyan-21/darkvoid.nvim",
+  --   priority = 1000
+  -- },
+  -- }}}
+
+  -- Poimandres {{{
+  -- https://github.com/olivercederborg/poimandres.nvim
+  -- {
+  --   "olivercederborg/poimandres.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require("poimandres").setup {
+  --       -- leave this setup function empty for default config
+  --       -- or refer to the configuration section
+  --       -- for configuration options
+  --     }
+  --   end,
+  --
+  --   -- optionally set the colorscheme within lazy config
+  --   init = function()
+  --     vim.cmd("colorscheme poimandres")
+  --   end
+  -- },
+  -- }}}
+
+  -- minimalistNVIM {{{
+  -- https://github.com/rezhaTanuharja/minimalistNVIM
+  -- }}}
+
+  -- Lackluster {{{
+  -- https://github.com/slugbyte/lackluster.nvim
+  -- {
+  --   "slugbyte/lackluster.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   init = function()
+  --       vim.cmd.colorscheme("lackluster")
+  --       -- vim.cmd.colorscheme("lackluster-hack") -- my favorite
+  --       -- vim.cmd.colorscheme("lackluster-mint")
+  --   end,
+  -- },
+  -- }}}
   -- }}}
 
   -- Devicons {{{

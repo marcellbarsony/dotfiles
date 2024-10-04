@@ -18,6 +18,11 @@ user_pref("privacy.userContext.newTabContainersOnLeftClick.enabled", true);
 /* CSS */
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", 1);
 
+/* DOWNLOAD */
+user_pref("browser.download.dir", "/home/marci/tmp");
+user_pref("browser.download.folderList", 0);
+user_pref("browser.download.lastDir", 0);
+
 /* EXTENSIONS */
 // https://support.mozilla.org/en-US/kb/disable-or-re-enable-pocket-for-firefox
 user_pref("extensions.pocket.enabled", false); // 1702
@@ -32,8 +37,8 @@ user_pref("full-screen-api.warning.timeout", 0);
 /* LAYOUT */
 // user_pref("layout.css.devPixelsPerPx", "0.9"); // Crashing on Hyprland
 
-/* WEBRTC */
-// user_pref("media.peerconnection.enabled", false); // 7020 (Web Real-Time Communication)
+/* LIST ALL TABS */
+user_perf("browser.tabs.hoverPreview.enabled", 0);
 
 /* MEDIA (DRM)*/
 user_pref("media.eme.enabled", true); // 5508
@@ -43,7 +48,7 @@ user_pref("browser.promo.focus.enabled", false);
 user_pref("browser.promo.pin.enabled", false);
 user_pref("browser.vpn_promo.enabled", false);
 
-/* RFP [RESIST FINGERPRINTING] */
+/* RFP (RESIST FINGERPRINTING) */
 user_pref("privacy.resistFingerprinting.letterboxing", false); // 4504
 
 /* SEARCH */
@@ -78,11 +83,6 @@ user_pref("services.sync.prefs.sync.browser.urlbar.suggest.topsites", false);
 user_pref("signon.rememberSignons", false); // 5003
 user_pref("signon.rememberSignons.visibilityToggle", false);
 
-/* DOWNLOAD */
-user_pref("browser.download.dir", "/home/marci/tmp");
-user_pref("browser.download.folderList", 0);
-user_pref("browser.download.lastDir", 0);
-
 /* SHUTDOWN */
 user_pref("privacy.clearOnShutdown.history", false); // 2811
 user_pref("privacy.clearOnShutdown.sessions", false); // 2811
@@ -95,6 +95,9 @@ user_pref("browser.startup.homepage", "https://marcellbarsony.github.io/homepage
 user_pref("browser.compactmode.show", true);
 user_pref("browser.tabs.firefox-view", false);
 user_pref("browser.tabs.tabmanager.enabled", false);
+
+/* WEBRTC */
+// user_pref("media.peerconnection.enabled", false); // 7020 (Web Real-Time Communication)
 
 /* WEBSITE APPEARANCE (DARK) */
 user_pref("layout.css.prefers-color-scheme.content-override", 0);

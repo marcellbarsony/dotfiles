@@ -10,7 +10,7 @@ keymap = [
     { on = [ "<C-q>" ], run = "close",              desc = "Quit/Close tab" },
     { on = [ "<C-z>" ], run = "suspend",            desc = "Suspend process" },
 
-    # Navigation
+    # Navigation {{{
     { on = [ "e" ], run = "arrow -1", desc = "Move [Up]" },
     { on = [ "E" ], run = "arrow -5", desc = "Move [Up 5]" },
     { on = [ "n" ], run = "arrow 1",  desc = "Move [Down]" },
@@ -34,15 +34,17 @@ keymap = [
 
     { on = [ "<A-k>" ], run = "seek -5", desc = "Preview [Scroll Up]" },
     { on = [ "<A-j>" ], run = "seek 5",  desc = "Preview [Scroll Down]" },
+    # }}}
 
-    # Selection
+    # Selection {{{
     { on = [ "<Space>" ], run = [ "select --state=none", "arrow 1" ], desc = "Select" },
     { on = [ "v" ],       run = "visual_mode",                        desc = "Visual [Select]" },
     { on = [ "V" ],       run = "visual_mode --unset",                desc = "Visual [Unset]" },
     { on = [ "<C-a>" ],   run = "select_all --state=true",            desc = "Select [All]" },
     { on = [ "<C-r>" ],   run = "select_all --state=none",            desc = "Select [All - Inverze]" },
+    # }}}
 
-    # Operation
+    # Operation {{{
     { on = [ "o" ],         run = "open",                        desc = "Open" },
     { on = [ "O" ],         run = "open --interactive",          desc = "Open [Interactively]" },
     { on = [ "<Enter>" ],   run = "open",                        desc = "Open" },
@@ -67,29 +69,34 @@ keymap = [
     { on = [ "<C-s>" ],     run = "search none",                 desc = "Search [Cancel]" },
     { on = [ "z" ],         run = "plugin zoxide",               desc = "Jump [zoxide]" },
     { on = [ "Z" ],         run = "plugin fzf",                  desc = "Jump [fzf]" },
+    # }}}
 
-    # Linemode
+    # Linemode {{{
     { on = [ "l", "s" ], run = "linemode size",        desc = "Linemode [Size]" },
     { on = [ "l", "p" ], run = "linemode permissions", desc = "Linemode [Permissions]" },
     { on = [ "l", "m" ], run = "linemode mtime",       desc = "Linemode [Mtime]" },
     { on = [ "l", "n" ], run = "linemode none",        desc = "Linemode [None]" },
+    # }}}
 
-    # Copy
+    # Copy {{{
     { on = [ "c", "c" ], run = "copy path",             desc = "Copy path [Absolute]" },
     { on = [ "c", "d" ], run = "copy dirname",          desc = "Copy path [Parent dir]" },
     { on = [ "c", "f" ], run = "copy filename",         desc = "Copy [Filemame" },
     { on = [ "c", "n" ], run = "copy name_without_ext", desc = "Copy [Filename + Extension]" },
+    # }}}
 
-    # Filter
+    # Filter {{{
     { on = [ "f" ], run = "filter --smart", desc = "Filter" },
+    # }}}
 
-    # Find
+    # Find {{{
     { on = [ "/" ], run = "find --smart",            desc = "Find [Next]" },
     { on = [ "?" ], run = "find --previous --smart", desc = "Find [Previous]" },
     { on = [ "k" ], run = "find_arrow",              desc = "Next file" },
     { on = [ "k" ], run = "find_arrow --previous",   desc = "Previous file" },
+    # }}}
 
-    # Sorting
+    # Sorting {{{
     { on = [ ",", "a" ], run = "sort alphabetical --dir-first",           desc = "Alphabetically" },
     { on = [ ",", "A" ], run = "sort alphabetical --reverse --dir-first", desc = "Alphabetically [Reverse]" },
     { on = [ ",", "c" ], run = "sort created --dir-first",                desc = "Created time" },
@@ -102,8 +109,9 @@ keymap = [
     { on = [ ",", "N" ], run = "sort natural --reverse --dir-first",      desc = "Naturally [Reverse]" },
     { on = [ ",", "s" ], run = "sort size --dir-first",                   desc = "Size" },
     { on = [ ",", "S" ], run = "sort size --reverse --dir-first",         desc = "Size [Reverse]" },
+    # }}}
 
-    # Tabs
+    # Tabs {{{
     { on = [ "t" ], run = "tab_create --current", desc = "Tab [New]" },
 
     { on = [ "1" ], run = "tab_switch 0", desc = "Tab [1st]" },
@@ -121,11 +129,13 @@ keymap = [
 
     { on = [ "}" ], run = "tab_swap 1",  desc = "Tab [Swap current with next]" },
     { on = [ "{" ], run = "tab_swap -1", desc = "Tab [Swap current with previous]" },
+    # }}}
 
-    # Tasks
+    # Tasks {{{
     { on = [ "w" ], run = "tasks_show", desc = "Tasks manager" },
+    # }}}
 
-    # Goto
+    # Goto {{{
     { on = [ "g", "c" ], run = "cd ~/.config",     desc = "~/.config" },
     { on = [ "g", "d" ], run = "cd ~/Downloads",   desc = "~/Downloads" },
     { on = [ "g", "h" ], run = "cd ~",             desc = "$HOME" },
@@ -133,9 +143,11 @@ keymap = [
     { on = [ "g", "l" ], run = "cd ~/.local",      desc = "~/.local" },
     { on = [ "g", "t" ], run = "cd ~/tmp",         desc = "~/tmp" },
     { on = [ "g", "/" ], run = "cd /",             desc = "/" },
+    # }}}
 
-    # Help
+    # Help {{{
     { on = [ "h" ], run = "help", desc = "Help" },
+    # }}}
 ]
 # }}}
 
@@ -191,50 +203,56 @@ keymap = [
     { on = [ "<Esc>" ],   run = "escape",         desc = "Go back the normal mode, or cancel input" },
     { on = [ "<C-[>" ],   run = "escape",         desc = "Go back the normal mode, or cancel input" },
 
-    # Mode
+    # Mode {{{
     { on = [ "i" ], run = "insert",                              desc = "Enter insert mode" },
     { on = [ "a" ], run = "insert --append",                     desc = "Enter append mode" },
     { on = [ "I" ], run = [ "move -999", "insert" ],             desc = "Move to the BOL, and enter insert mode" },
     { on = [ "A" ], run = [ "move 999", "insert --append" ],     desc = "Move to the EOL, and enter append mode" },
     { on = [ "v" ], run = "visual",                              desc = "Enter visual mode" },
     { on = [ "V" ], run = [ "move -999", "visual", "move 999" ], desc = "Enter visual mode and select all" },
+    # }}}
 
-    # Character-wise movement
+    # Character-wise movement {{{
     { on = [ "h" ],       run = "move -1", desc = "Move back a character" },
     { on = [ "l" ],       run = "move 1",  desc = "Move forward a character" },
     { on = [ "<Left>" ],  run = "move -1", desc = "Move back a character" },
     { on = [ "<Right>" ], run = "move 1",  desc = "Move forward a character" },
     { on = [ "<C-b>" ],   run = "move -1", desc = "Move back a character" },
     { on = [ "<C-f>" ],   run = "move 1",  desc = "Move forward a character" },
+    # }}}
 
-    # Word-wise movement
+    # Word-wise movement {{{
     { on = [ "b" ],     run = "backward",              desc = "Move back to the start of the current or previous word" },
     { on = [ "w" ],     run = "forward",               desc = "Move forward to the start of the next word" },
     { on = [ "e" ],     run = "forward --end-of-word", desc = "Move forward to the end of the current or next word" },
     { on = [ "<A-b>" ], run = "backward",              desc = "Move back to the start of the current or previous word" },
     { on = [ "<A-f>" ], run = "forward --end-of-word", desc = "Move forward to the end of the current or next word" },
+    # }}}
 
-    # Line-wise movement
+    # Line-wise movement {{{
     { on = [ "0" ],      run = "move -999", desc = "Move to the BOL" },
     { on = [ "$" ],      run = "move 999",  desc = "Move to the EOL" },
     { on = [ "<C-a>" ],  run = "move -999", desc = "Move to the BOL" },
     { on = [ "<C-e>" ],  run = "move 999",  desc = "Move to the EOL" },
     { on = [ "<Home>" ], run = "move -999", desc = "Move to the BOL" },
     { on = [ "<End>" ],  run = "move 999",  desc = "Move to the EOL" },
+    # }}}
 
-    # Delete
+    # Delete {{{
     { on = [ "<Backspace>" ], run = "backspace",	        desc = "Delete the character before the cursor" },
     { on = [ "<Delete>" ],    run = "backspace --under", desc = "Delete the character under the cursor" },
     { on = [ "<C-h>" ],       run = "backspace",         desc = "Delete the character before the cursor" },
     { on = [ "<C-d>" ],       run = "backspace --under", desc = "Delete the character under the cursor" },
+    # }}}
 
-    # Kill
+    # Kill {{{
     { on = [ "<C-u>" ], run = "kill bol",      desc = "Kill backwards to the BOL" },
     { on = [ "<C-x>" ], run = "kill eol",      desc = "Kill forwards to the EOL" },
     { on = [ "<C-w>" ], run = "kill backward", desc = "Kill backwards to the start of the current word" },
     { on = [ "<A-d>" ], run = "kill forward",  desc = "Kill forwards to the end of the current word" },
+    # }}}
 
-    # Cut/Yank/Paste
+    # Cut/Yank/Paste {{{
     { on = [ "d" ], run = "delete --cut",                              desc = "Cut the selected characters" },
     { on = [ "D" ], run = [ "delete --cut", "move 999" ],              desc = "Cut until the EOL" },
     { on = [ "c" ], run = "delete --cut --insert",                     desc = "Cut the selected characters, and enter insert mode" },
@@ -243,13 +261,16 @@ keymap = [
     { on = [ "y" ], run = "yank",           desc = "Copy the selected characters" },
     { on = [ "p" ], run = "paste",          desc = "Paste the copied characters after the cursor" },
     { on = [ "P" ], run = "paste --before", desc = "Paste the copied characters before the cursor" },
+    # }}}
 
-    # Undo/Redo
+    # Undo/Redo {{{
     { on = [ "u" ],     run = "undo", desc = "Undo the last operation" },
     { on = [ "<C-r>" ], run = "redo", desc = "Redo the last operation" },
+    # }}}
 
-    # Help
+    # Help {{{
     { on = [ "~" ], run = "help", desc = "Open help" }
+    # }}}
 ]
 # }}}
 
@@ -280,14 +301,16 @@ keymap = [
     { on = [ "q" ],     run = "close",  desc = "Hide help " },
     { on = [ "<C-q>" ], run = "close",  desc = "Hide help" },
 
-    # Navigation
+    # Navigation {{{
     { on = [ "e" ], run = "arrow -1", desc = "Move up" },
     { on = [ "n" ], run = "arrow 1",  desc = "Move down" },
 
     { on = [ "E" ], run = "arrow -5", desc = "Move up [5 lines]" },
     { on = [ "N" ], run = "arrow 5",  desc = "Move  down [5 lines]" },
+    # }}}
 
-    # Filtering
+    # Filtering {{{
     { on = [ "/" ], run = "filter", desc = "Apply a filter for the help items" },
+    # }}}
 ]
 # }}}

@@ -4,7 +4,7 @@ find_files() {
     shopt -s nullglob dotglob # Hidden files & empty directories
     for file in "$1"/*; do
         if [ -d "$file" ]; then
-            find_files "$file" # Recursively call for subdirectories
+            find_files "$file" # Recursively call subdirectories
         else
             echo "$file" # Print each file path
         fi
@@ -21,21 +21,26 @@ else
     random_file=${files[$random_index]} # Get random file by index
 fi
 
+# Random {{{
 transitions=("wipe" "outer" "random")
 random_index=$((RANDOM % ${#transitions[@]}))
 random_transition=${transitions[$random_index]}
+# }}}
 
-# Wallpaper
+# Wallpaper {{{
 swww img $random_file \
     --transition-bezier .43,0.19,1,.4 \
     --transition-fps=60 \
     --transition-type=$random_transition \
     --transition-duration=1 \
+# }}}
 
-# Color scheme
+# Color scheme {{{
 matugen image $random_file
+# }}}
 
-# Notification (dunst)
+# Notification {{{
 # notify-send "SWWW" "${random_file##*/}"
+# }}}
 
 exit 0

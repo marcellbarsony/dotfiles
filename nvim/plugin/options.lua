@@ -108,9 +108,9 @@ local options = {
   foldlevelstart = 0,
   foldmethod = "marker",
   foldtext =
-    [[substitute(getline(v:foldstart), '{{{', '', 'g').'...' ]], -- Sexy folds v1
-    -- [[substitute(getline(v:foldstart), '\\t', repeat('\ ',&tabstop), 'g').' ...' ]],
+    [[ substitute(getline(v:foldstart), '{{{', '', 'g').'...' ]], -- }}}
     -- substitute(string, pattern, replacement, flags)
+    -- [[ substitute(getline(v:foldstart), '\\t', repeat('\ ',&tabstop), 'g').' ...' ]],
   -- }}}
 
   -- {{{ 15. Diff mode
