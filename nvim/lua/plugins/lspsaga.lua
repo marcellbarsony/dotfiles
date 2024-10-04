@@ -1,7 +1,7 @@
 -- Lspsaga
 -- https://github.com/nvimdev/lspsaga.nvim
--- https://nvimdev.github.io/lspsaga
 -- https://github.com/nvimdev/lspsaga.nvim/blob/main/lua/lspsaga/init.lua
+-- https://nvimdev.github.io/lspsaga
 
 require("lspsaga").setup({
   -- Default options {{{
@@ -198,7 +198,7 @@ require("lspsaga").setup({
   },
   -- }}}
 
-  -- :Lspsaga UI {{{
+  -- UI {{{
   -- https://nvimdev.github.io/lspsaga/misc/
   ui = {
     border = "single",
@@ -213,11 +213,7 @@ require("lspsaga").setup({
     kind = nil,
     imp_sign = "󰳛 ",
   },
-  -- }}}
 
-  -- UI Beacon {{{
-  -- :Lspsaga beacon
-  -- https://nvimdev.github.io/lspsaga/misc/
   beacon = {
     enable = true,
     frequency = 7,

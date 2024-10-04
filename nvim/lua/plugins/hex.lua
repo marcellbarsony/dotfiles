@@ -2,7 +2,7 @@
 -- https://github.com/RaafatTurki/hex.nvim
 
 require "hex".setup {
-  -- Dump hex
+  -- Dump to hex
   dump_cmd = "xxd -g 1 -u",
 
   -- Assemble from hex

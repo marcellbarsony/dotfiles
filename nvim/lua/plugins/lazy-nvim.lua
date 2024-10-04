@@ -32,69 +32,55 @@ require("lazy").setup({
   -- }}}
 
   -- Color themes {{{
-  -- Tokyonight {{{
-  {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
-  },
-  -- }}}
+    -- Tokyonight {{{
+    {
+      "folke/tokyonight.nvim",
+      lazy = false,
+      priority = 1000,
+      opts = {},
+    },
+    -- }}}
 
-  -- Catppuccin {{{
-  -- {
-  --   "catppuccin/nvim",
-  --   name = "catppuccin",
-  --   priority = 1000
-  -- },
-  -- }}}
+    -- Catppuccin {{{
+    -- {
+    --   "catppuccin/nvim",
+    --   name = "catppuccin",
+    --   priority = 1000
+    -- },
+    -- }}}
 
-  -- Darkvoid {{{
-  -- https://github.com/Aliqyan-21/darkvoid.nvim
-  -- {
-  --   "aliqyan-21/darkvoid.nvim",
-  --   priority = 1000
-  -- },
-  -- }}}
+    -- Darkvoid {{{
+    {
+      "aliqyan-21/darkvoid.nvim",
+      priority = 1000
+    },
+    -- }}}
 
-  -- Poimandres {{{
-  -- https://github.com/olivercederborg/poimandres.nvim
-  -- {
-  --   "olivercederborg/poimandres.nvim",
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     require("poimandres").setup {
-  --       -- leave this setup function empty for default config
-  --       -- or refer to the configuration section
-  --       -- for configuration options
-  --     }
-  --   end,
-  --
-  --   -- optionally set the colorscheme within lazy config
-  --   init = function()
-  --     vim.cmd("colorscheme poimandres")
-  --   end
-  -- },
-  -- }}}
+    -- Poimandres {{{
+    -- {
+    --   "olivercederborg/poimandres.nvim",
+    --   lazy = false,
+    --   priority = 1000,
+    --   config = function()
+    --     require("poimandres").setup {
+    --       bold_vert_split = false,
+    --       dim_nc_background = false,
+    --       disable_background = true,
+    --       disable_float_background = false,
+    --       disable_italics = false,
+    --     }
+    --   end,
+    --
+    --   -- Set colorscheme
+    --   init = function()
+    --     vim.cmd("colorscheme poimandres")
+    --   end
+    -- },
+    -- }}}
 
-  -- minimalistNVIM {{{
-  -- https://github.com/rezhaTanuharja/minimalistNVIM
-  -- }}}
-
-  -- Lackluster {{{
-  -- https://github.com/slugbyte/lackluster.nvim
-  -- {
-  --   "slugbyte/lackluster.nvim",
-  --   lazy = false,
-  --   priority = 1000,
-  --   init = function()
-  --       vim.cmd.colorscheme("lackluster")
-  --       -- vim.cmd.colorscheme("lackluster-hack") -- my favorite
-  --       -- vim.cmd.colorscheme("lackluster-mint")
-  --   end,
-  -- },
-  -- }}}
+    -- minimalistNVIM {{{
+    -- https://github.com/rezhaTanuharja/minimalistNVIM
+    -- }}}
   -- }}}
 
   -- Devicons {{{
@@ -211,7 +197,8 @@ require("lazy").setup({
     },
   },
 
-  -- { -- Unmaintained
+  -- Unmaintained
+  -- {
   --   "iamcco/markdown-preview.nvim",
   --   cmd = {
   --     "MarkdownPreviewToggle",
@@ -233,7 +220,7 @@ require("lazy").setup({
   -- Rust {{{
   {
     "mrcjkb/rustaceanvim",
-    version = '^4',
+    version = '^5',
     lazy = false,
     ["rust-analyzer"] = {
       cargo = {

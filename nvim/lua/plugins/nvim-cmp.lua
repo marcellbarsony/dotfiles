@@ -54,15 +54,15 @@ end
 -- CMP Setup {{{
 -- https://github.com/hrsh7th/nvim-cmp#setup
 cmp.setup({
-
-  -- Snippet
+  -- Snippet {{{
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body) -- Luasnip
     end,
   },
+  -- }}}
 
-  -- Window
+  -- Window {{{
   window = {
     completion = {
       col_offset = 1,
@@ -77,17 +77,20 @@ cmp.setup({
     --   winhighlight = 'Normal:CmpPmenu,CursorLine:PmenuSel,Search:None'
     -- }),
   },
+  -- }}}
 
-  -- Minimum completion length
+  -- Minimum completion length {{{
   min_length = 0,
+  -- }}}
 
-  -- View
+  -- View {{{
   view = {
     entries = "custom",
     selection_rder = "near_cursor"
   },
+  -- }}}
 
-  -- Mapping
+  -- Mapping {{{
   -- :h ins-completion
   mapping = {
     ["<CR>"] = cmp.mapping.confirm({ select = false }),                            -- Accept selected
@@ -152,15 +155,17 @@ cmp.setup({
       end
     }),
   },
+  -- }}}
 
-  -- Sources
+  -- Sources {{{
   sources = cmp.config.sources({
     { name = "luasnip",  max_item_count = 3,  priority_weight = 1 },
     { name = "nvim_lsp", max_item_count = 100 },
     { name = "buffer",   max_item_count = 3, keyword_length = 3 },
   }),
+  -- }}}
 
-  -- Formatting
+  -- Formatting {{{
   formatting = {
     fields = { "abbr", "kind", "menu" },
     format = function(entry, vim_item)
@@ -177,11 +182,13 @@ cmp.setup({
       return vim_item
     end
   },
+  -- }}}
 
-  -- Experimental
+  -- Experimental {{{
   experimental = {
     ghost_text = true,
   }
+  -- }}}
 })
 -- }}}
 

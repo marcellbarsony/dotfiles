@@ -2,7 +2,7 @@
 -- https://github.com/folke/tokyonight.nvim
 
 require("tokyonight").setup({
-  -- {{{ Options
+  -- Options {{{
   style = "night", -- storm/moon/night/day
   light_style = "day",
   transparent = true,
@@ -23,7 +23,7 @@ require("tokyonight").setup({
   lualine_bold = false,
   -- }}}
 
-  -- {{{ Overrides [Colors]
+  -- Overrides [Colors] {{{
   -- tokyonight.nvim/lua/tokyonight/colors.lua
   ---@param c ColorScheme
   on_colors = function(c)
@@ -31,7 +31,7 @@ require("tokyonight").setup({
   end,
   -- }}}
 
-  -- {{{ Overrides [Highlights]
+  -- Overrides [Highlights] {{{
   -- tokyonight.nvim/lua/tokyonight/theme.lua
   ---@param hl Highlights
   ---@param c ColorScheme

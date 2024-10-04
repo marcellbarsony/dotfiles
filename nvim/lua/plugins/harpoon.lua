@@ -11,7 +11,7 @@ harpoon:setup({
   }
 })
 
--- {{{ Telescope
+-- Telescope {{{
 local conf = require("telescope.config").values
 local function toggle_telescope(harpoon_files)
   local file_paths = {}
@@ -30,7 +30,7 @@ local function toggle_telescope(harpoon_files)
 end
 -- }}}
 
--- {{{ Keymaps
+-- Keymaps {{{
 -- Menu
 vim.keymap.set("n", "<C-b>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Harpoon" })
 vim.keymap.set("n", "<leader>bb", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Harpoon" })

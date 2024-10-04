@@ -48,6 +48,8 @@ local defaults = {
     follow = 100,                                -- follows the current item
     preview = { ms = 100, debounce = true },     -- shows the preview for the current item
   },
+
+  -- Key mappings {{{
   -- Key mappings can be set to the name of a builtin action,
   -- or you can define your own custom action.
   ---@type table<string, trouble.Action.spec>
@@ -109,6 +111,9 @@ local defaults = {
       desc = "Toggle Severity Filter",
     },
   },
+  -- }}}
+
+  -- Modes {{{
   ---@type table<string, trouble.Mode>
   modes = {
     -- sources define their own modes, which you can use directly,
@@ -160,6 +165,9 @@ local defaults = {
       },
     },
   },
+  -- }}}
+
+  -- Icons {{{
   -- stylua: ignore
   icons = {
     ---@type trouble.Indent.symbols
@@ -204,4 +212,5 @@ local defaults = {
       Variable      = "󰀫 ",
     },
   },
+  -- }}}
 }

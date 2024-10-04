@@ -1,4 +1,6 @@
 -- TEST {{{
+-- Testing configuration scheme
+
 -- vim.g.mapleader = "\\"
 -- vim.g.maplocalleader = "\\"
 --
@@ -30,6 +32,7 @@ require("plugins.lazy-nvim")
 
 -- Colors
 -- require("theme.catppucin")
+-- require("theme.darkvoid")
 require("theme.tokyonight")
 
 -- DAP
