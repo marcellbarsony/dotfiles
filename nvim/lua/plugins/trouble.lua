@@ -1,5 +1,6 @@
--- Trouble
+-- Trouble.nvim
 -- https://github.com/folke/trouble.nvim
+-- https://github.com/folke/trouble.nvim/blob/main/lua/trouble/config/init.lua
 
 ---@class trouble.Mode: trouble.Config,trouble.Section.spec
 ---@field desc? string
@@ -13,6 +14,8 @@
 ---@field sorters? table<string, trouble.SorterFn> custom sorters
 
 local defaults = {
+  -- Default options {{{
+  debug = false,
   auto_close = false,        -- auto close when there are no items
   auto_open = false,         -- auto open when there are items
   auto_preview = true,       -- automatically open preview when on an item
@@ -27,8 +30,14 @@ local defaults = {
   pinned = false,            -- When pinned, the opened trouble window will be bound to the current buffer
   warn_no_results = true,    -- show a warning when there are no results
   open_no_results = false,   -- open the trouble window when there are no results
+  -- }}}
+
+  -- Window {{{
   ---@type trouble.Window.opts
   win = {},                  -- window options for the results window. Can be a split or a floating window.
+  -- }}}
+
+  -- Preview {{{
   -- Window options for the preview window. Can be a split, floating window,
   -- or `main` to show the preview in the main editor window.
   ---@type trouble.Window.opts
@@ -39,6 +48,9 @@ local defaults = {
     -- Set to false, if you want the preview to always be a real loaded buffer.
     scratch = true,
   },
+  -- }}}
+
+  -- Throttle {{{
   -- Throttle/Debounce settings. Should usually not be changed.
   ---@type table<string, number|{ms:number, debounce?:boolean}>
   throttle = {
@@ -48,6 +60,7 @@ local defaults = {
     follow = 100,                                -- follows the current item
     preview = { ms = 100, debounce = true },     -- shows the preview for the current item
   },
+  -- }}}
 
   -- Key mappings {{{
   -- Key mappings can be set to the name of a builtin action,
@@ -116,14 +129,16 @@ local defaults = {
   -- Modes {{{
   ---@type table<string, trouble.Mode>
   modes = {
-    -- sources define their own modes, which you can use directly,
-    -- or override like in the example below
+    -- LSP references {{{
     lsp_references = {
       -- some modes are configurable, see the source code for more details
       params = {
         include_declaration = true,
       },
     },
+    -- }}}
+
+    -- LSP base {{{
     -- The LSP base mode for:
     -- * lsp_definitions, lsp_references, lsp_implementations
     -- * lsp_type_definitions, lsp_declarations, lsp_command
@@ -133,6 +148,9 @@ local defaults = {
         include_current = false,
       },
     },
+    -- }}}
+
+    -- Symbols {{{
     -- more advanced example that extends the lsp_document_symbols
     symbols = {
       desc = "document symbols",
@@ -164,6 +182,7 @@ local defaults = {
         },
       },
     },
+    -- }}}
   },
   -- }}}
 

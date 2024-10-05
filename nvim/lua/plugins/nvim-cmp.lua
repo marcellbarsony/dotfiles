@@ -1,4 +1,4 @@
--- nvim-cmp
+-- CMP
 -- https://github.com/hrsh7th/nvim-cmp
 
 -- Require

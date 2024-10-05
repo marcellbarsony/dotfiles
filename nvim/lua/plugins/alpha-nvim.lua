@@ -1,4 +1,4 @@
--- alpha-nvim
+-- Alpha-nvim
 -- https://github.com/goolord/alpha-nvim
 
 local alpha = require("alpha")

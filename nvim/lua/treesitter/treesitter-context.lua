@@ -1,4 +1,4 @@
--- Treesitter context
+-- Treesitter-context
 -- https://github.com/nvim-treesitter/nvim-treesitter-context
 -- https://github.com/nvim-treesitter/nvim-treesitter-context#configuration
 

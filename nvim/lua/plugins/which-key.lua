@@ -1,35 +1,56 @@
--- Which key
+-- Which-key
 -- https://github.com/folke/which-key.nvim
+-- https://github.com/folke/which-key.nvim/blob/main/lua/which-key/config.lua
 
 local wk = require("which-key")
 
 -- Config {{{
 wk.setup {
+
+  -- Preset {{{
   ---@type false | "classic" | "modern" | "helix"
   preset = "helix",
+  -- }}}
+
+  -- Popup delay {{{
   ---@type number | fun(ctx: { keys: string, mode: string, plugin?: string }):number
   delay = function(ctx)
     return ctx.plugin and 0 or 200
   end,
+  -- }}}
+
+  -- Filter {{{
   ---@param mapping wk.Mapping
   filter = function(mapping)
     -- example to exclude mappings without a description
     -- return mapping.desc and mapping.desc ~= ""
     return true
   end,
+  -- }}}
+
+  -- Spec {{{
   ---@type wk.Spec
   spec = {},
   notify = true, -- Show mapping warnings
+  -- }}}
+
+  -- Triggers {{{
   ---@type wk.Spec
   triggers = {
     { "<auto>", mode = "nxsot" },
   },
+  -- }}}
+
+  -- Hidden start {{{
   -- Start hidden and wait for a key to be pressed before showing the popup
   -- Only used by enabled xo mapping modes.
   ---@param ctx { mode: string, operator: string }
   defer = function(ctx)
     return ctx.mode == "V" or ctx.mode == "<C-V>"
   end,
+  -- }}}
+
+  -- Plugins {{{
   plugins = {
     marks = true,     -- shows a list of your marks on ' and `
     registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
@@ -49,6 +70,9 @@ wk.setup {
       g = true,            -- bindings for prefixed with g
     },
   },
+  -- }}}
+
+  -- Window {{{
   win = {
     no_overlap = true, -- don't allow the popup to overlap with the cursor
     -- width = 1,
@@ -66,21 +90,36 @@ wk.setup {
       winblend = 0, -- value between 0-100 0 for fully opaque and 100 for fully transparent
     },
   },
+  -- }}}
+
+  -- Layout {{{
   layout = {
     width = { min = 20, max = 30 }, -- min and max width of the columns
     spacing = 3,                    -- spacing between columns
   },
+  -- }}}
+
+  -- Keys {{{
   keys = {
     scroll_down = "<c-d>", -- binding to scroll down inside the popup
     scroll_up = "<c-u>",   -- binding to scroll up inside the popup
   },
+  -- }}}
+
+  -- Sort {{{
   ---@type (string|wk.Sorter)[]
   sort = { "group", "local", "order", "alphanum", "mod", "lower", "icase" },
+  -- }}}
+
+  -- Expand {{{
   ---@type number|fun(node: wk.Node):boolean?
   expand = 0, -- expand groups when <= n mappings
   -- expand = function(node)
   --   return not node.desc -- expand all nodes without a description
   -- end,
+  -- }}}
+
+  -- Replace {{{
   ---@type table<string, ({[1]:string, [2]:string}|fun(str:string):string)[]>
   replace = {
     key = {
@@ -100,6 +139,9 @@ wk.setup {
       { "^:%s*",          "" },
     },
   },
+  -- }}}
+
+  -- Icons {{{
   icons = {
     breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
     separator = "➜", -- symbol used between a key and it's label
@@ -132,6 +174,9 @@ wk.setup {
       Tab = "󰌒 ",
     },
   },
+  -- }}}
+
+  -- Misc options {{{
   show_help = false, -- show a help message in the command line for using WhichKey
   show_keys = true,  -- show the currently pressed key and its label as a message in the command line
   triggers = true,   -- automatically setup triggers
@@ -141,11 +186,13 @@ wk.setup {
     bt = {},
   },
   debug = false, -- enable wk.log in the current directory
+  -- }}}
 }
 -- }}}
 
 -- Keymaps {{{
 wk.add({
+  -- [/] {{{
   { "]",          desc = "Next" },
   { "]m",         desc = "Method [Start]" },
   { "]M",         desc = "Method [End]" },
@@ -159,7 +206,9 @@ wk.add({
   { "[d",         desc = "Diagnostic" },
   { "[s",         desc = "Mispelled word" },
   { "[%",         desc = "Unmatched group" },
+  -- }}}
 
+  -- a-z {{{
   { "b",          desc = "Word [Previous]" },
   { "B",          desc = "Word [PREVIOUS]" },
   { "e",          desc = "Word [End]" },
@@ -175,7 +224,9 @@ wk.add({
   { "V",          desc = "VISUAL Line" },
   { "w",          desc = "Word [Next]" },
   { "W",          desc = "Word [NEXT]" },
+  -- }}}
 
+  -- g {{{
   { "g",          group = "Go-To" },
   { "ge",         desc = "Word [Previous end]" },
   { "gf",         desc = "File" },
@@ -192,7 +243,9 @@ wk.add({
 
   { "gc",         group = "Comment" },
   { "gcc",        desc = "Toggle line" },
+  -- }}}
 
+  -- z {{{
   { "z",          desc = "Fold" },
   { "za",         desc = "Toggle" },
   { "zA",         desc = "Toggle all [Cursor]" },
@@ -209,7 +262,9 @@ wk.add({
   { "zR",         desc = "Open [All]" },
   { "zw",         desc = "Spelling [Mark as misspelled]" },
   { "zz",         desc = "Center line" },
+  -- }}}
 
+  -- Window {{{
   { "<C-W>",      group = "Window"},
   { "<C-W>d",     desc = "Documentation [Float]"},
   { "<C-W>q",     desc = "Quit window"},
@@ -227,7 +282,9 @@ wk.add({
   { "<C-W><",     desc = "Width [Decrease]"},
   { "<C-W>_",     desc = "Height [Max]"},
   { "<C-W>|",     desc = "Width [Max]"},
+  -- }}}
 
+  -- Leader {{{
   { "<leader>b",  group = "Harpoon" },
 
   { "<leader>d",  group = "DAP" },
@@ -259,5 +316,6 @@ wk.add({
   { "<leader>x",  group = "Plugins" },
   { "<leader>xm", desc = "Mason" },
   { "<leader>xx", desc = "Trouble" },
+  -- }}}
 })
 -- }}}

@@ -1,3 +1,4 @@
+-- Markdown.nvim
 -- https://github.com/tadmccorkle/markdown.nvim
 -- :h markdown.configuration
 

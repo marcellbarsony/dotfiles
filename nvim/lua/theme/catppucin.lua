@@ -1,4 +1,4 @@
--- Colorscheme
+-- Catppuccin
 -- https://github.com/catppuccin/nvim
 
 require("catppuccin").setup({

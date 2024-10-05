@@ -48,3 +48,6 @@
 #urlbar-background {
     --toolbar-field-background-color: #222222 !important; /* URL bar color */
 }
+
+/* List All Tabs button */
+#alltabs-button { display: none !important; }

@@ -16,7 +16,7 @@ user_pref("privacy.userContext.newTabContainersOnLeftClick.enabled", true);
 // user_pref("network.http.referer.XOriginTrimmingPolicy", 0); // 1602
 
 /* CSS */
-user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", 1);
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 
 /* DOWNLOAD */
 user_pref("browser.download.dir", "/home/marci/tmp");
