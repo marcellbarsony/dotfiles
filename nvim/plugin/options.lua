@@ -102,7 +102,7 @@ local options = {
   cinwords = "if,else,while,do,for,switch",
   -- }}}
 
-  -- 14. Folding  {{{
+  -- 14. Folding {{{
   foldenable = true,
   foldcolumn = "0", -- auto
   foldlevelstart = 0,
@@ -110,18 +110,17 @@ local options = {
   foldtext =
     [[ substitute(getline(v:foldstart), '{{{', '', 'g').'...' ]], -- }}}
     -- substitute(string, pattern, replacement, flags)
-    -- [[ substitute(getline(v:foldstart), '\\t', repeat('\ ',&tabstop), 'g').' ...' ]],
   -- }}}
 
-  -- {{{ 15. Diff mode
+  -- 15. Diff mode {{{
   -- }}}
 
-  -- {{{ 16. Mapping
+  -- 16. Mapping {{{
   timeoutlen = 250,   -- which-key.nvim
   updatetime = 200,
   -- }}}
 
-  -- {{{ 17. Reading and Writing files
+  -- 17. Reading and Writing files {{{
   -- R/W
   autoread = true,
   autowrite = false,
@@ -138,29 +137,29 @@ local options = {
   binary = false,
   -- }}}
 
-  -- {{{ 18. The swap file
+  -- 18. The swap file {{{
   swapfile = false,
   -- }}}
 
-  -- {{{ 19. Command line editing
+  -- 19. Command line editing {{{
   history = 50,
   -- }}}
 
-  -- {{{ 20. Executing external commands
+  -- 20. Executing external commands {{{
   -- }}}
 
-  -- {{{ 21. Running make and jumping to errors (quickfix)
+  -- 21. Running make and jumping to errors (quickfix) {{{
   -- }}}
 
-  -- {{{ 22. Language specific
+  -- 22. Language specific {{{
   allowrevins = false,
   -- }}}
 
-  -- {{{ 23. Multi-byte characters
+  -- 23. Multi-byte characters {{{
   fileencoding = "utf-8",
   -- }}}
 
-  -- {{{ 24. Various
+  -- 24. Various {{{
   --virtualedit = all,
   signcolumn = "no",   -- auto / number / yes:1
   -- statuscolumn = "%=%r%C ",

@@ -1,0 +1,42 @@
+{
+  "timeStamp": 1728332001965,
+  "version": "1.60.0",
+  "userSettings": {
+    "advancedUserEnabled": true,
+    "cloudStorageEnabled": true,
+    "uiAccentCustom": true,
+    "uiAccentCustom0": "#3584e4",
+    "uiTheme": "dark",
+    "importedLists": [],
+    "popupPanelSections": 63,
+    "tooltipsDisabled": true
+  },
+  "selectedFilterLists": [
+    "ublock-filters",
+    "ublock-badware",
+    "ublock-privacy",
+    "ublock-quick-fixes",
+    "ublock-unbreak",
+    "easylist",
+    "easyprivacy",
+    "adguard-spyware",
+    "adguard-spyware-url",
+    "urlhaus-1",
+    "plowe-0"
+  ],
+  "hiddenSettings": {},
+  "whitelist": [
+    "about-scheme",
+    "chrome-extension-scheme",
+    "chrome-scheme",
+    "edge-scheme",
+    "moz-extension-scheme",
+    "opera-scheme",
+    "vivaldi-scheme",
+    "wyciwyg-scheme"
+  ],
+  "dynamicFilteringString": "",
+  "urlFilteringString": "",
+  "hostnameSwitchesString": "no-large-media: behind-the-scene false\nno-csp-reports: * true",
+  "userFilters": ""
+}

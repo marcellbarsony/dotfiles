@@ -192,14 +192,16 @@ wk.setup {
 
 -- Keymaps {{{
 wk.add({
-  -- [/] {{{
+  -- ] {{{
   { "]",          desc = "Next" },
   { "]m",         desc = "Method [Start]" },
   { "]M",         desc = "Method [End]" },
   { "]d",         desc = "Diagnostic" },
   { "]s",         desc = "Mispelled word" },
   { "]%",         desc = "Unmatched group" },
+  -- }}}
 
+  -- [ {{{
   { "[",          desc = "Previous" },
   { "[m",         desc = "Method [Start]" },
   { "[M",         desc = "Method [End]" },
@@ -227,7 +229,7 @@ wk.add({
   -- }}}
 
   -- g {{{
-  { "g",          group = "Go-To" },
+  { "g",          group = "GO-TO" },
   { "ge",         desc = "Word [Previous end]" },
   { "gf",         desc = "File" },
   { "gg",         desc = "Top" },
@@ -242,7 +244,7 @@ wk.add({
   { "g%",         desc = "Result [Cycle backward]" },
 
   { "gc",         group = "Comment" },
-  { "gcc",        desc = "Toggle line" },
+  { "gcc",        desc = "Toggle [Line]" },
   -- }}}
 
   -- z {{{
@@ -264,24 +266,24 @@ wk.add({
   { "zz",         desc = "Center line" },
   -- }}}
 
-  -- Window {{{
-  { "<C-W>",      group = "Window"},
-  { "<C-W>d",     desc = "Documentation [Float]"},
-  { "<C-W>q",     desc = "Quit window"},
-  { "<C-W>h",     desc = "Go to [Left]"},
-  { "<C-W>j",     desc = "Go to [Down]"},
-  { "<C-W>k",     desc = "Go to [Up]"},
-  { "<C-W>l",     desc = "Go to [Right]"},
-  { "<C-W>o",     desc = "Close others"},
-  { "<C-W>s",     desc = "Split [Horizontal]"},
-  { "<C-W>T",     desc = "New tab [Break]"},
-  { "<C-W>v",     desc = "Split [Vertical]"},
-  { "<C-W>+",     desc = "Height [Increase]"},
-  { "<C-W>-",     desc = "Height [Decrease]"},
-  { "<C-W>>",     desc = "Width [Increase]"},
-  { "<C-W><",     desc = "Width [Decrease]"},
-  { "<C-W>_",     desc = "Height [Max]"},
-  { "<C-W>|",     desc = "Width [Max]"},
+  -- C-w {{{
+  { "<C-w>",      group = "WINDOW"},
+  { "<C-w>d",     desc = "Documentation [Float]"},
+  { "<C-w>q",     desc = "Quit window"},
+  { "<C-w>h",     desc = "Go to [Left]"},
+  { "<C-w>j",     desc = "Go to [Down]"},
+  { "<C-w>k",     desc = "Go to [Up]"},
+  { "<C-w>l",     desc = "Go to [Right]"},
+  { "<C-w>o",     desc = "Close others"},
+  { "<C-w>s",     desc = "Split [Horizontal]"},
+  { "<C-w>T",     desc = "New tab [Break]"},
+  { "<C-w>v",     desc = "Split [Vertical]"},
+  { "<C-w>+",     desc = "Height [Increase]"},
+  { "<C-w>-",     desc = "Height [Decrease]"},
+  { "<C-w>>",     desc = "Width [Increase]"},
+  { "<C-w><",     desc = "Width [Decrease]"},
+  { "<C-w>_",     desc = "Height [Max]"},
+  { "<C-w>|",     desc = "Width [Max]"},
   -- }}}
 
   -- Leader {{{

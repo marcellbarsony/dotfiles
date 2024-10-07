@@ -22,9 +22,7 @@ sudo pacman -S firefox pipewire-jack
 
 - Copy `containers.json` to `~/.mozilla/firefox/<user_profile>`
 
-### Custom CSS
-
-- Copy `chrome/` to `~/.mozilla/firefox/<user_profile>`
+- Add the Site List from `containers-site-list.js`
 
 ### Preferences [ArkenFox]
 
@@ -41,3 +39,14 @@ cp updater.sh user.js user-overrides.js ~/.mozilla/firefox/<user_profile>/
 ```sh
 ./updater.sh
 ```
+
+### Custom CSS
+
+- Copy the `chrome/` directory under `~/.mozilla/firefox/<user_profile>/`
+
+### Extensions
+
+Add extension config:
+- uBlock Origin
+- Tab Session Manager
+- FoxyProxy

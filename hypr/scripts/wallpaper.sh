@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Discover files {{{
 find_files() {
     shopt -s nullglob dotglob # Hidden files & empty directories
     for file in "$1"/*; do
@@ -20,6 +21,7 @@ else
     random_index=$(( RANDOM % ${#files[@]} )) # Get random index within the array bounds
     random_file=${files[$random_index]} # Get random file by index
 fi
+# }}}
 
 # Random {{{
 transitions=("wipe" "outer" "random")

@@ -16,7 +16,7 @@
   "ifAutoSaveWhenClose": false,
   "autoSaveWhenCloseLimit": "1",
   "ifAutoSaveWhenExitBrowser": true,
-  "autoSaveWhenExitBrowserLimit": "3",
+  "autoSaveWhenExitBrowserLimit": "1",
   "useTabTitleforAutoSave": true,
   "startupBehavior": "none",
   "shouldTrackNewWindow": true,

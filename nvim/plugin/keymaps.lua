@@ -2,12 +2,12 @@
 -- https://neovim.io/doc/user/map.html
 
 -- Modes
---  n - normal_mode
---  i - insert_mode
---  v - visual_mode
---  x - visual_block_mode
---  t - term_mode
---  c - command_mode
+-- n - normal
+-- i - insert
+-- v - visual
+-- x - visual block
+-- t - term
+-- c - command
 
 local function map(mode, lhs, rhs, opts)
   local options = { noremap = true, silent = true }
@@ -42,7 +42,7 @@ map("n", "<C-'>", "<cmd>b#<CR>", { desc = "Buffer [To last]" })
 map("n", "<C-q>", "<cmd>bdelete<CR>", { desc = "Buffer [Delete]" }) -- :bd!<CR>
 -- }}}
 
--- Clipboard {{{
+-- Clipboard (Yank) {{{
 map("n", "y", "\"+y", { desc = "Yank [Global]" })
 map("v", "y", "\"+y", { desc = "Yank [Global]" })
 map("x", "p", [["_dp]], { desc = "Paste [Global]" })
