@@ -9,7 +9,7 @@ wk.setup {
 
   -- Preset {{{
   ---@type false | "classic" | "modern" | "helix"
-  preset = "helix",
+  preset = "classic",
   -- }}}
 
   -- Popup delay {{{
@@ -193,97 +193,122 @@ wk.setup {
 -- Keymaps {{{
 wk.add({
   -- ] {{{
-  { "]",          desc = "Next" },
-  { "]m",         desc = "Method [Start]" },
-  { "]M",         desc = "Method [End]" },
-  { "]d",         desc = "Diagnostic" },
-  { "]s",         desc = "Mispelled word" },
-  { "]%",         desc = "Unmatched group" },
+  { "]",  desc = "Next" },
+  { "]m", desc = "Method [Start]" },
+  { "]M", desc = "Method [End]" },
+  { "]d", desc = "Diagnostic" },
+  { "]s", desc = "Mispelled word" },
+  { "]%", desc = "Unmatched group" },
   -- }}}
 
   -- [ {{{
-  { "[",          desc = "Previous" },
-  { "[m",         desc = "Method [Start]" },
-  { "[M",         desc = "Method [End]" },
-  { "[d",         desc = "Diagnostic" },
-  { "[s",         desc = "Mispelled word" },
-  { "[%",         desc = "Unmatched group" },
+  { "[",  desc = "Previous" },
+  { "[m", desc = "Method [Start]" },
+  { "[M", desc = "Method [End]" },
+  { "[d", desc = "Diagnostic" },
+  { "[s", desc = "Mispelled word" },
+  { "[%", desc = "Unmatched group" },
+  -- }}}
+
+  -- ' {{{
+  { "'", desc = "MARKS" },
   -- }}}
 
   -- a-z {{{
-  { "b",          desc = "Word [Previous]" },
-  { "B",          desc = "Word [PREVIOUS]" },
-  { "e",          desc = "Word [End]" },
-  { "E",          desc = "Word [END]" },
-  { "f",          desc = "Char [Next]" },
-  { "F",          desc = "Char [Previous]" },
-  { "G",          desc = "Bottom" },
-  { "H",          desc = "Home" },
-  { "K",          desc = "Documentation" },
-  { "L",          desc = "Last line" },
-  { "M",          desc = "Middle line" },
-  { "v",          desc = "VISUAL" },
-  { "V",          desc = "VISUAL Line" },
-  { "w",          desc = "Word [Next]" },
-  { "W",          desc = "Word [NEXT]" },
+  { "b", desc = "Word [Previous]" },
+  { "B", desc = "Word [PREVIOUS]" },
+  { "e", desc = "Word [End]" },
+  { "E", desc = "Word [END]" },
+  { "f", desc = "Char [Next]" },
+  { "F", desc = "Char [Previous]" },
+  { "G", desc = "Bottom" },
+  { "H", desc = "Home" },
+  { "K", desc = "Documentation" },
+  { "L", desc = "Last line" },
+  { "M", desc = "Middle line" },
+  { "v", desc = "VISUAL" },
+  { "V", desc = "VISUAL Line" },
+  { "w", desc = "Word [Next]" },
+  { "W", desc = "Word [NEXT]" },
+  -- }}}
+
+  -- c [TODO] {{{
+  { "c",  desc = "CHANGE" },
+  { "c0", desc = "SUCCESS?" },
+  { "c]", group = "SUCCESS?" },
+  -- }}}
+
+  -- d [TODO] {{{
+  { "d",  desc = "DELETE" },
+  { "d0", desc = "SUCCESS?" },
+  { "d]", group = "SUCCESS?" },
   -- }}}
 
   -- g {{{
-  { "g",          group = "GO-TO" },
-  { "ge",         desc = "Word [Previous end]" },
-  { "gf",         desc = "File" },
-  { "gg",         desc = "Top" },
-  { "gi",         desc = "Insert [Last]" },
-  { "gt",         desc = "Tab page [Next]" },
-  { "gT",         desc = "Tab page [Previous]" },
-  { "gv",         desc = "Visual selection" },
-  { "gx",         desc = "Open URL" },
-  { "g'",         desc = "Marks" },
-  { "g`",         desc = "Marks" },
-  { "g~",         desc = "Case [Toggle]" },
-  { "g%",         desc = "Result [Cycle backward]" },
+  { "g",   group = "GO-TO" },
+  { "ge",  desc = "Word [Previous end]" },
+  { "gf",  desc = "File" },
+  { "gg",  desc = "Top" },
+  { "gi",  desc = "Insert [Last]" },
+  { "gt",  desc = "Tab page [Next]" },
+  { "gT",  desc = "Tab page [Previous]" },
+  { "gv",  desc = "Visual selection" },
+  { "gx",  desc = "Open URL" },
+  { "g'",  desc = "Marks" },
+  { "g`",  desc = "Marks" },
+  { "g~",  desc = "Case [Toggle]" },
+  { "g%",  desc = "Result [Cycle backward]" },
 
-  { "gc",         group = "Comment" },
-  { "gcc",        desc = "Toggle [Line]" },
+  { "gc",  group = "Comment" },
+  { "gcc", desc = "Toggle [Line]" },
+  -- }}}
+
+  -- v [TODO] {{{
+  { "v",  desc = "DELETE" },
+  { "v0", desc = "SUCCESS?" },
+  -- }}}
+
+  -- y [TODO] {{{
   -- }}}
 
   -- z {{{
-  { "z",          desc = "Fold" },
-  { "za",         desc = "Toggle" },
-  { "zA",         desc = "Toggle all [Cursor]" },
-  { "zc",         desc = "Close [Cursor]" },
-  { "zC",         desc = "Close all [Cursor]" },
-  { "zd",         desc = "Delete [Cursor]" },
-  { "zD",         desc = "Delete all [Cursor]" },
-  { "zE",         desc = "Delete all [File]" },
-  { "zg",         desc = "Spelling [Add word]" },
-  { "zH",         desc = "Move left" },
-  { "zL",         desc = "Move right" },
-  { "zo",         desc = "Open" },
-  { "zO",         desc = "Open [All]" },
-  { "zR",         desc = "Open [All]" },
-  { "zw",         desc = "Spelling [Mark as misspelled]" },
-  { "zz",         desc = "Center line" },
+  { "z",  desc = "Fold" },
+  { "za", desc = "Toggle" },
+  { "zA", desc = "Toggle all [Cursor]" },
+  { "zc", desc = "Close [Cursor]" },
+  { "zC", desc = "Close all [Cursor]" },
+  { "zd", desc = "Delete [Cursor]" },
+  { "zD", desc = "Delete all [Cursor]" },
+  { "zE", desc = "Delete all [File]" },
+  { "zg", desc = "Spelling [Add word]" },
+  { "zH", desc = "Move left" },
+  { "zL", desc = "Move right" },
+  { "zo", desc = "Open" },
+  { "zO", desc = "Open [All]" },
+  { "zR", desc = "Open [All]" },
+  { "zw", desc = "Spelling [Mark as misspelled]" },
+  { "zz", desc = "Center line" },
+  { "z=", group = "Spelling" },
   -- }}}
 
   -- C-w {{{
-  { "<C-w>",      group = "WINDOW"},
-  { "<C-w>d",     desc = "Documentation [Float]"},
-  { "<C-w>q",     desc = "Quit window"},
-  { "<C-w>h",     desc = "Go to [Left]"},
-  { "<C-w>j",     desc = "Go to [Down]"},
-  { "<C-w>k",     desc = "Go to [Up]"},
-  { "<C-w>l",     desc = "Go to [Right]"},
-  { "<C-w>o",     desc = "Close others"},
-  { "<C-w>s",     desc = "Split [Horizontal]"},
-  { "<C-w>T",     desc = "New tab [Break]"},
-  { "<C-w>v",     desc = "Split [Vertical]"},
-  { "<C-w>+",     desc = "Height [Increase]"},
-  { "<C-w>-",     desc = "Height [Decrease]"},
-  { "<C-w>>",     desc = "Width [Increase]"},
-  { "<C-w><",     desc = "Width [Decrease]"},
-  { "<C-w>_",     desc = "Height [Max]"},
-  { "<C-w>|",     desc = "Width [Max]"},
+  { "<C-w>",  group = "WINDOW"},
+  { "<C-w>d", desc = "Documentation [Float]"},
+  { "<C-w>q", desc = "Quit window"},
+  { "<C-w>h", desc = "Go to [Left]"},
+  { "<C-w>j", desc = "Go to [Down]"},
+  { "<C-w>k", desc = "Go to [Up]"},
+  { "<C-w>l", desc = "Go to [Right]"},
+  { "<C-w>o", desc = "Close others"},
+  { "<C-w>s", desc = "Split [Horizontal]"},
+  { "<C-w>T", desc = "New tab [Break]"},
+  { "<C-w>v", desc = "Split [Vertical]"},
+  { "<C-w>+", desc = "Height [Increase]"},
+  { "<C-w>-", desc = "Height [Decrease]"},
+  { "<C-w>>", desc = "Width [Increase]"},
+  { "<C-w><", desc = "Width [Decrease]"},
+  { "<C-w>_", desc = "Height [Max]"},
+  { "<C-w>|", desc = "Width [Max]"},
   -- }}}
 
   -- Leader {{{

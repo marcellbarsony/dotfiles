@@ -1,53 +1,128 @@
 :root {
-    --tab-block-margin: 3px 3px !important; /* Tab margin */
+    --tab-block-margin: 3px 3px !important;
+    --inline-tab-padding: 5px !important;
+    --tab-border-radius: 0px !important;
+    --tab-shadow-max-size: 0px !important;
+    --tab-block-margin: 3px !important;
+}
+
+/* MULTI-ACCOUNT CONTAINERS {{{ */
+#tabbrowser-tabs .tab-context-line {
+  display: none !important;
+}
+
+#tabbrowser-tabs .tab-background {
+  border-bottom: solid 2px var(--identity-icon-color) !important;
+}
+/* }}} */
+
+/* NEW TAB BUTTON {{{ */
+#TabsToolbar{
+    --toolbarbutton-inner-padding: 5px !important;
+}
+
+toolbarbutton#tabs-newtab-button {
+    margin-inline: 3px !important;
+    padding: 0 !important;
+}
+/* }}} */
+
+/* TABS {{{ */
+/* Remove top and bottom spaces on tabs,
+*  causing additional height on title bar */
+.tab-background {
+    margin-block: 0 !important;
+}
+
+/* Remove gaps between tabs */
+.tabbrowser-tab {
+    padding: 0 !important;
+}
+
+/* Remove space between pinned and normal tabs */
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
+    margin-inline-start: 0px !important;
+}
+
+/* Decrease padding */
+hbox.tab-content {
+    padding-inline: 5px !important;
+}
+/* }}} */
+
+/* TITLE BAR {{{ */
+.titlebar-spacer {
+    /* Hide spacer next to "Close" button */
+    display: none;
+}
+
+#alltabs-button {
+    /* Hide button "List All Tabs" */
+    display: none !important;
+}
+/* }}} */
+
+/* TOOLBAR HEIGHT {{{ */
+toolbar#nav-bar {
+    max-height: 26px !important;
+}
+
+hbox#urlbar {
+    min-height: 22px !important;
+}
+
+hbox#urlbar:not([focused="true"]) {
+    max-height: 22px !important;
+}
+/* }}} */
+
+/* URL BAR {{{ */
+#pageAction-urlbar-_testpilot-containers {
+    /* Remove button "Always Open Site in Container" */
+    display: none;
+}
+
+#star-button-box {
+    /* Remove button "Bookmark this page" */
+    display: none;
+}
+
+#urlbar-background {
+    /* Radius & Color */
+    border-radius: 0px !important;
+    --toolbar-field-background-color: rgba(66, 65, 77, 1) !important;
+}
+
+#urlbar-container {
+    /* Remove top spacing */
+    margin-top: 0px !important;
+    --urlbar-container-height: 30px !important;
+}
+
+#navigator-toolbox {
+    /* Remove bottom border */
+    border-bottom: unset !important;
+}
+/* }}}*/
+
+/* UNCATEGORIZED {{{ */
+#tabbrowser-arrowscrollbox {
+    /* Prevent tab overflow increased height */
+    --tab-min-height: 35px !important;
+    max-height: var(--tab-min-height);
+}
+
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
+    /* Pinned tab margin */
+    margin-inline-start: 0 !important;
 }
 
 .tabbrowser-tab {
-    min-height:     14px !important; /* Tab height */
-    padding-inline:  0px !important; /* Tab inline padding */
+    min-height: 14px !important; /* Tab height */
+    padding-inline: 0px !important; /* Tab inline padding */
 }
 
 .tabbrowser-tab[first-visible-tab] {
     padding-inline-start: 53px !important;
 }
-
-/*#nav-bar {*/
-/*    box-shadow: 10px !important;*/
-/*}*/
-
-#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
-    margin-inline-start: 0 !important; /* Pinned tab margin */
-}
-
-.tab-background,
-.tab-loading-burst {
-    border:        none !important; /* Tab border */
-    border-radius:  0px !important; /* Tab border radius */
-}
-
-/* prevent tab overflow increased height */
-#tabbrowser-arrowscrollbox {
-    --tab-min-height: 35px !important;
-    max-height: var(--tab-min-height);
-}
-
-#urlbar-container {
-    --urlbar-container-height: 30px !important; /* URL bar height */
-    margin-top:                  50 !important; /* URL bar margin */
-}
-
-#TabsToolbar{
-    --toolbarbutton-inner-padding:  3px !important; /* New Tab icon padding */
-}
-
-#urlbar-input {
-    height:    28px !important; /* URL bar input height */
-    font-size: 16px !important; /* URL bar input font size */
-}
-
-#urlbar-background {
-    --toolbar-field-background-color: #222222 !important; /* URL bar color */
-}
-
-/* List All Tabs button */
-#alltabs-button { display: none !important; }
+/* }}}*/

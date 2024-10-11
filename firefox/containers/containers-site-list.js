@@ -1,7 +1,6 @@
 [
   {
     title: "Bitwarden",
-    exclusive: true,
     links: [
       { name: "Bitwarden", url: "https://bitwarden.com/" },
       { name: "Bitwarden Vault", url: "https://vault.bitwarden.com/" },
@@ -9,7 +8,6 @@
   },
   {
     title: "Finance",
-    exclusive: true,
     links: [
       { name: "UniCredit Bank", url: "https://www.unicreditbank.hu/" },
       { name: "UniCredit Inernet Banking", url: "https://hu.unicreditbanking.eu/" },
@@ -18,8 +16,8 @@
   },
   {
     title: "Gov",
-    exclusive: true,
     links: [
+      { name: "FKF", url: "https://www.fkf.hu/" },
       { name: "Magyarorszag", url: "https://www.magyarorszag.hu/" },
       { name: "OTP Portalok", url: "https://magan.szepkartya.otpportalok.hu/" },
       { name: "OTP Portalok", url: "https://szepkartya.otpportalok.hu/" },
@@ -29,24 +27,25 @@
   },
   {
     title: "Google",
-    exclusive: true,
     links: [
       { name: "Google", url: "https://www.google.com/" },
-      { name: "Google - My Account", url: "https://myaccount.google.com" },
+      { name: "Accounts", url: "https://accounts.google.com" },
       { name: "Drive", url: "https://drive.google.com" },
+      { name: "Drive - Usercontent", url: "https://drive.usercontent.google.com" },
       { name: "Flights", url: "https://flights.google.com" },
       { name: "Gemini", url: "https://gemini.google.com" },
       { name: "Gmail", url: "https://mail.google.com" },
       { name: "Images", url: "https://images.google.com" },
       { name: "Maps", url: "https://maps.google.com" },
+      { name: "My Account", url: "https://myaccount.google.com" },
       { name: "MyMaps", url: "https://mymaps.google.com" },
       { name: "Photos", url: "https://photos.google.com" },
       { name: "Youtube", url: "https://www.youtube.com" },
+      { name: "Youtube Accounts", url: "https://accounts.youtube.com" },
     ],
   },
   {
     title: "Meta",
-    exclusive: true,
     links: [
       { name: "Facebook", url: "https://facebook.com/" },
       { name: "Instagram", url: "https://www.instagram.com/" },
@@ -55,7 +54,6 @@
   },
   {
     title: "Microsoft",
-    exclusive: true,
     links: [
       { name: "Microsoft", url: "https://www.microsoft.com/" },
       { name: "LinkedIn", url: "https://www.linkedin.com/" },
@@ -64,7 +62,6 @@
   },
   {
     title: "Proton",
-    exclusive: true,
     links: [
       { name: "Proton", url: "https://proton.me/" },
       { name: "Proton Account", url: "https://account.proton.me/apps" },
@@ -75,14 +72,13 @@
   },
   {
     title: "Reddit",
-    exclusive: true,
     links: [
       { name: "Reddit", url: "https://www.reddit.com/" },
+      { name: "Reddit", url: "https://preview.redd.it" },
     ],
   },
   {
     title: "Spotify",
-    exclusive: true,
     links: [
       { name: "Spotify", url: "https://www.spotify.com" },
       { name: "Spotify Player", url: "https://open.spotify.com/" },
