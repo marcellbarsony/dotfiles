@@ -28,20 +28,25 @@ toolbarbutton#tabs-newtab-button {
 /* }}} */
 
 /* TABS {{{ */
-/* Remove top and bottom spaces on tabs, causing additional height on title bar */
 .tab-background {
+    /* Remove top and bottom spaces on tabs, causing additional height on title bar */
     margin-block: 0 !important;
 }
 
-/* Remove gaps between tabs */
 .tabbrowser-tab {
+    /* Remove gaps between tabs */
     padding: 0 !important;
 }
 
-/* Height & inline padding (spacing) */
 .tabbrowser-tab {
+    /* Height & inline padding (spacing) */
     min-height: 14px !important;
     padding-inline: 0px !important;
+}
+
+/* Width */
+.tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]) {
+    max-width: 200px !important;
 }
 
 /* Prevent tab overflow increased height */
@@ -98,11 +103,6 @@ toolbar#nav-bar {
     display: none !important;
 }
 
-#star-button-box {
-    /* Remove button "Bookmark this page" */
-    display: none !important;
-}
-
 #urlbar-background {
     /* Radius & Color */
     border-radius: 0px !important;
@@ -115,3 +115,15 @@ toolbar#nav-bar {
     --urlbar-container-height: 30px !important;
 }
 /* }}}*/
+
+/* BOOKMARKS {{{ */
+#customizableui-special-spring9 {
+    /* Remove spacing at the end of Bookmarks bar */
+    display: none !important;
+}
+
+#star-button-box {
+    /* Remove button "Bookmark this page" */
+    display: none !important;
+}
+/* }}} */

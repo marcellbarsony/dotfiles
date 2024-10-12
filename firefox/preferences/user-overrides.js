@@ -7,15 +7,11 @@
 user_pref("browser.backspace_action", 0);
 
 // BOOKMARKS
-user_pref("browser.toolbars.bookmarks.visibility", "never");
+user_pref("browser.toolbars.bookmarks.visibility", "newtab");
+user_pref("browser.tabs.loadBookmarksInTabs", false);
 
 // CONTAINERS
 user_pref("privacy.userContext.newTabContainersOnLeftClick.enabled", true);
-
-// CROSS-ORIGIN
-// user_pref("network.auth.subresource-http-auth-allow", 0); // 0905
-// user_pref("network.http.referer.XOriginPolicy", 0); // 1601
-// user_pref("network.http.referer.XOriginTrimmingPolicy", 0); // 1602
 
 // CSS
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
@@ -31,9 +27,6 @@ user_pref("findbar.highlightAll", true);
 // FULL SCREEN
 user_pref("full-screen-api.warning.delay", 0);
 user_pref("full-screen-api.warning.timeout", 0);
-
-// LAYOUT
-// user_pref("layout.css.devPixelsPerPx", "0.9"); // Crashing on Hyprland
 
 // LIST ALL TABS
 user_perf("browser.tabs.hoverPreview.enabled", 0);
@@ -54,7 +47,7 @@ user_pref("browser.urlbar.placeholderName", "DuckDuckGo");
 user_pref("browser.urlbar.placeholderName.private", "DuckDuckGo");
 user_pref("browser.urlbar.suggest.addons", false);
 user_pref("browser.urlbar.suggest.bestmatch", false);
-user_pref("browser.urlbar.suggest.bookmark", false);
+user_pref("browser.urlbar.suggest.bookmark", true);
 user_pref("browser.urlbar.suggest.calculator", false);
 user_pref("browser.urlbar.suggest.clipboard", false);
 user_pref("browser.urlbar.suggest.engines", false);
@@ -83,7 +76,7 @@ user_pref("browser.tabs.tabmanager.enabled", false);
 // WEBSITE APPEARANCE
 user_pref("layout.css.prefers-color-scheme.content-override", 0);
 
-// TODO //
+/* TODO */
 // Disable dialog: "save login info for..."
 
 // }}}
@@ -95,7 +88,7 @@ user_pref("layout.css.prefers-color-scheme.content-override", 0);
 user_pref("browser.startup.page", 1);
 
 // 0103: Set Home + New window page
-user_pref("browser.startup.homepage", "https://marcellbarsony.github.io/homepage");
+user_pref("browser.startup.homepage", "about:blank");
 
 // }}}
 
