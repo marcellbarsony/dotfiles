@@ -28,19 +28,24 @@
   {
     title: "Google",
     links: [
-      { name: "Google", url: "https://www.google.com/" },
-      { name: "Accounts", url: "https://accounts.google.com" },
       { name: "Drive", url: "https://drive.google.com" },
       { name: "Drive - Usercontent", url: "https://drive.usercontent.google.com" },
       { name: "Flights", url: "https://flights.google.com" },
       { name: "Gemini", url: "https://gemini.google.com" },
       { name: "Gmail", url: "https://mail.google.com" },
+      { name: "Google", url: "https://www.google.com/" },
       { name: "Images", url: "https://images.google.com" },
       { name: "Maps", url: "https://maps.google.com" },
       { name: "My Account", url: "https://myaccount.google.com" },
       { name: "MyMaps", url: "https://mymaps.google.com" },
       { name: "Photos", url: "https://photos.google.com" },
       { name: "Youtube", url: "https://www.youtube.com" },
+    ],
+  },
+  {
+    title: "Google Accounts",
+    links: [
+      { name: "Google Accounts", url: "https://accounts.google.com" },
       { name: "Youtube Accounts", url: "https://accounts.youtube.com" },
     ],
   },

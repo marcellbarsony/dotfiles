@@ -18,18 +18,17 @@
 
 /* NEW TAB BUTTON {{{ */
 #TabsToolbar{
-    --toolbarbutton-inner-padding: 5px !important;
+    --toolbarbutton-inner-padding: 4px !important;
 }
 
 toolbarbutton#tabs-newtab-button {
-    margin-inline: 3px !important;
+    margin-inline: 5px !important;
     padding: 0 !important;
 }
 /* }}} */
 
 /* TABS {{{ */
-/* Remove top and bottom spaces on tabs,
-*  causing additional height on title bar */
+/* Remove top and bottom spaces on tabs, causing additional height on title bar */
 .tab-background {
     margin-block: 0 !important;
 }
@@ -39,21 +38,33 @@ toolbarbutton#tabs-newtab-button {
     padding: 0 !important;
 }
 
-/* Remove space between pinned and normal tabs */
+/* Height & inline padding (spacing) */
+.tabbrowser-tab {
+    min-height: 14px !important;
+    padding-inline: 0px !important;
+}
+
+/* Prevent tab overflow increased height */
+#tabbrowser-arrowscrollbox {
+    --tab-min-height: 35px !important;
+    max-height: var(--tab-min-height) !important;
+}
+
+/* Pinned tab margin */
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
-    margin-inline-start: 0px !important;
+    margin-inline-start: 0 !important;
 }
 
 /* Decrease padding */
 hbox.tab-content {
-    padding-inline: 5px !important;
+    padding-inline: 10px !important;
 }
 /* }}} */
 
 /* TITLE BAR {{{ */
 .titlebar-spacer {
     /* Hide spacer next to "Close" button */
-    display: none;
+    display: none !important;
 }
 
 #alltabs-button {
@@ -63,28 +74,33 @@ hbox.tab-content {
 /* }}} */
 
 /* TOOLBAR HEIGHT {{{ */
-toolbar#nav-bar {
-    max-height: 26px !important;
-}
-
 hbox#urlbar {
-    min-height: 22px !important;
+    min-height: 30px !important;
 }
 
 hbox#urlbar:not([focused="true"]) {
-    max-height: 22px !important;
+    max-height: 30px !important;
+}
+
+toolbar#nav-bar {
+    max-height: 30px !important;
 }
 /* }}} */
 
 /* URL BAR {{{ */
+#navigator-toolbox {
+    /* Remove bottom border */
+    border-bottom: unset !important;
+}
+
 #pageAction-urlbar-_testpilot-containers {
     /* Remove button "Always Open Site in Container" */
-    display: none;
+    display: none !important;
 }
 
 #star-button-box {
     /* Remove button "Bookmark this page" */
-    display: none;
+    display: none !important;
 }
 
 #urlbar-background {
@@ -97,32 +113,5 @@ hbox#urlbar:not([focused="true"]) {
     /* Remove top spacing */
     margin-top: 0px !important;
     --urlbar-container-height: 30px !important;
-}
-
-#navigator-toolbox {
-    /* Remove bottom border */
-    border-bottom: unset !important;
-}
-/* }}}*/
-
-/* UNCATEGORIZED {{{ */
-#tabbrowser-arrowscrollbox {
-    /* Prevent tab overflow increased height */
-    --tab-min-height: 35px !important;
-    max-height: var(--tab-min-height);
-}
-
-#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
-    /* Pinned tab margin */
-    margin-inline-start: 0 !important;
-}
-
-.tabbrowser-tab {
-    min-height: 14px !important; /* Tab height */
-    padding-inline: 0px !important; /* Tab inline padding */
-}
-
-.tabbrowser-tab[first-visible-tab] {
-    padding-inline-start: 53px !important;
 }
 /* }}}*/
