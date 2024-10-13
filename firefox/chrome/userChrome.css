@@ -78,13 +78,14 @@ hbox.tab-content {
 }
 /* }}} */
 
-/* TOOLBAR HEIGHT {{{ */
+/* TOOLBAR {{{ */
 hbox#urlbar {
     min-height: 30px !important;
 }
 
 hbox#urlbar:not([focused="true"]) {
-    max-height: 30px !important;
+    /* BUG: Makes URL bar dropdown transparent */
+    /* max-height: 30px !important; */
 }
 
 toolbar#nav-bar {

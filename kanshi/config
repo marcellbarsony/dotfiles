@@ -1,15 +1,17 @@
 profile Laptop {
-    output eDP-1 mode 1920x1200@60.00Hz position 0,0
+    output "eDP-1" enable position 0,0
 }
 
-
-profile Laptop2 {
-    output "Chimei Innolux Corporation 0x143C" mode 1920x1200@60.00Hz position 0,0
+profile Docked {
+    output "eDP-1" disable
+    output "DP-5" enable position 960,0
+    output "DP-6" enable position 0,1080
+    output "DP-7" enable position 1920,1080
 }
 
-profile Home {
-    output eDP-1 disable
-    output "BNQ BenQ RL2755 N7F05437SL0" mode 1920x1080@60.00Hz position 960,0
-    output "Lenovo Group Limited LEN T27i-10 V5BYW626" mode 1920x1080@60.00Hz position 0,1080
-    output "Dell Inc. DELL P2719H 35148R2" mode 1920x1080@60.00Hz position 1920,1080
+profile Docked2 {
+    output "eDP-1" disable
+    output "DP-8" enable position 960,0
+    output "DP-9" enable position 0,1080
+    output "DP-10" enable position 1920,1080
 }
