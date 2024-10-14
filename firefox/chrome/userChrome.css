@@ -4,6 +4,7 @@
     --tab-border-radius: 0px !important;
     --tab-shadow-max-size: 0px !important;
     --tab-block-margin: 3px !important;
+    --toolbar-field-focus-border-color: transparent !important;
 }
 
 /* MULTI-ACCOUNT CONTAINERS {{{ */

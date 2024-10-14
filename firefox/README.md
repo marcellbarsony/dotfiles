@@ -44,6 +44,11 @@ cp updater.sh user.js user-overrides.js ~/.mozilla/firefox/<user_profile>/
 
 - Copy the `chrome/` directory under `~/.mozilla/firefox/<user_profile>/`
 
+### Colors
+
+- If not automatically synced, import the custom color theme from `colors/` via `https://color.firefox.com/`
+- Load Add-on via `about:debugging#/runtime/this-firefox` by clicking `Load Temporary Add-on...`
+
 ### Extensions
 
 Add extension config:
