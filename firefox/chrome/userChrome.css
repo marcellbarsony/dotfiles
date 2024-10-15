@@ -45,24 +45,24 @@ toolbarbutton#tabs-newtab-button {
     padding-inline: 0px !important;
 }
 
-/* Width */
 .tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]) {
+    /* Tab width */
     max-width: 200px !important;
 }
 
-/* Prevent tab overflow increased height */
 #tabbrowser-arrowscrollbox {
+    /* Prevent tab overflow increased height */
     --tab-min-height: 35px !important;
     max-height: var(--tab-min-height) !important;
 }
 
-/* Pinned tab margin */
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
+    /* Pinned tab margin */
     margin-inline-start: 0 !important;
 }
 
-/* Decrease padding */
 hbox.tab-content {
+    /* Decrease padding */
     padding-inline: 10px !important;
 }
 /* }}} */
