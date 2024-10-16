@@ -1,5 +1,6 @@
-// Arkenfox
+// Arkenfox & BetterFox
 // https://github.com/arkenfox/user.js/
+// https://github.com/yokoffing/BetterFox
 
 // USER PREFERENCES {{{
 

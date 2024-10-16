@@ -40,6 +40,14 @@ cp updater.sh user.js user-overrides.js ~/.mozilla/firefox/<user_profile>/
 ./updater.sh
 ```
 
+### Preferences [BetterFox]
+
+1. Download BetterFox's [user.js](https://github.com/yokoffing/Betterfox/blob/main/user.js)
+
+2. Copy `user.js` to `~/.mozilla/firefox/<user_profile>/`
+
+3. Add the overrides from `user-overrides.js`
+
 ### Custom CSS
 
 - Copy the `chrome/` directory under `~/.mozilla/firefox/<user_profile>/`

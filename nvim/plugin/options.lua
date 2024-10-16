@@ -81,7 +81,7 @@ local options = {
 
   -- 12. Editing text {{{
   backspace = "indent,eol,start",
-  textwidth = 90,
+  textwidth = 80,
   undofile = true,
   -- }}}
 
