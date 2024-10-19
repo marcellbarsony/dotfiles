@@ -1,5 +1,9 @@
 [Default Applications]
-image/gif=firefox.desktop
-image/jpeg=firefox.desktop
-image/png=firefox.desktop
+audio/*=vlc.desktop
+image/*=firefox.desktop
 video/*=vlc.desktop
+text/*=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/about=firefox.desktop
+x-scheme-handler/unknown=firefox.desktop

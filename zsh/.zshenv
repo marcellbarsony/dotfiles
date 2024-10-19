@@ -20,7 +20,6 @@ export HISTFILE="$XDG_STATE_HOME/zsh/history"
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export ZDOTDIR="$HOME/.config/zsh/"
 export XINITRC="$HOME/.config/x11/"
-#export KITTY_CONFIG_DIRECTORY="$XDG_CONFIG_HOME/kitty"
 
 # XDG
 export XDG_APP_HOME="$HOME/.local/share/applications"

@@ -66,21 +66,30 @@ bindkey -v
 # export KEYTIMEOUT=1 # Conflicts with Autocomplete
 # }}}
 
-# VI mode [Edit line] {{{
+# VI mode (Edit line) {{{
 autoload edit-command-line
 zle -N edit-command-line
 bindkey '^f' edit-command-line # Ctrl + f
 # }}}
 
-# VI mode [Cursor] {{{
+# VI mode (Cursor) {{{
+# 0 - Block (blinking)
+# 1 - Block (blinking - default)
+# 2 - Block (static)
+# 3 - Underline (blinking)
+# 4 - Underline (static)
+# 5 - Bar (blinking)
+# 6 - Bar (static)
+
 function zle-keymap-select {
-    if [[ ${KEYMAP} == vicmd ]] ||
-        [[ $1 = 'block' ]]; then
+    if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]];
+    then
         echo -ne '\e[1 q'
     elif [[ ${KEYMAP} == main ]] ||
-          [[ ${KEYMAP} == viins ]] ||
-          [[ ${KEYMAP} = '' ]] ||
-          [[ $1 = 'beam' ]]; then
+        [[ ${KEYMAP} == viins ]] ||
+        [[ ${KEYMAP} = '' ]] ||
+        [[ $1 = 'beam' ]];
+    then
         echo -ne '\e[3 q'
     fi
 }
@@ -94,14 +103,6 @@ zle -N zle-line-init
 preexec() {
     echo -ne '\e[3 q'
 }
-
-# 0 - Block (blinking)
-# 1 - Block (blinking - default)
-# 2 - Block (static)
-# 3 - Underline (blinking)
-# 4 - Underline (static)
-# 5 - Bar (blinking)
-# 6 - Bar (static)
 # }}}
 
 # Yazi {{{
@@ -121,7 +122,7 @@ function yy() {
 eval "$(fzf --zsh)"
 # }}}
 
-# ZSH [Autocomplete] {{{
+# ZSH (Autocomplete) {{{
 if [[ -f ~/.local/src/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]]; then
     source ~/.local/src/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 else
@@ -144,7 +145,7 @@ zstyle ':autocomplete:*' add-space executables aliases functions builtins reserv
 # zstyle ':autocomplete:*' list-colors "${(s.:.)LS_COLORS}" # ls colors
 # }}}
 
-# ZSH [Autosuggestions] {{{
+# ZSH (Autosuggestions) {{{
 if [[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
     source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 else
@@ -153,7 +154,8 @@ fi
 bindkey '^ ' autosuggest-accept # Ctrl + Space
 # }}}
 
-# ZSH [Syntax highlight] (source last) {{{
+# ZSH (Syntax highlight) {{{
+# Source last
 if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
     source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 else
@@ -161,6 +163,9 @@ else
 fi
 # }}}
 
-# ZSH [zmodules] {{{
-for f in ~/.config/zsh/zmodules/*; do source "$f"; done
+# ZSH (zmodules) {{{
+for f in ~/.config/zsh/zmodules/*;
+do
+    source "$f";
+done
 # }}}

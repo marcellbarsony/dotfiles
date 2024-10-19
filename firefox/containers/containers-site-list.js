@@ -42,6 +42,7 @@
       { name: "Google Account", url: "https://myaccount.google.com" },
       { name: "Images", url: "https://images.google.com" },
       { name: "Photos", url: "https://photos.google.com" },
+      { name: "Translate", url: "https://translate.google.com" },
       { name: "Youtube", url: "https://www.youtube.com" },
       { name: "Youtube Accounts", url: "https://accounts.youtube.com" },
     ],
