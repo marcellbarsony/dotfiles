@@ -1,8 +1,9 @@
 [Default Applications]
 audio/*=vlc.desktop
-image/*=firefox.desktop
+image/jpeg=firefox.desktop
+image/png=firefox.desktop
 video/*=vlc.desktop
-text/*=firefox.desktop
+text/html=firefox.desktop
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
 x-scheme-handler/about=firefox.desktop
