@@ -145,8 +145,8 @@ map({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, { desc = "Action" })
 
 -- Diagnostics
 map("n", "<leader>ld", vim.diagnostic.open_float, { opts = opts, desc = "Diagnostics" })
-map("n", "]d", vim.diagnostic.goto_next, { opts = opts, desc = "Next diagnostic" })     -- default map
-map("n", "[d", vim.diagnostic.goto_prev, { opts = opts, desc = "Previous diagnostic" }) -- default map
+-- map("n", "]d", vim.diagnostic.goto_next, { opts = opts, desc = "Next diagnostic" })     -- default map
+-- map("n", "[d", vim.diagnostic.goto_prev, { opts = opts, desc = "Previous diagnostic" }) -- default map
 -- map("n", "<leader>q", vim.diagnostic.setloclist, { opts = opts, desc = "Set localist" })
 
 -- Documentation
@@ -238,7 +238,7 @@ map("n", "<leader>xo", "<cmd>Oil<CR>", { desc = "Oil" })
 map("n", "*", "*N", { desc = "Find word" })             -- Fix *: don't move to next match
 map("n", "#", "#N", { desc = "Find word [Backwards]" }) -- Fix #: don't move to next match
 map("n", "n", "nzzzv", { desc = "Search [Next]" })      -- Fix n: keep cursor in center
-map("n", "N", "Nzzzv", { desc = "Search [Previous]" })  -- Fix N: keep cursor in center
+map("n", "N", "Nzzzv", { desc = "Search [Prev]" })      -- Fix N: keep cursor in center
 -- }}}
 
 -- Shell movements {{{
@@ -334,4 +334,8 @@ map("n", "<leader>vff", "<cmd>set foldenable!<CR>", { desc = "Fold" })
 map("n", "<leader>vfc", "<cmd>set foldcolumn!<CR>", { desc = "Column" })
 map("n", "<leader>vss", "<cmd>set spell!<CR>", { desc = "Spell" })
 map("n", "<leader>vsm", "<cmd>mkspell! %<CR>", { desc = "Mkspell" })
+-- }}}
+
+-- Which Key {{{
+map("n", "<leader>xw", "<cmd>WhichKey<CR>", { desc = "WhichKey" })
 -- }}}

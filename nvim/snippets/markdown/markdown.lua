@@ -67,17 +67,29 @@ ls.add_snippets("markdown", {
   }),
   -- }}}
 
-  -- vuln {{{
+  -- Vulnerability {{{
   s( "vuln",
     fmt("# {}\n\n" ..
+      "<!-- Resources {{{{{{ -->\n" ..
       "## Resources\n\n" ..
-      "[{}]({}){}\n\n" ..
+      "- [{}]({}){}\n\n" ..
+      "<!-- }}}}}} -->\n\n" ..
+      "<!-- Description {{{{{{ -->\n" ..
       "## Description\n\n" ..
       "{}\n\n" ..
+      "<!-- }}}}}} -->\n\n" ..
+      "<!-- Impact {{{{{{ -->\n" ..
+      "## Impact\n\n" ..
+      "{}\n\n" ..
+      "<!-- }}}}}} -->\n\n" ..
+      "<!-- Exploitation {{{{{{ -->\n" ..
       "## Exploitation\n\n" ..
       "{}\n\n" ..
+      "<!-- }}}}}} -->\n\n" ..
+      "<!-- Remediation {{{{{{ -->\n" ..
       "## Remediation\n\n" ..
-      "{}\n" ..
+      "{}\n\n" ..
+      "<!-- }}}}}} -->" ..
       "\n",
       {
         i(1, "Title"),
@@ -87,6 +99,7 @@ ls.add_snippets("markdown", {
         i(5, ""),
         i(6, ""),
         i(7, ""),
+        i(8, ""),
       }
     )
   ),

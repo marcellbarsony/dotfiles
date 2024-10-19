@@ -4,7 +4,7 @@
     border: none;
     border-radius: 0;
     font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     min-height: 20px;
     padding: 0 0px;
 }
@@ -23,10 +23,8 @@ window#waybar {
 }
 
 #workspaces button.empty {
-    /*color: @primary_container;*/
-    /*color: @on_secondary;*/
-    color: gray;
     background-color: transparent;
+    color: gray;
 }
 
 #workspaces button.visible {
@@ -39,25 +37,25 @@ window#waybar {
 }
 
 #workspaces button:hover {
-    border-top: 0px solid;
-    background: black;
+    background: @on_secondary;
+    border-top: transparent;
     color: white;
 }
 
-/* #workspaces button.current_output.visible { */
-/*     background: #90b1b1; */
-/*     color: blue; */
-/* } */
+/*#workspaces button.current_output.visible {*/
+/*    background: #90b1b1;*/
+/*    color: blue;*/
+/*}*/
 
-/* #workspaces button.current_output.focused { */
-/*     background: #ff0088; */
-/*     color: blue; */
-/* } */
+/*#workspaces button.current_output.focused {*/
+/*    background: #ff0088;*/
+/*    color: blue;*/
+/*}*/
 
 /*#workspaces button.focused { */
-/*     color: red; */
-/*     background: #64F27D; */
-/*     border-top: 5px solid white; */
+/*     color: red;*/
+/*     background: #64F27D;*/
+/*     border-top: 5px solid white;*/
 /*}*/
 /* }}} */
 
@@ -94,10 +92,10 @@ window#waybar {
 
 #battery.warning:not(.charging) {
     animation-name: blink;
-    animation-duration: 1s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
     animation-direction: alternate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(12);
     background: #f53c3c;
     color: @primary;
 }

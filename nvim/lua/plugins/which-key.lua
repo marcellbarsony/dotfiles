@@ -193,34 +193,54 @@ wk.setup {
 -- Keymaps {{{
 wk.add({
   -- ] {{{
-  { "]",  desc = "Next" },
+  { "]",  group = "NEXT" },
+  { "]c", desc = "Section [Current]" },
   { "]m", desc = "Method [Start]" },
   { "]M", desc = "Method [End]" },
   { "]d", desc = "Diagnostic" },
+  { "]p", desc = "Section [Parent]" },
   { "]s", desc = "Mispelled word" },
   { "]%", desc = "Unmatched group" },
+  { "]]", desc = "Section" },
+  { "](", desc = "(" },
+  { "]<", desc = "<" },
+  { "]{", desc = "{" },
   -- }}}
 
   -- [ {{{
-  { "[",  desc = "Previous" },
+  { "[",  group = "PREVIOUS" },
+  { "[c", desc = "Section [Current]" },
   { "[m", desc = "Method [Start]" },
   { "[M", desc = "Method [End]" },
   { "[d", desc = "Diagnostic" },
   { "[s", desc = "Mispelled word" },
   { "[%", desc = "Unmatched group" },
+  { "[[", desc = "Section" },
+  { "[(", desc = "(" },
+  { "[<", desc = "<" },
+  { "[{", desc = "{" },
   -- }}}
 
-  -- ' {{{
+  -- Symbols {{{
+  { "<", group = "INDENT LEFT" },
+  { "/", group = "Search [Forward]" },
+  { "?", group = "Search [Backward]" },
   { "'", desc = "MARKS" },
+  { '"', desc = "REGISTERS" },
+  { '$', desc = "EOL" },
+  { '^', desc = "BOL" },
+  { "&", desc = "Substitute [Repeat last]" },
+  { "}", desc = "Empty line [Next]" },
+  { "{", desc = "Empty line [Prev]" },
   -- }}}
 
   -- a-z {{{
-  { "b", desc = "Word [Previous]" },
-  { "B", desc = "Word [PREVIOUS]" },
+  { "b", desc = "Word [Prev]" },
+  { "B", desc = "Word [PREV]" },
   { "e", desc = "Word [End]" },
   { "E", desc = "Word [END]" },
   { "f", desc = "Char [Next]" },
-  { "F", desc = "Char [Previous]" },
+  { "F", desc = "Char [Prev]" },
   { "G", desc = "Bottom" },
   { "H", desc = "Home" },
   { "K", desc = "Documentation" },
@@ -232,13 +252,13 @@ wk.add({
   { "W", desc = "Word [NEXT]" },
   -- }}}
 
-  -- c [TODO] {{{
+  -- c (TODO) {{{
   { "c",  desc = "CHANGE" },
   { "c0", desc = "SUCCESS?" },
   { "c]", group = "SUCCESS?" },
   -- }}}
 
-  -- d [TODO] {{{
+  -- d (TODO) {{{
   { "d",  desc = "DELETE" },
   { "d0", desc = "SUCCESS?" },
   { "d]", group = "SUCCESS?" },
@@ -251,7 +271,7 @@ wk.add({
   { "gg",  desc = "Top" },
   { "gi",  desc = "Insert [Last]" },
   { "gt",  desc = "Tab page [Next]" },
-  { "gT",  desc = "Tab page [Previous]" },
+  { "gT",  desc = "Tab page [Prev]" },
   { "gv",  desc = "Visual selection" },
   { "gx",  desc = "Open URL" },
   { "g'",  desc = "Marks" },
@@ -263,16 +283,17 @@ wk.add({
   { "gcc", desc = "Toggle [Line]" },
   -- }}}
 
-  -- v [TODO] {{{
+  -- v (TODO) {{{
   { "v",  desc = "DELETE" },
   { "v0", desc = "SUCCESS?" },
   -- }}}
 
-  -- y [TODO] {{{
+  -- y (TODO) {{{
+  { "Y", desc = "Yank [Line]" },
   -- }}}
 
   -- z {{{
-  { "z",  desc = "Fold" },
+  { "z",  desc = "FOLD" },
   { "za", desc = "Toggle" },
   { "zA", desc = "Toggle all [Cursor]" },
   { "zc", desc = "Close [Cursor]" },
