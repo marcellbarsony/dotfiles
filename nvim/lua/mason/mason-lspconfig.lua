@@ -11,7 +11,7 @@ require("mason-lspconfig").setup({
     "clangd",        -- C/C++
     "lua_ls",        -- Lua
     "rust_analyzer", -- Rust
-    "tsserver",      -- Typescript / JavaScript
+    "tsserver",      -- Typescript / JavaScript (ts_ls)
     "pyright",       -- Python (requires npm)
   },
   automatic_installation = false,
