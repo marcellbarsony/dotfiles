@@ -42,18 +42,18 @@ require("lazy").setup({
     -- }}}
 
     -- Catppuccin {{{
-    -- {
-    --   "catppuccin/nvim",
-    --   name = "catppuccin",
-    --   priority = 1000
-    -- },
+    {
+      "catppuccin/nvim",
+      name = "catppuccin",
+      priority = 1000
+    },
     -- }}}
 
     -- Darkvoid {{{
-    {
-      "aliqyan-21/darkvoid.nvim",
-      priority = 1000
-    },
+    -- {
+    --   "aliqyan-21/darkvoid.nvim",
+    --   priority = 1000
+    -- },
     -- }}}
 
     -- Poimandres {{{
@@ -65,7 +65,7 @@ require("lazy").setup({
     --     require("poimandres").setup {
     --       bold_vert_split = false,
     --       dim_nc_background = false,
-    --       disable_background = true,
+    --       disable_background = false,
     --       disable_float_background = false,
     --       disable_italics = false,
     --     }
@@ -78,8 +78,24 @@ require("lazy").setup({
     -- },
     -- }}}
 
+    -- Oxocarbon {{{
+    -- {
+    --   "nyoom-engineering/oxocarbon.nvim"
+    --   -- Add in any other configuration; 
+    --   --   event = foo, 
+    --   --   config = bar
+    --   --   end,
+    -- },
+    -- }}}
+
     -- minimalistNVIM {{{
     -- https://github.com/rezhaTanuharja/minimalistNVIM
+    -- }}}
+
+    -- Colorscheme Template {{{
+    {
+      "datsfilipe/nvim-colorscheme-template"
+    },
     -- }}}
   -- }}}
 

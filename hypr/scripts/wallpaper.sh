@@ -12,7 +12,7 @@ find_files() {
     done
 }
 
-dir="/home/$USER/tmp/backgrounds"
+dir="/home/$USER/Downloads/backgrounds"
 files=( $(find_files "$dir") ) # Capture files in an array using process substitution
 
 if [[ ${#files[@]} -eq 0 ]]; then

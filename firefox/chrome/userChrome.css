@@ -47,7 +47,7 @@ toolbarbutton#tabs-newtab-button {
 
 .tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]) {
     /* Tab width */
-    max-width: 200px !important;
+    max-width: 175px !important;
 }
 
 #tabbrowser-arrowscrollbox {
@@ -77,6 +77,11 @@ hbox.tab-content {
     /* Hide button "List All Tabs" */
     display: none !important;
 }
+
+#firefox-view-button {
+    /* Firefox View button */
+    display: none;
+}
 /* }}} */
 
 /* TOOLBAR {{{ */
@@ -91,6 +96,11 @@ hbox#urlbar:not([focused="true"]) {
 
 toolbar#nav-bar {
     max-height: 30px !important;
+}
+
+#firefox-view-button {
+    /* Firefox View button */
+    display: none;
 }
 /* }}} */
 

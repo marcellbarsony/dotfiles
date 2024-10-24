@@ -3,7 +3,7 @@
 
 require("darkvoid").setup({
   transparent = true,
-  glow = true,
+  glow = false,
   show_end_of_buffer = false,
 
   colors = {

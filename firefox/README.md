@@ -1,6 +1,6 @@
 # Firefox setup
 
-### Install
+## Install
 
 Install dependencies
 
@@ -8,7 +8,7 @@ Install dependencies
 sudo pacman -S firefox pipewire-jack
 ```
 
-### Sign in
+## Sign in
 
 1. Sign in to Firefox
 
@@ -18,13 +18,15 @@ sudo pacman -S firefox pipewire-jack
 
 4. **Terminate Firefox**
 
-### Containers
+## Containers
 
-- Copy `containers.json` to `~/.mozilla/firefox/<user_profile>`
+- Overwrite `containers.json` at `~/.mozilla/firefox/<user_profile>`
 
 - Add the Site List from `containers-site-list.js`
 
-### Preferences [ArkenFox]
+## Preferences
+
+### ArkenFox
 
 1. Clone the [ArkenFox repository](https://github.com/arkenfox/user.js)
 
@@ -40,7 +42,7 @@ cp updater.sh user.js user-overrides.js ~/.mozilla/firefox/<user_profile>/
 ./updater.sh
 ```
 
-### Preferences [BetterFox]
+### BetterFox
 
 1. Download BetterFox's [user.js](https://github.com/yokoffing/Betterfox/blob/main/user.js)
 
@@ -48,16 +50,16 @@ cp updater.sh user.js user-overrides.js ~/.mozilla/firefox/<user_profile>/
 
 3. Add the overrides from `user-overrides.js`
 
-### Custom CSS
+## Custom CSS
 
 - Copy the `chrome/` directory under `~/.mozilla/firefox/<user_profile>/`
 
-### Colors
+## Colors
 
 - If not automatically synced, import the custom color theme from `colors/` via `https://color.firefox.com/`
 - Load Add-on via `about:debugging#/runtime/this-firefox` by clicking `Load Temporary Add-on...`
 
-### Extensions
+## Extensions
 
 Add extension config:
 - uBlock Origin

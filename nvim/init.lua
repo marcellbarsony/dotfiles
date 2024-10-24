@@ -33,7 +33,10 @@ require("plugins.lazy-nvim")
 -- Colors
 -- require("theme.catppucin")
 -- require("theme.darkvoid")
+-- require("theme.oxocarbon")
+-- require("theme.poimandres")
 require("theme.tokyonight")
+-- require("theme.mytheme")
 
 -- DAP
 require("dap.nvim-dap")
