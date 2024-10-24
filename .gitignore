@@ -16,6 +16,9 @@ gtk-3.0/
 # Htop
 htop/
 
+# Hyprland
+hyprland/config/monitors.conf
+
 # Kdenlive
 kdenlive*
 kdeglobals

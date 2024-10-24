@@ -2,6 +2,10 @@
 // https://github.com/arkenfox/user.js/
 // https://github.com/yokoffing/BetterFox
 
+// STARTUP {{{
+user_pref("_user.js.astronaut", "3... 2... 1.. LIFTOFF");
+// }}}
+
 // USER PREFERENCES {{{
 
 // BACKSPACE
@@ -73,6 +77,10 @@ user_pref("services.sync.prefs.sync.browser.urlbar.suggest.openpage", false);
 user_pref("services.sync.prefs.sync.browser.urlbar.suggest.searches", false);
 user_pref("services.sync.prefs.sync.browser.urlbar.suggest.topsites", false);
 
+// SANITIZE ON SHUTDOWN
+user_pref("privacy.clearOnShutdown.history", false); // 2811
+user_pref("privacy.clearOnShutdown.sessions", false); // 2811
+
 // SIDEBAR
 user_pref("sidebar.position_start", false);
 user_pref("sidebar.revamp", false);
@@ -83,7 +91,7 @@ user_perf("browser.tabs.hoverPreview.showThumbnails", 0);
 
 // TOOLBAR
 user_pref("browser.compactmode.show", true);
-user_pref("browser.tabs.firefox-view", false);
+//user_pref("browser.tabs.firefox-view", false);
 user_pref("browser.tabs.tabmanager.enabled", false);
 
 // WEBSITE APPEARANCE
@@ -95,7 +103,7 @@ user_pref("layout.css.prefers-color-scheme.content-override", 0);
 // }}}
 
 // 0100 - STARTUP {{{
-
+user_pref("_user.js.astronaut", "0100: To infinity and beyond!");
 // 0102: Set startup page
 // Opts: 0 - Blank, 1 - Home, 2 - Last visited page, 3 - Resume previous session
 user_pref("browser.startup.page", 1);
@@ -106,39 +114,35 @@ user_pref("browser.newtabpage.activity-stream.showSponsored", false); // [FF58+]
 user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false); // [FF83+]
 // 0106: Clear default topsites
 user_pref("browser.newtabpage.activity-stream.default.sites", "");
-
 // }}}
 
 // 0200 - GEOLOCATION {{{
-
+user_pref("_user.js.astronaut", "0200: The universe is a pretty big place");
 // 0202: Disable the OS's geolocation service [FF102+]
 user_pref("geo.provider.use_geoclue", false);
-
 // }}}
 
 // 0600 - BLOCK IMPLICIT OUTBOUND {{{
+user_pref("_user.js.astronaut", "0600: Galaxies are islands of stars");
 // Specultaive loading (e.g. not explicitly clicked on/hovered)
-
 // 0604: Disable link-mouseover opening connection to linked server
 user_pref("network.http.speculative-parallel-limit", 0);
 // 0605: Disable mousedown speculative connections on bookmarks and history [FF98+]
 user_pref("browser.places.speculativeConnect.enabled", false);
-
 // }}}
 
 // 0700 - DNS / DoH / PROXY / SOCKS {{{
-
+user_pref("_user.js.astronaut", "0700: Ghe stars are shining bright");
 // 0702: Set the proxy server to do any DNS lookups when using SOCKS
 user_pref("network.proxy.socks_remote_dns", true);
 // 0703: Disable using UNC (Uniform Naming Convention) paths [FF61+]
 user_pref("network.file.disable_unc_paths", true);
 // 0704: Disable GIO as a potential proxy bypass vector [FF118+]
 user_pref("network.gio.supported-protocols", "");
-
 // }}}
 
 // 0800 - LOCATION BAR / SEARCH BAR / SUGGESTIONS / HISTORY / FORMS {{{
-
+user_pref("_user.js.astronaut", "0800: So much universe and so little time");
 // 0801: Disable location bar making speculative connections [FF56+]
 user_pref("browser.urlbar.speculativeConnect.enabled", false);
 // 0803: Disable live search suggestions
@@ -149,60 +153,104 @@ user_pref("browser.urlbar.mdn.featureGate", false); // [FF117+]
 user_pref("browser.urlbar.pocket.featureGate", false); // [FF116+]
 user_pref("browser.urlbar.weather.featureGate", false); // [FF108+]
 user_pref("browser.urlbar.yelp.featureGate", false); // [FF124+]
-
 // }}}
 
 // 0900 - PASSWORDS {{{
-
+user_pref("_user.js.astronaut", "0900: The stars don't look bigger, but they do look brighter");
 // 0903: Disable auto-filling username & password form fields
 user_pref("signon.autofillForms", false);
 // 0904: Disable formless login capture for Password Manager [FF51+]
 user_pref("signon.formlessCapture.enabled", false);
 // 0905: Limit (or disable) HTTP authentication credentials dialogs triggered by sub-resources
 user_pref("network.auth.subresource-http-auth-allow", 1);
+// }}}
 
+// 1000 - DISK AVOIDANCE {{{
+user_pref("_user.js.astronaut", "1000: We're all made of stardust");
+// 1001: disable disk cache
+user_pref("browser.cache.disk.enable", false);
+// 1003: disable storing extra session data
+// Opts: 0 - Everywhere, 1 - Unencrypted sites, 2 - Nowhere
+user_pref("browser.sessionstore.privacy_level", 2);
+// }}}
+
+// 1200 - HTTPS SSL/TLS / OCSP / CERTS / HPKP {{{
+user_pref("_user.js.astronaut", "1200: Houston, Tranquility Base here. The Eagle has landed");
+// 1201: require safe negotiation
+user_pref("security.ssl.require_safe_negotiation", true);
+// 1212: set OCSP fetch failures to hard-fail
+user_pref("security.OCSP.require", true);
+// 1223: enable strict PKP (Public Key Pinning)
+// Opts: 0 - Disabled, 1 - Allow user MiTM, 2 - Strict
+user_pref("security.cert_pinning.enforcement_level", 2);
+// 1244: enable HTTPS-Only mode in all windows [FF76+]
+user_pref("dom.security.https_only_mode", true);
+// 1246: disable HTTP background requests [FF82+]
+user_pref("dom.security.https_only_mode_send_http_background_request", false);
+// }}}
+
+// 2000 - PLUGINS / MEDIA / WEBRTC {{{
+user_pref("_user.js.astronaut", "2000: I looked and looked but I didn’t see god ");
+// 2002: force WebRTC inside the proxy [FF70+]
+user_pref("media.peerconnection.ice.proxy_only_if_behind_proxy", true);
+// 2003: force a single network interface for ICE candidates generation [FF42+]
+user_pref("media.peerconnection.ice.default_address_only", true);
+// }}}
+
+// 2400 - DOM (DOCUMENT OBJECT MODEL) {{{
+user_pref("_user.js.astronaut", "2400: We're all astronauts, whether we know it or not");
+// 2402: prevent scripts from moving and resizing open windows
+user_pref("dom.disable_window_move_resize", true);
 // }}}
 
 // 2600 - MISCELLANEOUS {{{
-
+user_pref("_user.js.astronaut", "2600: We are all connected to the cosmic energy");
 // 2608: Browser toolbox
 user_pref("devtools.debugger.remote-enabled", true);
-
 // }}}
 
 // 2800 - SHUTDOWN & SANITIZING {{{
-
-// 2811: Set/enforce what items to clear on shutdown
-user_pref("privacy.clearOnShutdown.history", false);
-user_pref("privacy.clearOnShutdown.sessions", false);
-
+user_pref("_user.js.astronaut", "2800: The cosmos is full of wonders");
+// 2840: set "Time range to clear" for "Clear Data" (2820) and "Clear History" (2830)
+// Opts: 0 - Everything, 1 - Last hour, 2 - Last two hours, 3 - Last four hours, 4 - Today
+user_pref("privacy.sanitize.timeSpan", 0);
 // }}}
 
 // 4500 - OPTIONAL RFP (resistFingerprinting) {{{
-
+user_pref("_user.js.astronaut", "4500: Nebulae are clouds of gas and dust");
 // 4504: RFP (RESIST FINGERPRINTING/Randomized Fingerprinting Protection)
 //user_pref("privacy.resistFingerprinting.letterboxing", false);
-
+// 4506: disable RFP spoof english prompt [FF59+]
+// Opts: 0 - Prompt, 1 - Disabled, 2 - Enabled
+user_pref("privacy.spoof_english", 1);
+// 4510: disable using system colors
+user_pref("browser.display.use_system_colors", false);
+// 4512: enforce links targeting new windows to open in a new tab instead
+// Opts: 1 - Most recent window or tab, 2 - New window, 3 - New tab
+user_pref("browser.link.open_newwindow", 3);
+// 4513: set all open window methods to abide by "browser.link.open_newwindow" (4512)
+user_pref("browser.link.open_newwindow.restriction", 0);
 // }}}
 
 // 5000 - OPTIONAL OPSEC {{{
-
+user_pref("_user.js.astronaut", "5000: The universe is a mystery waiting to be solved");
 // 5003: Disable saving passwords
 user_pref("signon.rememberSignons", false);
 user_pref("signon.rememberSignons.visibilityToggle", false);
-
 // }}}
 
 // 5500 - OPTIONAL HARDENING {{{
-
+user_pref("_user.js.astronaut", "5500: The universe is a vast ocean of stars");
 // 5508: DRM (EME: Encryption Media Extension)
 user_pref("media.eme.enabled", true);
-
 // }}}
 
 // 7000 - DON'T BOTHER {{{
-
+user_pref("_user.js.astronaut", "7000: The stars are the universe's eternal guardians");
 // 7020: WebRTC (Web Real-Time Communication)
 // user_pref("media.peerconnection.enabled", false);
+// }}}
 
+// SUCCESS {{{
+user_pref("_user.js.astronaut", "LANDING: The astronaut has completed the mission");
 // }}}

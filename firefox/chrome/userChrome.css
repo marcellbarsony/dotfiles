@@ -89,18 +89,13 @@ hbox#urlbar {
     min-height: 30px !important;
 }
 
-hbox#urlbar:not([focused="true"]) {
-    /* BUG: Makes URL bar dropdown transparent */
-    /* max-height: 30px !important; */
-}
-
 toolbar#nav-bar {
     max-height: 30px !important;
 }
 
 #firefox-view-button {
     /* Firefox View button */
-    display: none;
+    display: none !important;
 }
 /* }}} */
 
