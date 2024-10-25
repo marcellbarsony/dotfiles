@@ -31,12 +31,9 @@
 require("plugins.lazy-nvim")
 
 -- Colors
+vim.cmd [[colorscheme theme]]
 -- require("theme.catppucin")
--- require("theme.darkvoid")
--- require("theme.oxocarbon")
--- require("theme.poimandres")
-require("theme.tokyonight")
--- require("theme.mytheme")
+-- require("theme.tokyonight")
 
 -- DAP
 require("dap.nvim-dap")
