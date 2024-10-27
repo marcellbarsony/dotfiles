@@ -1,4 +1,4 @@
-@import ".cache/matugen/colors.rasi"
+@import "~/.cache/matugen/colors.rasi"
 
 // Configuration {{{
 configuration {

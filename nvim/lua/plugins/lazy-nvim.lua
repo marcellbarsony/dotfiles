@@ -49,35 +49,6 @@ require("lazy").setup({
     },
     -- }}}
 
-    -- Darkvoid {{{
-    -- {
-    --   "aliqyan-21/darkvoid.nvim",
-    --   priority = 1000
-    -- },
-    -- }}}
-
-    -- Poimandres {{{
-    -- {
-    --   "olivercederborg/poimandres.nvim",
-    --   lazy = false,
-    --   priority = 1000,
-    --   config = function()
-    --     require("poimandres").setup {
-    --       bold_vert_split = false,
-    --       dim_nc_background = false,
-    --       disable_background = false,
-    --       disable_float_background = false,
-    --       disable_italics = false,
-    --     }
-    --   end,
-    --
-    --   -- Set colorscheme
-    --   init = function()
-    --     vim.cmd("colorscheme poimandres")
-    --   end
-    -- },
-    -- }}}
-
     -- Oxocarbon {{{
     -- {
     --   "nyoom-engineering/oxocarbon.nvim"
@@ -90,12 +61,6 @@ require("lazy").setup({
 
     -- minimalistNVIM {{{
     -- https://github.com/rezhaTanuharja/minimalistNVIM
-    -- }}}
-
-    -- Colorscheme Template {{{
-    {
-      "datsfilipe/nvim-colorscheme-template"
-    },
     -- }}}
   -- }}}
 

@@ -1,11 +1,22 @@
 :root {
-    --tab-block-margin: 3px 3px !important;
     --inline-tab-padding: 5px !important;
+    --tab-block-margin: 3px 3px !important;
     --tab-border-radius: 0px !important;
     --tab-shadow-max-size: 0px !important;
-    --tab-block-margin: 3px !important;
     --toolbar-field-focus-border-color: transparent !important;
 }
+
+/* BOOKMARKS {{{ */
+#customizableui-special-spring9 {
+    /* Remove spacing at the end of Bookmarks bar */
+    display: none !important;
+}
+
+#star-button-box {
+    /* Remove button "Bookmark this page" */
+    display: none !important;
+}
+/* }}} */
 
 /* MULTI-ACCOUNT CONTAINERS {{{ */
 #tabbrowser-tabs .tab-context-line {
@@ -68,6 +79,13 @@ hbox.tab-content {
 /* }}} */
 
 /* TITLE BAR {{{ */
+:root:not([privatebrowsingmode], [firefoxviewhidden]) :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs, :root[privatebrowsingmode]:not([firefoxviewhidden]) :is(toolbarbutton:not(#firefox-view-button), toolbarpaletteitem:not(#wrapper-firefox-view-button)) + #tabbrowser-tabs {
+    /* Remove spacing from the beginning of the tabs */
+    border-inline-start: 0px solid color-mix(in srgb, currentColor 25%, transparent) !important;
+    padding-inline-start: calc(var(--tab-overflow-pinned-tabs-width)) !important;
+    margin-inline-start: 0px !important;
+}
+
 .titlebar-spacer {
     /* Hide spacer next to "Close" button */
     display: none !important;
@@ -122,15 +140,3 @@ toolbar#nav-bar {
     --urlbar-container-height: 30px !important;
 }
 /* }}}*/
-
-/* BOOKMARKS {{{ */
-#customizableui-special-spring9 {
-    /* Remove spacing at the end of Bookmarks bar */
-    display: none !important;
-}
-
-#star-button-box {
-    /* Remove button "Bookmark this page" */
-    display: none !important;
-}
-/* }}} */

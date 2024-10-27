@@ -31,8 +31,8 @@
 require("plugins.lazy-nvim")
 
 -- Colors
-vim.cmd [[colorscheme theme]]
--- require("theme.catppucin")
+-- vim.cmd [[colorscheme theme]]
+require("theme.catppucin")
 -- require("theme.tokyonight")
 
 -- DAP
@@ -60,9 +60,9 @@ require("mason.mason-lspconfig")
 require("mason.mason-nvim-dap")
 
 -- Navigation
-require("plugins.oil")
 require("plugins.alpha-nvim")
 require("plugins.harpoon")
+require("plugins.oil")
 require("plugins.which-key")
 
 -- Plugins
