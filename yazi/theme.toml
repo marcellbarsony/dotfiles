@@ -7,15 +7,15 @@ use = ""
 
 # Manager {{{
 [manager]
-cwd = { fg = "cyan" }
+cwd = { fg = "#EEEEEE" }
 
 # Hovered
 hovered         = { reversed = true }
 preview_hovered = { underline = false }
 
 # Find
-find_keyword  = { fg = "yellow", bold = true, italic = true, underline = false }
-find_position = { fg = "magenta", bg = "reset", bold = true, italic = true }
+find_keyword  = { fg =  "yellow", bold = true, italic = false, underline = false }
+find_position = { fg = "magenta", bold = true, italic = true, bg = "reset" }
 
 # Marker
 marker_copied   = { fg = "lightgreen",  bg = "lightgreen" }
@@ -35,10 +35,11 @@ count_selected = { fg = "white", bg = "yellow" }
 
 # Border
 border_symbol = "│"
-border_style  = { fg = "gray" }
+border_style  = { fg = "#555555" }
 
-# Highlighting
-syntect_theme = ""
+# Syntax highlighting
+syntect_theme = "/home/marci/.config/yazi/tmtheme/catppuccin-mocha.xml"
+# syntect_theme = "/home/marci/.config/yazi/tmtheme/tokyonight.xml"
 # }}}
 
 # Status {{{
@@ -48,9 +49,9 @@ separator_close = ""
 separator_style = { fg = "gray", bg = "gray" }
 
 # Mode
-mode_normal = { bg = "blue", bold = true }
-mode_select = { bg = "red", bold = true }
-mode_unset  = { bg = "red", bold = true }
+mode_normal = { bg = "black", bold = true }
+mode_select = { bg = "black", bold = true }
+mode_unset  = { bg = "black", bold = true }
 
 # Progress
 progress_label  = { bold = true }
@@ -74,7 +75,7 @@ inactive = {}
 
 # Input {{{
 [input]
-border   = { fg = "blue" }
+border   = { fg = "white" }
 title    = {}
 value    = {}
 selected = { reversed = true }
@@ -94,7 +95,7 @@ icon_command = ""
 
 # Tasks {{{
 [tasks]
-border  = { fg = "blue" }
+border  = { fg = "#AAAAAA" }
 title   = {}
 hovered = { fg = "magenta", underline = true }
 # }}}
@@ -116,7 +117,7 @@ on      = { fg = "cyan" }
 run     = { fg = "magenta" }
 desc    = {}
 hovered = { reversed = true, bold = true }
-footer  = { fg = "black", bg = "white" }
+footer  = { fg = "#EEEEEE", bg = "#111111" }
 # }}}
 
 # Notify {{{
@@ -135,23 +136,25 @@ icon_error = ""
 [filetype]
 rules = [
     # Images
-    { mime = "image/*", fg = "cyan" },
+    { mime = "image/*", fg = "white" },
 
     # Media
-    { mime = "{audio,video}/*", fg = "yellow" },
+    { mime = "{audio,video}/*", fg = "white" },
 
     # Archives
-    { mime = "application/*zip", fg = "magenta" },
-    { mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", fg = "magenta" },
+    { mime = "application/*zip", fg = "white" },
+    { mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", fg = "white" },
 
     # Documents
     { mime = "application/{pdf,doc,rtf,vnd.*}", fg = "green" },
 
     # Fallback
-    # { name = "*", fg = "white" },
+    { name = "*", fg = "white" },
     { name = "*/", fg = "blue" }
 ]
+# }}}
 
+# Icons {{{
 [icon]
 rules = [
     # Programming

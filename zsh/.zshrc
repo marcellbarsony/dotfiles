@@ -122,6 +122,25 @@ function yy() {
 eval "$(fzf --zsh)"
 # }}}
 
+# Zellij {{{
+# source ~/.config/zellij/scripts/sessions.sh
+python3 ~/.config/zellij/scripts/sessions.py
+
+# eval "$(zellij setup --generate-auto-start zsh)"
+
+# if [[ -z "$ZELLIJ" ]]; then
+#     if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
+#         zellij attach -c
+#     else
+#         zellij
+#     fi
+#
+#     if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
+#         exit
+#     fi
+# fi
+# }}}
+
 # ZSH (Autocomplete) {{{
 if [[ -f ~/.local/src/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]]; then
     source ~/.local/src/zsh-autocomplete/zsh-autocomplete.plugin.zsh

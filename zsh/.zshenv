@@ -63,5 +63,8 @@ export QT_STYLE_OVERRIDE="Adwaita-Dark"
 # export XDG_CURRENT_DESKTOP=qtile
 # export XDG_SESSION_DESKTOP=qtile
 
+# Zellij
+export ZELLIJ_AUTO_ATTACH=true
+
 # Disable files
 export LESSHISTFILE=-

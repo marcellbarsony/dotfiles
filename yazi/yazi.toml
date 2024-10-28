@@ -1,6 +1,7 @@
 # https://github.com/sxyazi/yazi/blob/shipped/yazi-config/preset/yazi.toml
 "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
+# Manager {{{
 [manager]
 ratio          = [ 3, 4, 4 ]
 sort_by        = "alphabetical"
@@ -14,7 +15,9 @@ show_symlink   = true
 scrolloff      = 10
 mouse_events   = [ "click", "scroll" ]
 title_format   = "Yazi: {cwd}"
+# }}}
 
+# Preview {{{
 [preview]
 tab_size        = 2
 max_width       = 1000
@@ -25,7 +28,9 @@ image_quality   = 75
 sixel_fraction  = 15
 ueberzug_scale  = 1
 ueberzug_offset = [ 0, 0, 0, 0 ]
+# }}}
 
+# Opener {{{
 [opener]
 edit = [
     { run = 'nvim "$@"', desc = "$EDITOR", block = true },
@@ -36,7 +41,9 @@ play = [
 open = [
     { run = 'xdg-open "$@"', desc = "OPEN" },
 ]
+# }}}
 
+# Open {{{
 [open]
 rules = [
     { name = "*.c",    use = "edit" },
@@ -56,13 +63,16 @@ rules = [
     { name = "*.scss", use = "edit" },
     { name = "*.toml", use = "edit" },
     { name = "*.txt",  use = "edit" },
+    { name = "*.xml",  use = "edit" },
     { name = "*.yaml", use = "edit" },
     { name = "*.zig",  use = "edit" },
     { mime = "{audio,video}/*", use = "play" },
     { mime = "image/*", use = "open" },
     { mime = "text/*", use = "edit" },
 ]
+# }}}
 
+# Tasks {{{
 [tasks]
 micro_workers    = 10
 macro_workers    = 25
@@ -70,7 +80,9 @@ bizarre_retry    = 5
 image_alloc      = 536870912  # 512MB
 image_bound      = [ 0, 0 ]
 suppress_preload = false
+# }}}
 
+# Plugin {{{
 [plugin]
 fetchers = [
     # Mimetype
@@ -111,7 +123,9 @@ previewers = [
     # Fallback
     { name = "*", run = "file" },
 ]
+# }}}
 
+# Input {{{
 [input]
 cursor_blink = false
 
@@ -183,3 +197,4 @@ sort_translit  = false
 
 [log]
 enabled = false
+# }}}

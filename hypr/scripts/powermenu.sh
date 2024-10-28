@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-CHOSEN=$(printf "Lock\nShutdown\nReboot\nLog Out" | rofi -dmenu)
+OUT=$(printf "Lock\nShutdown\nReboot\nLog Out" | rofi -dmenu)
 
-case "$CHOSEN" in
+case "$OUT" in
     "Lock")
         hyprlock ;;
     "Reboot")

@@ -25,6 +25,10 @@ alias home="clear && cd $HOME && ls"
 alias cfg="clear && cd $HOME/.config && ls"
 alias notes="clear && cd $HOME/.local/git/notes && ls"
 
-#  NeoVim
+# NeoVim
 alias nv="nvim"
 alias vim="nvim"
+
+# Zellij
+alias z="zellij"
+alias zellij="zellij -l welcome"

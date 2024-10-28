@@ -94,6 +94,9 @@ user_pref("browser.compactmode.show", true);
 //user_pref("browser.tabs.firefox-view", false);
 user_pref("browser.tabs.tabmanager.enabled", false);
 
+// TRANSLATION
+user_pref("browser.translations.neverTranslateLanguages", "hu");
+
 // WEBSITE APPEARANCE
 user_pref("layout.css.prefers-color-scheme.content-override", 0);
 

@@ -1,16 +1,14 @@
-// Zellij
 // https://zellij.dev
 // https://github.com/zellij-org/zellij
 
-
-// If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
+// Keybinds {{{
 keybinds {
     normal {
         // uncomment this and adjust key if using copy_on_select=false
         // bind "Alt c" { Copy; }
     }
     locked {
-        bind "Ctrl g" { SwitchToMode "Normal"; }
+        bind "Ctrl l" { SwitchToMode "Normal"; }
     }
     resize {
         bind "Ctrl n" { SwitchToMode "Normal"; }
@@ -54,8 +52,8 @@ keybinds {
     tab {
         bind "Ctrl t" { SwitchToMode "Normal"; }
         bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
-        bind "h" "Left" "Up" "k" { GoToPreviousTab; }
-        bind "l" "Right" "Down" "j" { GoToNextTab; }
+        bind "m" { GoToPreviousTab; }
+        bind "i" { GoToNextTab; }
         bind "n" { NewTab; SwitchToMode "Normal"; }
         bind "x" { CloseTab; SwitchToMode "Normal"; }
         bind "s" { ToggleActiveSyncTab; SwitchToMode "Normal"; }
@@ -115,11 +113,11 @@ keybinds {
         bind "Esc" { UndoRenamePane; SwitchToMode "Pane"; }
     }
     session {
-        bind "Ctrl o" { SwitchToMode "Normal"; }
-        bind "Ctrl s" { SwitchToMode "Scroll"; }
+        bind "Ctrl s" { SwitchToMode "Normal"; }
+        bind "Ctrl o" { SwitchToMode "Scroll"; }
         bind "d" { Detach; }
-        bind "w" {
-            LaunchOrFocusPlugin "zellij:session-manager" {
+        bind "s" {
+            LaunchOrFocusPlugin "session-manager" {
                 floating true
                 move_to_focused_tab true
             };
@@ -150,9 +148,11 @@ keybinds {
         bind "x" { CloseFocus; SwitchToMode "Normal"; }
     }
     shared_except "locked" {
-        bind "Ctrl g" { SwitchToMode "Locked"; }
+        bind "Ctrl l" { SwitchToMode "Locked"; }
         bind "Ctrl q" { Quit; }
         bind "Alt n" { NewPane; }
+        bind "Alt i" { MoveTab "Left"; }
+        bind "Alt o" { MoveTab "Right"; }
         bind "Alt h" "Alt Left" { MoveFocusOrTab "Left"; }
         bind "Alt l" "Alt Right" { MoveFocusOrTab "Right"; }
         bind "Alt j" "Alt Down" { MoveFocus "Down"; }
@@ -172,10 +172,10 @@ keybinds {
         bind "Ctrl n" { SwitchToMode "Resize"; }
     }
     shared_except "scroll" "locked" {
-        bind "Ctrl s" { SwitchToMode "Scroll"; }
+        bind "Ctrl o" { SwitchToMode "Scroll"; }
     }
     shared_except "session" "locked" {
-        bind "Ctrl o" { SwitchToMode "Session"; }
+        bind "Ctrl s" { SwitchToMode "Session"; }
     }
     shared_except "tab" "locked" {
         bind "Ctrl t" { SwitchToMode "Tab"; }
@@ -187,107 +187,88 @@ keybinds {
         bind "Ctrl b" { SwitchToMode "Tmux"; }
     }
 }
+// }}}
 
+// Plugins {{{
 plugins {
-    tab-bar { path "tab-bar"; }
-    status-bar { path "status-bar"; }
-    strider { path "strider"; }
-    compact-bar { path "compact-bar"; }
-    session-manager { path "session-manager"; }
+    tab-bar location="zellij:tab-bar"
+    status-bar location="zellij:status-bar"
+    strider location="zellij:strider"
+    compact-bar location="zellij:compact-bar"
+    session-manager location="zellij:session-manager"
+    welcome-screen location="zellij:session-manager" {
+        welcome_screen true
+    }
+    filepicker location="zellij:strider" {
+        cwd "/"
+    }
 }
+// }}}
 
-// Choose what to do when zellij receives SIGTERM, SIGINT, SIGQUIT or SIGHUP
-// eg. when terminal window with an active zellij session is closed
-// Options:
-//   - detach (Default)
-//   - quit
-//
-// on_force_close "quit"
+// On close {{{
+// SIGTERM, SIGINT, SIGQUIT or SIGHUP
+on_force_close "detach" // detach/quit
+// }}}
 
-//  Send a request for a simplified ui (without arrow fonts) to plugins
-//  Options:
-//    - true
-//    - false (Default)
-//
+// Simplified UI {{{
 // simplified_ui true
+// }}}
 
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL
-//
 // default_shell "fish"
 
 // Choose the path to override cwd that zellij will use for opening new panes
-//
 // default_cwd ""
 
-// Toggle between having pane frames around the panes
-// Options:
-//   - true (default)
-//   - false
-//
+// Pane frames
 pane_frames false
 
 // Toggle between having Zellij lay out panes according to a predefined set of layouts whenever possible
-// Options:
-//   - true (default)
-//   - false
-//
 // auto_layout true
 
 // Whether sessions should be serialized to the cache folder (including their tabs/panes, cwds and running commands) so that they can later be resurrected
-// Options:
-//   - true (default)
-//   - false
-//
 // session_serialization false
 
 // Whether pane viewports are serialized along with the session, default is false
-// Options:
-//   - true
-//   - false (default)
 // serialize_pane_viewport true
 
 // Scrollback lines to serialize along with the pane viewport when serializing sessions, 0
 // defaults to the scrollback size. If this number is higher than the scrollback size, it will
 // also default to the scrollback size. This does nothing if `serialize_pane_viewport` is not true.
-//
 // scrollback_lines_to_serialize 10000
 
-// Define color themes for Zellij
+// Color themes {{{
 // For more examples, see: https://github.com/zellij-org/zellij/tree/main/example/themes
 // Once these themes are defined, one of them should to be selected in the "theme" section of this file
-//
-themes {
-    noir {
-        fg 169 177 214
-        bg 26 27 38
-        black 56 62 90
-        red 249 51 87
-        green 122 162 247
-        yellow 224 175 104
-        blue 122 162 247
-        magenta 187 154 247
-        cyan 42 195 222
-        white 192 202 245
-        orange 187 154 247
-    }
-}
+// themes {
+//     dracula {
+//         fg 248 248 242
+//         bg 40 42 54
+//         red 255 85 85
+//         green 80 250 123
+//         yellow 241 250 140
+//         blue 98 114 164
+//         magenta 255 121 198
+//         orange 255 184 108
+//         cyan 139 233 253
+//         black 0 0 0
+//         white 255 255 255
+//     }
+// }
 
+// theme "default"
+// }}}
 
-// Choose the theme that is specified in the themes section.
-// Default: default
-//
-theme "noir"
+// Layout {{{
+//default_layout "classic"
+//default_layout "compact"
+//default_layout "default"
+default_layout "no-plugins"
+// }}}
 
-// The name of the default layout to load on startup
-// Default: "default"
-//
-default_layout "default"
-
-// Choose the mode that zellij uses when starting up.
-// Default: normal
-//
-// default_mode "locked"
+// Startup mode
+default_mode "normal" // normal/locked
 
 // Toggle enabling the mouse mode.
 // On certain configurations, or terminals this could
@@ -295,7 +276,6 @@ default_layout "default"
 // Options:
 //   - true (default)
 //   - false
-//
 // mouse_mode false
 
 // Configure the scroll back buffer size
@@ -303,7 +283,6 @@ default_layout "default"
 // buffer. Excess number of lines are discarded in a FIFO fashion.
 // Valid values: positive integers
 // Default value: 10000
-//
 // scroll_buffer_size 10000
 
 // Provide a command to execute when copying text. The text will be piped to
@@ -311,7 +290,6 @@ default_layout "default"
 // terminal emulators which do not support the OSC 52 ANSI control sequence
 // that will be used by default if this option is not set.
 // Examples:
-//
 // copy_command "xclip -selection clipboard" // x11
 // copy_command "wl-copy"                    // wayland
 // copy_command "pbcopy"                     // osx
@@ -326,32 +304,28 @@ default_layout "default"
 // copy_clipboard "primary"
 
 // Enable or disable automatic copy (and clear) of selection when releasing mouse
-// Default: true
-//
 // copy_on_select false
 
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
-//
 // scrollback_editor "/usr/bin/vim"
 
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)
 // or should each user have their own cursor (false)
 // Default: false
-//
 // mirror_session true
 
 // The folder in which Zellij will look for layouts
-//
 // layout_dir "/path/to/my/layout_dir"
 
 // The folder in which Zellij will look for themes
-//
 // theme_dir "/path/to/my/theme_dir"
 
 // Enable or disable the rendering of styled and colored underlines (undercurl).
 // May need to be disabled for certain unsupported terminals
-// Default: true
-//
 // styled_underlines false
+
+// Enable or disable writing of session metadata to disk (if disabled, other sessions might not know
+// metadata info on this session)
+// disable_session_metadata true
