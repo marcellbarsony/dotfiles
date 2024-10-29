@@ -1,14 +1,21 @@
 #!/usr/bin/env bash
 
-OUT=$(printf "Lock\nShutdown\nReboot\nLog Out" | rofi -dmenu)
+LOCK="Hyprlock"
+LOGOUT="Log out"
+REBOOT="Reboot"
+SHUTDOWN="Poweroff"
+
+OUT=$(printf "$LOCK\n$SHUTDOWN\n$REBOOT\n$LOGOUT" | rofi -dmenu)
 
 case "$OUT" in
-    "Lock")
+    "${LOCK}")
         hyprlock ;;
-    "Reboot")
+    "$REBOOT")
         reboot ;;
-    "Shutdown")
+    "$SHUTDOWN")
         poweroff ;;
+    "$LOGOUT")
+        hyprctl dispatch exit ;;
     *)
         exit 1 ;;
 esac

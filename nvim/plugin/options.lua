@@ -91,7 +91,7 @@ local options = {
   expandtab = true,
   shiftwidth = 4,
   softtabstop = -1,
-  tabstop = 2,
+  tabstop = 4,
 
   -- Indenting
   smartindent = false,

@@ -124,7 +124,7 @@ eval "$(fzf --zsh)"
 
 # Zellij {{{
 # source ~/.config/zellij/scripts/sessions.sh
-python3 ~/.config/zellij/scripts/sessions.py
+# python3 ~/.config/zellij/scripts/sessions.py
 
 # eval "$(zellij setup --generate-auto-start zsh)"
 
