@@ -37,7 +37,7 @@ vim.keymap.set("n", "<leader>bb", function() harpoon.ui:toggle_quick_menu(harpoo
 vim.keymap.set("n", "<leader>ba", function() harpoon:list():append() end, { desc = "Add" })
 
 -- Telescope
-vim.keymap.set("n", "<C-e>", function() toggle_telescope(harpoon:list()) end, { desc = "Harpoon" })
+vim.keymap.set("n", "<C-o>", function() toggle_telescope(harpoon:list()) end, { desc = "Harpoon" })
 
 -- Next & Prev
 vim.keymap.set("n", "<leader>bn", function() harpoon:list():next() end, { desc = "Next" })

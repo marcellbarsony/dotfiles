@@ -150,25 +150,6 @@ require("lazy").setup({
   },
   -- }}}
 
-  -- LSP [Mason] {{{
-  {
-    "williamboman/mason.nvim",
-    build = ":MasonUpdate",
-    dependencies = {
-      "williamboman/mason-lspconfig.nvim",
-      "jay-babu/mason-nvim-dap.nvim",
-      "onsails/lspkind.nvim",
-    },
-  },
-  -- }}}
-
-  -- Lspsaga {{{
-  {
-    "glepnir/lspsaga.nvim",
-    event = "LspAttach"
-  },
-  -- }}}
-
   -- Markdown {{{
   {
     "tadmccorkle/markdown.nvim",
@@ -189,6 +170,18 @@ require("lazy").setup({
   --   ft = { "markdown" },
   --   build = function() vim.fn["mkdp#util#install"]() end,
   -- },
+  -- }}}
+
+  -- Mason {{{
+  {
+    "williamboman/mason.nvim",
+    build = ":MasonUpdate",
+    dependencies = {
+      "williamboman/mason-lspconfig.nvim",
+      "jay-babu/mason-nvim-dap.nvim",
+      "onsails/lspkind.nvim",
+    },
+  },
   -- }}}
 
   -- Oil {{{
@@ -265,10 +258,8 @@ require("lazy").setup({
   -- Trouble {{{
   {
     "folke/trouble.nvim",
-    event = {
-      "BufReadPre",
-      "BufNewFile"
-    },
+    opts = {},
+    cmd = "Trouble",
   },
   -- }}}
 

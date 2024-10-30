@@ -363,7 +363,8 @@ wk.add({
 
   { "<leader>x",  group = "Plugins" },
   { "<leader>xm", desc = "Mason" },
-  { "<leader>xx", desc = "Trouble" },
+
+  { "<leader>z",  group = "Trouble" },
   -- }}}
 })
 -- }}}

@@ -194,22 +194,6 @@ map("n", "<leader>lhl", "<cmd>LspLog<CR>", { desc = "Log" })
 map("n", "<leader>lhr", "<cmd>help lsp-config<CR>", { desc = "Reference" })
 -- }}}
 
--- Lspsaga {{{
--- map("n", "<leader>la", "<cmd>Lspsaga code_action<CR>", { desc = "Action" })
--- map("n", "<leader>lo", "<cmd>Lspsaga outline<CR>", { desc = "Outline" })
--- map("n", "<leader>lp", "<cmd>Lspsaga peek_definition<CR>", { desc = "Peek definition" })
--- map("n", "<leader>lr", "<cmd>Lspsaga rename<CR>", { desc = "Rename" })
--- map("n", "<leader>lt", "<cmd>Lspsaga peek_type_definition<CR>", { desc = "Type" })
--- map("n", "<Leader>lw", "<cmd>Lspsaga winbar_toggle<CR>", { desc = "Winbar" })
--- map("n",         "gd", "<cmd>Lspsaga goto_definition<CR>", { desc = "Definition [Go-To]" })
--- map("n", "<leader>lb", "<cmd>Lspsaga show_buf_diagnostics<CR>", { desc = "Diagnostics [Buffer]" })
--- map("n", "<leader>ld", "<cmd>Lspsaga show_line_diagnostics<CR>", { desc = "Diagnostics" })
--- map("n", "<leader>lk", "<cmd>Lspsaga hover_doc<CR>", { desc = "Documentation" })
--- map("n", "<leader>lk", "<cmd>Lspsaga hover_doc ++keep<CR>", { desc = "Documentation" })
--- map("n", "<Leader>lci", "<cmd>Lspsaga incoming_calls<CR>", { desc = "Incoming" })
--- map("n", "<Leader>lco", "<cmd>Lspsaga outgoing_calls<CR>", { desc = "Outgoing" })
--- }}}
-
 -- Macro {{{
 map("n", "Q", "@qj", { desc = "Macro Replay" })
 map("x", "Q", ":norm @qj<CR>", { desc = "Macro Replay [Block]" })
@@ -315,10 +299,12 @@ map("n", "<leader>vit", "<cmd>InspectTree<CR>", { desc = "Inspect [Tree]" })
 -- }}}
 
 -- Trouble {{{
-map("n", "<leader>xxx", function() require("trouble").toggle() end, { desc = "Trouble" })
-map("n", "<leader>xxd", function() require("trouble").toggle("document_diagnostics") end, { desc = "Diagnostics" })
-map("n", "<leader>xxq", function() require("trouble").toggle("quickfix") end, { desc = "Quickfix" })
-map("n", "<leader>xxl", function() require("trouble").toggle("loclist") end, { desc = "Loclist" })
+map("n", "<leader>zz", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Trouble" })
+map("n", "<leader>zb", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", { desc = "Buffer" })
+map("n", "<leader>zs", "<cmd>Trouble symbols toggle focus=false<cr>", { desc = "Symbols" })
+map("n", "<leader>zl", "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", { desc = "LSP definitions" })
+map("n", "<leader>zd", "<cmd>Trouble loclist toggle<cr>", { desc = "Location list" })
+map("n", "<leader>zq", "<cmd>Trouble qflist toggle<cr>", { desc = "Quickfix" })
 -- }}}
 
 -- Undo & Redo {{{
