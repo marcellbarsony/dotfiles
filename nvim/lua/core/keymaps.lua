@@ -23,10 +23,6 @@ vim.g.mapleader = "\\"
 vim.g.maplocalleader = "\\"
 -- }}}
 
--- Alpha {{{
-map("n", "<leader>xa", "<cmd>Alpha<CR>", { desc = "Alpha" })
--- }}}
-
 -- Arrow keys {{{
 map("", "<up>", "<nop>")
 map("", "<down>", "<nop>")
@@ -89,7 +85,6 @@ map("n", "<leader>gg",
 -- map('n', '[c', "&diff ? '[c' : '<cmd>Gitsigns prev_hunk<CR>'", {expr=true})
 
 -- Text object
-map("o", "<leader>gh", "<cmd>Gitsigns select_hunk<CR>", { desc = "Select hunk" })
 map("x", "<leader>gh", "<cmd>Gitsigns select_hunk<CR>", { desc = "Select hunk" })
 -- }}}
 
@@ -105,7 +100,7 @@ map("n", "<C-c>", "<cmd>nohl<CR>", { desc = "Clear" })
 -- }}}
 
 -- Lazy {{{
-map("n", "<leader>xl", "<cmd>Lazy<CR>", { desc = "Lazy" })
+map("n", "<leader>vl", "<cmd>Lazy<CR>", { desc = "Lazy" })
 -- }}}
 
 -- Lines (Indent) {{{
@@ -133,12 +128,6 @@ map("x", "J", ":move '>+1<CR>gv=gv", { desc = "Block [Move Down]" })
 -- Calls
 -- map("n", "<leader>lci", vim.lsp.buf.incoming_calls, { buffer = args.buf, desc = "Incoming" })
 -- map("n", "<leader>lco", vim.lsp.buf.outgoing_calls, { buffer = args.buf, desc = "Outgoing" })
-
--- Codelens
--- map("n", "<leader>lxx", vim.lsp.codelens.refresh, { buffer = args.buf, desc = "Codelens Refresh" })
--- map("n", "<leader>lxr", vim.lsp.codelens.run, { buffer = args.buf, desc = "Codelens Run" })
--- map("n", "<leader>lxc", vim.lsp.codelens.clear, { buffer = args.buf, desc = "Codelens Clear" })
--- map("n", "<leader>lxc", vim.lsp.codelens.display, { buffer = bufnr, desc = "Codelens Clear" })
 
 -- Code action
 map({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, { desc = "Action" })
@@ -170,7 +159,7 @@ map("n", "<leader>lv", function()
 end, { desc = "Inlay hints" })
 
 -- References
-map("n", "<leader>lx", vim.lsp.buf.references, { desc = "References" })
+-- map("n", "<leader>lx", vim.lsp.buf.references, { desc = "References" })
 -- map("n", "<leader>lv", vim.lsp.buf.clear_references, { desc = "Clear references" })
 
 -- Rename
@@ -188,10 +177,8 @@ map("n", "<leader>lr", vim.lsp.buf.rename, { desc = "Rename" })
 -- }}}
 
 -- LSP Help {{{
-map("n", "<leader>lhc", "<cmd>help lspconfig.txt<CR>", { desc = "Config" })
 map("n", "<leader>lhi", "<cmd>LspInfo<CR>", { desc = "Info" })
 map("n", "<leader>lhl", "<cmd>LspLog<CR>", { desc = "Log" })
-map("n", "<leader>lhr", "<cmd>help lsp-config<CR>", { desc = "Reference" })
 -- }}}
 
 -- Macro {{{
@@ -200,11 +187,7 @@ map("x", "Q", ":norm @qj<CR>", { desc = "Macro [Replay Block]" })
 -- }}}
 
 -- Mason {{{
-map("n", "<leader>xmc", "<cmd>checkhealth mason<CR>", { desc = "Health" })
-map("n", "<leader>xmh", "<cmd>h mason<CR>", { desc = "Help" })
-map("n", "<leader>xml", "<cmd>MasonLog<CR>", { desc = "Log" })
-map("n", "<leader>xmm", "<cmd>Mason<CR>", { desc = "Mason" })
-map("n", "<leader>xmu", "<cmd>MasonUninstallAll<CR>", { desc = "Uninstall all" })
+map("n", "<leader>vm", "<cmd>Mason<CR>", { desc = "Mason" })
 -- }}}
 
 -- Navigation {{{
@@ -215,7 +198,6 @@ map("n", "<leader>xmu", "<cmd>MasonUninstallAll<CR>", { desc = "Uninstall all" }
 
 -- Oil {{{
 map("n", "-", "<cmd>Oil<CR>", { desc = "Oil" })
-map("n", "<leader>xo", "<cmd>Oil<CR>", { desc = "Oil" })
 -- }}}
 
 -- Search {{{
@@ -266,7 +248,7 @@ map("n", "<leader>gf", "<cmd>Telescope git_files<CR>", { desc = "Files" })
 map("n", "<leader>gs", "<cmd>Telescope git_status<CR>", { desc = "Status" })
 
 -- Telescope - Grep
-map("n", "<leader>/", "<cmd>Telescope live_grep<CR>", { desc = "Live Grep" })
+map("n", "<leader>tg", "<cmd>Telescope live_grep<CR>", { desc = "Grep" })
 
 -- Telescope - History
 map("n", "<leader>thc", "<cmd>Telescope command_history<CR>", { desc = "Command" })
@@ -275,7 +257,7 @@ map("n", "<leader>ths", "<cmd>Telescope search_history<CR>", { desc = "Search" }
 
 -- Telescope - LSP
 map("n", "<leader>li", "<cmd>Telescope lsp_implementations<CR>", { desc = "Implementations" }) -- !!!
-map("n", "<leader>ll", "<cmd>Telescope lsp_references<CR>", { desc = "LSP References" })
+map("n", "<leader>ll", "<cmd>Telescope lsp_references<CR>", { desc = "References" })
 
 -- Telescope - LSP Calls
 map("n", "<leader>lui", "<cmd>Telescope lsp_incoming_calls<CR>", { desc = "Incoming" })
@@ -313,15 +295,15 @@ map("n", "<C-r>", "<cmd>redo<CR>", { desc = "Redo" })
 -- }}}
 
 -- VIM {{{
-map("n", "<leader>vj", "<cmd>jumps<CR>", { desc = "Jumps" })
-map("n", "<leader>vd", "<cmd>sort n<CR>", { desc = "Sort %d" })
+map("n", "<leader>vh", "<cmd>checkhealth<CR>", { desc = "Health" })
 map("n", "<leader>vo", "<cmd>options<CR>", { desc = "Options" })
-map("n", "<leader>vff", "<cmd>set foldenable!<CR>", { desc = "Fold" })
-map("n", "<leader>vfc", "<cmd>set foldcolumn!<CR>", { desc = "Column" })
 map("n", "<leader>vss", "<cmd>set spell!<CR>", { desc = "Spell" })
 map("n", "<leader>vsm", "<cmd>mkspell! %<CR>", { desc = "Mkspell" })
 -- }}}
 
--- Which Key {{{
-map("n", "<leader>xw", "<cmd>WhichKey<CR>", { desc = "WhichKey" })
--- }}}
+-- VISUAL {{{
+map("v", "<leader>sa", "<cmd>sort<CR>", { desc = "Alphabetical" })
+map("v", "<leader>sc", "<cmd>sort i<CR>", { desc = "Case-sensitive" })
+map("v", "<leader>sn", "<cmd>sort n<CR>", { desc = "Numerical" })
+map("v", "<leader>sr", "<cmd>sort<CR>", { desc = "Reverse" })
+  -- }}}

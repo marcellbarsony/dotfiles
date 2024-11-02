@@ -1,6 +1,7 @@
 -- nvim-lspconfig
 -- https://github.com/neovim/nvim-lspconfig
--- :help lsp-config
+-- `:h lspconfig`
+-- `:h lsp-config`
 
 -- LSP config & Additional capabilities (nvim-cmp)
 -- https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion#nvim-cmp

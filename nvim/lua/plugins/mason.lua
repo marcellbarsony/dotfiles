@@ -1,5 +1,6 @@
 -- Mason
 -- https://github.com/williamboman/mason.nvim
+-- `:h mason`
 
 return {
   {
