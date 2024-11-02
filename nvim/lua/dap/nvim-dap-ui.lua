@@ -1,7 +1,7 @@
 -- Nvim DAP UI
+-- :h dapui.setup()
 -- https://github.com/rcarriga/nvim-dap-ui
 
--- :h dapui.setup()
 require("dapui").setup({
   -- Controls {{{
   controls = {

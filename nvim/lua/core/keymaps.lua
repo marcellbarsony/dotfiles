@@ -195,8 +195,8 @@ map("n", "<leader>lhr", "<cmd>help lsp-config<CR>", { desc = "Reference" })
 -- }}}
 
 -- Macro {{{
-map("n", "Q", "@qj", { desc = "Macro Replay" })
-map("x", "Q", ":norm @qj<CR>", { desc = "Macro Replay [Block]" })
+map("n", "Q", "@qj", { desc = "Macro [Replay]" })
+map("x", "Q", ":norm @qj<CR>", { desc = "Macro [Replay Block]" })
 -- }}}
 
 -- Mason {{{
@@ -299,12 +299,12 @@ map("n", "<leader>vit", "<cmd>InspectTree<CR>", { desc = "Inspect [Tree]" })
 -- }}}
 
 -- Trouble {{{
-map("n", "<leader>zz", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Trouble" })
-map("n", "<leader>zb", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", { desc = "Buffer" })
-map("n", "<leader>zs", "<cmd>Trouble symbols toggle focus=false<cr>", { desc = "Symbols" })
-map("n", "<leader>zl", "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", { desc = "LSP definitions" })
-map("n", "<leader>zd", "<cmd>Trouble loclist toggle<cr>", { desc = "Location list" })
-map("n", "<leader>zq", "<cmd>Trouble qflist toggle<cr>", { desc = "Quickfix" })
+map("n", "<leader>lt", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Trouble" })
+map("n", "<leader>lb", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", { desc = "Buffer" })
+-- map("n", "<leader>zs", "<cmd>Trouble symbols toggle focus=false<cr>", { desc = "Symbols" })
+-- map("n", "<leader>zl", "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", { desc = "LSP definitions" })
+-- map("n", "<leader>zd", "<cmd>Trouble loclist toggle<cr>", { desc = "Location list" })
+-- map("n", "<leader>zq", "<cmd>Trouble qflist toggle<cr>", { desc = "Quickfix" })
 -- }}}
 
 -- Undo & Redo {{{

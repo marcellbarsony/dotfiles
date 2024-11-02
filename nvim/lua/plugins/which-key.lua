@@ -6,7 +6,6 @@ local wk = require("which-key")
 
 -- Config {{{
 wk.setup {
-
   -- Preset {{{
   ---@type false | "classic" | "modern" | "helix"
   preset = "classic",
@@ -364,7 +363,7 @@ wk.add({
   { "<leader>x",  group = "Plugins" },
   { "<leader>xm", desc = "Mason" },
 
-  { "<leader>z",  group = "Trouble" },
+  -- { "<leader>z",  group = "Trouble" },
   -- }}}
 })
 -- }}}
