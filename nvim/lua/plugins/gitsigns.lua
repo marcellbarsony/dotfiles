@@ -6,9 +6,27 @@ return {
     "lewis6991/gitsigns.nvim",
     event = "VeryLazy",
     opts = {
-      signs_staged_enable     = true,
+      -- Signs {{{
+      signs = {
+        add          = { text = '┃' },
+        change       = { text = '┃' },
+        delete       = { text = '_' },
+        topdelete    = { text = '‾' },
+        changedelete = { text = '~' },
+        untracked    = { text = '┆' },
+      },
+      signs_staged = {
+        add          = { text = '┃' },
+        change       = { text = '┃' },
+        delete       = { text = '_' },
+        topdelete    = { text = '‾' },
+        changedelete = { text = '~' },
+        untracked    = { text = '┆' },
+      },
+      -- }}}
+      signs_staged_enable     = false,
       signcolumn              = false,
-      numhl                   = false,
+      numhl                   = true,
       linehl                  = false,
       word_diff               = false,
 
@@ -20,7 +38,7 @@ return {
       attach_to_untracked     = false,
       current_line_blame      = false,
       current_line_blame_opts = {
-        virt_text          = true,
+        virt_text          = false,
         virt_text_pos      = "eol",
         delay              = 1000,
         ignore_whitespace  = false,

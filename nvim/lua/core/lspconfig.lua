@@ -28,8 +28,8 @@ end
 -- }}}
 
 -- Diagnostics {{{
--- :help vim.diagnostic
 -- https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization#customizing-how-diagnostics-are-displayed
+-- `:h vim.diagnostic`
 vim.diagnostic.config({
   virtual_text = false,
   signs = true,
@@ -40,8 +40,8 @@ vim.diagnostic.config({
 -- }}}
 
 -- Diagnostics [Signs] {{{
--- :h diagnostic-signs
 -- https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization#change-diagnostic-symbols-in-the-sign-column-gutter
+-- `:h diagnostic-signs`
 local signs = { Error = "x", Warn = "!", Hint = "", Info = "i" }
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type

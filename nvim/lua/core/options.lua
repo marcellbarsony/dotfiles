@@ -162,7 +162,7 @@ local options = {
   -- 24. Various {{{
   --virtualedit = all,
   signcolumn = "no",   -- auto / number / yes:1 / no
-  -- statuscolumn = "%=%r%C ",
+  -- statuscolumn = "%=%{v:relnum?v:relnum:v:lnum} ",
 
   -- Buffer
   bufhidden = "",

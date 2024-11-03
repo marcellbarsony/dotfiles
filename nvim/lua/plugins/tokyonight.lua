@@ -19,8 +19,8 @@ return {
         keywords = { italic = true },
         functions = {},
         variables = {},
-        sidebars = "transparent", -- dark
-        floats = "dark",   -- dark
+        sidebars = "transparent", -- transparent/dark
+        floats = "dark", -- transparent/dark
       },
       sidebars = { "qf", "help" },
       day_brightness = 0.5,
@@ -34,6 +34,9 @@ return {
       ---@param c ColorScheme
       on_colors = function(c)
         c.fg_gutter = "#565F89" -- #565F89 / #9D7CD8
+        c.javascript = "#565F89" -- #565F89 / #9D7CD8
+        -- c.tag.javascript = "#565F89" -- #565F89 / #9D7CD8
+        -- c.tag.tsx = "#565F89" -- #565F89 / #9D7CD8
       end,
       -- }}}
 

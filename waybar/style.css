@@ -41,22 +41,6 @@ window#waybar {
     border-top: transparent;
     color: white;
 }
-
-/*#workspaces button.current_output.visible {*/
-/*    background: #90b1b1;*/
-/*    color: blue;*/
-/*}*/
-
-/*#workspaces button.current_output.focused {*/
-/*    background: #ff0088;*/
-/*    color: blue;*/
-/*}*/
-
-/*#workspaces button.focused { */
-/*     color: red;*/
-/*     background: #64F27D;*/
-/*     border-top: 5px solid white;*/
-/*}*/
 /* }}} */
 
 /* Widgets {{{ */

@@ -27,9 +27,9 @@
             "6": [],
             "7": [],
             "8": [],
-            "9": [],
+            "9": []
         },
-        "sort-by-number": true,
+        "sort-by-number": true
     },
     // }}}
 
@@ -78,7 +78,7 @@
         "format-full": "󰁹 {capacity}%",
         "format-charging": "󱐋 {capacity}%",
         "format-plugged": "  {capacity}%",
-        "tooltip": false,
+        "tooltip": false
     },
     // }}}
 
@@ -92,7 +92,7 @@
         "format-ethernet": "{ipaddr}/{cidr}",
         "format-linked": "{ifname} (No IP)",
         "format-wifi": "{icon} {essid}",
-        "tooltip": false,
+        "tooltip": false
     },
     // }}}
 
@@ -107,7 +107,7 @@
         "max-volume": 150,
         "scroll-step": 5.0,
         "tooltip": false,
-        "tooltip-format": "{volume}%",
+        "tooltip-format": "{volume}%"
     },
     // }}}
 
@@ -126,7 +126,7 @@
         "format": " {percentage_used}%",
         "path": "/",
         "tooltip": false,
-        "tooltip-format": "Disk {path} {percentage_used}%",
+        "tooltip-format": "Disk {path} {percentage_used}%"
     },
     // }}}
 
@@ -136,7 +136,7 @@
         "format": "   {percentage}%",
         "tooltip": false,
         "tooltip-format": "RAM: {percentage}%"
-    },
+    }
     // }}}
     // }}}
 }

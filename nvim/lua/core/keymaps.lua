@@ -1,13 +1,14 @@
 -- Keymaps
 -- https://neovim.io/doc/user/map.html
 
--- Modes
+-- Modes {{{
 -- n - normal
 -- i - insert
 -- v - visual
 -- x - visual block
 -- t - term
 -- c - command
+-- }}}
 
 local function map(mode, lhs, rhs, opts)
   local options = { noremap = true, silent = true }
@@ -31,11 +32,12 @@ map("", "<right>", "<nop>")
 -- }}}
 
 -- Buffers {{{
+-- `:h buffer-hidden`
 map("n", "<Tab>", "<cmd>bn<CR>", { desc = "Buffer [Next]" })
 map("n", "<S-Tab>", "<cmd>bp<CR>", { desc = "Buffer [Prev]" })
-map("n", "<C-^>", "<cmd>e #<CR>", { desc = "Alternate file" }) -- :help alternate-file
+map("n", "<C-^>", "<cmd>e #<CR>", { desc = "Alternate file" })
 map("n", "<C-'>", "<cmd>b#<CR>", { desc = "Buffer [To last]" })
-map("n", "<C-q>", "<cmd>bdelete<CR>", { desc = "Buffer [Delete]" }) -- :bd!<CR>
+map("n", "<C-q>", "<cmd>bd<CR>", { desc = "Buffer [Delete]" })
 -- }}}
 
 -- Clipboard (Yank) {{{
@@ -45,31 +47,21 @@ map("x", "p", [["_dp]], { desc = "Paste [Global]" })
 -- }}}
 
 -- DAP {{{
--- :h dap-api
--- :h dap-mappings
-map("n", "<leader>d5", "<cmd>lua require'dap'.continue()<CR>", { desc = "DAP [Continue]" })
-map("n", "<leader>d3", "<cmd>lua require'dap'.step_over()<CR>", { desc = "DAP [Step over]" })
-map("n", "<leader>d2", "<cmd>lua require'dap'.step_into()<CR>", { desc = "DAP [Step into]" })
-map("n", "<leader>d0", "<cmd>lua require'dap'.step_out()<CR>", { desc = "DAP [Step out]" })
+-- `:h dap-api`
+-- `:h dap-mappings`
+map("n", "<leader>d5", "<cmd>lua require'dap'.continue()<CR>", { desc = "Continue" })
+map("n", "<leader>d3", "<cmd>lua require'dap'.step_over()<CR>", { desc = "Step over" })
+map("n", "<leader>d2", "<cmd>lua require'dap'.step_into()<CR>", { desc = "Step into" })
+map("n", "<leader>d0", "<cmd>lua require'dap'.step_out()<CR>", { desc = "Step out" })
 map("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", { desc = "Breakpoint" })
-map("n", "<leader>dc", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>",
-  { desc = "Breakpoint [Condition]" })
-map("n", "<leader>dd", "<cmd>lua require'dap'.set.breakpoint(nul, nul, vim.fn.input('Log point message: '))<CR>",
-  { desc = "Breakpoint [Log point msg]" })
+map("n", "<leader>dc", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", { desc = "Breakpoint [Condition]" })
+map("n", "<leader>dd", "<cmd>lua require'dap'.set.breakpoint(nul, nul, vim.fn.input('Log point message: '))<CR>", { desc = "Breakpoint [Log point msg]" })
 map("n", "<leader>dq", "<cmd>lua require('dap').disconnect()<CR>", { desc = "Quit" })
 map("n", "<leader>dr", "<cmd>lua require'dap'.run_last()<CR>", { desc = "Run last" })
 map("n", "<leader>ds", "<cmd>lua require'dap'.repl.open()<CR>", { desc = "REPL" })
 -- }}}
 
 -- Gitsigns {{{
-map("n", "<leader>gg",
-  "<cmd>Gitsigns toggle_signs<CR><cmd>Gitsigns toggle_numhl<CR><cmd>Gitsigns toggle_current_line_blame<CR>",
-  { desc = "Gitsigns" }
-)
--- map("n", "<leader>gs", "<cmd>Gitsigns toggle_signs<CR>", { desc = "Signs" })
--- map("n", "<leader>gn", "<cmd>Gitsigns toggle_numhl<CR>", { desc = "Numhl" })
--- map("n", "<leader>gb", "<cmd>Gitsigns toggle_current_line_blame<CR>", { desc = "Blame" })
-
 -- Actions
 -- map("n", "<leader>gs", "<cmd>Gitsigns stage_hunk<CR>", { desc = "Stage hunk" })
 -- map("n", "<leader>gs", "<cmd>Gitsigns undo_stage_hunk<CR>", { desc = "Stage hunk [Undo]" })
@@ -79,10 +71,14 @@ map("n", "<leader>gg",
 -- map("n", "<leader>gs", "<cmd>Gitsigns diffthis<CR>", { desc = "Diffthis" })
 -- map("n", "<leader>gs", "<cmd>Gitsigns toggle_deleted<CR>", { desc = "Toggle deleted" })
 
-
 -- Navigation
 -- map('n', ']c', "&diff ? ']c' : '<cmd>Gitsigns next_hunk<CR>'", {expr=true})
 -- map('n', '[c', "&diff ? '[c' : '<cmd>Gitsigns prev_hunk<CR>'", {expr=true})
+
+-- Signs
+-- map("n", "<leader>gs", "<cmd>Gitsigns toggle_signs<CR>", { desc = "Signs" })
+-- map("n", "<leader>gn", "<cmd>Gitsigns toggle_numhl<CR>", { desc = "Numhl" })
+-- map("n", "<leader>gb", "<cmd>Gitsigns toggle_current_line_blame<CR>", { desc = "Blame" })
 
 -- Text object
 map("x", "<leader>gh", "<cmd>Gitsigns select_hunk<CR>", { desc = "Select hunk" })
@@ -90,34 +86,30 @@ map("x", "<leader>gh", "<cmd>Gitsigns select_hunk<CR>", { desc = "Select hunk" }
 
 -- Highlights {{{
 map("n", "<C-c>", "<cmd>nohl<CR>", { desc = "Clear" })
--- map("n", "<leader>cr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "[Highlight] Replace selected" })
+map("n", "<leader>ls", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Substitute" })
 -- }}}
 
 -- Lazy {{{
 map("n", "<leader>vl", "<cmd>Lazy<CR>", { desc = "Lazy" })
 -- }}}
 
--- Lines (Indent) {{{
+-- Lines {{{
+-- Append
+map("n", "J", "mzJ`z", { desc = "Append line below" })
+
+-- Indent
 map("v", "<", "<gv", { desc = "Indent [Left]" })
 map("v", ">", ">gv", { desc = "Indent [Right]" })
--- }}}
 
--- Lines (Misc) {{{
-map("n", "J", "mzJ`z", { desc = "Append line below" })
--- }}}
-
--- Lines (Move) {{{
--- https://vim.fandom.com/wiki/Moving_lines_up_or_down
+-- Move
 map("v", "K", ":move '<-2<CR>gv=gv", { desc = "Move [Up]" })
 map("v", "J", ":move '>+1<CR>gv=gv", { desc = "Move [Down]" })
 map("x", "K", ":move '<-2<CR>gv=gv", { desc = "Block [Move Up]" })
 map("x", "J", ":move '>+1<CR>gv=gv", { desc = "Block [Move Down]" })
--- map("n", "K", ":move .-2<CR>", { desc = "Line [Move Up]" })
--- map("n", "J", ":move .+1<CR>", { desc = "Line [Move Down]" })
 -- }}}
 
 -- LSP {{{
--- :h lspconfig-keybindings
+-- `:h lspconfig-keybindings`
 
 -- Calls
 -- map("n", "<leader>lci", vim.lsp.buf.incoming_calls, { buffer = args.buf, desc = "Incoming" })
@@ -148,7 +140,7 @@ map("n", "gd", vim.lsp.buf.definition, { desc = "Definition" })
 -- map("n", "gi", vim.lsp.buf.implementation, { desc = "Implementation" })
 
 -- Inlay hints
-map("n", "<leader>lv", function()
+map("n", "<leader>lh", function()
   vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = 0 }, { bufnr = 0 })
 end, { desc = "Inlay hints" })
 
@@ -168,11 +160,10 @@ map("n", "<leader>lr", vim.lsp.buf.rename, { desc = "Rename" })
 -- map("n", "<leader>wl", function()
 --   print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
 -- end, opts)
--- }}}
 
--- LSP Help {{{
-map("n", "<leader>lhi", "<cmd>LspInfo<CR>", { desc = "Info" })
-map("n", "<leader>lhl", "<cmd>LspLog<CR>", { desc = "Log" })
+-- LSP Help
+map("n", "<leader>lxi", "<cmd>LspInfo<CR>", { desc = "Info" })
+map("n", "<leader>lxl", "<cmd>LspLog<CR>", { desc = "Log" })
 -- }}}
 
 -- Macro {{{
@@ -201,12 +192,7 @@ map("n", "n", "nzzzv", { desc = "Search [Next]" })      -- Fix n: keep cursor in
 map("n", "N", "Nzzzv", { desc = "Search [Prev]" })      -- Fix N: keep cursor in center
 -- }}}
 
--- Shell movements {{{
-map("i", "<C-A>", "<ESC>I", { desc = "Jump EOL" })
-map("i", "<C-E>", "<ESC>A", { desc = "Jump BOL" })
--- }}}
-
--- Splits (Ctrl + w) {{{
+-- Splits {{{
 map("n", "<C-m>", "<C-w>h", { desc = "Split [Left]" })
 map("n", "<C-n>", "<C-w>j", { desc = "Split [Up]" })
 map("n", "<C-e>", "<C-w>k", { desc = "Split [Down]" })
@@ -221,47 +207,47 @@ map("n", "<C-A-i>", "<cmd>vertical resize +5<CR>", { desc = "Split [Ver -]" })
 map("n", "<leader>tt", "<cmd>Telescope<CR>", { desc = "Telescope" })
 map("n", "<leader>ta", "<cmd>Telescope autocommands<CR>", { desc = "Autocommands" })
 map("n", "<leader>tb", "<cmd>Telescope buffers<CR>", { desc = "Buffers" })
-map("n", "<leader>tc", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Buffer [Current]" })
+map("n", "<leader>tc", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Current Buffer" })
 map("n", "<leader>td", "<cmd>Telescope diagnostics<CR>", { desc = "Diagnostics" })
 map("n", "<leader>tf", "<cmd>Telescope find_files<CR>", { desc = "Find Files" })
 map("n", "<leader>tj", "<cmd>Telescope jumplist<CR>", { desc = "Jumplist" })
 map("n", "<leader>tr", "<cmd>Telescope registers<CR>", { desc = "Registers" })
-map("n", "<leader>ts", "<cmd>Telescope treesitter<CR>", { desc = "Symbols [Treesitter]" })
+map("n", "<leader>ts", "<cmd>Telescope treesitter<CR>", { desc = "Symbols" })
 
--- Telescope - DAP
+-- DAP
 map("n", "<leader>dtc", "<cmd>lua require'telescope'.extensions.dap.commands{}<CR>", { desc = "Commands" })
 map("n", "<leader>dtd", "<cmd>lua require'telescope'.extensions.dap.configurations{}<CR>", { desc = "Config" })
 map("n", "<leader>dtb", "<cmd>lua require'telescope'.extensions.dap.list_breakpoints{}<CR>", { desc = "Breakpoints" })
 map("n", "<leader>dtv", "<cmd>lua require'telescope'.extensions.dap.variables{}<CR>", { desc = "Variables" })
 map("n", "<leader>dtf", "<cmd>lua require'telescope'.extensions.dap.frames{}<CR>", { desc = "Frames" })
 
--- Telescope - GIT
+-- GIT
 map("n", "<leader>gb", "<cmd>Telescope git_branches<CR>", { desc = "Branches" })
 map("n", "<leader>gc", "<cmd>Telescope git_commits<CR>", { desc = "Commits" })
 map("n", "<leader>gf", "<cmd>Telescope git_files<CR>", { desc = "Files" })
 map("n", "<leader>gs", "<cmd>Telescope git_status<CR>", { desc = "Status" })
 
--- Telescope - Grep
+-- Grep
 map("n", "<leader>tg", "<cmd>Telescope live_grep<CR>", { desc = "Grep" })
 
--- Telescope - History
+-- History
 map("n", "<leader>thc", "<cmd>Telescope command_history<CR>", { desc = "Command" })
 map("n", "<leader>thf", "<cmd>Telescope oldfiles<CR>", { desc = "Files" })
 map("n", "<leader>ths", "<cmd>Telescope search_history<CR>", { desc = "Search" })
 
--- Telescope - LSP
-map("n", "<leader>li", "<cmd>Telescope lsp_implementations<CR>", { desc = "Implementations" }) -- !!!
+-- LSP
+map("n", "<leader>li", "<cmd>Telescope lsp_implementations<CR>", { desc = "Implementations" })
 map("n", "<leader>ll", "<cmd>Telescope lsp_references<CR>", { desc = "References" })
 
--- Telescope - LSP Calls
-map("n", "<leader>lui", "<cmd>Telescope lsp_incoming_calls<CR>", { desc = "Incoming" })
-map("n", "<leader>luo", "<cmd>Telescope lsp_outgoing_calls<CR>", { desc = "Outgoing" })
+-- LSP Calls
+map("n", "<leader>lci", "<cmd>Telescope lsp_incoming_calls<CR>", { desc = "Incoming" })
+map("n", "<leader>lco", "<cmd>Telescope lsp_outgoing_calls<CR>", { desc = "Outgoing" })
 
--- Telescope - LSP Symbols
-map("n", "<leader>lsd", "<cmd>Telescope lsp_document_symbols<CR>", { desc = "Document" })
-map("n", "<leader>lsw", "<cmd>Telescope lsp_workspace_symbols<CR>", { desc = "Workspace" })
+-- LSP Symbols
+map("n", "<leader>lzd", "<cmd>Telescope lsp_document_symbols<CR>", { desc = "Document" })
+map("n", "<leader>lzw", "<cmd>Telescope lsp_workspace_symbols<CR>", { desc = "Workspace" })
 
--- Telescope - Vim
+-- Vim
 map("n", "<leader>vtc", "<cmd>Telescope commands<CR>", { desc = "Commands" })
 map("n", "<leader>vth", "<cmd>Telescope highlights<CR>", { desc = "Highlights" })
 map("n", "<leader>vtk", "<cmd>Telescope keymaps<CR>", { desc = "Keymaps" })
@@ -269,7 +255,7 @@ map("n", "<leader>vtm", "<cmd>Telescope man_pages<CR>", { desc = "Man" })
 map("n", "<leader>vto", "<cmd>Telescope vim_options<CR>", { desc = "Options" })
 -- }}}
 
--- Treesitter (Neovim built-ins) {{{
+-- Treesitter {{{
 map("n", "<leader>vii", "<cmd>Inspect<CR>", { desc = "Inspect" })
 map("n", "<leader>vit", "<cmd>InspectTree<CR>", { desc = "Inspect [Tree]" })
 -- }}}
@@ -295,8 +281,9 @@ map("n", "<leader>vsm", "<cmd>mkspell! %<CR>", { desc = "Mkspell" })
 -- }}}
 
 -- VISUAL {{{
+-- Sort
 map("v", "<leader>sa", "<cmd>sort<CR>", { desc = "Alphabetical" })
 map("v", "<leader>sc", "<cmd>sort i<CR>", { desc = "Case-sensitive" })
 map("v", "<leader>sn", "<cmd>sort n<CR>", { desc = "Numerical" })
 map("v", "<leader>sr", "<cmd>sort<CR>", { desc = "Reverse" })
-  -- }}}
+-- }}}

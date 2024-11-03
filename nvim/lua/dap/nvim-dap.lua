@@ -20,11 +20,15 @@ return {
       -- :h dap-configuration
 
       -- Signs
-      vim.fn.sign_define("DapBreakpoint", { text = "B", texthl = "", linehl = "", numhl = "" })
-      vim.fn.sign_define("DapBreakpointCondition", { text = "C", texthl = "", linehl = "", numhl = "" })
-      vim.fn.sign_define("DapLogPoint", { text = "L", texthl = "", linehl = "", numhl = "" })
-      vim.fn.sign_define("DapStopped", { text = "→", texthl = "", linehl = "", numhl = "" })
-      vim.fn.sign_define("DapBreakpointRejected", { text = "R", texthl = "", linehl = "", numhl = "" })
+      vim.cmd("highlight DapBreakpointNr guifg=#FFFFFF")
+      vim.cmd("highlight DapBreakpointStop guifg=#FF9900")
+      vim.cmd("highlight DapBreakpointReject guifg=#FF4400")
+
+      vim.fn.sign_define("DapBreakpoint", { text = "B", texthl = "", linehl = "", numhl = "DapBreakpointNr" })
+      vim.fn.sign_define("DapBreakpointCondition", { text = "C", texthl = "", linehl = "", numhl = "DapBreakpointNr" })
+      vim.fn.sign_define("DapLogPoint", { text = "L", texthl = "", linehl = "", numhl = "DapBreakpointNr" })
+      vim.fn.sign_define("DapStopped", { text = "→", texthl = "", linehl = "", numhl = "DapBreakpointStop" })
+      vim.fn.sign_define("DapBreakpointRejected", { text = "R", texthl = "", linehl = "", numhl = "DapBreakpointReject" })
 
       -- Terminal
       -- h: dap-terminal

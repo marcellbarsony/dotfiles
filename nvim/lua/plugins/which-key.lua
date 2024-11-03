@@ -387,9 +387,9 @@ return {
         { "<leader>h",  group = "HEX" },
 
         { "<leader>l",  group = "LSP" },
-        { "<leader>lh", desc = "Help" },
-        { "<leader>ls", desc = "Symbols" },
-        { "<leader>lu", desc = "Calls" },
+        { "<leader>lc", desc = "Calls" },
+        { "<leader>lx", desc = "Help" },
+        { "<leader>lz", desc = "Symbols" },
 
         { "<leader>p",  group = "Python" },
         { "<leader>pd", group = "DAP" },
