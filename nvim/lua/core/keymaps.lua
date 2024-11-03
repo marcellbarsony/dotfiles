@@ -33,7 +33,7 @@ map("", "<right>", "<nop>")
 -- Buffers {{{
 map("n", "<Tab>", "<cmd>bn<CR>", { desc = "Buffer [Next]" })
 map("n", "<S-Tab>", "<cmd>bp<CR>", { desc = "Buffer [Prev]" })
-map("n", "<C-^>", "<cmd>e #<CR>", { desc = "Alternate file" })      -- :help alternate-file
+map("n", "<C-^>", "<cmd>e #<CR>", { desc = "Alternate file" }) -- :help alternate-file
 map("n", "<C-'>", "<cmd>b#<CR>", { desc = "Buffer [To last]" })
 map("n", "<C-q>", "<cmd>bdelete<CR>", { desc = "Buffer [Delete]" }) -- :bd!<CR>
 -- }}}
@@ -86,12 +86,6 @@ map("n", "<leader>gg",
 
 -- Text object
 map("x", "<leader>gh", "<cmd>Gitsigns select_hunk<CR>", { desc = "Select hunk" })
--- }}}
-
--- HEX {{{
-map("n", "<leader>hd", "<cmd>HexDump<CR>", { desc = "Dump" })
-map("n", "<leader>ht", "<cmd>HexToggle<CR>", { desc = "Toggle" })
-map("n", "<leader>ha", "<cmd>HexAssemble<CR>", { desc = "Assemble" })
 -- }}}
 
 -- Highlights {{{
@@ -227,7 +221,7 @@ map("n", "<C-A-i>", "<cmd>vertical resize +5<CR>", { desc = "Split [Ver -]" })
 map("n", "<leader>tt", "<cmd>Telescope<CR>", { desc = "Telescope" })
 map("n", "<leader>ta", "<cmd>Telescope autocommands<CR>", { desc = "Autocommands" })
 map("n", "<leader>tb", "<cmd>Telescope buffers<CR>", { desc = "Buffers" })
-map("n", "<leader>tc", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Buffer [Fuzzy current]" })
+map("n", "<leader>tc", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Buffer [Current]" })
 map("n", "<leader>td", "<cmd>Telescope diagnostics<CR>", { desc = "Diagnostics" })
 map("n", "<leader>tf", "<cmd>Telescope find_files<CR>", { desc = "Find Files" })
 map("n", "<leader>tj", "<cmd>Telescope jumplist<CR>", { desc = "Jumplist" })
@@ -296,7 +290,6 @@ map("n", "<C-r>", "<cmd>redo<CR>", { desc = "Redo" })
 
 -- VIM {{{
 map("n", "<leader>vh", "<cmd>checkhealth<CR>", { desc = "Health" })
-map("n", "<leader>vo", "<cmd>options<CR>", { desc = "Options" })
 map("n", "<leader>vss", "<cmd>set spell!<CR>", { desc = "Spell" })
 map("n", "<leader>vsm", "<cmd>mkspell! %<CR>", { desc = "Mkspell" })
 -- }}}

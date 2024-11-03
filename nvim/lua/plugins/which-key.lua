@@ -347,6 +347,7 @@ return {
         { "zg", desc = "Spelling [Add word]" },
         { "zH", desc = "Move left" },
         { "zL", desc = "Move right" },
+        { "zM", desc = "Close all" },
         { "zo", desc = "Open" },
         { "zO", desc = "Open [All]" },
         { "zR", desc = "Open [All]" },

@@ -85,7 +85,7 @@ return {
           "pyright",       -- Python (npm required)
         },
         ---@type boolean
-        automatic_installation = false,
+        automatic_installation = true,
 
         -- Handlers {{{
         -- `:h mason-lspconfig.setup_handlers()`
@@ -129,6 +129,12 @@ return {
           end,
           -- }}}
 
+          -- Rust {{{
+          -- Prevent invoking `lspconfig.rust_analyzer`
+          -- `:h rustaceanvim.mason`
+          ['rust_analyzer'] = function() end,
+          -- }}}
+
           -- TypeScript & JavaScript {{{
           -- https://github.com/typescript-language-server/typescript-language-server
           -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver
@@ -156,6 +162,7 @@ return {
           "python",      -- debugpy
           "codelldb",    -- rust
         },
+        ---@type boolean
         automatic_installation = true,
       })
       -- }}}

@@ -1,6 +1,6 @@
 -- Rustaceanvim
 -- https://github.com/mrcjkb/rustaceanvim
--- `:h rustaceanvim.config`
+-- `:h rustaceanvim`
 
 return {
   {

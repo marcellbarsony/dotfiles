@@ -1,5 +1,7 @@
 -- CMP
 -- https://github.com/hrsh7th/nvim-cmp
+-- `:h cmp`
+-- `:h nvim-cmp`
 
 return {
   {

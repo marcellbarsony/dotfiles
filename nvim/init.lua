@@ -20,6 +20,7 @@ vim.opt.rtp:prepend(lazypath)
 -- Lazy setup
 require("lazy").setup({
   spec = {
+    { import = "dap" },
     { import = "plugins" },
   },
   checker = { enabled = false },
