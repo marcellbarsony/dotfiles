@@ -10,7 +10,6 @@ return {
       "nvim-neotest/nvim-nio"
     },
     config = function()
-      -- Setup {{{
       require("dapui").setup({
         -- Controls {{{
         controls = {
@@ -35,7 +34,7 @@ return {
         -- }}}
 
         -- Expand lines {{{
-        expand_lines = vim.fn.has("nvim-0.7") == 0,   --true
+        expand_lines = true,
         -- }}}
 
         -- Floating {{{
@@ -53,9 +52,9 @@ return {
 
         -- Icons {{{
         icons = {
+          collapsed = ">",
+          current_frame = ">",
           expanded = "",
-          collapsed = ">",         -- 
-          current_frame = ">",     -- 
         },
         -- }}}
 
@@ -65,7 +64,7 @@ return {
             elements = {
               {
                 id = "scopes",
-                size = 0.55
+                size = 0.65
               },
               {
                 id = "watches",
@@ -95,7 +94,7 @@ return {
               }
             },
             position = "bottom",
-            size = 8
+            size = 6
           }
         },
         -- }}}
@@ -118,19 +117,21 @@ return {
         }
         -- }}}
       })
-      -- }}}
 
       -- Event listeners {{{
       local dap, dapui = require("dap"), require("dapui")
 
-      dap.listeners.after.event_initialized["dapui_config"] = function()
-        dapui.open()   -- Open DAP UI
+      dap.listeners.before.attach.dapui_config = function()
+        dapui.open()
       end
-      dap.listeners.before.event_terminated["dapui_config"] = function()
-        dapui.close()   -- Terminate DAP UI
+      dap.listeners.before.launch.dapui_config = function()
+        dapui.open()
       end
-      dap.listeners.before.event_exited["dapui_config"] = function()
-        dapui.close()   -- Close DAP UI
+      dap.listeners.before.event_terminated.dapui_config = function()
+        dapui.close()
+      end
+      dap.listeners.before.event_exited.dapui_config = function()
+        dapui.close()
       end
       -- }}}
     end

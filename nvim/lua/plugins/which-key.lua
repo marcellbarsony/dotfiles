@@ -381,6 +381,7 @@ return {
 
         { "<leader>d",  group = "DAP" },
         { "<leader>dt", group = "Telescope" },
+        { "<leader>dp", group = "Breakpoints" },
 
         { "<leader>g",  group = "GIT" },
 
@@ -400,9 +401,10 @@ return {
         { "<leader>th", desc = "History" },
 
         { "<leader>v",  group = "VIM" },
-        { "<leader>vi", desc = "Treesitter" },
+        { "<leader>vh", desc = "History" },
         { "<leader>vs", desc = "Spell" },
         { "<leader>vt", desc = "Telescope" },
+        { "<leader>vz", desc = "Treesitter" },
 
         -- { "<leader>z",  group = "Trouble" },
         -- }}}

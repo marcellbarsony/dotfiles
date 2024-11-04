@@ -1,10 +1,12 @@
 -- Telescope
 -- https://github.com/nvim-telescope/telescope.nvim
+-- https://github.com/nvim-lua/plenary.nvim
 -- `:h telescope.nvim`
 
 return {
   {
     "nvim-telescope/telescope.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
     cmd = "Telescope",
     opts = function()
       local actions = require("telescope.actions")
@@ -24,8 +26,9 @@ return {
           -- Mode
           initial_mode = "insert",
 
-          -- Mappings
+          -- Mappings & Actions
           -- https://github.com/nvim-telescope/telescope.nvim/blob/master/lua/telescope/mappings.lua
+          -- https://github.com/nvim-telescope/telescope.nvim/blob/master/lua/telescope/actions/init.lua
           mappings = {
             -- Insert {{{
             i = {
@@ -127,12 +130,15 @@ return {
 
         -- Pickers {{{
         pickers = {
-          -- picker_name = {
-          --   picker_config_key = value,
-          --   ...
-          -- }
+          buffers = {
+            mappings = {
+              i = {
+                ["<c-d>"] = actions.delete_buffer + actions.move_to_top,
+              }
+            }
+          },
           find_files = {
-            -- theme = "dropdown",
+            find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
           }
         },
         -- }}}

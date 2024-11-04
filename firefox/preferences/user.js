@@ -77,10 +77,6 @@ user_pref("services.sync.prefs.sync.browser.urlbar.suggest.openpage", false);
 user_pref("services.sync.prefs.sync.browser.urlbar.suggest.searches", false);
 user_pref("services.sync.prefs.sync.browser.urlbar.suggest.topsites", false);
 
-// SANITIZE ON SHUTDOWN
-user_pref("privacy.clearOnShutdown.history", false); // 2811
-user_pref("privacy.clearOnShutdown.sessions", false); // 2811
-
 // SIDEBAR
 user_pref("sidebar.position_start", false);
 user_pref("sidebar.revamp", false);
@@ -91,7 +87,6 @@ user_perf("browser.tabs.hoverPreview.showThumbnails", 0);
 
 // TOOLBAR
 user_pref("browser.compactmode.show", true);
-//user_pref("browser.tabs.firefox-view", false);
 user_pref("browser.tabs.tabmanager.enabled", false);
 
 // TRANSLATION
@@ -99,10 +94,6 @@ user_pref("browser.translations.neverTranslateLanguages", "hu");
 
 // WEBSITE APPEARANCE
 user_pref("layout.css.prefers-color-scheme.content-override", 0);
-
-/* TODO */
-// Disable dialog: "save login info for..."
-
 // }}}
 
 // 0100 - STARTUP {{{
@@ -214,6 +205,10 @@ user_pref("devtools.debugger.remote-enabled", true);
 
 // 2800 - SHUTDOWN & SANITIZING {{{
 user_pref("_user.js.astronaut", "2800: The cosmos is full of wonders");
+// 2811: Sanitize on shutdown (history)
+user_pref("privacy.clearOnShutdown.history", false);
+// 2815: Sanitize on shutdown (sessions)
+user_pref("privacy.clearOnShutdown.sessions", false);
 // 2840: set "Time range to clear" for "Clear Data" (2820) and "Clear History" (2830)
 // Opts: 0 - Everything, 1 - Last hour, 2 - Last two hours, 3 - Last four hours, 4 - Today
 user_pref("privacy.sanitize.timeSpan", 0);

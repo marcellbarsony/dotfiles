@@ -49,16 +49,17 @@ map("x", "p", [["_dp]], { desc = "Paste [Global]" })
 -- DAP {{{
 -- `:h dap-api`
 -- `:h dap-mappings`
-map("n", "<leader>d5", "<cmd>lua require'dap'.continue()<CR>", { desc = "Continue" })
-map("n", "<leader>d3", "<cmd>lua require'dap'.step_over()<CR>", { desc = "Step over" })
-map("n", "<leader>d2", "<cmd>lua require'dap'.step_into()<CR>", { desc = "Step into" })
-map("n", "<leader>d0", "<cmd>lua require'dap'.step_out()<CR>", { desc = "Step out" })
+map("n", "<F1>", "<cmd>lua require'dap'.continue()<CR>", { desc = "Continue" })
+map("n", "<F2>", "<cmd>lua require'dap'.step_over()<CR>", { desc = "Step over" })
+map("n", "<F3>", "<cmd>lua require'dap'.step_into()<CR>", { desc = "Step into" })
+map("n", "<F4>", "<cmd>lua require'dap'.step_out()<CR>", { desc = "Step out" })
+map("n", "<F5>", "<cmd>lua require'dap'.step_back()<CR>", { desc = "Step back" })
 map("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", { desc = "Breakpoint" })
-map("n", "<leader>dc", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", { desc = "Breakpoint [Condition]" })
-map("n", "<leader>dd", "<cmd>lua require'dap'.set.breakpoint(nul, nul, vim.fn.input('Log point message: '))<CR>", { desc = "Breakpoint [Log point msg]" })
-map("n", "<leader>dq", "<cmd>lua require('dap').disconnect()<CR>", { desc = "Quit" })
-map("n", "<leader>dr", "<cmd>lua require'dap'.run_last()<CR>", { desc = "Run last" })
+map("n", "<leader>dq", "<cmd>lua require('dap').disconnect({ terminateDebuggee = false })<CR>", { desc = "Quit" })
+map("n", "<leader>dr", "<cmd>lua require'dap'.restart()<CR>", { desc = "Restart" })
 map("n", "<leader>ds", "<cmd>lua require'dap'.repl.open()<CR>", { desc = "REPL" })
+map("n", "<leader>dpc", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", { desc = "Breakpoint [Condition]" })
+map("n", "<leader>dpl", "<cmd>lua require'dap'.set.breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>", { desc = "Breakpoint [Log point msg]" })
 -- }}}
 
 -- Gitsigns {{{
@@ -112,26 +113,24 @@ map("x", "J", ":move '>+1<CR>gv=gv", { desc = "Block [Move Down]" })
 -- `:h lspconfig-keybindings`
 
 -- Calls
--- map("n", "<leader>lci", vim.lsp.buf.incoming_calls, { buffer = args.buf, desc = "Incoming" })
--- map("n", "<leader>lco", vim.lsp.buf.outgoing_calls, { buffer = args.buf, desc = "Outgoing" })
+-- map("n", "<leader>lci", vim.lsp.buf.incoming_calls, { buffer = args.buf, desc = "Incoming" }) -- Telescope
+-- map("n", "<leader>lco", vim.lsp.buf.outgoing_calls, { buffer = args.buf, desc = "Outgoing" }) -- Telescope
 
 -- Code action
 map({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, { desc = "Action" })
 
 -- Diagnostics
 map("n", "<leader>ld", vim.diagnostic.open_float, { opts = opts, desc = "Diagnostics" })
--- map("n", "]d", vim.diagnostic.goto_next, { opts = opts, desc = "Next diagnostic" })     -- default map
--- map("n", "[d", vim.diagnostic.goto_prev, { opts = opts, desc = "Previous diagnostic" }) -- default map
--- map("n", "<leader>q", vim.diagnostic.setloclist, { opts = opts, desc = "Set localist" })
+map("n", "]d", vim.diagnostic.goto_next, { opts = opts, desc = "Next diagnostic" })     -- default map
+map("n", "[d", vim.diagnostic.goto_prev, { opts = opts, desc = "Previous diagnostic" }) -- default map
+-- map("n", "<leader>ll", vim.diagnostic.setloclist, { opts = opts, desc = "Set localist" })
 
 -- Documentation
--- nvim-lspconfig maps K to vim.lsp.buf.hover()
-map("n", "<leader>lk", vim.lsp.buf.hover, { desc = "Documentation" })
+-- Default: nvim-lspconfig maps `K` to vim.lsp.buf.hover()
+-- map("n", "<leader>lk", vim.lsp.buf.hover, { desc = "Documentation" })
 
 -- Formatting
-map("n", "<leader>lf", function()
-  vim.lsp.buf.format { async = true }
-end, { desc = "Format" })
+map("n", "<leader>lf", function() vim.lsp.buf.format { async = true } end, { desc = "Format" })
 
 -- Go-To
 map("n", "gd", vim.lsp.buf.definition, { desc = "Definition" })
@@ -140,7 +139,7 @@ map("n", "gd", vim.lsp.buf.definition, { desc = "Definition" })
 -- map("n", "gi", vim.lsp.buf.implementation, { desc = "Implementation" })
 
 -- Inlay hints
-map("n", "<leader>lh", function()
+map("n", "<leader>li", function()
   vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = 0 }, { bufnr = 0 })
 end, { desc = "Inlay hints" })
 
@@ -152,14 +151,12 @@ end, { desc = "Inlay hints" })
 map("n", "<leader>lr", vim.lsp.buf.rename, { desc = "Rename" })
 
 -- Signature help
--- map("n", "<C-k>", vim.lsp.buf.signature_help, { desc = "Signature help" })
+map("n", "<C-k>", vim.lsp.buf.signature_help, { desc = "Signature help" })
 
 -- Workspace folder
--- map("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, { desc = "Workspace folder [Add]"})
--- map("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, { desc = "Workspace folder [Remove]"})
--- map("n", "<leader>wl", function()
---   print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
--- end, opts)
+-- map("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, { desc = "Workspace folder [Add]" })
+-- map("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, { desc = "Workspace folder [Remove]" })
+-- map("n", "<leader>wl", function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end, {desc = "Workspace folder [List]" })
 
 -- LSP Help
 map("n", "<leader>lxi", "<cmd>LspInfo<CR>", { desc = "Info" })
@@ -198,8 +195,8 @@ map("n", "<C-n>", "<C-w>j", { desc = "Split [Up]" })
 map("n", "<C-e>", "<C-w>k", { desc = "Split [Down]" })
 map("n", "<C-i>", "<C-w>l", { desc = "Split [Right]" })
 map("n", "<C-A-m>", "<cmd>vertical resize -5<CR>", { desc = "Split [Ver +]" })
-map("n", "<C-A-n>", "<cmd>resize +5<CR>", { desc = "Split [Hor +]" })
-map("n", "<C-A-e>", "<cmd>resize -5<CR>", { desc = "Split [Hor -]" })
+map("n", "<C-A-n>", "<cmd>horizontal resize +5<CR>", { desc = "Split [Hor +]" })
+map("n", "<C-A-e>", "<cmd>horizontal resize -5<CR>", { desc = "Split [Hor -]" })
 map("n", "<C-A-i>", "<cmd>vertical resize +5<CR>", { desc = "Split [Ver -]" })
 -- }}}
 
@@ -210,13 +207,15 @@ map("n", "<leader>tb", "<cmd>Telescope buffers<CR>", { desc = "Buffers" })
 map("n", "<leader>tc", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Current Buffer" })
 map("n", "<leader>td", "<cmd>Telescope diagnostics<CR>", { desc = "Diagnostics" })
 map("n", "<leader>tf", "<cmd>Telescope find_files<CR>", { desc = "Find Files" })
+map("n", "<leader>tg", "<cmd>Telescope live_grep<CR>", { desc = "Grep" })
 map("n", "<leader>tj", "<cmd>Telescope jumplist<CR>", { desc = "Jumplist" })
+map("n", "<leader>to", "<cmd>Telescope oldfiles<CR>", { desc = "Old Files" })
 map("n", "<leader>tr", "<cmd>Telescope registers<CR>", { desc = "Registers" })
 map("n", "<leader>ts", "<cmd>Telescope treesitter<CR>", { desc = "Symbols" })
 
 -- DAP
+map("n", "<leader>dd", "<cmd>lua require'telescope'.extensions.dap.configurations{}<CR>", { desc = "Debug" })
 map("n", "<leader>dtc", "<cmd>lua require'telescope'.extensions.dap.commands{}<CR>", { desc = "Commands" })
-map("n", "<leader>dtd", "<cmd>lua require'telescope'.extensions.dap.configurations{}<CR>", { desc = "Config" })
 map("n", "<leader>dtb", "<cmd>lua require'telescope'.extensions.dap.list_breakpoints{}<CR>", { desc = "Breakpoints" })
 map("n", "<leader>dtv", "<cmd>lua require'telescope'.extensions.dap.variables{}<CR>", { desc = "Variables" })
 map("n", "<leader>dtf", "<cmd>lua require'telescope'.extensions.dap.frames{}<CR>", { desc = "Frames" })
@@ -227,25 +226,12 @@ map("n", "<leader>gc", "<cmd>Telescope git_commits<CR>", { desc = "Commits" })
 map("n", "<leader>gf", "<cmd>Telescope git_files<CR>", { desc = "Files" })
 map("n", "<leader>gs", "<cmd>Telescope git_status<CR>", { desc = "Status" })
 
--- Grep
-map("n", "<leader>tg", "<cmd>Telescope live_grep<CR>", { desc = "Grep" })
-
--- History
-map("n", "<leader>thc", "<cmd>Telescope command_history<CR>", { desc = "Command" })
-map("n", "<leader>thf", "<cmd>Telescope oldfiles<CR>", { desc = "Files" })
-map("n", "<leader>ths", "<cmd>Telescope search_history<CR>", { desc = "Search" })
-
 -- LSP
-map("n", "<leader>li", "<cmd>Telescope lsp_implementations<CR>", { desc = "Implementations" })
 map("n", "<leader>ll", "<cmd>Telescope lsp_references<CR>", { desc = "References" })
-
--- LSP Calls
-map("n", "<leader>lci", "<cmd>Telescope lsp_incoming_calls<CR>", { desc = "Incoming" })
-map("n", "<leader>lco", "<cmd>Telescope lsp_outgoing_calls<CR>", { desc = "Outgoing" })
-
--- LSP Symbols
-map("n", "<leader>lzd", "<cmd>Telescope lsp_document_symbols<CR>", { desc = "Document" })
-map("n", "<leader>lzw", "<cmd>Telescope lsp_workspace_symbols<CR>", { desc = "Workspace" })
+map("n", "<leader>lci", "<cmd>Telescope lsp_incoming_calls<CR>", { desc = "Incoming calls" })
+map("n", "<leader>lco", "<cmd>Telescope lsp_outgoing_calls<CR>", { desc = "Outgoing calls" })
+map("n", "<leader>lzd", "<cmd>Telescope lsp_document_symbols<CR>", { desc = "Document symbols" })
+map("n", "<leader>lzw", "<cmd>Telescope lsp_workspace_symbols<CR>", { desc = "Workspace symbols" })
 
 -- Vim
 map("n", "<leader>vtc", "<cmd>Telescope commands<CR>", { desc = "Commands" })
@@ -253,11 +239,13 @@ map("n", "<leader>vth", "<cmd>Telescope highlights<CR>", { desc = "Highlights" }
 map("n", "<leader>vtk", "<cmd>Telescope keymaps<CR>", { desc = "Keymaps" })
 map("n", "<leader>vtm", "<cmd>Telescope man_pages<CR>", { desc = "Man" })
 map("n", "<leader>vto", "<cmd>Telescope vim_options<CR>", { desc = "Options" })
+map("n", "<leader>vhd", "<cmd>Telescope command_history<CR>", { desc = "Command history" })
+map("n", "<leader>vhs", "<cmd>Telescope search_history<CR>", { desc = "Search history" })
 -- }}}
 
 -- Treesitter {{{
-map("n", "<leader>vii", "<cmd>Inspect<CR>", { desc = "Inspect" })
-map("n", "<leader>vit", "<cmd>InspectTree<CR>", { desc = "Inspect [Tree]" })
+map("n", "<leader>vzi", "<cmd>Inspect<CR>", { desc = "Inspect" })
+map("n", "<leader>vzt", "<cmd>InspectTree<CR>", { desc = "Inspect [Tree]" })
 -- }}}
 
 -- Trouble {{{
@@ -275,7 +263,7 @@ map("n", "<C-r>", "<cmd>redo<CR>", { desc = "Redo" })
 -- }}}
 
 -- VIM {{{
-map("n", "<leader>vh", "<cmd>checkhealth<CR>", { desc = "Health" })
+map("n", "<leader>vc", "<cmd>checkhealth<CR>", { desc = "Check Health" })
 map("n", "<leader>vss", "<cmd>set spell!<CR>", { desc = "Spell" })
 map("n", "<leader>vsm", "<cmd>mkspell! %<CR>", { desc = "Mkspell" })
 -- }}}

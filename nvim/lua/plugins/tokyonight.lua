@@ -35,8 +35,6 @@ return {
       on_colors = function(c)
         c.fg_gutter = "#565F89" -- #565F89 / #9D7CD8
         c.javascript = "#565F89" -- #565F89 / #9D7CD8
-        -- c.tag.javascript = "#565F89" -- #565F89 / #9D7CD8
-        -- c.tag.tsx = "#565F89" -- #565F89 / #9D7CD8
       end,
       -- }}}
 
@@ -51,10 +49,12 @@ return {
         hl.LineNr = { fg = c.magenta }                         -- Gutter line number
         hl.MatchParen = { fg = c.magenta, bold = true }        -- Matching parenthesis
         hl.MsgArea = { fg = c.magenta }                        -- Message and cmdline area
-        hl.Pmenu = { bg = transparent }                        -- Popup menu
         hl.Search = { bg = c.blue7, fg = c.fg }                -- Search
         hl.TreesitterContext = { bg = transparent }            -- Treesitter context menu
         hl.LspInlayHint = { bg = transparent, fg = c.comment } -- LSP Inlay hint
+        hl.GitSignsChange = { fg = "#7090EE" }                 -- GitSigns
+        hl.GitSignsDelete = { fg = "#601020" }                 -- GitSigns
+        -- hl.Pmenu = { bg = transparent }                        -- Popup menu
       end,
       -- }}}
     },

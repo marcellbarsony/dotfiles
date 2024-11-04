@@ -8,13 +8,11 @@ return {
     build = ":MasonUpdate",
     dependencies = {
       "williamboman/mason-lspconfig.nvim",
-      "jay-babu/mason-nvim-dap.nvim",
       "onsails/lspkind.nvim",
     },
     config = function ()
       local lspconfig = require("lspconfig")
       local mason = require("mason")
-      local mason_dap = require("mason-nvim-dap")
       local mason_lspconfig = require("mason-lspconfig")
 
       -- Mason Setup {{{
@@ -152,18 +150,6 @@ return {
           -- }}}
         },
         -- }}}
-      })
-      -- }}}
-
-      -- Mason DAP {{{
-      -- https://github.com/jay-babu/mason-nvim-dap.nvim
-      mason_dap.setup({
-        ensure_installed = {
-          "python",      -- debugpy
-          "codelldb",    -- rust
-        },
-        ---@type boolean
-        automatic_installation = true,
       })
       -- }}}
     end

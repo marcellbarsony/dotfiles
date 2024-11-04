@@ -21,6 +21,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     { import = "dap" },
+    { import = "mason" },
     { import = "plugins" },
   },
   checker = { enabled = false },
