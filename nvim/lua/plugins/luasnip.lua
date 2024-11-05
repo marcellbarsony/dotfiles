@@ -1,6 +1,7 @@
 -- Luasnip
 -- https://github.com/L3MON4D3/LuaSnip
 -- https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
+-- https://github.com/saadparwaiz1/cmp_luasnip
 -- `:h luasnip.txt`
 
 return {
@@ -15,7 +16,7 @@ return {
       local types = require("luasnip.util.types")
 
       -- Config {{{
-      -- :h luasnip-config-options
+      -- `:h luasnip-config-options`
       ls.setup({
         keep_roots = true,
         link_roots = true,
@@ -42,39 +43,40 @@ return {
 
       -- Keymaps {{{
       -- https://github.com/L3MON4D3/LuaSnip/#keymaps
-      -- Jump (forward)
+      -- Jump [forward]
       vim.keymap.set({ "i", "s" }, "<c-l>", function()
         if ls.expand_or_jumpable() then
           ls.expand_or_jump()
         end
       end, { silent = true })
 
-      -- Jump (backward)
+      -- Jump [backward]
       vim.keymap.set({ "i", "s" }, "<c-h>", function()
         if ls.jumpable() then
           ls.jump(-1)
         end
       end, { silent = true })
 
-      -- Choice (+)
+      -- Choice [+]
       vim.keymap.set("i", "<c-k>", function()
         if ls.choice_active() then
           ls.change_choice(1)
         end
       end)
 
-      -- Choice (-)
+      -- Choice [-]
       vim.keymap.set({ "i" }, "<c-j>", function()
         if ls.choice_active() then
           ls.change_choice(-1)
         end
       end)
-      
+
       -- Reload snippets <Ctrl-u>
       -- vim.keymap.set({ "i", "s" }, "<c-u>", "<cmd>source ~/.config/nvim/lua/user/plugins/luasnip.lua<CR>")
       -- }}}
 
       -- Source snippets {{{
+      -- https://github.com/L3MON4D3/LuaSnip/blob/master/DOC.md#lua
       require("luasnip.loaders.from_lua").load({
         paths = "~/.config/nvim/snippets/"
       })

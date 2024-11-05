@@ -24,6 +24,10 @@ vim.g.mapleader = "\\"
 vim.g.maplocalleader = "\\"
 -- }}}
 
+-- Alpha {{{
+map("n", "<leader>vpa", "<cmd>Alpha<CR>", { desc = "Alpha" })
+-- }}}
+
 -- Arrow keys {{{
 map("", "<up>", "<nop>")
 map("", "<down>", "<nop>")
@@ -55,11 +59,11 @@ map("n", "<F3>", "<cmd>lua require'dap'.step_into()<CR>", { desc = "Step into" }
 map("n", "<F4>", "<cmd>lua require'dap'.step_out()<CR>", { desc = "Step out" })
 map("n", "<F5>", "<cmd>lua require'dap'.step_back()<CR>", { desc = "Step back" })
 map("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", { desc = "Breakpoint" })
+map("n", "<leader>dB", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", { desc = "Breakpoint [Condition]" })
+map("n", "<leader>dl", "<cmd>lua require'dap'.set.breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>", { desc = "Log point" })
 map("n", "<leader>dq", "<cmd>lua require('dap').disconnect({ terminateDebuggee = false })<CR>", { desc = "Quit" })
 map("n", "<leader>dr", "<cmd>lua require'dap'.restart()<CR>", { desc = "Restart" })
-map("n", "<leader>ds", "<cmd>lua require'dap'.repl.open()<CR>", { desc = "REPL" })
-map("n", "<leader>dpc", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", { desc = "Breakpoint [Condition]" })
-map("n", "<leader>dpl", "<cmd>lua require'dap'.set.breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>", { desc = "Breakpoint [Log point msg]" })
+map("n", "<leader>dR", "<cmd>lua require'dap'.repl.open()<CR>", { desc = "REPL" })
 -- }}}
 
 -- Gitsigns {{{
@@ -91,7 +95,7 @@ map("n", "<leader>ls", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], {
 -- }}}
 
 -- Lazy {{{
-map("n", "<leader>vl", "<cmd>Lazy<CR>", { desc = "Lazy" })
+map("n", "<leader>vpl", "<cmd>Lazy<CR>", { desc = "Lazy" })
 -- }}}
 
 -- Lines {{{
@@ -159,8 +163,8 @@ map("n", "<C-k>", vim.lsp.buf.signature_help, { desc = "Signature help" })
 -- map("n", "<leader>wl", function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end, {desc = "Workspace folder [List]" })
 
 -- LSP Help
-map("n", "<leader>lxi", "<cmd>LspInfo<CR>", { desc = "Info" })
-map("n", "<leader>lxl", "<cmd>LspLog<CR>", { desc = "Log" })
+map("n", "<leader>lhi", "<cmd>LspInfo<CR>", { desc = "Info" })
+map("n", "<leader>lhl", "<cmd>LspLog<CR>", { desc = "Log" })
 -- }}}
 
 -- Macro {{{
@@ -169,7 +173,7 @@ map("x", "Q", ":norm @qj<CR>", { desc = "Macro [Replay Block]" })
 -- }}}
 
 -- Mason {{{
-map("n", "<leader>vm", "<cmd>Mason<CR>", { desc = "Mason" })
+map("n", "<leader>vpm", "<cmd>Mason<CR>", { desc = "Mason" })
 -- }}}
 
 -- Navigation {{{
@@ -209,16 +213,13 @@ map("n", "<C-w>H", "<C-w>H", { desc = "Transform [H > V]" })
 
 -- Telescope {{{
 map("n", "<leader>tt", "<cmd>Telescope<CR>", { desc = "Telescope" })
-map("n", "<leader>ta", "<cmd>Telescope autocommands<CR>", { desc = "Autocommands" })
 map("n", "<leader>tb", "<cmd>Telescope buffers<CR>", { desc = "Buffers" })
 map("n", "<leader>tc", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Current Buffer" })
 map("n", "<leader>td", "<cmd>Telescope diagnostics<CR>", { desc = "Diagnostics" })
 map("n", "<leader>tf", "<cmd>Telescope find_files<CR>", { desc = "Find Files" })
 map("n", "<leader>tg", "<cmd>Telescope live_grep<CR>", { desc = "Grep" })
-map("n", "<leader>tj", "<cmd>Telescope jumplist<CR>", { desc = "Jumplist" })
+map("n", "<leader>tG", "<cmd>Telescope live_grep<CR>", { desc = "Grep [String]" })
 map("n", "<leader>to", "<cmd>Telescope oldfiles<CR>", { desc = "Old Files" })
-map("n", "<leader>tr", "<cmd>Telescope registers<CR>", { desc = "Registers" })
-map("n", "<leader>ts", "<cmd>Telescope treesitter<CR>", { desc = "Symbols" })
 
 -- DAP
 map("n", "<leader>dd", "<cmd>lua require'telescope'.extensions.dap.configurations{}<CR>", { desc = "Debug" })
@@ -234,30 +235,36 @@ map("n", "<leader>gf", "<cmd>Telescope git_files<CR>", { desc = "Files" })
 map("n", "<leader>gs", "<cmd>Telescope git_status<CR>", { desc = "Status" })
 
 -- LSP
-map("n", "<leader>ll", "<cmd>Telescope lsp_references<CR>", { desc = "References" })
-map("n", "<leader>lci", "<cmd>Telescope lsp_incoming_calls<CR>", { desc = "Incoming calls" })
-map("n", "<leader>lco", "<cmd>Telescope lsp_outgoing_calls<CR>", { desc = "Outgoing calls" })
-map("n", "<leader>lzd", "<cmd>Telescope lsp_document_symbols<CR>", { desc = "Document symbols" })
-map("n", "<leader>lzw", "<cmd>Telescope lsp_workspace_symbols<CR>", { desc = "Workspace symbols" })
+map("n", "<leader>lci", "<cmd>Telescope lsp_incoming_calls<CR>", { desc = "Incoming" })
+map("n", "<leader>lco", "<cmd>Telescope lsp_outgoing_calls<CR>", { desc = "Outgoing" })
+map("n", "<leader>lR", "<cmd>Telescope lsp_references<CR>", { desc = "References" })
+map("n", "<leader>lSd", "<cmd>Telescope lsp_document_symbols<CR>", { desc = "Document" })
+map("n", "<leader>lSw", "<cmd>Telescope lsp_workspace_symbols<CR>", { desc = "Workspace" })
+
+-- Treesitter
+map("n", "<leader>vth", "<cmd>Telescope highlights<CR>", { desc = "Highlights" })
+map("n", "<leader>vts", "<cmd>Telescope treesitter<CR>", { desc = "Symbols" })
 
 -- Vim
+map("n", "<leader>vta", "<cmd>Telescope autocommands<CR>", { desc = "Autocommands" })
 map("n", "<leader>vtc", "<cmd>Telescope commands<CR>", { desc = "Commands" })
-map("n", "<leader>vth", "<cmd>Telescope highlights<CR>", { desc = "Highlights" })
+map("n", "<leader>vtj", "<cmd>Telescope jumplist<CR>", { desc = "Jumplist" })
 map("n", "<leader>vtk", "<cmd>Telescope keymaps<CR>", { desc = "Keymaps" })
-map("n", "<leader>vtm", "<cmd>Telescope man_pages<CR>", { desc = "Man" })
+map("n", "<leader>vtm", "<cmd>Telescope man_pages<CR>", { desc = "Man pages" })
 map("n", "<leader>vto", "<cmd>Telescope vim_options<CR>", { desc = "Options" })
-map("n", "<leader>vhd", "<cmd>Telescope command_history<CR>", { desc = "Command history" })
-map("n", "<leader>vhs", "<cmd>Telescope search_history<CR>", { desc = "Search history" })
+map("n", "<leader>vtr", "<cmd>Telescope registers<CR>", { desc = "Registers" })
+map("n", "<leader>vHc", "<cmd>Telescope command_history<CR>", { desc = "Command" })
+map("n", "<leader>vHs", "<cmd>Telescope search_history<CR>", { desc = "Search" })
 -- }}}
 
 -- Treesitter {{{
-map("n", "<leader>vzi", "<cmd>TSInstallInfo<CR>", { desc = "Info" })
-map("n", "<leader>vzu", "<cmd>TSUpdateSync<CR>", { desc = "UpdateSync" })
-map("n", "<leader>vzx", "<cmd>TSUninstall all<CR>", { desc = "Uninstall All" })
+map("n", "<leader>vTi", "<cmd>TSInstallInfo<CR>", { desc = "Info" })
+map("n", "<leader>vTu", "<cmd>TSUpdateSync<CR>", { desc = "UpdateSync" })
+map("n", "<leader>vTU", "<cmd>TSUninstall all<CR>", { desc = "Uninstall All" })
 
 -- Inspect
-map("n", "<leader>vzs", "<cmd>Inspect<CR>", { desc = "Inspect" })
-map("n", "<leader>vzt", "<cmd>InspectTree<CR>", { desc = "Inspect [Tree]" })
+map("n", "<leader>vTi", "<cmd>Inspect<CR>", { desc = "Inspect" })
+map("n", "<leader>vTI", "<cmd>InspectTree<CR>", { desc = "Inspect [Tree]" })
 -- }}}
 
 -- Trouble {{{
@@ -275,7 +282,7 @@ map("n", "<C-r>", "<cmd>redo<CR>", { desc = "Redo" })
 -- }}}
 
 -- VIM {{{
-map("n", "<leader>vc", "<cmd>checkhealth<CR>", { desc = "Check Health" })
+map("n", "<leader>vh", "<cmd>checkhealth<CR>", { desc = "Health" })
 map("n", "<leader>vss", "<cmd>set spell!<CR>", { desc = "Spell" })
 map("n", "<leader>vsm", "<cmd>mkspell! %<CR>", { desc = "Mkspell" })
 -- }}}

@@ -379,39 +379,39 @@ return {
         -- }}}
 
         -- Leader {{{
-        { "<leader>b",  group = "Harpoon" },
-
+        -- DAP
         { "<leader>d",  group = "DAP" },
         { "<leader>dt", group = "Telescope" },
-        { "<leader>dp", group = "Breakpoints" },
 
+        -- GIT
         { "<leader>g",  group = "GIT" },
 
+        -- HEX
         { "<leader>h",  group = "HEX" },
 
+        -- LSP
         { "<leader>l",  group = "LSP" },
         { "<leader>lc", desc = "Calls" },
-        { "<leader>lx", desc = "Help" },
-        { "<leader>lz", desc = "Symbols" },
+        { "<leader>lh", desc = "Help" },
+        { "<leader>lS", group = "Symbols" },
 
+        -- Python
         { "<leader>p",  group = "Python" },
         { "<leader>pd", group = "DAP" },
 
+        -- Rust
         { "<leader>r",  group = "Rust" },
 
+        -- Telescope
         { "<leader>t",  group = "Telescope" },
-        { "<leader>th", desc = "History" },
 
+        -- Vim
         { "<leader>v",  group = "VIM" },
-        { "<leader>vh", desc = "History" },
+        { "<leader>vH", desc = "History" },
+        { "<leader>vp", desc = "Plugins" },
         { "<leader>vs", desc = "Spell" },
         { "<leader>vt", desc = "Telescope" },
-        { "<leader>vz", desc = "Treesitter" },
-
-        -- { "<leader>z",  group = "Trouble" },
-        -- }}}
-
-        -- VISUAL {{{
+        { "<leader>vT", desc = "Treesitter" },
         -- }}}
       })
     end,

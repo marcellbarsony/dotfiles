@@ -51,6 +51,7 @@ return {
       -- }}}
 
       -- Luasnip (Tab) {{{
+      -- Confirm candidate on `TAB` immediately when there's only one completion entry
       local has_words_before = function()
         unpack = unpack or table.unpack
         local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -98,13 +99,13 @@ return {
         -- }}}
 
         -- Mapping {{{
-        -- :h ins-completion
+        -- `:h ins-completion`
         mapping = {
           ["<CR>"] = cmp.mapping.confirm({ select = false }),                            -- Accept selected
-          ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),             -- Open
-          ["<C-c>"] = cmp.mapping({ i = cmp.mapping.close(), c = cmp.mapping.close() }), -- Close
-          ["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-5), { "i", "c" }),            -- Scroll docs
-          ["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(5), { "i", "c" }),             -- Scroll docs
+          ["<C-o>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),                 -- Open completion
+          ["<C-c>"] = cmp.mapping({ i = cmp.mapping.close(), c = cmp.mapping.close() }), -- Close completion
+          ["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-5), { "i", "c" }),            -- Scroll docs [up]
+          ["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(5), { "i", "c" }),             -- Scroll docs [down]
 
           -- Luasnips
           -- https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
@@ -129,7 +130,7 @@ return {
             end
           end, { "i", "s" }),
           -- CMP
-          ["<C-j>"] = cmp.mapping({ -- Down
+          ["<C-j>"] = cmp.mapping({ -- Next item
             c = function()
               if cmp.visible() then
                 cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
@@ -145,7 +146,7 @@ return {
               end
             end
           }),
-          ["<C-k>"] = cmp.mapping({ -- Up
+          ["<C-k>"] = cmp.mapping({ -- Previous item
             c = function()
               if cmp.visible() then
                 cmp.select_prev_item({ behavior = cmp.SelectBehavior.Select })

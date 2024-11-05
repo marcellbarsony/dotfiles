@@ -36,6 +36,7 @@ return {
           "printf",
           "query",
           "regex",
+          "rust",
           "toml",
           "xml",
           "yaml",

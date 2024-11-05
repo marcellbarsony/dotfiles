@@ -34,7 +34,7 @@ return {
         -- }}}
 
         -- Expand lines {{{
-        expand_lines = true,
+        expand_lines = false,
         -- }}}
 
         -- Floating {{{
