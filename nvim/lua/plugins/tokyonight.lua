@@ -34,7 +34,6 @@ return {
       ---@param c ColorScheme
       on_colors = function(c)
         c.fg_gutter = "#565F89" -- #565F89 / #9D7CD8
-        c.javascript = "#565F89" -- #565F89 / #9D7CD8
       end,
       -- }}}
 

@@ -190,14 +190,21 @@ map("n", "N", "Nzzzv", { desc = "Search [Prev]" })      -- Fix N: keep cursor in
 -- }}}
 
 -- Splits {{{
+-- Navigation
 map("n", "<C-m>", "<C-w>h", { desc = "Split [Left]" })
 map("n", "<C-n>", "<C-w>j", { desc = "Split [Up]" })
 map("n", "<C-e>", "<C-w>k", { desc = "Split [Down]" })
 map("n", "<C-i>", "<C-w>l", { desc = "Split [Right]" })
+
+-- Resize
 map("n", "<C-A-m>", "<cmd>vertical resize -5<CR>", { desc = "Split [Ver +]" })
 map("n", "<C-A-n>", "<cmd>horizontal resize +5<CR>", { desc = "Split [Hor +]" })
 map("n", "<C-A-e>", "<cmd>horizontal resize -5<CR>", { desc = "Split [Hor -]" })
 map("n", "<C-A-i>", "<cmd>vertical resize +5<CR>", { desc = "Split [Ver -]" })
+
+-- Transform
+map("n", "<C-w>K", "<C-w>K", { desc = "Transform [V > H]" })
+map("n", "<C-w>H", "<C-w>H", { desc = "Transform [H > V]" })
 -- }}}
 
 -- Telescope {{{
@@ -244,7 +251,12 @@ map("n", "<leader>vhs", "<cmd>Telescope search_history<CR>", { desc = "Search hi
 -- }}}
 
 -- Treesitter {{{
-map("n", "<leader>vzi", "<cmd>Inspect<CR>", { desc = "Inspect" })
+map("n", "<leader>vzi", "<cmd>TSInstallInfo<CR>", { desc = "Info" })
+map("n", "<leader>vzu", "<cmd>TSUpdateSync<CR>", { desc = "UpdateSync" })
+map("n", "<leader>vzx", "<cmd>TSUninstall all<CR>", { desc = "Uninstall All" })
+
+-- Inspect
+map("n", "<leader>vzs", "<cmd>Inspect<CR>", { desc = "Inspect" })
 map("n", "<leader>vzt", "<cmd>InspectTree<CR>", { desc = "Inspect [Tree]" })
 -- }}}
 
