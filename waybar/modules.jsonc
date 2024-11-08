@@ -69,16 +69,16 @@
     // Battery {{{
     "battery": {
         "bat": "BAT0",
-        "full-at": "99",
+        "full-at": "95",
         "states": {
             "good": 90,
             "warning": 20,
             "critical": 10
         },
-        "format": "󰁹 {capacity}%",
-        "format-full": "󰁹 {capacity}%",
+        "format": "{capacity}%",
+        "format-full": "{capacity}%",
         "format-charging": "󱐋 {capacity}%",
-        "format-plugged": "  {capacity}%",
+        "format-plugged": " {capacity}%",
         "tooltip": false
     },
     // }}}
@@ -87,35 +87,34 @@
     "network": {
         "interval": 60,
         "interface": "wlp0s2*",
-        "format-alt": "󰖩  {ifname}: {ipaddr}/{cidr} @ {essid}({signalStrength})",
+        "format-alt": "{ifname}: {ipaddr}/{cidr} @ {essid}({signalStrength})",
         "format-disconnected": "Disconnected",
-        "format-icons": "󰖩 ",
+        "format-icons": "",
         "format-ethernet": "{ipaddr}/{cidr}",
         "format-linked": "{ifname} (No IP)",
-        "format-wifi": "{icon} {essid}",
+        "format-wifi": "{essid}",
         "tooltip": false
     },
     // }}}
 
     // Audio (Wireplumber) {{{
     "wireplumber": {
-        "format": "   {volume}",
-        "format-muted": "󰝟",
+        "format": "VOL: {volume} ",
+        "format-muted": "MUT",
         //"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "on-click": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%+",
         "on-click-right": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%-",
-        "format-icons": ["", "", ""],
-        "max-volume": 150,
+        "max-volume": 100,
         "scroll-step": 5.0,
         "tooltip": false,
-        "tooltip-format": "{volume}%"
+        "tooltip-format": "{volume}"
     },
     // }}}
 
     // CPU {{{
     "cpu": {
         "interval": 10,
-        "format": "  {usage}%",
+        "format": "CPU: {usage}% |",
         "tooltip": false,
         "tooltip-format": "CPU: {usage}%"
     },
@@ -124,7 +123,7 @@
     // Disk {{{
     "disk": {
         "interval": 60,
-        "format": " {percentage_used}%",
+        "format": "/: {percentage_used}% |",
         "path": "/",
         "tooltip": false,
         "tooltip-format": "Disk {path} {percentage_used}%"
@@ -134,7 +133,7 @@
     // RAM {{{
     "memory": {
         "interval": 30,
-        "format": "   {percentage}%",
+        "format": "RAM: {percentage}% |",
         "tooltip": false,
         "tooltip-format": "RAM: {percentage}%"
     }

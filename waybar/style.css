@@ -3,7 +3,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: Source Han Sans JP, Roboto, Helvetica, Arial, sans-serif;
+    font-family: "JetBrainsMono", "SourceHanSansJP", monospace;
     font-size: 14px;
     min-height: 20px;
     padding: 0 0px;
