@@ -408,7 +408,8 @@ return {
         -- Vim
         { "<leader>v",  group = "VIM" },
         { "<leader>vH", desc = "History" },
-        { "<leader>vp", desc = "Plugins" },
+        { "<leader>vl", desc = "Lazy" },
+        { "<leader>vm", desc = "Mason" },
         { "<leader>vs", desc = "Spell" },
         { "<leader>vt", desc = "Telescope" },
         { "<leader>vT", desc = "Treesitter" },

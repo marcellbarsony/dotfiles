@@ -24,10 +24,6 @@ vim.g.mapleader = "\\"
 vim.g.maplocalleader = "\\"
 -- }}}
 
--- Alpha {{{
-map("n", "<leader>vpa", "<cmd>Alpha<CR>", { desc = "Alpha" })
--- }}}
-
 -- Arrow keys {{{
 map("", "<up>", "<nop>")
 map("", "<down>", "<nop>")
@@ -95,7 +91,11 @@ map("n", "<leader>ls", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], {
 -- }}}
 
 -- Lazy {{{
-map("n", "<leader>vpl", "<cmd>Lazy<CR>", { desc = "Lazy" })
+map("n", "<leader>vll", "<cmd>Lazy<CR>", { desc = "Lazy" })
+map("n", "<leader>vlc", "<cmd>Lazy check<CR>", { desc = "Check" })
+map("n", "<leader>vlL", "<cmd>Lazy log<CR>", { desc = "Log" })
+map("n", "<leader>vlr", "<cmd>Lazy restore<CR>", { desc = "Restore" })
+map("n", "<leader>vlu", "<cmd>Lazy update<CR>", { desc = "Update" })
 -- }}}
 
 -- Lines {{{
@@ -173,7 +173,10 @@ map("x", "Q", ":norm @qj<CR>", { desc = "Macro [Replay Block]" })
 -- }}}
 
 -- Mason {{{
-map("n", "<leader>vpm", "<cmd>Mason<CR>", { desc = "Mason" })
+map("n", "<leader>vmm", "<cmd>Mason<CR>", { desc = "Mason" })
+map("n", "<leader>vml", "<cmd>MasonLog<CR>", { desc = "Log" })
+map("n", "<leader>vmu", "<cmd>MasonUpdate<CR>", { desc = "Update" })
+map("n", "<leader>vmU", "<cmd>MasonUninstallAll<CR>", { desc = "Uninstall All" })
 -- }}}
 
 -- Navigation {{{
@@ -283,6 +286,7 @@ map("n", "<C-r>", "<cmd>redo<CR>", { desc = "Redo" })
 
 -- VIM {{{
 map("n", "<leader>vh", "<cmd>checkhealth<CR>", { desc = "Health" })
+map("n", "<leader>vn", "<cmd>help news<CR>", { desc = "News" })
 map("n", "<leader>vss", "<cmd>set spell!<CR>", { desc = "Spell" })
 map("n", "<leader>vsm", "<cmd>mkspell! %<CR>", { desc = "Mkspell" })
 -- }}}

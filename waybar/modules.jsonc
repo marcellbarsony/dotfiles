@@ -40,7 +40,7 @@
     // Modules - Right {{{
     // Clock {{{
     "clock": {
-        "format": "{:%I:%M}",
+        "format": " {:%I:%M} ",
         "format-alt": "{:%b %d %a}",
         "interval": 60,
         //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
@@ -75,10 +75,10 @@
             "warning": 20,
             "critical": 10
         },
-        "format": "{capacity}%",
+        "format": " {capacity}% ",
         "format-full": "{capacity}%",
-        "format-charging": "󱐋 {capacity}%",
-        "format-plugged": " {capacity}%",
+        "format-charging": " 󱐋 {capacity}% ",
+        "format-plugged": "  {capacity}% ",
         "tooltip": false
     },
     // }}}
@@ -92,14 +92,14 @@
         "format-icons": "",
         "format-ethernet": "{ipaddr}/{cidr}",
         "format-linked": "{ifname} (No IP)",
-        "format-wifi": "{essid}",
+        "format-wifi": " {essid} ",
         "tooltip": false
     },
     // }}}
 
     // Audio (Wireplumber) {{{
     "wireplumber": {
-        "format": "VOL: {volume} ",
+        "format": "VOL {volume} ",
         "format-muted": "MUT",
         //"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "on-click": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%+",
@@ -114,7 +114,7 @@
     // CPU {{{
     "cpu": {
         "interval": 10,
-        "format": "CPU: {usage}% |",
+        "format": "CPU {usage}% |",
         "tooltip": false,
         "tooltip-format": "CPU: {usage}%"
     },
@@ -123,7 +123,7 @@
     // Disk {{{
     "disk": {
         "interval": 60,
-        "format": "/: {percentage_used}% |",
+        "format": "/ {percentage_used}% |",
         "path": "/",
         "tooltip": false,
         "tooltip-format": "Disk {path} {percentage_used}%"
@@ -133,7 +133,7 @@
     // RAM {{{
     "memory": {
         "interval": 30,
-        "format": "RAM: {percentage}% |",
+        "format": "RAM {percentage}% |",
         "tooltip": false,
         "tooltip-format": "RAM: {percentage}%"
     }
