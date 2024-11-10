@@ -6,7 +6,6 @@ return {
     "lewis6991/gitsigns.nvim",
     event = "VeryLazy",
     opts = {
-      -- Signs {{{
       signs = {
         add          = { text = '┃' },
         change       = { text = '┃' },
@@ -23,10 +22,10 @@ return {
         changedelete = { text = '~' },
         untracked    = { text = '┆' },
       },
-      -- }}}
+
       signs_staged_enable     = false,
       signcolumn              = false,
-      numhl                   = true,
+      numhl                   = false,
       linehl                  = false,
       word_diff               = false,
 

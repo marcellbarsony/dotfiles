@@ -11,7 +11,7 @@
 
 window#waybar {
     background: rgba(0, 0, 0, 0.75);
-    border-bottom: 0px solid rgba(100, 114, 125, 0.5);
+    border-bottom: 0px solid rgba(0, 0, 0, 0.75);
     color: @primary;
 }
 
@@ -77,11 +77,11 @@ window#waybar {
 #battery.warning:not(.charging) {
     animation-name: blink;
     animation-direction: alternate;
-    animation-duration: 1s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: steps(12);
     background: #f53c3c;
-    color: @primary;
+    color: @on_secondary;
 }
 
 #network {

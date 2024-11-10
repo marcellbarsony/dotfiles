@@ -329,6 +329,7 @@ return {
         { "gx", desc= "Open", mode = { "v" } },
 
         { "z", desc= "Fold", mode = { "v" } },
+        { "z=", desc= "Spell suggestions", mode = { "v" } },
         -- }}}
 
         -- y (TODO) {{{

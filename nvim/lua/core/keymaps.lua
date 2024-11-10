@@ -63,6 +63,8 @@ map("n", "<leader>dR", "<cmd>lua require'dap'.repl.open()<CR>", { desc = "REPL" 
 -- }}}
 
 -- Gitsigns {{{
+map("n", "<leader>gg", "<cmd>Gitsigns toggle_numhl<CR><cmd>Gitsigns toggle_current_line_blame<CR>", { desc = "Gitsigns" })
+
 -- Actions
 -- map("n", "<leader>gs", "<cmd>Gitsigns stage_hunk<CR>", { desc = "Stage hunk" })
 -- map("n", "<leader>gs", "<cmd>Gitsigns undo_stage_hunk<CR>", { desc = "Stage hunk [Undo]" })

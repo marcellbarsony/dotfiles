@@ -27,5 +27,5 @@ require("lazy").setup({
   checker = { enabled = false },
 })
 
--- Colorscheme
+-- Color scheme
 vim.cmd [[colorscheme tokyonight]]

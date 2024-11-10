@@ -17,7 +17,7 @@ user_pref("browser.tabs.loadBookmarksInTabs", false);
 user_pref("browser.toolbars.bookmarks.showOtherBookmarks", true);
 
 // CONTAINERS
-user_pref("privacy.userContext.newTabContainersOnLeftClick.enabled", true);
+user_pref("privacy.userContext.newTabContainerOnLeftClick.enabled", false);
 
 // CSS
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);

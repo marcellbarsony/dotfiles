@@ -2,7 +2,7 @@
     // Modules - Left {{{
     "hyprland/workspaces": {
         "all-outputs": true,
-        "format": "{icon}", // name/icon
+        "format": "{icon}", // icon/name
         "format-icons": {
             "1": "一",
             "2": "二",
@@ -38,6 +38,38 @@
     // }}}
 
     // Modules - Right {{{
+
+    // Audio (Wireplumber) {{{
+    "wireplumber": {
+        "format": "VOL {volume} ",
+        "format-muted": "MUT",
+        //"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%+",
+        "on-click-right": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%-",
+        "max-volume": 100,
+        "scroll-step": 5.0,
+        "tooltip": false,
+        "tooltip-format": "{volume}"
+    },
+    // }}}
+
+    // Battery {{{
+    "battery": {
+        "bat": "BAT0",
+        "full-at": "95",
+        "states": {
+            "good": 90,
+            "warning": 20,
+            "critical": 10
+        },
+        "format": " {capacity}% ",
+        "format-full": "{capacity}%",
+        "format-charging": " 󱐋 {capacity}% ",
+        "format-plugged": " {capacity}% ",
+        "tooltip": false
+    },
+    // }}}
+
     // Clock {{{
     "clock": {
         "format": " {:%I:%M} ",
@@ -66,51 +98,6 @@
     },
     // }}}
 
-    // Battery {{{
-    "battery": {
-        "bat": "BAT0",
-        "full-at": "95",
-        "states": {
-            "good": 90,
-            "warning": 20,
-            "critical": 10
-        },
-        "format": " {capacity}% ",
-        "format-full": "{capacity}%",
-        "format-charging": " 󱐋 {capacity}% ",
-        "format-plugged": "  {capacity}% ",
-        "tooltip": false
-    },
-    // }}}
-
-    // Network {{{
-    "network": {
-        "interval": 60,
-        "interface": "wlp0s2*",
-        "format-alt": "{ifname}: {ipaddr}/{cidr} @ {essid}({signalStrength})",
-        "format-disconnected": "Disconnected",
-        "format-icons": "",
-        "format-ethernet": "{ipaddr}/{cidr}",
-        "format-linked": "{ifname} (No IP)",
-        "format-wifi": " {essid} ",
-        "tooltip": false
-    },
-    // }}}
-
-    // Audio (Wireplumber) {{{
-    "wireplumber": {
-        "format": "VOL {volume} ",
-        "format-muted": "MUT",
-        //"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-        "on-click": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%+",
-        "on-click-right": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%-",
-        "max-volume": 100,
-        "scroll-step": 5.0,
-        "tooltip": false,
-        "tooltip-format": "{volume}"
-    },
-    // }}}
-
     // CPU {{{
     "cpu": {
         "interval": 10,
@@ -130,6 +117,20 @@
     },
     // }}}
 
+    // Network {{{
+    "network": {
+        "interval": 60,
+        "interface": "wlp0s2*",
+        "format-alt": "{ifname}: {ipaddr}/{cidr} @ {essid}({signalStrength})",
+        "format-disconnected": "Disconnected",
+        "format-icons": "",
+        "format-ethernet": "{ipaddr}/{cidr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-wifi": " {essid} ",
+        "tooltip": false
+    },
+    // }}}
+
     // RAM {{{
     "memory": {
         "interval": 30,
@@ -138,5 +139,6 @@
         "tooltip-format": "RAM: {percentage}%"
     }
     // }}}
+
     // }}}
 }
