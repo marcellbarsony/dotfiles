@@ -1,4 +1,4 @@
--- C snippets
+-- C snippets [Loops]
 -- Docs: https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
 
 -- SHORTHANDS {{{
@@ -35,40 +35,65 @@ end
 
 -- SNIPPETS {{{
 ls.add_snippets("c", {
-  s("fn",  -- function
-    fmt("{} {}({}) {{\n" ..
+  s("for", -- for
+    fmt("for ({}; {}; {}) {{\n" ..
       "\t{}\n" ..
       "}}{}",
       {
-        c(1, {
-          sn(nil, {i(1), i(2, "") }),
-          sn(nil, {i(1), t"void" }),
-          sn(nil, {i(1), t"char*" }),
-          sn(nil, {i(1), t"double" }),
-          sn(nil, {i(1), t"float" }),
-          sn(nil, {i(1), t"int" }),
-          sn(nil, {i(1), t"int*" }),
-        }),
-        i(2, "name"),
-        c(3, {
-          sn(nil, {i(1), i(2, "args") }),
-          sn(nil, {i(1), i(2, "") }),
-        }),
+        i(1, "init"),
+        i(2, "cond"),
+        i(3, "step"),
         i(4, "// code"),
-        i(5),
+        i(5)
       }
     )
   ),
 
-  s("printf",  -- printf
-    fmt('printf("{}", {});\n' ..
-      "{}",
+  s("while", -- while
+    fmt("while ({}) {{\n" ..
+      "\t{}\n" ..
+      "}}{}",
       {
-        i(1, ""),
-        i(2, ""),
-        i(3),
+        i(1, "condition"),
+        i(2, "// code"),
+        i(3)
       }
     )
   ),
+
+  s("do-while", -- do-while
+    fmt("do {{\n" ..
+      "\t{}\n" ..
+      "}} while ({});\n" ..
+      "{}",
+      {
+        i(1, "// code"),
+        i(2, "condition"),
+        i(3)
+      }
+    )
+  ),
+
+  s("switch", -- switch
+    fmt("switch ({}) {{\n" ..
+      "\tcase {}:\n" ..
+      "\t\t{}\n" ..
+      "\t\t{}{}\n" ..
+      "\tdefault:\n" ..
+      "\t\t{}\n" ..
+      "\t\tbreak;\n" ..
+      "}}{}",
+      {
+        i(1, "condition"),
+        i(2, "1"),
+        i(3, "// code"),
+        i(4, "break;"),
+        i(5, ""),
+        i(6, "// code"),
+        i(7)
+      }
+    )
+  ),
+
 })
 -- }}}

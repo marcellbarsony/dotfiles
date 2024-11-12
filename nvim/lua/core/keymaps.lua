@@ -62,6 +62,10 @@ map("n", "<leader>dr", "<cmd>lua require'dap'.restart()<CR>", { desc = "Restart"
 map("n", "<leader>dR", "<cmd>lua require'dap'.repl.open()<CR>", { desc = "REPL" })
 -- }}}
 
+-- Delete {{{
+map("n", "x", '"_x', { desc = "Delete" })
+-- }}}
+
 -- Gitsigns {{{
 map("n", "<leader>gg", "<cmd>Gitsigns toggle_numhl<CR><cmd>Gitsigns toggle_current_line_blame<CR>", { desc = "Gitsigns" })
 
@@ -109,10 +113,12 @@ map("v", "<", "<gv", { desc = "Indent [Left]" })
 map("v", ">", ">gv", { desc = "Indent [Right]" })
 
 -- Move
-map("v", "K", ":move '<-2<CR>gv=gv", { desc = "Move [Up]" })
-map("v", "J", ":move '>+1<CR>gv=gv", { desc = "Move [Down]" })
-map("x", "K", ":move '<-2<CR>gv=gv", { desc = "Block [Move Up]" })
-map("x", "J", ":move '>+1<CR>gv=gv", { desc = "Block [Move Down]" })
+map("n", "K", ":move .-2<CR>gv=gv", { desc = "Move [Up]", silent = true })
+map("n", "J", ":move .+1<CR>gv=gv", { desc = "Move [Down]", silent = true })
+map("x", "K", ":move '<-2<CR>gv=gv", { desc = "Move [Up]", silent = true })
+map("x", "J", ":move '>+1<CR>gv=gv", { desc = "Move [Down]", silent = true })
+map("v", "K", ":move '<-2<CR>gv=gv", { desc = "Move [Up]", silent = true })
+map("v", "J", ":move '>+1<CR>gv=gv", { desc = "Move [Down]", silent = true })
 -- }}}
 
 -- LSP {{{
@@ -192,10 +198,12 @@ map("n", "-", "<cmd>Oil<CR>", { desc = "Oil" })
 -- }}}
 
 -- Search {{{
-map("n", "*", "*N", { desc = "Find word" })             -- Fix *: don't move to next match
-map("n", "#", "#N", { desc = "Find word [Backwards]" }) -- Fix #: don't move to next match
-map("n", "n", "nzzzv", { desc = "Search [Next]" })      -- Fix n: keep cursor in center
-map("n", "N", "Nzzzv", { desc = "Search [Prev]" })      -- Fix N: keep cursor in center
+-- */#: Don't move to next match
+map("n", "*", "*N", { desc = "Find word" })
+map("n", "#", "#N", { desc = "Find word [Backwards]" })
+-- n/N: Keep cursor in center
+map("n", "n", "nzzzv", { desc = "Search [Next]" })
+map("n", "N", "Nzzzv", { desc = "Search [Prev]" })
 -- }}}
 
 -- Splits {{{

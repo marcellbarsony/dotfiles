@@ -75,7 +75,7 @@
         "format": " {:%I:%M} ",
         "format-alt": "{:%b %d %a}",
         "interval": 60,
-        //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         //"tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode"         : "year",

@@ -1,4 +1,4 @@
--- C snippets
+-- C snippets [Statements]
 -- Docs: https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
 
 -- SHORTHANDS {{{
@@ -35,38 +35,37 @@ end
 
 -- SNIPPETS {{{
 ls.add_snippets("c", {
-  s("fn",  -- function
-    fmt("{} {}({}) {{\n" ..
+  s("if", -- if
+    fmt("if ({}) {{\n" ..
       "\t{}\n" ..
       "}}{}",
       {
-        c(1, {
-          sn(nil, {i(1), i(2, "") }),
-          sn(nil, {i(1), t"void" }),
-          sn(nil, {i(1), t"char*" }),
-          sn(nil, {i(1), t"double" }),
-          sn(nil, {i(1), t"float" }),
-          sn(nil, {i(1), t"int" }),
-          sn(nil, {i(1), t"int*" }),
-        }),
-        i(2, "name"),
-        c(3, {
-          sn(nil, {i(1), i(2, "args") }),
-          sn(nil, {i(1), i(2, "") }),
-        }),
-        i(4, "// code"),
-        i(5),
+        i(1, "condition"),
+        i(2, ""),
+        i(3)
       }
     )
   ),
 
-  s("printf",  -- printf
-    fmt('printf("{}", {});\n' ..
-      "{}",
+  s("else if", -- else if
+    fmt("else if ({}) {{\n" ..
+      "\t{}\n" ..
+      "}}{}",
+      {
+        i(1, "condition"),
+        i(2, ""),
+        i(3)
+      }
+    )
+  ),
+
+  s("else", -- else
+    fmt("else {{\n" ..
+      "\t{}\n" ..
+      "}}{}",
       {
         i(1, ""),
-        i(2, ""),
-        i(3),
+        i(2)
       }
     )
   ),
