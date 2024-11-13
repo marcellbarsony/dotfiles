@@ -1,5 +1,6 @@
 -- Mason
 -- https://github.com/williamboman/mason.nvim
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#clangd
 -- `:h mason`
 
 return {
@@ -85,13 +86,22 @@ return {
         ---@type boolean
         automatic_installation = true,
 
-        -- Handlers {{{
+        -- Handlers
         -- `:h mason-lspconfig.setup_handlers()`
         handlers = {
-          -- Default {{{
           function(server_name)
             require("lspconfig")[server_name].setup({
               capabilities = capabilities,
+            })
+          end,
+
+          -- clangd {{{
+          ["clangd"] = function()
+            lspconfig["clangd"].setup({
+              -- cmd = {
+              --   "clangd",
+              --   "--fallback-style=webkit"
+              -- }
             })
           end,
           -- }}}
@@ -149,7 +159,6 @@ return {
           end,
           -- }}}
         },
-        -- }}}
       })
       -- }}}
     end

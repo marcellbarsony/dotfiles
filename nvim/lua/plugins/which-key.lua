@@ -380,6 +380,9 @@ return {
         -- }}}
 
         -- Leader {{{
+        -- C
+        { "<leader>c",  group = "Clang" },
+
         -- DAP
         { "<leader>d",  group = "DAP" },
         { "<leader>dt", group = "Telescope" },

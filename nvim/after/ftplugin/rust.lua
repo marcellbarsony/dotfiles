@@ -1,14 +1,7 @@
 -- Rust
 -- https://neovim.io/doc/user/ft_rust.html#ft_rust.txt
 
--- Options
-vim.opt_local.shiftwidth = 4
-vim.opt_local.tabstop = 4
-
--- LSP
-vim.lsp.inlay_hint.enable()
-
--- Keymaps (Rustaceanvim)
+-- Keymaps (Rustaceanvim) {{{
 -- https://github.com/mrcjkb/rustaceanvim?tab=readme-ov-file#zap-quick-setup
 local bufnr = vim.api.nvim_get_current_buf()
 
@@ -52,3 +45,7 @@ vim.keymap.set("n", "<leader>rr",
   end,
   { silent = true, buffer = bufnr, desc = "Runnables" }
 )
+-- }}}
+
+-- LSP
+vim.lsp.inlay_hint.enable()
