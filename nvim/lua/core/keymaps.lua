@@ -281,12 +281,12 @@ map("n", "<leader>vTI", "<cmd>InspectTree<CR>", { desc = "Inspect [Tree]" })
 -- }}}
 
 -- Trouble {{{
-map("n", "<leader>lt", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Trouble" })
-map("n", "<leader>lb", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", { desc = "Buffer" })
--- map("n", "<leader>zs", "<cmd>Trouble symbols toggle focus=false<cr>", { desc = "Symbols" })
--- map("n", "<leader>zl", "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", { desc = "LSP definitions" })
--- map("n", "<leader>zd", "<cmd>Trouble loclist toggle<cr>", { desc = "Location list" })
--- map("n", "<leader>zq", "<cmd>Trouble qflist toggle<cr>", { desc = "Quickfix" })
+map("n", "<leader>lt", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Trouble" })
+map("n", "<leader>lb", "<cmd>Trouble diagnostics toggle filter.buf=0<CR>", { desc = "Buffer" })
+map("n", "<leader>lq", "<cmd>Trouble qflist toggle<CR>", { desc = "Quickfix" })
+-- map("n", "<leader>zs", "<cmd>Trouble symbols toggle focus=false<CR>", { desc = "Symbols" })
+-- map("n", "<leader>zl", "<cmd>Trouble lsp toggle focus=false win.position=right<CR>", { desc = "LSP definitions" })
+-- map("n", "<leader>zd", "<cmd>Trouble loclist toggle<CR>", { desc = "Location list" })
 -- }}}
 
 -- Undo & Redo {{{

@@ -11,7 +11,7 @@ return {
       "williamboman/mason-lspconfig.nvim",
       "onsails/lspkind.nvim",
     },
-    config = function ()
+    config = function()
       local lspconfig = require("lspconfig")
       local mason = require("mason")
       local mason_lspconfig = require("mason-lspconfig")
@@ -79,6 +79,7 @@ return {
           "clangd",        -- C/C++
           "jsonls",        -- Json
           "lua_ls",        -- Lua
+          "marksman",      -- Markdown
           "rust_analyzer", -- Rust
           "ts_ls",         -- TypeScript / JavaScript (tsserver)
           "pyright",       -- Python (npm required)
@@ -134,6 +135,12 @@ return {
                 },
               },
             })
+          end,
+          -- }}}
+
+          -- Marksman {{{
+          ["marksman"] = function()
+            lspconfig["marksman"].setup({})
           end,
           -- }}}
 
