@@ -9,8 +9,10 @@
     "modules-left": [
         "hyprland/workspaces"
     ],
+
     "modules-center": [
     ],
+
     "modules-right": [
         "disk",
         "cpu",

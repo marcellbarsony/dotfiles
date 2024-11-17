@@ -35,6 +35,34 @@ end
 
 -- SNIPPETS {{{
 ls.add_snippets("c", {
+  -- File I/O {{{
+  s({
+    trig = "file",
+    desc = "File I/O"
+    },
+    fmt('{} = fopen("{}", "{}")\n\n' ..
+      "\t{}\n\n" ..
+      "fclose({})\n" ..
+      "{}",
+      {
+        i(1, "var"),
+        i(2, "file.ext"),
+        c(3, {
+          i(1, ""),
+          t("r"),
+          t("rb"),
+          t("w"),
+          t("wb"),
+          t("a"),
+        }),
+        i(4, "// code"),
+        same(1),
+        i(0)
+      }
+    )
+  ),
+  -- }}}
+
   -- Functions {{{
   -- function {{{
   s("fn",
@@ -161,12 +189,15 @@ ls.add_snippets("c", {
 
   -- Misc {{{
   -- include {{{
-  s("#include",
-    fmt("#include <{}>\n" ..
-      "{}",
+  s({
+    trig = "#include",
+    name = "Include header files",
+    desc = "Manage header file inclusions",
+    },
+    fmt("#include <{}>\n{}",
       {
         i(1),
-        i(2),
+        i(0),
       }
     )
   ),
@@ -179,7 +210,7 @@ ls.add_snippets("c", {
       {
         i(1, ""),
         i(2, ""),
-        i(3),
+        i(0),
       }
     )
   ),
@@ -189,11 +220,11 @@ ls.add_snippets("c", {
   s("todo",
     fmt("/* TODO:\n" ..
       " * {}\n" ..
-      " */" ..
+      " */\n" ..
       "{}",
       {
         i(1, ""),
-        i(2),
+        i(0),
       }
     )
   ),
@@ -244,7 +275,6 @@ ls.add_snippets("c", {
   -- }}}
 
   -- Structs {{{
-  -- struct {{{
   s("struct",
     fmt("struct {} {{\n" ..
       "\t{}\n" ..
@@ -256,7 +286,6 @@ ls.add_snippets("c", {
       }
     )
   ),
-  -- }}}
   -- }}}
 })
 -- }}}

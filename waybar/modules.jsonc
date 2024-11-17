@@ -2,7 +2,7 @@
     // Modules - Left {{{
     "hyprland/workspaces": {
         "all-outputs": true,
-        "format": "{icon}", // icon/name
+        "format": "{icon}",
         "format-icons": {
             "1": "一",
             "2": "二",
@@ -28,7 +28,8 @@
             "6": [],
             "7": [],
             "8": [],
-            "9": []
+            "9": [],
+            "10": []
         },
         "sort-by-number": true
     },

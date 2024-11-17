@@ -23,7 +23,6 @@ vim.keymap.set("n", "<leader>cr",
 
 -- Clang-format
 -- https://clang.llvm.org/docs/ClangFormatStyleOptions.html
--- `clang-format -dump-config`
 vim.keymap.set("n", "<leader>lf",
   "<cmd>%!clang-format " ..
   "-style=" ..
