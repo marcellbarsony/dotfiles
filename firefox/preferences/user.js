@@ -2,8 +2,8 @@
 // https://github.com/arkenfox/user.js/
 // https://github.com/yokoffing/BetterFox
 
-// STARTUP {{{
-user_pref("_user.js.astronaut", "3... 2... 1.. LIFTOFF");
+// LAUNCH {{{
+user_pref("_user.js.astronaut", "3... 2... 1... LIFTOFF");
 // }}}
 
 // USER PREFERENCES {{{
@@ -126,7 +126,7 @@ user_pref("browser.places.speculativeConnect.enabled", false);
 // }}}
 
 // 0700 - DNS / DoH / PROXY / SOCKS {{{
-user_pref("_user.js.astronaut", "0700: Ghe stars are shining bright");
+user_pref("_user.js.astronaut", "0700: The stars are shining bright");
 // 0702: Set the proxy server to do any DNS lookups when using SOCKS
 user_pref("network.proxy.socks_remote_dns", true);
 // 0703: Disable using UNC (Uniform Naming Convention) paths [FF61+]
@@ -184,7 +184,7 @@ user_pref("dom.security.https_only_mode_send_http_background_request", false);
 // }}}
 
 // 2000 - PLUGINS / MEDIA / WEBRTC {{{
-user_pref("_user.js.astronaut", "2000: I looked and looked but I didn’t see god ");
+user_pref("_user.js.astronaut", "2000: I looked and looked but I didn’t see god");
 // 2002: force WebRTC inside the proxy [FF70+]
 user_pref("media.peerconnection.ice.proxy_only_if_behind_proxy", true);
 // 2003: force a single network interface for ICE candidates generation [FF42+]

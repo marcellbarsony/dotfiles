@@ -2,6 +2,7 @@ Codelldb
 ColorScheme
 DAP
 Debugee
+EOF
 GID
 GUID
 Gitsigns
@@ -22,6 +23,7 @@ Rofi
 SSRF
 Scratchpads
 Spotify
+Structs
 TODO
 Treesitter
 TypeScript
@@ -98,7 +100,10 @@ quickfix
 quickref
 runtimepath
 rustaceanvim
+stdout
 str
+struct
+structs
 systemctl
 tmp
 tsserver

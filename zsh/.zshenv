@@ -1,6 +1,7 @@
 # Default programs
 export BROWSER="Firefox"
 export EDITOR="nvim"
+export MANPAGER="nvim +Man!"
 export TERMINAL="kitty"
 export VISUAL="nvim"
 export WM="Hyprland"
