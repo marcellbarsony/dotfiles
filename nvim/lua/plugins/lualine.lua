@@ -38,7 +38,6 @@ return {
         }
       },
       -- }}}
-
       -- Sections {{{
       sections = {
         lualine_a = { "mode" },
@@ -80,7 +79,6 @@ return {
         lualine_z = { "location" }
       },
       -- }}}
-
       tabline = {},
       winbar = {},
       inactive_winbar = {},

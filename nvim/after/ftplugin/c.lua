@@ -28,7 +28,7 @@ vim.keymap.set("n", "<leader>lf",
   "-style=" ..
   "'{" ..
   "IndentWidth: 4," ..
-  "ReflowComments: false" ..
+  "ReflowComments: false," ..
   "}'" ..
   "<CR>" ..
   "<cmd>w<CR>",

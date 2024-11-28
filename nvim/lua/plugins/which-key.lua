@@ -285,8 +285,8 @@ return {
         { "M", desc = "Middle line" },
         { "t", desc = "Move to [Next char]" },
         { "T", desc = "Move to [Prev char]" },
-        { "v", desc = "VISUAL" },
-        { "V", desc = "VISUAL Line" },
+        -- { "v", desc = "VISUAL" },
+        -- { "V", desc = "VISUAL Line" },
         { "w", desc = "Word [Next]" },
         { "W", desc = "Word [NEXT]" },
         -- }}}
@@ -317,7 +317,7 @@ return {
         -- }}}
 
         -- v (TODO) {{{
-        { "v",  desc = "VISUAL" },
+        -- { "v",  desc = "VISUAL" },
 
         { "<leader>g", group = "GIT", mode = { "v" } },
         { "<leader>l", group = "LSP", mode = { "v" } },
