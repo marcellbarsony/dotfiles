@@ -58,6 +58,8 @@ debugpy
 desc
 dpms
 efi
+enum
+enums
 env
 expr
 filetype
