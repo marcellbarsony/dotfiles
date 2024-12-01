@@ -165,6 +165,11 @@ return {
         },
         -- }}}
 
+        -- Preselect {{{
+        -- :h cmp-config.preselect
+        preselect = cmp.PreselectMode.None,
+        -- }}}
+
         -- Sources {{{
         sources = cmp.config.sources({
           { name = "luasnip",  max_item_count = 3,  priority_weight = 1 },

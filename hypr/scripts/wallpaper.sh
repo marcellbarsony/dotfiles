@@ -23,8 +23,8 @@ else
 fi
 # }}}
 
-# Random {{{
-transitions=("wipe" "outer" "random")
+# Transitions {{{
+transitions=("simple" "any" "wipe" "outer" "grow" "random")
 random_index=$((RANDOM % ${#transitions[@]}))
 random_transition=${transitions[$random_index]}
 # }}}
@@ -34,7 +34,7 @@ swww img $random_file \
     --transition-bezier .43,0.19,1,.4 \
     --transition-fps=60 \
     --transition-type=$random_transition \
-    --transition-duration=1 \
+    --transition-duration=2 \
 # }}}
 
 # Color scheme {{{

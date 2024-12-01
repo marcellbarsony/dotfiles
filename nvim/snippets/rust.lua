@@ -67,11 +67,14 @@ ls.add_snippets("rust", {
 
   -- Flow control {{{
   -- if {{{
-  s( "if",
+  s({
+    trig = "if",
+    desc = "If statement"
+    },
     fmt("if {} {{\n" ..
       "\t{}\n" ..
       "}}{}\n" ..
-      "{}",
+    "{}",
       {
         i(1, "condition"),
         i(2, "// ..."),
@@ -557,10 +560,14 @@ ls.add_snippets("rust", {
 
   -- let {{{
   s( "let",
-    fmt("let {}\n" ..
+    fmt("{} {}\n" ..
       "{}",
       {
         c(1, {
+          t"let",
+          t"let mut"
+        }),
+        c(2, {
           -- Array
           sn(nil, {
             i(1),
@@ -704,7 +711,7 @@ ls.add_snippets("rust", {
             }),
           }),
         }),
-        i(2),
+        i(3),
       }
     )
   ),

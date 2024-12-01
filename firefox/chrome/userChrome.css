@@ -6,7 +6,7 @@
     --toolbar-field-focus-border-color: transparent !important;
 }
 
-/* BOOKMARKS {{{ */
+/* BOOKMARKS {{{*/
 #customizableui-special-spring9 {
     /* Remove spacing at the end of Bookmarks bar */
     display: none !important;
@@ -16,9 +16,15 @@
     /* Remove button "Bookmark this page" */
     display: none !important;
 }
+
+toolbarbutton.bookmark-item:not(.subviewbutton) {
+    /* Reduce spacing */
+    margin: 0px !important;
+    padding: var(--bookmark-block-padding) 4px !important;
+}
 /* }}} */
 
-/* MULTI-ACCOUNT CONTAINERS {{{ */
+/* MULTI-ACCOUNT CONTAINERS {{{*/
 #tabbrowser-tabs .tab-context-line {
   display: none !important;
 }
@@ -28,7 +34,7 @@
 }
 /* }}} */
 
-/* NEW TAB BUTTON {{{ */
+/* NEW TAB BUTTON {{{*/
 #TabsToolbar{
     --toolbarbutton-inner-padding: 4px !important;
 }
@@ -39,7 +45,7 @@ toolbarbutton#tabs-newtab-button {
 }
 /* }}} */
 
-/* TABS {{{ */
+/* TABS {{{*/
 .tab-background {
     /* Remove top and bottom spaces on tabs, causing additional height on title bar */
     margin-block: 0 !important;
@@ -78,7 +84,7 @@ hbox.tab-content {
 }
 /* }}} */
 
-/* TITLE BAR {{{ */
+/* TITLE BAR {{{*/
 :root:not([privatebrowsingmode], [firefoxviewhidden]) :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs, :root[privatebrowsingmode]:not([firefoxviewhidden]) :is(toolbarbutton:not(#firefox-view-button), toolbarpaletteitem:not(#wrapper-firefox-view-button)) + #tabbrowser-tabs {
     /* Remove spacing from the beginning of the tabs */
     border-inline-start: 0px solid color-mix(in srgb, currentColor 25%, transparent) !important;
@@ -102,13 +108,13 @@ hbox.tab-content {
 }
 /* }}} */
 
-/* TOOLBAR {{{ */
+/* TOOLBAR {{{*/
 hbox#urlbar {
-    min-height: 30px !important;
+    min-height: 33px !important;
 }
 
 toolbar#nav-bar {
-    max-height: 30px !important;
+    max-height: 33px !important;
 }
 
 #firefox-view-button {
@@ -117,7 +123,7 @@ toolbar#nav-bar {
 }
 /* }}} */
 
-/* URL BAR {{{ */
+/* URL BAR {{{*/
 #navigator-toolbox {
     /* Remove bottom border */
     border-bottom: unset !important;
@@ -136,7 +142,7 @@ toolbar#nav-bar {
 
 #urlbar-container {
     /* Remove top spacing */
-    margin-top: 0px !important;
+    margin: 0px !important;
     --urlbar-container-height: 30px !important;
 }
 /* }}}*/

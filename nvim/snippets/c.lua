@@ -231,6 +231,41 @@ ls.add_snippets("c", {
   -- }}}
   -- }}}
 
+  -- Network {{{
+  -- Socket {{{
+  s({
+    trig = "socket",
+    name = "Socket",
+    desc = "Socket",
+    },
+    fmt("socket({}, {}, {});\n{}",
+      {
+        c(1, {
+          t("AF_INET"),
+          t("AF_INET6"),
+          t("AF_UNIX"),
+          t("AF_PACKET"),
+        }),
+        c(2, {
+          t("SOCK_STREAM"),
+          t("SOCK_DGRAM"),
+          t("SOCK_RAW"),
+          t("SOCK_PACKET"),
+          t("SOCK_SEQPACKET"),
+        }),
+        c(3, {
+          t("0"),
+          t("IPPROTO_TCP"),
+          t("IPPROTO_UDP"),
+          t("IPPROTO_ICMP"),
+        }),
+        i(0),
+      }
+    )
+  ),
+  -- }}}
+  -- }}}
+
   -- Statements {{{
   -- if {{{
   s("if",
@@ -276,9 +311,9 @@ ls.add_snippets("c", {
 
   -- Structs {{{
   s("struct",
-    fmt("struct {} {{\n" ..
+    fmt("struct {} = {{\n" ..
       "\t{}\n" ..
-      "}}{}",
+      "}};{}",
       {
         i(1, "name"),
         i(2, "// code"),
