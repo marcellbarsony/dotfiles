@@ -132,14 +132,14 @@ map("v", "J", ":move '>+1<CR>gv=gv", { desc = "Move [Down]", silent = true })
 map({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, { desc = "Action" })
 
 -- Diagnostics
-map("n", "<leader>ld", vim.diagnostic.open_float, { opts = opts, desc = "Diagnostics" })
+map("n", "<leader>lD", vim.diagnostic.open_float, { opts = opts, desc = "Diagnostics" })
 map("n", "]d", vim.diagnostic.goto_next, { opts = opts, desc = "Next diagnostic" })     -- default map
 map("n", "[d", vim.diagnostic.goto_prev, { opts = opts, desc = "Previous diagnostic" }) -- default map
 -- map("n", "<leader>ll", vim.diagnostic.setloclist, { opts = opts, desc = "Set localist" })
 
 -- Documentation
 -- Default: nvim-lspconfig maps `K` to vim.lsp.buf.hover()
--- map("n", "<leader>lk", vim.lsp.buf.hover, { desc = "Documentation" })
+map("n", "<leader>ld", vim.lsp.buf.hover, { desc = "Documentation" })
 
 -- Formatting
 map("n", "<leader>lf", function() vim.lsp.buf.format { async = true } end, { desc = "Format" })

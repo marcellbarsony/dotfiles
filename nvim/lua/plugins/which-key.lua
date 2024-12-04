@@ -380,8 +380,8 @@ return {
         -- }}}
 
         -- Leader {{{
-        -- C
-        { "<leader>c",  group = "Clang" },
+        -- Code
+        { "<leader>c",  group = "Code" },
 
         -- DAP
         { "<leader>d",  group = "DAP" },
@@ -398,13 +398,6 @@ return {
         { "<leader>lc", desc = "Calls" },
         { "<leader>lh", desc = "Help" },
         { "<leader>lS", group = "Symbols" },
-
-        -- Python
-        { "<leader>p",  group = "Python" },
-        { "<leader>pd", group = "DAP" },
-
-        -- Rust
-        { "<leader>r",  group = "Rust" },
 
         -- Telescope
         { "<leader>t",  group = "Telescope" },
