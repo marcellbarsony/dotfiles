@@ -44,19 +44,24 @@ ls.add_snippets("rust", {
     },
     fmt("#[{}{}", {
       c(1, {
-        d(1, function() -- derive-debug
+        -- derive-debug {{{
+        d(1, function()
           return sn(nil, {
             i(1),
             t({ "derive(Debug)]" }),
           })
         end),
-        d(1, function() -- test
+        -- }}}
+        -- test {{{
+        d(1, function()
           return sn(nil, {
             i(1),
             t({ "test]" }),
           })
         end),
-        d(1, function() -- ignore test
+        -- }}}
+        -- ignore test {{{
+        d(1, function()
           return sn(nil, {
             i(1),
             t({ "test]", '#[ignore = "' }),
@@ -64,70 +69,122 @@ ls.add_snippets("rust", {
             t({ '"]' }),
           })
         end),
+        -- }}}
       }),
       i(2),
     })
   ),
   -- }}}
 
-  -- Flow control {{{
-  -- if {{{
+  -- Control flow {{{
+  -- if/else {{{
   s({
     trig = "if",
-    name = "If-Else statement",
+    name = "ef-else statement",
     desc = "if <condition> {\n" ..
-      "\t// ...\n" ..
-      "} else if <condition> {\n" ..
-      "\t// ...\n" ..
-      "} else {\n" ..
-      "\t// ...\n" ..
-      "}\n" ..
       " ",
     },
-    fmt("if {} {{\n" ..
-      "\t{}\n" ..
-      "}}{}\n" ..
-    "{}",
+    fmt("{}\n" ..
+      "{}",
       {
-        i(1, "condition"),
-        i(2, "// ..."),
-        c(3, {
-
+        c(1, {
           -- if {{{
           d(1, function()
             return sn(nil, {
               i(1),
-              t({ "" }),
-            })
-          end),
-          -- }}}
-          -- else {{{
-          d(1, function()
-            return sn(nil, {
-              i(1),
-              t({ " else {", "\t" }),
-              i(2, "// ..."),
-              t({ "", "}" }),
-            })
-          end),
-          -- }}}
-          -- else-if {{{
-          d(1, function()
-            return sn(nil, {
-              i(1),
-              t({ " else if " }),
+              t({ "if " }),
               i(2, "condition"),
               t({ " {", "\t" }),
               i(3, "// ..."),
-              t({ "", "} else {" }),
-              t({ "", "\t" }),
-              i(4, "// ..."),
               t({ "", "}" }),
+              c(4, {
+                -- if {{{
+                d(1, function()
+                  return sn(nil, {
+                    i(1),
+                    t({ "" }),
+                  })
+                end),
+                -- }}}
+                -- else {{{
+                d(1, function()
+                  return sn(nil, {
+                    i(1),
+                    t({ " else {", "\t" }),
+                    i(2, "// ..."),
+                    t({ "", "}" }),
+                  })
+                end),
+                -- }}}
+                -- else-if {{{
+                d(1, function()
+                  return sn(nil, {
+                    i(1),
+                    t({ " else if " }),
+                    i(2, "condition"),
+                    t({ " {", "\t" }),
+                    i(3, "// ..."),
+                    t({ "", "} else {" }),
+                    t({ "", "\t" }),
+                    i(4, "// ..."),
+                    t({ "", "}" }),
+                  })
+                end),
+                -- }}}
+              })
+            })
+          end),
+          -- }}}
+          -- let if {{{
+          d(1, function()
+            return sn(nil, {
+              i(1),
+              t({ "let " }),
+              i(2, "var"),
+              t({ " =", "\tif " }),
+              i(3, "condition"),
+              t({ " {", "\t\t" }),
+              i(4, "// ..."),
+              t({ "", "\t}" }),
+              c(5, {
+                -- if {{{
+                d(1, function()
+                  return sn(nil, {
+                    i(1),
+                    t({ ";" }),
+                  })
+                end),
+                -- }}}
+                -- else {{{
+                d(1, function()
+                  return sn(nil, {
+                    i(1),
+                    t({ " else {", "\t\t" }),
+                    i(2, "// ..."),
+                    t({ "", "\t};" }),
+                  })
+                end),
+                -- }}}
+                -- else-if {{{
+                d(1, function()
+                  return sn(nil, {
+                    i(1),
+                    t({ " else if " }),
+                    i(2, "condition"),
+                    t({ " {", "\t\t" }),
+                    i(3, "// ..."),
+                    t({ "", "\t} else {", "\t\t" }),
+                    i(4, "// ..."),
+                    t({ "", "\t};" }),
+                  })
+                end),
+                -- }}}
+              })
             })
           end),
           -- }}}
         }),
-        i(4),
+        i(0),
       }
     )
   ),
@@ -337,10 +394,30 @@ ls.add_snippets("rust", {
       "}}\n" ..
       "{}",
       {
-        i(1, "item"),
-        i(2, "iterator"),
+        i(1, "i"),
+        c(2, {
+          -- sn(nil, {i(1), i(2, "iterator"), t".iter()"}),
+          -- sn(nil, {i(1), i(2, "1..101")}),
+          d(1, function()
+            return sn(nil, {
+              i(1),
+              i(2, "1..11"),
+            })
+          end),
+          d(1, function()
+            return sn(nil, {
+              i(1),
+              i(2, "iterator"),
+              c(3, {
+                t".iter()",
+                t".into_iter()",
+                t".iter_mut()",
+              })
+            })
+          end),
+        }),
         i(3, "// ..."),
-        i(4),
+        i(0),
       }
     )
   ),
@@ -349,36 +426,22 @@ ls.add_snippets("rust", {
   -- loop {{{
   s({
     trig = "loop",
-    name = "Loop",
-    desc = "Loop\n" ..
+    name = "loop",
+    desc = "loop\n" ..
       " ",
     },
-    fmt("{}\n" ..
+    fmt("{}{} {{\n" ..
+      "\t{}\n" ..
+      "}}\n" ..
       "{}",
       {
         c(1, {
-          d(1, function()
-            return sn(nil, {
-              i(1),
-              t({ "'" }),
-              i(2, "label"),
-              t({ " loop {", "\t" }),
-              i(3, "// ..."),
-              t({ "", "\tbreak '" }),
-              same(2),
-              t({ ";", "}" }),
-            })
-          end),
-          d(1, function()
-            return sn(nil, {
-              i(1),
-              t({ "loop {", "\t" }),
-              i(2, "// ..."),
-              t({ "", "}" }),
-            })
-          end),
+          sn(nil, {i(1)}),
+          sn(nil, {i(1), t"'", i(2, "label"), t": "}),
         }),
-        i(2),
+        t "loop",
+        i(2, "// ..."),
+        i(0),
       }
     )
   ),
@@ -912,10 +975,10 @@ ls.add_snippets("rust", {
             i(1),
             i(2, "vec"),
             c(3, {
-              -- type
-              sn(nil, {i(1), t": Vec<", i(2, "T"), t">"}),
               -- no type
               sn(nil, {i(1)}),
+              -- type
+              sn(nil, {i(1), t": Vec<", i(2, "T"), t">"}),
             }),
             t" = ",
             c(4, {

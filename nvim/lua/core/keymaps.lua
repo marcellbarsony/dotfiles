@@ -92,7 +92,7 @@ map("x", "<leader>gh", "<cmd>Gitsigns select_hunk<CR>", { desc = "Select hunk" }
 -- }}}
 
 -- Highlights {{{
-map("n", "<C-c>", "<cmd>nohl<CR>", { desc = "Clear" })
+map("n", "<C-c>", "<cmd>nohlsearch<CR>", { desc = "Clear" })
 map("n", "<leader>ls", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Substitute" })
 -- }}}
 
@@ -115,8 +115,6 @@ map("v", ">", ">gv", { desc = "Indent [Right]" })
 -- Move
 map("n", "K", ":move .-2<CR>gv=gv", { desc = "Move [Up]", silent = true })
 map("n", "J", ":move .+1<CR>gv=gv", { desc = "Move [Down]", silent = true })
-map("x", "K", ":move '<-2<CR>gv=gv", { desc = "Move [Up]", silent = true })
-map("x", "J", ":move '>+1<CR>gv=gv", { desc = "Move [Down]", silent = true })
 map("v", "K", ":move '<-2<CR>gv=gv", { desc = "Move [Up]", silent = true })
 map("v", "J", ":move '>+1<CR>gv=gv", { desc = "Move [Down]", silent = true })
 -- }}}
