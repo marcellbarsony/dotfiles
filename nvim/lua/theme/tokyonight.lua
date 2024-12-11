@@ -46,6 +46,6 @@ require("tokyonight").setup({
     hl.Search = { bg = c.blue7, fg = c.fg }                -- Search
     hl.TreesitterContext = { bg = transparent }            -- Treesitter context menu
     hl.LspInlayHint = { bg = transparent, fg = c.comment } -- LSP Inlay hint
-  end,
+  end
   -- }}}
 })

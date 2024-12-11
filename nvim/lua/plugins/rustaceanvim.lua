@@ -30,10 +30,10 @@ return {
           tools = {
             float_win_config = {
               auto_focus = true,
-            },
-          },
+            }
+          }
         }
       end
     end
-  },
+  }
 }

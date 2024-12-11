@@ -412,6 +412,6 @@ return {
         { "<leader>vT", desc = "Treesitter" },
         -- }}}
       })
-    end,
-  },
+    end
+  }
 }

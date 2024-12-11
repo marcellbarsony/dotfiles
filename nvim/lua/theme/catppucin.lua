@@ -61,9 +61,9 @@ require("catppuccin").setup({
     mini = {
       enabled = true,
       indentscope_color = "",
-    },
+    }
     -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
-  },
+  }
   -- }}}
 })
 

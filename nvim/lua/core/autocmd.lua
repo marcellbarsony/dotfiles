@@ -21,7 +21,7 @@ vim.filetype.add({
   },
   filename = {
     ["yup.lock"] = "yaml",
-  },
+  }
 })
 -- }}}
 
@@ -40,13 +40,13 @@ A.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
     vim.api.nvim_buf_set_keymap(0, "n", "<leader>hd", "<cmd>HexDump<CR>", { desc = "Dump" })
     vim.api.nvim_buf_set_keymap(0, "n", "<leader>ht", "<cmd>HexToggle<CR>", { desc = "Toggle" })
     vim.api.nvim_buf_set_keymap(0, "n", "<leader>ha", "<cmd>HexAssemble<CR>", { desc = "Assemble" })
-  end,
+  end
 })
 -- }}}
 
 -- Help {{{
--- Open help vertically & `q` to exit
 A.nvim_create_autocmd("BufEnter", {
+  desc = "Open help vertically",
   group = group,
   pattern = "*.txt",
   callback = function()
@@ -54,16 +54,16 @@ A.nvim_create_autocmd("BufEnter", {
       A.nvim_cmd({ cmd = "wincmd", args = { "L" } }, {})
       vim.keymap.set("n", "q", "<CMD>q<CR>", { buffer = 0 })
     end
-  end,
+  end
 })
 -- }}}
 
 -- Yank {{{
--- Highlight region on Yank
 A.nvim_create_autocmd("TextYankPost", {
+  desc= "Highlight region on yank",
   group = group,
   callback = function()
     vim.highlight.on_yank({ higroup = "Visual", timeout = 200 })
-  end,
+  end
 })
 -- }}}

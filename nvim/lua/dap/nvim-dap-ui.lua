@@ -1,4 +1,4 @@
--- Nvim DAP UI
+-- DAP UI
 -- https://github.com/rcarriga/nvim-dap-ui
 -- `:h dapui.setup()`
 
@@ -135,5 +135,5 @@ return {
       end
       -- }}}
     end
-  },
+  }
 }

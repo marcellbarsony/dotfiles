@@ -56,6 +56,6 @@ return {
         -- hl.Pmenu = { bg = transparent }                        -- Popup menu
       end,
       -- }}}
-    },
-  },
+    }
+  }
 }

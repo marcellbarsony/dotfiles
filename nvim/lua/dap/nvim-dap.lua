@@ -33,5 +33,5 @@ return {
       -- Terminal
       -- h: dap-terminal
     end
-  },
+  }
 }

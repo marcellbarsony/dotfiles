@@ -244,6 +244,6 @@ return {
         cmp_autopairs.on_confirm_done()
       )
       -- }}}
-    end,
-  },
+    end
+  }
 }

@@ -22,7 +22,7 @@ return {
       is_buf_binary_post_read = function()
         -- logic that determines if a buffer contains binary data or not
         -- must return a bool
-      end,
-    },
-  },
+      end
+    }
+  }
 }

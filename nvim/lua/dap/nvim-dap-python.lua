@@ -8,5 +8,5 @@ return {
       local debugpy = '~/.local/share/python/debugpy/bin/python'
       require('dap-python').setup(debugpy)
     end
-  },
+  }
 }

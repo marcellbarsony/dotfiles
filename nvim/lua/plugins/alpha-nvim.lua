@@ -118,5 +118,5 @@ return {
         [[autocmd FileType alpha setlocal nofoldenable]]
       )
     end
-  },
+  }
 }

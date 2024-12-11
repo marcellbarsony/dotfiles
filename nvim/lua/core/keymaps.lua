@@ -92,7 +92,7 @@ map("x", "<leader>gh", "<cmd>Gitsigns select_hunk<CR>", { desc = "Select hunk" }
 -- }}}
 
 -- Highlights {{{
-map("n", "<C-c>", "<cmd>nohlsearch<CR>", { desc = "Clear" })
+map("n", "<C-h>", "<cmd>nohlsearch<CR>", { desc = "Clear" })
 map("n", "<leader>ls", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Substitute" })
 -- }}}
 

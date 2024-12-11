@@ -1,4 +1,4 @@
--- Lspconfig additional capabilities
+-- Lspconfig
 -- https://github.com/neovim/nvim-lspconfig
 -- https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion#nvim-cmp
 -- https://github.com/neovim/nvim-lspconfig/wiki/Snippets#nvim-cmp-and-luasnip
@@ -33,7 +33,7 @@ return {
       -- }}}
 
       -- Diagnostics {{{
-      -- :help vim.diagnostic
+      -- :h vim.diagnostic
       -- https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization#customizing-how-diagnostics-are-displayed
       vim.diagnostic.config({
         virtual_text = false,
@@ -83,5 +83,5 @@ return {
       -- vim.cmd [[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335]]
       -- }}}
     end
-  },
+  }
 }

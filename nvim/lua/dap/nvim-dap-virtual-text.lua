@@ -20,6 +20,6 @@ return {
       all_frames = false,
       virt_lines = false,
       virt_text_win_col = nil
-    },
-  },
+    }
+  }
 }

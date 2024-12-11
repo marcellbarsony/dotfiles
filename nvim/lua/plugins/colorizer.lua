@@ -24,6 +24,6 @@ return {
         always_update = false,
       },
       buftypes = {},
-    },
-  },
+    }
+  }
 }

@@ -230,37 +230,67 @@ ls.add_snippets("rust", {
     desc = "Match statement\n" ..
       " ",
     },
-    fmt("match {} {{\n" ..
+    fmt("{}match {} {{\n" ..
       "\t{}" ..
       "\n}}{}\n" ..
       "{}",
       {
-        i(1, "pattern"),
-        c(2, {
+        c(1, {
+          sn(nil, { i(1) }),
+          sn(nil, { i(1), t "let ", i(2, "var"), t " = " }),
+        }),
+        i(2, "pattern"),
+        c(3, {
           -- Action {{{
           d(1, function()
             return sn(nil, {
               i(1),
               i(2, "Variant"),
               t({ " => " }),
-              i(3, "action"),
-              i(4),
+              c(3, {
+                -- Action {{{
+                d(1, function()
+                  return sn(nil, {
+                    i(1),
+                    i(2, "action"),
+                  })
+                end),
+                -- }}}
+                -- Action case {{{
+                d(1, function()
+                  return sn(nil, {
+                    i(1),
+                    t({ "{", "\t\t" }),
+                    i(2, "action"),
+                    t({ "", "\t}" }),
+                  })
+                end),
+                -- }}}
+              }),
+              c(4, {
+                -- Remaining case {{{
+                d(1, function()
+                  return sn(nil, {
+                    i(1),
+                    t({ ",", "\t_ => " }),
+                    i(2, "action"),
+                    t(",")
+                  })
+                end),
+                -- }}}
+                -- Empty {{{
+                d(1, function()
+                  return sn(nil, {
+                    i(1),
+                    t({","}),
+                  })
+                end),
+                -- }}}
+              }),
             })
           end),
           -- }}}
-          -- Action case {{{
-          d(1, function()
-            return sn(nil, {
-              i(1),
-              i(2, "Variant"),
-              t({ " => {", "\t\t" }),
-              i(3, "// ..."),
-              t({ "", "\t}" }),
-              i(4)
-            })
-          end),
-          -- }}}
-          -- Error handling {{{
+          -- Error handling (Ok/Err) {{{
           d(1, function()
             return sn(nil, {
               i(1),
@@ -275,7 +305,7 @@ ls.add_snippets("rust", {
             })
           end),
           -- }}}
-          -- Option {{{
+          -- Option (Some/None) {{{
           d(1, function()
             return sn(nil, {
               i(1),
@@ -289,8 +319,8 @@ ls.add_snippets("rust", {
           end),
           -- }}}
         }),
-        i(3),
         i(4),
+        i(0),
       }
     )
   ),
@@ -328,9 +358,9 @@ ls.add_snippets("rust", {
         c(3, {
           sn(nil, { i(1) }),
           -- generic
-          sn(nil, { i(1), t "<", i(2, "T"), t ">" }),
+          sn(nil, { i(1), t "<", i(2, "T, U, V"), t ">" }),
           -- generic + trait
-          sn(nil, { i(1), t "<", i(2, "T: Trait"), t ">" }),
+          sn(nil, { i(1), t "<", i(2, "T: Trait, U: Trait, V: Trait"), t ">" }),
           -- lifetime
           sn(nil, { i(1), t "<'", i(2, "lifetime"), t ">" }),
         }),
@@ -338,17 +368,17 @@ ls.add_snippets("rust", {
         -- Signature {{{
         c(4, {
           -- no parameter
-          sn(nil, { i(1), t "" }),
+          sn(nil, {i(1), t "" }),
           -- parameter
-          sn(nil, { i(1), i(2, "foo"), t ": ", i(3, "Type") }),
+          sn(nil, {i(1), i(2, "par: Type")}),
           -- self
-          sn(nil, { i(1), t "&self" }),
+          sn(nil, {i(1), t "&self" }),
           -- self + parameter
-          sn(nil, { i(1), t "&self, ", i(2, "foo"), t ": ", i(3, "Type") }),
-          -- self + mut
-          sn(nil, { i(1), t "&mut self", i(2, "") }),
-          -- self + mut + parameter
-          sn(nil, { i(1), t "&mut self, ", i(2, "foo"), t ": ", i(3, "Type") }),
+          sn(nil, {i(1), t "&self, ", i(2, "par: Type")}),
+          -- mut self
+          sn(nil, {i(1), t "&mut self", i(2, "") }),
+          -- mut self + parameter
+          sn(nil, {i(1), t "&mut self, ", i(2, "par: Type")}),
         }),
         -- }}}
         -- Return {{{
@@ -371,7 +401,7 @@ ls.add_snippets("rust", {
             })
           end),
           -- result
-          sn(nil, { i(1), t " -> Result<", i(2, "Type"), t ", ", i(3, "io::Error"), t ">" }),
+          sn(nil, { i(1), t " -> Result<", i(2, "Type"), t ", ", i(3, "io::Error"), t "> " }),
         }),
         -- }}}
         i(6, "// ..."),
@@ -394,14 +424,12 @@ ls.add_snippets("rust", {
       "}}\n" ..
       "{}",
       {
-        i(1, "i"),
+        i(1, "iter"),
         c(2, {
-          -- sn(nil, {i(1), i(2, "iterator"), t".iter()"}),
-          -- sn(nil, {i(1), i(2, "1..101")}),
           d(1, function()
             return sn(nil, {
               i(1),
-              i(2, "1..11"),
+              i(2, "iterator"),
             })
           end),
           d(1, function()
@@ -415,32 +443,14 @@ ls.add_snippets("rust", {
               })
             })
           end),
+          d(1, function()
+            return sn(nil, {
+              i(1),
+              i(2, "1..11"),
+            })
+          end),
         }),
         i(3, "// ..."),
-        i(0),
-      }
-    )
-  ),
-  -- }}}
-
-  -- loop {{{
-  s({
-    trig = "loop",
-    name = "loop",
-    desc = "loop\n" ..
-      " ",
-    },
-    fmt("{}{} {{\n" ..
-      "\t{}\n" ..
-      "}}\n" ..
-      "{}",
-      {
-        c(1, {
-          sn(nil, {i(1)}),
-          sn(nil, {i(1), t"'", i(2, "label"), t": "}),
-        }),
-        t "loop",
-        i(2, "// ..."),
         i(0),
       }
     )
@@ -466,26 +476,118 @@ ls.add_snippets("rust", {
     )
   ),
   -- }}}
+
+  -- loop {{{
+  s({
+    trig = "loop",
+    name = "loop",
+    desc = "loop\n" ..
+      " ",
+    },
+    fmt("{}\n" ..
+      "{}",
+      {
+        c(1, {
+          -- label {{{
+          d(1, function()
+            return sn(nil, {
+              i(1),
+              t({ "'" }),
+              i(2, "label"),
+              t({ ": loop {", "\t" }),
+              i(3, "// ..."),
+              t({ "", "}" }),
+            })
+          end),
+          -- }}}
+          -- label + break {{{
+          d(1, function()
+            return sn(nil, {
+              i(1),
+              t({ "'" }),
+              i(2, "label"),
+              t({ ": loop {", "\t" }),
+              i(3, "// ..."),
+              t({ "", "\tbreak '" }),
+              i(4, "label"),
+              t({ ";", "}" }),
+            })
+          end),
+          -- }}}
+          -- loop {{{
+          d(1, function()
+            return sn(nil, {
+              i(1),
+              t({ "loop {", "\t" }),
+              i(2, "// ..."),
+              t({ "", "}" }),
+            })
+          end),
+          -- }}}
+          -- loop + break {{{
+          d(1, function()
+            return sn(nil, {
+              i(1),
+              t({ "loop {", "\t" }),
+              i(2, "// ..."),
+              t({ "", "\tbreak" }),
+              i(3, ""),
+              t({ ";", "}" }),
+            })
+          end),
+          -- }}}
+        }),
+        i(0),
+      }
+    )
+  ),
+  -- }}}
   -- }}}
 
   -- Macros {{{
+  -- eprintln! {{{
+  s({
+    trig = "eprintln!",
+    name = "eprintln!",
+    desc = "eprintln!\n" ..
+      " ",
+    },
+    fmt("eprintln!({}){}",
+      {
+        c(1, {
+          -- String
+          sn(nil, {i(1), t'"', i(2, "Print error"), t'"'}),
+          -- String + Variable
+          sn(nil, {i(1), t'"', i(2, "Print error"), t'", ', i(3, "var")}),
+        }),
+        c(2, {
+          sn(nil, {i(1), t";"}),
+          sn(nil, {i(1), t""}),
+        }),
+      }
+    )
+  ),
+  -- }}}
+
   -- println! {{{
   s({
-    trig = "println",
+    trig = "println!",
     name = "println!",
     desc = "println!\n" ..
       " ",
     },
-    fmt("println!({});\n" ..
-      "{}",
+    fmt("println!({}){}",
       {
         c(1, {
           -- String
-          sn(nil, {i(1), t'"', i(2, "Hello, world!"), t'"'}),
+          sn(nil, {i(1), t'"', i(2, "Print macro"), t'"'}),
           -- String + Variable
-          sn(nil, {i(1), t'"', i(2, "Hello, world!"), t'", ', i(3, "foo")}),
+          sn(nil, {i(1), t'"', i(2, "Print macro"), t'", ', i(3, "var")}),
         }),
-        i(2),
+        c(2, {
+          sn(nil, {i(1), t";"}),
+          sn(nil, {i(1), t""}),
+        }),
       }
     )
   ),
@@ -493,7 +595,7 @@ ls.add_snippets("rust", {
 
   -- panic! {{{
   s({
-    trig = "panic",
+    trig = "panic!",
     name = "panic!",
     desc = "panic!\n" ..
       " ",
@@ -512,19 +614,19 @@ ls.add_snippets("rust", {
   -- Modules {{{
   -- crate {{{
   s({
-    trig = "crate",
-    name = "crate",
-    desc = "crate\n" ..
+    trig = "module",
+    name = "module",
+    desc = "module\n" ..
       " ",
     },
     fmt("{};\n" ..
       "{}",
       {
         c(1, {
-          -- Absolute path
-          sn(nil, { i(1), t "crate::", i(2, "module::function()") }),
           -- Relative path
           sn(nil, { i(1), i(2, "module::function()") }),
+          -- Absolute path
+          sn(nil, { i(1), t "crate::", i(2, "module::function()") }),
           -- Parent module
           sn(nil, { i(1), t "super::", i(2, "module::function()") }),
         }),
@@ -550,7 +652,7 @@ ls.add_snippets("rust", {
             return sn(nil, {
               i(1),
               t({ "mod " }),
-              i(2, "mod_name"),
+              i(2, "module"),
               t({ " {", "\t" }),
               i(3, "// ..."),
               t({ "", "}" }),
@@ -562,7 +664,7 @@ ls.add_snippets("rust", {
             return sn(nil, {
               i(1),
               t({ "pub mod " }),
-              i(2, "mod_name"),
+              i(2, "module"),
               t({ " {", "\t" }),
               i(3, "// ..."),
               t({ "", "}" }),
@@ -574,7 +676,7 @@ ls.add_snippets("rust", {
             return sn(nil, {
               i(1),
               t({ "mod " }),
-              i(2, "file_name"),
+              i(2, "file"),
               t({ ";" }),
             })
           end),
@@ -628,10 +730,14 @@ ls.add_snippets("rust", {
     desc = "enum\n" ..
       " ",
     },
-    fmt("enum {}\n" ..
-      "}}\n",
+    fmt("{}enum {}\n" ..
+      "}}{}\n",
       {
         c(1, {
+          sn(nil, { i(1) }),
+          sn(nil, { i(1), t "pub " }),
+        }),
+        c(2, {
           -- Generic {{{
           d(1, function() -- Generic
             return sn(nil, {
@@ -666,6 +772,7 @@ ls.add_snippets("rust", {
           end),
           -- }}}
         }),
+        i(0),
       }
     )
   ),
@@ -681,12 +788,16 @@ ls.add_snippets("rust", {
       "}\n" ..
       " ",
     },
-    fmt("struct {}\n" ..
+    fmt("{}struct {}\n" ..
       "{}",
       {
         c(1, {
+          sn(nil, { i(1) }),
+          sn(nil, { i(1), t "pub " }),
+        }),
+        c(2, {
           -- C-like {{{
-          d(2, function()
+          d(1, function()
             return sn(nil, {
               i(1),
               i(2, "Clike"),
@@ -694,7 +805,7 @@ ls.add_snippets("rust", {
                 -- Type
                 sn(nil, { i(1) }),
                 -- Generic
-                sn(nil, { i(1), t "<", i(2, "T"), t ">" }),
+                sn(nil, { i(1), t "<", i(2, "T, U, V"), t ">" }),
                 -- Where
                 sn(nil, { i(1), t "<", i(2, "T"), t "> where ", i(3, "T: Trait") }),
               }),
@@ -711,7 +822,7 @@ ls.add_snippets("rust", {
           end),
           -- }}}
           -- Tuple {{{
-          d(2, function()
+          d(1, function()
             return sn(nil, {
               i(1),
               i(2, "Tuple"),
@@ -731,7 +842,7 @@ ls.add_snippets("rust", {
           end),
           -- }}}
         }),
-        i(2),
+        i(0),
       }
     )
   ),
@@ -740,19 +851,58 @@ ls.add_snippets("rust", {
   -- Impl {{{
   s({
     trig = "impl",
-    name = "Implementation",
-    desc = "impl Struct {\n" ..
-      "\t// ...\n" ..
-      "}\n" ..
+    name = "impl",
+    desc = "impl\n" ..
       " ",
     },
-    fmt("impl {} {{\n" ..
-      "\t{}\n" ..
-      "}}{}",
+    fmt("{}\n" ..
+      "{}",
       {
-        i(1, "Struct"),
-        i(2, "// ..."),
-        i(3),
+        c(1, {
+          -- Type {{{
+          d(1, function()
+            return sn(nil, {
+              i(1),
+              t({ "impl "}),
+              i(2, "Type"),
+              t({ " {", "\t" }),
+              i(3, "// ..."),
+              t({ "", "}" }),
+            })
+          end),
+          -- }}}
+          -- Type + Generic {{{
+          d(1, function()
+            return sn(nil, {
+              i(1),
+              t({ "impl<"}),
+              i(2, "T, U, V"),
+              t({ "> "}),
+              i(3, "Type"),
+              t({ "<"}),
+              same(2),
+              t({ "> {", "\t" }),
+              i(4, "// ..."),
+              t({ "", "}" }),
+            })
+          end),
+          -- }}}
+          -- Trait for Type {{{
+          d(1, function()
+            return sn(nil, {
+              i(1),
+              t({ "impl "}),
+              i(2, "Trait"),
+              t({ " for " }),
+              i(3, "Type"),
+              t({ " {", "\t" }),
+              i(4, "// ..."),
+              t({ "", "}" }),
+            })
+          end),
+          -- }}}
+        }),
+        i(0)
       }
     )
   ),
@@ -778,13 +928,13 @@ ls.add_snippets("rust", {
         }),
         i(2, "Type"),
         c(3, {
-          -- no generic type
+          -- No Generic type
           sn(nil, { i(1) }),
-          -- generic type
+          -- Generic type
           sn(nil, { i(1), t "<", i(2, "T, U, V"), t ">" }),
         }),
         i(4, "// ..."),
-        i(5),
+        i(0),
       }
     )
   ),
@@ -804,7 +954,7 @@ ls.add_snippets("rust", {
         i(1, "CONSTANT"),
         i(2, "T"),
         i(3, "value"),
-        i(4),
+        i(0),
       }
     )
   ),
@@ -866,6 +1016,19 @@ ls.add_snippets("rust", {
               sn(nil, {i(1), t"false"}),
             }),
             t";",
+          }),
+          -- }}}
+          -- File {{{
+          sn(nil, {
+            i(1),
+            i(2, "file"),
+            c(3, {
+              sn(nil, {i(1), t""}),
+              sn(nil, {i(1), t": Result<", i(2, "File, Error"), t">"}),
+            }),
+            t' = File::open("',
+            i(4, "file.ext"),
+            t'");',
           }),
           -- }}}
           -- HashMap {{{
@@ -994,7 +1157,7 @@ ls.add_snippets("rust", {
           }),
           -- }}}
         }),
-        i(3),
+        i(0),
       }
     )
   ),
@@ -1017,7 +1180,7 @@ ls.add_snippets("rust", {
         i(2, "STATIC"),
         i(3, "Type"),
         i(4, ""),
-        i(5),
+        i(0),
       }
     )
   ),
