@@ -39,16 +39,17 @@ ls.add_snippets("rust", {
   s({
     trig = "#[attr]",
     name = "Attributes",
-    desc = "Attributes\n" ..
-      " ",
+    desc = "Attributes:\n" ..
+      "derive(Debug) / test \n" ..
+      " "
     },
-    fmt("#[{}{}", {
+    fmt("#[{}]{}", {
       c(1, {
         -- derive-debug {{{
         d(1, function()
           return sn(nil, {
             i(1),
-            t({ "derive(Debug)]" }),
+            t({ "derive(Debug)" }),
           })
         end),
         -- }}}
@@ -56,7 +57,7 @@ ls.add_snippets("rust", {
         d(1, function()
           return sn(nil, {
             i(1),
-            t({ "test]" }),
+            t({ "test" }),
           })
         end),
         -- }}}
@@ -66,12 +67,12 @@ ls.add_snippets("rust", {
             i(1),
             t({ "test]", '#[ignore = "' }),
             i(2, "reason"),
-            t({ '"]' }),
+            t({ '"' }),
           })
         end),
         -- }}}
       }),
-      i(2),
+      i(0)
     })
   ),
   -- }}}
@@ -184,7 +185,7 @@ ls.add_snippets("rust", {
           end),
           -- }}}
         }),
-        i(0),
+        i(0)
       }
     )
   ),
@@ -217,7 +218,7 @@ ls.add_snippets("rust", {
           sn(nil, { i(1), t "(", i(2, "foo, bar"), t ") = ", i(3, "var") }),
         }),
         i(2, "// ..."),
-        i(3),
+        i(0)
       }
     )
   ),
@@ -320,7 +321,7 @@ ls.add_snippets("rust", {
           -- }}}
         }),
         i(4),
-        i(0),
+        i(0)
       }
     )
   ),
@@ -394,18 +395,25 @@ ls.add_snippets("rust", {
               t({ " -> " }),
               i(2, "Type"),
               t({ "", "\twhere " }),
-              i(3, "T"),
-              t({ ": " }),
-              i(4, "Trait"),
+              i(3, "T: Trait"),
               t({ "", "" }),
             })
           end),
           -- result
-          sn(nil, { i(1), t " -> Result<", i(2, "Type"), t ", ", i(3, "io::Error"), t "> " }),
+          d(1, function()
+            return sn(nil, {
+              i(1),
+              t({ " -> Result<" }),
+              i(2, "Type"),
+              t({ ", " }),
+              i(3, "io::Error"),
+              t({ "> " }),
+            })
+          end),
         }),
         -- }}}
         i(6, "// ..."),
-        i(7),
+        i(0),
       }
     )
   ),
@@ -451,7 +459,7 @@ ls.add_snippets("rust", {
           end),
         }),
         i(3, "// ..."),
-        i(0),
+        i(0)
       }
     )
   ),
@@ -471,7 +479,7 @@ ls.add_snippets("rust", {
       {
         i(1, "bool_condition"),
         i(2, "// ..."),
-        i(3),
+        i(0)
       }
     )
   ),
@@ -600,8 +608,7 @@ ls.add_snippets("rust", {
     desc = "panic!\n" ..
       " ",
     },
-    fmt("panic!(\"{}\");\n" ..
-      "{}",
+    fmt("panic!(\"{}\");{}",
       {
         i(1, "Error message"),
         i(0),
@@ -619,8 +626,7 @@ ls.add_snippets("rust", {
     desc = "module\n" ..
       " ",
     },
-    fmt("{};\n" ..
-      "{}",
+    fmt("{};{}",
       {
         c(1, {
           -- Relative path
@@ -630,7 +636,7 @@ ls.add_snippets("rust", {
           -- Parent module
           sn(nil, { i(1), t "super::", i(2, "module::function()") }),
         }),
-        i(2),
+        i(0)
       }
     )
   ),
@@ -643,8 +649,7 @@ ls.add_snippets("rust", {
     desc = "mod\n" ..
       " ",
     },
-    fmt("{}\n" ..
-      "{}",
+    fmt("{}{}",
       {
         c(1, {
           -- mod (private) {{{
@@ -682,7 +687,7 @@ ls.add_snippets("rust", {
           end),
           -- }}}
         }),
-        i(2),
+        i(0)
       }
     )
   ),
@@ -695,8 +700,7 @@ ls.add_snippets("rust", {
     desc = "use\n" ..
       " ",
     },
-    fmt("use {};\n" ..
-      "{}",
+    fmt("use {};{}",
       {
         c(1, {
           -- Module
@@ -716,7 +720,7 @@ ls.add_snippets("rust", {
           -- Super [TODO]
           sn(nil, { i(1), t "super::", i(2, "module") }),
         }),
-        i(2),
+        i(0)
       }
     )
   ),
@@ -772,7 +776,7 @@ ls.add_snippets("rust", {
           end),
           -- }}}
         }),
-        i(0),
+        i(0)
       }
     )
   ),
@@ -788,8 +792,7 @@ ls.add_snippets("rust", {
       "}\n" ..
       " ",
     },
-    fmt("{}struct {}\n" ..
-      "{}",
+    fmt("{}struct {}{}",
       {
         c(1, {
           sn(nil, { i(1) }),
@@ -842,7 +845,7 @@ ls.add_snippets("rust", {
           end),
           -- }}}
         }),
-        i(0),
+        i(0)
       }
     )
   ),
@@ -855,8 +858,7 @@ ls.add_snippets("rust", {
     desc = "impl\n" ..
       " ",
     },
-    fmt("{}\n" ..
-      "{}",
+    fmt("{}{}",
       {
         c(1, {
           -- Type {{{
@@ -917,8 +919,7 @@ ls.add_snippets("rust", {
     },
     fmt("{}trait {}{} {{\n" ..
       "\t{}\n" ..
-      "}}\n" ..
-      "{}",
+      "}}{}",
       {
         c(1, {
           -- Private
@@ -934,7 +935,7 @@ ls.add_snippets("rust", {
           sn(nil, { i(1), t "<", i(2, "T, U, V"), t ">" }),
         }),
         i(4, "// ..."),
-        i(0),
+        i(0)
       }
     )
   ),
@@ -948,13 +949,12 @@ ls.add_snippets("rust", {
     desc = "const\n" ..
       " ",
     },
-    fmt("const {}: {} = {};\n" ..
-      "{}",
+    fmt("const {}: {} = {};{}",
       {
         i(1, "CONSTANT"),
         i(2, "T"),
         i(3, "value"),
-        i(0),
+        i(0)
       }
     )
   ),
@@ -967,8 +967,7 @@ ls.add_snippets("rust", {
     desc = "let [mut] NAME: Type = value\n" ..
       " ",
     },
-    fmt("{} {}\n" ..
-      "{}",
+    fmt("{} {};{}",
       {
         c(1, {
           t"let",
@@ -980,8 +979,7 @@ ls.add_snippets("rust", {
             i(1),
             i(2, "var"),
             t" = ",
-            i(3, ""),
-            t";",
+            i(3, "")
           }),
           -- }}}
           -- Array {{{
@@ -1001,9 +999,9 @@ ls.add_snippets("rust", {
               -- Repeat expression
               sn(nil, {i(1), i(2, "repeat"), t"; ", i(3, "N")}),
               -- 2D array
-              sn(nil, {t"[", i(1), i(2, "foo, bar, baz"), t"], [", i(3, "foo, bar, baz"), t"]", i(4)}),
+              sn(nil, {t"[", i(1), i(2, "foo, bar, baz"), t"], [", i(3, "foo, bar, baz"), t"]", i(4)})
             }),
-            t"];"
+            t"]"
           }),
           -- }}}
           -- Bool {{{
@@ -1013,9 +1011,17 @@ ls.add_snippets("rust", {
             t": bool = ",
             c(3, {
               sn(nil, {i(1), t"true"}),
-              sn(nil, {i(1), t"false"}),
-            }),
-            t";",
+              sn(nil, {i(1), t"false"})
+            })
+          }),
+          -- }}}
+          -- Char {{{
+          sn(nil, {
+            i(1),
+            i(2, "char"),
+            t": char = '",
+            i(3, ""),
+            t"'",
           }),
           -- }}}
           -- File {{{
@@ -1028,7 +1034,7 @@ ls.add_snippets("rust", {
             }),
             t' = File::open("',
             i(4, "file.ext"),
-            t'");',
+            t'")'
           }),
           -- }}}
           -- HashMap {{{
@@ -1037,19 +1043,18 @@ ls.add_snippets("rust", {
             t"mut ",
             i(2, "hash"),
             c(3, {
+              -- No type
+              sn(nil, {i(1), t""}),
               -- Type
-              sn(nil, {i(1), t": HashMap<", i(2, "T"), t", ", i(3, "T"), t"> "}),
-              -- Custom typ
-              sn(nil, {i(1), t" "}),
+              sn(nil, {i(1), t": HashMap<", i(2, "T"), t", ", i(3, "T"), t">"}),
             }),
-            t"= HashMap::",
+            t" = HashMap::",
             c(4, {
               -- New
               sn(nil, {i(1), t"new()"}),
               -- With capacity
-              sn(nil, {i(1), t"with_capacity(", i(2), t")"}),
-            }),
-            t";"
+              sn(nil, {i(1), t"with_capacity(", i(2), t")"})
+            })
           }),
           -- }}}
           -- Integer {{{
@@ -1059,8 +1064,7 @@ ls.add_snippets("rust", {
             t": ",
             i(3, "T"),
             t" = ",
-            i(4, "num"),
-            t";"
+            i(4, "num")
           }),
           -- }}}
           -- Option {{{
@@ -1075,22 +1079,26 @@ ls.add_snippets("rust", {
               sn(nil, {i(1), t"None"}),
               -- Some
               sn(nil, {i(1), t"Some(", i(2, "value"), t")"}),
-            }),
-            t";",
+            })
           }),
           -- }}}
           -- PathBuf {{{
           sn(nil, {
             i(1),
             i(2, "path"),
-            t": PathBuf = ",
             c(3, {
-              -- New
-              sn(nil, {i(1), t"PathBuf::new()"}),
-              -- From
-              sn(nil, {i(1), t'PathBuf::from("', i(2, "/foo/bar.baz"), t'")'}),
+              -- No Type
+              sn(nil, {i(1), t""}),
+              -- Type
+              sn(nil, {i(1), t': PathBuf' }),
             }),
-            t";",
+            t" = PathBuf::",
+            c(4, {
+              -- New
+              sn(nil, {i(1), t"new()"}),
+              -- From
+              sn(nil, {i(1), t'from("', i(2, "/foo/bar.baz"), t'")'}),
+            })
           }),
           -- }}}
           -- Strings {{{
@@ -1100,18 +1108,16 @@ ls.add_snippets("rust", {
             t": ",
             c(3, {
               -- String slice (&str)
-              sn(nil, {i(1), t"&str", t' = "', i(2), t'";'}),
+              sn(nil, {i(1), t"&str", t' = "', i(2)}),
               -- String literal (empty)
-              sn(nil, {i(1), t"String", t" = String::new();"}),
+              sn(nil, {i(1), t"String", t" = String::new()"}),
               -- String literal (content)
-              sn(nil, {i(1), t"String", t' = String::from("', i(2), t'");'}),
+              sn(nil, {i(1), t"String", t' = String::from("', i(2), t'")'}),
               -- String format
-              sn(nil, {i(1), t"String", t' = format!("', i(2, 'Hello {}", "world!'), t'");'}),
+              sn(nil, {i(1), t"String", t' = format!("', i(2, 'Hello {}", "world!'), t'")'}),
               -- String reference
-              sn(nil, {i(1), t"&String", t' = ', i(2), t';'}),
-              -- Character
-              sn(nil, {i(1), t"char", t' = "', i(2, ""), t'";'}),
-            }),
+              sn(nil, {i(1), t"&String", t' = ', i(2)})
+            })
           }),
           -- }}}
           -- Tuple {{{
@@ -1120,7 +1126,7 @@ ls.add_snippets("rust", {
             i(2, "tup"),
             t" = (",
             i(3, "foo, bar, baz"),
-            t");",
+            t")"
           }),
           -- }}}
           -- Tuple (destructuring) {{{
@@ -1129,8 +1135,7 @@ ls.add_snippets("rust", {
             t"(",
             i(2, "var1, var2"),
             t") = ",
-            i(3, "tup"),
-            t";",
+            i(3, "tup")
           }),
           -- }}}
           -- Vector {{{
@@ -1146,14 +1151,14 @@ ls.add_snippets("rust", {
             t" = ",
             c(4, {
               -- empty
-              sn(nil, {i(1), t"Vec::new();"}),
+              sn(nil, {i(1), t"Vec::new()"}),
               -- content
-              sn(nil, {i(1), t"vec![", i(2, "foo, bar, baz"), t"];"}),
+              sn(nil, {i(1), t"vec![", i(2, "foo, bar, baz"), t"]"}),
               -- arguments
-              sn(nil, {i(1), t"env::args().collect();"}),
+              sn(nil, {i(1), t"env::args().collect()"}),
               -- custom
-              sn(nil, {i(1), i(2), t";"}),
-            }),
+              sn(nil, {i(1), i(2)})
+            })
           }),
           -- }}}
         }),
@@ -1170,8 +1175,7 @@ ls.add_snippets("rust", {
     desc = "static STATIC: Type = value\n" ..
       " ",
     },
-    fmt("{} {}: {} = {};\n" ..
-      "{}",
+    fmt("{} {}: {} = {};{}",
       {
         c(1, {
           t"static",
@@ -1180,7 +1184,7 @@ ls.add_snippets("rust", {
         i(2, "STATIC"),
         i(3, "Type"),
         i(4, ""),
-        i(0),
+        i(0)
       }
     )
   ),

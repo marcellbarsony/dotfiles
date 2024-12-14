@@ -31,10 +31,11 @@ random_transition=${transitions[$random_index]}
 
 # Wallpaper {{{
 swww img $random_file \
+    --transition-angle=45 \
     --transition-bezier .43,0.19,1,.4 \
+    --transition-duration=2 \
     --transition-fps=60 \
     --transition-type=$random_transition \
-    --transition-duration=2 \
 # }}}
 
 # Color scheme {{{

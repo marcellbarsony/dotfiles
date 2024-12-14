@@ -65,6 +65,7 @@ rules = [
     { name = "*.toml", use = "edit" },
     { name = "*.txt",  use = "edit" },
     { name = "*.xml",  use = "edit" },
+    { name = "*.yml",  use = "edit" },
     { name = "*.yaml", use = "edit" },
     { name = "*.zig",  use = "edit" },
     { mime = "{audio,video}/*", use = "play" },

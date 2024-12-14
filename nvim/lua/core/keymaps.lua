@@ -279,8 +279,8 @@ map("n", "<leader>vTI", "<cmd>InspectTree<CR>", { desc = "Inspect [Tree]" })
 -- }}}
 
 -- Trouble {{{
-map("n", "<leader>lt", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Trouble" })
-map("n", "<leader>lb", "<cmd>Trouble diagnostics toggle filter.buf=0<CR>", { desc = "Buffer" })
+map("n", "<leader>lt", "<cmd>Trouble diagnostics toggle filter.buf=0<CR>", { desc = "Trouble" })
+map("n", "<leader>lT", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Trouble [Project]" })
 map("n", "<leader>lq", "<cmd>Trouble qflist toggle<CR>", { desc = "Quickfix" })
 -- map("n", "<leader>zs", "<cmd>Trouble symbols toggle focus=false<CR>", { desc = "Symbols" })
 -- map("n", "<leader>zl", "<cmd>Trouble lsp toggle focus=false win.position=right<CR>", { desc = "LSP definitions" })

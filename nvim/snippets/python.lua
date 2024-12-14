@@ -394,7 +394,7 @@ ls.add_snippets("python", {
   -- }}}
 
   -- Misc {{{
-  -- #! (shbang) {{{
+  -- #! [shbang] {{{
   s( "#!",
     fmt('#!/usr/bin/env python3\n' ..
       '"""\n' ..
