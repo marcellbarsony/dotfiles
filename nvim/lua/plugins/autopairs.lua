@@ -1,6 +1,6 @@
 -- Autopairs
 -- https://github.com/windwp/nvim-autopairs
--- https://github.com/windwp/nvim-autopairs#default-values
+-- `:h nvim-autopairs.txt`
 
 return {
   {

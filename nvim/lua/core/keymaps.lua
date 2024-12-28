@@ -146,7 +146,7 @@ map("n", "<leader>lf", function() vim.lsp.buf.format { async = true } end, { des
 map("n", "gd", vim.lsp.buf.definition, { desc = "Definition" })
 -- map("n", "gt", vim.lsp.buf.type_definition, { desc = "Type definition" })
 -- map("n", "gD", vim.lsp.buf.declaration, { desc = "Declaration" })
--- map("n", "gi", vim.lsp.buf.implementation, { desc = "Implementation" })
+map("n", "<leader>lI", vim.lsp.buf.implementation, { desc = "Implementation" })
 
 -- Inlay hints
 map("n", "<leader>li", function()

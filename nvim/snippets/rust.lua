@@ -1021,7 +1021,17 @@ ls.add_snippets("rust", {
             i(2, "char"),
             t": char = '",
             i(3, ""),
-            t"'",
+            t"'"
+          }),
+          -- }}}
+          -- Const {{{
+          sn(nil, {
+            i(1),
+            i(2, "const "),
+            i(3, "CONST"),
+            t": char = '",
+            i(4, ""),
+            t"'"
           }),
           -- }}}
           -- File {{{
@@ -1061,10 +1071,12 @@ ls.add_snippets("rust", {
           sn(nil, {
             i(1),
             i(2, "int"),
-            t": ",
-            i(3, "T"),
+            c(3, {
+              sn(nil, {i(1), t""}),
+              sn(nil, {i(1), t": ", i(2, "T")}),
+            }),
             t" = ",
-            i(4, "num")
+            i(4, "32")
           }),
           -- }}}
           -- Option {{{
@@ -1162,7 +1174,7 @@ ls.add_snippets("rust", {
           }),
           -- }}}
         }),
-        i(0),
+        i(0)
       }
     )
   ),

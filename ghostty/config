@@ -1,0 +1,17 @@
+background-opacity = 0.8
+
+config-file = theme
+
+confirm-close-surface = false
+cursor-invert-fg-bg = true
+
+font-size = 12
+font-family = JetBrains Mono Bold
+
+resize-overlay = never
+
+title = ghostty
+
+window-decoration = false
+window-padding-x = 3
+window-padding-y = 0

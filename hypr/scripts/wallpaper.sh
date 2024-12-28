@@ -23,6 +23,18 @@ else
 fi
 # }}}
 
+# Cache {{{
+CACHE_DIR="/home/marci/.cache/wallpaper"
+
+if [ ! -d "$DIR" ]; then
+  echo "Directory does not exist. Creating it now..."
+  mkdir -p "$DIR"
+  echo "Directory created: $DIR"
+else
+  echo "Directory already exists: $DIR"
+fi
+# }}}
+
 # Transitions {{{
 transitions=("simple" "any" "wipe" "outer" "grow" "random")
 random_index=$((RANDOM % ${#transitions[@]}))

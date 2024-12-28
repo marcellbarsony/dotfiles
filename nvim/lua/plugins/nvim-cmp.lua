@@ -51,7 +51,7 @@ return {
       -- }}}
 
       -- Luasnip (Tab) {{{
-      -- Confirm candidate on `TAB` immediately when there's only one completion entry
+      -- Confirm selected on `TAB` immediately when there's only one completion entry
       local has_words_before = function()
         unpack = unpack or table.unpack
         local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -61,6 +61,7 @@ return {
 
       -- CMP Setup {{{
       -- https://github.com/hrsh7th/nvim-cmp#setup
+      -- https://github.com/hrsh7th/nvim-cmp/blob/main/lua/cmp/config/default.lua
       cmp.setup({
         -- Snippet {{{
         snippet = {
@@ -77,7 +78,7 @@ return {
             side_padding = 0,
             winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
           },
-          -- Border
+          -- -- Border
           -- documentation = cmp.config.window.bordered {
           --   winhighlight = 'Normal:CmpPmenu,CursorLine:PmenuSel,Search:None'
           -- },
@@ -93,8 +94,9 @@ return {
 
         -- View {{{
         view = {
-          entries = "custom",
-          selection_rder = "near_cursor"
+          name = "custom",
+          selection_order = "near_cursor",
+          follow_cursor = false
         },
         -- }}}
 

@@ -21,11 +21,13 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     { import = "dap" },
+    { import = "lang" },
     { import = "mason" },
-    { import = "plugins" },
+    { import = "plugins" }
   },
   checker = { enabled = false },
 })
 
 -- Color scheme
 vim.cmd [[colorscheme tokyonight]]
+-- vim.cmd [[colorscheme darkvoid]]

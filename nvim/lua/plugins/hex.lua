@@ -1,5 +1,6 @@
 -- Hex
 -- https://github.com/RaafatTurki/hex.nvim
+-- `:h hex.nvim`
 
 return {
   {

@@ -3,12 +3,12 @@
 # Manager {{{
 [manager]
 keymap = [
-    { on = [ "<Esc>" ], run = "escape",             desc = "Exit visual mode, clear selected, or cancel search" },
-    { on = [ "<C-[>" ], run = "escape",             desc = "Exit visual mode, clear selected, or cancel search" },
+    { on = [ "<Esc>" ], run = "escape",             desc = "Exit/Clear/Cancel" },
+    { on = [ "<C-[>" ], run = "escape",             desc = "Exit/Clear/Cancel" },
     { on = [ "q" ],     run = "quit",               desc = "Exit" },
-    { on = [ "Q" ],     run = "quit --no-cwd-file", desc = "Exit [No cwd]" },
+    { on = [ "Q" ],     run = "quit --no-cwd-file", desc = "Exit [no cwd]" },
     { on = [ "<C-q>" ], run = "close",              desc = "Quit/Close tab" },
-    { on = [ "<C-z>" ], run = "suspend",            desc = "Suspend process" },
+    { on = [ "<C-z>" ], run = "suspend",            desc = "Suspend" },
 
     # Navigation {{{
     { on = [ "e" ], run = "arrow -1", desc = "Move [Up]" },
@@ -37,11 +37,11 @@ keymap = [
     # }}}
 
     # Selection {{{
-    { on = [ "<Space>" ], run = [ "select --state=none", "arrow 1" ], desc = "Select" },
+    { on = [ "<Space>" ], run = [ "toggle --state=none", "arrow 1" ], desc = "Select" },
     { on = [ "v" ],       run = "visual_mode",                        desc = "Visual [Select]" },
     { on = [ "V" ],       run = "visual_mode --unset",                desc = "Visual [Unset]" },
-    { on = [ "<C-a>" ],   run = "select_all --state=true",            desc = "Select [All]" },
-    { on = [ "<C-r>" ],   run = "select_all --state=none",            desc = "Select [All - Inverze]" },
+    { on = [ "<C-a>" ],   run = "toggle_all --state=true",            desc = "Select [All]" },
+    { on = [ "<C-r>" ],   run = "toggle_all --state=none",            desc = "Select [All - Inverze]" },
     # }}}
 
     # Operation {{{

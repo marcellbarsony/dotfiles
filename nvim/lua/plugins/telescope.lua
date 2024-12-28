@@ -114,6 +114,11 @@ return {
 
           -- Strategies
           layout_strategy = "horizontal",
+          layout_config = {
+            horizontal = {
+              prompt_position = "bottom",
+            },
+          },
           scroll_strategy = "cycle",
           selection_strategy = "reset",
           sorting_strategy = "descending",

@@ -1,5 +1,6 @@
 -- Colorizer
 -- https://github.com/NvChad/nvim-colorizer.lua
+-- `:h colorizer`
 
 return {
   {
