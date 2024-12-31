@@ -23,8 +23,8 @@ ZSH_HIGHLIGHT_STYLES[cursor]='fg=magenta'
 ZSH_HIGHLIGHT_STYLES[path]='fg=blue'
 ZSH_HIGHLIGHT_STYLES[path_pathseparator]='fg=magenta'
 ZSH_HIGHLIGHT_STYLES[regexp]='fg=green'
-#ZSH_HIGHLIGHT_STYLES[line]='fg=white'
-#ZSH_HIGHLIGHT_STYLES[root]='fg=white'
+# ZSH_HIGHLIGHT_STYLES[line]='fg=white'
+# ZSH_HIGHLIGHT_STYLES[root]='fg=white'
 # }}}
 
 # Highlights (regexp) {{{

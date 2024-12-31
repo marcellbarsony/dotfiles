@@ -1024,6 +1024,38 @@ ls.add_snippets("rust", {
             t"'"
           }),
           -- }}}
+          -- Closure {{{
+          sn(nil, {
+            i(1),
+            i(2, "closure"),
+            t" = |",
+            c(3, {
+              sn(nil, {i(1), i(2, "foo, bar, baz")}),
+              sn(nil, {i(1)}),
+            }),
+            t"| ",
+            c(4, {
+              -- One liner {{{
+              d(1, function()
+                return sn(nil, {
+                  i(1),
+                  i(2, 'println!("")'),
+                })
+              end),
+              -- }}}
+              -- Function body {{{
+              d(1, function()
+                return sn(nil, {
+                  i(1),
+                  t({ "{", "\t" }),
+                  i(2, "// ..."),
+                  t({ "", "}" }),
+                })
+              end),
+              -- }}}
+            })
+          }),
+          -- }}}
           -- Const {{{
           sn(nil, {
             i(1),

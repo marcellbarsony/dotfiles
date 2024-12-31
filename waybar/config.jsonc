@@ -5,6 +5,7 @@
     "position": "top",
     "spacing": 0,
     "width": "",
+    "reload_style_on_change": true,
 
     "modules-left": [
         "hyprland/workspaces"
