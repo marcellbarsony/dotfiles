@@ -18,13 +18,22 @@ local function map(mode, lhs, rhs, opts)
   vim.keymap.set(mode, lhs, rhs, options)
 end
 
+local function safe_cmd(command, error_message)
+  return function()
+    local ok, _ = pcall(vim.cmd, command)
+    if not ok then
+      vim.api.nvim_err_writeln(error_message)
+    end
+  end
+end
+
 -- Leader {{{
 map("n", "<Bslash>", "", { desc = "LEADER" })
 vim.g.mapleader = "\\"
 vim.g.maplocalleader = "\\"
 -- }}}
 
--- Arrow keys {{{
+-- Unmap {{{
 map("", "<up>", "<nop>")
 map("", "<down>", "<nop>")
 map("", "<left>", "<nop>")
@@ -92,7 +101,7 @@ map("x", "<leader>gh", "<cmd>Gitsigns select_hunk<CR>", { desc = "Select hunk" }
 -- }}}
 
 -- Highlights {{{
-map("n", "<C-h>", "<cmd>nohlsearch<CR>", { desc = "Clear" })
+map("n", "<C-c>", "<cmd>nohlsearch<CR>", { desc = "Clear" })
 map("n", "<leader>ls", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Substitute" })
 -- }}}
 
@@ -144,9 +153,9 @@ map("n", "<leader>lf", function() vim.lsp.buf.format { async = true } end, { des
 
 -- Go-To
 map("n", "gd", vim.lsp.buf.definition, { desc = "Definition" })
+map("n", "<leader>lI", vim.lsp.buf.implementation, { desc = "Implementation" })
 -- map("n", "gt", vim.lsp.buf.type_definition, { desc = "Type definition" })
 -- map("n", "gD", vim.lsp.buf.declaration, { desc = "Declaration" })
-map("n", "<leader>lI", vim.lsp.buf.implementation, { desc = "Implementation" })
 
 -- Inlay hints
 map("n", "<leader>li", function()
@@ -183,12 +192,6 @@ map("n", "<leader>vmm", "<cmd>Mason<CR>", { desc = "Mason" })
 map("n", "<leader>vml", "<cmd>MasonLog<CR>", { desc = "Log" })
 map("n", "<leader>vmu", "<cmd>MasonUpdate<CR>", { desc = "Update" })
 map("n", "<leader>vmU", "<cmd>MasonUninstallAll<CR>", { desc = "Uninstall All" })
--- }}}
-
--- Navigation {{{
--- Conflicts with cursor scrolloff
--- map("n", "<C-d>", "<C-d>zz<CR>", { desc = "Page down" })
--- map("n", "<C-u>", "<C-u>zz<CR>", { desc = "Page up" })
 -- }}}
 
 -- Oil {{{
@@ -230,7 +233,7 @@ map("n", "<leader>td", "<cmd>Telescope diagnostics<CR>", { desc = "Diagnostics" 
 map("n", "<leader>tf", "<cmd>Telescope find_files<CR>", { desc = "Find Files" })
 map("n", "<leader>tg", "<cmd>Telescope live_grep<CR>", { desc = "Grep" })
 map("n", "<leader>tG", "<cmd>Telescope live_grep<CR>", { desc = "Grep [String]" })
-map("n", "<leader>to", "<cmd>Telescope oldfiles<CR>", { desc = "Old Files" })
+map("n", "<leader>to", "<cmd>Telescope oldfiles<CR>", { desc = "Oldfiles" })
 
 -- DAP
 map("n", "<leader>dd", "<cmd>lua require'telescope'.extensions.dap.configurations{}<CR>", { desc = "Debug" })
@@ -240,10 +243,10 @@ map("n", "<leader>dtv", "<cmd>lua require'telescope'.extensions.dap.variables{}<
 map("n", "<leader>dtf", "<cmd>lua require'telescope'.extensions.dap.frames{}<CR>", { desc = "Frames" })
 
 -- GIT
-map("n", "<leader>gb", "<cmd>Telescope git_branches<CR>", { desc = "Branches" })
-map("n", "<leader>gc", "<cmd>Telescope git_commits<CR>", { desc = "Commits" })
-map("n", "<leader>gf", "<cmd>Telescope git_files<CR>", { desc = "Files" })
-map("n", "<leader>gs", "<cmd>Telescope git_status<CR>", { desc = "Status" })
+map("n", "<leader>gb", safe_cmd("Telescope git_branches", ":: Error :: Not a Git directory"), { desc = "Branches" })
+map("n", "<leader>gc", safe_cmd("Telescope git_commits", ":: Error :: Not a Git directory"), { desc = "Commits" })
+map("n", "<leader>gf", safe_cmd("Telescope git_files", ":: Error :: Not a Git directory"), { desc = "Files" })
+map("n", "<leader>gs", safe_cmd("Telescope git_status", ":: Error :: Not a Git directory"), { desc = "Status" })
 
 -- LSP
 map("n", "<leader>lci", "<cmd>Telescope lsp_incoming_calls<CR>", { desc = "Incoming" })
@@ -269,7 +272,6 @@ map("n", "<leader>vHs", "<cmd>Telescope search_history<CR>", { desc = "Search" }
 -- }}}
 
 -- Treesitter {{{
-map("n", "<leader>vTi", "<cmd>TSInstallInfo<CR>", { desc = "Info" })
 map("n", "<leader>vTu", "<cmd>TSUpdateSync<CR>", { desc = "UpdateSync" })
 map("n", "<leader>vTU", "<cmd>TSUninstall all<CR>", { desc = "Uninstall All" })
 

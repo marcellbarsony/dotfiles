@@ -22,6 +22,7 @@ return {
       options = {
         icons_enabled = true,
         theme = "palenight",     -- auto | tokyonight | palenight
+        -- theme = custom_tokyonight,     -- auto | tokyonight | palenight
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
         disabled_filetypes = {

@@ -28,7 +28,7 @@ palette = 14=#7dcfff
 
 # white
 palette = 7=#a9b1d6
-palette = 15=#c0caf5
+palette = 15=#eeeeee
 
 background = 000000
 foreground = c0caf5

@@ -50,10 +50,12 @@ buf
 chroot
 cmd
 cmp
+colorscheme
 config
 configs
 cpu
 dap
+darkvoid
 debugpy
 desc
 dpms
@@ -102,6 +104,7 @@ quickfix
 quickref
 runtimepath
 rustaceanvim
+rustup
 stdout
 str
 struct

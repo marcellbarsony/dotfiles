@@ -27,7 +27,7 @@ require("tokyonight").setup({
   -- tokyonight.nvim/lua/tokyonight/colors.lua
   ---@param c ColorScheme
   on_colors = function(c)
-    c.fg_gutter = "#565F89" -- #565F89 / #9D7CD8
+    c.fg_gutter = "#565F89"
   end,
   -- }}}
 

@@ -11,7 +11,7 @@ USER = getpass.getuser()
 BACKGROUNDS = f"/home/{USER}/Downloads/backgrounds"
 
 
-# Random background {{{
+# Random Background {{{
 def random_background():
     all_files = []
     for root, _, files in os.walk(BACKGROUNDS):
@@ -26,7 +26,7 @@ def random_background():
         return None
 # }}}
 
-# Transition {{{
+# Random Transition {{{
 def random_transition() -> str:
     transitions = ["simple", "any", "wipe", "outer", "grow", "random"]
     transition = random.choice(transitions)

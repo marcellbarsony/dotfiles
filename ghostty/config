@@ -1,17 +1,33 @@
 background-opacity = 0.8
 
+# adjust-cell-width = -10%
+
 config-file = theme
 confirm-close-surface = false
 
 cursor-color =
 cursor-invert-fg-bg = true
 cursor-opacity = 1
-cursor-style = block
 adjust-cursor-height = 0
 adjust-cursor-thickness = 0
 
-font-family = "JetBrains Mono NL SemiBold"
+font-family = JetBrains Mono NL SemiBold
 font-size = 12
+font-thicken = true
+
+gtk-tabs-location = hidden
+
+keybind = ctrl+shift+,=reload_config
+
+keybind = ctrl+t=new_tab
+keybind = ctrl+shift+q=close_surface
+keybind = ctrl+tab=next_tab
+keybind = ctrl+shift+tab=previous_tab
+
+keybind = ctrl+shift+m=new_split:left
+keybind = ctrl+shift+n=new_split:down
+keybind = ctrl+shift+e=new_split:up
+keybind = ctrl+shift+i=new_split:right
 
 resize-overlay = never
 
@@ -19,4 +35,6 @@ title = ghostty
 
 window-decoration = false
 window-padding-color = background
-window-padding-balance = false
+window-padding-balance = true
+window-inherit-working-directory = true
+working-directory = inherit
