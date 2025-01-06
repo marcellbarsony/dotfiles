@@ -1,4 +1,5 @@
 -- Darkvoid.nvim
+-- https://github.com/darkvoid-theme/darkvoid.nvim
 
 return {
   {

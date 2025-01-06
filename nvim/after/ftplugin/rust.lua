@@ -1,7 +1,5 @@
 -- Rust
 -- https://neovim.io/doc/user/ft_rust.html#ft_rust.txt
--- vim.keymap.set("n", "<leader>cC", "<cmd>w<CR><cmd>!clang % -o %:r && ./%:r<CR>", { desc = "Compile & Run" })
--- vim.keymap.set("n", "<leader>cr", "<cmd>w<CR><cmd>!./%:r<CR>", { desc = "Run" })
 
 -- Keymaps (Rustaceanvim) {{{
 -- https://github.com/mrcjkb/rustaceanvim?tab=readme-ov-file#zap-quick-setup
