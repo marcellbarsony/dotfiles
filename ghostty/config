@@ -11,14 +11,15 @@ confirm-close-surface = false
 cursor-color =
 cursor-invert-fg-bg = true
 cursor-opacity = 1
+cursor-style-blink = false
 adjust-cursor-height = 0
 adjust-cursor-thickness = 0
 
 # Font
 font-family = JetBrains Mono NL Regular
-font-feature = -liga
 font-feature = -calt
 font-feature = -dlig
+font-feature = -liga
 font-size = 12
 font-thicken = true
 

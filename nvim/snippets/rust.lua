@@ -1027,7 +1027,7 @@ ls.add_snippets("rust", {
           -- Closure {{{
           sn(nil, {
             i(1),
-            i(2, "closure"),
+            i(2, "clos"),
             t" = |",
             c(3, {
               sn(nil, {i(1), i(2, "foo, bar, baz")}),

@@ -84,24 +84,24 @@ bindkey '^f' edit-command-line # Ctrl + f
 function zle-keymap-select {
     if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]];
     then
-        echo -ne '\e[1 q'
+        echo -ne '\e[2 q'
     elif [[ ${KEYMAP} == main ]] ||
         [[ ${KEYMAP} == viins ]] ||
         [[ ${KEYMAP} = '' ]] ||
         [[ $1 = 'beam' ]];
     then
-        echo -ne '\e[3 q'
+        echo -ne '\e[4 q'
     fi
 }
 zle -N zle-keymap-select
 
 zle-line-init() {
-    echo -ne "\e[3 q"
+    echo -ne "\e[4 q"
 }
 zle -N zle-line-init
 
 preexec() {
-    echo -ne '\e[3 q'
+    echo -ne '\e[4 q'
 }
 # }}}
 

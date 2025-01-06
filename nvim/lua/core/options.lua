@@ -10,7 +10,7 @@ local options = {
   -- 2. Moving around - Searching - Patterns {{{
   autochdir = false,
   cdhome = true,
-  guicursor = "n:block,i:hor1,n:blinkwait700-blinkoff400-blinkon250",
+  guicursor = "n:block,i:hor1", -- "n:blinkwait700-blinkoff400-blinkon250",
   ignorecase = true,
   smartcase = true,
   -- }}}

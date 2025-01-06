@@ -28,10 +28,10 @@ def execute(select):
     elif select == "Reboot":
         cmd = "reboot"
         subprocess.run(cmd, shell=True, check=True, stdout=subprocess.PIPE)
-    elif select == "SHUTDOWN":
+    elif select == "Poweroff":
         cmd = "poweroff"
         subprocess.run(cmd, shell=True, check=True, stdout=subprocess.PIPE)
-    elif select == "LOGOUT":
+    elif select == "Log out":
         cmd = "hyprctl dispatch exit"
         subprocess.run(cmd, shell=True, check=True, stdout=subprocess.PIPE)
     else:
