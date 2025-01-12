@@ -7,7 +7,7 @@ use = ""
 
 # Manager {{{
 [manager]
-cwd = { fg = "#EEEEEE" }
+cwd = { fg = "white" }
 
 # Hovered
 hovered         = { reversed = true }
@@ -35,7 +35,7 @@ count_selected = { fg = "white", bg = "yellow" }
 
 # Border
 border_symbol = "│"
-border_style  = { fg = "#555555" }
+border_style  = { fg = "darkgrey" }
 
 # Syntax highlighting
 syntect_theme = "/home/marci/.config/yazi/tmtheme/catppuccin-mocha.xml"
@@ -95,7 +95,7 @@ icon_command = ""
 
 # Tasks {{{
 [tasks]
-border  = { fg = "#AAAAAA" }
+border  = { fg = "grey" }
 title   = {}
 hovered = { fg = "magenta", underline = true }
 # }}}
@@ -113,11 +113,11 @@ separator_style = { fg = "darkgray" }
 
 # Help {{{
 [help]
-on      = { fg = "cyan" }
-run     = { fg = "magenta" }
-desc    = {}
+on      = { fg = "magenta" }
+run     = { fg = "cyan" }
+desc    = { fg = "white" }
 hovered = { reversed = true, bold = true }
-footer  = { fg = "#EEEEEE", bg = "#111111" }
+footer  = { fg = "white", bg = "black" }
 # }}}
 
 # Notify {{{

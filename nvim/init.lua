@@ -29,5 +29,6 @@ require("lazy").setup({
 })
 
 -- Color scheme
-vim.cmd [[colorscheme tokyonight]]
+-- vim.cmd [[colorscheme tokyonight]]
 -- vim.cmd [[colorscheme darkvoid]]
+vim.cmd [[colorscheme theme]]

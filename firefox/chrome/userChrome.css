@@ -92,8 +92,13 @@ hbox.tab-content {
     margin-inline-start: 0px !important;
 }
 
+.titlebar-button.titlebar-close {
+    /* Close button */
+    display: none !important;
+}
+
 .titlebar-spacer {
-    /* Hide spacer next to "Close" button */
+    /* Close button: hide spacer */
     display: none !important;
 }
 

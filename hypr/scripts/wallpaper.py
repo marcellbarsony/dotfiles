@@ -64,8 +64,8 @@ def cache(path: str, file: str):
         print(":: [i] :: Directory already exists")
         pass
     else:
-        os.mkdir(path)
         print(":: [+] :: Created directory")
+        os.mkdir(path)
 
     if not os.path.exists(file):
         with open(file, "w") as f:
@@ -75,8 +75,8 @@ def cache(path: str, file: str):
         print(f"File already exists: {file}")
 
 def add_to_file(file, cache):
-        with open(cache, "a") as c:
-            c.write(file)
+        with open(cache, "a") as f:
+            f.write(file + "\n")
 # }}}
 
 
@@ -95,7 +95,7 @@ if __name__ == "__main__":
     cache_dir = f"/home/{USER}/.cache/backgrounds"
     cache_file = "cache.txt"
     cache_path = os.path.join(cache_dir, cache_file)
-    cache(cache_path, cache_file)
+    cache(cache_dir, cache_path)
 
     add_to_file(background, cache_path)
     # }}}

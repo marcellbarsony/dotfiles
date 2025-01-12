@@ -78,6 +78,9 @@ map("n", "x", '"_x', { desc = "Delete" })
 -- Gitsigns {{{
 map("n", "<leader>gg", "<cmd>Gitsigns toggle_numhl<CR><cmd>Gitsigns toggle_current_line_blame<CR>", { desc = "Gitsigns" })
 
+-- Text object
+map("x", "<leader>gh", "<cmd>Gitsigns select_hunk<CR>", { desc = "Select hunk" })
+
 -- Actions
 -- map("n", "<leader>gs", "<cmd>Gitsigns stage_hunk<CR>", { desc = "Stage hunk" })
 -- map("n", "<leader>gs", "<cmd>Gitsigns undo_stage_hunk<CR>", { desc = "Stage hunk [Undo]" })
@@ -95,9 +98,6 @@ map("n", "<leader>gg", "<cmd>Gitsigns toggle_numhl<CR><cmd>Gitsigns toggle_curre
 -- map("n", "<leader>gs", "<cmd>Gitsigns toggle_signs<CR>", { desc = "Signs" })
 -- map("n", "<leader>gn", "<cmd>Gitsigns toggle_numhl<CR>", { desc = "Numhl" })
 -- map("n", "<leader>gb", "<cmd>Gitsigns toggle_current_line_blame<CR>", { desc = "Blame" })
-
--- Text object
-map("x", "<leader>gh", "<cmd>Gitsigns select_hunk<CR>", { desc = "Select hunk" })
 -- }}}
 
 -- Highlights {{{
@@ -131,10 +131,6 @@ map("v", "J", ":move '>+1<CR>gv=gv", { desc = "Move [Down]", silent = true })
 -- LSP {{{
 -- `:h lspconfig-keybindings`
 
--- Calls
--- map("n", "<leader>lci", vim.lsp.buf.incoming_calls, { buffer = args.buf, desc = "Incoming" }) -- Telescope
--- map("n", "<leader>lco", vim.lsp.buf.outgoing_calls, { buffer = args.buf, desc = "Outgoing" }) -- Telescope
-
 -- Code action
 map({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, { desc = "Action" })
 
@@ -162,24 +158,28 @@ map("n", "<leader>li", function()
   vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = 0 }, { bufnr = 0 })
 end, { desc = "Inlay hints" })
 
--- References
--- map("n", "<leader>lx", vim.lsp.buf.references, { desc = "References" })
--- map("n", "<leader>lv", vim.lsp.buf.clear_references, { desc = "Clear references" })
-
 -- Rename
 map("n", "<leader>lr", vim.lsp.buf.rename, { desc = "Rename" })
 
 -- Signature help
 map("n", "<C-k>", vim.lsp.buf.signature_help, { desc = "Signature help" })
 
+-- LSP Help
+map("n", "<leader>lhi", "<cmd>LspInfo<CR>", { desc = "Info" })
+map("n", "<leader>lhl", "<cmd>LspLog<CR>", { desc = "Log" })
+
+-- Calls
+-- map("n", "<leader>lci", vim.lsp.buf.incoming_calls, { buffer = args.buf, desc = "Incoming" }) -- Telescope
+-- map("n", "<leader>lco", vim.lsp.buf.outgoing_calls, { buffer = args.buf, desc = "Outgoing" }) -- Telescope
+
+-- References
+-- map("n", "<leader>lx", vim.lsp.buf.references, { desc = "References" })
+-- map("n", "<leader>lv", vim.lsp.buf.clear_references, { desc = "Clear references" })
+
 -- Workspace folder
 -- map("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, { desc = "Workspace folder [Add]" })
 -- map("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, { desc = "Workspace folder [Remove]" })
 -- map("n", "<leader>wl", function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end, {desc = "Workspace folder [List]" })
-
--- LSP Help
-map("n", "<leader>lhi", "<cmd>LspInfo<CR>", { desc = "Info" })
-map("n", "<leader>lhl", "<cmd>LspLog<CR>", { desc = "Log" })
 -- }}}
 
 -- Macro {{{
@@ -202,6 +202,7 @@ map("n", "-", "<cmd>Oil<CR>", { desc = "Oil" })
 -- */#: Don't move to next match
 map("n", "*", "*N", { desc = "Find word" })
 map("n", "#", "#N", { desc = "Find word [Backwards]" })
+
 -- n/N: Keep cursor in center
 map("n", "n", "nzzzv", { desc = "Search [Next]" })
 map("n", "N", "Nzzzv", { desc = "Search [Prev]" })
@@ -282,7 +283,7 @@ map("n", "<leader>vTI", "<cmd>InspectTree<CR>", { desc = "Inspect [Tree]" })
 
 -- Trouble {{{
 map("n", "<leader>lt", "<cmd>Trouble diagnostics toggle filter.buf=0<CR>", { desc = "Trouble" })
-map("n", "<leader>lT", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Trouble [Project]" })
+map("n", "<leader>lT", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Trouble [All]" })
 map("n", "<leader>lq", "<cmd>Trouble qflist toggle<CR>", { desc = "Quickfix" })
 -- map("n", "<leader>zs", "<cmd>Trouble symbols toggle focus=false<CR>", { desc = "Symbols" })
 -- map("n", "<leader>zl", "<cmd>Trouble lsp toggle focus=false win.position=right<CR>", { desc = "LSP definitions" })
@@ -297,6 +298,8 @@ map("n", "<C-r>", "<cmd>redo<CR>", { desc = "Redo" })
 -- VIM {{{
 map("n", "<leader>vh", "<cmd>checkhealth<CR>", { desc = "Health" })
 map("n", "<leader>vn", "<cmd>help news<CR>", { desc = "News" })
+
+-- Spell
 map("n", "<leader>vss", "<cmd>set spell!<CR>", { desc = "Spell" })
 map("n", "<leader>vsm", "<cmd>mkspell! %<CR>", { desc = "Mkspell" })
 -- }}}

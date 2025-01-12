@@ -3,7 +3,7 @@
 
 # Manager {{{
 [manager]
-ratio          = [ 3, 4, 4 ]
+ratio          = [ 3, 5, 5 ]
 sort_by        = "natural"
 sort_sensitive = false
 sort_reverse   = false
@@ -71,6 +71,7 @@ rules = [
     { name = "*.yaml", use = "edit" },
     { name = "*.zig",  use = "edit" },
     { mime = "{audio,video}/*", use = "play" },
+    { name = "config", use = "edit" },
     { mime = "image/*", use = "open" },
     { mime = "text/*", use = "edit" },
 ]
@@ -78,11 +79,11 @@ rules = [
 
 # Tasks {{{
 [tasks]
-micro_workers    = 10
-macro_workers    = 25
 bizarre_retry    = 5
 image_alloc      = 536870912  # 512MB
 image_bound      = [ 0, 0 ]
+macro_workers    = 25
+micro_workers    = 10
 suppress_preload = false
 # }}}
 
@@ -139,7 +140,7 @@ cd_origin = "top-center"
 cd_offset = [ 0, 2, 50, 3 ]
 
 # create
-create_title = ["Create:", "Create (dir):"]
+create_title  = ["Create:", "Create (dir):"]
 create_origin = "top-center"
 create_offset = [ 0, 2, 50, 3 ]
 
@@ -154,9 +155,9 @@ trash_origin  = "top-center"
 trash_offset  = [ 0, 2, 50, 3 ]
 
 # delete
-delete_title   = "Delete {n} selected file{s} permanently? (y/N)"
-delete_origin  = "top-center"
-delete_offset  = [ 0, 2, 50, 3 ]
+delete_title  = "Delete {n} selected file{s} permanently? (y/N)"
+delete_origin = "top-center"
+delete_offset = [ 0, 2, 50, 3 ]
 
 # filter
 filter_title  = "Filter:"
@@ -194,9 +195,9 @@ open_origin = "hovered"
 open_offset = [ 0, 1, 50, 7 ]
 
 [which]
-sort_by         = "none"
+sort_by        = "none"
 sort_sensitive = false
-sort_reverse    = false
+sort_reverse   = false
 sort_translit  = false
 
 [log]

@@ -53,6 +53,9 @@ return {
         hl.LspInlayHint = { bg = transparent, fg = c.comment } -- LSP Inlay hint
         hl.GitSignsChange = { fg = "#7090EE" }                 -- GitSigns
         hl.GitSignsDelete = { fg = "#601020" }                 -- GitSigns
+        hl.TroubleCount = { bg = "#3b4261", fg = "#bb9af7" }   -- Trouble
+        hl.TroubleNormal = { bg = "#16161e", fg = "#c0caf5" }  -- Trouble
+        hl.TroubleText = { fg = "#a9b1d6" }                    -- Trouple
         -- hl.Pmenu = { bg = transparent }                        -- Popup menu
       end,
       -- }}}
