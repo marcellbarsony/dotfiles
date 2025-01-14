@@ -22,7 +22,7 @@ local options = {
   breakindent = true,
   conceallevel = 0,
   cmdheight = 0,
-  fillchars = "stlnc:_,horiz: ,horizup:┴,horizdown:┬,vert:┃,vertleft:┤,vertright:├,verthoriz:┼,fold: ,foldopen:,foldclose:,foldsep:│,diff:-,msgsep: ,eob: ,lastline:@",
+  fillchars = "stlnc:_,horiz: ,horizup:┴,horizdown:┬,vert:│,vertleft:┤,vertright:├,verthoriz:┼,fold: ,foldopen:,foldclose:,foldsep:│,diff:-,msgsep: ,eob: ,lastline:@",
   hlsearch = true,
 
   -- Gutter (number)

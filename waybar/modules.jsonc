@@ -64,7 +64,7 @@
             "critical": 10
         },
         "format": " {capacity}% ",
-        "format-full": "{capacity}%",
+        "format-full": " {capacity}% ",
         "format-charging": " 󱐋 {capacity}% ",
         "format-plugged": " {capacity}% ",
         "tooltip": false

@@ -112,16 +112,16 @@ return {
           -- Opacity
           winblend = 0,
 
-          -- Strategies
+          -- Strategy & Layout
           layout_strategy = "horizontal",
           layout_config = {
             horizontal = {
-              prompt_position = "bottom",
+              prompt_position = "top",
             },
           },
           scroll_strategy = "cycle",
           selection_strategy = "reset",
-          sorting_strategy = "descending",
+          sorting_strategy = "ascending",
 
           -- Title
           dynamic_preview_title = true,
@@ -151,7 +151,7 @@ return {
         -- Extensions {{{
         extensions = {
           -- extension_name = {
-          --   extension_config_key = value,
+          -- config_key = value,
           -- }
         }
         -- }}}

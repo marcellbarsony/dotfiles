@@ -208,6 +208,13 @@ map("n", "n", "nzzzv", { desc = "Search [Next]" })
 map("n", "N", "Nzzzv", { desc = "Search [Prev]" })
 -- }}}
 
+-- Sessions {{{
+map("n", "<leader>sd", function() require("persistence").load() end, { desc = "Directory" })
+map("n", "<leader>ss", function() require("persistence").select() end, { desc = "Select" })
+map("n", "<leader>sl", function() require("persistence").load({ last = true}) end, { desc = "Last" })
+map("n", "<leader>sq", function() require("persistence").stop() end, { desc = "Quit" })
+-- }}}
+
 -- Splits {{{
 -- Navigation
 map("n", "<C-m>", "<C-w>h", { desc = "Split [Left]" })

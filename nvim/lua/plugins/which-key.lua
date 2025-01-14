@@ -399,6 +399,9 @@ return {
         { "<leader>lh", desc = "Help" },
         { "<leader>lS", group = "Symbols" },
 
+        -- Session
+        { "<leader>s",  group = "Session" },
+
         -- Telescope
         { "<leader>t",  group = "Telescope" },
 
