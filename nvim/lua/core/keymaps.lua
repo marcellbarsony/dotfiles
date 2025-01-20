@@ -10,12 +10,12 @@
 -- c - command
 -- }}}
 
-local function map(mode, lhs, rhs, opts)
+local function map(mode, key, cmd, opts)
   local options = { noremap = true, silent = true }
   if opts then
     options = vim.tbl_extend("force", options, opts)
   end
-  vim.keymap.set(mode, lhs, rhs, options)
+  vim.keymap.set(mode, key, cmd, options)
 end
 
 local function safe_cmd(command, error_message)
@@ -122,10 +122,10 @@ map("v", "<", "<gv", { desc = "Indent [Left]" })
 map("v", ">", ">gv", { desc = "Indent [Right]" })
 
 -- Move
-map("n", "K", ":move .-2<CR>gv=gv", { desc = "Move [Up]", silent = true })
-map("n", "J", ":move .+1<CR>gv=gv", { desc = "Move [Down]", silent = true })
-map("v", "K", ":move '<-2<CR>gv=gv", { desc = "Move [Up]", silent = true })
-map("v", "J", ":move '>+1<CR>gv=gv", { desc = "Move [Down]", silent = true })
+map("n", "K", ":move .-2<CR>gv=gv", { desc = "Move [Up]"})
+map("n", "J", ":move .+1<CR>gv=gv", { desc = "Move [Down]"})
+map("v", "K", ":move '<-2<CR>gv=gv", { desc = "Move [Up]"})
+map("v", "J", ":move '>+1<CR>gv=gv", { desc = "Move [Down]"})
 -- }}}
 
 -- LSP {{{
@@ -149,7 +149,6 @@ map("n", "<leader>lf", function() vim.lsp.buf.format { async = true } end, { des
 
 -- Go-To
 map("n", "gd", vim.lsp.buf.definition, { desc = "Definition" })
-map("n", "<leader>lI", vim.lsp.buf.implementation, { desc = "Implementation" })
 -- map("n", "gt", vim.lsp.buf.type_definition, { desc = "Type definition" })
 -- map("n", "gD", vim.lsp.buf.declaration, { desc = "Declaration" })
 
@@ -251,12 +250,14 @@ map("n", "<leader>dtv", "<cmd>lua require'telescope'.extensions.dap.variables{}<
 map("n", "<leader>dtf", "<cmd>lua require'telescope'.extensions.dap.frames{}<CR>", { desc = "Frames" })
 
 -- GIT
-map("n", "<leader>gb", safe_cmd("Telescope git_branches", ":: Error :: Not a Git directory"), { desc = "Branches" })
-map("n", "<leader>gc", safe_cmd("Telescope git_commits", ":: Error :: Not a Git directory"), { desc = "Commits" })
-map("n", "<leader>gf", safe_cmd("Telescope git_files", ":: Error :: Not a Git directory"), { desc = "Files" })
-map("n", "<leader>gs", safe_cmd("Telescope git_status", ":: Error :: Not a Git directory"), { desc = "Status" })
+map("n", "<leader>gb", safe_cmd("Telescope git_branches", "Warning: Not a Git directory"), { desc = "Branches" })
+map("n", "<leader>gc", safe_cmd("Telescope git_commits", "Warning: Not a Git directory"), { desc = "Commits" })
+map("n", "<leader>gf", safe_cmd("Telescope git_files", "Warning: Not a Git directory"), { desc = "Files" })
+map("n", "<leader>gs", safe_cmd("Telescope git_status", "Warning: Not a Git directory"), { desc = "Status" })
 
 -- LSP
+map("n", "gD", "<cmd>Telescope lsp_type_definitions<CR>", { desc = "Definition [Type]" })
+map("n", "<leader>lI", "<cmd>Telescope lsp_implementations<CR>", { desc = "Implementations" })
 map("n", "<leader>lci", "<cmd>Telescope lsp_incoming_calls<CR>", { desc = "Incoming" })
 map("n", "<leader>lco", "<cmd>Telescope lsp_outgoing_calls<CR>", { desc = "Outgoing" })
 map("n", "<leader>lR", "<cmd>Telescope lsp_references<CR>", { desc = "References" })

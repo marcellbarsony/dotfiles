@@ -1,5 +1,5 @@
 -- Options
--- :options
+-- `:options`
 -- https://neovim.io/doc/user/options.html
 -- https://neovim.io/doc/user/quickref.html
 
