@@ -97,7 +97,6 @@ return {
 
       -- Dashboard buttons {{{
       dashboard.section.buttons.val = {
-        dashboard.button("/", "󰍉  > Grep", ":Telescope live_grep<CR>"),
         dashboard.button("f", "󰈔  > File", ":ene <BAR> startinsert <CR>"),
         dashboard.button("gf", "  > Git Files", ":Telescope git_files<CR>"),
         dashboard.button("l", "󰐱  > Lazy", ":Lazy<CR>"),
@@ -107,7 +106,8 @@ return {
         dashboard.button("nh", "  > Nvim [Health]", ":checkhealth<CR>"),
         dashboard.button("tt", "󰭎  > Telescope", ":Telescope<CR>"),
         dashboard.button("tf", "󰭎  > Telescope [Find Files]", ":Telescope find_files<CR>"),
-        dashboard.button("to", "󰭎  > Telescope [Old Files]", ":Telescope oldfiles<CR>"),
+        dashboard.button("tg", "󰍉  > Telescope [Grep]", ":Telescope live_grep<CR>"),
+        dashboard.button("to", "󰭎  > Telescope [Oldfiles]", ":Telescope oldfiles<CR>"),
         dashboard.button("q", "  > Quit", ":qa<CR>"),
       }
       -- }}}

@@ -1152,7 +1152,7 @@ ls.add_snippets("rust", {
             t": ",
             c(3, {
               -- String slice (&str)
-              sn(nil, {i(1), t"&str", t' = "', i(2)}),
+              sn(nil, {i(1), t"&str", t' = "', i(2), t'"'}),
               -- String literal (empty)
               sn(nil, {i(1), t"String", t" = String::new()"}),
               -- String literal (content)
