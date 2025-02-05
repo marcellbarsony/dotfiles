@@ -42,6 +42,7 @@ args
 asm
 autocmd
 autopairs
+backend
 bezier
 br
 brightnessctl
@@ -113,11 +114,12 @@ systemctl
 tmp
 tsserver
 txt
+unsanitized
 usr
 venv
 whitelisting
+whoami
 workspacerules
 www
 xpi
 zig
-backend

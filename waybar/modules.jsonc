@@ -43,7 +43,7 @@
     // Audio (Wireplumber) {{{
     "wireplumber": {
         "format": "VOL {volume} ",
-        "format-muted": "MUT",
+        "format-muted": "MUT ",
         "on-click": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%+",
         "on-click-right": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%-",
         "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",

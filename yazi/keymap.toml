@@ -7,6 +7,7 @@ keymap = [
     { on = [ "<C-[>" ], run = "escape",             desc = "Exit/Clear/Cancel" },
     { on = [ "q" ],     run = "quit",               desc = "Exit" },
     { on = [ "Q" ],     run = "quit --no-cwd-file", desc = "Exit [no cwd]" },
+    { on = [ "<C-i>" ], run = "spot",               desc = "File information" },
     { on = [ "<C-q>" ], run = "close",              desc = "Quit/Close tab" },
     { on = [ "<C-z>" ], run = "suspend",            desc = "Suspend" },
 
