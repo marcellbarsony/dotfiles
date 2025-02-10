@@ -962,7 +962,7 @@ ls.add_snippets("rust", {
 
   -- let {{{
   s({
-    trig = "let",
+    trig = "let hashmap",
     name = "Variable bindings",
     desc = "let [mut] NAME: Type = value\n" ..
       " ",
@@ -1085,17 +1085,9 @@ ls.add_snippets("rust", {
             t"mut ",
             i(2, "hash"),
             c(3, {
-              -- No type
-              sn(nil, {i(1), t""}),
-              -- Type
-              sn(nil, {i(1), t": HashMap<", i(2, "T"), t", ", i(3, "T"), t">"}),
-            }),
-            t" = HashMap::",
-            c(4, {
-              -- New
-              sn(nil, {i(1), t"new()"}),
-              -- With capacity
-              sn(nil, {i(1), t"with_capacity(", i(2), t")"})
+              sn(nil, {i(1), t": HashMap<", i(2, "K"), t", ", i(3, "V"), t"> = HashMap::new()"}),
+              sn(nil, {i(1), t" = HashMap::<", i(2, "K"), t", ", i(3, "V"), t">::new()"}),
+              sn(nil, {i(1), t" = HashMap::", i(2, "")})
             })
           }),
           -- }}}

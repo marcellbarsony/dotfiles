@@ -20,7 +20,7 @@ return {
         "bashls",
         "clangd",
         "lua_ls",
-        "pyright",
+        "pyright"
       }
 
       for _, lsp in ipairs(servers) do

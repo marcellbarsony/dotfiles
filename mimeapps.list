@@ -1,6 +1,7 @@
 [Default Applications]
 audio/*=vlc.desktop
 video/*=vlc.desktop
+image/gif=firefox.desktop
 image/jpeg=firefox.desktop
 image/png=firefox.desktop
 image/webp=firefox.desktop

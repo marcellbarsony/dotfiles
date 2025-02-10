@@ -61,7 +61,6 @@ return {
 
       -- CMP Setup {{{
       -- https://github.com/hrsh7th/nvim-cmp#setup
-      -- https://github.com/hrsh7th/nvim-cmp/blob/main/lua/cmp/config/default.lua
       cmp.setup({
         -- Snippet {{{
         snippet = {
@@ -95,8 +94,7 @@ return {
         -- View {{{
         view = {
           name = "custom",
-          selection_order = "near_cursor",
-          follow_cursor = false
+          selection_order = "near_cursor"
         },
         -- }}}
 
@@ -104,7 +102,7 @@ return {
         -- `:h ins-completion`
         mapping = {
           ["<CR>"] = cmp.mapping.confirm({ select = false }),                            -- Accept selected
-          ["<C-o>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),                 -- Open completion
+          ["<C-n>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),                 -- Open completion
           ["<C-c>"] = cmp.mapping({ i = cmp.mapping.close(), c = cmp.mapping.close() }), -- Close completion
           ["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-5), { "i", "c" }),            -- Scroll docs [up]
           ["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(5), { "i", "c" }),             -- Scroll docs [down]
