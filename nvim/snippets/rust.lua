@@ -942,9 +942,134 @@ ls.add_snippets("rust", {
   -- }}}
 
   -- Variables {{{
-  -- const {{{
+  -- Array {{{
   s({
-    trig = "const",
+    trig = "array",
+    name = "Array",
+    desc = "**Malloc**: Stack\n" ..
+      "**Sequence**: Fixed-size\n" ..
+      "**Data types**: Same type\n" ..
+      " ",
+    },
+    fmt("{} {}{} = [{}];{}",
+      {
+        c(1, {
+          t"let",
+          t"let mut"
+        }),
+        i(2, "arr"),
+        c(3, {
+          -- Implicit type
+          sn(nil, {i(1), t""}),
+          -- Explicit type
+          sn(nil, {i(1), t": [", i(2, "T"), t"; ", i(3, "len"), t"]"}),
+        }),
+        c(4, {
+          -- Individual elements
+          sn(nil, {i(1), i(2, "foo, bar, baz")}),
+          -- Repeat expression
+          sn(nil, {i(1), i(2, "repeat"), t"; ", i(3, "N")}),
+          -- 2D array
+          sn(nil, {t"[", i(1), i(2, "foo, bar, baz"), t"], [", i(3, "foo, bar, baz"), t"]", i(4)})
+        }),
+        i(0)
+      }
+    )
+  ),
+  -- }}}
+
+  -- Boolean {{{
+  s({
+    trig = "boolean",
+    name = "Variable bindings",
+    desc = "let [mut] NAME: Type = value\n" ..
+      " ",
+    },
+    fmt("{} {}: bool = {};{}",
+      {
+        c(1, {
+          t"let",
+          t"let mut"
+        }),
+        i(2, "bool"),
+        c(3, {
+          sn(nil, {i(1), t"true"}),
+          sn(nil, {i(1), t"false"})
+        }),
+        i(0)
+      }
+    )
+  ),
+  -- }}}
+
+  -- Character {{{
+  s({
+    trig = "character",
+    name = "Variable bindings",
+    desc = "let [mut] NAME: Type = value\n" ..
+      " ",
+    },
+    fmt("{} {}: char = '{}';{}",
+      {
+        c(1, {
+          t"let",
+          t"let mut"
+        }),
+        i(2, "char"),
+        i(3, ""),
+        i(0)
+      }
+    )
+  ),
+  -- }}}
+
+  -- Closure {{{
+  s({
+    trig = "closure",
+    name = "Closure",
+    desc = "let [mut] NAME: Type = value\n" ..
+      " ",
+    },
+    fmt("{} {} = |{}| {};{}",
+      {
+        c(1, {
+          t"let",
+          t"let mut"
+        }),
+        i(2, "clos"),
+        c(3, {
+          sn(nil, {i(1), i(2, "foo, bar, baz")}),
+          sn(nil, {i(1)}),
+        }),
+        c(4, {
+          -- One liner {{{
+          d(1, function()
+            return sn(nil, {
+              i(1),
+              i(2, 'println!("")'),
+            })
+          end),
+          -- }}}
+          -- Function body {{{
+          d(1, function()
+            return sn(nil, {
+              i(1),
+              t({ "{", "\t" }),
+              i(2, "// ..."),
+              t({ "", "}" }),
+            })
+          end),
+          -- }}}
+        }),
+        i(0)
+      }
+    )
+  ),
+  -- }}}
+
+  -- Constant {{{
+  s({
+    trig = "constant",
     name = "Constant variable",
     desc = "const\n" ..
       " ",
@@ -960,243 +1085,45 @@ ls.add_snippets("rust", {
   ),
   -- }}}
 
-  -- let {{{
+  -- File {{{
   s({
-    trig = "let hashmap",
+    trig = "file",
     name = "Variable bindings",
     desc = "let [mut] NAME: Type = value\n" ..
       " ",
     },
-    fmt("{} {};{}",
+    fmt("{} {}{} = File::{};{}",
       {
         c(1, {
           t"let",
           t"let mut"
         }),
+        i(2, "f"),
+        c(3, {
+          sn(nil, {i(1)}),
+          sn(nil, {i(1), t": Result<", i(2, "File, Error"), t">"}),
+        }),
+        i(4, ""),
+        i(0)
+      }
+    )
+  ),
+  -- }}}
+
+  -- Hashmap {{{
+  s({
+    trig = "hashmap",
+    name = "HashMap",
+    desc = "let [mut] NAME: Type = value\n" ..
+      " ",
+    },
+    fmt("let mut {}{};{}",
+      {
+        i(1, "hash"),
         c(2, {
-          -- Var {{{
-          sn(nil, {
-            i(1),
-            i(2, "var"),
-            t" = ",
-            i(3, "")
-          }),
-          -- }}}
-          -- Array {{{
-          sn(nil, {
-            i(1),
-            i(2, "arr"),
-            c(3, {
-              -- Implicit
-              sn(nil, {i(1), t" "}),
-              -- Explicit
-              sn(nil, {i(1), t": [", i(2, "T"), t"; ", i(3, "length"), t"] "}),
-            }),
-            t"= [",
-            c(4, {
-              -- Individual elements
-              sn(nil, {i(1), i(2, "foo, bar, baz")}),
-              -- Repeat expression
-              sn(nil, {i(1), i(2, "repeat"), t"; ", i(3, "N")}),
-              -- 2D array
-              sn(nil, {t"[", i(1), i(2, "foo, bar, baz"), t"], [", i(3, "foo, bar, baz"), t"]", i(4)})
-            }),
-            t"]"
-          }),
-          -- }}}
-          -- Bool {{{
-          sn(nil, {
-            i(1),
-            i(2, "bool"),
-            t": bool = ",
-            c(3, {
-              sn(nil, {i(1), t"true"}),
-              sn(nil, {i(1), t"false"})
-            })
-          }),
-          -- }}}
-          -- Char {{{
-          sn(nil, {
-            i(1),
-            i(2, "char"),
-            t": char = '",
-            i(3, ""),
-            t"'"
-          }),
-          -- }}}
-          -- Closure {{{
-          sn(nil, {
-            i(1),
-            i(2, "clos"),
-            t" = |",
-            c(3, {
-              sn(nil, {i(1), i(2, "foo, bar, baz")}),
-              sn(nil, {i(1)}),
-            }),
-            t"| ",
-            c(4, {
-              -- One liner {{{
-              d(1, function()
-                return sn(nil, {
-                  i(1),
-                  i(2, 'println!("")'),
-                })
-              end),
-              -- }}}
-              -- Function body {{{
-              d(1, function()
-                return sn(nil, {
-                  i(1),
-                  t({ "{", "\t" }),
-                  i(2, "// ..."),
-                  t({ "", "}" }),
-                })
-              end),
-              -- }}}
-            })
-          }),
-          -- }}}
-          -- Const {{{
-          sn(nil, {
-            i(1),
-            i(2, "const "),
-            i(3, "CONST"),
-            t": char = '",
-            i(4, ""),
-            t"'"
-          }),
-          -- }}}
-          -- File {{{
-          sn(nil, {
-            i(1),
-            i(2, "file"),
-            c(3, {
-              sn(nil, {i(1), t""}),
-              sn(nil, {i(1), t": Result<", i(2, "File, Error"), t">"}),
-            }),
-            t' = File::open("',
-            i(4, "file.ext"),
-            t'")'
-          }),
-          -- }}}
-          -- HashMap {{{
-          sn(nil, {
-            i(1),
-            t"mut ",
-            i(2, "hash"),
-            c(3, {
-              sn(nil, {i(1), t": HashMap<", i(2, "K"), t", ", i(3, "V"), t"> = HashMap::new()"}),
-              sn(nil, {i(1), t" = HashMap::<", i(2, "K"), t", ", i(3, "V"), t">::new()"}),
-              sn(nil, {i(1), t" = HashMap::", i(2, "")})
-            })
-          }),
-          -- }}}
-          -- Integer {{{
-          sn(nil, {
-            i(1),
-            i(2, "int"),
-            c(3, {
-              sn(nil, {i(1), t""}),
-              sn(nil, {i(1), t": ", i(2, "T")}),
-            }),
-            t" = ",
-            i(4, "32")
-          }),
-          -- }}}
-          -- Option {{{
-          sn(nil, {
-            i(1),
-            i(2, "opt"),
-            t": Option<",
-            i(3, "T"),
-            t"> = ",
-            c(4, {
-              -- None
-              sn(nil, {i(1), t"None"}),
-              -- Some
-              sn(nil, {i(1), t"Some(", i(2, "value"), t")"}),
-            })
-          }),
-          -- }}}
-          -- PathBuf {{{
-          sn(nil, {
-            i(1),
-            i(2, "path"),
-            c(3, {
-              -- No Type
-              sn(nil, {i(1), t""}),
-              -- Type
-              sn(nil, {i(1), t': PathBuf' }),
-            }),
-            t" = PathBuf::",
-            c(4, {
-              -- New
-              sn(nil, {i(1), t"new()"}),
-              -- From
-              sn(nil, {i(1), t'from("', i(2, "/foo/bar.baz"), t'")'}),
-            })
-          }),
-          -- }}}
-          -- Strings {{{
-          sn(nil, {
-            i(1),
-            i(2, "str"),
-            t": ",
-            c(3, {
-              -- String slice (&str)
-              sn(nil, {i(1), t"&str", t' = "', i(2), t'"'}),
-              -- String literal (empty)
-              sn(nil, {i(1), t"String", t" = String::new()"}),
-              -- String literal (content)
-              sn(nil, {i(1), t"String", t' = String::from("', i(2), t'")'}),
-              -- String format
-              sn(nil, {i(1), t"String", t' = format!("', i(2, 'Hello {}", "world!'), t'")'}),
-              -- String reference
-              sn(nil, {i(1), t"&String", t' = ', i(2)})
-            })
-          }),
-          -- }}}
-          -- Tuple {{{
-          sn(nil, {
-            i(1),
-            i(2, "tup"),
-            t" = (",
-            i(3, "foo, bar, baz"),
-            t")"
-          }),
-          -- }}}
-          -- Tuple (destructuring) {{{
-          sn(nil, {
-            i(1),
-            t"(",
-            i(2, "var1, var2"),
-            t") = ",
-            i(3, "tup")
-          }),
-          -- }}}
-          -- Vector {{{
-          sn(nil, {
-            i(1),
-            i(2, "vec"),
-            c(3, {
-              -- no type
-              sn(nil, {i(1)}),
-              -- type
-              sn(nil, {i(1), t": Vec<", i(2, "T"), t">"}),
-            }),
-            t" = ",
-            c(4, {
-              -- empty
-              sn(nil, {i(1), t"Vec::new()"}),
-              -- content
-              sn(nil, {i(1), t"vec![", i(2, "foo, bar, baz"), t"]"}),
-              -- arguments
-              sn(nil, {i(1), t"env::args().collect()"}),
-              -- custom
-              sn(nil, {i(1), i(2)})
-            })
-          }),
-          -- }}}
+          sn(nil, {i(1), t": HashMap<", i(2, "K"), t", ", i(3, "V"), t"> = HashMap::new()"}),
+          sn(nil, {i(1), t" = HashMap::<", i(2, "K"), t", ", i(3, "V"), t">::new()"}),
+          sn(nil, {i(1), t" = HashMap::", i(2, "")})
         }),
         i(0)
       }
@@ -1204,7 +1131,205 @@ ls.add_snippets("rust", {
   ),
   -- }}}
 
-  -- static {{{
+  -- Integer {{{
+  s({
+    trig = "integer",
+    name = "Variable bindings",
+    desc = "let [mut] NAME: Type = value\n" ..
+      " ",
+    },
+    fmt("{} {}{} = {};{}",
+      {
+        c(1, {
+          t"let",
+          t"let mut"
+        }),
+        i(2, "int"),
+        c(3, {
+          sn(nil, {i(1), t""}),
+          sn(nil, {i(1), t": ", i(2, "T")}),
+        }),
+        i(4, "32"),
+        i(0)
+      }
+    )
+  ),
+  -- }}}
+
+  -- Option {{{
+  s({
+    trig = "option",
+    name = "Variable bindings",
+    desc = "let [mut] NAME: Type = value\n" ..
+      " ",
+    },
+    fmt("{} {}: Option<{}> = {};{}",
+      {
+        c(1, {
+          t"let",
+          t"let mut"
+        }),
+        i(2, "opt"),
+        i(3, "T"),
+        c(4, {
+          -- None
+          sn(nil, {i(1), t"None"}),
+          -- Some
+          sn(nil, {i(1), t"Some(", i(2, "value"), t")"}),
+        }),
+        i(0)
+      }
+    )
+  ),
+  -- }}}
+
+  -- PathBuf {{{
+  s({
+    trig = "pathbuf",
+    name = "PathBuffer",
+    desc = "let [mut] NAME: Type = value\n" ..
+      " ",
+    },
+    fmt("{} {}{} = PathBuf::{};{}",
+      {
+        c(1, {
+          t"let",
+          t"let mut"
+        }),
+        i(2, "path"),
+        c(3, {
+          -- No Type
+          sn(nil, {i(1), t""}),
+          -- Type
+          sn(nil, {i(1), t': PathBuf' }),
+        }),
+        c(4, {
+          -- New
+          sn(nil, {i(1), t"new()"}),
+          -- From
+          sn(nil, {i(1), t'from("', i(2, "/path/to/file.ext"), t'")'}),
+        }),
+        i(0)
+      }
+    )
+  ),
+  -- }}}
+
+  -- String {{{
+  s({
+    trig = "string",
+    name = "String",
+    desc = "let [mut] NAME: Type = value\n" ..
+      " ",
+    },
+    fmt("{} {}: {};{}",
+      {
+        c(1, {
+          t"let",
+          t"let mut"
+        }),
+        i(2, "str"),
+        c(3, {
+          -- String slice (&str)
+          sn(nil, {i(1), t"&str", t' = "', i(2), t'"'}),
+          -- String literal (empty)
+          sn(nil, {i(1), t"String", t" = String::new()"}),
+          -- String literal (content)
+          sn(nil, {i(1), t"String", t' = String::from("', i(2), t'")'}),
+          -- String format
+          sn(nil, {i(1), t"String", t' = format!("', i(2, 'Hello {}", "world!'), t'")'}),
+          -- String reference
+          sn(nil, {i(1), t"&String", t' = ', i(2)})
+        }),
+        i(0)
+      }
+    )
+  ),
+  -- }}}
+
+  -- Tuple {{{
+  s({
+    trig = "tuple",
+    name = "Variable bindings",
+    desc = "let [mut] NAME: Type = value\n" ..
+      " ",
+    },
+    fmt("{} {}{} = ({});{}",
+      {
+        c(1, {
+          t"let",
+          t"let mut"
+        }),
+        i(2, "tup"),
+        c(3, {
+          sn(nil, {i(1)}),
+          sn(nil, {i(1), t": (", i(2, 'T, T, T'), t')'}),
+        }),
+        i(4, "foo, bar, baz"),
+        i(0)
+      }
+    )
+  ),
+  -- }}}
+
+  -- Tuple (destructuring) {{{
+  s({
+    trig = "tuple-destruct",
+    name = "Variable bindings",
+    desc = "let [mut] NAME: Type = value\n" ..
+      " ",
+    },
+    fmt("{} ({}) = {};{}",
+      {
+        c(1, {
+          t"let",
+          t"let mut"
+        }),
+        i(2, "var1, var2"),
+        i(3, "tup"),
+        i(0)
+      }
+    )
+  ),
+  -- }}}
+
+  -- Vector {{{
+  s({
+    trig = "vector",
+    name = "Variable bindings",
+    desc = "let [mut] NAME: Type = value\n" ..
+      " ",
+    },
+    fmt("{} {}{} = {};{}",
+      {
+        c(1, {
+          t"let",
+          t"let mut"
+        }),
+        i(2, "vec"),
+        c(3, {
+          -- no type
+          sn(nil, {i(1)}),
+          -- type
+          sn(nil, {i(1), t": Vec<", i(2, "T"), t">"}),
+        }),
+        c(4, {
+          -- empty
+          sn(nil, {i(1), t"Vec::new()"}),
+          -- content
+          sn(nil, {i(1), t"vec![", i(2, "foo, bar, baz"), t"]"}),
+          -- arguments
+          sn(nil, {i(1), t"env::args().collect()"}),
+          -- custom
+          sn(nil, {i(1), i(2)})
+        }),
+        i(0)
+      }
+    )
+  ),
+  -- }}}
+
+  -- Static {{{
   s({
     trig = "static",
     name = "Static (Global) variable",

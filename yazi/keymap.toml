@@ -22,8 +22,8 @@ keymap = [
     { on = [ "i" ], run = "enter",   desc = "Child directory" },
     { on = [ "I" ], run = "forward", desc = "Next directory" },
 
-    { on = [ "g", "g" ], run = "arrow -99999999", desc = "Top" },
-    { on = [ "G" ],      run = "arrow 99999999",  desc = "Bottom" },
+    { on = [ "g", "g" ], run = "arrow top", desc = "Top" },
+    { on = [ "G" ],      run = "arrow bot", desc = "Bottom" },
 
     { on = [ "<S-Up>" ],   run = "arrow -5", desc = "Move [Up 5]" },
     { on = [ "<S-Down>" ], run = "arrow 5",  desc = "Move [Down 5]" },
