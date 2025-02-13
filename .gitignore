@@ -13,9 +13,6 @@ gh/
 # GNOME
 dconf/
 
-# GTK
-gtk-3.0/
-
 # Htop
 htop/
 
