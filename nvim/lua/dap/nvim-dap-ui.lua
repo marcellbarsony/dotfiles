@@ -1,6 +1,6 @@
 -- DAP UI
--- https://github.com/rcarriga/nvim-dap-ui
 -- `:h dapui.setup()`
+-- https://github.com/rcarriga/nvim-dap-ui
 
 return {
   {
@@ -24,8 +24,8 @@ return {
             step_into = "",
             step_out = "",
             step_over = "",
-            terminate = "",
-          },
+            terminate = ""
+          }
         },
         -- }}}
 
@@ -54,7 +54,7 @@ return {
         icons = {
           collapsed = ">",
           current_frame = ">",
-          expanded = "",
+          expanded = ""
         },
         -- }}}
 

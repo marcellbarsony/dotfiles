@@ -1,11 +1,10 @@
 -- Alpha
--- https://github.com/goolord/alpha-nvim
 -- `:h alpha`
+-- https://github.com/goolord/alpha-nvim
 
 return {
   {
     "goolord/alpha-nvim",
-    event = "VimEnter",
     config = function()
       local alpha = require("alpha")
       local dashboard = require("alpha.themes.dashboard")

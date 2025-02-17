@@ -1,7 +1,7 @@
 -- Which-key
+-- `:h which-key.nvim.txt`
 -- https://github.com/folke/which-key.nvim
 -- https://github.com/folke/which-key.nvim/blob/main/lua/which-key/config.lua
--- `:h which-key.nvim.txt`
 
 return {
   {

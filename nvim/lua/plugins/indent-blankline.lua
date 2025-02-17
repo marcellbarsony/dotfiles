@@ -1,6 +1,6 @@
 -- Indent blankline
--- https://github.com/lukas-reineke/indent-blankline.nvim
 -- `:h indent-blankline.txt`
+-- https://github.com/lukas-reineke/indent-blankline.nvim
 
 return {
   {
@@ -17,7 +17,7 @@ return {
         "RainbowOrange",
         "RainbowGreen",
         "RainbowViolet",
-        "RainbowCyan",
+        "RainbowCyan"
       }
 
       local hooks = require "ibl.hooks"
@@ -56,7 +56,7 @@ return {
           show_end = false,
           injected_languages = false,
           highlight = highlight,
-          priority = 500,
+          priority = 500
         },
       }
       -- }}}

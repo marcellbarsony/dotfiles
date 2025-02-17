@@ -1,6 +1,6 @@
 -- Presistence
--- https://github.com/folke/persistence.nvim
 -- `:h persistence.nvim.txt`
+-- https://github.com/folke/persistence.nvim
 
 return {
   {

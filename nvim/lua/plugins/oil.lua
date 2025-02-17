@@ -1,10 +1,11 @@
 -- Oil
--- https://github.com/stevearc/oil.nvim
 -- `:h oil.txt`
+-- https://github.com/stevearc/oil.nvim
 
 return {
   {
     "stevearc/oil.nvim",
+    cmd = { "Oil" },
     ---@module 'oil'
     ---@type oil.SetupOpts
     opts = {
@@ -170,9 +171,6 @@ return {
           },
         },
         -- }}}
-    },
-  },
+    }
+  }
 }
-
-
-

@@ -9,15 +9,17 @@ return {
       "nvim-telescope/telescope-dap.nvim",
       "nvim-neotest/nvim-nio",
     },
+    lazy = true,
+    event = "VeryLazy",
     config = function()
       -- Adapter
-      -- :h dap-adapter
+      -- `:h dap-adapter`
 
       -- Client
-      -- :h dap.defaults
+      -- `:h dap.defaults`
 
       -- Debugee
-      -- :h dap-configuration
+      -- `:h dap-configuration`
 
       -- Signs & Colors
       vim.cmd("highlight DapBreakpointNr guifg=#FFFFFF")
@@ -31,7 +33,7 @@ return {
       vim.fn.sign_define("DapStopped",             { text = "→", texthl = "", linehl = "DapBreakpointStop", numhl = "" })
 
       -- Terminal
-      -- h: dap-terminal
+      -- `h: dap-terminal`
     end
   }
 }

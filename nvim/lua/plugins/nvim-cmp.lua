@@ -1,7 +1,7 @@
 -- CMP
--- https://github.com/hrsh7th/nvim-cmp
 -- `:h cmp`
 -- `:h nvim-cmp`
+-- https://github.com/hrsh7th/nvim-cmp
 
 return {
   {
@@ -14,10 +14,11 @@ return {
       "hrsh7th/cmp-path",
       "nvim-tree/nvim-web-devicons",
     },
+    event = { "InsertEnter", "CmdlineEnter" },
     config = function ()
       local cmp = require("cmp")
       local luasnip = require("luasnip")
-      local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+      local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 
       -- Kind icons {{{
       -- https://github.com/hrsh7th/nvim-cmp/wiki/Menu-Appearance#how-to-add-visual-studio-code-codicons-to-the-menu
@@ -66,7 +67,7 @@ return {
         snippet = {
           expand = function(args)
             luasnip.lsp_expand(args.body) -- Luasnip
-          end,
+          end
         },
         -- }}}
 
@@ -77,13 +78,13 @@ return {
             side_padding = 0,
             winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
           },
-          -- -- Border
+          -- Border
           -- documentation = cmp.config.window.bordered {
           --   winhighlight = 'Normal:CmpPmenu,CursorLine:PmenuSel,Search:None'
           -- },
           -- completion = cmp.config.window.bordered({
           --   winhighlight = 'Normal:CmpPmenu,CursorLine:PmenuSel,Search:None'
-          -- }),
+          -- })
         },
         -- }}}
 
@@ -161,12 +162,12 @@ return {
                 fallback()
               end
             end
-          }),
+          })
         },
         -- }}}
 
         -- Preselect {{{
-        -- :h cmp-config.preselect
+        -- `:h cmp-config.preselect`
         preselect = cmp.PreselectMode.None,
         -- }}}
 
@@ -174,7 +175,7 @@ return {
         sources = cmp.config.sources({
           { name = "luasnip",  max_item_count = 3,  priority_weight = 1 },
           { name = "nvim_lsp", max_item_count = 100 },
-          { name = "buffer",   max_item_count = 3, keyword_length = 3 },
+          { name = "buffer",   max_item_count = 3, keyword_length = 3 }
         }),
         -- }}}
 
@@ -199,7 +200,7 @@ return {
 
         -- Experimental {{{
         experimental = {
-          ghost_text = true,
+          ghost_text = true
         }
         -- }}}
       })
@@ -210,9 +211,9 @@ return {
       -- https://github.com/hrsh7th/nvim-cmp#setup
       cmp.setup.filetype("gitcommit", {
         sources = cmp.config.sources({
-          { name = "cmp_git" },
+          { name = "cmp_git" }
         }, {
-          { name = "buffer" },
+          { name = "buffer" }
         })
       })
 
@@ -240,7 +241,7 @@ return {
       -- Nvim-Autopairs {{{
       -- https://github.com/windwp/nvim-autopairs?tab=readme-ov-file#you-need-to-add-mapping-cr-on-nvim-cmp-setupcheck-readmemd-on-nvim-cmp-repo
       cmp.event:on(
-        'confirm_done',
+        "confirm_done",
         cmp_autopairs.on_confirm_done()
       )
       -- }}}

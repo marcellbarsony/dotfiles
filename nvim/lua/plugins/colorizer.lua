@@ -1,6 +1,6 @@
 -- Colorizer
--- https://github.com/catgoose/nvim-colorizer.lua
 -- `:h colorizer`
+-- https://github.com/catgoose/nvim-colorizer.lua
 
 return {
   {
@@ -29,14 +29,14 @@ return {
         css = false,                                     -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
         css_fn = false,                                  -- Enable all CSS *functions*: rgb_fn, hsl_fn
         tailwind = "lsp",                                -- Enable tailwind colors: true|false|normal|lsp|both
-        sass = { enable = false, parsers = { "css" }, }, -- Enable sass colors
+        sass = { enable = false, parsers = { "css" } },  -- Enable sass colors
         mode = "virtualtext",                            -- Display mode: background, foreground, virtualtext
         virtualtext = "■",
         virtualtext_inline = false,
         virtualtext_mode = "foreground",
         always_update = false,
       },
-      buftypes = {},
+      buftypes = {}
     }
   }
 }

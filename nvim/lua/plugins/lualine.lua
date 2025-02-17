@@ -1,6 +1,6 @@
 -- Lualine
--- https://github.com/nvim-lualine/lualine.nvim
 -- `:h lualine.txt`
+-- https://github.com/nvim-lualine/lualine.nvim
 
 -- Macro recording {{{
 local function show_macro_recording()
@@ -83,7 +83,7 @@ return {
       tabline = {},
       winbar = {},
       inactive_winbar = {},
-      extensions = {},
+      extensions = {}
     }
   }
 }

@@ -1,16 +1,14 @@
 -- Lspconfig
+-- `:h lsp-config`
 -- https://github.com/neovim/nvim-lspconfig
 -- https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion#nvim-cmp
 -- https://github.com/neovim/nvim-lspconfig/wiki/Snippets#nvim-cmp-and-luasnip
--- `:h lsp-config`
 
 return {
   {
     "neovim/nvim-lspconfig",
-    event = {
-      "BufReadPre",
-      "BufNewFile",
-    },
+    event = { "BufReadPre", "BufNewFile" },
+    cmd = { "LspInfo", "LspInstall", "LspUninstall" },
     config = function()
       -- LSP Servers {{{
       local lspconfig = require("lspconfig")

@@ -1,10 +1,11 @@
 -- Hex
--- https://github.com/RaafatTurki/hex.nvim
 -- `:h hex.nvim`
+-- https://github.com/RaafatTurki/hex.nvim
 
 return {
   {
     "RaafatTurki/hex.nvim",
+    lazy = true,
     event = "VeryLazy",
     opts = {
       -- Dump to hex

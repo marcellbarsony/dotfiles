@@ -4,6 +4,8 @@
 return {
   {
     "theHamsta/nvim-dap-virtual-text",
+    lazy = true,
+    event = "VeryLazy",
     opts = {
       enabled = true,
       enabled_commands = true,

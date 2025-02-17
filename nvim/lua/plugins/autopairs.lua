@@ -1,11 +1,13 @@
 -- Autopairs
--- https://github.com/windwp/nvim-autopairs
 -- `:h nvim-autopairs.txt`
+-- https://github.com/windwp/nvim-autopairs
 
 return {
   {
     "windwp/nvim-autopairs",
+    lazy = true,
     event = "InsertEnter",
+    config = true,
     opts = {
       disable_filetype = { "TelescopePrompt" },
       disable_in_macro = false,
@@ -22,7 +24,7 @@ return {
       map_cr = true,
       map_bs = true,
       map_c_h = false,
-      map_c_w = false,
+      map_c_w = false
     }
   }
 }

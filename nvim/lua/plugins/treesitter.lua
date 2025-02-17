@@ -1,19 +1,14 @@
 -- Treesitter
+-- `:h treesitter.txt`
 -- https://github.com/nvim-treesitter/nvim-treesitter
 -- https://tree-sitter.github.io/tree-sitter/
--- `:h treesitter.txt`
 
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter-textobjects"
-    },
+    dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },
     build = ":TSUpdate",
-    event = {
-      "BufReadPre",
-      "BufNewFile"
-    },
+    event = { "BufReadPre", "BufNewFile" },
     cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
     opts_extend = { "ensure_installed" },
     ---@diagnostic disable-next-line: missing-fields
