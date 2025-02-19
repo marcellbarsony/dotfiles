@@ -33,7 +33,7 @@ return {
         -- `:h mason-lspconfig.setup_handlers()`
         handlers = {
           function(server_name)
-            require("lspconfig")[server_name].setup({
+            lspconfig[server_name].setup({
               capabilities = capabilities
             })
           end,

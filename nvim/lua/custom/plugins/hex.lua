@@ -5,7 +5,7 @@
 return {
   {
     "RaafatTurki/hex.nvim",
-    event = "VimEnter",
+    event = "BufReadPre",
     opts = {
       -- Dump to hex
       dump_cmd = "xxd -g 1 -u",

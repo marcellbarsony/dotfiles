@@ -6,9 +6,6 @@ return {
   {
     "stevearc/oil.nvim",
     cmd = "Oil",
-    keys = {
-      { "-", "<cmd>Oil<CR>", mode = "n", desc = "Oil" }
-    },
     ---@module "oil"
     ---@type oil.SetupOpts
     opts = {

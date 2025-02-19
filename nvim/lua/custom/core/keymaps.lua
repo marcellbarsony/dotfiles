@@ -58,6 +58,16 @@ map("n", "x", '"_x', { desc = "Delete" })
 -- }}}
 
 -- Gitsigns {{{
+map("n", "<leader>gg",
+  "<cmd>Gitsigns toggle_signs<CR>" ..
+  "<cmd>Gitsigns toggle_numhl<CR>" ..
+  "<cmd>Gitsigns toggle_current_line_blame<CR>",
+  { desc = "Gitsigns" }
+)
+
+-- Text object
+map("o", "<leader>gh", "<cmd>Gitsigns select_hunk<CR>", { desc = "Select hunk" })
+map("x", "<leader>gh", "<cmd>Gitsigns select_hunk<CR>", { desc = "Select hunk" })
 
 -- Actions
 -- map("n", "<leader>gs", "<cmd>Gitsigns stage_hunk<CR>", { desc = "Stage hunk" })
@@ -171,6 +181,10 @@ map("n", "<leader>vmu", "<cmd>MasonUpdate<CR>", { desc = "Update" })
 map("n", "<leader>vmU", "<cmd>MasonUninstallAll<CR>", { desc = "Uninstall All" })
 -- }}}
 
+-- Oil {{{
+map("n", "-", "<cmd>Oil<CR>", { desc = "Oil" })
+-- }}}
+
 -- Search {{{
 -- */#: Don't move to next match
 map("n", "*", "*N", { desc = "Find word" })
@@ -261,6 +275,15 @@ map("n", "<leader>vTU", "<cmd>TSUninstall all<CR>", { desc = "Uninstall All" })
 -- Inspect
 map("n", "<leader>vTi", "<cmd>Inspect<CR>", { desc = "Inspect" })
 map("n", "<leader>vTI", "<cmd>InspectTree<CR>", { desc = "Inspect [Tree]" })
+-- }}}
+
+-- Trouble {{{
+map("n", "<leader>lt", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Trouble" })
+map("n", "<leader>lb", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", { desc = "Buffer" })
+-- map("n", "<leader>zs", "<cmd>Trouble symbols toggle focus=false<cr>", { desc = "Symbols" })
+-- map("n", "<leader>zl", "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", { desc = "LSP definitions" })
+-- map("n", "<leader>zd", "<cmd>Trouble loclist toggle<cr>", { desc = "Location list" })
+-- map("n", "<leader>zq", "<cmd>Trouble qflist toggle<cr>", { desc = "Quickfix" })
 -- }}}
 
 -- Undo & Redo {{{

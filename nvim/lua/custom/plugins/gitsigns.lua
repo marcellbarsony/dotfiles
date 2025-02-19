@@ -7,20 +7,6 @@ return {
     "lewis6991/gitsigns.nvim",
     lazy = true,
     cmd = "Gitsigns",
-    keys = {
-      { -- Keys
-        "<leader>gg",
-        "<cmd>Gitsigns toggle_numhl<CR><cmd>Gitsigns toggle_current_line_blame<CR>",
-        mode = { "n" },
-        desc = "Gitsigns",
-      },
-      { -- Text object
-        "<leader>gh",
-        "<cmd>Gitsigns select_hunk<CR>",
-        mode = { "x" },
-        desc = "Select hunk",
-      }
-    },
     opts = {
       -- Signs {{{
       signs = {
