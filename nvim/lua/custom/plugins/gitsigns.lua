@@ -6,24 +6,21 @@ return {
   {
     "lewis6991/gitsigns.nvim",
     lazy = true,
+    cmd = "Gitsigns",
     keys = {
-      -- Keys {{{
-      {
+      { -- Keys
         "<leader>gg",
         "<cmd>Gitsigns toggle_numhl<CR><cmd>Gitsigns toggle_current_line_blame<CR>",
         mode = { "n" },
         desc = "Gitsigns",
       },
-      -- }}}
-      -- Text object {{{
-      {
+      { -- Text object
         "<leader>gh",
         "<cmd>Gitsigns select_hunk<CR>",
         mode = { "x" },
         desc = "Select hunk",
-      },
+      }
     },
-    -- }}}
     opts = {
       -- Signs {{{
       signs = {
@@ -76,7 +73,6 @@ return {
       status_formatter = nil,
       max_file_length  = 10000,
 
-      -- Options passwd to nvim_open_win
       preview_config = {
         border = "single",
         style = "minimal",

@@ -42,8 +42,48 @@ require("lazy").setup({
     { import = "custom.theme" }
   },
   install = { colorscheme = { "habamax" } },
-  checker = { enabled = true }, -- check for plugin updates
+  checker = { enabled = false },
+  ui = {
+    size = { width = 0.8, height = 0.8 },
+    wrap = false,
+    border = "none",
+    -- Icons {{{
+    icons = {
+      cmd = " ",
+      config = "",
+      debug = "● ",
+      event = " ",
+      favorite = " ",
+      ft = " ",
+      init = " ",
+      import = " ",
+      keys = " ",
+      lazy = "󰒲 ",
+      loaded = "●",
+      not_loaded = "○",
+      plugin = " ",
+      runtime = " ",
+      require = "󰢱 ",
+      source = " ",
+      start = " ",
+      task = "✔ ",
+      list = {
+        "●",
+        "➜",
+        "★",
+        "‒"
+      }
+    }
+    -- }}}
+  },
+  profiling = {
+    loader = false,
+    require = false
+  }
 })
 -- }}}
 
+-- Colorscheme {{{
 vim.cmd [[colorscheme tokyonight]]
+-- vim.cmd [[colorscheme darkvoid]]
+-- }}}
