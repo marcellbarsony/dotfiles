@@ -29,8 +29,6 @@ end
 
 -- Leader {{{
 map("n", "<Bslash>", "", { desc = "LEADER" })
-vim.g.mapleader = "\\"
-vim.g.maplocalleader = "\\"
 -- }}}
 
 -- Unmap {{{
