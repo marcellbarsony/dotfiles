@@ -9,7 +9,6 @@ return {
     dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },
     build = ":TSUpdate",
     event = { "BufReadPre", "BufNewFile" },
-    cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
     opts_extend = { "ensure_installed" },
     ---@diagnostic disable-next-line: missing-fields
     opts = function ()
@@ -31,10 +30,11 @@ return {
           "printf",
           "query",
           "regex",
+          "ron",
           "rust",
           "toml",
           "xml",
-          "yaml",
+          "yaml"
         },
         -- }}}
 
@@ -42,7 +42,7 @@ return {
         highlight = {
           enable = true,
           disable = { "" },
-          additional_vim_regex_highlighting = false,
+          additional_vim_regex_highlighting = false
         },
         -- }}}
 
@@ -53,8 +53,8 @@ return {
             init_selection = "<C-space>",
             node_incremental = "<C-space>",
             scope_incremental = false,
-            node_decremental = "<bs>",
-          },
+            node_decremental = "<bs>"
+          }
         },
         -- }}}
 
@@ -71,8 +71,8 @@ return {
             goto_next_start = { ["]f"] = "@function.outer", ["]c"] = "@class.outer", ["]a"] = "@parameter.inner" },
             goto_next_end = { ["]F"] = "@function.outer", ["]C"] = "@class.outer", ["]A"] = "@parameter.inner" },
             goto_previous_start = { ["[f"] = "@function.outer", ["[c"] = "@class.outer", ["[a"] = "@parameter.inner" },
-            goto_previous_end = { ["[F"] = "@function.outer", ["[C"] = "@class.outer", ["[A"] = "@parameter.inner" },
-          },
+            goto_previous_end = { ["[F"] = "@function.outer", ["[C"] = "@class.outer", ["[A"] = "@parameter.inner" }
+          }
         },
         -- }}}
 
@@ -81,9 +81,9 @@ return {
         vim.api.nvim_set_hl(0, "@lsp.type.selfTypeKeyword", { link = "operator" }),
         vim.api.nvim_set_hl(0, "@variable.builtin", { link = "operator" }),
         vim.api.nvim_set_hl(0, "@lsp.type.selfKeyword", { link = "operator" }),
-        vim.api.nvim_set_hl(0, "@namespace.builtin", { link = "operator" }),
+        vim.api.nvim_set_hl(0, "@namespace.builtin", { link = "operator" })
         -- }}}
       }
-    end,
-  },
+    end
+  }
 }

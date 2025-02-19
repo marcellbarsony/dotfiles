@@ -6,6 +6,7 @@ return {
   {
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",
+    event = { "BufReadPre", "BufNewFile" },
     config = function()
       -- Colors {{{
       -- rainbow-delimeters.nvim integration
@@ -38,7 +39,7 @@ return {
       -- }}}
 
       -- Config {{{
-      -- :help ibl.config
+      -- `:h ibl.config`
       require("ibl").setup {
         enabled = true,
         debounce = 100,
@@ -46,7 +47,7 @@ return {
         whitespace = { highlight = { "Whitespace", "NonText" } },
 
         -- Scope
-        -- :help ibl.config.scope
+        -- `:help ibl.config.scope`
         scope = {
           enabled = true,
           exclude = {

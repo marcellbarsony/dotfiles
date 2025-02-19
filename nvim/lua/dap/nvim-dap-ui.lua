@@ -5,8 +5,9 @@
 return {
   {
     "rcarriga/nvim-dap-ui",
+    lazy = true,
     dependencies = {
-      "mfussenegger/nvim-dap",
+      "theHamsta/nvim-dap-virtual-text",
       "nvim-neotest/nvim-nio"
     },
     config = function()
@@ -25,7 +26,7 @@ return {
             step_out = "",
             step_over = "",
             terminate = ""
-          }
+          },
         },
         -- }}}
 

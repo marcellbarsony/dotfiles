@@ -55,31 +55,11 @@ map("v", "y", "\"+y", { desc = "Yank [Global]" })
 map("x", "p", [["_dp]], { desc = "Paste [Global]" })
 -- }}}
 
--- DAP {{{
--- `:h dap-api`
--- `:h dap-mappings`
-map("n", "<F1>", "<cmd>lua require'dap'.continue()<CR>", { desc = "Continue" })
-map("n", "<F2>", "<cmd>lua require'dap'.step_over()<CR>", { desc = "Step over" })
-map("n", "<F3>", "<cmd>lua require'dap'.step_into()<CR>", { desc = "Step into" })
-map("n", "<F4>", "<cmd>lua require'dap'.step_out()<CR>", { desc = "Step out" })
-map("n", "<F5>", "<cmd>lua require'dap'.step_back()<CR>", { desc = "Step back" })
-map("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", { desc = "Breakpoint" })
-map("n", "<leader>dB", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", { desc = "Breakpoint [Condition]" })
-map("n", "<leader>dl", "<cmd>lua require'dap'.set.breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>", { desc = "Log point" })
-map("n", "<leader>dq", "<cmd>lua require('dap').disconnect({ terminateDebuggee = false })<CR>", { desc = "Quit" })
-map("n", "<leader>dr", "<cmd>lua require'dap'.restart()<CR>", { desc = "Restart" })
-map("n", "<leader>dR", "<cmd>lua require'dap'.repl.open()<CR>", { desc = "REPL" })
--- }}}
-
 -- Delete {{{
 map("n", "x", '"_x', { desc = "Delete" })
 -- }}}
 
 -- Gitsigns {{{
-map("n", "<leader>gg", "<cmd>Gitsigns toggle_numhl<CR><cmd>Gitsigns toggle_current_line_blame<CR>", { desc = "Gitsigns" })
-
--- Text object
-map("x", "<leader>gh", "<cmd>Gitsigns select_hunk<CR>", { desc = "Select hunk" })
 
 -- Actions
 -- map("n", "<leader>gs", "<cmd>Gitsigns stage_hunk<CR>", { desc = "Stage hunk" })
@@ -193,10 +173,6 @@ map("n", "<leader>vmu", "<cmd>MasonUpdate<CR>", { desc = "Update" })
 map("n", "<leader>vmU", "<cmd>MasonUninstallAll<CR>", { desc = "Uninstall All" })
 -- }}}
 
--- Oil {{{
-map("n", "-", "<cmd>Oil<CR>", { desc = "Oil" })
--- }}}
-
 -- Search {{{
 -- */#: Don't move to next match
 map("n", "*", "*N", { desc = "Find word" })
@@ -287,15 +263,6 @@ map("n", "<leader>vTU", "<cmd>TSUninstall all<CR>", { desc = "Uninstall All" })
 -- Inspect
 map("n", "<leader>vTi", "<cmd>Inspect<CR>", { desc = "Inspect" })
 map("n", "<leader>vTI", "<cmd>InspectTree<CR>", { desc = "Inspect [Tree]" })
--- }}}
-
--- Trouble {{{
-map("n", "<leader>lt", "<cmd>Trouble diagnostics toggle filter.buf=0<CR>", { desc = "Trouble" })
-map("n", "<leader>lT", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Trouble [All]" })
-map("n", "<leader>lq", "<cmd>Trouble qflist toggle<CR>", { desc = "Quickfix" })
--- map("n", "<leader>zs", "<cmd>Trouble symbols toggle focus=false<CR>", { desc = "Symbols" })
--- map("n", "<leader>zl", "<cmd>Trouble lsp toggle focus=false win.position=right<CR>", { desc = "LSP definitions" })
--- map("n", "<leader>zd", "<cmd>Trouble loclist toggle<CR>", { desc = "Location list" })
 -- }}}
 
 -- Undo & Redo {{{

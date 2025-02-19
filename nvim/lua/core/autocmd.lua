@@ -37,6 +37,8 @@ A.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
     "*.out", "*.so"
   },
   callback = function()
+    vim.bo.filetype = "binary"
+
     vim.api.nvim_buf_set_keymap(0, "n", "<leader>hd", "<cmd>HexDump<CR>", { desc = "Dump" })
     vim.api.nvim_buf_set_keymap(0, "n", "<leader>ht", "<cmd>HexToggle<CR>", { desc = "Toggle" })
     vim.api.nvim_buf_set_keymap(0, "n", "<leader>ha", "<cmd>HexAssemble<CR>", { desc = "Assemble" })

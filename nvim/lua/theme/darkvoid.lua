@@ -4,6 +4,7 @@
 return {
   {
     "aliqyan-21/darkvoid.nvim",
+    lazy = true,
     config = function ()
       require("darkvoid").setup({
         transparent = true,
@@ -34,16 +35,16 @@ return {
 
           -- enable or disable specific plugin highlights
           plugins = {
-              gitsigns = true,
-              nvim_cmp = true,
-              treesitter = true,
-              nvimtree = true,
-              telescope = true,
-              lualine = true,
-              bufferline = true,
-              oil = true,
-              whichkey = true,
-              nvim_notify = true,
+            gitsigns = true,
+            nvim_cmp = true,
+            treesitter = true,
+            nvimtree = true,
+            telescope = true,
+            lualine = true,
+            bufferline = true,
+            oil = true,
+            whichkey = true,
+            nvim_notify = true,
           },
 
           -- gitsigns colors
@@ -70,7 +71,7 @@ return {
           error = "#dea6a0",
           warning = "#d6efd8",
           hint = "#bedc74",
-          info = "#7fa1c3",
+          info = "#7fa1c3"
         }
         -- }}}
       })

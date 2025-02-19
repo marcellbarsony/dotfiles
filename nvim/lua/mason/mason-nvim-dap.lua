@@ -4,10 +4,10 @@
 return {
   {
     "jay-babu/mason-nvim-dap.nvim",
-    lazy = true,
-    event = "VeryLazy",
+    cmd = { "DapInstall", "DapUninstall" },
     config = function ()
       require("mason-nvim-dap").setup({
+        automatic_installation = true,
         ensure_installed = {
           "python",    -- Debugpy
           "codelldb",  -- C, C++, Rust, Zig
@@ -17,7 +17,7 @@ return {
         -- https://github.com/vadimcn/codelldb/blob/master/MANUAL.md
         handlers = {
           function(config)
-            require('mason-nvim-dap').default_setup(config)
+            require("mason-nvim-dap").default_setup(config)
           end
         }
         -- }}}

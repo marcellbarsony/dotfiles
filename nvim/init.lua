@@ -10,7 +10,7 @@ if not vim.loop.fs_stat(lazypath) then
     "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
     "--branch=stable",
-    lazypath,
+    lazypath
   })
 end
 
@@ -23,7 +23,8 @@ require("lazy").setup({
     { import = "dap" },
     { import = "lang" },
     { import = "mason" },
-    { import = "plugins" }
+    { import = "plugins" },
+    { import = "theme" }
   },
   checker = { enabled = false },
 })

@@ -7,9 +7,9 @@
 return {
   {
     "L3MON4D3/LuaSnip",
+    dependencies = { "saadparwaiz1/cmp_luasnip" },
     lazy = true,
     event = { "InsertEnter" },
-    dependencies = { "saadparwaiz1/cmp_luasnip" },
     config = function()
       local ls = require("luasnip")
       local types = require("luasnip.util.types")
@@ -21,14 +21,14 @@ return {
         link_roots = true,
         exit_roots = true,
         link_children = true,
-        update_events = "TextChanged,TextChangedI",   -- :h events
+        update_events = "TextChanged,TextChangedI",  -- `:h events`
         delete_check_events = "TextChanged",
         ext_opts = {
           [types.choiceNode] = {
             active = {
-              virt_text = { { "󰁎", "GruvboxOrange" } },
-            },
-          },
+              virt_text = { { "󰁎", "GruvboxOrange" } }
+            }
+          }
         },
         ext_base_prio = 300,
         ext_prio_increase = 1,
@@ -36,7 +36,7 @@ return {
         store_selection_keys = "<Tab>",
         ft_func = function()
           return vim.split(vim.bo.filetype, ".", true)
-        end,
+        end
       })
       -- }}}
 

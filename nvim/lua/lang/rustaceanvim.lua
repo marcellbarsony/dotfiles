@@ -5,7 +5,7 @@
 return {
   {
     "mrcjkb/rustaceanvim",
-    lazy = false,
+    ft = { "rust" },
     config = function()
       -- Advanced configuration
       -- https://github.com/mrcjkb/rustaceanvim#advanced-configuration
@@ -20,7 +20,7 @@ return {
 
         return {
           dap = {
-            adapter = cfg.get_codelldb_adapter(codelldb_path, liblldb_path),
+            adapter = cfg.get_codelldb_adapter(codelldb_path, liblldb_path)
           },
           server = {
             -- TODO: Remove when fixed
@@ -29,7 +29,7 @@ return {
           },
           tools = {
             float_win_config = {
-              auto_focus = true,
+              auto_focus = true
             }
           }
         }
