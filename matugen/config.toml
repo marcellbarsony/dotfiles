@@ -6,17 +6,21 @@ set_wallpaper = false
 dunst = true
 
 [templates.hyprland]
-input_path = '~/.config/matugen/template/hyprland.template'
-output_path = '~/.cache/matugen/colors-hyprland.conf'
+input_path = "~/.config/matugen/template/hyprland.template"
+output_path = "~/.cache/matugen/colors-hyprland.conf"
+
+[templates.lua]
+input_path = "~/.config/matugen/template/lua.template"
+output_path = "~/.cache/matugen/colors.lua"
 
 [templates.rofi]
-input_path = '~/.config/matugen/template/rofi.template'
-output_path = '~/.cache/matugen/colors.rasi'
+input_path = "~/.config/matugen/template/rofi.template"
+output_path = "~/.cache/matugen/colors.rasi"
 
 [templates.css]
-input_path = '~/.config/matugen/template/css.template'
-output_path = '~/.cache/matugen/colors.css'
+input_path = "~/.config/matugen/template/css.template"
+output_path = "~/.cache/matugen/colors.css"
 
 [templates.scss]
-input_path = '~/.config/matugen/template/scss.template'
-output_path = '~/.cache/matugen/colors.scss'
+input_path = "~/.config/matugen/template/scss.template"
+output_path = "~/.cache/matugen/colors.scss"

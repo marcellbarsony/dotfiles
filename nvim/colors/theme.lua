@@ -1,38 +1,7 @@
 -- Colorscheme
 -- `:h colorscheme`
 
--- Colors {{{
-local c = {
-  transparent  = "NONE",
-
-
-  bg        = "#000000",
-  bg_dark   = "#1e2030",
-  bg_dark_2 = "#808080",
-  fg        = "#FFFFFF",
-  fg_dark   = "#828bb8",
-
-  comment   = "#636da6",
-
-  primary   = "#3333DD",
-
-  red       = "#FF0000",
-  orange    = "#ff966c",
-  yellow    = "#ffc777",
-  green     = "#c3e88d",
-  blue      = "#0000FF",
-  cyan      = "#86e1fc",
-  purple    = "#fca7ea",
-  magenta   = "#c099ff",
-
-
-  git = {
-    add     = "#b8db87",
-    change  = "#7ca1f2",
-    delete  = "#e26a75",
-  },
-}
--- }}}
+local c = dofile(os.getenv("HOME") .. "/.cache/matugen/colors.lua")
 
 local theme = {}
 
@@ -43,66 +12,83 @@ function theme.setup()
   local groups = {
     -- Base {{{
     -- Normal
-    Normal             = { fg = c.fg, bg = c.transparent },  -- Normal window
-    NormalNC           = { fg = c.fg, bg = c.transparent },  -- Non-current window
-    NormalSB           = { fg = c.fg, bg = c.bg_dark     },  -- Sidebar
-    NormalFloat        = { fg = c.fg, bg = c.bg_dark     },  -- Floating window
+    Normal             = { fg = c.fg, bg = c.transparent      },  -- Normal window
+    NormalNC           = { fg = c.fg, bg = c.transparent      },  -- Non-current window
+    NormalSB           = { fg = c.fg, bg = c.bg_dark          },  -- Sidebar
+    NormalFloat        = { fg = c.fg, bg = c.bg_dark          },  -- Floating window
 
     -- Base
-    ColorColumn        = { bg = c.bg                     },  -- Columns set with 'colorcolumn'
-    Comment            = { fg = c.comment, italic = true },  -- Comments
-    Conceal            = { fg = c.fg                     }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-    Directory          = { fg = c.primary                },  -- Directory names
-    EndOfBuffer        = { fg = c.transparent            },  -- Filler lines (~)
-    MatchParen         = { fg = c.orange, bold = true    },  -- Matching parentheses (`:h pi_paren.txt`)
-    ModeMsg            = { fg = c.fg_dark, bold = true   },  -- 'showmode' message (e.g. -- INSERT --)
-    MoreMsg            = { fg = c.fg                     },  -- |more-prompt|
-    MsgArea            = { fg = c.fg                     }, -- Area for messages and cmdline
-    NonText            = { fg = c.fg                     }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-    Question           = { fg = c.fg                     }, -- |hit-enter| prompt and yes/no questions
-    QuickFixLine       = { bg = c.bg, bold = true        }, -- Current |quickfix| item in the quickfix window
-    SpecialKey         = { fg = c.bg_dark                }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
-    Title              = { fg = c.fg, bold = true        }, -- titles for output from ":set all", ":autocmd" etc.
-    VertSplit          = { fg = c.fg, bg = c.bg          }, -- the column separating vertically split windows
-    Whitespace         = { fg = c.comment                }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
+    ColorColumn        = { bg = c.bg                          },  -- Columns set with 'colorcolumn'
+    Comment            = { fg = c.comment, italic = true      },  -- Comments
+    Conceal            = { fg = c.fg                          },  -- placeholder characters substituted for concealed text (see 'conceallevel')
+    Directory          = { fg = c.primary                     },  -- Directory names
+    EndOfBuffer        = { fg = c.transparent                 },  -- Filler lines (~)
+    MatchParen         = { fg = c.orange, bold = true         },  -- Matching parentheses (`:h pi_paren.txt`)
+    ModeMsg            = { fg = c.fg_dark, bold = true        },  -- 'showmode' message (e.g. -- INSERT --)
+    MoreMsg            = { fg = c.fg                          },  -- |more-prompt|
+    MsgArea            = { fg = c.fg                          },  -- Area for messages and cmdline
+    NonText            = { fg = c.fg                          },  -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+    Question           = { fg = c.fg                          },  -- |hit-enter| prompt and yes/no questions
+    QuickFixLine       = { bg = c.bg, bold = true             },  -- Current |quickfix| item in the quickfix window
+    SpecialKey         = { fg = c.bg_dark                     },  -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
+    Title              = { fg = c.fg, bold = true             },  -- titles for output from ":set all", ":autocmd" etc.
+    VertSplit          = { fg = c.fg, bg = c.bg               },  -- the column separating vertically split windows
+    Whitespace         = { fg = c.comment                     },  -- "nbsp", "space", "tab" and "trail" in 'listchars'
     WinSeparator       = { fg = c.bg_dark, bg = c.transparent }, -- the column separating vertically split windows
-    WildMenu           = { bg = c.bg_dark                },  -- Current match in 'wildmenu' completion
+    WildMenu           = { bg = c.bg_dark                     },  -- Current match in 'wildmenu' completion
 
     -- Cursor
-    Cursor             = { fg = c.bg, bg = c.fg          },  -- Character under cursor
-    lCursor            = { fg = c.bg, bg = c.fg          },  -- Character under cursor when |language-mapping| is used (`:h guicursor`)
-    CursorIM           = { fg = c.bg, bg = c.fg          },  -- Cursor, but used in IME mode |CursorIM|
-    CursorColumn       = { bg = c.bg                     },  -- Cursor screen-column when 'cursorcolumn' is set
-    CursorLine         = { bg = c.bg                     },  -- Cursor screen-line when 'cursorline' is set
-    CursorLineNr       = { fg = c.fg, bold = true        },  -- LineNr when 'cursorline' or 'relativenumber' is set
+    Cursor             = { fg = c.bg, bg = c.fg               },  -- Character under cursor
+    lCursor            = { fg = c.bg, bg = c.fg               },  -- Character under cursor when |language-mapping| is used (`:h guicursor`)
+    CursorIM           = { fg = c.bg, bg = c.fg               },  -- Cursor, but used in IME mode |CursorIM|
+    CursorColumn       = { bg = c.bg                          },  -- Cursor screen-column when 'cursorcolumn' is set
+    CursorLine         = { bg = c.bg                          },  -- Cursor screen-line when 'cursorline' is set
+    CursorLineNr       = { fg = c.fg, bold = true             },  -- LineNr when 'cursorline' or 'relativenumber' is set
 
     -- Fold
     Folded             = { fg = c.primary, bg = c.transparent },  -- Closed folds
     FoldColumn         = { bg = c.transparent, fg = c.comment },  -- 'foldcolumn'
 
     -- Float
-    FloatBorder        = { fg = c.fg, bg = c.bg          },
-    FloatTitle         = { fg = c.fg, bg = c.bg          },
+    FloatBorder        = { fg = c.fg, bg = c.bg               },
+    FloatTitle         = { fg = c.fg, bg = c.bg               },
 
     -- Line number
-    LineNr             = { fg = c.fg },
-    LineNrAbove        = { fg = c.bg_dark_2 },
-    LineNrBelow        = { fg = c.bg_dark_2 },
+    LineNr             = { fg = c.source_color                     },
+    LineNrAbove        = { fg = c.bg_dark_2                   },
+    LineNrBelow        = { fg = c.bg_dark_2                   },
     -- }}}
 
     -- Plugins {{{
     -- indent-blankline.nvim {{{
-    IndentBlanklineChar               = { fg = c.background1 },
-    IndentBlanklineContextChar        = { fg = c.yellow },
-    IndentBlanklineContextStart       = { fg = c.yellow },
-    IndentBlanklineSpaceChar          = { link = 'Whitespace' },
-    IndentBlanklineSpaceCharBlankline = { link = 'Whitespace' },
+    IndentBlanklineChar               = { fg = c.background1  },
+    IndentBlanklineContextChar        = { fg = c.yellow       },
+    IndentBlanklineContextStart       = { fg = c.yellow       },
+    IndentBlanklineSpaceChar          = { link = "Whitespace" },
+    IndentBlanklineSpaceCharBlankline = { link = "Whitespace" },
     -- }}}
 
     -- Trouble
     TroubleCount = { bg = "#3b4261", fg = "#bb9af7" },
-    TroubleNormal = { bg = "#16161e", fg = "#c0caf5" },
+    TroubleNormal = { bg = c.bg, fg = "#c0caf5" },
     TroubleText = { fg = "#a9b1d6" },
+    -- }}}
+
+    -- Telescope.nvim {{{
+    TelescopeNormal    = { fg = c.primary, bg = c.bg },
+    -- TelescopeMatching = { fg = p.teal1 },
+    -- TelescopeNormal = { fg = p.text },
+    -- TelescopeSelection = { fg = p.text, bg = p.background1 },
+    -- TelescopeTitle = { fg = p.blueGray2 },
+    -- TelescopeBorder = { fg = p.background1 },
+    -- TelescopePromptBorder = { fg = p.background1 },
+    -- TelescopePromptNormal = { fg = p.text },
+    -- TelescopePromptPrefix = { fg = p.blueGray2 },
+    -- TelescopePreviewTitle = { fg = p.background2, bg = p.teal1 },
+    -- TelescopePromptTitle = { fg = p.background2, bg = p.blue1 },
+    -- TelescopeResultsDiffAdd = { fg = p.teal1 },
+    -- TelescopeResultsDiffChange = { fg = p.yellow },
+    -- TelescopeResultsDiffDelete = { fg = p.pink3 },
     -- }}}
   }
 
@@ -347,21 +333,6 @@ return theme.setup()
 -- -- CmpItemKindVariable = { fg = p.teal1 },
 -- -- }}}
 
--- -- telescope.nvim {{{
--- -- TelescopeMatching = { fg = p.teal1 },
--- -- TelescopeNormal = { fg = p.text },
--- -- TelescopeSelection = { fg = p.text, bg = p.background1 },
--- -- TelescopeTitle = { fg = p.blueGray2 },
--- -- TelescopeBorder = { fg = p.background1 },
--- -- TelescopePromptBorder = { fg = p.background1 },
--- -- TelescopePromptNormal = { fg = p.text },
--- -- TelescopePromptPrefix = { fg = p.blueGray2 },
--- -- TelescopePreviewTitle = { fg = p.background2, bg = p.teal1 },
--- -- TelescopePromptTitle = { fg = p.background2, bg = p.blue1 },
--- -- TelescopeResultsDiffAdd = { fg = p.teal1 },
--- -- TelescopeResultsDiffChange = { fg = p.yellow },
--- -- TelescopeResultsDiffDelete = { fg = p.pink3 },
--- -- }}}
 
 -- -- tree-sitter {{{
 -- -- ['@variable'] = { fg = p.text },

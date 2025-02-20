@@ -48,7 +48,6 @@ open = [
 # Open {{{
 [open]
 rules = [
-    { name = "*",      use = "edit" },
     { name = "*.c",    use = "edit" },
     { name = "*.conf", use = "edit" },
     { name = "*.cfg",  use = "edit" },
