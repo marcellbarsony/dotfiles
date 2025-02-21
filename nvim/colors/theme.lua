@@ -11,13 +11,14 @@ function theme.setup()
 
   local groups = {
     -- Base {{{
-    -- Normal
+    -- Normal {{{
     Normal             = { fg = c.fg, bg = c.transparent      },  -- Normal window
     NormalNC           = { fg = c.fg, bg = c.transparent      },  -- Non-current window
-    NormalSB           = { fg = c.fg, bg = c.bg_dark          },  -- Sidebar
-    NormalFloat        = { fg = c.fg, bg = c.bg_dark          },  -- Floating window
+    NormalSB           = { fg = c.fg, bg = c.bg               },  -- Sidebar
+    NormalFloat        = { fg = c.fg, bg = c.bg               },  -- Floating window
+    -- }}}
 
-    -- Base
+    -- Base {{{
     ColorColumn        = { bg = c.bg                          },  -- Columns set with 'colorcolumn'
     Comment            = { fg = c.comment, italic = true      },  -- Comments
     Conceal            = { fg = c.fg                          },  -- placeholder characters substituted for concealed text (see 'conceallevel')
@@ -36,59 +37,123 @@ function theme.setup()
     Whitespace         = { fg = c.comment                     },  -- "nbsp", "space", "tab" and "trail" in 'listchars'
     WinSeparator       = { fg = c.bg_dark, bg = c.transparent }, -- the column separating vertically split windows
     WildMenu           = { bg = c.bg_dark                     },  -- Current match in 'wildmenu' completion
+    -- }}}
 
-    -- Cursor
+    -- Cursor {{{
     Cursor             = { fg = c.bg, bg = c.fg               },  -- Character under cursor
     lCursor            = { fg = c.bg, bg = c.fg               },  -- Character under cursor when |language-mapping| is used (`:h guicursor`)
     CursorIM           = { fg = c.bg, bg = c.fg               },  -- Cursor, but used in IME mode |CursorIM|
     CursorColumn       = { bg = c.bg                          },  -- Cursor screen-column when 'cursorcolumn' is set
     CursorLine         = { bg = c.bg                          },  -- Cursor screen-line when 'cursorline' is set
     CursorLineNr       = { fg = c.fg, bold = true             },  -- LineNr when 'cursorline' or 'relativenumber' is set
+    -- }}}
 
-    -- Fold
+    -- Fold {{{
     Folded             = { fg = c.primary, bg = c.transparent },  -- Closed folds
     FoldColumn         = { bg = c.transparent, fg = c.comment },  -- 'foldcolumn'
+    -- }}}
 
-    -- Float
+    -- Float {{{
     FloatBorder        = { fg = c.fg, bg = c.bg               },
     FloatTitle         = { fg = c.fg, bg = c.bg               },
+    -- }}}
 
-    -- Line number
-    LineNr             = { fg = c.source_color                     },
+    -- Line number {{{
+    LineNr             = { fg = c.primary                     },
     LineNrAbove        = { fg = c.bg_dark_2                   },
     LineNrBelow        = { fg = c.bg_dark_2                   },
     -- }}}
 
-    -- Plugins {{{
-    -- indent-blankline.nvim {{{
-    IndentBlanklineChar               = { fg = c.background1  },
-    IndentBlanklineContextChar        = { fg = c.yellow       },
-    IndentBlanklineContextStart       = { fg = c.yellow       },
-    IndentBlanklineSpaceChar          = { link = "Whitespace" },
-    IndentBlanklineSpaceCharBlankline = { link = "Whitespace" },
+    -- Search & Replace {{{
+    Search                      = { bg = c.bg_search, fg = c.fg }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+    IncSearch                   = { bg = c.orange, fg = c.black }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+    -- CurSearch                   =  "IncSearch",
+    Substitute                  = { bg = c.red, fg = c.black }, -- |:substitute| replacement text highlighting
     -- }}}
 
-    -- Trouble
-    TroubleCount = { bg = "#3b4261", fg = "#bb9af7" },
-    TroubleNormal = { bg = c.bg, fg = "#c0caf5" },
-    TroubleText = { fg = "#a9b1d6" },
+    -- LSP {{{
+    LspInlayHint = { fg = c.comment, bg = c.transparent },
+    -- }}}
+
+    -- Diagnostic {{{
+    DiagnosticError            = { fg = "#db4b4b" },
+    DiagnosticHint             = { fg = "#1abc9c" },
+    DiagnosticInfo             = { fg = "#0db9d7" },
+    DiagnosticInformation      = { fg = "#0db9d7" },
+    DiagnosticUnderlineError   = { sp = "#db4b4b", undercurl = true },
+    DiagnosticUnderlineHint    = { sp = "#1abc9c", undercurl = true },
+    DiagnosticUnderlineInfo    = { sp = "#0db9d7", undercurl = true },
+    DiagnosticUnderlineWarn    = { sp = "#e0af68", undercurl = true },
+    DiagnosticUnnecessary      = { fg = "#414868"                   },
+    DiagnosticVirtualTextError = { fg = "#db4b4b", bg = "#2d202a"   },
+    DiagnosticVirtualTextHint  = { fg = "#1abc9c", bg = "#1a2b32"   },
+    DiagnosticVirtualTextInfo  = { fg = "#0db9d7", bg = "#192b38"   },
+    DiagnosticVirtualTextWarn  = { fg = "#e0af68", bg = "#2e2a2d"   },
+    DiagnosticWarn             = { fg = "#e0af68"                   },
+    DiagnosticWarning          = { fg = "#e0af68"                   },
+    -- }}}
+    -- }}}
+
+    -- Plugins {{{
+    -- Alpha {{{
+    AlphaButtons     = { fg = c.on_error, bg = c.on_error },  -- !!!
+    AlphaFooter      = { fg = c.on_error, bg = c.on_error },  -- !!!
+    AlphaHeader      = { fg = c.on_error, bg = c.on_error },  -- !!!
+    AlphaHeaderLabel = { fg = c.on_error, bg = c.on_error },  -- !!!
+    AlphaShortcut    = { fg = c.on_error, bg = c.on_error },  -- !!!
+    -- }}}
+
+    -- GitSigns.nvim {{{
+    GitSignsAdd              = { fg = "#449dab" },
+    GitSignsChange           = { fg = "#6183bb" },
+    GitSignsDelete           = { fg = "#914c54" },
+    GitSignsCurrentLineBlame = { fg = c.comment },
+    -- }}}
+
+    -- Hex.nvim {{{
+    -- }}}
+
+    -- Indent-blankline.nvim {{{
+    IndentBlanklineChar               = { fg = c.primary },
+    IndentBlanklineContextChar        = { fg = c.primary },
+    IndentBlanklineContextStart       = { fg = c.primary },
+    -- IndentBlanklineSpaceChar          = { link = "Whitespace" },
+    -- IndentBlanklineSpaceCharBlankline = { link = "Whitespace" },
+    -- }}}
+
+    -- Mason {{{
+    -- }}}
+
+    -- Trouble {{{
+    TroubleCount  = { fg = c.fg, bg = c.on_primary },
+    TroubleNormal = { fg = c.fg, bg = c.bg },
+    TroubleText   = { fg = c.fg                     },
+    -- }}}
+
+    -- Which-key.nvim {{{
+    WhichKey          = { fg = c.fg      },  -- Keys
+    WhichKeyDesc      = { fg = c.fg      },  -- Normal
+    WhichKeyGroup     = { fg = c.primary },  -- Groups
+    WhichKeyNormal    = { bg = c.bg      },  -- Background
+    WhichKeySeparator = { fg = c.comment },  -- Separator
+    WhichKeyFloat     = { bg = c.bg      },  -- Float
+    WhichKeyValue     = { fg = c.fg      },  -- Value
     -- }}}
 
     -- Telescope.nvim {{{
-    TelescopeNormal    = { fg = c.primary, bg = c.bg },
-    -- TelescopeMatching = { fg = p.teal1 },
-    -- TelescopeNormal = { fg = p.text },
-    -- TelescopeSelection = { fg = p.text, bg = p.background1 },
-    -- TelescopeTitle = { fg = p.blueGray2 },
-    -- TelescopeBorder = { fg = p.background1 },
-    -- TelescopePromptBorder = { fg = p.background1 },
-    -- TelescopePromptNormal = { fg = p.text },
-    -- TelescopePromptPrefix = { fg = p.blueGray2 },
-    -- TelescopePreviewTitle = { fg = p.background2, bg = p.teal1 },
-    -- TelescopePromptTitle = { fg = p.background2, bg = p.blue1 },
+    TelescopeNormal       = { fg = c.fg,      bg = c.bg },  -- Normal
+    TelescopeBorder       = { fg = c.primary, bg = c.bg },  -- Border
+    TelescopePromptBorder = { fg = c.primary, bg = c.bg },  -- Prompt Border
+    TelescopePromptNormal = { fg = c.fg,      bg = c.bg },  -- Prompt Normal
+    TelescopePromptTitle  = { fg = c.primary, bg = c.bg },  -- Prompt Title
+    TelescopeMatching     = { fg = c.primary            },  -- Matching
+    TelescopePreviewTitle = { fg = c.primary, bg = c.bg },  -- Preview
+    TelescopeSelection    = { bg = c.on_primary         },  -- Selection
+    TelescopePromptPrefix = { fg = c.fg                 },  -- Prompt sign
     -- TelescopeResultsDiffAdd = { fg = p.teal1 },
     -- TelescopeResultsDiffChange = { fg = p.yellow },
     -- TelescopeResultsDiffDelete = { fg = p.pink3 },
+    -- }}}
     -- }}}
   }
 
@@ -98,7 +163,6 @@ function theme.setup()
 end
 
 return theme.setup()
-
 
 -- BASE {{{
 -- -- Diagnostics
@@ -151,12 +215,7 @@ return theme.setup()
 -- -- PmenuMatchSel               = { bg = Util.blend_bg(c.fg_gutter, 0.8), fg = c.blue1 }, -- Popup menu: Matched text in selected item.
 -- -- PmenuSbar                   = { bg = Util.blend_fg(c.bg_popup, 0.95) }, -- Popup menu: scrollbar.
 -- PmenuThumb                  = { bg = c.fg_gutter }, -- Popup menu: Thumb of the scrollbar.
---
--- -- Search & Replace
--- Search                      = { bg = c.bg_search, fg = c.fg }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
--- IncSearch                   = { bg = c.orange, fg = c.black }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
--- CurSearch                   =  "IncSearch",
--- Substitute                  = { bg = c.red, fg = c.black }, -- |:substitute| replacement text highlighting
+
 
 -- -- SignColumn
 -- SignColumn                  = { bg = c.transparent and c.none or c.bg, fg = c.fg_gutter }, -- column where |signs| are displayed
@@ -167,11 +226,11 @@ return theme.setup()
 -- SpellCap                    = { sp = c.warning, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
 -- SpellLocal                  = { sp = c.info, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
 -- SpellRare                   = { sp = c.hint, undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
---
+
 -- -- StatusLine
 -- StatusLine                  = { fg = c.fg_sidebar, bg = c.bg_statusline }, -- status line of current window
 -- StatusLineNC                = { fg = c.fg_gutter, bg = c.bg_statusline }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
---
+
 -- -- Syntax
 -- Bold                        = { bold = true, fg = c.fg }, -- (preferred) any bold text
 -- Character                   = { fg = c.green }, --  a character constant: 'c', '\n'
@@ -244,11 +303,6 @@ return theme.setup()
 -- }}}
 
 -- PLUGINS {{{
--- -- gitsigns.nvim {{{
--- GitSignsAdd    = { fg = c.git.add }, -- diff mode: Added line |diff.txt|
--- GitSignsChange = { fg = c.git.change }, -- diff mode: Changed line |diff.txt|
--- GitSignsDelete = { fg = c.git.delete }, -- diff mode: Deleted line |diff.txt|
--- -- }}}
 
 -- -- lspsaga.nvim {{{
 -- TitleString         = { fg = '' },
@@ -393,14 +447,6 @@ return theme.setup()
 -- -- -- TSUnderline = {},
 -- -- }}}
 
--- -- which-key.nvim {{{
--- -- WhichKey = { fg = p.text },
--- -- WhichKeyGroup = { fg = p.text },
--- -- WhichKeySeparator = { fg = p.text },
--- -- WhichKeyDesc = { fg = p.text },
--- -- WhichKeyFloat = { bg = groups.panel },
--- -- WhichKeyValue = { fg = p.text },
--- -- }}}
 -- }}}
 
 -- SYNTAX {{{

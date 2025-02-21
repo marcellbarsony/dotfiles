@@ -24,13 +24,13 @@ return {
       local hooks = require "ibl.hooks"
 
       hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-        vim.api.nvim_set_hl(0, "RainbowRed",    { fg = "#7AA2F7" })
-        vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#7AA2F7" })
-        vim.api.nvim_set_hl(0, "RainbowBlue",   { fg = "#7AA2F7" })
-        vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#7AA2F7" })
-        vim.api.nvim_set_hl(0, "RainbowGreen",  { fg = "#7AA2F7" })
-        vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#7AA2F7" })
-        vim.api.nvim_set_hl(0, "RainbowCyan",   { fg = "#7AA2F7" })
+        vim.api.nvim_set_hl(0, "RainbowRed",    { fg = "#FFFFFF" })
+        vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#FFFFFF" })
+        vim.api.nvim_set_hl(0, "RainbowBlue",   { fg = "#FFFFFF" })
+        vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#FFFFFF" })
+        vim.api.nvim_set_hl(0, "RainbowGreen",  { fg = "#FFFFFF" })
+        vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#FFFFFF" })
+        vim.api.nvim_set_hl(0, "RainbowCyan",   { fg = "#FFFFFF" })
       end)
 
       vim.g.rainbow_delimiters = {
@@ -43,15 +43,15 @@ return {
       require("ibl").setup {
         enabled = true,
         debounce = 100,
-        -- indent = { char = "|" },
+        indent = { char = "▏" },
         whitespace = { highlight = { "Whitespace", "NonText" } },
 
         -- Scope
-        -- `:help ibl.config.scope`
+        -- `:h ibl.config.scope`
         scope = {
           enabled = true,
           exclude = {
-            language = { "lua" }
+            -- language = { "lua" }
           },
           show_start = false,
           show_end = false,

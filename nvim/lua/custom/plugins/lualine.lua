@@ -13,6 +13,43 @@ local function show_macro_recording()
 end
 -- }}}
 
+-- Theme {{{
+local c = dofile(os.getenv("HOME") .. "/.cache/matugen/colors.lua")
+
+local custom_theme = {
+  normal = {
+    a = { fg = c.fg, bg = c.transparent, gui = "bold" },
+    b = { fg = c.fg, bg = c.transparent },
+    c = { fg = c.fg, bg = c.transparent },
+  },
+  insert = {
+    a = { fg = c.fg, bg = c.transparent, gui = "bold" },
+    b = { fg = c.fg, bg = c.transparent },
+    c = { fg = c.fg, bg = c.transparent },
+  },
+  visual = {
+    a = { fg = c.fg, bg = c.transparent, gui = "bold" },
+    b = { fg = c.fg, bg = c.transparent },
+    c = { fg = c.fg, bg = c.transparent },
+  },
+  replace = {
+    a = { fg = c.fg, bg = c.transparent, gui = "bold" },
+    b = { fg = c.fg, bg = c.transparent },
+    c = { fg = c.fg, bg = c.transparent },
+  },
+  command = {
+    a = { fg = c.fg, bg = c.transparent, gui = "bold" },
+    b = { fg = c.fg, bg = c.transparent },
+    c = { fg = c.fg, bg = c.transparent },
+  },
+  inactive = {
+    a = { fg = c.fg, bg = c.transparent, gui = "bold" },
+    b = { fg = c.comment, bg = c.transparent },
+    c = { fg = c.fg, bg = c.transparent },
+  }
+}
+-- }}}
+
 return {
   {
     "nvim-lualine/lualine.nvim",
@@ -22,8 +59,8 @@ return {
       -- Options {{{
       options = {
         icons_enabled = true,
-        theme = "palenight",        -- auto | tokyonight | palenight
-        -- theme = custom_tokyonight,  -- auto | tokyonight | palenight
+        theme = "tokyonight",
+        theme = custom_theme,
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
         disabled_filetypes = {
@@ -84,10 +121,12 @@ return {
       },
       -- }}}
 
+      -- Misc {{{
       tabline = {},
       winbar = {},
       inactive_winbar = {},
       extensions = {}
+      -- }}}
     }
   }
 }

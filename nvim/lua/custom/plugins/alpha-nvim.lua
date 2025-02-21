@@ -5,7 +5,7 @@
 return {
   {
     "goolord/alpha-nvim",
-    cmd = "Alpha",
+    -- cmd = "Alpha",
     init = function()
       if vim.fn.argc() == 0 then
         local alpha = require("alpha")
