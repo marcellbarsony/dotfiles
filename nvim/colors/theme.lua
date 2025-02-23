@@ -11,75 +11,39 @@ function theme.setup()
 
   local groups = {
     -- Base {{{
+
     -- Normal {{{
-    Normal             = { fg = c.fg, bg = c.transparent      },  -- Normal window
-    NormalNC           = { fg = c.fg, bg = c.transparent      },  -- Non-current window
-    NormalSB           = { fg = c.fg, bg = c.bg               },  -- Sidebar
-    NormalFloat        = { fg = c.fg, bg = c.bg               },  -- Floating window
+    Normal      = { fg = c.fg, bg = c.transparent },  -- Normal window
+    NormalNC    = { fg = c.fg, bg = c.transparent },  -- Non-current window
+    NormalSB    = { fg = c.fg, bg = c.bg          },  -- Sidebar
+    NormalFloat = { fg = c.fg, bg = c.bg          },  -- Floating window
     -- }}}
 
     -- Base {{{
-    ColorColumn        = { bg = c.bg                          },  -- Columns set with 'colorcolumn'
-    Comment            = { fg = c.comment, italic = true      },  -- Comments
-    Conceal            = { fg = c.fg                          },  -- placeholder characters substituted for concealed text (see 'conceallevel')
-    Directory          = { fg = c.primary                     },  -- Directory names
-    EndOfBuffer        = { fg = c.transparent                 },  -- Filler lines (~)
-    MatchParen         = { fg = c.orange, bold = true         },  -- Matching parentheses (`:h pi_paren.txt`)
-    ModeMsg            = { fg = c.fg_dark, bold = true        },  -- 'showmode' message (e.g. -- INSERT --)
-    MoreMsg            = { fg = c.fg                          },  -- |more-prompt|
-    MsgArea            = { fg = c.fg                          },  -- Area for messages and cmdline
-    NonText            = { fg = c.fg                          },  -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-    Question           = { fg = c.fg                          },  -- |hit-enter| prompt and yes/no questions
-    QuickFixLine       = { bg = c.bg, bold = true             },  -- Current |quickfix| item in the quickfix window
-    SpecialKey         = { fg = c.bg_dark                     },  -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
-    Title              = { fg = c.fg, bold = true             },  -- titles for output from ":set all", ":autocmd" etc.
-    VertSplit          = { fg = c.fg, bg = c.bg               },  -- the column separating vertically split windows
-    Whitespace         = { fg = c.comment                     },  -- "nbsp", "space", "tab" and "trail" in 'listchars'
-    WinSeparator       = { fg = c.bg_dark, bg = c.transparent }, -- the column separating vertically split windows
-    WildMenu           = { bg = c.bg_dark                     },  -- Current match in 'wildmenu' completion
-    -- }}}
-
-    -- Cursor {{{
-    Cursor             = { fg = c.bg, bg = c.fg               },  -- Character under cursor
-    lCursor            = { fg = c.bg, bg = c.fg               },  -- Character under cursor when |language-mapping| is used (`:h guicursor`)
-    CursorIM           = { fg = c.bg, bg = c.fg               },  -- Cursor, but used in IME mode |CursorIM|
-    CursorColumn       = { bg = c.bg                          },  -- Cursor screen-column when 'cursorcolumn' is set
-    CursorLine         = { bg = c.bg                          },  -- Cursor screen-line when 'cursorline' is set
-    CursorLineNr       = { fg = c.fg, bold = true             },  -- LineNr when 'cursorline' or 'relativenumber' is set
-    -- }}}
-
-    -- Fold {{{
-    Folded             = { fg = c.primary, bg = c.transparent },  -- Closed folds
-    FoldColumn         = { bg = c.transparent, fg = c.comment },  -- 'foldcolumn'
-    -- }}}
-
-    -- Float {{{
-    FloatBorder        = { fg = c.fg, bg = c.bg               },
-    FloatTitle         = { fg = c.fg, bg = c.bg               },
-    -- }}}
-
-    -- Line number {{{
-    LineNr             = { fg = c.primary                     },
-    LineNrAbove        = { fg = c.bg_dark_2                   },
-    LineNrBelow        = { fg = c.bg_dark_2                   },
-    -- }}}
-
-    -- Search & Replace {{{
-    Search                      = { bg = c.bg_search, fg = c.fg }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
-    IncSearch                   = { bg = c.orange, fg = c.black }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
-    -- CurSearch                   =  "IncSearch",
-    Substitute                  = { bg = c.red, fg = c.black }, -- |:substitute| replacement text highlighting
-    -- }}}
-
-    -- LSP {{{
-    LspInlayHint = { fg = c.comment, bg = c.transparent },
+    ColorColumn  = { bg = c.bg                          },  -- Columns set with 'colorcolumn'
+    Conceal      = { fg = c.fg                          },  -- placeholder characters substituted for concealed text (see 'conceallevel')
+    Directory    = { fg = c.primary                     },  -- Directory names
+    EndOfBuffer  = { fg = c.transparent                 },  -- Filler lines (~)
+    MatchParen   = { fg = c.orange, bold = true         },  -- Matching parentheses (`:h pi_paren.txt`)
+    ModeMsg      = { fg = c.fg_dark, bold = true        },  -- 'showmode' message (e.g. -- INSERT --)
+    MoreMsg      = { fg = c.fg                          },  -- |more-prompt|
+    MsgArea      = { fg = c.fg                          },  -- Area for messages and cmdline
+    NonText      = { fg = c.fg                          },  -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+    Question     = { fg = c.fg                          },  -- |hit-enter| prompt and yes/no questions
+    QuickFixLine = { bg = c.bg, bold = true             },  -- Current |quickfix| item in the quickfix window
+    SpecialKey   = { fg = c.bg_dark                     },  -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
+    Title        = { fg = c.fg, bold = true             },  -- titles for output from ":set all", ":autocmd" etc.
+    VertSplit    = { fg = c.fg, bg = c.bg               },  -- the column separating vertically split windows
+    Whitespace   = { fg = c.comment                     },  -- "nbsp", "space", "tab" and "trail" in 'listchars'
+    WinSeparator = { fg = c.bg_dark, bg = c.transparent },  -- the column separating vertically split windows
+    WildMenu     = { bg = c.bg_dark                     },  -- Current match in 'wildmenu' completion
     -- }}}
 
     -- Diagnostic {{{
-    DiagnosticError            = { fg = "#db4b4b" },
-    DiagnosticHint             = { fg = "#1abc9c" },
-    DiagnosticInfo             = { fg = "#0db9d7" },
-    DiagnosticInformation      = { fg = "#0db9d7" },
+    DiagnosticError            = { fg = "#ffffff"                   },
+    DiagnosticHint             = { fg = "#1abc9c"                   },
+    DiagnosticInfo             = { fg = "#0db9d7"                   },
+    DiagnosticInformation      = { fg = "#0db9d7"                   },
     DiagnosticUnderlineError   = { sp = "#db4b4b", undercurl = true },
     DiagnosticUnderlineHint    = { sp = "#1abc9c", undercurl = true },
     DiagnosticUnderlineInfo    = { sp = "#0db9d7", undercurl = true },
@@ -92,6 +56,49 @@ function theme.setup()
     DiagnosticWarn             = { fg = "#e0af68"                   },
     DiagnosticWarning          = { fg = "#e0af68"                   },
     -- }}}
+
+    -- Cursor {{{
+    Cursor       = { fg = c.bg, bg = c.fg   },  -- Character under cursor
+    lCursor      = { fg = c.bg, bg = c.fg   },  -- Character under cursor when |language-mapping| is used (`:h guicursor`)
+    CursorIM     = { fg = c.bg, bg = c.fg   },  -- Cursor, but used in IME mode |CursorIM|
+    CursorColumn = { bg = c.bg              },  -- Cursor screen-column when 'cursorcolumn' is set
+    CursorLine   = { bg = c.bg_dark         },  -- Cursor screen-line when 'cursorline' is set
+    CursorLineNr = { fg = c.fg, bold = true },  -- LineNr when 'cursorline' or 'relativenumber' is set
+    -- }}}
+
+    -- Fold {{{
+    Folded     = { fg = c.comment, bg = c.transparent },  -- Closed folds
+    FoldColumn = { fg = c.comment, bg = c.transparent },  -- `:h foldcolumn`
+    -- }}}
+
+    -- Float {{{
+    FloatBorder = { fg = c.fg, bg = c.bg },
+    FloatTitle  = { fg = c.fg, bg = c.bg },
+    -- }}}
+
+    -- Line number {{{
+    LineNr      = { fg = c.fg, bold = true },
+    LineNrAbove = { fg = c.fg_dark         },
+    LineNrBelow = { fg = c.fg_dark         },
+    -- }}}
+
+    -- Search & Replace {{{
+    Search     = { bg = c.secondary_container, fg = c.fg },
+    IncSearch  = { bg = c.primary_container, fg = c.fg   },  -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+    Substitute = { bg = c.primary_container, fg = c.fg   },  -- `:substitute` replacement text highlighting
+    CurSearch  = { link = "IncSearch"                    },
+    -- }}}
+
+    -- LSP {{{
+    LspInlayHint = { fg = c.comment, bg = c.transparent },
+    -- }}}
+
+    -- Type {{{
+    Type = { fg = c.primary },  -- (preferred) int, long, char, etc.
+    -- [[ Structure = { fg = p.blueGray1 },  --  struct, union, enum, etc. ]]
+    -- StorageClass  = { },  -- static, register, volatile, etc.
+    -- Typedef = { fg = p.blueGray1 },  --  A typedef
+    -- }}}
     -- }}}
 
     -- Plugins {{{
@@ -101,6 +108,20 @@ function theme.setup()
     AlphaHeader      = { fg = c.on_error, bg = c.on_error },  -- !!!
     AlphaHeaderLabel = { fg = c.on_error, bg = c.on_error },  -- !!!
     AlphaShortcut    = { fg = c.on_error, bg = c.on_error },  -- !!!
+    -- }}}
+
+    -- Cmp {{{
+    -- CmpItemAbbr = { fg = p.blueGray2 },
+    -- CmpItemAbbrDeprecated = { fg = p.pink3, style = 'strikethrough' },
+    CmpItemAbbrMatch      = { fg = c.fg,      bold = true },
+    CmpItemAbbrMatchFuzzy = { fg = c.primary, bold = true },
+    -- CmpItemKind = { fg = p.blue3 },
+    -- CmpItemKindClass = { fg = p.yellow },
+    -- CmpItemKindFunction = { fg = p.blue1 },
+    -- CmpItemKindInterface = { fg = p.blue2 },
+    -- CmpItemKindMethod = { fg = p.pink3 },
+    -- CmpItemKindSnippet = { fg = p.blueGray1 },
+    CmpItemKindVariable   = { fg = c.primary },
     -- }}}
 
     -- GitSigns.nvim {{{
@@ -125,35 +146,144 @@ function theme.setup()
     -- }}}
 
     -- Trouble {{{
-    TroubleCount  = { fg = c.fg, bg = c.on_primary },
-    TroubleNormal = { fg = c.fg, bg = c.bg },
-    TroubleText   = { fg = c.fg                     },
+    TroubleCount            = { fg = c.fg, bg = c.transparent },
+    TroubleDiagnosticsCount = { link = "TroubleCount"         },
+    TroubleDirectory        = { fg = c.primary                },
+    TroubleFilename         = { fg = c.primary                },
+    TroubleIconDirectory    = { fg = c.primary                },
+    TroubleIndent           = { fg = c.fg                     },
+    TroubleIndentFoldClosed = { link = "TroubleIndent"        },
+    TroubleIndentFoldOpen   = { link = "TroubleIndent"        },
+    TroubleIndentLast       = { link = "TroubleIndent"        },
+    TroubleIndentMiddle     = { link = "TroubleIndent"        },
+    TroubleIndentTop        = { link = "TroubleIndent"        },
+    TroubleIndentWs         = { link = "TroubleIndent"        },
+    TroubleNormal           = { fg = c.fg, bg = c.bg          },
+    TroublePos              = { fg = c.fg                     },
+    TroubleText             = { fg = c.fg                     },
     -- }}}
 
     -- Which-key.nvim {{{
     WhichKey          = { fg = c.fg      },  -- Keys
     WhichKeyDesc      = { fg = c.fg      },  -- Normal
-    WhichKeyGroup     = { fg = c.primary },  -- Groups
+    WhichKeyGroup     = { fg = c.fg_dark },  -- Groups
     WhichKeyNormal    = { bg = c.bg      },  -- Background
     WhichKeySeparator = { fg = c.comment },  -- Separator
-    WhichKeyFloat     = { bg = c.bg      },  -- Float
     WhichKeyValue     = { fg = c.fg      },  -- Value
     -- }}}
 
     -- Telescope.nvim {{{
-    TelescopeNormal       = { fg = c.fg,      bg = c.bg },  -- Normal
-    TelescopeBorder       = { fg = c.primary, bg = c.bg },  -- Border
-    TelescopePromptBorder = { fg = c.primary, bg = c.bg },  -- Prompt Border
-    TelescopePromptNormal = { fg = c.fg,      bg = c.bg },  -- Prompt Normal
-    TelescopePromptTitle  = { fg = c.primary, bg = c.bg },  -- Prompt Title
-    TelescopeMatching     = { fg = c.primary            },  -- Matching
-    TelescopePreviewTitle = { fg = c.primary, bg = c.bg },  -- Preview
-    TelescopeSelection    = { bg = c.on_primary         },  -- Selection
-    TelescopePromptPrefix = { fg = c.fg                 },  -- Prompt sign
+    TelescopeNormal       = { fg = c.fg,      bg = c.bg     },  -- Normal
+    TelescopeBorder       = { fg = c.primary, bg = c.bg     },  -- Border
+    TelescopePromptBorder = { link = "TelescopeBorder"      },  -- Prompt Border
+    TelescopePromptNormal = { fg = c.fg,      bg = c.bg     },  -- Prompt Normal
+    TelescopePromptPrefix = { fg = c.fg                     },  -- Prompt Sign
+    TelescopePromptTitle  = { fg = c.primary, bg = c.bg     },  -- Prompt Title
+    TelescopePreviewTitle = { link = "TelescopePromptTitle" },  -- Preview
+    TelescopeMatching     = { fg = c.primary                },  -- Matching
+    TelescopeSelection    = { bg = c.bg_dark                },  -- Selection
     -- TelescopeResultsDiffAdd = { fg = p.teal1 },
     -- TelescopeResultsDiffChange = { fg = p.yellow },
     -- TelescopeResultsDiffDelete = { fg = p.pink3 },
     -- }}}
+    -- }}}
+
+    -- Syntax {{{
+    -- Syntax
+    -- Bold                        = { bold = true, fg = c.fg }, -- (preferred) any bold text
+    -- Debug                       = { fg = c.orange }, --    debugging statements
+    -- Delimiter                   =  "Special", --  character that needs attention
+    -- Error                       = { fg = c.error }, -- (preferred) any erroneous construct
+    -- Function                    = { fg = c.blue, style = c.styles.functions }, -- function name (also: methods for classes)
+    -- Identifier                  = { fg = c.primary }, -- (preferred) any variable name
+    -- Italic                      = { italic = true, fg = c.fg }, -- (preferred) any italic text
+    -- PreProc                     = { fg = c.cyan }, -- (preferred) generic Preprocessor
+    -- Special                     = { fg = c.blue1 }, -- (preferred) any special symbol
+    -- Todo                        = { bg = c.yellow, fg = c.bg }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+    -- Type                        = { fg = c.blue1 }, -- (preferred) int, long, char, etc.
+    -- Underlined                  = { underline = true }, -- (preferred) text that stands out, HTML links
+    -- debugBreakpoint             = { bg = Util.blend_bg(c.info, 0.1), fg = c.info }, -- used for breakpoint colors in terminal-debug
+    -- debugPC                     = { bg = c.bg_sidebar }, -- used for highlighting the current line in terminal-debug
+    -- dosIniLabel                 = "@property",
+    -- helpCommand                 = { bg = c.terminal_black, fg = c.blue },
+    -- htmlH1                      = { fg = c.magenta, bold = true },
+    -- htmlH2                      = { fg = c.blue, bold = true },
+    -- qfFileName                  = { fg = c.blue },
+    -- qfLineNr                    = { fg = c.dark5 },
+    -- }}}
+
+    -- Syntax Variables {{{
+    Boolean   = { fg = c.tertiary },
+    -- Constant  = { fg = p.text },
+    -- Character = { fg = p.pink3 },
+    -- Float     = { fg = c.bg },
+    Function  = { fg = c.primary  },
+    Number    = { fg = c.tertiary },
+    String    = { fg = c.tertiary },
+    -- }}}
+
+    -- Syntax Keywords {{{
+    Comment        = { fg = c.comment, italic = true },  -- Comments
+    -- Conditional = { fg = p.blueGray1 },  -- if, then, else, endif, switch, etc.
+    -- Exception   = { fg = p.blue3 },  -- try, catch, throw
+    Keyword        = { fg = c.primary },  -- Any other keyword
+    -- Label       = { fg = p.text },  -- case, default, etc.
+    Operator       = { fg = c.fg },  -- sizeof, +, *, =, etc.
+    -- Repeat      = { fg = p.blue3 },  -- for, do, while, etc.
+    -- Statement   = { fg = p.text },  -- (preferred) any statement
+    -- }}}
+
+    -- Treesitter {{{
+    ["@constructor"]           = { fg = c.fg      },
+    ["@function.builtin"]      = { fg = c.primary },
+    ["@keyword.function"]      = { fg = c.primary },
+    ["@keyword.return"]        = { fg = c.primary },
+    ["@punctuation.bracket"]   = { fg = c.fg      },
+    ["@punctuation.delimiter"] = { fg = c.fg      },
+    ["@variable"]              = { fg = c.fg      },
+    ["@variable.builtin"]      = { fg = c.primary },
+    -- }}}
+
+    -- Treesitter-Lua {{{
+    ["@boolean.lua"]           = { link = "Boolean"         },
+    ["@constructor.lua"]       = { fg = c.tertiary          },
+    ["@function.lua"]          = { fg = c.fg                },
+    ["@keyword.return.lua"]    = { link = "@keyword.return" },
+    ["@number.lua"]            = { link = "Number"          },
+
+    ["@lsp.type.function.lua"] = { fg = c.fg },
+    ["@lsp.type.property.lua"] = { fg = c.primary },
+    -- }}}
+
+    -- Treesitter-Python {{{
+    ["@boolean.python"]          = { link = "Boolean" },
+    ["@variable.python"]         = { fg = c.fg        },
+    ["@module.python"]           = { fg = c.fg        },
+
+    ["@function.python"]         = { link = "Function" },
+    ["@function.call.python"]    = { fg = c.fg },
+    ["@function.builtin.python"] = { link = "@function.builtin" },
+    ["@keyword.operator.python"] = { fg = c.tertiary   },
+    -- }}}
+
+    -- Treesitter-Rust {{{
+    ["@keyword.function.rust"]      = { link = "@keyword.function"      },
+    ["@operator.rust"]              = { fg = c.primary                  },
+    ["@punctuation.delimiter.rust"] = { link = "@punctuation.delimiter" },
+    ["@punctuation.bracket.rust"]   = { link = "@punctuation.bracket"   },
+    ["@punctuation.special.rust"]   = { fg = c.primary },
+    ["@type.builtin.rust"]          = { link = "Type"                   },
+    ["@variable.rust"]              = { fg = c.fg                       },
+    ["@variable.member.rust"]       = { link = "@variable.builtin" },
+
+    ["@lsp.type.builtinType.rust"]             = { link = "@type.builtin.rust" },
+    ["@lsp.type.interface.rust"]               = { fg = c.fg },
+    ["@lsp.type.struct.rust"]                  = { fg = c.fg },
+    ["@lsp.type.property.rust"]                = { link =  "@variable.member.rust" },
+    ["@lsp.typemod.function.public.rust"]      = { fg = c.primary },
+    ["@lsp.typemod.function.declaration.rust"] = { fg = c.primary },
+    ["@lsp.typemod.macro.defaultLibrary.rust"] = { fg = c.primary },
+    ["@lsp.typemod.macro.library.rust"]        = { fg = c.primary },
     -- }}}
   }
 
@@ -165,20 +295,6 @@ end
 return theme.setup()
 
 -- BASE {{{
--- -- Diagnostics
--- DiagnosticError             = { fg = c.error }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
--- DiagnosticWarn              = { fg = c.warning }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
--- DiagnosticInfo              = { fg = c.info }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
--- DiagnosticHint              = { fg = c.hint }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
--- DiagnosticUnnecessary       = { fg = c.terminal_black }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
--- -- DiagnosticVirtualTextError  = { bg = Util.blend_bg(c.error, 0.1), fg = c.error }, -- Used for "Error" diagnostic virtual text
--- -- DiagnosticVirtualTextWarn   = { bg = Util.blend_bg(c.warning, 0.1), fg = c.warning }, -- Used for "Warning" diagnostic virtual text
--- -- DiagnosticVirtualTextInfo   = { bg = Util.blend_bg(c.info, 0.1), fg = c.info }, -- Used for "Information" diagnostic virtual text
--- -- DiagnosticVirtualTextHint   = { bg = Util.blend_bg(c.hint, 0.1), fg = c.hint }, -- Used for "Hint" diagnostic virtual text
--- DiagnosticUnderlineError    = { undercurl = true, sp = c.error }, -- Used to underline "Error" diagnostics
--- DiagnosticUnderlineWarn     = { undercurl = true, sp = c.warning }, -- Used to underline "Warning" diagnostics
--- DiagnosticUnderlineInfo     = { undercurl = true, sp = c.info }, -- Used to underline "Information" diagnostics
--- DiagnosticUnderlineHint     = { undercurl = true, sp = c.hint }, -- Used to underline "Hint" diagnostics
 
 -- -- Diff
 -- -- DiffAdd                     = { bg = c.diff.add }, -- diff mode: Added line |diff.txt|
@@ -231,33 +347,6 @@ return theme.setup()
 -- StatusLine                  = { fg = c.fg_sidebar, bg = c.bg_statusline }, -- status line of current window
 -- StatusLineNC                = { fg = c.fg_gutter, bg = c.bg_statusline }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
 
--- -- Syntax
--- Bold                        = { bold = true, fg = c.fg }, -- (preferred) any bold text
--- Character                   = { fg = c.green }, --  a character constant: 'c', '\n'
--- Constant                    = { fg = c.orange }, -- (preferred) any constant
--- Debug                       = { fg = c.orange }, --    debugging statements
--- Delimiter                   =  "Special", --  character that needs attention
--- Error                       = { fg = c.error }, -- (preferred) any erroneous construct
--- -- Function                    = { fg = c.blue, style = c.styles.functions }, -- function name (also: methods for classes)
--- -- Identifier                  = { fg = c.magenta, style = c.styles.variables }, -- (preferred) any variable name
--- Italic                      = { italic = true, fg = c.fg }, -- (preferred) any italic text
--- -- Keyword                     = { fg = c.cyan, style = c.styles.keywords }, --  any other keyword
--- Operator                    = { fg = c.blue5 }, -- "sizeof", "+", "*", etc.
--- PreProc                     = { fg = c.cyan }, -- (preferred) generic Preprocessor
--- Special                     = { fg = c.blue1 }, -- (preferred) any special symbol
--- Statement                   = { fg = c.magenta }, -- (preferred) any statement
--- String                      = { fg = c.green }, --   a string constant: "this is a string"
--- Todo                        = { bg = c.yellow, fg = c.bg }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
--- Type                        = { fg = c.blue1 }, -- (preferred) int, long, char, etc.
--- Underlined                  = { underline = true }, -- (preferred) text that stands out, HTML links
--- -- debugBreakpoint             = { bg = Util.blend_bg(c.info, 0.1), fg = c.info }, -- used for breakpoint colors in terminal-debug
--- debugPC                     = { bg = c.bg_sidebar }, -- used for highlighting the current line in terminal-debug
--- dosIniLabel                 = "@property",
--- helpCommand                 = { bg = c.terminal_black, fg = c.blue },
--- htmlH1                      = { fg = c.magenta, bold = true },
--- htmlH2                      = { fg = c.blue, bold = true },
--- qfFileName                  = { fg = c.blue },
--- qfLineNr                    = { fg = c.dark5 },
 --
 -- -- TabLine
 -- TabLine                     = { bg = c.bg_statusline, fg = c.fg_gutter }, -- tab pages line, not active tab page label
@@ -373,23 +462,9 @@ return theme.setup()
 -- -- TerminalNormal = { link = 'SagaNormal' },
 -- -- }}}
 
--- -- nvim-cmp {{{
--- -- CmpItemAbbr = { fg = p.blueGray2 },
--- -- CmpItemAbbrDeprecated = { fg = p.pink3, style = 'strikethrough' },
--- -- CmpItemAbbrMatch = { fg = p.text, style = 'bold' },
--- -- CmpItemAbbrMatchFuzzy = { fg = p.teal1, style = 'bold' },
--- -- CmpItemKind = { fg = p.blue3 },
--- -- CmpItemKindClass = { fg = p.yellow },
--- -- CmpItemKindFunction = { fg = p.blue1 },
--- -- CmpItemKindInterface = { fg = p.blue2 },
--- -- CmpItemKindMethod = { fg = p.pink3 },
--- -- CmpItemKindSnippet = { fg = p.blueGray1 },
--- -- CmpItemKindVariable = { fg = p.teal1 },
--- -- }}}
 
 
 -- -- tree-sitter {{{
--- -- ['@variable'] = { fg = p.text },
 -- -- -- TSAttribute = {},
 -- -- -- TSKeywordReturn = { fg = p.teal2 },
 -- -- ['@boolean'] = { link = 'Boolean' },
@@ -412,10 +487,6 @@ return theme.setup()
 -- -- ['@function'] = { link = 'Function' },
 -- -- ['@function.call'] = { fg = p.blueGray1 },
 -- -- TSInclude = { fg = p.blue2 },
--- -- ['@keyword'] = { link = 'Keyword' },
--- -- ['@keyword.return'] = { fg = p.teal2 },
--- -- ['@keyword.function'] = { fg = p.blue2 },
--- -- ['@keyword.operator'] = { fg = p.teal1 },
 -- -- ['@label'] = { fg = p.blue3 },
 -- -- -- TSLiteral = {},
 -- -- ['@method'] = { fg = p.teal1 },
@@ -450,23 +521,6 @@ return theme.setup()
 -- }}}
 
 -- SYNTAX {{{
--- Comment = { fg = p.blueGray1 },
-
--- Variables
--- Constant  = { fg = p.text },
--- String    = { fg = p.teal1 },
--- Character = { fg = p.pink3 },
--- Number    = { fg = p.teal1 },
--- Boolean   = { fg = p.teal1 },
--- Float     = { fg = p.teal1 },
-
--- Statement   = { fg = p.text },      -- (preferred) any statement
--- Conditional = { fg = p.blueGray1 }, -- if, then, else, endif, switch, etc.
--- Repeat      = { fg = p.blue3 },     -- for, do, while, etc.
--- Label       = { fg = p.text },      -- case, default, etc.
--- Operator    = { fg = p.blue2 },     -- sizeof, +, *, etc.
--- Keyword     = { fg = p.blue3 },     -- any other keyword
--- Exception   = { fg = p.blue3 },     -- try, catch, throw
 
 -- PreProc = { fg = p.text }, -- (preferred) generic Preprocessor
 -- Include = { fg = p.blueGray1 }, --  preprocessor #include
@@ -474,10 +528,6 @@ return theme.setup()
 -- -- Macro         = { }, --    same as Define
 -- -- PreCondit     = { }, --  preprocessor #if, #else, #endif, etc.
 
--- Type = { fg = p.blueGray1 }, -- (preferred) int, long, char, etc.
--- --[[ Structure = { fg = p.blueGray1 }, --  struct, union, enum, etc. ]]
--- -- StorageClass  = { }, -- static, register, volatile, etc.
--- -- Typedef = { fg = p.blueGray1 }, --  A typedef
 
 -- Special = { fg = p.blueGray2 }, -- (preferred) any special symbol
 -- -- SpecialChar   = { }, --  special character in a constant

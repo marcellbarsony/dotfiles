@@ -18,34 +18,34 @@ local c = dofile(os.getenv("HOME") .. "/.cache/matugen/colors.lua")
 
 local custom_theme = {
   normal = {
-    a = { fg = c.fg, bg = c.transparent, gui = "bold" },
-    b = { fg = c.fg, bg = c.transparent },
-    c = { fg = c.fg, bg = c.transparent },
+    a = { fg = c.fg, bg = c.bg, gui = "bold" },
+    b = { fg = c.fg, bg = c.bg },
+    c = { fg = c.fg, bg = c.bg },
   },
   insert = {
-    a = { fg = c.fg, bg = c.transparent, gui = "bold" },
-    b = { fg = c.fg, bg = c.transparent },
-    c = { fg = c.fg, bg = c.transparent },
+    a = { fg = c.fg, bg = c.bg, gui = "bold" },
+    b = { fg = c.fg, bg = c.bg },
+    c = { fg = c.fg, bg = c.bg },
   },
   visual = {
-    a = { fg = c.fg, bg = c.transparent, gui = "bold" },
-    b = { fg = c.fg, bg = c.transparent },
-    c = { fg = c.fg, bg = c.transparent },
+    a = { fg = c.fg, bg = c.bg, gui = "bold" },
+    b = { fg = c.fg, bg = c.bg },
+    c = { fg = c.fg, bg = c.bg },
   },
   replace = {
-    a = { fg = c.fg, bg = c.transparent, gui = "bold" },
-    b = { fg = c.fg, bg = c.transparent },
-    c = { fg = c.fg, bg = c.transparent },
+    a = { fg = c.fg, bg = c.bg, gui = "bold" },
+    b = { fg = c.fg, bg = c.bg },
+    c = { fg = c.fg, bg = c.bg },
   },
   command = {
-    a = { fg = c.fg, bg = c.transparent, gui = "bold" },
-    b = { fg = c.fg, bg = c.transparent },
-    c = { fg = c.fg, bg = c.transparent },
+    a = { fg = c.fg, bg = c.bg, gui = "bold" },
+    b = { fg = c.fg, bg = c.bg },
+    c = { fg = c.fg, bg = c.bg },
   },
   inactive = {
-    a = { fg = c.fg, bg = c.transparent, gui = "bold" },
-    b = { fg = c.comment, bg = c.transparent },
-    c = { fg = c.fg, bg = c.transparent },
+    a = { fg = c.fg, bg = c.bg, gui = "bold" },
+    b = { fg = c.comment, bg = c.bg },
+    c = { fg = c.fg, bg = c.bg },
   }
 }
 -- }}}
@@ -59,8 +59,7 @@ return {
       -- Options {{{
       options = {
         icons_enabled = true,
-        theme = "tokyonight",
-        theme = custom_theme,
+        theme = custom_theme, -- tokyonight
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
         disabled_filetypes = {

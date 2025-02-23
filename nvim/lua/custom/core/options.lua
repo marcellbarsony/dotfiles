@@ -108,8 +108,8 @@ local options = {
   foldlevelstart = 0,
   foldmethod = "marker",
   foldtext =
-    [[ substitute(getline(v:foldstart), '{{{', '', 'g').'...' ]], -- }}}
     -- substitute(string, pattern, replacement, flags)
+    [[ substitute(getline(v:foldstart), "{{{", "", "g")."..." ]], -- }}}
   -- }}}
 
   -- 15. Diff mode {{{

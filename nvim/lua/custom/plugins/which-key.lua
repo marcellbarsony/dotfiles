@@ -86,7 +86,6 @@ return {
       -- Window {{{
       ---@type wk.Win.opts
       win = {
-        -- don't allow the popup to overlap with the cursor
         no_overlap = true,
         -- width = 1,
         height = { min = 5, max = 50 },
