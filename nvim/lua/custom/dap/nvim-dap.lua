@@ -54,14 +54,14 @@ return {
     },
     config = function()
       -- Signs & Highlights & Colors {{{
-      vim.cmd("highlight DapBreakpointNr guifg=#FFFFFF")
-      vim.cmd("highlight DapBreakpointStop guibg=#808080")
+      vim.cmd("highlight DapBreakpointNr guifg=#DDDDDD")
+      vim.cmd("highlight DapBreakpointStop guibg=#222222")
       vim.cmd("highlight DapBreakpointReject guifg=#FF4400")
 
-      vim.fn.sign_define("DapBreakpoint",          { text = "B", texthl = "", linehl = "",                  numhl = "DapBreakpointNr" })
-      vim.fn.sign_define("DapBreakpointCondition", { text = "C", texthl = "", linehl = "",                  numhl = "DapBreakpointNr" })
-      vim.fn.sign_define("DapBreakpointRejected",  { text = "R", texthl = "", linehl = "",                  numhl = "DapBreakpointReject" })
-      vim.fn.sign_define("DapLogPoint",            { text = "L", texthl = "", linehl = "",                  numhl = "DapBreakpointNr" })
+      vim.fn.sign_define("DapBreakpoint",          { text = "B", texthl = "", linehl = "", numhl = "DapBreakpointNr" })
+      vim.fn.sign_define("DapBreakpointCondition", { text = "C", texthl = "", linehl = "", numhl = "DapBreakpointNr" })
+      vim.fn.sign_define("DapBreakpointRejected",  { text = "R", texthl = "", linehl = "", numhl = "DapBreakpointReject" })
+      vim.fn.sign_define("DapLogPoint",            { text = "L", texthl = "", linehl = "", numhl = "DapBreakpointNr" })
       vim.fn.sign_define("DapStopped",             { text = "→", texthl = "", linehl = "DapBreakpointStop", numhl = "" })
       -- }}}
 

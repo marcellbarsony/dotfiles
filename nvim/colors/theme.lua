@@ -22,23 +22,24 @@ function theme.setup()
     -- }}}
 
     -- Base {{{
-    ColorColumn  = { bg = c.bg                          },  -- Columns set with 'colorcolumn'
-    Conceal      = { fg = c.fg                          },  -- placeholder characters substituted for concealed text (see 'conceallevel')
-    Directory    = { fg = c.primary                     },  -- Directory names
-    EndOfBuffer  = { fg = c.transparent                 },  -- Filler lines (~)
-    MatchParen   = { fg = c.orange, bold = true         },  -- Matching parentheses (`:h pi_paren.txt`)
-    ModeMsg      = { fg = c.fg_dark, bold = true        },  -- 'showmode' message (e.g. -- INSERT --)
-    MoreMsg      = { fg = c.fg                          },  -- |more-prompt|
-    MsgArea      = { fg = c.fg                          },  -- Area for messages and cmdline
-    NonText      = { fg = c.fg                          },  -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-    Question     = { fg = c.fg                          },  -- |hit-enter| prompt and yes/no questions
-    QuickFixLine = { bg = c.bg, bold = true             },  -- Current |quickfix| item in the quickfix window
-    SpecialKey   = { fg = c.bg_dark                     },  -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
-    Title        = { fg = c.fg, bold = true             },  -- titles for output from ":set all", ":autocmd" etc.
-    VertSplit    = { fg = c.fg, bg = c.bg               },  -- the column separating vertically split windows
-    Whitespace   = { fg = c.comment                     },  -- "nbsp", "space", "tab" and "trail" in 'listchars'
-    WinSeparator = { fg = c.bg_dark, bg = c.transparent },  -- the column separating vertically split windows
-    WildMenu     = { bg = c.bg_dark                     },  -- Current match in 'wildmenu' completion
+    ColorColumn  = { bg = c.bg                           },  -- Columns set with 'colorcolumn'
+    Conceal      = { fg = c.fg                           },  -- placeholder characters substituted for concealed text (see 'conceallevel')
+    Directory    = { fg = c.primary                      },  -- Directory names
+    EndOfBuffer  = { fg = c.transparent                  },  -- Filler lines (~)
+    File         = { fg = c.primary                      },  -- File (custom)
+    MatchParen   = { fg = c.orange, bold = true          },  -- Matching parentheses (`:h pi_paren.txt`)
+    ModeMsg      = { fg = c.fg_dark, bold = true         },  -- 'showmode' message (e.g. -- INSERT --)
+    MoreMsg      = { fg = c.fg                           },  -- |more-prompt|
+    MsgArea      = { fg = c.fg                           },  -- Area for messages and cmdline
+    NonText      = { fg = c.fg                           },  -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+    Question     = { fg = c.fg                           },  -- |hit-enter| prompt and yes/no questions
+    QuickFixLine = { bg = c.bg, bold = true              },  -- Current |quickfix| item in the quickfix window
+    SpecialKey   = { fg = c.bg_dark                      },  -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
+    Title        = { fg = c.inverse_primary, bold = true },  -- titles for output from ":set all", ":autocmd" etc.
+    VertSplit    = { fg = c.fg, bg = c.bg                },  -- the column separating vertically split windows
+    Whitespace   = { fg = c.comment                      },  -- "nbsp", "space", "tab" and "trail" in 'listchars'
+    WinSeparator = { fg = c.bg_dark, bg = c.transparent  },  -- the column separating vertically split windows
+    WildMenu     = { bg = c.bg_dark                      },  -- Current match in 'wildmenu' completion
 
     Define        = { fg = c.primary },  --   preprocessor #define
     -- Include = { fg = p.blueGray1 }, --  preprocessor #include
@@ -59,7 +60,7 @@ function theme.setup()
     DiagnosticSignInfo         = { link = "DiagnosticInfo"          },
     DiagnosticSignHint         = { link = "DiagnosticHint"          },
     DiagnosticUnderlineError   = { link = "DiagnosticError", undercurl = false },
-    DiagnosticUnderlineWarn    = { link = "DiagnosticWarn", undercurl = false },
+    DiagnosticUnderlineWarn    = { link = "DiagnosticWarn", undercurl = true },
     DiagnosticUnderlineInfo    = { link = "DiagnosticInfo", undercurl = false },
     DiagnosticUnderlineHint    = { link = "DiagnosticHint", undercurl = false },
     -- DiagnosticUnnecessary      = { fg = "#414868"                   },
@@ -179,14 +180,14 @@ function theme.setup()
 
     -- Plugins {{{
     -- Alpha {{{
-    -- AlphaButtons     = { fg = c.on_error, bg = c.on_error },  -- !!!
-    -- AlphaFooter      = { fg = c.on_error, bg = c.on_error },  -- !!!
-    -- AlphaHeader      = { fg = c.on_error, bg = c.on_error },  -- !!!
-    -- AlphaHeaderLabel = { fg = c.on_error, bg = c.on_error },  -- !!!
-    -- AlphaShortcut    = { fg = c.on_error, bg = c.on_error },  -- !!!
+    -- AlphaButtons     = { fg = c.on_error, bg = c.on_error },
+    -- AlphaFooter      = { fg = c.on_error, bg = c.on_error },
+    -- AlphaHeader      = { fg = c.on_error, bg = c.on_error },
+    -- AlphaHeaderLabel = { fg = c.on_error, bg = c.on_error },
+    -- AlphaShortcut    = { fg = c.on_error, bg = c.on_error },
     -- }}}
 
-    -- Cmp {{{
+    -- CMP {{{
     -- CmpItemAbbr = { fg = p.blueGray2 },
     -- CmpItemAbbrDeprecated = { fg = p.pink3, style = 'strikethrough' },
     CmpItemAbbrMatch      = { fg = c.fg,      bold = true },
@@ -200,17 +201,30 @@ function theme.setup()
     CmpItemKindVariable   = { fg = c.primary },
     -- }}}
 
-    -- GitSigns.nvim {{{
+    -- DAP {{{
+    DapBreakpointNr     = { fg = c.fg       },
+    DapBreakpointStop   = { fg = c.on_error       },
+    DapBreakpointReject = { fg = c.on_error },
+      -- vim.fn.sign_define("DapBreakpoint",          { text = "B", texthl = "", linehl = "",                  numhl = "DapBreakpointNr" })
+      -- vim.fn.sign_define("DapBreakpointCondition", { text = "C", texthl = "", linehl = "",                  numhl = "DapBreakpointNr" })
+      -- vim.fn.sign_define("DapBreakpointRejected",  { text = "R", texthl = "", linehl = "",                  numhl = "DapBreakpointReject" })
+      -- vim.fn.sign_define("DapLogPoint",            { text = "L", texthl = "", linehl = "",                  numhl = "DapBreakpointNr" })
+-- }}}
+
+    -- GitSigns {{{
     GitSignsAdd              = { fg = "#449dab" },
     GitSignsChange           = { fg = "#6183bb" },
     GitSignsDelete           = { fg = "#914c54" },
     GitSignsCurrentLineBlame = { fg = c.comment },
     -- }}}
 
-    -- Hex.nvim {{{
+    -- Hex {{{
+    xxdAddress = { fg = c.primary },
+    xxdAscii   = { fg = c.tertiary },
+    xxdSep     = { fg = c.tertiary },
     -- }}}
 
-    -- Indent-blankline.nvim {{{
+    -- Indent-blankline {{{
     IndentBlanklineChar               = { fg = c.primary },
     IndentBlanklineContextChar        = { fg = c.primary },
     IndentBlanklineContextStart       = { fg = c.primary },
@@ -218,15 +232,36 @@ function theme.setup()
     -- IndentBlanklineSpaceCharBlankline = { link = "Whitespace" },
     -- }}}
 
+    -- Lazy {{{
+    LazyBold          = { bold = true },
+    LazyButton        = { fg = c.fg, bg = c.bg_dark },
+    LazyButtonActive  = { fg = c.fg, bg = c.inverse_primary },
+    LazyComment       = { link = "Comment" },
+    LazyItalic        = { italic = true },
+    LazyUrl           = { link = "String"  },
+    LazyH1           = { fg = c.fg, bg = c.inverse_primary },
+    LazyH2           = { fg = c.fg, bg = c.transparent },
+    LazyProgressDone  = { fg = c.primary   },
+    LazyProgressTodo  = { fg = c.fg        },
+    LazyReasonSource  = { fg = c.primary   },
+    -- }}}
+
     -- Mason {{{
+    -- }}}
+
+    -- Oil {{{
+    OilDir        = { link = "Directory"     },
+    OilDirHidden  = { fg = c.inverse_primary },
+    OilFile       = { link = "File"          },
+    OilFileHidden = { fg = c.inverse_primary },
     -- }}}
 
     -- Trouble {{{
     TroubleCount            = { fg = c.fg, bg = c.transparent },
     TroubleDiagnosticsCount = { link = "TroubleCount"         },
-    TroubleDirectory        = { fg = c.primary                },
-    TroubleFilename         = { fg = c.primary                },
-    TroubleIconDirectory    = { fg = c.primary                },
+    TroubleDirectory        = { link = "Directory"            },
+    TroubleFilename         = { link = "File"                 },
+    TroubleIconDirectory    = { link = "Directory"            },
     TroubleIndent           = { fg = c.fg                     },
     TroubleIndentFoldClosed = { link = "TroubleIndent"        },
     TroubleIndentFoldOpen   = { link = "TroubleIndent"        },
@@ -239,7 +274,7 @@ function theme.setup()
     TroubleText             = { fg = c.fg                     },
     -- }}}
 
-    -- Which-key.nvim {{{
+    -- Which-key {{{
     WhichKey          = { fg = c.fg      },  -- Keys
     WhichKeyDesc      = { fg = c.fg      },  -- Normal
     WhichKeyGroup     = { fg = c.fg_dark },  -- Groups
@@ -248,7 +283,7 @@ function theme.setup()
     WhichKeyValue     = { fg = c.fg      },  -- Value
     -- }}}
 
-    -- Telescope.nvim {{{
+    -- Telescope {{{
     TelescopeNormal       = { fg = c.fg,      bg = c.bg     },  -- Normal
     TelescopeBorder       = { fg = c.primary, bg = c.bg     },  -- Border
     TelescopePromptBorder = { link = "TelescopeBorder"      },  -- Prompt Border
@@ -265,84 +300,127 @@ function theme.setup()
     -- }}}
 
     -- Syntax {{{
-    -- Syntax
-    -- Bold                        = { bold = true, fg = c.fg }, -- (preferred) any bold text
-    -- Debug                       = { fg = c.orange }, --    debugging statements
-    -- Delimiter                   =  "Special", --  character that needs attention
-    -- Identifier                  = { fg = c.primary }, -- (preferred) any variable name
-    -- Italic                      = { italic = true, fg = c.fg }, -- (preferred) any italic text
-    -- PreProc                     = { fg = c.cyan }, -- (preferred) generic Preprocessor
-    -- Special                     = { fg = c.blue1 }, -- (preferred) any special symbol
-    -- Todo                        = { bg = c.yellow, fg = c.bg }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
-    -- Underlined                  = { underline = true }, -- (preferred) text that stands out, HTML links
-    -- debugBreakpoint             = { bg = Util.blend_bg(c.info, 0.1), fg = c.info }, -- used for breakpoint colors in terminal-debug
-    -- debugPC                     = { bg = c.bg_sidebar }, -- used for highlighting the current line in terminal-debug
+    Bold                        = { bold = true, fg = c.fg }, -- (preferred) any bold text
+    Debug                       = { fg = c.on_error }, --    debugging statements
+    debugBreakpoint             = { bg = c.on_error, fg = c.on_error }, -- used for breakpoint colors in terminal-debug
+    debugPC                     = { bg = c.primary }, -- used for highlighting the current line in terminal-debug
     -- dosIniLabel                 = "@property",
     -- helpCommand                 = { bg = c.terminal_black, fg = c.blue },
-    -- htmlH1                      = { fg = c.magenta, bold = true },
-    -- htmlH2                      = { fg = c.blue, bold = true },
+    Italic                      = { italic = true, fg = c.fg }, -- (preferred) any italic text
     -- qfFileName                  = { fg = c.blue },
     -- qfLineNr                    = { fg = c.dark5 },
+    -- Special                     = { fg = c.blue1 }, -- (preferred) any special symbol
+    Underlined                  = { underline = true }, -- (preferred) text that stands out, HTML links
 
     -- Syntax Variables {{{
-    Boolean   = { fg = c.tertiary },
-    Constant  = { fg = c.fg       },
-    Character = { fg = c.tertiary },
-    Float     = { fg = c.tertiary },
-    Function  = { fg = c.primary  },
-    Number    = { fg = c.tertiary },
-    String    = { fg = c.tertiary },
-    Variable  = { fg = c.fg       },
+    Boolean      = { fg = c.tertiary },
+    Constructor  = { fg = c.tertiary },
+    Constant     = { fg = c.fg       },
+    Character    = { fg = c.tertiary },
+    Float        = { fg = c.tertiary },
+    Function     = { fg = c.primary  },
+    Number       = { fg = c.tertiary },
+    Property     = { fg = c.primary  },
+    String       = { fg = c.tertiary },
+    Variable     = { fg = c.fg       },
     -- }}}
 
     -- Syntax Keywords {{{
     Comment        = { fg = c.comment, italic = true },  -- Comments
     Conditional    = { fg = c.inverse_primary        },  -- if, else, endif, then, switch
+    Delimiter      = { fg = c.fg                     },
     Exception      = { fg = c.inverse_primary        },  -- try, catch, throw
+    -- Identifier    = { fg = c.primary                },  -- (preferred) any variable name
     Keyword        = { fg = c.inverse_primary        },  -- Any other keyword
-    -- Label       = { fg = p.text                     },  -- case, default
+    Label         = { fg = c.primary                 },  -- case, default
+    Module         = { fg = c.primary                },  -- Modules
     Operator       = { fg = c.primary                },  -- sizeof, +, *, =, .
     Punctuation    =  { fg = c.fg                    },  -- , / ; / ::
-    -- Repeat      = { fg = p.blue3                    },  -- for, do, while, etc.
-    -- Statement   = { fg = p.text                     },  -- (preferred) any statement
+    -- Repeat        = { fg = p.blue3                  },  -- for, do, while, etc.
+    -- Statement     = { fg = p.text                   },  -- (preferred) any statement
+    -- Todo          = { bg = c.yellow, fg = c.bg      },  -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
     -- }}}
     -- }}}
 
     -- Treesitter {{{
-    ["@constructor"]           = { fg = c.fg            },
-    ["@function.builtin"]      = { link = "Function"    },
-    ["@keyword.function"]      = { link = "Keyword"     },
-    ["@keyword.return"]        = { link = "Keyword"     },
-    ["@punctuation"]           = { link = "Punctuation" },
-    ["@punctuation.bracket"]   = { link = "Punctuation" },
-    ["@punctuation.delimiter"] = { link = "Punctuation" },
-    ["@variable"]              = { fg = c.fg            },
-    ["@variable.builtin"]      = { fg = c.primary       },
+    ["@boolean"]                    = { link = "Boolean"     },
+    ["@character"]                  = { link = "Character"   },
+    ["@character.printf"]           = { link = "Character"   },
+    ["@character.special"]          = { link = "Character"   },
+    ["@constructor"]                = { link = "Constructor" },
+    ["@constant"]                   = { link = "Constant"    },
+    ["@constant.builtin"]           = { link = "Constant"    },
+    ["@constant.macro"]             = { link = "Constant"    },
+    ["@diff.delta"]                 = { link = "DiffChange"  },
+    ["@diff.minus"]                 = { link = "DiffDelete"  },
+    ["@diff.plus"]                  = { link = "DiffAdd"     },
+    ["@function"]                   = { link = "Function"    },
+    ["@function.builtin"]           = { link = "Function"    },
+    ["@function.call"]              = { link = "Function"    },
+    ["@function.macro"]             = { link = "Function"    },
+    ["@function.meghod"]            = { link = "Function"    },
+    ["@function.method.call"]       = { link = "Function"    },
+    ["@keyword"]                    = { link = "Keyword"     },
+    ["@keyword.conditional"]        = { link = "Keyword"     },
+    ["@keyword.debug"]              = { link = "Keyword"     },
+    ["@keyword.exception"]          = { link = "Keyword"     },
+    ["@keyword.import"]             = { link = "Keyword"     },
+    ["@keyword.operator"]           = { link = "Keyword"     },
+    ["@keyword.function"]           = { link = "Keyword"     },
+    ["@keyword.return"]             = { link = "Keyword"     },
+    ["@label"]                      = { link = "Label"       },
+    ["@label.vimdoc"]               = { link = "Label"       },
+    ["@markup.heading.1.vimdoc"]    = { link = "Title"       },
+    ["@markup.heading.2.vimdoc"]    = { link = "Title"       },
+    ["@module.builtin"]             = { link = "Module"      },
+    ["@number"]                     = { link = "Number"      },
+    ["@number.float"]               = { link = "Number"      },
+    ["@operator"]                   = { link = "Operator"    },
+    ["@punctuation"]                = { link = "Punctuation" },
+    ["@punctuation.bracket"]        = { link = "Punctuation" },
+    ["@punctuation.delimiter"]      = { link = "Delimiter"   },
+    ["@punctuation.special"]        = { link = "Bracket"     },
+    ["@property.vim"]               = { link = "Property"    },
+    ["@string"]                     = { link = "String"      },
+    ["@string.documentation"]       = { link = "String"      },
+    ["@type"]                       = { link = "Type"        },
+    ["@type.builtin"]               = { link = "Type"        },
+    ["@type.definition"]            = { link = "Type"        },
+    ["@type.quilifier"]             = { link = "Type"        },
+    ["@variable"]                   = { link = "Variable"    },
+    ["@variable.builtin"]           = { link = "Variable"    },
+    ["@variable.member"]            = { link = "Variable"    },
+    ["@variable.parameter"]         = { link = "Variable"    },
+    ["@variable.parameter.builtin"] = { link = "Variable"    },
 
     -- Treesitter-Lua {{{
-    ["@boolean.lua"]           = { link = "Boolean"  },
-    ["@constructor.lua"]       = { fg = c.tertiary   },
-    ["@function.lua"]          = { link = "Function" },
-    ["@keyword.return.lua"]    = { link = "Keyword"  },
-    ["@number.lua"]            = { link = "Number"   },
+    ["@boolean.lua"]           = { link = "Boolean"     },
+    ["@constructor.lua"]       = { link = "Constructor" },
+    ["@function.lua"]          = { link = "Function"    },
+    ["@keyword.return.lua"]    = { link = "Keyword"     },
+    ["@number.lua"]            = { link = "Number"      },
+    ["@operator.lua"]          = { link = "Operator"    },
+    ["@property.lua"]          = { link = "Property"    },
 
-    ["@lsp.type.function.lua"] = { fg = c.fg },
-    ["@lsp.type.property.lua"] = { fg = c.primary },
+    -- Lua - LSP
+    ["@lsp.type.function.lua"] = { link = "Function" },
+    ["@lsp.type.property.lua"] = { link = "Property" },
     -- }}}
 
     -- Treesitter-Python {{{
-
     ["@boolean.python"]             = { link = "Boolean"     },
     ["@constant.builtin.python"]    = { link = "Constant"    },
     ["@function.python"]            = { link = "Function"    },
-    ["@function.call.python"]       = { fg = c.fg            },
+    ["@function.call.python"]       = { link = "Function"    },
     ["@function.builtin.python"]    = { link = "Function"    },
     ["@keyword.conditional.python"] = { link = "Conditional" },
     ["@keyword.exception.python"]   = { link = "Exception"   },
-    ["@keyword.operator.python"]    = { link = "Operator"    },
-    ["@module.python"]              = { fg = c.fg            },
+    ["@keyword.operator.python"]    = { link = "Keyword"     },
+    ["@keyword.repeat.python"]      = { link = "Keyword"     },
+    ["@module.python"]              = { link = "Module"      },
     ["@type.python"]                = { link = "Type"        },
     ["@type.builtin.python"]        = { link = "Type"        },
+    ["@string.escape.python"]       = { link = "Operator"    },
     ["@variable.parameter.python"]  = { link = "Variable"    },
     ["@variable.python"]            = { link = "Variable"    },
     -- }}}
@@ -354,11 +432,12 @@ function theme.setup()
     ["@keyword.function.rust"]      = { link = "Keyword"     },
     ["@keyword.import.rust"]        = { link = "Keyword"     },
     ["@keyword.modifier.rust"]      = { link = "Keyword"     },
+    ["@keyword.repeat.rust"]        = { link = "Keyword"     },
     ["@keyword.rust"]               = { link = "Keyword"     },
-    ["@module.rust"]                = { link = "Directory"   },
+    ["@module.rust"]                = { link = "Module"      },
     ["@number.rust"]                = { link = "Number"      },
     ["@operator.rust"]              = { link = "Operator"    },
-    ["@punctuation.delimiter.rust"] = { link = "Punctuation" },
+    ["@punctuation.delimiter.rust"] = { link = "Delimiter"   },
     ["@punctuation.bracket.rust"]   = { link = "Punctuation" },
     ["@punctuation.special.rust"]   = { link = "Punctuation" },
     ["@string.rust"]                = { link = "String"      },
@@ -381,10 +460,12 @@ function theme.setup()
     ["@lsp.type.enumMember.rust"]               = { link = "Type"     },
     ["@lsp.type.parameter.rust"]                = { link = "Variable" },
     ["@lsp.type.struct.rust"]                   = { link = "Type"     },
+    ["@lsp.type.selfKeyword.rust"]              = { link = "Keyword"  },
     ["@lsp.type.property.rust"]                 = { link = "Variable" },
     ["@lsp.type.variable.rust"]                 = { link = "Variable" },
     ["@lsp.typemod.function.public.rust"]       = { link = "Function" },
     ["@lsp.typemod.function.declaration.rust"]  = { link = "Function" },
+    ["@lsp.typemod.keyword.controlFlow.rust"]   = { link = "Keyword"  },
     ["@lsp.typemod.macro.defaultLibrary.rust"]  = { link = "Macro"    },
     ["@lsp.typemod.macro.library.rust"]         = { link = "Macro"    },
     ["@lsp.typemod.struct.defaultLibrary.rust"] = { link = "Type"     },
