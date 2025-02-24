@@ -39,7 +39,6 @@ border_style  = { fg = "darkgrey" }
 
 # Syntax highlighting
 syntect_theme = "/home/marci/.config/yazi/tmtheme/catppuccin-mocha.xml"
-# syntect_theme = "/home/marci/.config/yazi/tmtheme/tokyonight.xml"
 # }}}
 
 # Status {{{

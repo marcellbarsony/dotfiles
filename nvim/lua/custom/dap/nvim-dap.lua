@@ -20,41 +20,42 @@ return {
       { "<F4>", function() require"dap".step_out()  end, mode = "n", desc = "Step out"  },
       { "<F5>", function() require"dap".step_back() end, mode = "n", desc = "Step back" },
       -- }}}
+
       -- Functions {{{
       { "<leader>db",
-        function() require"dap".toggle_breakpoint() end,
+        function() require("dap").toggle_breakpoint() end,
         mode = "n", desc = "Breakpoint"
       },
       { "<leader>dB",
-        function() require"dap".set_breakpoint(vim.fn.input('Breakpoint condition: ')) end,
+        function() require("dap").set_breakpoint(vim.fn.input('Breakpoint condition: ')) end,
         mode = "n", desc = "Breakpoint [Condition]"
       },
       { "<leader>dl",
-        function() require"dap".set.breakpoint(nil, nil, vim.fn.input('Log point message: ')) end,
+        function() require("dap").set.breakpoint(nil, nil, vim.fn.input('Log point message: ')) end,
         mode = "n", desc = "Log point"
       },
       { "<leader>dr",
-        function() require"dap".restart() end,
+        function() require("dap").restart() end,
         mode = "n", desc = "Restart"
       },
       { "<leader>dR",
-        function() require"dap".repl.open() end,
+        function() require("dap").repl.open() end,
         mode = "n", desc = "REPL"
       },
       { "<leader>dt",
-        function() require"dap".terminate() end,
+        function() require("dap").terminate() end,
         mode = "n", desc = "Terminate"
       },
       { "<leader>dq",
-        function() require"dap".disconnect({ terminateDebuggee = false }) end,
+        function() require("dap").disconnect({ terminateDebuggee = false }) end,
         mode = "n", desc = "Quit"
       }
       -- }}}
     },
     config = function()
-      -- Signs & Colors
+      -- Signs & Highlights & Colors {{{
       vim.cmd("highlight DapBreakpointNr guifg=#FFFFFF")
-      vim.cmd("highlight DapBreakpointStop guibg=#222222")
+      vim.cmd("highlight DapBreakpointStop guibg=#808080")
       vim.cmd("highlight DapBreakpointReject guifg=#FF4400")
 
       vim.fn.sign_define("DapBreakpoint",          { text = "B", texthl = "", linehl = "",                  numhl = "DapBreakpointNr" })
@@ -62,6 +63,7 @@ return {
       vim.fn.sign_define("DapBreakpointRejected",  { text = "R", texthl = "", linehl = "",                  numhl = "DapBreakpointReject" })
       vim.fn.sign_define("DapLogPoint",            { text = "L", texthl = "", linehl = "",                  numhl = "DapBreakpointNr" })
       vim.fn.sign_define("DapStopped",             { text = "→", texthl = "", linehl = "DapBreakpointStop", numhl = "" })
+      -- }}}
 
       -- Adapter
       -- `:h dap-adapter`
@@ -73,7 +75,7 @@ return {
       -- `:h dap-configuration`
 
       -- Terminal
-      -- `h: dap-terminal`
+      -- `:h dap-terminal`
     end
   }
 }
