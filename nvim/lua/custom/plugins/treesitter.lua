@@ -1,7 +1,7 @@
 -- Treesitter
--- `:h treesitter.txt`
 -- https://github.com/nvim-treesitter/nvim-treesitter
 -- https://tree-sitter.github.io/tree-sitter/
+-- `:h treesitter.txt`
 
 return {
   {

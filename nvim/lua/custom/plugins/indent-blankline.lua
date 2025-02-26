@@ -1,6 +1,6 @@
 -- Indent blankline
--- `:h indent-blankline.txt`
 -- https://github.com/lukas-reineke/indent-blankline.nvim
+-- `:h indent-blankline.txt`
 
 return {
   {

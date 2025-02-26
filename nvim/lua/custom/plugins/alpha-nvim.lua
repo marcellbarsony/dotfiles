@@ -1,6 +1,6 @@
 -- Alpha
--- `:h alpha`
 -- https://github.com/goolord/alpha-nvim
+-- `:h alpha`
 
 return {
   {

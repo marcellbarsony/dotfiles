@@ -60,9 +60,9 @@ function theme.setup()
     DiagnosticSignInfo         = { link = "DiagnosticInfo"          },
     DiagnosticSignHint         = { link = "DiagnosticHint"          },
     DiagnosticUnderlineError   = { link = "DiagnosticError", undercurl = false },
-    DiagnosticUnderlineWarn    = { link = "DiagnosticWarn", undercurl = true },
-    DiagnosticUnderlineInfo    = { link = "DiagnosticInfo", undercurl = false },
-    DiagnosticUnderlineHint    = { link = "DiagnosticHint", undercurl = false },
+    DiagnosticUnderlineWarn    = { link = "DiagnosticWarn", undercurl = true   },
+    DiagnosticUnderlineInfo    = { link = "DiagnosticInfo", undercurl = false  },
+    DiagnosticUnderlineHint    = { link = "DiagnosticHint", undercurl = true   },
     -- DiagnosticUnnecessary      = { fg = "#414868"                   },
     -- DiagnosticVirtualTextError = { fg = "#db4b4b", bg = "#2d202a"   },
     -- DiagnosticVirtualTextHint  = { fg = "#1abc9c", bg = "#1a2b32"   },
@@ -133,9 +133,9 @@ function theme.setup()
     -- }}}
 
     -- Search & Replace {{{
-    Search     = { bg = c.secondary_container, fg = c.fg },
-    IncSearch  = { bg = c.primary_container, fg = c.fg   },  -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
-    Substitute = { bg = c.primary_container, fg = c.fg   },  -- `:substitute` replacement text highlighting
+    Search     = { bg = c.bg_dark, fg = c.fg },
+    IncSearch  = { bg = c.bg_dark_2, fg = c.fg   },  -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+    Substitute = { bg = c.bg_dark_2, fg = c.fg   },  -- `:substitute` replacement text highlighting
     CurSearch  = { link = "IncSearch"                    },
     -- }}}
 
@@ -394,13 +394,14 @@ function theme.setup()
     ["@variable.parameter.builtin"] = { link = "Variable"    },
 
     -- Treesitter-Lua {{{
-    ["@boolean.lua"]           = { link = "Boolean"     },
-    ["@constructor.lua"]       = { link = "Constructor" },
-    ["@function.lua"]          = { link = "Function"    },
-    ["@keyword.return.lua"]    = { link = "Keyword"     },
-    ["@number.lua"]            = { link = "Number"      },
-    ["@operator.lua"]          = { link = "Operator"    },
-    ["@property.lua"]          = { link = "Property"    },
+    ["@boolean.lua"]             = { link = "Boolean"     },
+    ["@constructor.lua"]         = { link = "Constructor" },
+    ["@function.lua"]            = { link = "Function"    },
+    ["@keyword.return.lua"]      = { link = "Keyword"     },
+    ["@number.lua"]              = { link = "Number"      },
+    ["@operator.lua"]            = { link = "Operator"    },
+    ["@property.lua"]            = { link = "Property"    },
+    ["@punctuation.bracket.lua"] = { link = "Punctuation" },
 
     -- Lua - LSP
     ["@lsp.type.function.lua"] = { link = "Function" },

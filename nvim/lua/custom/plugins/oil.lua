@@ -1,6 +1,6 @@
 -- Oil
--- `:h oil.txt`
 -- https://github.com/stevearc/oil.nvim
+-- `:h oil.txt`
 
 return {
   {

@@ -1,7 +1,7 @@
 -- Telescope
--- `:h telescope.nvim`
 -- https://github.com/nvim-telescope/telescope.nvim
 -- https://github.com/nvim-lua/plenary.nvim
+-- `:h telescope.nvim`
 
 return {
   {

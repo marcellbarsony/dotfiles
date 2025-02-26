@@ -1,8 +1,8 @@
 -- Luasnip
--- `:h luasnip.txt`
 -- https://github.com/L3MON4D3/LuaSnip
 -- https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
 -- https://github.com/saadparwaiz1/cmp_luasnip
+-- `:h luasnip.txt`
 
 return {
   {

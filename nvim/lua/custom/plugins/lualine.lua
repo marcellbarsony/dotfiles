@@ -1,6 +1,6 @@
 -- Lualine
--- `:h lualine.txt`
 -- https://github.com/nvim-lualine/lualine.nvim
+-- `:h lualine.txt`
 
 -- Macro recording {{{
 local function show_macro_recording()

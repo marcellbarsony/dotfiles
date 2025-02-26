@@ -1,8 +1,8 @@
 -- Lspconfig
--- `:h lsp-config`
 -- https://github.com/neovim/nvim-lspconfig
 -- https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion#nvim-cmp
 -- https://github.com/neovim/nvim-lspconfig/wiki/Snippets#nvim-cmp-and-luasnip
+-- `:h lsp-config`
 
 return {
   {

@@ -1,8 +1,8 @@
 -- DAP
+-- https://github.com/mfussenegger/nvim-dap/
 -- `:h dap.txt`
 -- `:h dap-api`
 -- `:h dap-mappings`
--- https://github.com/mfussenegger/nvim-dap/
 
 return {
   {

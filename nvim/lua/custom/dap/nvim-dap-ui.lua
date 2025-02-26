@@ -1,6 +1,6 @@
 -- DAP UI
--- `:h dapui.setup()`
 -- https://github.com/rcarriga/nvim-dap-ui
+-- `:h dapui.setup()`
 
 return {
   {

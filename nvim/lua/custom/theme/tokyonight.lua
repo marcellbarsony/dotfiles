@@ -1,6 +1,6 @@
 -- Tokyonight
--- `:h tokyonight.nvim.txt`
 -- https://github.com/folke/tokyonight.nvim
+-- `:h tokyonight.nvim.txt`
 
 return {
   {

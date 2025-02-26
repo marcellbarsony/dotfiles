@@ -1,7 +1,7 @@
 -- CMP
+-- https://github.com/hrsh7th/nvim-cmp
 -- `:h cmp`
 -- `:h nvim-cmp`
--- https://github.com/hrsh7th/nvim-cmp
 
 return {
   {
@@ -102,13 +102,15 @@ return {
         -- Mapping {{{
         -- `:h ins-completion`
         mapping = {
-          ["<CR>"] = cmp.mapping.confirm({ select = false }),                            -- Accept selected
-          ["<C-n>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),                 -- Open completion
-          ["<C-c>"] = cmp.mapping({ i = cmp.mapping.close(), c = cmp.mapping.close() }), -- Close completion
-          ["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-5), { "i", "c" }),            -- Scroll docs [up]
-          ["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(5), { "i", "c" }),             -- Scroll docs [down]
+          -- General {{{
+          ["<CR>"]  = cmp.mapping.confirm({ select = false }),                            -- Accept selected
+          ["<C-n>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),                  -- Open completion
+          ["<C-c>"] = cmp.mapping({ i = cmp.mapping.close(), c = cmp.mapping.close() }),  -- Close completion
+          ["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-5), { "i", "c" }),             -- Scroll docs [up]
+          ["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(5), { "i", "c" }),              -- Scroll docs [down]
+          -- }}}
 
-          -- Luasnips
+          -- Luasnips {{{
           -- https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
           ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
@@ -130,7 +132,9 @@ return {
               fallback()
             end
           end, { "i", "s" }),
-          -- CMP
+          -- }}}
+
+          -- CMP {{{
           ["<C-j>"] = cmp.mapping({ -- Next item
             c = function()
               if cmp.visible() then
@@ -163,6 +167,7 @@ return {
               end
             end
           })
+          -- }}}
         },
         -- }}}
 
@@ -173,6 +178,7 @@ return {
 
         -- Sources {{{
         sources = cmp.config.sources({
+          { name = "nvim_lsp_signature_help" },
           { name = "luasnip",  max_item_count = 3,  priority_weight = 1 },
           { name = "nvim_lsp", max_item_count = 100 },
           { name = "buffer",   max_item_count = 3, keyword_length = 3 }
@@ -184,7 +190,7 @@ return {
           fields = { "abbr", "kind", "menu" },
           format = function(entry, vim_item)
             -- Kind icons
-            vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- Concatonate icons with item kind name
+            vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind)
             -- Source
             vim_item.menu = ({
               buffer = "[Buf]",

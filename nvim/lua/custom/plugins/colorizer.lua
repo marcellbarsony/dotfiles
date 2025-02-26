@@ -1,6 +1,6 @@
 -- Colorizer
--- `:h colorizer`
 -- https://github.com/catgoose/nvim-colorizer.lua
+-- `:h colorizer`
 
 return {
   {
