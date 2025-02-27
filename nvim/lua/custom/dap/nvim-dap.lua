@@ -14,11 +14,11 @@ return {
     },
     keys = {
       -- Controls {{{
-      { "<F1>", function() require"dap".continue()  end, mode = "n", desc = "Continue"  },
-      { "<F2>", function() require"dap".step_over() end, mode = "n", desc = "Step over" },
-      { "<F3>", function() require"dap".step_into() end, mode = "n", desc = "Step into" },
-      { "<F4>", function() require"dap".step_out()  end, mode = "n", desc = "Step out"  },
-      { "<F5>", function() require"dap".step_back() end, mode = "n", desc = "Step back" },
+      { "<F1>", function() require("dap").continue()  end, mode = "n", desc = "Continue"  },
+      { "<F2>", function() require("dap").step_over() end, mode = "n", desc = "Step over" },
+      { "<F3>", function() require("dap").step_into() end, mode = "n", desc = "Step into" },
+      { "<F4>", function() require("dap").step_out()  end, mode = "n", desc = "Step out"  },
+      { "<F5>", function() require("dap").step_back() end, mode = "n", desc = "Step back" },
       -- }}}
 
       -- Functions {{{
@@ -55,8 +55,8 @@ return {
     config = function()
       -- Signs & Highlights & Colors {{{
       vim.cmd("highlight DapBreakpointNr guifg=#DDDDDD")
-      vim.cmd("highlight DapBreakpointStop guibg=#222222")
-      vim.cmd("highlight DapBreakpointReject guifg=#FF4400")
+      vim.cmd("highlight DapBreakpointStop guibg=#333333")
+      vim.cmd("highlight DapBreakpointReject guifg=#772222")
 
       vim.fn.sign_define("DapBreakpoint",          { text = "B", texthl = "", linehl = "", numhl = "DapBreakpointNr" })
       vim.fn.sign_define("DapBreakpointCondition", { text = "C", texthl = "", linehl = "", numhl = "DapBreakpointNr" })

@@ -163,7 +163,7 @@ function theme.setup()
     -- }}}
 
     -- Type {{{
-    Type = { fg = c.primary    },  -- (preferred) int, long, char, etc.
+    Type    = { fg = c.primary },  -- (preferred) int, long, char, etc.
     Typedef = { fg = c.primary },  --  A typedef
     -- }}}
 
@@ -202,14 +202,10 @@ function theme.setup()
     -- }}}
 
     -- DAP {{{
-    DapBreakpointNr     = { fg = c.fg       },
-    DapBreakpointStop   = { fg = c.on_error       },
-    DapBreakpointReject = { fg = c.on_error },
-      -- vim.fn.sign_define("DapBreakpoint",          { text = "B", texthl = "", linehl = "",                  numhl = "DapBreakpointNr" })
-      -- vim.fn.sign_define("DapBreakpointCondition", { text = "C", texthl = "", linehl = "",                  numhl = "DapBreakpointNr" })
-      -- vim.fn.sign_define("DapBreakpointRejected",  { text = "R", texthl = "", linehl = "",                  numhl = "DapBreakpointReject" })
-      -- vim.fn.sign_define("DapLogPoint",            { text = "L", texthl = "", linehl = "",                  numhl = "DapBreakpointNr" })
--- }}}
+    -- DapBreakpointNr     = { fg = c.fg      },
+    -- DapBreakpointStop   = { bg = c.bg_dark },
+    -- DapBreakpointReject = { fg = c.bg_dark },
+    -- }}}
 
     -- GitSigns {{{
     GitSignsAdd              = { fg = "#449dab" },

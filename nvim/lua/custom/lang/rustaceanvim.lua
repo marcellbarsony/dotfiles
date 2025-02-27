@@ -20,6 +20,7 @@ return {
 
         return {
           dap = {
+            autoload_configurations = true,
             adapter = cfg.get_codelldb_adapter(codelldb_path, liblldb_path)
           },
           server = {
