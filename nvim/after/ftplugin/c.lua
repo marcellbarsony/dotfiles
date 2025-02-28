@@ -1,4 +1,4 @@
--- C lang
+-- C
 -- https://neovim.io/doc/user/syntax.html#ft-c-syntax
 
 -- Keymaps {{{

@@ -49,25 +49,20 @@ function theme.setup()
     -- }}}
 
     -- Diagnostic {{{
-    DiagnosticError            = { fg = "#db3b4b"                   },
-    DiagnosticWarn             = { fg = "#e0af68"                   },
-    DiagnosticWarning          = { link = "DiagnosticWarn"          },
-    DiagnosticInfo             = { fg = "#0db9d7"                   },
-    DiagnosticInformation      = { link = "DiagnosticInfo"          },
-    DiagnosticHint             = { fg = "#1abc9c"                   },
-    DiagnosticSignError        = { link = "DiagnosticError"         },
-    DiagnosticSignWarn         = { link = "DiagnosticWarn"          },
-    DiagnosticSignInfo         = { link = "DiagnosticInfo"          },
-    DiagnosticSignHint         = { link = "DiagnosticHint"          },
-    DiagnosticUnderlineError   = { link = "DiagnosticError", undercurl = false },
-    DiagnosticUnderlineWarn    = { link = "DiagnosticWarn", undercurl = true   },
-    DiagnosticUnderlineInfo    = { link = "DiagnosticInfo", undercurl = false  },
-    DiagnosticUnderlineHint    = { link = "DiagnosticHint", undercurl = true   },
-    -- DiagnosticUnnecessary      = { fg = "#414868"                   },
-    -- DiagnosticVirtualTextError = { fg = "#db4b4b", bg = "#2d202a"   },
-    -- DiagnosticVirtualTextHint  = { fg = "#1abc9c", bg = "#1a2b32"   },
-    -- DiagnosticVirtualTextInfo  = { fg = "#0db9d7", bg = "#192b38"   },
-    -- DiagnosticVirtualTextWarn  = { fg = "#e0af68", bg = "#2e2a2d"   },
+    DiagnosticError          = { fg = c.error                },
+    DiagnosticWarn           = { fg = c.warn                 },
+    DiagnosticWarning        = { link = "DiagnosticWarn"     },
+    DiagnosticInfo           = { fg = c.info                 },
+    DiagnosticInformation    = { link = "DiagnosticInfo"     },
+    DiagnosticHint           = { fg = c.hint                 },
+    DiagnosticSignError      = { link = "DiagnosticError"    },
+    DiagnosticSignWarn       = { link = "DiagnosticWarn"     },
+    DiagnosticSignInfo       = { link = "DiagnosticInfo"     },
+    DiagnosticSignHint       = { link = "DiagnosticHint"     },
+    DiagnosticUnderlineError = { undercurl=true, sp = c.error},
+    DiagnosticUnderlineWarn  = { undercurl=true, sp = c.warn },
+    DiagnosticUnderlineInfo  = { undercurl=true, sp = c.info },
+    DiagnosticUnderlineHint  = { undercurl=true, sp = c.hint },
     -- }}}
 
     -- Diff {{{
@@ -78,8 +73,8 @@ function theme.setup()
     -- }}}
 
     -- Error & Warning {{{
-    -- Error                       = { fg = c.on_error }, -- (preferred) any erroneous construct
-    -- ErrorMsg                    = { fg = c.error }, -- error messages on the command line
+    Error                       = { fg = c.on_error },  -- (preferred) any erroneous construct
+    ErrorMsg                    = { fg = c.on_error },  -- error messages on the command line
     -- WarningMsg                  = { fg = c.warning }, -- warning messages
     -- }}}
 
@@ -94,9 +89,9 @@ function theme.setup()
     -- }}}
 
     -- Health {{{
-    -- healthError                 = { fg = c.error },
-    -- healthSuccess               = { fg = c.green1 },
-    -- healthWarning               = { fg = c.warning },
+    -- healthError   = { fg = c.error },
+    -- healthSuccess = { fg = c.green1 },
+    -- healthWarning = { fg = c.warning },
     -- }}}
 
     -- Line number {{{
@@ -110,7 +105,7 @@ function theme.setup()
     -- LspReferenceRead            = { bg = c.fg_gutter }, -- used for highlighting "read" references
     -- LspReferenceWrite           = { bg = c.fg_gutter }, -- used for highlighting "write" references
     -- LspSignatureActiveParameter = { bg = Util.blend_bg(c.bg_visual, 0.4), bold = true },
-    -- LspCodeLens                 = { fg = c.comment },
+    LspCodeLens                 = { fg = c.comment      },
     -- LspCodeLensSeparator        = { fg = c.blueGray3 }, -- separator between two or more code lens
     LspInlayHint = { fg = c.comment, bg = c.transparent },
     -- LspInfoBorder               = { fg = c.border_highlight, bg = c.bg_float },
@@ -133,10 +128,10 @@ function theme.setup()
     -- }}}
 
     -- Search & Replace {{{
-    Search     = { bg = c.bg_dark, fg = c.fg },
-    IncSearch  = { bg = c.bg_dark_2, fg = c.fg   },  -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
-    Substitute = { bg = c.bg_dark_2, fg = c.fg   },  -- `:substitute` replacement text highlighting
-    CurSearch  = { link = "IncSearch"                    },
+    Search     = { bg = c.bg_dark, fg = c.fg   },
+    IncSearch  = { bg = c.bg_dark_2, fg = c.fg },  -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+    Substitute = { bg = c.bg_dark_2, fg = c.fg },  -- `:substitute` replacement text highlighting
+    CurSearch  = { link = "IncSearch"          },
     -- }}}
 
     -- SignColumn {{{
@@ -145,21 +140,21 @@ function theme.setup()
     -- }}}
 
     -- Spell {{{
-    -- SpellBad                    = { sp = c.error, undercurl = true }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
-    -- SpellCap                    = { sp = c.warning, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
-    -- SpellLocal                  = { sp = c.info, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
-    -- SpellRare                   = { sp = c.hint, undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
+    -- SpellBad   = { sp = c.error, undercurl = true }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
+    -- SpellCap   = { sp = c.warning, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
+    -- SpellLocal = { sp = c.info, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
+    -- SpellRare  = { sp = c.hint, undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
     -- }}}
 
     -- StatusLine {{{
-    -- StatusLine                  = { fg = c.fg_sidebar, bg = c.bg_statusline }, -- status line of current window
-    -- StatusLineNC                = { fg = c.fg_gutter, bg = c.bg_statusline }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+    -- StatusLine   = { fg = c.fg_sidebar, bg = c.bg_statusline }, -- status line of current window
+    -- StatusLineNC = { fg = c.fg_gutter, bg = c.bg_statusline }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     -- }}}
 
     -- TabLine {{{
-    -- TabLine                     = { bg = c.bg_statusline, fg = c.fg_gutter }, -- tab pages line, not active tab page label
-    -- TabLineFill                 = { bg = c.black }, -- tab pages line, where there are no labels
-    -- TabLineSel                  = { fg = c.black, bg = c.blue }, -- tab pages line, active tab page label
+    -- TabLine     -- tab pages line, not active tab page label
+    -- TabLineFill = { bg = c.black }, -- tab pages line, where there are no labels
+    -- TabLineSel  = { fg = c.black, bg = c.blue }, -- tab pages line, active tab page label
     -- }}}
 
     -- Type {{{
@@ -168,25 +163,17 @@ function theme.setup()
     -- }}}
 
     -- Visual {{{
-    -- Visual                      = { bg = c.bg_visual }, -- Visual mode selection
-    -- VisualNOS                   = { bg = c.bg_visual }, -- Visual mode selection when vim is "Not Owning the Selection".
+    -- Visual    = { bg = c.bg_visual }, -- Visual mode selection
+    -- VisualNOS = { bg = c.bg_visual }, -- Visual mode selection when vim is "Not Owning the Selection".
     -- }}}
 
     -- WinBar {{{
-    -- WinBar                      = "StatusLine" , -- window bar
-    -- WinBarNC                    = "StatusLineNC", -- window bar in inactive windows
+    -- WinBar   = "StatusLine" , -- window bar
+    -- WinBarNC = "StatusLineNC", -- window bar in inactive windows
     -- }}}
     -- }}}
 
     -- Plugins {{{
-    -- Alpha {{{
-    -- AlphaButtons     = { fg = c.on_error, bg = c.on_error },
-    -- AlphaFooter      = { fg = c.on_error, bg = c.on_error },
-    -- AlphaHeader      = { fg = c.on_error, bg = c.on_error },
-    -- AlphaHeaderLabel = { fg = c.on_error, bg = c.on_error },
-    -- AlphaShortcut    = { fg = c.on_error, bg = c.on_error },
-    -- }}}
-
     -- CMP {{{
     -- CmpItemAbbr = { fg = p.blueGray2 },
     -- CmpItemAbbrDeprecated = { fg = p.pink3, style = 'strikethrough' },
@@ -201,12 +188,6 @@ function theme.setup()
     CmpItemKindVariable   = { fg = c.primary },
     -- }}}
 
-    -- DAP {{{
-    -- DapBreakpointNr     = { fg = c.fg      },
-    -- DapBreakpointStop   = { bg = c.bg_dark },
-    -- DapBreakpointReject = { fg = c.bg_dark },
-    -- }}}
-
     -- GitSigns {{{
     GitSignsAdd              = { fg = "#449dab" },
     GitSignsChange           = { fg = "#6183bb" },
@@ -215,7 +196,7 @@ function theme.setup()
     -- }}}
 
     -- Hex {{{
-    xxdAddress = { fg = c.primary },
+    xxdAddress = { fg = c.primary  },
     xxdAscii   = { fg = c.tertiary },
     xxdSep     = { fg = c.tertiary },
     -- }}}
@@ -229,17 +210,17 @@ function theme.setup()
     -- }}}
 
     -- Lazy {{{
-    LazyBold          = { bold = true },
-    LazyButton        = { fg = c.fg, bg = c.bg_dark },
-    LazyButtonActive  = { fg = c.fg, bg = c.inverse_primary },
-    LazyComment       = { link = "Comment" },
-    LazyItalic        = { italic = true },
-    LazyUrl           = { link = "String"  },
+    LazyBold         = { bold = true                       },
+    LazyButton       = { fg = c.fg, bg = c.bg_dark         },
+    LazyButtonActive = { fg = c.fg, bg = c.inverse_primary },
+    LazyComment      = { link = "Comment"                  },
+    LazyItalic       = { italic = true                     },
+    LazyUrl          = { link = "String"                   },
     LazyH1           = { fg = c.fg, bg = c.inverse_primary },
-    LazyH2           = { fg = c.fg, bg = c.transparent },
-    LazyProgressDone  = { fg = c.primary   },
-    LazyProgressTodo  = { fg = c.fg        },
-    LazyReasonSource  = { fg = c.primary   },
+    LazyH2           = { fg = c.fg, bg = c.transparent     },
+    LazyProgressDone = { fg = c.primary                    },
+    LazyProgressTodo = { fg = c.fg                         },
+    LazyReasonSource = { fg = c.primary                    },
     -- }}}
 
     -- Mason {{{
@@ -326,9 +307,9 @@ function theme.setup()
     Conditional    = { fg = c.inverse_primary        },  -- if, else, endif, then, switch
     Delimiter      = { fg = c.fg                     },
     Exception      = { fg = c.inverse_primary        },  -- try, catch, throw
-    -- Identifier    = { fg = c.primary                },  -- (preferred) any variable name
+    Identifier     = { fg = c.primary                },  -- (preferred) any variable name
     Keyword        = { fg = c.inverse_primary        },  -- Any other keyword
-    Label         = { fg = c.primary                 },  -- case, default
+    Label          = { fg = c.primary                },  -- case, default
     Module         = { fg = c.primary                },  -- Modules
     Operator       = { fg = c.primary                },  -- sizeof, +, *, =, .
     Punctuation    =  { fg = c.fg                    },  -- , / ; / ::
@@ -339,6 +320,7 @@ function theme.setup()
     -- }}}
 
     -- Treesitter {{{
+    -- Treesitter Base {{{
     ["@boolean"]                    = { link = "Boolean"     },
     ["@character"]                  = { link = "Character"   },
     ["@character.printf"]           = { link = "Character"   },
@@ -388,6 +370,7 @@ function theme.setup()
     ["@variable.member"]            = { link = "Variable"    },
     ["@variable.parameter"]         = { link = "Variable"    },
     ["@variable.parameter.builtin"] = { link = "Variable"    },
+    -- }}}
 
     -- Treesitter-Lua {{{
     ["@boolean.lua"]             = { link = "Boolean"     },
@@ -398,10 +381,6 @@ function theme.setup()
     ["@operator.lua"]            = { link = "Operator"    },
     ["@property.lua"]            = { link = "Property"    },
     ["@punctuation.bracket.lua"] = { link = "Punctuation" },
-
-    -- Lua - LSP
-    ["@lsp.type.function.lua"] = { link = "Function" },
-    ["@lsp.type.property.lua"] = { link = "Property" },
     -- }}}
 
     -- Treesitter-Python {{{
@@ -444,8 +423,16 @@ function theme.setup()
     ["@variable.rust"]              = { link = "Variable"    },
     ["@variable.parameter.rust"]    = { link = "Variable"    },
     ["@variable.member.rust"]       = { link = "Variable"    },
+    -- }}}
+    -- }}}
 
-    -- Rust - LSP
+    -- LSP {{{
+    -- Lua {{{
+    ["@lsp.type.function.lua"] = { link = "Function" },
+    ["@lsp.type.property.lua"] = { link = "Property" },
+    -- }}}
+
+    -- Rust {{{
     ["@lsp.type.builtinType.rust"]              = { link = "Type"     },
     ["@lsp.type.decorator.rust"]                = { link = "Type"     },
     ["@lsp.type.formatSpecifier.rust"]          = { link = "String"   },
