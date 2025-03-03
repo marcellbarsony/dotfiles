@@ -101,14 +101,14 @@ function theme.setup()
     -- }}}
 
     -- LSP {{{
-    -- LspReferenceText            = { bg = c.fg_gutter }, -- used for highlighting "text" references
-    -- LspReferenceRead            = { bg = c.fg_gutter }, -- used for highlighting "read" references
-    -- LspReferenceWrite           = { bg = c.fg_gutter }, -- used for highlighting "write" references
+    -- LspReferenceText            = { bg = c.fg_gutter },  -- used for highlighting "text" references
+    -- LspReferenceRead            = { bg = c.fg_gutter },  -- used for highlighting "read" references
+    -- LspReferenceWrite           = { bg = c.fg_gutter },  -- used for highlighting "write" references
     -- LspSignatureActiveParameter = { bg = Util.blend_bg(c.bg_visual, 0.4), bold = true },
     LspCodeLens                 = { fg = c.comment      },
-    -- LspCodeLensSeparator        = { fg = c.blueGray3 }, -- separator between two or more code lens
-    LspInlayHint = { fg = c.comment, bg = c.transparent },
-    -- LspInfoBorder               = { fg = c.border_highlight, bg = c.bg_float },
+    -- LspCodeLensSeparator        = { fg = c.blueGray3 },  -- separator between two or more code lens
+    LspInlayHint                = { fg = c.comment, bg = c.transparent },
+    -- LspInfoBorder               = { fg = c.on_error, bg = c.primary    },
     -- }}}
 
     -- Normal {{{
@@ -119,12 +119,12 @@ function theme.setup()
     -- }}}
 
     -- Popup menu {{{
-    Pmenu            = { bg = c.bg, fg = c.fg }, -- Popup menu: normal item.
-    -- PmenuMatch       = { bg = c.bg_popup, fg = c.blue1 }, -- Popup menu: Matched text in normal item.
-    -- PmenuMatchSel    = { bg = Util.blend_bg(c.fg_gutter, 0.8), fg = c.blue1 }, -- Popup menu: Matched text in selected item.
-    -- PmenuSbar        = { bg = Util.blend_fg(c.bg_popup, 0.95) }, -- Popup menu: scrollbar.
-    -- PmenuSel         = { bg = Util.blend_bg(c.fg_gutter, 0.8) }, -- Popup menu: selected item.
-    -- PmenuThumb       = { bg = c.fg_gutter }, -- Popup menu: Thumb of the scrollbar.
+    Pmenu            = { bg = c.bg, fg = c.fg             },  -- Popup menu: normal item.
+    PmenuSbar        = { bg = c.bg_dark                   },  -- Popup menu: Scrollbar
+    PmenuThumb       = { bg = c.inverse_primary           },  -- Popup menu: Scrollbar thumb
+    PmenuMatch       = { bg = c.on_error, fg = c.on_error },  -- Popup menu: Matched text in normal item.
+    PmenuMatchSel    = { bg = c.on_error, fg = c.on_error },  -- Popup menu: Matched text in selected item.
+    PmenuSel         = { bg = c.on_error, fg = c.on_error },  -- Popup menu: selected item.
     -- }}}
 
     -- Search & Replace {{{
@@ -136,24 +136,24 @@ function theme.setup()
 
     -- SignColumn {{{
     -- SignColumn   = { bg = c.transparent and c.none or c.bg, fg = c.fg_gutter }, -- column where |signs| are displayed
-    -- SignColumnSB = { bg = c.bg_sidebar, fg = c.fg_gutter }, -- column where |signs| are displayed
+    -- SignColumnSB = { bg = c.bg_sidebar, fg = c.fg_gutter                     }, -- column where |signs| are displayed
     -- }}}
 
     -- Spell {{{
-    -- SpellBad   = { sp = c.error, undercurl = true }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
-    -- SpellCap   = { sp = c.warning, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
-    -- SpellLocal = { sp = c.info, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
-    -- SpellRare  = { sp = c.hint, undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
+    -- SpellBad   = { sp = c.error, undercurl = true   },  -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
+    -- SpellCap   = { sp = c.warning, undercurl = true },  -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
+    -- SpellLocal = { sp = c.info, undercurl = true    },  -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
+    -- SpellRare  = { sp = c.hint, undercurl = true    },  -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
     -- }}}
 
     -- StatusLine {{{
-    -- StatusLine   = { fg = c.fg_sidebar, bg = c.bg_statusline }, -- status line of current window
-    -- StatusLineNC = { fg = c.fg_gutter, bg = c.bg_statusline }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+    -- StatusLine   = { fg = c.fg_sidebar, bg = c.bg_statusline },  -- status line of current window
+    -- StatusLineNC = { fg = c.fg_gutter, bg = c.bg_statusline  },  -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     -- }}}
 
     -- TabLine {{{
     -- TabLine     -- tab pages line, not active tab page label
-    -- TabLineFill = { bg = c.black }, -- tab pages line, where there are no labels
+    -- TabLineFill = { bg = c.black              }, -- tab pages line, where there are no labels
     -- TabLineSel  = { fg = c.black, bg = c.blue }, -- tab pages line, active tab page label
     -- }}}
 
@@ -163,12 +163,12 @@ function theme.setup()
     -- }}}
 
     -- Visual {{{
-    -- Visual    = { bg = c.bg_visual }, -- Visual mode selection
-    -- VisualNOS = { bg = c.bg_visual }, -- Visual mode selection when vim is "Not Owning the Selection".
+    -- Visual    = { bg = c.bg_visual },  -- Visual mode selection
+    -- VisualNOS = { bg = c.bg_visual },  -- Visual mode selection when vim is "Not Owning the Selection".
     -- }}}
 
     -- WinBar {{{
-    -- WinBar   = "StatusLine" , -- window bar
+    -- WinBar   = "StatusLine" ,  -- window bar
     -- WinBarNC = "StatusLineNC", -- window bar in inactive windows
     -- }}}
     -- }}}
@@ -277,17 +277,17 @@ function theme.setup()
     -- }}}
 
     -- Syntax {{{
-    Bold                        = { bold = true, fg = c.fg }, -- (preferred) any bold text
-    Debug                       = { fg = c.on_error }, --    debugging statements
-    debugBreakpoint             = { bg = c.on_error, fg = c.on_error }, -- used for breakpoint colors in terminal-debug
-    debugPC                     = { bg = c.primary }, -- used for highlighting the current line in terminal-debug
+    Bold                        = { bold = true, fg = c.fg           },  -- (preferred) any bold text
+    Debug                       = { fg = c.on_error                  },  --    debugging statements
+    debugBreakpoint             = { bg = c.on_error, fg = c.on_error },  -- used for breakpoint colors in terminal-debug
+    debugPC                     = { bg = c.primary                   },  -- used for highlighting the current line in terminal-debug
     -- dosIniLabel                 = "@property",
-    -- helpCommand                 = { bg = c.terminal_black, fg = c.blue },
-    Italic                      = { italic = true, fg = c.fg }, -- (preferred) any italic text
-    -- qfFileName                  = { fg = c.blue },
-    -- qfLineNr                    = { fg = c.dark5 },
-    -- Special                     = { fg = c.blue1 }, -- (preferred) any special symbol
-    Underlined                  = { underline = true }, -- (preferred) text that stands out, HTML links
+    -- helpCommand                 = { bg = c.bg, fg = c.fg            },
+    Italic                      = { italic = true, fg = c.fg         },  -- (preferred) any italic text
+    -- qfFileName                  = { fg = c.blue                     },
+    -- qfLineNr                    = { fg = c.dark5                    },
+    -- Special                     = { fg = c.blue1                    }, -- (preferred) any special symbol
+    Underlined                  = { underline = true                 }, -- (preferred) text that stands out, HTML links
 
     -- Syntax Variables {{{
     Boolean      = { fg = c.tertiary },
@@ -372,7 +372,7 @@ function theme.setup()
     ["@variable.parameter.builtin"] = { link = "Variable"    },
     -- }}}
 
-    -- Treesitter-Lua {{{
+    -- Treesitter - Lua {{{
     ["@boolean.lua"]             = { link = "Boolean"     },
     ["@constructor.lua"]         = { link = "Constructor" },
     ["@function.lua"]            = { link = "Function"    },
@@ -383,7 +383,7 @@ function theme.setup()
     ["@punctuation.bracket.lua"] = { link = "Punctuation" },
     -- }}}
 
-    -- Treesitter-Python {{{
+    -- Treesitter - Python {{{
     ["@boolean.python"]             = { link = "Boolean"     },
     ["@constant.builtin.python"]    = { link = "Constant"    },
     ["@function.python"]            = { link = "Function"    },
@@ -401,7 +401,7 @@ function theme.setup()
     ["@variable.python"]            = { link = "Variable"    },
     -- }}}
 
-    -- Treesitter-Rust {{{
+    -- Treesitter - Rust {{{
     ["@character.special.rust"]     = { link = "Operator"    },
     ["@function.call.rust"]         = { link = "Function"    },
     ["@function.macro.rust"]        = { link = "Macro"       },

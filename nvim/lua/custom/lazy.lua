@@ -39,7 +39,6 @@ require("lazy").setup({
     { import = "custom.lang" },
     { import = "custom.mason" },
     { import = "custom.plugins" },
-    { import = "custom.theme" }
   },
   install = { colorscheme = { "habamax" } },
   checker = { enabled = false },
@@ -84,7 +83,5 @@ require("lazy").setup({
 -- }}}
 
 -- Colorscheme {{{
--- vim.cmd [[colorscheme tokyonight]]
--- vim.cmd [[colorscheme poimandres]]
 vim.cmd [[colorscheme theme]]
 -- }}}

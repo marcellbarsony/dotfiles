@@ -1,6 +1,0 @@
-<!DOCTYPE SoundManagerConfig>
-<SoundManagerConfig sync_buffers="2" api="ALSA" force_network_clock="0" deck_count="4" latency="5" samplerate="48000">
- <SoundDevice name="Intel 82801AA-ICH: -" alsaHwDevice="hw:0,0" portAudioIndex="0">
-  <output channel_count="2" index="0" channel="0" type="Master"/>
- </SoundDevice>
-</SoundManagerConfig>
