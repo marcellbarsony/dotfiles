@@ -74,7 +74,7 @@ function theme.setup()
 
     -- Error & Warning {{{
     Error                       = { fg = c.on_error },  -- (preferred) any erroneous construct
-    ErrorMsg                    = { fg = c.on_error },  -- error messages on the command line
+    ErrorMsg                    = { fg = c.primary  },  -- error messages on the command line
     -- WarningMsg                  = { fg = c.warning }, -- warning messages
     -- }}}
 

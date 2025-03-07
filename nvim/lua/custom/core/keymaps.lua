@@ -110,10 +110,10 @@ map("v", "<", "<gv", { desc = "Indent [Left]" })
 map("v", ">", ">gv", { desc = "Indent [Right]" })
 
 -- Move
-map("n", "K", ":move .-2<CR>gv=gv", { desc = "Move [Up]"})
-map("n", "J", ":move .+1<CR>gv=gv", { desc = "Move [Down]"})
-map("v", "K", ":move '<-2<CR>gv=gv", { desc = "Move [Up]"})
-map("v", "J", ":move '>+1<CR>gv=gv", { desc = "Move [Down]"})
+map("n", "K", ":move .-2<CR>gv=gv", { desc = "Move [Up]" })
+map("n", "J", ":move .+1<CR>gv=gv", { desc = "Move [Down]" })
+map("v", "K", ":move '<-2<CR>gv=gv", { desc = "Move [Up]" })
+map("v", "J", ":move '>+1<CR>gv=gv", { desc = "Move [Down]" })
 -- }}}
 
 -- LSP {{{
@@ -198,7 +198,7 @@ map("n", "N", "Nzzzv", { desc = "Search [Prev]" })
 -- Sessions {{{
 map("n", "<leader>sd", function() require("persistence").load() end, { desc = "Directory" })
 map("n", "<leader>ss", function() require("persistence").select() end, { desc = "Select" })
-map("n", "<leader>sl", function() require("persistence").load({ last = true}) end, { desc = "Last" })
+map("n", "<leader>sl", function() require("persistence").load({ last = true }) end, { desc = "Last" })
 map("n", "<leader>sq", function() require("persistence").stop() end, { desc = "Quit" })
 -- }}}
 

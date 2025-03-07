@@ -81,6 +81,19 @@ user_pref("services.sync.prefs.sync.browser.urlbar.suggest.topsites", false);
 user_pref("sidebar.position_start", false);
 user_pref("sidebar.revamp", false);
 
+// SYNC
+user_pref("services.sync.engine.addons", false);
+user_pref("services.sync.engine.addresses", false);
+user_pref("services.sync.engine.addresses.available", false);
+user_pref("services.sync.engine.bookmarks", false);
+user_pref("services.sync.engine.creditcards", false);
+user_pref("services.sync.engine.creditcards.available", false);
+user_pref("services.sync.engine.history", false);
+user_pref("services.sync.engine.passwords", false);
+user_pref("services.sync.engine.prefs", false);
+user_pref("services.sync.engine.prefs.modified", false);
+user_pref("services.sync.engine.tabs", false);
+
 // TABS
 user_perf("browser.tabs.hoverPreview.enabled", 0);
 user_perf("browser.tabs.hoverPreview.showThumbnails", 0);
