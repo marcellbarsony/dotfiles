@@ -221,9 +221,14 @@ function theme.setup()
     LazyProgressDone = { fg = c.primary                    },
     LazyProgressTodo = { fg = c.fg                         },
     LazyReasonSource = { fg = c.primary                    },
+    LazyReasonPlugin = { fg = c.tertiary                   },
     -- }}}
 
     -- Mason {{{
+    MasonHeader             = { fg = c.primary                 },
+    MasonHighlight          = { fg = c.primary                 },
+    MasonHighlightBlockBold = { fg = c.primary, bg = c.bg_dark },
+    MasonMutedBlock         = { fg = c.primary, bg = c.bg      },
     -- }}}
 
     -- Oil {{{
@@ -254,7 +259,7 @@ function theme.setup()
     -- Which-key {{{
     WhichKey          = { fg = c.fg      },  -- Keys
     WhichKeyDesc      = { fg = c.fg      },  -- Normal
-    WhichKeyGroup     = { fg = c.fg_dark },  -- Groups
+    WhichKeyGroup     = { fg = c.primary },  -- Groups
     WhichKeyNormal    = { bg = c.bg      },  -- Background
     WhichKeySeparator = { fg = c.comment },  -- Separator
     WhichKeyValue     = { fg = c.fg      },  -- Value
@@ -430,6 +435,13 @@ function theme.setup()
     -- Lua {{{
     ["@lsp.type.function.lua"] = { link = "Function" },
     ["@lsp.type.property.lua"] = { link = "Property" },
+    -- }}}
+
+    -- Markup {{{
+    ["@markup.list.markdown"]       = { link = "Function" },
+    ["@markup.raw.markdown_inline"] = { link = "Function" },
+    ["@markup.raw.block.markdown"]  = { link = "Function" },
+    ["@string.special.path.bash"]   = { link = "String"   },
     -- }}}
 
     -- Rust {{{

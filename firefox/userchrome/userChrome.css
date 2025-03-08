@@ -30,7 +30,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 #tabbrowser-tabs .tab-background {
-  border-bottom: solid 2px var(--identity-icon-color) !important;
+  border-top: solid 2px var(--identity-icon-color) !important;
 }
 /* }}} */
 
@@ -62,10 +62,11 @@ toolbarbutton#tabs-newtab-button {
     padding-inline: 0px !important;
 }
 
-.tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]) {
-    /* Tab width */
-    max-width: 175px !important;
-}
+/*.tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]) {*/
+/*    /* Tab width */*/
+/*    /* BREAKING Change: Breaks Tab Groups */*/
+/*    max-width: 175px !important;*/
+/*}*/
 
 #tabbrowser-arrowscrollbox {
     /* Prevent tab overflow increased height */
@@ -148,6 +149,6 @@ toolbar#nav-bar {
 #urlbar-container {
     /* Remove top spacing */
     margin: 0px !important;
-    --urlbar-container-height: 30px !important;
+    --urlbar-container-height: 35px !important;
 }
 /* }}} */
