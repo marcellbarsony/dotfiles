@@ -175,17 +175,16 @@ function theme.setup()
 
     -- Plugins {{{
     -- CMP {{{
-    -- CmpItemAbbr = { fg = p.blueGray2 },
-    -- CmpItemAbbrDeprecated = { fg = p.pink3, style = 'strikethrough' },
     CmpItemAbbrMatch      = { fg = c.fg,      bold = true },
     CmpItemAbbrMatchFuzzy = { fg = c.primary, bold = true },
-    -- CmpItemKind = { fg = p.blue3 },
-    -- CmpItemKindClass = { fg = p.yellow },
-    -- CmpItemKindFunction = { fg = p.blue1 },
-    -- CmpItemKindInterface = { fg = p.blue2 },
-    -- CmpItemKindMethod = { fg = p.pink3 },
-    -- CmpItemKindSnippet = { fg = p.blueGray1 },
-    CmpItemKindVariable   = { fg = c.primary },
+    CmpItemKindClass      = { link = "Keyword"            },
+    CmpItemKindConstant   = { link = "Constant"           },
+    CmpItemKindFunction   = { link = "Function"           },
+    CmpItemKindKeyword    = { link = "Keyword"            },
+    CmpItemKindModule     = { link = "Module"             },
+    CmpItemKindText       = { link = "String"             },
+    CmpItemKindSnippet    = { fg = c.fg                   },
+    CmpItemKindVariable   = { link = "Variable"           },
     -- }}}
 
     -- GitSigns {{{
@@ -286,12 +285,7 @@ function theme.setup()
     Debug                       = { fg = c.on_error                  },  --    debugging statements
     debugBreakpoint             = { bg = c.on_error, fg = c.on_error },  -- used for breakpoint colors in terminal-debug
     debugPC                     = { bg = c.primary                   },  -- used for highlighting the current line in terminal-debug
-    -- dosIniLabel                 = "@property",
-    -- helpCommand                 = { bg = c.bg, fg = c.fg            },
     Italic                      = { italic = true, fg = c.fg         },  -- (preferred) any italic text
-    -- qfFileName                  = { fg = c.blue                     },
-    -- qfLineNr                    = { fg = c.dark5                    },
-    -- Special                     = { fg = c.blue1                    }, -- (preferred) any special symbol
     Underlined                  = { underline = true                 }, -- (preferred) text that stands out, HTML links
 
     -- Syntax Variables {{{
@@ -325,7 +319,7 @@ function theme.setup()
     -- }}}
 
     -- Treesitter {{{
-    -- Treesitter Base {{{
+    -- Treesitter base {{{
     ["@boolean"]                    = { link = "Boolean"     },
     ["@character"]                  = { link = "Character"   },
     ["@character.printf"]           = { link = "Character"   },

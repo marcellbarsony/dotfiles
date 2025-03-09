@@ -1,0 +1,24 @@
+{
+    "custom_search": [
+        {
+            "Name": "Arch Wiki",
+            "URL": "https://wiki.archlinux.org/index.php?search=%s",
+            "Alias": "@archwiki"
+        },
+        {
+            "Name": "Rust",
+            "URL": "https://doc.rust-lang.org/stable/std/?search=%s",
+            "Alias": "@rust"
+        },
+        {
+            "Name": "Rust By Example",
+            "URL": "https://doc.rust-lang.org/stable/rust-by-example/?search=%s",
+            "Alias": "@rustexample"
+        },
+        {
+            "Name": "YouTube",
+            "URL": "https://www.youtube.com/results?search_query=%s",
+            "Alias": "@youtube"
+        }
+    ]
+}
