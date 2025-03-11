@@ -316,6 +316,20 @@ function theme.setup()
     -- Statement     = { fg = p.text                   },  -- (preferred) any statement
     -- Todo          = { bg = c.yellow, fg = c.bg      },  -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
     -- }}}
+
+    -- CSS {{{
+    -- cssBoxProp         = { fg = c.fg              },
+    -- cssBorderProp      = { fg = c.fg              },
+    -- cssBackgroundProp  = { fg = c.fg              },
+    cssCustomProp      = { fg = c.primary              },
+    cssDefinition      = { fg = c.primary              },
+    -- cssFontProp        = { fg = c.fg              },
+    cssImportant       = { fg = c.inverse_primary },
+    -- cssMediaProp       = { fg = c.fg              },
+    -- cssTextProp        = { fg = c.fg              },
+    -- cssPositioningProp = { fg = c.fg              },
+    cssValueLength     = { link = "Number"        },
+    -- -- }}}
     -- }}}
 
     -- Treesitter {{{
