@@ -446,10 +446,12 @@ function theme.setup()
     -- }}}
 
     -- Markup {{{
-    ["@markup.list.markdown"]       = { link = "Function" },
-    ["@markup.raw.markdown_inline"] = { link = "Function" },
-    ["@markup.raw.block.markdown"]  = { link = "Function" },
-    ["@string.special.path.bash"]   = { link = "String"   },
+    ["@markup.link.markdown_inline"]       = { link = "String"   },
+    ["@markup.link.label.markdown_inline"] = { fg = c.primary    },
+    ["@markup.list.markdown"]              = { link = "Function" },
+    ["@markup.raw.markdown_inline"]        = { link = "Function" },
+    ["@markup.raw.block.markdown"]         = { link = "Function" },
+    ["@string.special.path.bash"]          = { link = "String"   },
     -- }}}
 
     -- Rust {{{

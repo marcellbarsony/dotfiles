@@ -5,81 +5,6 @@
 use = ""
 # }}}
 
-# Manager {{{
-[manager]
-cwd = { fg = "white" }
-
-# Hovered
-hovered         = { reversed = true }
-preview_hovered = { underline = false }
-
-# Find
-find_keyword  = { fg = "yellow", bold = true, italic = false, underline = false }
-find_position = { fg = "yellow", bold = true, italic = true, bg = "reset" }
-
-# Marker
-marker_copied   = { fg = "lightgreen",  bg = "lightgreen" }
-marker_cut      = { fg = "lightred",    bg = "lightred" }
-marker_marked   = { fg = "lightcyan",   bg = "lightcyan" }
-marker_selected = { fg = "lightyellow", bg = "lightyellow" }
-
-# Tab
-tab_active   = { reversed = true }
-tab_inactive = {}
-tab_width    = 1
-
-# Count
-count_copied   = { fg = "white", bg = "green" }
-count_cut      = { fg = "white", bg = "red" }
-count_selected = { fg = "white", bg = "yellow" }
-
-# Border
-border_symbol = "│"
-border_style  = { fg = "darkgrey" }
-
-# Syntax highlighting
-syntect_theme = "/home/marci/.config/yazi/tmtheme/catppuccin-mocha.xml"
-# }}}
-
-# Status {{{
-[status]
-separator_open  = ""
-separator_close = ""
-separator_style = { fg = "gray", bg = "gray" }
-
-# Mode
-mode_normal = { bg = "black", bold = true }
-mode_select = { bg = "black", bold = true }
-mode_unset  = { bg = "black", bold = true }
-
-# Progress
-progress_label  = { bold = true }
-progress_normal = { fg = "blue", bg = "black" }
-progress_error  = { fg = "red", bg = "black" }
-
-# Permissions
-permissions_t = { fg = "green" }
-permissions_r = { fg = "yellow" }
-permissions_w = { fg = "red" }
-permissions_x = { fg = "cyan" }
-permissions_s = { fg = "darkgray" }
-# }}}
-
-# Select {{{
-[select]
-border   = { fg = "blue" }
-active   = { fg = "magenta", bold = true }
-inactive = {}
-# }}}
-
-# Input {{{
-[input]
-border   = { fg = "white" }
-title    = {}
-value    = {}
-selected = { reversed = true }
-# }}}
-
 # Completion {{{
 [completion]
 border   = { fg = "blue" }
@@ -92,46 +17,16 @@ icon_folder  = ""
 icon_command = ""
 # }}}
 
-# Tasks {{{
-[tasks]
-border  = { fg = "grey" }
-title   = {}
-hovered = { fg = "magenta", underline = true }
+# Confirm {{{
+[confirm]
+border     = { fg = "white" }
+title      = { fg = "white" }
+conent     = { fg = "white" }
+btn_yes    = { fg = "white" }
+btn_no     = { fg = "white" }
 # }}}
 
-# Which {{{
-[which]
-cols            = 3
-mask            = { bg = "black" }
-cand            = { fg = "lightcyan" }
-rest            = { fg = "darkgray" }
-desc            = { fg = "lightmagenta" }
-separator       = "  "
-separator_style = { fg = "darkgray" }
-# }}}
-
-# Help {{{
-[help]
-on      = { fg = "magenta" }
-run     = { fg = "cyan" }
-desc    = { fg = "white" }
-hovered = { reversed = true, bold = true }
-footer  = { fg = "white", bg = "black" }
-# }}}
-
-# Notify {{{
-[notify]
-title_info  = { fg = "green" }
-title_warn  = { fg = "yellow" }
-title_error = { fg = "red" }
-
-# Icons
-icon_info  = ""
-icon_warn  = ""
-icon_error = ""
-# }}}
-
-# File-specific styles {{{
+# Filetype {{{
 [filetype]
 rules = [
     # Images
@@ -153,9 +48,151 @@ rules = [
 ]
 # }}}
 
-# Icons {{{
+# Help {{{
+[help]
+on      = { fg = "magenta" }
+run     = { fg = "cyan" }
+desc    = { fg = "white" }
+hovered = { reversed = true, bold = true }
+footer  = { fg = "white", bg = "black" }
+
+# Icons
+icon_info  = ""
+icon_warn  = ""
+icon_error = ""
+# }}}
+
+# Icon {{{
 [icon]
 prepend_conds = [
   { if = "dir", text = "", fg = "blue" }
 ]
+# }}}
+
+# Input {{{
+[input]
+border   = { fg = "white"    }
+title    = { fg = "white"    }
+value    = { fg = "white"    }
+selected = { reversed = true }
+# }}}
+
+# Manager {{{
+[manager]
+
+# Cwd
+cwd = { fg = "white" }
+
+# Hovered
+hovered         = { reversed  = true  }
+preview_hovered = { underline = false }
+
+# Find
+find_keyword  = { fg = "yellow", bold = true, italic = false, underline = false }
+find_position = { fg = "yellow", bold = true, italic = true, bg = "reset"       }
+
+# Marker
+marker_copied   = { fg = "lightgreen",  bg = "lightgreen"  }
+marker_cut      = { fg = "lightred",    bg = "lightred"    }
+marker_marked   = { fg = "lightcyan",   bg = "lightcyan"   }
+marker_selected = { fg = "lightyellow", bg = "lightyellow" }
+
+# Tab
+tab_active   = { reversed = true }
+tab_inactive = {}
+tab_width    = 1
+
+# Count
+count_copied   = { fg = "white", bg = "green" }
+count_cut      = { fg = "white", bg = "red" }
+count_selected = { fg = "white", bg = "yellow" }
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "darkgrey" }
+
+# Syntax highlighting
+syntect_theme = "/home/marci/.config/yazi/tmtheme/catppuccin-mocha.xml"
+# }}}
+
+# Mode {{{
+[mode]
+
+# Normal
+normal_main = { fg = "white", bg = "black", bold = true }
+normal_alt  = { fg = "white", bg = "black", bold = true }
+
+# Select
+select_main = { fg = "white", bg = "black", bold = true }
+select_alt  = { fg = "white", bg = "black", bold = true }
+
+# Unset
+unset_main  = { fg = "white", bg = "black", bold = true }
+unset_alt   = { fg = "white", bg = "black", bold = true }
+# }}}
+
+# Notify {{{
+[notify]
+title_info  = { fg = "green" }
+title_warn  = { fg = "yellow" }
+title_error = { fg = "red" }
+# }}}
+
+# Pick {{{
+[pick]
+
+# }}}
+
+# Status {{{
+[status]
+
+# Separator
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+sep_style = { fg = "white", bg = "white" }
+
+# Permissions
+perm_type  = { fg = "gray"  }
+perm_read  = { fg = "white" }
+perm_write = { fg = "white" }
+perm_exec  = { fg = "white" }
+perm_sep   = { fg = "white" }
+
+# Progress
+progress_label  = { bold = true }
+progress_normal = { fg = "white", bg = "black" }
+progress_error  = { fg = "red", bg = "black" }
+# }}}
+
+# Select {{{
+[select]
+border   = { fg = "blue" }
+active   = { fg = "magenta", bold = true }
+inactive = {}
+# }}}
+
+# Spot {{{
+[spot]
+border   = { fg = "white" }
+title    = { fg = "white" }
+tbl_col  = { fg = "white" }
+tbl_cell = { fg = "white" }
+# }}}
+
+# Tasks {{{
+[tasks]
+border  = { fg = "white" }
+title   = { fg = "white" }
+hovered = { fg = "white", bold = true }
+# }}}
+
+# Which {{{
+[which]
+cols            = 3
+mask            = { bg = "black" }
+cand            = { fg = "lightcyan" }
+rest            = { fg = "darkgray" }
+desc            = { fg = "lightmagenta" }
+separator       = "  "
+separator_style = { fg = "darkgray" }
 # }}}
