@@ -74,7 +74,7 @@
     // Clock {{{
     "clock": {
         "format": " {:%I:%M} ",
-        "format-alt": "{:%b %d %a}",
+        "format-alt": " {:%b %d %a} ",
         "interval": 60,
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         //"tooltip-format": "<tt><small>{calendar}</small></tt>",
@@ -134,12 +134,11 @@
 
     // RAM {{{
     "memory": {
-        "interval": 30,
+        "interval": 10,
         "format": "RAM {percentage}% |",
         "tooltip": false,
         "tooltip-format": "RAM: {percentage}%"
     }
     // }}}
-
     // }}}
 }

@@ -3,7 +3,7 @@
 
 # Manager {{{
 [manager]
-ratio          = [ 3, 5, 5 ]
+ratio          = [ 3, 5, 7 ]
 sort_by        = "natural"
 sort_sensitive = false
 sort_reverse   = false
@@ -26,7 +26,7 @@ max_height      = 1000
 cache_dir       = ""
 image_delay     = 100
 image_filter    = "triangle"
-image_quality   = 75
+image_quality   = 90
 sixel_fraction  = 15
 ueberzug_scale  = 1
 ueberzug_offset = [ 0, 0, 0, 0 ]
@@ -98,7 +98,7 @@ preloaders = [
     { mime = "image/{avif,heic,jxl,svg+xml}", run = "magick" },
     { mime = "image/*", run = "image" },
     # Video
-    { mime = "video/*", run = "vlc" },
+    # { mime = "video/*", run = "vlc" },
     # PDF
     { mime = "application/pdf", run = "pdf" },
     # Font

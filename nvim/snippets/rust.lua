@@ -927,7 +927,7 @@ ls.add_snippets("rust", {
           -- Public
           sn(nil, { i(1), t "pub " }),
         }),
-        i(2, "Type"),
+        i(2, "Trait"),
         c(3, {
           -- No Generic type
           sn(nil, { i(1) }),

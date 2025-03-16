@@ -182,6 +182,7 @@ function theme.setup()
     CmpItemKindFunction   = { link = "Function"           },
     CmpItemKindKeyword    = { link = "Keyword"            },
     CmpItemKindModule     = { link = "Module"             },
+    CmpItemKindMethod     = { fg = c.primary              },
     CmpItemKindText       = { link = "String"             },
     CmpItemKindSnippet    = { fg = c.fg                   },
     CmpItemKindVariable   = { link = "Variable"           },

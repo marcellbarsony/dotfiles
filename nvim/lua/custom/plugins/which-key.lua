@@ -318,7 +318,7 @@ return {
         -- v (TODO) {{{
         -- { "v",  desc = "VISUAL" },
 
-        { "<leader>g", group = "GIT", mode = { "v" } },
+        { "<leader>g", group = "Git", mode = { "v" } },
         { "<leader>l", group = "LSP", mode = { "v" } },
         { "<leader>s", group = "Sort", mode = { "v" } },
 
@@ -387,7 +387,7 @@ return {
         { "<leader>dt", group = "Telescope" },
 
         -- GIT
-        { "<leader>g",  group = "GIT" },
+        { "<leader>g",  group = "Git" },
 
         -- HEX
         { "<leader>h",  group = "HEX" },
@@ -405,7 +405,7 @@ return {
         { "<leader>t",  group = "Telescope" },
 
         -- Vim
-        { "<leader>v",  group = "VIM" },
+        { "<leader>v",  group = "Vim" },
         { "<leader>vH", desc = "History" },
         { "<leader>vl", desc = "Lazy" },
         { "<leader>vm", desc = "Mason" },

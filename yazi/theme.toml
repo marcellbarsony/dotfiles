@@ -192,7 +192,7 @@ cols            = 3
 mask            = { bg = "black" }
 cand            = { fg = "lightcyan" }
 rest            = { fg = "darkgray" }
-desc            = { fg = "lightmagenta" }
+desc            = { fg = "white" }
 separator       = "  "
 separator_style = { fg = "darkgray" }
 # }}}

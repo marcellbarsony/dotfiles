@@ -7,8 +7,8 @@ local bufnr = vim.api.nvim_get_current_buf()
 
 vim.keymap.set("n", "<leader>ca",
   function()
-    vim.cmd.RustLsp("codeAction") -- grouping
-    -- vim.lsp.buf.codeAction()   -- no grouping
+    vim.cmd.RustLsp("codeAction")  -- grouping
+    -- vim.lsp.buf.codeAction()  -- no grouping
   end,
   { silent = true, buffer = bufnr, desc = "Action" }
 )
@@ -48,5 +48,6 @@ vim.keymap.set("n", "<leader>cr",
 )
 -- }}}
 
--- LSP
+-- LSP {{{
 vim.lsp.inlay_hint.enable()
+-- }}}
