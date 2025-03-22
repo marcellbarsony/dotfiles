@@ -142,7 +142,6 @@ toolbar#nav-bar {
 
 #urlbar-container {
     /* Remove top spacing */
-    margin: -4px !important;
-    --urlbar-container-height: 35px !important;
+    margin-top: -1px !important;
 }
 /* }}} */

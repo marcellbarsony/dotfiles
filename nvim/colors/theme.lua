@@ -128,7 +128,7 @@ function theme.setup()
     -- }}}
 
     -- Search & Replace {{{
-    Search     = { bg = c.bg_dark, fg = c.fg   },
+    Search     = { bg = c.bg_dark_3, fg = c.fg },
     IncSearch  = { bg = c.bg_dark_2, fg = c.fg },  -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     Substitute = { bg = c.bg_dark_2, fg = c.fg },  -- `:substitute` replacement text highlighting
     CurSearch  = { link = "IncSearch"          },
@@ -220,8 +220,10 @@ function theme.setup()
     LazyH2           = { fg = c.fg, bg = c.transparent     },
     LazyProgressDone = { fg = c.primary                    },
     LazyProgressTodo = { fg = c.fg                         },
-    LazyReasonSource = { fg = c.primary                    },
-    LazyReasonPlugin = { fg = c.tertiary                   },
+    LazyReasonEvent  = { fg = c.primary                    },
+    LazyReasonSource = { fg = c.tertiary                   },
+    LazyReasonStart  = { link = "LazyReasonEvent"          },
+    LazyReasonPlugin = { fg = c.primary_container          },
     -- }}}
 
     -- Mason {{{

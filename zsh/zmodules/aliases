@@ -6,8 +6,9 @@ alias ls="lsd -laF"
 alias mv="mv -i"
 alias rm="rm -i"
 
-# Jekyll
-alias jekyll="bundle exec jekyll serve --livereload"
+# fastfetch
+alias neofetch="fastfetch"
+alias ff="fastfetch"
 
 # Navigation
 alias ..="cd .."
