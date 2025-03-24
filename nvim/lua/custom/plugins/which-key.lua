@@ -386,7 +386,7 @@ return {
         { "<leader>d",  group = "DAP" },
         { "<leader>dt", group = "Telescope" },
 
-        -- GIT
+        -- Git
         { "<leader>g",  group = "Git" },
 
         -- HEX
@@ -398,17 +398,16 @@ return {
         { "<leader>lh", desc = "Help" },
         { "<leader>lS", group = "Symbols" },
 
-        -- Session
-        { "<leader>s",  group = "Session" },
-
         -- Telescope
         { "<leader>t",  group = "Telescope" },
 
         -- Vim
         { "<leader>v",  group = "Vim" },
+        { "<leader>vc", desc = "Colorizer" },
         { "<leader>vH", desc = "History" },
         { "<leader>vl", desc = "Lazy" },
         { "<leader>vm", desc = "Mason" },
+        { "<leader>vp", group = "Persistence" },
         { "<leader>vs", desc = "Spell" },
         { "<leader>vt", desc = "Telescope" },
         { "<leader>vT", desc = "Treesitter" }

@@ -12,7 +12,7 @@ return {
           "python",    -- Debugpy
           "codelldb",  -- C, C++, Rust, Zig
         },
-        -- Handlers {{{
+        -- Handlers
         -- https://github.com/mfussenegger/nvim-dap/wiki/C-C---Rust-(via--codelldb)
         -- https://github.com/vadimcn/codelldb/blob/master/MANUAL.md
         handlers = {
@@ -20,7 +20,6 @@ return {
             require("mason-nvim-dap").default_setup(config)
           end
         }
-        -- }}}
       })
     end
   }

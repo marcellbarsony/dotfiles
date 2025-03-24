@@ -5,7 +5,7 @@
 return {
   {
     "folke/persistence.nvim",
-    event = "BufReadPre",
+    cmd = "Persistence",
     opts = {
       dir = vim.fn.stdpath("state") .. "/sessions/",
       need = 1,

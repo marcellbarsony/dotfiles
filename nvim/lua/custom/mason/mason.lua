@@ -13,7 +13,6 @@ return {
     cmd = "Mason",
     config = function()
       local mason = require("mason")
-
       mason.setup({
         PATH = "prepend",
 

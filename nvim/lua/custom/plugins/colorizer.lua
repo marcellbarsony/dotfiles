@@ -5,7 +5,7 @@
 return {
   {
     "catgoose/nvim-colorizer.lua",
-    event = "BufReadPre",
+    cmd = "ColorizerToggle",
     opts = {
       filetypes = { "*.css" },
       lazy_load = true,

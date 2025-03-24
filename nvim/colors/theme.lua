@@ -119,12 +119,12 @@ function theme.setup()
     -- }}}
 
     -- Popup menu {{{
-    Pmenu            = { bg = c.bg, fg = c.fg             },  -- Popup menu: normal item.
-    PmenuSbar        = { bg = c.bg_dark                   },  -- Popup menu: Scrollbar
-    PmenuThumb       = { bg = c.inverse_primary           },  -- Popup menu: Scrollbar thumb
-    PmenuMatch       = { bg = c.on_error, fg = c.on_error },  -- Popup menu: Matched text in normal item.
-    PmenuMatchSel    = { bg = c.on_error, fg = c.on_error },  -- Popup menu: Matched text in selected item.
-    PmenuSel         = { bg = c.on_error, fg = c.on_error },  -- Popup menu: selected item.
+    Pmenu            = { bg = c.bg, fg = c.fg             },  -- Normal item
+    PmenuSbar        = { bg = c.bg_dark                   },  -- Scrollbar
+    PmenuThumb       = { bg = c.inverse_primary           },  -- Scrollbar thumb
+    PmenuMatch       = { bg = c.on_error, fg = c.on_error },  -- Matched text in normal item
+    PmenuMatchSel    = { bg = c.on_error, fg = c.on_error },  -- Matched text in selected item
+    PmenuSel         = { bg = c.bg_dark, fg = c.fg        },  -- Selected item
     -- }}}
 
     -- Search & Replace {{{
@@ -210,27 +210,28 @@ function theme.setup()
     -- }}}
 
     -- Lazy {{{
-    LazyBold         = { bold = true                       },
-    LazyButton       = { fg = c.fg, bg = c.bg_dark         },
-    LazyButtonActive = { fg = c.fg, bg = c.inverse_primary },
-    LazyComment      = { link = "Comment"                  },
-    LazyItalic       = { italic = true                     },
-    LazyUrl          = { link = "String"                   },
-    LazyH1           = { fg = c.fg, bg = c.inverse_primary },
-    LazyH2           = { fg = c.fg, bg = c.transparent     },
-    LazyProgressDone = { fg = c.primary                    },
-    LazyProgressTodo = { fg = c.fg                         },
-    LazyReasonEvent  = { fg = c.primary                    },
-    LazyReasonSource = { fg = c.tertiary                   },
-    LazyReasonStart  = { link = "LazyReasonEvent"          },
-    LazyReasonPlugin = { fg = c.primary_container          },
+    LazyBold          = { bold = true                   },
+    LazyButton        = { fg = c.fg, bg = c.bg_dark     },
+    LazyButtonActive  = { fg = c.fg, bg = c.on_primary  },
+    LazyComment       = { link = "Comment"              },
+    LazyItalic        = { italic = true                 },
+    LazyUrl           = { link = "String"               },
+    LazyH1            = { fg = c.fg, bg = c.on_primary  },
+    LazyH2            = { fg = c.fg, bg = c.transparent },
+    LazyProgressDone  = { fg = c.primary                },
+    LazyProgressTodo  = { fg = c.fg                     },
+    LazyReasonEvent   = { fg = c.primary                },
+    LazyReasonRequire = { fg = c.secondary      },
+    LazyReasonSource  = { fg = c.tertiary               },
+    LazyReasonStart   = { link = "LazyReasonEvent"      },
+    LazyReasonPlugin  = { fg = c.on_primary             },
     -- }}}
 
     -- Mason {{{
-    MasonHeader             = { fg = c.primary                 },
-    MasonHighlight          = { fg = c.primary                 },
-    MasonHighlightBlockBold = { fg = c.primary, bg = c.bg_dark },
-    MasonMutedBlock         = { fg = c.primary, bg = c.bg      },
+    MasonHeader             = { fg = c.primary                      },
+    MasonHighlight          = { fg = c.primary                      },
+    MasonHighlightBlockBold = { fg = c.fg, bg = c.on_primary },
+    MasonMutedBlock         = { fg = c.fg, bg = c.bg_dark           },
     -- }}}
 
     -- Oil {{{
@@ -341,6 +342,7 @@ function theme.setup()
     ["@character"]                  = { link = "Character"   },
     ["@character.printf"]           = { link = "Character"   },
     ["@character.special"]          = { link = "Character"   },
+    ["@comment.note.vimdoc"]        = { link = "Title"       },
     ["@constructor"]                = { link = "Constructor" },
     ["@constant"]                   = { link = "Constant"    },
     ["@constant.builtin"]           = { link = "Constant"    },
@@ -366,6 +368,7 @@ function theme.setup()
     ["@label.vimdoc"]               = { link = "Label"       },
     ["@markup.heading.1.vimdoc"]    = { link = "Title"       },
     ["@markup.heading.2.vimdoc"]    = { link = "Title"       },
+    ["@markup.raw.vimdoc"]          = { link = "Title"       },
     ["@module.builtin"]             = { link = "Module"      },
     ["@number"]                     = { link = "Number"      },
     ["@number.float"]               = { link = "Number"      },

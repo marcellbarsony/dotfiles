@@ -20,14 +20,10 @@ return {
 
         return {
           dap = {
-            autoload_configurations = true,
+            autoload_configurations = false,
             adapter = cfg.get_codelldb_adapter(codelldb_path, liblldb_path)
           },
-          server = {
-            -- TODO: Remove when fixed
-            -- https://github.com/hrsh7th/cmp-nvim-lsp/issues/72
-            capabilities = vim.lsp.protocol.make_client_capabilities(),
-          },
+          server = { },
           tools = {
             float_win_config = {
               auto_focus = true

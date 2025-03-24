@@ -10,6 +10,7 @@
 -- c - command
 -- }}}
 
+-- Functions {{{
 local function map(mode, key, cmd, opts)
   local options = { noremap = true, silent = true }
   if opts then
@@ -26,6 +27,7 @@ local function safe_cmd(command, error_message)
     end
   end
 end
+-- }}}
 
 -- Leader {{{
 map("n", "<Bslash>", "", { desc = "LEADER" })
@@ -51,6 +53,10 @@ map("n", "<C-q>", "<cmd>bd<CR>", { desc = "Buffer [Delete]" })
 map("n", "y", "\"+y", { desc = "Yank [Global]" })
 map("v", "y", "\"+y", { desc = "Yank [Global]" })
 map("x", "p", [["_dp]], { desc = "Paste [Global]" })
+-- }}}
+
+-- Colorizer {{{
+map("n", "<leader>vcc", "<cmd>ColorizerToggle<CR>", { desc = "Colorizer" })
 -- }}}
 
 -- Delete {{{
@@ -195,11 +201,11 @@ map("n", "n", "nzzzv", { desc = "Search [Next]" })
 map("n", "N", "Nzzzv", { desc = "Search [Prev]" })
 -- }}}
 
--- Sessions {{{
-map("n", "<leader>sd", function() require("persistence").load() end, { desc = "Directory" })
-map("n", "<leader>ss", function() require("persistence").select() end, { desc = "Select" })
-map("n", "<leader>sl", function() require("persistence").load({ last = true }) end, { desc = "Last" })
-map("n", "<leader>sq", function() require("persistence").stop() end, { desc = "Quit" })
+-- Persistence {{{
+map("n", "<leader>vpd", function() require("persistence").load() end, { desc = "Directory" })
+map("n", "<leader>vps", function() require("persistence").select() end, { desc = "Select" })
+map("n", "<leader>vpl", function() require("persistence").load({ last = true }) end, { desc = "Last" })
+map("n", "<leader>vpq", function() require("persistence").stop() end, { desc = "Quit" })
 -- }}}
 
 -- Splits {{{
