@@ -35,13 +35,13 @@ ueberzug_offset = [ 0, 0, 0, 0 ]
 # Opener {{{
 [opener]
 edit = [
-    { run = 'nvim "$@"', desc = "$EDITOR", block = true },
+    { run = '$EDITOR "$@"', block = true, desc = "nvim" },
 ]
 play = [
-    { run = 'vlc "$@"', desc = "PLAY", orphan = true },
+    { run = 'vlc "$@"', block = true, desc = "vlc" },
 ]
 open = [
-    { run = 'xdg-open "$@"', desc = "OPEN" },
+    { run = 'xdg-open "$@"', desc = "XDG open" },
 ]
 # }}}
 
@@ -70,10 +70,13 @@ rules = [
     { name = "*.yml",  use = "edit" },
     { name = "*.yaml", use = "edit" },
     { name = "*.zig",  use = "edit" },
-    { mime = "{audio,video}/*", use = "play" },
     { name = "config", use = "edit" },
     { mime = "image/*", use = "open" },
     { mime = "text/*", use = "edit" },
+    { mime = "{audio,video}/*", use = "play" }
+]
+append_rules = [
+    { name = "*", use = "open" }
 ]
 # }}}
 

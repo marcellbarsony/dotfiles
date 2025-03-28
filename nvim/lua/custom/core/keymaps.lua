@@ -202,10 +202,10 @@ map("n", "N", "Nzzzv", { desc = "Search [Prev]" })
 -- }}}
 
 -- Persistence {{{
-map("n", "<leader>vpd", function() require("persistence").load() end, { desc = "Directory" })
-map("n", "<leader>vps", function() require("persistence").select() end, { desc = "Select" })
-map("n", "<leader>vpl", function() require("persistence").load({ last = true }) end, { desc = "Last" })
-map("n", "<leader>vpq", function() require("persistence").stop() end, { desc = "Quit" })
+map("n", "<leader>pd", function() require("persistence").load() end, { desc = "Directory" })
+map("n", "<leader>ps", function() require("persistence").select() end, { desc = "Select" })
+map("n", "<leader>pl", function() require("persistence").load({ last = true }) end, { desc = "Last" })
+map("n", "<leader>pq", function() require("persistence").stop() end, { desc = "Quit" })
 -- }}}
 
 -- Splits {{{

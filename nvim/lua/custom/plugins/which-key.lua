@@ -88,11 +88,11 @@ return {
       win = {
         no_overlap = true,
         -- width = 1,
-        height = { min = 5, max = 50 },
+        height = { min = 5, max = 25 },
         col = 1,
-        -- row = math.huge,
-        -- border = "none",
-        padding = { 2, 2 }, -- window padding [top/bottom, right/left]
+        row = math.huge,
+        border = "none",
+        padding = { 2, 7 }, -- window padding [top/bottom, right/left]
         title = false,
         title_pos = "center",
         zindex = 1000,
@@ -107,7 +107,7 @@ return {
       -- Layout {{{
       layout = {
         width = { min = 20 }, -- min and max width of the columns
-        spacing = 3, -- spacing between columns
+        spacing = 5, -- spacing between columns
       },
       -- }}}
 
@@ -398,6 +398,9 @@ return {
         { "<leader>lh", desc = "Help" },
         { "<leader>lS", group = "Symbols" },
 
+        -- Persistence
+        { "<leader>p", group = "Persistence" },
+
         -- Telescope
         { "<leader>t",  group = "Telescope" },
 
@@ -407,10 +410,12 @@ return {
         { "<leader>vH", desc = "History" },
         { "<leader>vl", desc = "Lazy" },
         { "<leader>vm", desc = "Mason" },
-        { "<leader>vp", group = "Persistence" },
         { "<leader>vs", desc = "Spell" },
         { "<leader>vt", desc = "Telescope" },
-        { "<leader>vT", desc = "Treesitter" }
+        { "<leader>vT", desc = "Treesitter" },
+
+        -- Yazi
+        { "<leader>y", group = "Yazi" }
         -- }}}
       })
     end
