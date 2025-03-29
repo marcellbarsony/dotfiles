@@ -35,10 +35,10 @@ ueberzug_offset = [ 0, 0, 0, 0 ]
 # Opener {{{
 [opener]
 edit = [
-    { run = '$EDITOR "$@"', block = true, desc = "nvim" },
+    { run = '$EDITOR "$@"', desc = "nvim", block = true },
 ]
 play = [
-    { run = 'vlc "$@"', block = true, desc = "vlc" },
+    { run = 'vlc "$@"', desc = "vlc", orphan = true },
 ]
 open = [
     { run = 'xdg-open "$@"', desc = "XDG open" },

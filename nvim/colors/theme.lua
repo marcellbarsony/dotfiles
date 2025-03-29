@@ -84,7 +84,7 @@ function theme.setup()
     -- }}}
 
     -- Float {{{
-    FloatBorder = { fg = c.fg, bg = c.bg },
+    FloatBorder = { fg = c.primary, bg = c.none },
     FloatTitle  = { fg = c.fg, bg = c.bg },
     -- }}}
 
