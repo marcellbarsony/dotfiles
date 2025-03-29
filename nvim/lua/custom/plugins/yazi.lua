@@ -1,6 +1,6 @@
 -- Yazi.nvim
--- https://github.com/folke/persistence.nvim
--- `:h persistence.nvim.txt`
+-- https://github.com/mikavilpas/yazi.nvim
+-- `:h yazi.nvim`
 
 ---@type LazySpec
 ---@type YaziConfig | {}
@@ -36,9 +36,9 @@ return {
       open_for_directories = false,
       keymaps = {
         show_help = "<f1>",
-        open_file_in_vertical_split = "<c-v>",
-        open_file_in_horizontal_split = "<c-x>",
-        open_file_in_tab = "<c-t>",
+        open_file_in_vertical_split = "<c-w>",
+        open_file_in_horizontal_split = "<c-h>",
+        open_file_in_tab = "<cr>",
         grep_in_directory = "<c-s>",
         replace_in_directory = "<c-g>",
         cycle_open_buffers = "<tab>",
@@ -47,6 +47,7 @@ return {
         change_working_directory = "<c-\\>",
       },
       yazi_floating_window_border = "single",
+      yazi_floating_window_winblend = 0,
     },
     init = function()
       vim.g.loaded_netrwPlugin = 1

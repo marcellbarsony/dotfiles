@@ -60,7 +60,7 @@ local options = {
   -- }}}
 
   -- 7. Multiple tab pages {{{
-  showtabline = 1,
+  showtabline = 0,
   -- }}}
 
   -- 8. Terminal {{{

@@ -241,6 +241,21 @@ function theme.setup()
     OilFileHidden = { fg = c.inverse_primary },
     -- }}}
 
+    -- Telescope {{{
+    TelescopeNormal       = { fg = c.fg,      bg = c.bg     },  -- Normal
+    TelescopeBorder       = { fg = c.primary, bg = c.bg     },  -- Border
+    TelescopePromptBorder = { link = "TelescopeBorder"      },  -- Prompt Border
+    TelescopePromptNormal = { fg = c.fg,      bg = c.bg     },  -- Prompt Normal
+    TelescopePromptPrefix = { fg = c.fg                     },  -- Prompt Sign
+    TelescopePromptTitle  = { fg = c.primary, bg = c.bg     },  -- Prompt Title
+    TelescopePreviewTitle = { link = "TelescopePromptTitle" },  -- Preview
+    TelescopeMatching     = { fg = c.primary                },  -- Matching
+    TelescopeSelection    = { bg = c.bg_dark                },  -- Selection
+    -- TelescopeResultsDiffAdd = { fg = p.teal1 },
+    -- TelescopeResultsDiffChange = { fg = p.yellow },
+    -- TelescopeResultsDiffDelete = { fg = p.pink3 },
+    -- }}}
+
     -- Trouble {{{
     TroubleCount            = { fg = c.fg, bg = c.transparent },
     TroubleDiagnosticsCount = { link = "TroubleCount"         },
@@ -268,20 +283,11 @@ function theme.setup()
     WhichKeyValue     = { fg = c.fg      },  -- Value
     -- }}}
 
-    -- Telescope {{{
-    TelescopeNormal       = { fg = c.fg,      bg = c.bg     },  -- Normal
-    TelescopeBorder       = { fg = c.primary, bg = c.bg     },  -- Border
-    TelescopePromptBorder = { link = "TelescopeBorder"      },  -- Prompt Border
-    TelescopePromptNormal = { fg = c.fg,      bg = c.bg     },  -- Prompt Normal
-    TelescopePromptPrefix = { fg = c.fg                     },  -- Prompt Sign
-    TelescopePromptTitle  = { fg = c.primary, bg = c.bg     },  -- Prompt Title
-    TelescopePreviewTitle = { link = "TelescopePromptTitle" },  -- Preview
-    TelescopeMatching     = { fg = c.primary                },  -- Matching
-    TelescopeSelection    = { bg = c.bg_dark                },  -- Selection
-    -- TelescopeResultsDiffAdd = { fg = p.teal1 },
-    -- TelescopeResultsDiffChange = { fg = p.yellow },
-    -- TelescopeResultsDiffDelete = { fg = p.pink3 },
+    -- Yazi {{{
+    YaziBorder = { bg = c.bg },
+    YaziFloat  = { bg = c.bg },
     -- }}}
+
     -- }}}
 
     -- Syntax {{{
