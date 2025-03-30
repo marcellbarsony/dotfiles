@@ -45,7 +45,7 @@ require("lazy").setup({
   ui = {
     size = { width = 0.8, height = 0.8 },
     wrap = false,
-    border = "single",
+    border = "none",
     -- Icons {{{
     icons = {
       cmd = " ",

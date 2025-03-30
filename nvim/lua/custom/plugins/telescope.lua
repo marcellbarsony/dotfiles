@@ -15,7 +15,8 @@ return {
         defaults = {
           -- Border
           border = true,
-          borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+          -- borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+          borderchars = { " ", " ", " ", " ", " ", " ", " ", " " },
 
           -- Icons
           entry_prefix = " ",
@@ -124,7 +125,7 @@ return {
           sorting_strategy = "ascending",
 
           -- Title
-          dynamic_preview_title = true,
+          dynamic_preview_title = false,
           prompt_title = false,
           results_title = false,
 

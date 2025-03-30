@@ -118,7 +118,6 @@ return {
         }
         -- }}}
       })
-
       -- Event listeners {{{
       local dap, dapui = require("dap"), require("dapui")
 

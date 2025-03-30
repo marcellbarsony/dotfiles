@@ -242,10 +242,10 @@ function theme.setup()
     -- }}}
 
     -- Telescope {{{
-    TelescopeNormal       = { fg = c.fg,      bg = c.bg     },  -- Normal
+    TelescopeNormal       = { fg = c.fg, bg = c.bg          },  -- Normal
     TelescopeBorder       = { fg = c.primary, bg = c.bg     },  -- Border
     TelescopePromptBorder = { link = "TelescopeBorder"      },  -- Prompt Border
-    TelescopePromptNormal = { fg = c.fg,      bg = c.bg     },  -- Prompt Normal
+    TelescopePromptNormal = { fg = c.fg, bg = c.bg          },  -- Prompt Normal
     TelescopePromptPrefix = { fg = c.fg                     },  -- Prompt Sign
     TelescopePromptTitle  = { fg = c.primary, bg = c.bg     },  -- Prompt Title
     TelescopePreviewTitle = { link = "TelescopePromptTitle" },  -- Preview

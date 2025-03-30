@@ -46,8 +46,10 @@ return {
         send_to_quickfix_list = "<c-q>",
         change_working_directory = "<c-\\>",
       },
-      yazi_floating_window_border = "single",
-      yazi_floating_window_winblend = 0,
+      floating_window_scaling_factor = 0.9,
+      highlight_hovered_buffers_in_same_directory = true,
+      yazi_floating_window_border = "none",
+      yazi_floating_window_winblend = 0
     },
     init = function()
       vim.g.loaded_netrwPlugin = 1
