@@ -38,7 +38,7 @@ return {
         show_help = "<f1>",
         open_file_in_vertical_split = "<c-w>",
         open_file_in_horizontal_split = "<c-h>",
-        open_file_in_tab = "<cr>",
+        open_file_in_tab = "<c-o>",
         grep_in_directory = "<c-s>",
         replace_in_directory = "<c-g>",
         cycle_open_buffers = "<tab>",
