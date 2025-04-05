@@ -10,14 +10,14 @@ chromium/
 # GitHub
 gh/
 
+# GitUI
+gitui/
+
 # GNOME
 dconf/
 
 # Htop
 htop/
-
-# Hyprland
-hyprland/config/monitors.conf
 
 # Kdenlive
 kdenlive*
