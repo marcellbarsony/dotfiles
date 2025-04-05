@@ -59,14 +59,14 @@ return {
       -- Floats {{{
       -- https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization#borders
       local border = {
-        { "┌", "FloatBorder" },
-        { "─", "FloatBorder" },
-        { "┐", "FloatBorder" },
-        { "│", "FloatBorder" },
-        { "┘", "FloatBorder" },
-        { "─", "FloatBorder" },
-        { "└", "FloatBorder" },
-        { "│", "FloatBorder" },
+        { "", "FloatBorder" },  -- ┌
+        { "", "FloatBorder" },  -- ─
+        { "", "FloatBorder" },  -- ┐
+        { "", "FloatBorder" },  -- │
+        { "", "FloatBorder" },  -- ┘
+        { "", "FloatBorder" },  -- ─
+        { "", "FloatBorder" },  -- └
+        { "", "FloatBorder" },  -- │
       }
 
       local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
@@ -76,7 +76,7 @@ return {
         return orig_util_open_floating_preview(contents, syntax, opts, ...)
       end
 
-      vim.cmd [[autocmd! ColorScheme * highlight FloatBorder guifg=white]]
+      vim.cmd [[autocmd! ColorScheme * highlight FloatBorder guifg=white ]]
       -- vim.cmd [[autocmd! ColorScheme * highlight NormalFloat guibg=#1f2335]]
       -- vim.cmd [[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335]]
       -- }}}
