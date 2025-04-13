@@ -43,6 +43,9 @@ play = [
 open = [
     { run = 'xdg-open "$@"', desc = "XDG open" },
 ]
+browser = [
+    { run = 'firefox "$@"', desc = "Browser" },
+]
 # }}}
 
 # Open {{{
@@ -61,6 +64,7 @@ rules = [
     { name = "*.md",   use = "edit" },
     { name = "*.out",  use = "edit" },
     { name = "*.sh",   use = "edit" },
+    { name = "*.pdf",  use = "browser" },
     { name = "*.py",   use = "edit" },
     { name = "*.rs",   use = "edit" },
     { name = "*.ron",  use = "edit" },
