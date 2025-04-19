@@ -3,7 +3,7 @@
 
 # Manager {{{
 [manager]
-ratio          = [ 3, 5, 7 ]
+ratio          = [ 3, 3, 7 ]
 sort_by        = "natural"
 sort_sensitive = false
 sort_reverse   = false
