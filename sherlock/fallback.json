@@ -67,20 +67,45 @@
         "priority": 3
     },
     {
+        "name": "Spotify",
+        "alias": "sp",
+        "type": "command",
+        "args": {
+            "commands": {
+                "Play-Pause": {
+                    "icon": "network-connect",
+                    "exec": "playerctl -p spotify play-pause",
+                    "search_string": "toggle"
+                },
+                "Next": {
+                    "icon": "network-connect",
+                    "exec": "playerctl -p spotify next",
+                    "search_string": "next"
+                },
+                "Previous": {
+                    "icon": "network-connect",
+                    "exec": "playerctl -p spotify previous",
+                    "search_string": "prev"
+                }
+            }
+        },
+        "priority": 4
+    },
+    {
         "name": "Network Management",
         "alias": "nm",
         "type": "command",
         "args": {
             "commands": {
-                "Waves": {
+                "Connect": {
                     "icon": "network-connect",
-                    "exec": "nmcli d wifi c Waves &",
-                    "search_string": "wifi;waves"
+                    "exec": "nmcli device connect wlp0s20f3 &",
+                    "search_string": "wifi;home"
                 },
-                "Waves-AP": {
+                "Disconnect": {
                     "icon": "network-connect",
-                    "exec": "nmcli d wifi c Waves-AP &",
-                    "search_string": "wifi;wavesap"
+                    "exec": "nmcli device disconnect wlp0s20f3 &",
+                    "search_string": "wifi;home"
                 }
             }
         },

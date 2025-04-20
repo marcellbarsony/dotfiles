@@ -1,23 +1,14 @@
 {
-    "kitty": {
-        "name": "Terminal",
-        "icon": "terminal"
+    "Ghostty": {
+        "name": "Ghostty"
     },
-    "ncspot": {
-        "name": "Spotify",
-        "icon": "sherlock-spotify"
+    "Spotify (Launcher)": {
+        "name": "Spotify"
+    },
+    "Oracle VirtualBox": {
+        "name": "VirtualBox"
     },
     "VLC media player": {
-        "name": "VLC Player"
-    },
-    "Tweaks": {
-        "name": "GTK Settings",
-        "icon": "settings"
-    },
-    "Vesktop": {
-        "name": "Discord",
-        "icon": "discord",
-        "exec": "/usr/bin/vesktop --enable-features=UseOzonePlatform --ozone-platform=wayland %U",
-        "keywords": "discord"
+        "name": "VLC"
     }
 }

@@ -11,7 +11,7 @@ SHUTDOWN = "Poweroff"
 
 
 def main():
-    cmd = f"rofi -dmenu"
+    cmd = f"sherlock"
     stdin = f"{LOCK}\n{SHUTDOWN}\n{REBOOT}\n{LOGOUT}"
     try:
         out = subprocess.run(cmd, shell=True, check=True, input=stdin.encode(), stdout=subprocess.PIPE)
