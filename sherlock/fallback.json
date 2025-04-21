@@ -1,49 +1,10 @@
 [
     {
-        "name": "Teams Event",
-        "type": "teams_event",
-        "args": {
-            "icon": "teams",
-            "date_date": "now",
-            "event_start": "-5 minutes",
-            "event_end": "+15 minutes"
-        },
-        "priority": 1,
-        "home": true
-    },
-    {
-        "name": "Clipboard",
-        "type": "clipboard-execution",
-        "args": {},
-        "priority": 1,
-        "home": true
-    },
-    {
-        "name": "Spotify",
-        "type": "audio_sink",
-        "args": {},
-        "async": true,
-        "priority": 1,
-        "home": true,
-        "spawn_focus": true
-    },
-    {
-        "name": "Calculator",
-        "type": "calculation",
-        "args": {
-            "capabilities": [
-                "calc.math",
-                "calc.units"
-            ]
-        },
-        "priority": 1
-    },
-    {
         "name": "App Launcher",
         "alias": "app",
         "type": "app_launcher",
         "args": {},
-        "priority": 2,
+        "priority": 3,
         "home": true
     },
     {
@@ -65,6 +26,153 @@
             }
         },
         "priority": 3
+    },
+    {
+        "name": "Calculator",
+        "type": "calculation",
+        "args": {
+            "capabilities": [
+                "calc.math",
+                "calc.units"
+            ]
+        },
+        "priority": 1
+    },
+    {
+        "name": "Clipboard",
+        "type": "clipboard-execution",
+        "args": {},
+        "priority": 1,
+        "home": true
+    },
+    {
+        "name": "Network Management",
+        "alias": "nm",
+        "type": "command",
+        "args": {
+            "commands": {
+                "Connect": {
+                    "icon": "network-connect",
+                    "exec": "nmcli device connect wlp0s20f3 &",
+                    "search_string": "wifi;home"
+                },
+                "Disconnect": {
+                    "icon": "network-connect",
+                    "exec": "nmcli device disconnect wlp0s20f3 &",
+                    "search_string": "wifi;home"
+                }
+            }
+        },
+        "priority": 4
+    },
+    {
+        "name": "OBS Studio",
+        "alias": "obs",
+        "type": "command",
+        "args": {
+            "commands": {
+                "Start Recording": {
+                    "icon": "sherlock-record",
+                    "exec": "obs --startrecording &",
+                    "search_string": "recording;start recording;startrecording;obs studio;"
+                }
+            }
+        },
+        "priority": 5
+    },
+    {
+        "name": "Power Management",
+        "alias": "pm",
+        "type": "command",
+        "args": {
+            "commands": {
+                "Shutdown": {
+                    "icon": "system-shutdown",
+                    "exec": "poweroff",
+                    "search_string": "Poweroff;Shutdown"
+                },
+                "Sleep": {
+                    "icon": "system-suspend",
+                    "exec": "systemctl suspend",
+                    "search_string": "Sleep;"
+                },
+                "Logout": {
+                    "icon": "system-lock-screen",
+                    "exec": "hyprctl dispatch exit",
+                    "search_string": "Lock Screen;"
+                },
+                "Lock": {
+                    "icon": "system-lock-screen",
+                    "exec": "hyprlock",
+                    "search_string": "Lock Screen;"
+                },
+                "Reboot": {
+                    "icon": "system-reboot",
+                    "exec": "reboot",
+                    "search_string": "reboot"
+                }
+            }
+        },
+        "priority": 4
+    },
+    {
+        "display_name": "S E A R C H",
+        "name": "SEARCH",
+        "tag_start": "{keyword}",
+        "alias": "ss",
+        "type": "web_launcher",
+        "args": {
+            "search_engine": "https://www.startpage.com/sp/search?q={keyword}",
+            "icon": "sherlock-youtube"
+        },
+        "priority": 0
+    },
+    {
+        "name": "Search - Web",
+        "display_name": "Startpage",
+        "tag_start": "{keyword}",
+        "alias": "gg",
+        "type": "web_launcher",
+        "args": {
+            "search_engine": "https://www.startpage.com/sp/search?q={keyword}",
+            "icon": "sherlock-youtube"
+        },
+        "priority": 100
+    },
+    {
+        "name": "Search - Wikipedia",
+        "alias": "wiki",
+        "type": "bulk_text",
+        "on_return": "next",
+        "async": true,
+        "args": {
+            "icon": "wikipedia",
+            "exec": "/home/basti/.config/sherlock/scripts/sherlock-wiki",
+            "exec-args": "'{keyword}'"
+        },
+        "priority": 0,
+        "shortcut": false
+    },
+    {
+        "name": "Search - YouTube",
+        "display_name": "Youtube Search",
+        "tag_start": "{keyword}",
+        "alias": "yt",
+        "type": "web_launcher",
+        "args": {
+            "search_engine": "https://www.youtube.com/results?search_query={keyword}",
+            "icon": "sherlock-youtube"
+        },
+        "priority": 0
+    },
+    {
+        "name": "Spotify",
+        "type": "audio_sink",
+        "args": {},
+        "async": true,
+        "priority": 2,
+        "home": true,
+        "spawn_focus": true
     },
     {
         "name": "Spotify",
@@ -92,69 +200,16 @@
         "priority": 4
     },
     {
-        "name": "Network Management",
-        "alias": "nm",
-        "type": "command",
+        "name": "Teams Event",
+        "type": "teams_event",
         "args": {
-            "commands": {
-                "Connect": {
-                    "icon": "network-connect",
-                    "exec": "nmcli device connect wlp0s20f3 &",
-                    "search_string": "wifi;home"
-                },
-                "Disconnect": {
-                    "icon": "network-connect",
-                    "exec": "nmcli device disconnect wlp0s20f3 &",
-                    "search_string": "wifi;home"
-                }
-            }
+            "icon": "teams",
+            "date_date": "now",
+            "event_start": "-5 minutes",
+            "event_end": "+15 minutes"
         },
-        "priority": 4
-    },
-    {
-        "name": "Power Management",
-        "alias": "pm",
-        "type": "command",
-        "args": {
-            "commands": {
-                "Shutdown": {
-                    "icon": "system-shutdown",
-                    "exec": "systemctl poweroff",
-                    "search_string": "Poweroff;Shutdown"
-                },
-                "Sleep": {
-                    "icon": "system-suspend",
-                    "exec": "systemctl suspend",
-                    "search_string": "Sleep;"
-                },
-                "Lock": {
-                    "icon": "system-lock-screen",
-                    "exec": "systemctl suspend & swaylock",
-                    "search_string": "Lock Screen;"
-                },
-                "Reboot": {
-                    "icon": "system-reboot",
-                    "exec": "systemctl reboot",
-                    "search_string": "reboot"
-                }
-            }
-        },
-        "priority": 4
-    },
-    {
-        "name": "OBS Studio",
-        "alias": "",
-        "type": "command",
-        "args": {
-            "commands": {
-                "Start Recording": {
-                    "icon": "sherlock-record",
-                    "exec": "obs --startrecording &",
-                    "search_string": "recording;start recording;startrecording;obs studio;"
-                }
-            }
-        },
-        "priority": 5
+        "priority": 1,
+        "home": true
     },
     {
         "name": "Utilities",
@@ -172,41 +227,17 @@
         "priority": 5
     },
     {
-        "name": "Web Search",
-        "display_name": "Google Search",
-        "tag_start": "{keyword}",
-        "alias": "gg",
-        "type": "web_launcher",
+        "name": "Weather",
+        "type": "weather",
         "args": {
-            "search_engine": "google",
-            "icon": "google"
+            "location": "budapest",
+            "update_interval": 300
         },
-        "priority": 100
-    },
-    {
-        "name": "YouTube Search",
-        "display_name": "Youtube Search",
-        "tag_start": "{keyword}",
-        "alias": "yt",
-        "type": "web_launcher",
-        "args": {
-            "search_engine": "https://www.youtube.com/results?search_query={keyword}",
-            "icon": "sherlock-youtube"
-        },
-        "priority": 0
-    },
-    {
-        "name": "Wikipedia Search",
-        "alias": "wiki",
-        "type": "bulk_text",
-        "on_return": "next",
+        "priority": 1,
+        "home": true,
+        "only_home": true,
         "async": true,
-        "args": {
-            "icon": "wikipedia",
-            "exec": "/home/basti/.config/sherlock/scripts/sherlock-wiki",
-            "exec-args": "'{keyword}'"
-        },
-        "priority": 0,
-        "shortcut": false
+        "shortcut": false,
+        "spawn_focus": false
     }
 ]
