@@ -116,30 +116,6 @@
         "priority": 4
     },
     {
-        "display_name": "S E A R C H",
-        "name": "SEARCH",
-        "tag_start": "{keyword}",
-        "alias": "ss",
-        "type": "web_launcher",
-        "args": {
-            "search_engine": "https://www.startpage.com/sp/search?q={keyword}",
-            "icon": "sherlock-youtube"
-        },
-        "priority": 0
-    },
-    {
-        "name": "Search - Web",
-        "display_name": "Startpage",
-        "tag_start": "{keyword}",
-        "alias": "gg",
-        "type": "web_launcher",
-        "args": {
-            "search_engine": "https://www.startpage.com/sp/search?q={keyword}",
-            "icon": "sherlock-youtube"
-        },
-        "priority": 100
-    },
-    {
         "name": "Search - Wikipedia",
         "alias": "wiki",
         "type": "bulk_text",
@@ -239,5 +215,17 @@
         "async": true,
         "shortcut": false,
         "spawn_focus": false
+    },
+    {
+        "name": "Web",
+        "display_name": "Search",
+        "tag_start": "{keyword}",
+        "alias": "gg",
+        "type": "web_launcher",
+        "args": {
+            "search_engine": "https://www.startpage.com/sp/search?q={keyword}",
+            "icon": "sherlock-youtube"
+        },
+        "priority": 100
     }
 ]

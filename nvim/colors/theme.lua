@@ -340,6 +340,17 @@ function theme.setup()
     -- cssPositioningProp = { fg = c.fg              },
     cssValueLength     = { link = "Number"        },
     -- -- }}}
+
+    -- Hypr {{{
+    hyprBoolean      = { link = "Boolean"  },
+    hyprCommand      = { fg = c.primary    },
+    hyprComment      = { link = "Comment"  },
+    hyprCategoryD    = { fg = c.primary    },
+    hyprNumber       = { link = "Constant" },
+    hyprValue        = { link = "String"   },
+    hyprVariable     = { link = "Variable" },
+    hyprString       = { link = "String"   },
+    -- }}}
     -- }}}
 
     -- Treesitter {{{
