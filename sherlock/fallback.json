@@ -39,6 +39,27 @@
         "priority": 1
     },
     {
+        "name": "Categories",
+        "alias": "cat",
+        "type": "categories",
+        "args": {
+            "Kill Processes": {
+                "icon": "sherlock-process", 
+                "icon_class": "reactive", 
+                "exec": "kill", 
+                "search_string": "terminate;kill;process"
+                },
+            "Power Menu": {
+                "icon": "battery-full-symbolic",
+                "icon_class": "reactive", 
+                "exec": "pm", 
+                "search_string": "powermenu;"
+                }
+        },
+        "priority": 3,
+        "home": true
+    },
+    {
         "name": "Clipboard",
         "type": "clipboard-execution",
         "args": {},
@@ -220,11 +241,11 @@
         "name": "Web",
         "display_name": "Search",
         "tag_start": "{keyword}",
-        "alias": "gg",
+        "alias": "sp",
         "type": "web_launcher",
         "args": {
-            "search_engine": "https://www.startpage.com/sp/search?q={keyword}",
-            "icon": "sherlock-youtube"
+            "earch_engine": "https://www.startpage.com/sp/search?q={keyword}",
+            "icon": "sherlock-startpage"
         },
         "priority": 100
     }

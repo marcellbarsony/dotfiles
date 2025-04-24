@@ -93,8 +93,8 @@ user_pref("privacy.userContext.newTabContainerOnLeftClick.enabled", false);
 // SEARCH
 user_pref("browser.search.suggest.enabled", false);
 user_pref("browser.urlbar.accessibility.tabToSearch.announceResults", false)
-user_pref("browser.urlbar.placeholderName", "DuckDuckGo");
-user_pref("browser.urlbar.placeholderName.private", "DuckDuckGo");
+user_pref("browser.urlbar.placeholderName", "StartPage");
+user_pref("browser.urlbar.placeholderName.private", "StartPage");
 user_pref("browser.urlbar.suggest.addons", false);
 user_pref("browser.urlbar.suggest.bestmatch", false);
 user_pref("browser.urlbar.suggest.bookmark", true);
