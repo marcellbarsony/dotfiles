@@ -137,20 +137,6 @@
         "priority": 4
     },
     {
-        "name": "Search - Wikipedia",
-        "alias": "wiki",
-        "type": "bulk_text",
-        "on_return": "next",
-        "async": true,
-        "args": {
-            "icon": "wikipedia",
-            "exec": "/home/basti/.config/sherlock/scripts/sherlock-wiki",
-            "exec-args": "'{keyword}'"
-        },
-        "priority": 0,
-        "shortcut": false
-    },
-    {
         "name": "Search - YouTube",
         "display_name": "Youtube Search",
         "tag_start": "{keyword}",
@@ -238,7 +224,7 @@
         "spawn_focus": false
     },
     {
-        "name": "Web",
+        "name": "Web (StartPage)",
         "display_name": "Search",
         "tag_start": "{keyword}",
         "alias": "sp",

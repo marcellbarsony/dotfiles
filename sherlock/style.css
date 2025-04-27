@@ -319,6 +319,7 @@ overshoot:backdrop {
 #search-icon-holder image {
     transition: 0.1s ease;
 }
+
 #search-icon-holder.search image:nth-child(1){
     transition-delay: 0.05s;
     opacity: 1;
@@ -630,7 +631,7 @@ window {
     background: hsl(var(--background));
     border-radius: 0px;
     border: 0px solid hsl(var(--border));
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
 scrolledwindow>viewport,
