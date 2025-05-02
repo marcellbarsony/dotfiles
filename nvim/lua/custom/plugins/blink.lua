@@ -12,6 +12,7 @@ return {
     opts = {
       -- Appearance {{{
       -- https://cmp.saghen.dev/configuration/appearance.html
+      -- https://cmp.saghen.dev/configuration/reference.html#appearance
       appearance = {
         use_nvim_cmp_as_default = true,
         nerd_font_variant = "mono"
@@ -20,8 +21,19 @@ return {
 
       -- CmdLine {{{
       -- https://cmp.saghen.dev/modes/cmdline.html
+      -- https://cmp.saghen.dev/configuration/reference.html#cmdline
       cmdline = {
+        enabled = true,
         completion = {
+          ghost_text = {
+            enabled = true
+          },
+          list = {
+            selection = {
+              preselect = true,
+              auto_insert = true,
+            }
+          },
           menu = {
             auto_show = true
           }
@@ -30,16 +42,30 @@ return {
       -- }}}
 
       -- Completion {{{
+      -- https://cmp.saghen.dev/configuration/completion.html
       -- https://cmp.saghen.dev/configuration/reference.html#completion
       completion = {
         -- Documentation {{{
+        -- https://cmp.saghen.dev/configuration/completion.html#documentation
         -- https://cmp.saghen.dev/configuration/reference.html#completion-documentation
         documentation = {
           auto_show = true
         },
         -- }}}
 
+        -- List {{{
+        -- https://cmp.saghen.dev/configuration/completion.html#list
+        -- https://cmp.saghen.dev/configuration/reference#completion-list
+        list = {
+          selection = {
+            preselect = true,
+            auto_insert = true
+          }
+        },
+        -- }}}
+
         -- Ghost text {{{
+        -- https://cmp.saghen.dev/configuration/completion.html#ghost-text
         -- https://cmp.saghen.dev/configuration/reference.html#completion-ghost-text
         ghost_text = {
           enabled = true,
@@ -51,14 +77,16 @@ return {
         -- }}}
 
         -- Menu {{{
+        -- https://cmp.saghen.dev/configuration/completion.html#menu
         -- https://cmp.saghen.dev/configuration/reference.html#completion-menu-draw
         menu = {
+          auto_show = true,
           draw = {
             padding = 0,
             columns = {
               { 'label', 'label_description', gap = 1 },
               { 'kind_icon' }
-            },
+            }
           }
         }
         -- }}}
@@ -66,25 +94,33 @@ return {
       -- }}}
 
       -- Keymap {{{
+      -- https://cmp.saghen.dev/configuration/keymap.html
       keymap = {
         preset = "none",
-        ['<CR>'] = { 'accept', 'fallback' },
 
-        ['<Tab>'] = { 'snippet_forward', 'select_next', 'fallback' },
-        ['<S-Tab>'] = { 'snippet_backward', 'select_prev', 'fallback' },
+        -- Accept
+        ['<CR>'] = { 'accept', 'fallback' },
 
         -- Documentation
         ['<C-u>'] = { 'scroll_documentation_up', 'fallback' },
         ['<C-d>'] = { 'scroll_documentation_down', 'fallback' },
 
-        -- Show & Hide
-        ["<C-space>"] = { function(cmp) cmp.show({ providers = { "snippets" } }) end },
-        ["<C-c>"] = { "hide" },
+        -- Navigation
+        ['<Tab>'] = {  'select_next', 'snippet_forward', 'fallback' },
+        ['<S-Tab>'] = {  'select_prev', 'snippet_backward', 'fallback' },
 
+        -- Show & Hide
+        ["<C-space>"] = {
+          function(cmp)
+            cmp.show( { providers = { "snippets" } } )
+          end
+        },
+        ["<C-c>"] = { "hide", "fallback" },
       },
       -- }}}
 
       -- Snippets {{{
+      -- https://cmp.saghen.dev/configuration/snippets.html
       -- https://cmp.saghen.dev/configuration/reference.html#snippets
       snippets = {
         preset = "luasnip"
@@ -93,6 +129,7 @@ return {
 
       -- Signature {{{
       -- https://cmp.saghen.dev/configuration/signature.html
+      -- https://cmp.saghen.dev/configuration/reference.html#signature
       -- Experimental
       signature = {
         enabled = true
@@ -100,9 +137,16 @@ return {
       -- }}}
 
       -- Sources {{{
+      -- https://cmp.saghen.dev/configuration/sources.html
+      -- https://cmp.saghen.dev/configuration/reference.html#sources
       sources = {
-        default = { "snippets", "lsp", "path", "buffer" },
-      },
+        default = {
+          "snippets",
+          "lsp",
+          "path",
+          "buffer"
+        }
+      }
       -- }}}
     },
     opts_extend = { "sources.default" }
