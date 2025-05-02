@@ -12,7 +12,7 @@ return {
     config = function()
       -- LSP Servers {{{
       local lspconfig = require("lspconfig")
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
+      -- local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local servers = {
         "asm_lsp",
         "bashls",
@@ -24,7 +24,7 @@ return {
       for _, lsp in ipairs(servers) do
         lspconfig[lsp].setup {
           on_attach = on_attach,
-          capabilities = capabilities,
+          -- capabilities = capabilities,
           flags = lsp_flags,
         }
       end
