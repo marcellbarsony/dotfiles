@@ -18,7 +18,7 @@ function theme.setup()
     CursorIM     = { fg = c.bg, bg = c.fg   },  -- Cursor, but used in IME mode |CursorIM|
     CursorColumn = { bg = c.bg              },  -- Cursor screen-column when 'cursorcolumn' is set
     CursorLine   = { bg = c.bg_dark         },  -- Cursor screen-line when 'cursorline' is set
-    CursorLineNr = { fg = c.fg, bold = true },  -- LineNr when 'cursorline' or 'relativenumber' is set
+    CursorLineNr = { fg = c.inverse_primary, bold = true },  -- LineNr when 'cursorline' or 'relativenumber' is set
     -- }}}
 
     -- Base {{{
@@ -41,11 +41,11 @@ function theme.setup()
     WinSeparator = { fg = c.bg_dark, bg = c.transparent  },  -- the column separating vertically split windows
     WildMenu     = { bg = c.bg_dark                      },  -- Current match in 'wildmenu' completion
 
-    Define        = { fg = c.primary },  --   preprocessor #define
-    -- Include = { fg = p.blueGray1 }, --  preprocessor #include
-    Macro         = { fg = c.primary },  --    same as Define
-    -- PreCondit     = { }, --  preprocessor #if, #else, #endif, etc.
-    -- PreProc = { fg = p.text }, -- (preferred) generic Preprocessor
+    Define        = { fg = c.primary },  -- Preprocessor #define
+    -- Include = { fg = p.blueGray1 }, -- Preprocessor #include
+    Macro         = { fg = c.primary },  -- Same as Define
+    -- PreCondit     = { }, -- Preprocessor #if, #else, #endif, etc.
+    -- PreProc = { fg = p.text }, -- Generic Preprocessor (preferred)
     -- }}}
 
     -- Diagnostic {{{
@@ -75,7 +75,7 @@ function theme.setup()
     -- Error & Warning {{{
     Error                       = { fg = c.on_error },  -- (preferred) any erroneous construct
     ErrorMsg                    = { fg = c.primary  },  -- error messages on the command line
-    -- WarningMsg                  = { fg = c.warning }, -- warning messages
+    -- WarningMsg                  = { fg = c.warning },  -- warning messages
     -- }}}
 
     -- Fold {{{
@@ -95,9 +95,9 @@ function theme.setup()
     -- }}}
 
     -- Line number {{{
-    LineNr      = { fg = c.fg, bold = true },
-    LineNrAbove = { fg = c.fg_dark         },
-    LineNrBelow = { fg = c.fg_dark         },
+    LineNr      = { fg = c.primary, bold = true },
+    LineNrAbove = { fg = c.fg_dark              },
+    LineNrBelow = { fg = c.fg_dark              },
     -- }}}
 
     -- LSP {{{
@@ -119,12 +119,12 @@ function theme.setup()
     -- }}}
 
     -- Popup menu {{{
-    Pmenu            = { bg = c.bg, fg = c.fg             },  -- Normal item
-    PmenuSbar        = { bg = c.bg_dark                   },  -- Scrollbar
-    PmenuThumb       = { bg = c.inverse_primary           },  -- Scrollbar thumb
-    PmenuMatch       = { bg = c.on_error, fg = c.on_error },  -- Matched text in normal item
-    PmenuMatchSel    = { bg = c.on_error, fg = c.on_error },  -- Matched text in selected item
-    PmenuSel         = { bg = c.bg_dark, fg = c.fg        },  -- Selected item
+    Pmenu         = { bg = c.bg, fg = c.fg             },  -- Normal item
+    PmenuSbar     = { bg = c.bg_dark                   },  -- Scrollbar
+    PmenuThumb    = { bg = c.inverse_primary           },  -- Scrollbar thumb
+    PmenuMatch    = { bg = c.on_error, fg = c.on_error },  -- Matched text in normal item
+    PmenuMatchSel = { bg = c.on_error, fg = c.on_error },  -- Matched text in selected item
+    PmenuSel      = { bg = c.bg_dark, fg = c.fg        },  -- Selected item
     -- }}}
 
     -- Search & Replace {{{
@@ -140,10 +140,10 @@ function theme.setup()
     -- }}}
 
     -- Spell {{{
-    -- SpellBad   = { sp = c.error, undercurl = true   },  -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
-    -- SpellCap   = { sp = c.warning, undercurl = true },  -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
-    -- SpellLocal = { sp = c.info, undercurl = true    },  -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
-    -- SpellRare  = { sp = c.hint, undercurl = true    },  -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
+    SpellBad   = { sp = c.error, undercurl = true },  -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
+    SpellCap   = { sp = c.warn, undercurl = true  },  -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
+    SpellLocal = { sp = c.info, undercurl = true  },  -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
+    SpellRare  = { sp = c.hint, undercurl = true  },  -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
     -- }}}
 
     -- StatusLine {{{
@@ -287,7 +287,6 @@ function theme.setup()
     YaziBorder = { bg = c.bg },
     YaziFloat  = { bg = c.bg },
     -- }}}
-
     -- }}}
 
     -- Syntax {{{
@@ -296,7 +295,7 @@ function theme.setup()
     debugBreakpoint             = { bg = c.on_error, fg = c.on_error },  -- used for breakpoint colors in terminal-debug
     debugPC                     = { bg = c.primary                   },  -- used for highlighting the current line in terminal-debug
     Italic                      = { italic = true, fg = c.fg         },  -- (preferred) any italic text
-    Underlined                  = { underline = true                 }, -- (preferred) text that stands out, HTML links
+    Underlined                  = { underline = true                 },  -- (preferred) text that stands out, HTML links
 
     -- Syntax Variables {{{
     Boolean      = { fg = c.tertiary },
@@ -312,19 +311,19 @@ function theme.setup()
     -- }}}
 
     -- Syntax Keywords {{{
-    Comment        = { fg = c.comment, italic = true },  -- Comments
-    Conditional    = { fg = c.inverse_primary        },  -- if, else, endif, then, switch
-    Delimiter      = { fg = c.fg                     },
-    Exception      = { fg = c.inverse_primary        },  -- try, catch, throw
-    Identifier     = { fg = c.primary                },  -- (preferred) any variable name
-    Keyword        = { fg = c.inverse_primary        },  -- Any other keyword
-    Label          = { fg = c.primary                },  -- case, default
-    Module         = { fg = c.primary                },  -- Modules
-    Operator       = { fg = c.primary                },  -- sizeof, +, *, =, .
-    Punctuation    =  { fg = c.fg                    },  -- , / ; / ::
-    -- Repeat        = { fg = p.blue3                  },  -- for, do, while, etc.
-    -- Statement     = { fg = p.text                   },  -- (preferred) any statement
-    -- Todo          = { bg = c.yellow, fg = c.bg      },  -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+    Comment     = { fg = c.comment, italic = true },  -- Comments
+    Conditional = { fg = c.inverse_primary        },  -- if, else, endif, then, switch
+    Delimiter   = { fg = c.fg                     },
+    Exception   = { fg = c.inverse_primary        },  -- try, catch, throw
+    Identifier  = { fg = c.primary                },  -- (preferred) any variable name
+    Keyword     = { fg = c.inverse_primary        },  -- Any other keyword
+    Label       = { fg = c.primary                },  -- case, default
+    Module      = { fg = c.primary                },  -- Modules
+    Operator    = { fg = c.primary                },  -- sizeof, +, *, =, .
+    Punctuation = { fg = c.fg                     },  -- , / ; / ::
+    -- Repeat      = { fg = p.blue3                  },  -- for, do, while, etc.
+    -- Statement   = { fg = p.text                   },  -- (preferred) any statement
+    -- Todo        = { bg = c.yellow, fg = c.bg      },  -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
     -- }}}
 
     -- CSS {{{
@@ -339,7 +338,7 @@ function theme.setup()
     -- cssTextProp        = { fg = c.fg              },
     -- cssPositioningProp = { fg = c.fg              },
     cssValueLength     = { link = "Number"        },
-    -- -- }}}
+    -- }}}
 
     -- Hypr {{{
     hyprBoolean      = { link = "Boolean"  },
