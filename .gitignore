@@ -62,6 +62,9 @@ qtile/scripts/__pycache__
 QtProject.conf
 QtProject/
 
+# Sherlock
+sherlock/sherlock_actions.json
+
 # Spotify
 spotify/
 spotify-tui/client.yml

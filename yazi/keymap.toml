@@ -82,8 +82,7 @@ keymap = [
     # Copy {{{
     { on = [ "c", "c" ], run = "copy path",             desc = "Copy path [Absolute]" },
     { on = [ "c", "d" ], run = "copy dirname",          desc = "Copy path [Parent dir]" },
-    { on = [ "c", "f" ], run = "copy filename",         desc = "Copy [Filemame]" },
-    { on = [ "c", "n" ], run = "copy name_without_ext", desc = "Copy [Filename + Extension]" },
+    { on = [ "c", "f" ], run = "copy filename",         desc = "Copy [Filename + Extension]" },
     # }}}
 
     # Filter {{{
