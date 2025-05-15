@@ -8,7 +8,7 @@ from datetime import datetime
 
 
 USER = getpass.getuser()
-PATH = f"/home/{USER}/Downloads/screenshots"
+PATH = f"/home/{USER}/tmp/screenshots"
 
 
 def check_dir(PATH: str):

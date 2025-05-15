@@ -11,6 +11,9 @@ user_pref("browser.toolbars.bookmarks.visibility", "newtab");
 user_pref("browser.tabs.loadBookmarksInTabs", false);
 user_pref("browser.toolbars.bookmarks.showOtherBookmarks", true);
 
+// CRASH
+user_pref("browser.sessionstore.resume_from_crash", true);
+
 // CSS
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 
@@ -21,7 +24,7 @@ user_pref("devtools.theme", "dark");
 user_pref("devtools.toolbox.host", "right");
 
 // DOWNLOADS
-user_pref("browser.download.dir", "/home/marci/Downlads");
+user_pref("browser.download.dir", "/home/marci/Downloads");
 user_pref("browser.download.folderList", 0);
 user_pref("browser.download.lastDir", 0);
 user_pref("rowser.download.autohidebutton", true);
@@ -160,7 +163,7 @@ user_pref("_user.js.fox", "0100 :: STARTUP :: Error");
 
 // 0102: Startup page
 // Opts: 0 - Blank, 1 - Home, 2 - Last visited page, 3 - Resume previous session
-user_pref("browser.startup.page", 1);
+user_pref("browser.startup.page", 3);
 // 0103: Homepage / New window page
 user_pref("browser.startup.homepage", "about:blank");
 // 0104: NEWTAB page
@@ -413,9 +416,9 @@ user_pref("privacy.sanitize.sanitizeOnShutdown", true);
 // SANITIZE ON SHUTDOWN: Ignores "ALLOW" site exceptions
 // 2811: Set/enforce clearOnShutdown items
 user_pref("privacy.clearOnShutdown_v2.cache", true);
-user_pref("privacy.clearOnShutdown_v2.historyFormDataAndDownloads", true);
+user_pref("privacy.clearOnShutdown_v2.historyFormDataAndDownloads", false); // Override: restore session
 // 2812: Set/enforce clearOnShutdown items
-user_pref("privacy.clearOnShutdown_v2.browsingHistoryAndDownloads", true);
+user_pref("privacy.clearOnShutdown_v2.browsingHistoryAndDownloads", false); // Override: restore session
 user_pref("privacy.clearOnShutdown_v2.downloads", true);
 user_pref("privacy.clearOnShutdown_v2.formdata", true);
 
@@ -426,7 +429,7 @@ user_pref("privacy.clearOnShutdown_v2.cookiesAndStorage", true);
 // SANITIZE SITE DATA: Ignores "ALLOW" site exceptions
 // 2820: Set manual "Clear Data" items
 user_pref("privacy.clearSiteData.cache", true);
-user_pref("privacy.clearSiteData.cookiesAndStorage", false);
+user_pref("privacy.clearSiteData.cookiesAndStorage", true);
 user_pref("privacy.clearSiteData.historyFormDataAndDownloads", true);
 // 2821: Set manual "Clear Data" items
 user_pref("privacy.clearSiteData.browsingHistoryAndDownloads", true);
@@ -435,7 +438,7 @@ user_pref("privacy.clearSiteData.formdata", true);
 // SANITIZE HISTORY: Ignores "ALLOW" site exceptions
 // 2830: Set manual "Clear History" items, also via Ctrl-Shift-Del
 user_pref("privacy.clearHistory.cache", true);
-user_pref("privacy.clearHistory.cookiesAndStorage", false);
+user_pref("privacy.clearHistory.cookiesAndStorage", true);
 user_pref("privacy.clearHistory.historyFormDataAndDownloads", true);
 // 2831: Set manual "Clear History" items
 user_pref("privacy.clearHistory.browsingHistoryAndDownloads", true);

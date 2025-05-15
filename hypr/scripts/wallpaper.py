@@ -8,7 +8,7 @@ import sys
 
 
 USER = getpass.getuser()
-BACKGROUNDS = f"/home/{USER}/Downloads/backgrounds"
+BACKGROUNDS = f"/home/{USER}/tmp/backgrounds"
 
 
 # Random Background {{{
