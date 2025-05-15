@@ -121,7 +121,7 @@
     // Network {{{
     "network": {
         "interval": 60,
-        "interface": "wlp0s2*",
+        "interface": "wlp1s0*",
         "format-alt": "{ifname}: {ipaddr}/{cidr} @ {essid}({signalStrength})",
         "format-disconnected": "Disconnected",
         "format-icons": "",

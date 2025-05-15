@@ -432,6 +432,7 @@ function theme.setup()
     ["@type.python"]                = { link = "Type"        },
     ["@type.builtin.python"]        = { link = "Type"        },
     ["@string.escape.python"]       = { link = "Operator"    },
+    ["@string.regexp.python"]       = { link = "String"      },
     ["@variable.parameter.python"]  = { link = "Variable"    },
     ["@variable.python"]            = { link = "Variable"    },
     -- }}}

@@ -145,7 +145,7 @@ eval "$(fzf --zsh)"
 if [[ -f ~/.local/src/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]]; then
     source ~/.local/src/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 else
-    echo "Cannot source ZSH Autocomplete"
+    echo ":: [-] :: Source ZSH Autocomplete"
 fi
 bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
 bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
