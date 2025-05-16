@@ -1,13 +1,16 @@
 {
-  "timeStamp": 1728332001965,
-  "version": "1.60.0",
+  "timeStamp": 1747432733154,
+  "version": "1.63.2",
   "userSettings": {
     "advancedUserEnabled": true,
     "cloudStorageEnabled": true,
     "uiAccentCustom": true,
     "uiAccentCustom0": "#3584e4",
     "uiTheme": "dark",
-    "importedLists": [],
+    "externalLists": "https://filters.hufilter.hu/hufilter-ublock.txt",
+    "importedLists": [
+      "https://filters.hufilter.hu/hufilter-ublock.txt"
+    ],
     "popupPanelSections": 63,
     "tooltipsDisabled": true
   },
@@ -22,7 +25,8 @@
     "adguard-spyware",
     "adguard-spyware-url",
     "urlhaus-1",
-    "plowe-0"
+    "plowe-0",
+    "https://filters.hufilter.hu/hufilter-ublock.txt"
   ],
   "hiddenSettings": {},
   "whitelist": [
@@ -38,5 +42,5 @@
   "dynamicFilteringString": "",
   "urlFilteringString": "",
   "hostnameSwitchesString": "no-large-media: behind-the-scene false\nno-csp-reports: * true",
-  "userFilters": ""
+  "userFilters": "no-csp-reports: * true\nno-large-media: behind-the-scene false"
 }

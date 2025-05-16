@@ -24,7 +24,7 @@ user_pref("devtools.theme", "dark");
 user_pref("devtools.toolbox.host", "right");
 
 // DOWNLOADS
-user_pref("browser.download.dir", "/home/marci/Downloads");
+user_pref("browser.download.dir", "/home/marci/tmp");
 user_pref("browser.download.folderList", 0);
 user_pref("browser.download.lastDir", 0);
 user_pref("rowser.download.autohidebutton", true);
