@@ -8,12 +8,8 @@
 <VirtualBox xmlns="http://www.virtualbox.org/" version="1.12-linux">
   <Global>
     <ExtraData>
-      <ExtraDataItem name="GUI/LanguageID" value="C"/>
       <ExtraDataItem name="GUI/LastItemSelected" value="n=GLOBAL"/>
       <ExtraDataItem name="GUI/LastWindowPosition" value="1930,32,1900,1038"/>
-      <ExtraDataItem name="GUI/RecentFolderCD" value="/home/marci/Downloads/virtualbox"/>
-      <ExtraDataItem name="GUI/RecentListCD" value="/home/marci/Downloads/virtualbox/archlinux-2025.05.01-x86_64.iso,/home/marci/Downloads/archlinux-2025.05.01-x86_64.iso"/>
-      <ExtraDataItem name="GUI/Settings/ExpertMode" value="true"/>
       <ExtraDataItem name="GUI/Tools/LastItemsSelected" value="Welcome,Details"/>
     </ExtraData>
     <MachineRegistry/>

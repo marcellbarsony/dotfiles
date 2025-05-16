@@ -80,7 +80,8 @@ sqlitebrowser/
 starship/*.log
 
 # VirtualBox
-# VirtualBox/
+VirtualBox/
+VirtualBox/VirtualBox.xml
 
 # VLC
 vlc/
