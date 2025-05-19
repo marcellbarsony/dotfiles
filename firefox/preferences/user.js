@@ -280,7 +280,7 @@ user_pref("browser.urlbar.yelp.featureGate", false);
 // 0810: Disable search and form history
 user_pref("browser.formfill.enable", false);
 // 0830: enable separate default search engine in Private Windows and its UI setting
-user_pref("browser.search.separatePrivateDefault", true);
+user_pref("browser.search.separatePrivateDefault", false);
 user_pref("browser.search.separatePrivateDefault.ui.enabled", true);
 // }}}
 
