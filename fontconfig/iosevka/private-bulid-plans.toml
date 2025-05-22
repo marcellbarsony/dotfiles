@@ -1,0 +1,52 @@
+[buildPlans.IosevkaCustom]
+family = "Iosevka Custom"
+spacing = "normal"
+serifs = "sans"
+noCvSs = true
+exportGlyphNames = false
+noLigation = true
+
+[buildPlans.IosevkaCustom.variants.design]
+one = "no-base"
+two = "straight-neck-serifless"
+three = "two-arcs"
+four = "semi-open-non-crossing-serifless"
+five = "upright-flat-serifless"
+eight = "two-circles"
+zero = "tall-slashed"
+capital-b = "standard-serifless"
+capital-g = "toothless-corner-serifless-hooked"
+capital-i = "serifless"
+capital-j = "serifless"
+capital-q = "crossing"
+a = "single-storey-serifless"
+f = "flat-hook-serifless"
+g = "single-storey-serifless"
+i = "serifless"
+j = "serifless"
+k = "straight-serifless"
+l = "semi-tailed"
+m = "serifless"
+t = "bent-hook"
+
+[buildPlans.IosevkaCustom.weights.Bold]
+shape = 700
+menu = 700
+css = 700
+
+[buildPlans.IosevkaCustom.weights.Medium]
+shape = 500
+menu = 500
+css = 500
+
+[buildPlans.IosevkaCustom.slopes.Upright]
+angle = 0
+shape = "upright"
+menu = "upright"
+css = "normal"
+
+[buildPlans.IosevkaCustom.slopes.Italic]
+angle = 9.4
+shape = "italic"
+menu = "italic"
+css = "italic"

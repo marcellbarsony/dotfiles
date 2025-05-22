@@ -16,12 +16,8 @@ adjust-cursor-height = 0
 adjust-cursor-thickness = 0
 
 # Font
-font-family = JetBrains Mono NL Regular
-font-feature = -calt
-font-feature = -dlig
-font-feature = -liga
+font-family = Iosevka Custom
 font-size = 12
-font-thicken = true
 
 # GTK
 gtk-tabs-location = hidden
