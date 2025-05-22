@@ -155,7 +155,7 @@ end, { desc = "Inlay hints" })
 map("n", "<leader>lr", vim.lsp.buf.rename, { desc = "Rename" })
 
 -- Signature help
-map("n", "<C-k>", vim.lsp.buf.signature_help, { desc = "Signature help" })
+map("n", "<leader>lk", vim.lsp.buf.signature_help, { desc = "Signature help" })
 
 -- LSP Help
 map("n", "<leader>lhi", "<cmd>LspInfo<CR>", { desc = "Info" })

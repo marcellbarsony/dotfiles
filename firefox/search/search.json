@@ -6,6 +6,16 @@
             "Alias": "@archwiki"
         },
         {
+            "Name": "Ecosia",
+            "URL": "https://www.ecosia.org/search?q=%s",
+            "Alias": "@ecosia"
+        },
+        {
+            "Name": "Qwant",
+            "URL": "https://www.qwant.com/?q=%s",
+            "Alias": "@qwant"
+        },
+        {
             "Name": "Rust",
             "URL": "https://doc.rust-lang.org/stable/std/?search=%s",
             "Alias": "@rust"
@@ -16,9 +26,15 @@
             "Alias": "@rustexample"
         },
         {
+            "Name": "Startpage",
+            "URL": "",
+            "Alias": "@startpage"
+        },
+        {
             "Name": "YouTube",
             "URL": "https://www.youtube.com/results?search_query=%s",
-            "Alias": "@youtube"
+            "Alias": "@youtube",
+            "Alias2": "@yt"
         }
     ]
 }
