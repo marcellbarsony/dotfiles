@@ -419,6 +419,7 @@ function theme.setup()
     -- }}}
 
     -- Treesitter - Python {{{
+    ["@attribute.builtin.python"]   = { link = "Macro"       },
     ["@boolean.python"]             = { link = "Boolean"     },
     ["@constant.builtin.python"]    = { link = "Constant"    },
     ["@function.python"]            = { link = "Function"    },
@@ -459,6 +460,10 @@ function theme.setup()
     ["@variable.rust"]              = { link = "Variable"    },
     ["@variable.parameter.rust"]    = { link = "Variable"    },
     ["@variable.member.rust"]       = { link = "Variable"    },
+    -- }}}
+
+    -- Treesitter - Toml {{{
+    ["@string.special.toml"] = { link = "String" },
     -- }}}
     -- }}}
 

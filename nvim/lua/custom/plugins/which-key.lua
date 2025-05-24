@@ -166,7 +166,7 @@ return {
       -- Icons {{{
       icons = {
         breadcrumb = "»",
-        separator = "➜",
+        separator = ">",
         group = "",
         ellipsis = "…",
         mappings = false,
@@ -177,7 +177,7 @@ return {
           Up = " ",
           Down = " ",
           Left = " ",
-          Right = " ",
+          Right = "➜  ",
           C = "󰘴 ",
           M = "󰘵 ",
           D = "󰘳 ",
