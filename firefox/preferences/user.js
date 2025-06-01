@@ -21,7 +21,7 @@ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("devtools.chrome.enabled", true);
 user_pref("devtools.editor.keymap", "vim");
 user_pref("devtools.theme", "dark");
-user_pref("devtools.toolbox.host", "right");
+user_pref("devtools.toolbox.host", "window");
 
 // DOWNLOADS
 user_pref("browser.download.dir", "/home/marci/tmp");
