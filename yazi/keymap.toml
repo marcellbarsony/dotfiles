@@ -1,7 +1,7 @@
 "$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
 
 # Manager {{{
-[manager]
+[mgr]
 keymap = [
     { on = [ "<Esc>" ], run = "escape",             desc = "Exit/Clear/Cancel" },
     { on = [ "<C-[>" ], run = "escape",             desc = "Exit/Clear/Cancel" },

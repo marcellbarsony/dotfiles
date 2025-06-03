@@ -78,7 +78,7 @@ selected = { reversed = true }
 # }}}
 
 # Manager {{{
-[manager]
+[mgr]
 
 # Cwd
 cwd = { fg = "white" }
