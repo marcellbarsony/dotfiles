@@ -1,3 +1,5 @@
+Base64
+CVE
 Codelldb
 ColorScheme
 DAP
@@ -18,12 +20,12 @@ NUL
 OWASP
 Patchbay
 Powermenu
-RBAC
 Rofi
 SSRF
 Scratchpads
 Spotify
 Structs
+TODO
 TODO
 Treesitter
 TypeScript
@@ -88,6 +90,8 @@ lspconfig
 lua
 luasnip
 neovim
+netcat
+nmap
 npm
 numhl
 nvim
@@ -111,6 +115,7 @@ str
 struct
 structs
 systemctl
+tcpdump
 tmp
 tsserver
 txt
