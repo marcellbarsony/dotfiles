@@ -50,7 +50,7 @@
             "id": "pipewire_audio_output_capture",
             "versioned_id": "pipewire_audio_output_capture",
             "settings": {
-                "TargetName": "alsa_output.usb-Conexant_Hi_Res_USB-C_AUDIO_000000000000-00.analog-stereo",
+                "TargetName": "alsa_output.usb-Focusrite_Scarlett_2i2_USB_Y8Q545R9A2644F-00.HiFi__Line1__sink",
                 "TargetId": 0
             },
             "mixers": 255,
@@ -73,7 +73,40 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
-            "private_settings": {}
+            "private_settings": {},
+            "filters": [
+                {
+                    "prev_ver": 520093699,
+                    "name": "Compressor",
+                    "uuid": "74531087-1ba5-4a9f-adf4-caf6b1f1c9d5",
+                    "id": "compressor_filter",
+                    "versioned_id": "compressor_filter",
+                    "settings": {
+                        "ratio": 10.0,
+                        "threshold": -44.8,
+                        "attack_time": 20,
+                        "release_time": 250,
+                        "output_gain": 0.0,
+                        "sidechain_source": "Microphone"
+                    },
+                    "mixers": 255,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": false,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                }
+            ]
         },
         {
             "prev_ver": 520093699,
@@ -571,7 +604,7 @@
                     {
                         "name": "Camera",
                         "source_uuid": "e427a6cd-d343-4221-8005-c4bba1f833cb",
-                        "visible": false,
+                        "visible": true,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -1329,8 +1362,8 @@
             "id": "pipewire_audio_input_capture",
             "versioned_id": "pipewire_audio_input_capture",
             "settings": {
-                "TargetName": "alsa_input.usb-Focusrite_Scarlett_2i2_USB_Y8Q545R9A2644F-00.HiFi__Mic1__source",
-                "TargetId": 0
+                "TargetId": 366,
+                "TargetName": "alsa_input.usb-Focusrite_Scarlett_2i2_USB_Y8Q545R9A2644F-00.HiFi__Mic1__source"
             },
             "mixers": 255,
             "sync": 0,
@@ -1338,14 +1371,24 @@
             "volume": 1.0,
             "balance": 0.5,
             "enabled": true,
-            "muted": true,
+            "muted": false,
             "push-to-mute": false,
             "push-to-mute-delay": 0,
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "hotkeys": {
-                "libobs.mute": [],
-                "libobs.unmute": [],
+                "libobs.mute": [
+                    {
+                        "control": true,
+                        "key": "OBS_KEY_X"
+                    }
+                ],
+                "libobs.unmute": [
+                    {
+                        "control": true,
+                        "key": "OBS_KEY_X"
+                    }
+                ],
                 "libobs.push-to-mute": [],
                 "libobs.push-to-talk": []
             },
@@ -1363,6 +1406,36 @@
                     "settings": {
                         "open_threshold": -30.0,
                         "close_threshold": -40.0
+                    },
+                    "mixers": 255,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 520093699,
+                    "name": "Compressor",
+                    "uuid": "52b142e9-3324-4726-8b88-58d5408aa04b",
+                    "id": "compressor_filter",
+                    "versioned_id": "compressor_filter",
+                    "settings": {
+                        "ratio": 5.0,
+                        "threshold": -10.0,
+                        "attack_time": 2,
+                        "release_time": 100,
+                        "output_gain": 10.0
                     },
                     "mixers": 255,
                     "sync": 0,
