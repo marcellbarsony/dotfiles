@@ -26,7 +26,7 @@
     "adguard-spyware-url",
     "urlhaus-1",
     "plowe-0",
-    "https://filters.hufilter.hu/hufilter-ublock.txt"
+    "HUN-0"
   ],
   "hiddenSettings": {},
   "whitelist": [
