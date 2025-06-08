@@ -45,71 +45,6 @@
         },
         {
             "prev_ver": 520093699,
-            "name": "Desktop",
-            "uuid": "645c4c17-f0bb-4822-8f7d-64ebe31fae1c",
-            "id": "pipewire_audio_output_capture",
-            "versioned_id": "pipewire_audio_output_capture",
-            "settings": {
-                "TargetName": "alsa_output.usb-Focusrite_Scarlett_2i2_USB_Y8Q545R9A2644F-00.HiFi__Line1__sink",
-                "TargetId": 0
-            },
-            "mixers": 255,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {
-                "libobs.mute": [],
-                "libobs.unmute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": []
-            },
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {},
-            "filters": [
-                {
-                    "prev_ver": 520093699,
-                    "name": "Compressor",
-                    "uuid": "74531087-1ba5-4a9f-adf4-caf6b1f1c9d5",
-                    "id": "compressor_filter",
-                    "versioned_id": "compressor_filter",
-                    "settings": {
-                        "ratio": 10.0,
-                        "threshold": -44.8,
-                        "attack_time": 20,
-                        "release_time": 250,
-                        "output_gain": 0.0,
-                        "sidechain_source": "Microphone"
-                    },
-                    "mixers": 255,
-                    "sync": 0,
-                    "flags": 0,
-                    "volume": 1.0,
-                    "balance": 0.5,
-                    "enabled": false,
-                    "muted": false,
-                    "push-to-mute": false,
-                    "push-to-mute-delay": 0,
-                    "push-to-talk": false,
-                    "push-to-talk-delay": 0,
-                    "hotkeys": {},
-                    "deinterlace_mode": 0,
-                    "deinterlace_field_order": 0,
-                    "monitoring_type": 0,
-                    "private_settings": {}
-                }
-            ]
-        },
-        {
-            "prev_ver": 520093699,
             "name": "Camera",
             "uuid": "e427a6cd-d343-4221-8005-c4bba1f833cb",
             "id": "v4l2_input",
@@ -376,14 +311,14 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 13,
+                "id_counter": 14,
                 "custom_size": false,
                 "items": [
                     {
-                        "name": "Desktop",
-                        "source_uuid": "645c4c17-f0bb-4822-8f7d-64ebe31fae1c",
+                        "name": "Microphone",
+                        "source_uuid": "de2480e9-9c6c-4c5d-a46a-0cf7755e4e19",
                         "visible": true,
-                        "locked": false,
+                        "locked": true,
                         "rot": 0.0,
                         "scale_ref": {
                             "x": 1920.0,
@@ -397,7 +332,7 @@
                         "crop_top": 0,
                         "crop_right": 0,
                         "crop_bottom": 0,
-                        "id": 2,
+                        "id": 12,
                         "group_item_backup": true,
                         "pos": {
                             "x": 0.0,
@@ -435,8 +370,8 @@
                         "private_settings": {}
                     },
                     {
-                        "name": "Microphone",
-                        "source_uuid": "de2480e9-9c6c-4c5d-a46a-0cf7755e4e19",
+                        "name": "Desktop",
+                        "source_uuid": "7ae3e9c0-3baf-4a03-956b-240c667a404b",
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
@@ -452,7 +387,7 @@
                         "crop_top": 0,
                         "crop_right": 0,
                         "crop_bottom": 0,
-                        "id": 12,
+                        "id": 14,
                         "group_item_backup": true,
                         "pos": {
                             "x": 0.0,
@@ -604,8 +539,8 @@
                     {
                         "name": "Camera",
                         "source_uuid": "e427a6cd-d343-4221-8005-c4bba1f833cb",
-                        "visible": true,
-                        "locked": false,
+                        "visible": false,
+                        "locked": true,
                         "rot": 0.0,
                         "scale_ref": {
                             "x": 1920.0,
@@ -1126,7 +1061,7 @@
             "id": "text_ft2_source",
             "versioned_id": "text_ft2_source_v2",
             "settings": {
-                "text": "> Hacking\n> starts\n> soon\n> _",
+                "text": ">hacking\n>starts\n>soon\n>_",
                 "font": {
                     "face": "Hack",
                     "style": "Regular",
@@ -1362,8 +1297,8 @@
             "id": "pipewire_audio_input_capture",
             "versioned_id": "pipewire_audio_input_capture",
             "settings": {
-                "TargetId": 366,
-                "TargetName": "alsa_input.usb-Focusrite_Scarlett_2i2_USB_Y8Q545R9A2644F-00.HiFi__Mic1__source"
+                "TargetName": "alsa_input.usb-Focusrite_Scarlett_2i2_USB_Y8Q545R9A2644F-00.HiFi__Mic1__source",
+                "TargetId": 0
             },
             "mixers": 255,
             "sync": 0,
@@ -1371,7 +1306,7 @@
             "volume": 1.0,
             "balance": 0.5,
             "enabled": true,
-            "muted": false,
+            "muted": true,
             "push-to-mute": false,
             "push-to-mute-delay": 0,
             "push-to-talk": false,
@@ -1432,10 +1367,73 @@
                     "versioned_id": "compressor_filter",
                     "settings": {
                         "ratio": 5.0,
-                        "threshold": -10.0,
+                        "threshold": -20.0,
                         "attack_time": 2,
                         "release_time": 100,
                         "output_gain": 10.0
+                    },
+                    "mixers": 255,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                }
+            ]
+        },
+        {
+            "prev_ver": 520093699,
+            "name": "Desktop",
+            "uuid": "7ae3e9c0-3baf-4a03-956b-240c667a404b",
+            "id": "pipewire_audio_output_capture",
+            "versioned_id": "pipewire_audio_output_capture",
+            "settings": {
+                "TargetName": "alsa_output.usb-Conexant_Hi_Res_USB-C_AUDIO_000000000000-00.analog-stereo",
+                "TargetId": 60
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.unmute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {},
+            "filters": [
+                {
+                    "prev_ver": 520093699,
+                    "name": "Compressor",
+                    "uuid": "38c67227-a07e-48d6-8b7e-d5f0ffd4f55b",
+                    "id": "compressor_filter",
+                    "versioned_id": "compressor_filter",
+                    "settings": {
+                        "ratio": 15.0,
+                        "threshold": -35.0,
+                        "release_time": 500,
+                        "sidechain_source": "Microphone"
                     },
                     "mixers": 255,
                     "sync": 0,
@@ -1471,10 +1469,10 @@
                 "cy": 0,
                 "items": [
                     {
-                        "name": "Desktop",
-                        "source_uuid": "645c4c17-f0bb-4822-8f7d-64ebe31fae1c",
+                        "name": "Microphone",
+                        "source_uuid": "de2480e9-9c6c-4c5d-a46a-0cf7755e4e19",
                         "visible": true,
-                        "locked": false,
+                        "locked": true,
                         "rot": 0.0,
                         "scale_ref": {
                             "x": 1920.0,
@@ -1488,7 +1486,7 @@
                         "crop_top": 0,
                         "crop_right": 0,
                         "crop_bottom": 0,
-                        "id": 2,
+                        "id": 12,
                         "group_item_backup": false,
                         "pos": {
                             "x": 0.0,
@@ -1526,8 +1524,8 @@
                         "private_settings": {}
                     },
                     {
-                        "name": "Microphone",
-                        "source_uuid": "de2480e9-9c6c-4c5d-a46a-0cf7755e4e19",
+                        "name": "Desktop",
+                        "source_uuid": "7ae3e9c0-3baf-4a03-956b-240c667a404b",
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
@@ -1543,7 +1541,7 @@
                         "crop_top": 0,
                         "crop_right": 0,
                         "crop_bottom": 0,
-                        "id": 12,
+                        "id": 14,
                         "group_item_backup": false,
                         "pos": {
                             "x": 0.0,
@@ -1594,10 +1592,10 @@
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "hotkeys": {
-                "libobs.show_scene_item.2": [],
-                "libobs.hide_scene_item.2": [],
                 "libobs.show_scene_item.12": [],
-                "libobs.hide_scene_item.12": []
+                "libobs.hide_scene_item.12": [],
+                "libobs.show_scene_item.14": [],
+                "libobs.hide_scene_item.14": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
