@@ -6,6 +6,9 @@ return {
   {
     "catgoose/nvim-colorizer.lua",
     cmd = "ColorizerToggle",
+    keys = {
+      { "<leader>vcc", "<cmd>ColorizerToggle<CR>", desc = "Colorizer" }
+    },
     opts = {
       filetypes = { "*.css" },
       lazy_load = true,

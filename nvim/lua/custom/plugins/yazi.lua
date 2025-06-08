@@ -9,28 +9,12 @@ return {
   {
     "mikavilpas/yazi.nvim",
     keys = {
-      {
-        "-",
-        mode = { "n", "v" },
-        "<cmd>Yazi<cr>",
-        desc = "Yazi",
-      },
-      {
-        "<leader>yy",
-        mode = { "n", "v" },
-        "<cmd>Yazi<cr>",
-        desc = "Yazi",
-      },
-      {
-        "<leader>yc",
-        "<cmd>Yazi cwd<cr>",
-        desc = "Open cwd",
-      },
-      {
-        "<leader>yr",
-        "<cmd>Yazi toggle<cr>",
-        desc = "Resume last",
-      },
+      -- Keys {{{
+      { "-", mode = { "n", "v" }, "<cmd>Yazi<cr>", desc = "Yazi" },
+      { "<leader>yy", mode = { "n", "v" }, "<cmd>Yazi<cr>", desc = "Yazi" },
+      { "<leader>yc", "<cmd>Yazi cwd<cr>", desc = "Open cwd" },
+      { "<leader>yr", "<cmd>Yazi toggle<cr>", desc = "Resume last" }
+      -- }}}
     },
     opts = {
       open_for_directories = false,

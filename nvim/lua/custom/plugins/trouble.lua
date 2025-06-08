@@ -17,6 +17,16 @@ return {
   {
     "folke/trouble.nvim",
     cmd = "Trouble",
+    keys = {
+      -- Keys {{{
+      { "<leader>lt", "<cmd>Trouble diagnostics toggle<cr>", desc = "Trouble" },
+      { "<leader>lb", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", desc = "Buffer" },
+      -- { "<leader>zs", "<cmd>Trouble symbols toggle focus=false<cr>", desc = "Symbols" },
+      -- { "<leader>zl", "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", desc = "LSP definitions" },
+      -- { "<leader>zd", "<cmd>Trouble loclist toggle<cr>", desc = "Location list" },
+      -- { "<leader>zq", "<cmd>Trouble qflist toggle<cr>", desc = "Quickfix" }
+      -- }}}
+    },
     opts = {
       -- Options {{{
       auto_close = true,        -- auto close when there are no items

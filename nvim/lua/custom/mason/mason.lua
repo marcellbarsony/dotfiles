@@ -11,6 +11,22 @@ return {
     },
     build = ":MasonUpdate",
     cmd = "Mason",
+    keys = {
+      -- Keys {{{
+      {
+        "<leader>vmm", "<cmd>Mason<CR>", desc = "Mason"
+      },
+      {
+        "<leader>vml", "<cmd>MasonLog<CR>", desc = "Log"
+      },
+      {
+        "<leader>vmu", "<cmd>MasonUpdate<CR>", desc = "Update"
+      },
+      {
+        "<leader>vmU", "<cmd>MasonUninstallAll<CR>", desc = "Uninstall All"
+      }
+      -- }}}
+    },
     config = function()
       local mason = require("mason")
       mason.setup({

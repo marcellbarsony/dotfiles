@@ -3,11 +3,76 @@
 -- https://github.com/nvim-lua/plenary.nvim
 -- `:h telescope.nvim`
 
+-- Helper functions {{{
+local function safe_cmd(command, error_message)
+  return function()
+    local ok, _ = pcall(vim.cmd, command)
+    if not ok then
+      vim.api.nvim_err_writeln(error_message)
+    end
+  end
+end
+-- }}}
+
 return {
   {
     "nvim-telescope/telescope.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     cmd = "Telescope",
+    keys = {
+      -- Keys {{{
+      { "<leader>tt", "<cmd>Telescope<CR>", desc = "Telescope" },
+      { "<leader>tb", "<cmd>Telescope buffers<CR>", desc = "Buffers" },
+      { "<leader>tc", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Current Buffer" },
+      { "<leader>td", "<cmd>Telescope diagnostics<CR>", desc = "Diagnostics" },
+      { "<leader>tf", "<cmd>Telescope find_files<CR>", desc = "Find Files" },
+      { "<leader>tg", "<cmd>Telescope live_grep<CR>", desc = "Grep" },
+      { "<leader>tG", "<cmd>Telescope live_grep<CR>", desc = "Grep [String]" },
+      { "<leader>to", "<cmd>Telescope oldfiles<CR>", desc = "Oldfiles" },
+
+      -- DAP {{{
+      { "<leader>dd", "<cmd>lua require'telescope'.extensions.dap.configurations}<CR>", desc = "Debug" },
+      { "<leader>dtc", "<cmd>lua require'telescope'.extensions.dap.commands}<CR>", desc = "Commands" },
+      { "<leader>dtb", "<cmd>lua require'telescope'.extensions.dap.list_breakpoints}<CR>", desc = "Breakpoints" },
+      { "<leader>dtv", "<cmd>lua require'telescope'.extensions.dap.variables}<CR>", desc = "Variables" },
+      { "<leader>dtf", "<cmd>lua require'telescope'.extensions.dap.frames}<CR>", desc = "Frames" },
+      -- }}}
+
+      -- GIT {{{
+      { "<leader>gb", safe_cmd("Telescope git_branches", "Warning: Not a Git directory"), desc = "Branches" },
+      { "<leader>gc", safe_cmd("Telescope git_commits", "Warning: Not a Git directory"), desc = "Commits" },
+      { "<leader>gf", safe_cmd("Telescope git_files", "Warning: Not a Git directory"), desc = "Files" },
+      { "<leader>gs", safe_cmd("Telescope git_status", "Warning: Not a Git directory"), desc = "Status" },
+      -- }}}
+
+      -- LSP {{{
+      { "gD", "<cmd>Telescope lsp_type_definitions<CR>", desc = "Definition [Type]" },
+      { "<leader>lI", "<cmd>Telescope lsp_implementations<CR>", desc = "Implementations" },
+      { "<leader>lci", "<cmd>Telescope lsp_incoming_calls<CR>", desc = "Incoming" },
+      { "<leader>lco", "<cmd>Telescope lsp_outgoing_calls<CR>", desc = "Outgoing" },
+      { "<leader>lR", "<cmd>Telescope lsp_references<CR>", desc = "References" },
+      { "<leader>lSd", "<cmd>Telescope lsp_document_symbols<CR>", desc = "Document" },
+      { "<leader>lSw", "<cmd>Telescope lsp_workspace_symbols<CR>", desc = "Workspace" },
+      -- }}}
+
+      -- Treesitter {{{
+      { "<leader>vth", "<cmd>Telescope highlights<CR>", desc = "Highlights" },
+      { "<leader>vts", "<cmd>Telescope treesitter<CR>", desc = "Symbols" },
+      -- }}}
+
+      -- Vim {{{
+      { "<leader>vta", "<cmd>Telescope autocommands<CR>", desc = "Autocommands" },
+      { "<leader>vtc", "<cmd>Telescope commands<CR>", desc = "Commands" },
+      { "<leader>vtj", "<cmd>Telescope jumplist<CR>", desc = "Jumplist" },
+      { "<leader>vtk", "<cmd>Telescope keymaps<CR>", desc = "Keymaps" },
+      { "<leader>vtm", "<cmd>Telescope man_pages<CR>", desc = "Man pages" },
+      { "<leader>vto", "<cmd>Telescope vim_options<CR>", desc = "Options" },
+      { "<leader>vtr", "<cmd>Telescope registers<CR>", desc = "Registers" },
+      { "<leader>vHc", "<cmd>Telescope command_history<CR>", desc = "Command" },
+      { "<leader>vHs", "<cmd>Telescope search_history<CR>", desc = "Search" }
+      -- }}}
+    -- }}}
+    },
     opts = function()
       local actions = require("telescope.actions")
       return {

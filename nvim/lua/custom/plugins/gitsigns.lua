@@ -7,6 +7,37 @@ return {
     "lewis6991/gitsigns.nvim",
     lazy = true,
     cmd = "Gitsigns",
+    keys = {
+      -- Keys {{{
+      {
+        "<leader>gg",
+        "<cmd>Gitsigns toggle_signs<CR>" ..
+        "<cmd>Gitsigns toggle_numhl<CR>" ..
+        "<cmd>Gitsigns toggle_current_line_blame<CR>",
+        desc = "Gitsigns"
+      },
+      { mode = { "o" }, "<leader>gh", "<cmd>Gitsigns select_hunk<CR>", desc = "Select hunk" },
+      { mode = { "x" }, "<leader>gh", "<cmd>Gitsigns select_hunk<CR>", desc = "Select hunk" }
+
+      -- Actions
+      -- { "<leader>gs", "<cmd>Gitsigns stage_hunk<CR>", desc = "Stage hunk" },
+      -- { "<leader>gs", "<cmd>Gitsigns undo_stage_hunk<CR>", desc = "Stage hunk [Undo]" },
+      -- { "<leader>gs", "<cmd>Gitsigns reset_hunk<CR>", desc = "Reset hunk" },
+      -- { "<leader>gs", "<cmd>Gitsigns stage_buffer<CR>", desc = "Stage buffer" },
+      -- { "<leader>gs", "<cmd>Gitsigns preview_hunk<CR>", desc = "Preview hunk" },
+      -- { "<leader>gs", "<cmd>Gitsigns diffthis<CR>", desc = "Diffthis" },
+      -- { "<leader>gs", "<cmd>Gitsigns toggle_deleted<CR>", desc = "Toggle deleted" },
+
+      -- Navigation
+      -- { ']c', "&diff ? ']c' : '<cmd>Gitsigns next_hunk<CR>'", expr=true },
+      -- { '[c', "&diff ? '[c' : '<cmd>Gitsigns prev_hunk<CR>'", expr=true },
+
+      -- Signs
+      -- { "<leader>gs", "<cmd>Gitsigns toggle_signs<CR>", desc = "Signs" },
+      -- { "<leader>gn", "<cmd>Gitsigns toggle_numhl<CR>", desc = "Numhl" },
+      -- { "<leader>gb", "<cmd>Gitsigns toggle_current_line_blame<CR>", desc = "Blame" },
+      -- }}}
+    },
     opts = {
       -- Signs {{{
       signs = {

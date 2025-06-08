@@ -10,6 +10,14 @@ return {
     build = ":TSUpdate",
     event = { "BufReadPre", "BufNewFile" },
     opts_extend = { "ensure_installed" },
+    keys = {
+      -- Keys {{{
+      { "<leader>vTu", "<cmd>TSUpdateSync<CR>", desc = "UpdateSync" },
+      { "<leader>vTU", "<cmd>TSUninstall all<CR>", desc = "Uninstall All" },
+      { "<leader>vTi", "<cmd>Inspect<CR>", desc = "Inspect" },
+      { "<leader>vTI", "<cmd>InspectTree<CR>", desc = "Inspect [Tree]" }
+      -- }}}
+    },
     ---@diagnostic disable-next-line: missing-fields
     opts = function ()
       require("nvim-treesitter.configs").setup {

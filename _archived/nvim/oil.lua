@@ -8,6 +8,9 @@ return {
     cmd = "Oil",
     ---@module "oil"
     ---@type oil.SetupOpts
+    keys = {
+      { "n", "-", "<cmd>Oil<CR>", desc = "Oil" }
+    },
     opts = {
       -- File explorer {{{
       default_file_explorer = true,

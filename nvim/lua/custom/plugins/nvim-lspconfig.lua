@@ -3,12 +3,68 @@
 -- https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion#nvim-cmp
 -- https://github.com/neovim/nvim-lspconfig/wiki/Snippets#nvim-cmp-and-luasnip
 -- `:h lsp-config`
+-- `:h lspconfig-keybindings`
+
+-- Helper functions {{{
+-- }}}
 
 return {
   {
     "neovim/nvim-lspconfig",
     event = { "BufReadPre", "BufNewFile" },
     cmd = { "LspInfo", "LspInstall", "LspUninstall" },
+    keys = {
+      -- Keys {{{
+      -- Code action
+      { mode = { "n", "v" }, "<leader>la", vim.lsp.buf.code_action, desc = "Action" },
+
+      -- Diagnostics
+      { "<leader>lD", vim.diagnostic.open_float, opts = opts, desc = "Diagnostics" },
+      { "]d", vim.diagnostic.goto_next, opts = opts, desc = "Next diagnostic" },  -- default map
+      { "[d", vim.diagnostic.goto_prev, opts = opts, desc = "Previous diagnostic" },  -- default map
+      -- { "<leader>ll", vim.diagnostic.setloclist, opts = opts, desc = "Set localist" },
+
+      -- Documentation
+      -- Default: nvim-lspconfig maps `K` to vim.lsp.buf.hover()
+      { "<leader>ld", vim.lsp.buf.hover, desc = "Documentation" },
+
+      -- Formatting
+      { "<leader>lf", function() vim.lsp.buf.format { async = true } end, desc = "Format" },
+
+      -- Go-To
+      { "gd", vim.lsp.buf.definition, desc = "Definition" },
+      -- { "gt", vim.lsp.buf.type_definition, desc = "Type definition" },
+      -- { "gD", vim.lsp.buf.declaration, desc = "Declaration" },
+
+      -- Inlay hints
+      { "<leader>li", function()
+        vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = 0 }, { bufnr = 0 })
+      end, desc = "Inlay hints" },
+
+      -- Rename
+      { "<leader>lr", vim.lsp.buf.rename, desc = "Rename" },
+
+      -- Signature help
+      { "<leader>lk", vim.lsp.buf.signature_help, desc = "Signature help" },
+
+      -- LSP Help
+      { "<leader>lhi", "<cmd>LspInfo<CR>", desc = "Info" },
+      { "<leader>lhl", "<cmd>LspLog<CR>", desc = "Log" },
+
+      -- Calls
+      -- { "<leader>lci", vim.lsp.buf.incoming_calls, buffer = args.buf, desc = "Incoming" }, -- Telescope
+      -- { "<leader>lco", vim.lsp.buf.outgoing_calls, buffer = args.buf, desc = "Outgoing" }, -- Telescope
+
+      -- References
+      -- { "<leader>lx", vim.lsp.buf.references, desc = "References" },
+      -- { "<leader>lv", vim.lsp.buf.clear_references, desc = "Clear references" },
+
+      -- Workspace folder
+      -- { "<leader>wa", vim.lsp.buf.add_workspace_folder, desc = "Workspace folder [Add]" },
+      -- { "<leader>wr", vim.lsp.buf.remove_workspace_folder, desc = "Workspace folder [Remove]" },
+      -- { "<leader>wl", function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end, desc = "Workspace folder [List]" },
+      -- }}}
+    },
     config = function()
       -- LSP Servers {{{
       local lspconfig = require("lspconfig")
