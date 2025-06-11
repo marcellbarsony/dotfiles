@@ -8,3 +8,8 @@ fi
 if [[ "$(tty)" = "/dev/tty2" ]]; then
     pgrep qtile || startx "${XDG_CONFIG_HOME}/x11/.xinitrc"
 fi
+
+# TTY3 (Wayland)
+if [[ "$(tty)" = "/dev/tty3" ]]; then
+    niri-session
+fi

@@ -30,6 +30,10 @@ alias notes="clear && cd $HOME/.local/git/notes && ls"
 alias nv="nvim"
 alias vim="nvim"
 
+# Netcat (nc)
+nc="ncat"
+netcat="ncat"
+
 # Zellij
 alias z="zellij"
 alias zellij="zellij -l welcome"
