@@ -31,11 +31,11 @@ return {
       { "<leader>to", "<cmd>Telescope oldfiles<CR>", desc = "Oldfiles" },
 
       -- DAP {{{
-      { "<leader>dd", "<cmd>lua require'telescope'.extensions.dap.configurations}<CR>", desc = "Debug" },
-      { "<leader>dtc", "<cmd>lua require'telescope'.extensions.dap.commands}<CR>", desc = "Commands" },
-      { "<leader>dtb", "<cmd>lua require'telescope'.extensions.dap.list_breakpoints}<CR>", desc = "Breakpoints" },
-      { "<leader>dtv", "<cmd>lua require'telescope'.extensions.dap.variables}<CR>", desc = "Variables" },
-      { "<leader>dtf", "<cmd>lua require'telescope'.extensions.dap.frames}<CR>", desc = "Frames" },
+      { "<leader>dd", "<cmd>lua require'telescope'.extensions.dap.configurations()<CR>", desc = "Debug" },
+      { "<leader>dtc", "<cmd>lua require'telescope'.extensions.dap.commands()<CR>", desc = "Commands" },
+      { "<leader>dtb", "<cmd>lua require'telescope'.extensions.dap.list_breakpoints()<CR>", desc = "Breakpoints" },
+      { "<leader>dtv", safe_cmd("<cmd>lua require'telescope'.extensions.dap.variables()<CR>", "Warning: No variables are set"), desc = "Variables" },
+      { "<leader>dtf", "<cmd>lua require'telescope'.extensions.dap.frames()<CR>", desc = "Frames" },
       -- }}}
 
       -- GIT {{{

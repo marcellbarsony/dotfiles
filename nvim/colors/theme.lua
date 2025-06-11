@@ -382,9 +382,6 @@ function theme.setup()
     ["@keyword.return"]             = { link = "Keyword"     },
     ["@label"]                      = { link = "Label"       },
     ["@label.vimdoc"]               = { link = "Label"       },
-    ["@markup.heading.1.vimdoc"]    = { link = "Title"       },
-    ["@markup.heading.2.vimdoc"]    = { link = "Title"       },
-    ["@markup.raw.vimdoc"]          = { link = "Title"       },
     ["@module.builtin"]             = { link = "Module"      },
     ["@number"]                     = { link = "Number"      },
     ["@number.float"]               = { link = "Number"      },
@@ -396,6 +393,7 @@ function theme.setup()
     ["@property.vim"]               = { link = "Property"    },
     ["@string"]                     = { link = "String"      },
     ["@string.documentation"]       = { link = "String"      },
+    ["@string.special.path.bash"]   = { link = "String"      },
     ["@type"]                       = { link = "Type"        },
     ["@type.builtin"]               = { link = "Type"        },
     ["@type.definition"]            = { link = "Type"        },
@@ -416,6 +414,12 @@ function theme.setup()
     ["@operator.lua"]            = { link = "Operator"    },
     ["@property.lua"]            = { link = "Property"    },
     ["@punctuation.bracket.lua"] = { link = "Punctuation" },
+    -- }}}
+
+    -- Treesitter - HTML {{{
+    ["@tag.html"] = { fg = c.primary },
+    ["@tag.attribute.html"] = { fg = c.primary },
+    ["@tag.delimiter.html"] = { fg = c.primary },
     -- }}}
 
     -- Treesitter - Python {{{
@@ -474,12 +478,15 @@ function theme.setup()
     -- }}}
 
     -- Markup {{{
+    ["@markup.heading.1.vimdoc"]           = { link = "Title"    },
+    ["@markup.heading.2.vimdoc"]           = { link = "Title"    },
     ["@markup.link.markdown_inline"]       = { link = "String"   },
     ["@markup.link.label.markdown_inline"] = { fg = c.primary    },
     ["@markup.list.markdown"]              = { link = "Function" },
-    ["@markup.raw.markdown_inline"]        = { link = "Function" },
     ["@markup.raw.block.markdown"]         = { link = "Function" },
-    ["@string.special.path.bash"]          = { link = "String"   },
+    ["@markup.raw.markdown_inline"]        = { link = "Function" },
+    ["@markup.raw.vimdoc"]                 = { link = "Title"    },
+    ["@markup.list.unchecked.markdown"]    = { fg = c.primary    },
     -- }}}
 
     -- Rust {{{
