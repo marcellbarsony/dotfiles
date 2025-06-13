@@ -22,9 +22,9 @@ return {
           "jsonls",        -- Json
           "lua_ls",        -- Lua
           "marksman",      -- Markdown
-          "rust_analyzer", -- Rust
           "ts_ls",         -- TypeScript / JavaScript (tsserver)
           "pyright"        -- Python (npm required)
+          -- "rust_analyzer", -- Rust (install via pacman/toolchain)
         },
         ---@type boolean
         automatic_installation = true,

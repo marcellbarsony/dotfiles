@@ -216,7 +216,6 @@ animations {
 // }}}
 
 // Window rules {{{
-
 // Firefox picture-in-picture player as floating
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"

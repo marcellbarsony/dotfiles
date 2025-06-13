@@ -1312,18 +1312,8 @@
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "hotkeys": {
-                "libobs.mute": [
-                    {
-                        "control": true,
-                        "key": "OBS_KEY_X"
-                    }
-                ],
-                "libobs.unmute": [
-                    {
-                        "control": true,
-                        "key": "OBS_KEY_X"
-                    }
-                ],
+                "libobs.mute": [],
+                "libobs.unmute": [],
                 "libobs.push-to-mute": [],
                 "libobs.push-to-talk": []
             },

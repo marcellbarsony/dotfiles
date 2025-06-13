@@ -123,7 +123,13 @@ return {
       -- https://cmp.saghen.dev/configuration/snippets.html
       -- https://cmp.saghen.dev/configuration/reference.html#snippets
       snippets = {
-        preset = "luasnip"
+        preset = "luasnip",
+        opts = {
+          -- Whether to use show_condition for filtering snippets
+          use_show_condition = true,
+          -- Whether to show autosnippets in the completion list
+          show_autosnippets = true,
+        }
       },
       -- }}}
 
