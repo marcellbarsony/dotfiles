@@ -27,7 +27,7 @@
         },
         {
             "Name": "Startpage",
-            "URL": "",
+            "URL": "https://www.startpage.com/sp/search?query=%s",
             "Alias": "@startpage"
         },
         {

@@ -39,6 +39,9 @@ user_pref("findbar.highlightAll", true);
 user_pref("full-screen-api.warning.delay", 0);
 user_pref("full-screen-api.warning.timeout", 0);
 
+// SEARCH ENGINES
+user_prif("browser.urlbar.update2.engineAliasRefresh", 1);
+
 // SIDEBAR
 user_pref("sidebar.position_start", false);
 user_pref("sidebar.revamp", false);
