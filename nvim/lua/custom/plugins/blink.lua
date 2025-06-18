@@ -124,12 +124,6 @@ return {
       -- https://cmp.saghen.dev/configuration/reference.html#snippets
       snippets = {
         preset = "luasnip",
-        opts = {
-          -- Whether to use show_condition for filtering snippets
-          use_show_condition = true,
-          -- Whether to show autosnippets in the completion list
-          show_autosnippets = true,
-        }
       },
       -- }}}
 
@@ -151,6 +145,22 @@ return {
           "lsp",
           "path",
           "buffer"
+        },
+        providers = {
+          -- Prioritize snippets
+          -- https://cmp.saghen.dev/configuration/reference.html#providers
+          snippets = {
+            score_offset = 10
+          },
+          -- Path completion from `cwd` instead of current buffer's directory
+          -- https://cmp.saghen.dev/recipes.html#path-completion-from-cwd-instead-of-current-buffer-s-directory
+          path = {
+            opts = {
+              get_cwd = function(_)
+                return vim.fn.getcwd()
+              end
+            }
+          }
         }
       }
       -- }}}

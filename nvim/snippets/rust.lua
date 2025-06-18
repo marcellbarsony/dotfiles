@@ -566,7 +566,7 @@ ls.add_snippets("rust", {
           -- String
           sn(nil, {i(1), t'"', i(2, "Print error"), t'"'}),
           -- String + Variable
-          sn(nil, {i(1), t'"', i(2, "Print error"), t'", ', i(3, "var")}),
+          sn(nil, {i(1), t'"', i(2, "Print error"), t" {", i(3, ":?"), t'}", ', i(4, "var")}),
         }),
         c(2, {
           sn(nil, {i(1), t";"}),
@@ -590,7 +590,7 @@ ls.add_snippets("rust", {
           -- String
           sn(nil, {i(1), t'"', i(2, "Print macro"), t'"'}),
           -- String + Variable
-          sn(nil, {i(1), t'"', i(2, "Print macro {}"), t'", ', i(3, "var")}),
+          sn(nil, {i(1), t'"', i(2, "Print macro"), t" {", i(3, ":?"), t'}", ', i(4, "var")}),
         }),
         c(2, {
           sn(nil, {i(1), t";"}),
