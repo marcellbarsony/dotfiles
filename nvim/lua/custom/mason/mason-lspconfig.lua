@@ -9,7 +9,7 @@ return {
     },
     event = { "BufReadPre", "BufNewFile" },
     config = function()
-      local lspconfig = require("lspconfig")
+      -- local lspconfig = require("lspconfig")
       local mason_lspconfig = require("mason-lspconfig")
 
       mason_lspconfig.setup({
@@ -31,83 +31,12 @@ return {
 
         -- Handlers
         -- `:h mason-lspconfig.setup_handlers()`
-        handlers = {
-          function(server_name)
-            lspconfig[server_name].setup({
-              capabilities = capabilities
-            })
-          end,
 
-          -- clangd {{{
-          ["clangd"] = function()
-            lspconfig["clangd"].setup({
-              -- cmd = {
-              --   "clangd",
-              --   "--fallback-style=webkit"
-              -- }
-            })
-          end,
-          -- }}}
-
-          -- Json {{{
-          ["jsonls"] = function()
-            lspconfig["jsonls"].setup({
-              settings = {
-                settings = {
-                  json = {
-                    validate = { enable = true }
-                  }
-                }
-              }
-            })
-          end,
-          -- }}}
-
-          -- Lua {{{
-          ["lua_ls"] = function()
-            lspconfig.lua_ls.setup({
-              filetypes = { "lua" },
-              settings = { -- custom settings for lua
-                Lua = {
-                  -- make the language server recognize "vim" global
-                  diagnostics = { globals = { "vim", "require" } },
-                  hint = {
-                    enable = true
-                  }
-                }
-              }
-            })
-          end,
-          -- }}}
-
-          -- Marksman {{{
-          ["marksman"] = function()
-            lspconfig["marksman"].setup({})
-          end,
-          -- }}}
-
-          -- Rust {{{
-          -- Prevent invoking `lspconfig.rust_analyzer`
-          -- `:h rustaceanvim.mason`
-          ['rust_analyzer'] = function() end,
-          -- }}}
-
-          -- TypeScript & JavaScript {{{
-          -- https://github.com/typescript-language-server/typescript-language-server
-          -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver
-          ["ts_ls"] = function()
-            lspconfig.ts_ls.setup({
-              on_attach = on_attach,
-              flags = lsp_flags,
-              settings = {
-                completions = {
-                  completeFunctionCalls = true
-                }
-              }
-            })
-          end,
-          -- }}}
-        }
+        -- Rust {{{
+        -- Prevent invoking `lspconfig.rust_analyzer`
+        -- `:h rustaceanvim.mason`
+        ['rust_analyzer'] = function() end,
+        -- }}}
       })
     end
   }

@@ -395,7 +395,6 @@ return {
         -- LSP
         { "<leader>l",  group = "LSP" },
         { "<leader>lc", desc = "Calls" },
-        { "<leader>lh", desc = "Help" },
         { "<leader>lS", group = "Symbols" },
 
         -- Persistence

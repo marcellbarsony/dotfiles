@@ -79,6 +79,20 @@ map("v", "K", ":move '<-2<CR>gv=gv", { desc = "Move [Up]" })
 map("v", "J", ":move '>+1<CR>gv=gv", { desc = "Move [Down]" })
 -- }}}
 
+-- LSP {{{
+map("n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<CR>", { desc = "Action" })
+map("n", "<leader>ld", "<cmd>lua vim.lsp.buf.hover()<CR>", { desc = "Documentation" })
+map("n", "<leader>lD", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "Diagnostics" })
+map("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format()<CR>", { desc = "Format" })
+map("n", "<leader>li", "<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = 0 }, { bufnr = 0 })<CR>", { desc = "Inlay hints" })
+map("n", "<leader>lk", "<cmd>lua vim.lsp.buf.signature_help()<CR>", { desc = "Signature help" })
+map("n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<CR>", { desc = "Rename" })
+
+map("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", { desc = "Diagnostic [Next]" })
+map("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", { desc = "Diagnostic [Prev]" })
+map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { desc = "Definition" })
+-- }}}
+
 -- Macro {{{
 map("n", "Q", "@qj", { desc = "Macro [Replay]" })
 map("x", "Q", ":norm @qj<CR>", { desc = "Macro [Replay Block]" })

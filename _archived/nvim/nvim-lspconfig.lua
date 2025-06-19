@@ -5,9 +5,6 @@
 -- `:h lsp-config`
 -- `:h lspconfig-keybindings`
 
--- Helper functions {{{
--- }}}
-
 return {
   {
     "neovim/nvim-lspconfig",
@@ -36,7 +33,7 @@ return {
       -- { "gt", vim.lsp.buf.type_definition, desc = "Type definition" },
       -- { "gD", vim.lsp.buf.declaration, desc = "Declaration" },
 
-      -- Inlay hints
+      Inlay hints
       { "<leader>li", function()
         vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = 0 }, { bufnr = 0 })
       end, desc = "Inlay hints" },
@@ -66,9 +63,13 @@ return {
       -- }}}
     },
     config = function()
+      -- Capabilities {{{
+      local capabilities = require('blink.cmp').get_lsp_capabilities()
+      -- local capabilities = require("cmp_nvim_lsp").default_capabilities()
+      -- }}}
+
       -- LSP Servers {{{
       local lspconfig = require("lspconfig")
-      -- local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       local servers = {
         "asm_lsp",
@@ -82,14 +83,16 @@ return {
         lspconfig[lsp].setup {
           on_attach = on_attach,
           flags = lsp_flags,
-          -- capabilities = capabilities
+          capabilities = capabilities
         }
       end
       -- }}}
 
       -- Diagnostics {{{
       -- `:h vim.diagnostic`
+      -- `:h diagnostic-signs`
       -- https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization#customizing-how-diagnostics-are-displayed
+      -- https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization#change-diagnostic-symbols-in-the-sign-column-gutter
       vim.diagnostic.config({
         virtual_text = false,
         signs = true,
@@ -97,11 +100,7 @@ return {
         update_in_insert = false,
         severity_sort = true,
       })
-      -- }}}
 
-      -- Diagnostics [Signs] {{{
-      -- `:h diagnostic-signs`
-      -- https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization#change-diagnostic-symbols-in-the-sign-column-gutter
       local signs = { Error = "x", Warn = "!", Hint = "", Info = "i" }
       for type, icon in pairs(signs) do
         local hl = "DiagnosticSign" .. type
