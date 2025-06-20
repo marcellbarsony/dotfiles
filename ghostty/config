@@ -49,4 +49,4 @@ window-inherit-working-directory = true
 
 # Working directory
 # Allow different window-inherit-working-directory behavior for tabs and windows #1392
-working-directory = home
+working-directory = inherit
