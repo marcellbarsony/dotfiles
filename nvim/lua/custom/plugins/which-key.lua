@@ -317,6 +317,7 @@ return {
 
         -- v (TODO) {{{
         -- { "v",  desc = "VISUAL" },
+        { "<leader>y", group = "Yazi", mode = { "v" } },
 
         { "<leader>g", group = "Git", mode = { "v" } },
         { "<leader>l", group = "LSP", mode = { "v" } },
@@ -396,6 +397,7 @@ return {
         { "<leader>l",  group = "LSP" },
         { "<leader>lc", desc = "Calls" },
         { "<leader>lS", group = "Symbols" },
+        { "<leader>lh", group = "Help" },
 
         -- Persistence
         { "<leader>p", group = "Persistence" },

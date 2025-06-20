@@ -24,18 +24,25 @@ return {
       -- https://cmp.saghen.dev/configuration/reference.html#cmdline
       cmdline = {
         enabled = true,
+        keymap = {
+          preset = "inherit",
+        },
+        sources = {
+          "buffer",
+          "cmdline"
+        },
         completion = {
-          ghost_text = {
-            enabled = true
-          },
           list = {
             selection = {
-              preselect = true,
+              preselect = false,
               auto_insert = true,
             }
           },
           menu = {
-            auto_show = true
+            auto_show = true,
+          },
+          ghost_text = {
+            enabled = true
           }
         }
       },
@@ -45,6 +52,14 @@ return {
       -- https://cmp.saghen.dev/configuration/completion.html
       -- https://cmp.saghen.dev/configuration/reference.html#completion
       completion = {
+        -- Accept {{{
+        accept = {
+          auto_brackets = {
+            enabled = true
+          }
+        },
+        -- }}}
+
         -- Documentation {{{
         -- https://cmp.saghen.dev/configuration/completion.html#documentation
         -- https://cmp.saghen.dev/configuration/reference.html#completion-documentation
@@ -58,7 +73,7 @@ return {
         -- https://cmp.saghen.dev/configuration/reference#completion-list
         list = {
           selection = {
-            preselect = true,
+            preselect = false,
             auto_insert = true
           }
         },
@@ -84,13 +99,26 @@ return {
           draw = {
             padding = 0,
             columns = {
-              { 'label', 'label_description', gap = 1 },
-              { 'kind_icon' }
+              { "label", "label_description", gap = 1 },
+              { "kind_icon" }
             }
           }
         }
         -- }}}
       },
+      -- }}}
+
+      -- Fuzzy {{{
+      -- https://cmp.saghen.dev/configuration/fuzzy.html
+      fuzzy = {
+        sorts = {
+          "exact",
+          "score",
+          "sort_text",
+        },
+
+      },
+
       -- }}}
 
       -- Keymap {{{
@@ -99,15 +127,15 @@ return {
         preset = "none",
 
         -- Accept
-        ['<CR>'] = { 'accept', 'fallback' },
+        ["<CR>"] = { "accept", "fallback" },
 
         -- Documentation
-        ['<C-u>'] = { 'scroll_documentation_up', 'fallback' },
-        ['<C-d>'] = { 'scroll_documentation_down', 'fallback' },
+        ["<C-u>"] = { "scroll_documentation_up", "fallback" },
+        ["<C-d>"] = { "scroll_documentation_down", "fallback" },
 
         -- Navigation
-        ['<Tab>'] = {  'select_next', 'snippet_forward', 'fallback' },
-        ['<S-Tab>'] = {  'select_prev', 'snippet_backward', 'fallback' },
+        ["<Tab>"] = {  "select_next", "snippet_forward", "fallback" },
+        ["<S-Tab>"] = {  "select_prev", "snippet_backward", "fallback" },
 
         -- Show & Hide
         ["<C-space>"] = {

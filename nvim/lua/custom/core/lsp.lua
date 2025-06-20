@@ -1,4 +1,8 @@
+-- LSP config
+-- `:h lsp`
+
 vim.lsp.enable({
+  "clangd",
   "bashls",
   "luals",
   "pyright"
