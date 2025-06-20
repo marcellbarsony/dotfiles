@@ -1,12 +1,4 @@
-live_config_reload = true
-
-# {{{ Colors
-# https://github.com/alacritty/alacritty-theme
-
-# import = [ "~/.config/alacritty/themes/nord.toml" ]
-# import = [ "~/.config/alacritty/themes/cyberpunk-neon.toml" ]
-import = [ "~/.config/alacritty/themes/tokyo-night.toml" ]
-
+# Colors {{{
 [colors]
 draw_bold_text_with_bright_colors = false
 transparent_background_colors = false
@@ -19,22 +11,22 @@ text = "CellBackground"
 background = "#000000"
 # }}}
 
-# {{{ Cursor
+# Cursor {{{
 [cursor]
 blink_interval = 1000
 vi_mode_style = "None"
 
 [cursor.style]
-blinking = "Off"
+# blinking = "Off"
 shape = "Block"
 # }}}
 
-# {{{ Env
+# Env {{{
 [env]
 TERM = "alacritty"
 # }}}
 
-# {{{ Font
+# Font {{{
 [font]
 builtin_box_drawing = true
 size = 12
@@ -64,19 +56,19 @@ x = 0
 y = 0
 # }}}
 
-# {{{ Scrolling
+# Scrolling {{{
 [scrolling]
 history = 5000
 multiplier = 5
 # }}}
 
-# {{{ Window
+# Window {{{
 [window]
 decorations = "full"
 decorations_theme_variant = "Dark"
 dynamic_padding = false
 dynamic_title = true
-opacity = 0.7
+opacity = 0.8
 resize_increments = false
 startup_mode = "Windowed"
 title = "Alacritty"
@@ -96,4 +88,15 @@ y = 5
 [window.position]
 x = 0
 y = 0
+
+[general]
+live_config_reload = true
+# }}}
+
+# Theme {{{
+# https://github.com/alacritty/alacritty-theme
+
+# import = [ "~/.config/alacritty/themes/nord.toml" ]
+# import = [ "~/.config/alacritty/themes/cyberpunk-neon.toml" ]
+import = [ "~/.config/alacritty/themes/tokyo-night.toml" ]
 # }}}
