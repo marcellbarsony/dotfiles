@@ -8,6 +8,7 @@ return {
     event = "InsertEnter",
     config = true,
     opts = {
+      enabled = function(bufnr) return true end,
       disable_filetype = { "TelescopePrompt" },
       disable_in_macro = false,
       disable_in_visualblock = false,

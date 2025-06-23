@@ -81,7 +81,8 @@ return {
         virt_text_pos      = "eol",
         delay              = 1000,
         ignore_whitespace  = false,
-        virt_text_priority = 100
+        virt_text_priority = 100,
+        use_focus = true,
       },
       -- }}}
 

@@ -3,7 +3,7 @@
 -- https://github.com/nvim-lua/plenary.nvim
 -- `:h telescope.nvim`
 
--- Helper functions {{{
+-- Functions {{{
 local function safe_cmd(command, error_message)
   return function()
     local ok, _ = pcall(vim.cmd, command)
