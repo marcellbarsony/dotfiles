@@ -144,6 +144,7 @@ return {
           end
         },
         ["<C-c>"] = { "hide", "fallback" },
+        ["<Esc>"] = { "hide", "fallback" },
       },
       -- }}}
 
