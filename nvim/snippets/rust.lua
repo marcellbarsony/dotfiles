@@ -829,9 +829,9 @@ ls.add_snippets("rust", {
             return sn(nil, {
               i(1),
               i(2, "Tuple"),
-              t({ " {" }),
+              t({ " (" }),
               i(3, "i32, i32, i32"),
-              t({ "}" }),
+              t({ ")" }),
             })
           end),
           -- }}}

@@ -51,6 +51,13 @@ map("x", "p", [["_dp]], { desc = "Paste [Global]" })
 map("n", "x", '"_x', { desc = "Delete" })
 -- }}}
 
+-- Diagnostic {{{
+-- https://neovim.io/doc/user/diagnostic.html
+map("n", "]d", "<cmd>lua vim.diagnostic.jump({count=1, float=true})<CR>", { desc = "Diagnostic [Next]" })
+map("n", "[d", "<cmd>lua vim.diagnostic.jump({count=-1, float=true})<CR>", { desc = "Diagnostic [Prev]" })
+map("n", "<leader>lD", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "Diagnostics" })
+-- }}}
+
 -- Highlights {{{
 map("n", "<C-c>", "<cmd>nohlsearch<CR>", { desc = "Clear" })
 map("n", "<leader>ls", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Substitute" })
@@ -80,19 +87,35 @@ map("v", "J", ":move '>+1<CR>gv=gv", { desc = "Move [Down]" })
 -- }}}
 
 -- LSP {{{
+-- https://neovim.io/doc/user/lsp.html
+
+-- Buf
+-- https://neovim.io/doc/user/lsp.html#lsp-buf
+map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { desc = "Definition" })
 map("n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<CR>", { desc = "Action" })
 map("n", "<leader>ld", "<cmd>lua vim.lsp.buf.hover()<CR>", { desc = "Documentation" })
-map("n", "<leader>lD", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "Diagnostics" })
 map("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format()<CR>", { desc = "Format" })
-map("n", "<leader>li", "<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = 0 }, { bufnr = 0 })<CR>", { desc = "Inlay hints" })
 map("n", "<leader>lk", "<cmd>lua vim.lsp.buf.signature_help()<CR>", { desc = "Signature help" })
 map("n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<CR>", { desc = "Rename" })
 
-map("n", "<leader>lhh", "<cmd>checkhealth vim.lsp<CR>", { desc = "Health" })
+map("n", "<leader>lRr", "<cmd>lua vim.lsp.buf.references()<CR>", { desc = "References" })
+map("n", "<leader>lRc", "<cmd>lua vim.lsp.buf.clear_references()<CR>", { desc = "Clear" })
 
-map("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", { desc = "Diagnostic [Next]" })
-map("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", { desc = "Diagnostic [Prev]" })
-map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { desc = "Definition" })
+-- map("n", "", "<cmd>lua vim.lsp.buf.declaration()<CR>", { desc = "Declaration" })
+-- map("n", "", "<cmd>lua vim.lsp.buf.document_symbol()<CR>", { desc = "Document symbol" })
+-- map("n", "", "<cmd>lua vim.lsp.buf.implementation()<CR>", { desc = "Implementation" })
+-- map("n", "", "<cmd>lua vim.lsp.buf.incoming_calls()<CR>", { desc = "Incoming calls" })
+-- map("n", "", "<cmd>lua vim.lsp.buf.outgoing_calls()<CR>", { desc = "Outgoing calls" })
+-- map("n", "", "<cmd>lua vim.lsp.buf.type_definition()<CR>", { desc = "Type definition" })
+-- map("n", "", "<cmd>lua vim.lsp.buf.type_hierarchy()<CR>", { desc = "Type hierarchy" })
+
+-- Health
+-- https://neovim.io/doc/user/health.html
+map("n", "<leader>lHh", "<cmd>checkhealth vim.lsp<CR>", { desc = "Health" })
+
+-- Inlay hint
+-- https://neovim.io/doc/user/lsp.html#_lua-module:-vim.lsp.inlay_hint
+map("n", "<leader>lh", "<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = 0 }, { bufnr = 0 })<CR>", { desc = "Hints" })
 -- }}}
 
 -- Macro {{{

@@ -47,7 +47,7 @@ return {
 
       -- LSP {{{
       { "gD", "<cmd>Telescope lsp_type_definitions<CR>", desc = "Definition [Type]" },
-      { "<leader>lI", "<cmd>Telescope lsp_implementations<CR>", desc = "Implementations" },
+      { "<leader>li", "<cmd>Telescope lsp_implementations<CR>", desc = "Implementations" },
       { "<leader>lci", "<cmd>Telescope lsp_incoming_calls<CR>", desc = "Incoming" },
       { "<leader>lco", "<cmd>Telescope lsp_outgoing_calls<CR>", desc = "Outgoing" },
       { "<leader>lR", "<cmd>Telescope lsp_references<CR>", desc = "References" },
