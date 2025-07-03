@@ -61,8 +61,6 @@ export QT_QPA_PLATFORM=wayland
 export QT_QPA_PLATFORMTHEME=qt5ct:qt6ct
 export QT_STYLE_OVERRIDE="Adwaita-Dark"
 # export XDG_CURRENT_DESKTOP=KDE
-# export XDG_CURRENT_DESKTOP=qtile
-# export XDG_SESSION_DESKTOP=qtile
 
 # Zellij
 export ZELLIJ_AUTO_ATTACH=true

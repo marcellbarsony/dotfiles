@@ -103,7 +103,7 @@ input {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 layout {
     gaps 16
-    center-focused-column "never"
+    center-focused-column "always"
     // default-column-display "tabbed"
     // preset-window-heights { }
     default-column-width { proportion 0.5; }

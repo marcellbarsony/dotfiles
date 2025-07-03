@@ -33,7 +33,7 @@ return {
       -- { "gt", vim.lsp.buf.type_definition, desc = "Type definition" },
       -- { "gD", vim.lsp.buf.declaration, desc = "Declaration" },
 
-      Inlay hints
+      -- Inlay hints
       { "<leader>li", function()
         vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = 0 }, { bufnr = 0 })
       end, desc = "Inlay hints" },

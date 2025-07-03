@@ -55,6 +55,7 @@ rules = [
     { name = "*.cfg",  use = "edit" },
     { name = "*.cpp",  use = "edit" },
     { name = "*.css",  use = "edit" },
+    { name = "*.HEIC", use = "browser" },
     { name = "*.html", use = "edit" },
     { name = "*.ini",  use = "edit" },
     { name = "*.js",   use = "edit" },

@@ -386,6 +386,10 @@ return {
         -- DAP
         { "<leader>d",  group = "DAP" },
         { "<leader>dt", group = "Telescope" },
+        { "<leader>df", group = "FZF" },
+
+        -- FZF
+        { "<leader>f",  group = "FZF" },
 
         -- Git
         { "<leader>g",  group = "Git" },
@@ -415,6 +419,7 @@ return {
         { "<leader>vs", desc = "Spell" },
         { "<leader>vt", desc = "Telescope" },
         { "<leader>vT", desc = "Treesitter" },
+        -- { "<leader>vf", desc = "FZF" },
 
         -- Yazi
         { "<leader>y", group = "Yazi" }

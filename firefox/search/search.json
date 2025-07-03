@@ -26,6 +26,11 @@
             "Alias": "@rustexample"
         },
         {
+            "Name": "Rust Docs",
+            "URL": "https://docs.rs/releases/search?query=%s",
+            "Alias": "@rustdocs"
+        },
+        {
             "Name": "Startpage",
             "URL": "https://www.startpage.com/sp/search?query=%s",
             "Alias": "@startpage"

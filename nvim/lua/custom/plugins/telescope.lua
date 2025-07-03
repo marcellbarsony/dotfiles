@@ -21,21 +21,23 @@ return {
     cmd = "Telescope",
     keys = {
       -- Keys {{{
+      -- Builtins {{{
       { "<leader>tt", "<cmd>Telescope<CR>", desc = "Telescope" },
       { "<leader>tb", "<cmd>Telescope buffers<CR>", desc = "Buffers" },
       { "<leader>tc", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Current Buffer" },
       { "<leader>td", "<cmd>Telescope diagnostics<CR>", desc = "Diagnostics" },
       { "<leader>tf", "<cmd>Telescope find_files<CR>", desc = "Find Files" },
       { "<leader>tg", "<cmd>Telescope live_grep<CR>", desc = "Grep" },
-      { "<leader>tG", "<cmd>Telescope live_grep<CR>", desc = "Grep [String]" },
+      { "<leader>tG", "<cmd>Telescope grep_string<CR>", desc = "Grep [String]" },
       { "<leader>to", "<cmd>Telescope oldfiles<CR>", desc = "Oldfiles" },
+      -- }}}
 
       -- DAP {{{
       { "<leader>dd", "<cmd>lua require'telescope'.extensions.dap.configurations()<CR>", desc = "Debug" },
-      { "<leader>dtc", "<cmd>lua require'telescope'.extensions.dap.commands()<CR>", desc = "Commands" },
       { "<leader>dtb", "<cmd>lua require'telescope'.extensions.dap.list_breakpoints()<CR>", desc = "Breakpoints" },
-      { "<leader>dtv", safe_cmd("<cmd>lua require'telescope'.extensions.dap.variables()<CR>", "Warning: No variables are set"), desc = "Variables" },
+      { "<leader>dtc", "<cmd>lua require'telescope'.extensions.dap.commands()<CR>", desc = "Commands" },
       { "<leader>dtf", "<cmd>lua require'telescope'.extensions.dap.frames()<CR>", desc = "Frames" },
+      { "<leader>dtv", safe_cmd("<cmd>lua require'telescope'.extensions.dap.variables()<CR>", "Warning: No variables are set"), desc = "Variables" },
       -- }}}
 
       -- GIT {{{
@@ -43,6 +45,7 @@ return {
       { "<leader>gc", safe_cmd("Telescope git_commits", "Warning: Not a Git directory"), desc = "Commits" },
       { "<leader>gf", safe_cmd("Telescope git_files", "Warning: Not a Git directory"), desc = "Files" },
       { "<leader>gs", safe_cmd("Telescope git_status", "Warning: Not a Git directory"), desc = "Status" },
+      { "<leader>gS", safe_cmd("Telescope git_stash", "Warning: Not a Git directory"), desc = "Stash" },
       -- }}}
 
       -- LSP {{{
@@ -56,16 +59,16 @@ return {
       -- }}}
 
       -- Treesitter {{{
-      { "<leader>vth", "<cmd>Telescope highlights<CR>", desc = "Highlights" },
-      { "<leader>vts", "<cmd>Telescope treesitter<CR>", desc = "Symbols" },
+      { "<leader>vTs", "<cmd>Telescope treesitter<CR>", desc = "Symbols" },
       -- }}}
 
       -- Vim {{{
       { "<leader>vta", "<cmd>Telescope autocommands<CR>", desc = "Autocommands" },
       { "<leader>vtc", "<cmd>Telescope commands<CR>", desc = "Commands" },
+      { "<leader>vth", "<cmd>Telescope highlights<CR>", desc = "Highlights" },
       { "<leader>vtj", "<cmd>Telescope jumplist<CR>", desc = "Jumplist" },
       { "<leader>vtk", "<cmd>Telescope keymaps<CR>", desc = "Keymaps" },
-      { "<leader>vtm", "<cmd>Telescope man_pages<CR>", desc = "Man pages" },
+      { "<leader>vtm", "<cmd>Telescope man_pages<CR>", desc = "Manpages" },
       { "<leader>vto", "<cmd>Telescope vim_options<CR>", desc = "Options" },
       { "<leader>vtr", "<cmd>Telescope registers<CR>", desc = "Registers" },
       { "<leader>vHc", "<cmd>Telescope command_history<CR>", desc = "Command" },
@@ -136,7 +139,7 @@ return {
             -- }}}
 
             -- Normal {{{
-            n ={
+            n = {
               ["<esc>"] = actions.close,
               ["<CR>"] = actions.select_default,
               ["<C-x>"] = actions.select_horizontal,
@@ -148,7 +151,6 @@ return {
               ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
               ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 
-              -- TODO: This would be weird if we switch the ordering.
               ["j"] = actions.move_selection_next,
               ["k"] = actions.move_selection_previous,
               ["H"] = actions.move_to_top,

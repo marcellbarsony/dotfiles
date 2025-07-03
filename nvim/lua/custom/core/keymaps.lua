@@ -60,7 +60,7 @@ map("n", "<leader>lD", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "Dia
 
 -- Highlights {{{
 map("n", "<C-c>", "<cmd>nohlsearch<CR>", { desc = "Clear" })
-map("n", "<leader>ls", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Substitute" })
+-- map("n", "<leader>lR", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Rename" })
 -- }}}
 
 -- Lazy {{{
@@ -95,8 +95,8 @@ map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { desc = "Definition" })
 map("n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<CR>", { desc = "Action" })
 map("n", "<leader>ld", "<cmd>lua vim.lsp.buf.hover()<CR>", { desc = "Documentation" })
 map("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format()<CR>", { desc = "Format" })
-map("n", "<leader>lk", "<cmd>lua vim.lsp.buf.signature_help()<CR>", { desc = "Signature help" })
 map("n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<CR>", { desc = "Rename" })
+map("n", "<leader>ls", "<cmd>lua vim.lsp.buf.signature_help()<CR>", { desc = "Signature help" })
 
 map("n", "<leader>lRr", "<cmd>lua vim.lsp.buf.references()<CR>", { desc = "References" })
 map("n", "<leader>lRc", "<cmd>lua vim.lsp.buf.clear_references()<CR>", { desc = "Clear" })

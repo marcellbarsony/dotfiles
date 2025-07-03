@@ -188,6 +188,12 @@ function theme.setup()
     CmpItemKindVariable   = { link = "Variable"           },
     -- }}}
 
+    -- FZF {{{
+    -- FzfLuaBufLineNr = { fg = c.error },
+    -- FzfLuaCursorLineNr = { fg = c.error, bg = c.error },
+
+    -- }}}
+
     -- GitSigns {{{
     GitSignsAdd              = { fg = "#449dab" },
     GitSignsChange           = { fg = "#6183bb" },
