@@ -271,64 +271,9 @@
                         }
                     },
                     {
-                        "name": "Screen Capture (PipeWire)",
-                        "source_uuid": "1c68dfa0-d6ab-41b5-84dd-0391f73c2f24",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "scale_ref": {
-                            "x": 1920.0,
-                            "y": 1080.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds_crop": false,
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 16,
-                        "group_item_backup": false,
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "pos_rel": {
-                            "x": -1.7777777910232544,
-                            "y": -1.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_rel": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_rel": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
                         "name": "Screen",
                         "source_uuid": "ed14b8ba-4bbc-40af-b7b2-3824596ece45",
-                        "visible": false,
+                        "visible": true,
                         "locked": true,
                         "rot": 0.0,
                         "scale_ref": {
@@ -452,8 +397,6 @@
                 "OBSBasic.SelectScene": [],
                 "libobs.show_scene_item.5": [],
                 "libobs.hide_scene_item.5": [],
-                "libobs.show_scene_item.16": [],
-                "libobs.hide_scene_item.16": [],
                 "libobs.show_scene_item.1": [],
                 "libobs.hide_scene_item.1": [],
                 "libobs.show_scene_item.9": [],
@@ -503,8 +446,8 @@
                     "id": "noise_gate_filter",
                     "versioned_id": "noise_gate_filter",
                     "settings": {
-                        "open_threshold": -30.0,
-                        "close_threshold": -40.0
+                        "open_threshold": -20.0,
+                        "close_threshold": -30.0
                     },
                     "mixers": 255,
                     "sync": 0,
@@ -568,7 +511,7 @@
             "mixers": 255,
             "sync": 0,
             "flags": 0,
-            "volume": 1.0,
+            "volume": 0.3110068142414093,
             "balance": 0.5,
             "enabled": true,
             "muted": false,
@@ -594,8 +537,8 @@
                     "id": "compressor_filter",
                     "versioned_id": "compressor_filter",
                     "settings": {
-                        "ratio": 15.0,
-                        "threshold": -35.0,
+                        "ratio": 5.0,
+                        "threshold": -30.0,
                         "release_time": 500,
                         "sidechain_source": "Microphone"
                     },
@@ -617,32 +560,6 @@
                     "private_settings": {}
                 }
             ]
-        },
-        {
-            "prev_ver": 520093700,
-            "name": "Screen Capture (PipeWire)",
-            "uuid": "1c68dfa0-d6ab-41b5-84dd-0391f73c2f24",
-            "id": "pipewire-screen-capture-source",
-            "versioned_id": "pipewire-screen-capture-source",
-            "settings": {
-                "RestoreToken": ""
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {},
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
         }
     ],
     "groups": [

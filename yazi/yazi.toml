@@ -39,6 +39,9 @@ edit = [
 play = [
     { run = 'vlc "$@"', desc = "vlc", orphan = true },
 ]
+play_mpv = [
+    { run = 'mpv "$@"', desc = "mpv", orphan = true },
+]
 open = [
     { run = 'xdg-open "$@"', desc = "XDG open" },
 ]
@@ -70,6 +73,7 @@ rules = [
     { name = "*.ron",  use = "edit" },
     { name = "*.scss", use = "edit" },
     { name = "*.toml", use = "edit" },
+    { name = "*.ts",  use = "play_mpv" },
     { name = "*.txt",  use = "edit" },
     { name = "*.xml",  use = "edit" },
     { name = "*.yml",  use = "edit" },

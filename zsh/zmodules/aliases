@@ -34,6 +34,9 @@ alias vim="nvim"
 nc="ncat"
 netcat="ncat"
 
+# Pacman
+alias update="sudo pacman -Syu"
+
 # Zellij
 alias z="zellij"
 alias zellij="zellij -l welcome"
