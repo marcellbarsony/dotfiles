@@ -26,6 +26,27 @@ vim.keymap.set("n", "<leader>cd",
   { silent = true, buffer = bufnr, desc = "Debuggables" }
 )
 
+vim.keymap.set("n", "<leader>cD",
+  function()
+    vim.cmd.RustLsp("openDocs")
+  end,
+  { silent = true, buffer = bufnr, desc = "Open docs" }
+)
+
+vim.keymap.set("n", "<leader>ce",
+  function()
+    vim.cmd.RustLsp("explainError")
+  end,
+  { silent = true, buffer = bufnr, desc = "Explain error" }
+)
+
+vim.keymap.set("n", "<leader>cE",
+  function()
+    vim.cmd.RustLsp("expandMacro")
+  end,
+  { silent = true, buffer = bufnr, desc = "Expand macro" }
+)
+
 vim.keymap.set("n", "<leader>ch",
   function()
     vim.cmd.RustLsp("hover", "actions")
@@ -45,6 +66,13 @@ vim.keymap.set("n", "<leader>cr",
     vim.cmd.RustLsp("runnables")
   end,
   { silent = true, buffer = bufnr, desc = "Runnables" }
+)
+
+vim.keymap.set("n", "<leader>cR",
+  function()
+    vim.cmd.RustLsp("relatedDiagnostics")
+  end,
+  { silent = true, buffer = bufnr, desc = "Related Diagnostics" }
 )
 -- }}}
 
