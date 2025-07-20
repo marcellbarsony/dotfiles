@@ -1,0 +1,9 @@
+! Google - "Sign in with Google"
+||accounts.google.com/gsi/*
+||accounts.google.com/gsi/*$xhr,script,3p
+
+! Google - Consent, "Before you continue"
+www.google.*##^script:has-text(consentCookiePayload)
+www.google.*##+js(acis, document.cookie, YES+)
+google.*##+js(aeld, DOMContentLoaded, CONSENT)
+||consent.google.com^
