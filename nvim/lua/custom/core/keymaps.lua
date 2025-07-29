@@ -94,7 +94,7 @@ map("v", "J", ":move '>+1<CR>gv=gv", { desc = "Move [Down]" })
 map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { desc = "Definition" })
 map("n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<CR>", { desc = "Action" })
 map("n", "<leader>ld", "<cmd>lua vim.lsp.buf.hover()<CR>", { desc = "Documentation" })
-map("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format()<CR>", { desc = "Format" })
+map("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format( {async = true })<CR>", { desc = "Format" })
 map("n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<CR>", { desc = "Rename" })
 map("n", "<leader>ls", "<cmd>lua vim.lsp.buf.signature_help()<CR>", { desc = "Signature help" })
 

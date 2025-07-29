@@ -13,11 +13,11 @@ function theme.setup()
     -- Base {{{
 
     -- Cursor {{{
-    Cursor       = { fg = c.bg, bg = c.fg   },  -- Character under cursor
-    lCursor      = { fg = c.bg, bg = c.fg   },  -- Character under cursor when |language-mapping| is used (`:h guicursor`)
-    CursorIM     = { fg = c.bg, bg = c.fg   },  -- Cursor, but used in IME mode |CursorIM|
-    CursorColumn = { bg = c.bg              },  -- Cursor screen-column when 'cursorcolumn' is set
-    CursorLine   = { bg = c.bg_dark         },  -- Cursor screen-line when 'cursorline' is set
+    Cursor       = { fg = c.bg, bg = c.fg                },  -- Character under cursor
+    lCursor      = { fg = c.bg, bg = c.fg                },  -- Character under cursor when |language-mapping| is used (`:h guicursor`)
+    CursorIM     = { fg = c.bg, bg = c.fg                },  -- Cursor, but used in IME mode |CursorIM|
+    CursorColumn = { bg = c.bg                           },  -- Cursor screen-column when 'cursorcolumn' is set
+    CursorLine   = { bg = c.bg_dark                      },  -- Cursor screen-line when 'cursorline' is set
     CursorLineNr = { fg = c.inverse_primary, bold = true },  -- LineNr when 'cursorline' or 'relativenumber' is set
     -- }}}
 
@@ -66,16 +66,16 @@ function theme.setup()
     -- }}}
 
     -- Diff {{{
-    -- DiffAdd                     = { bg = c.diff.add    }, -- Added line
-    -- DiffChange                  = { bg = c.diff.change }, -- Changed line
-    -- DiffDelete                  = { bg = c.diff.delete }, -- Deleted line
-    -- DiffText                    = { bg = c.diff.text   }, -- Changed text within a changed line
+    -- DiffAdd    = { bg = c.diff.add    },  -- Added line
+    -- DiffChange = { bg = c.diff.change },  -- Changed line
+    -- DiffDelete = { bg = c.diff.delete },  -- Deleted line
+    -- DiffText   = { bg = c.diff.text   },  -- Changed text within a changed line
     -- }}}
 
     -- Error & Warning {{{
-    Error                       = { fg = c.on_error },  -- (preferred) any erroneous construct
-    ErrorMsg                    = { fg = c.primary  },  -- error messages on the command line
-    -- WarningMsg                  = { fg = c.warning },  -- warning messages
+    Error         = { fg = c.on_error },  -- (preferred) any erroneous construct
+    ErrorMsg      = { fg = c.primary  },  -- error messages on the command line
+    -- WarningMsg    = { fg = c.warning  },  -- warning messages
     -- }}}
 
     -- Fold {{{
@@ -152,9 +152,9 @@ function theme.setup()
     -- }}}
 
     -- TabLine {{{
-    -- TabLine     -- tab pages line, not active tab page label
-    -- TabLineFill = { bg = c.black              }, -- tab pages line, where there are no labels
-    -- TabLineSel  = { fg = c.black, bg = c.blue }, -- tab pages line, active tab page label
+    -- TabLine                                       -- tab pages line, not active tab page label
+    -- TabLineFill = { bg = c.black              },  -- tab pages line, where there are no labels
+    -- TabLineSel  = { fg = c.black, bg = c.blue },  -- tab pages line, active tab page label
     -- }}}
 
     -- Type {{{
@@ -168,8 +168,8 @@ function theme.setup()
     -- }}}
 
     -- WinBar {{{
-    -- WinBar   = "StatusLine" ,  -- window bar
-    -- WinBarNC = "StatusLineNC", -- window bar in inactive windows
+    -- WinBar   = "StatusLine" ,   -- window bar
+    -- WinBarNC = "StatusLineNC",  -- window bar in inactive windows
     -- }}}
     -- }}}
 
@@ -297,7 +297,7 @@ function theme.setup()
 
     -- Syntax {{{
     Bold                        = { bold = true, fg = c.fg           },  -- (preferred) any bold text
-    Debug                       = { fg = c.on_error                  },  --    debugging statements
+    Debug                       = { fg = c.on_error                  },  -- debugging statements
     debugBreakpoint             = { bg = c.on_error, fg = c.on_error },  -- used for breakpoint colors in terminal-debug
     debugPC                     = { bg = c.primary                   },  -- used for highlighting the current line in terminal-debug
     Italic                      = { italic = true, fg = c.fg         },  -- (preferred) any italic text
@@ -411,6 +411,12 @@ function theme.setup()
     ["@variable.parameter.builtin"] = { link = "Variable"    },
     -- }}}
 
+    -- Treesitter - HTML {{{
+    ["@tag.html"] = { fg = c.primary },
+    ["@tag.attribute.html"] = { fg = c.primary },
+    ["@tag.delimiter.html"] = { fg = c.primary },
+    -- }}}
+
     -- Treesitter - Lua {{{
     ["@boolean.lua"]             = { link = "Boolean"     },
     ["@constructor.lua"]         = { link = "Constructor" },
@@ -422,10 +428,8 @@ function theme.setup()
     ["@punctuation.bracket.lua"] = { link = "Punctuation" },
     -- }}}
 
-    -- Treesitter - HTML {{{
-    ["@tag.html"] = { fg = c.primary },
-    ["@tag.attribute.html"] = { fg = c.primary },
-    ["@tag.delimiter.html"] = { fg = c.primary },
+    -- Treesitter - Markdown {{{
+    ["@string.escape.markdown_inline"] = { link = "Operator"    },
     -- }}}
 
     -- Treesitter - Python {{{
@@ -464,6 +468,7 @@ function theme.setup()
     ["@punctuation.bracket.rust"]   = { link = "Punctuation" },
     ["@punctuation.special.rust"]   = { link = "Punctuation" },
     ["@string.rust"]                = { link = "String"      },
+    ["@string.escape.rust"]         = { link = "Operator"    },
     ["@type.rust"]                  = { link = "Type"        },
     ["@type.builtin.rust"]          = { link = "Type"        },
     ["@type.function.rust"]         = { link = "Function"    },

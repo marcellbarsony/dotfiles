@@ -302,6 +302,7 @@ return {
         { "gf",  desc = "File" },
         { "gg",  desc = "Top" },
         { "gi",  desc = "Insert [Last]" },
+        { "gr",  desc = "LSP" },
         { "gt",  desc = "Tab page [Next]" },
         { "gT",  desc = "Tab page [Prev]" },
         { "gv",  desc = "Visual selection" },
