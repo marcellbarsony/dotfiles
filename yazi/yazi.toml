@@ -65,6 +65,7 @@ rules = [
     { name = "*.json", use = "edit" },
     { name = "*.lua",  use = "edit" },
     { name = "*.md",   use = "edit" },
+    { name = "*.mp4",  use = "play" },
     { name = "*.out",  use = "edit" },
     { name = "*.sh",   use = "edit" },
     { name = "*.pdf",  use = "browser" },
