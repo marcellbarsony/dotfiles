@@ -111,12 +111,12 @@ return {
       -- Fuzzy {{{
       -- https://cmp.saghen.dev/configuration/fuzzy.html
       fuzzy = {
+        implementation = "prefer_rust_with_warning",
         sorts = {
           "exact",
           "score",
           "sort_text",
-        },
-
+        }
       },
 
       -- }}}
