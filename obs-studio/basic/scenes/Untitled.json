@@ -9,7 +9,7 @@
     "name": "Untitled",
     "sources": [
         {
-            "prev_ver": 520093700,
+            "prev_ver": 520159234,
             "name": "Screen",
             "uuid": "ed14b8ba-4bbc-40af-b7b2-3824596ece45",
             "id": "pipewire-screen-capture-source",
@@ -35,7 +35,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093700,
+            "prev_ver": 520159234,
             "name": "Camera",
             "uuid": "e427a6cd-d343-4221-8005-c4bba1f833cb",
             "id": "v4l2_input",
@@ -64,13 +64,13 @@
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 520093700,
+                    "prev_ver": 520159234,
                     "name": "Crop/Pad",
                     "uuid": "2092dfd4-6978-4fb0-8da7-37edbed5bb5f",
                     "id": "crop_filter",
                     "versioned_id": "crop_filter",
                     "settings": {
-                        "left": 575,
+                        "left": 525,
                         "right": 475,
                         "relative": true
                     },
@@ -94,13 +94,13 @@
             ]
         },
         {
-            "prev_ver": 520093700,
+            "prev_ver": 520159234,
             "name": "Main",
             "uuid": "dbc969e6-ffd6-4537-a750-23a648c152ce",
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 16,
+                "id_counter": 17,
                 "custom_size": false,
                 "items": [
                     {
@@ -274,7 +274,7 @@
                         "name": "Screen",
                         "source_uuid": "ed14b8ba-4bbc-40af-b7b2-3824596ece45",
                         "visible": true,
-                        "locked": true,
+                        "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
                             "x": 1920.0,
@@ -329,7 +329,7 @@
                         "name": "Camera",
                         "source_uuid": "e427a6cd-d343-4221-8005-c4bba1f833cb",
                         "visible": true,
-                        "locked": true,
+                        "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
                             "x": 1920.0,
@@ -346,20 +346,20 @@
                         "id": 9,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 1496.0,
-                            "y": 841.0
+                            "x": 0.0,
+                            "y": 0.0
                         },
                         "pos_rel": {
-                            "x": 0.9925925731658936,
-                            "y": 0.5574073791503906
+                            "x": -1.7777777910232544,
+                            "y": -1.0
                         },
                         "scale": {
-                            "x": 0.22083333134651184,
-                            "y": 0.2212962955236435
+                            "x": 1.0,
+                            "y": 1.0
                         },
                         "scale_rel": {
-                            "x": 0.22083333134651184,
-                            "y": 0.2212962955236435
+                            "x": 1.0,
+                            "y": 1.0
                         },
                         "bounds": {
                             "x": 0.0,
@@ -405,16 +405,17 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
             "private_settings": {}
         },
         {
-            "prev_ver": 520093700,
+            "prev_ver": 520159234,
             "name": "Microphone",
             "uuid": "de2480e9-9c6c-4c5d-a46a-0cf7755e4e19",
             "id": "pipewire_audio_input_capture",
             "versioned_id": "pipewire_audio_input_capture",
             "settings": {
-                "TargetName": "alsa_input.usb-Focusrite_Scarlett_2i2_USB_Y8Q545R9A2644F-00.HiFi__Mic1__source",
+                "TargetName": "alsa_input.pci-0000_c3_00.6.HiFi__Mic1__source",
                 "TargetId": 0
             },
             "mixers": 255,
@@ -440,7 +441,7 @@
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 520093700,
+                    "prev_ver": 520159234,
                     "name": "Noise Gate",
                     "uuid": "3c350c07-5c46-4814-b0e9-e2f1eba1ee07",
                     "id": "noise_gate_filter",
@@ -454,7 +455,7 @@
                     "flags": 0,
                     "volume": 1.0,
                     "balance": 0.5,
-                    "enabled": true,
+                    "enabled": false,
                     "muted": false,
                     "push-to-mute": false,
                     "push-to-mute-delay": 0,
@@ -467,7 +468,7 @@
                     "private_settings": {}
                 },
                 {
-                    "prev_ver": 520093700,
+                    "prev_ver": 520159234,
                     "name": "Compressor",
                     "uuid": "52b142e9-3324-4726-8b88-58d5408aa04b",
                     "id": "compressor_filter",
@@ -484,7 +485,7 @@
                     "flags": 0,
                     "volume": 1.0,
                     "balance": 0.5,
-                    "enabled": true,
+                    "enabled": false,
                     "muted": false,
                     "push-to-mute": false,
                     "push-to-mute-delay": 0,
@@ -499,19 +500,19 @@
             ]
         },
         {
-            "prev_ver": 520093700,
+            "prev_ver": 520159234,
             "name": "Desktop",
             "uuid": "7ae3e9c0-3baf-4a03-956b-240c667a404b",
             "id": "pipewire_audio_output_capture",
             "versioned_id": "pipewire_audio_output_capture",
             "settings": {
-                "TargetName": "alsa_output.usb-Conexant_Hi_Res_USB-C_AUDIO_000000000000-00.analog-stereo",
+                "TargetName": "alsa_output.pci-0000_c3_00.1.HiFi__HDMI3__sink",
                 "TargetId": 0
             },
             "mixers": 255,
             "sync": 0,
             "flags": 0,
-            "volume": 0.3110068142414093,
+            "volume": 1.0,
             "balance": 0.5,
             "enabled": true,
             "muted": false,
@@ -531,7 +532,7 @@
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 520093700,
+                    "prev_ver": 520159234,
                     "name": "Compressor",
                     "uuid": "38c67227-a07e-48d6-8b7e-d5f0ffd4f55b",
                     "id": "compressor_filter",
@@ -564,7 +565,7 @@
     ],
     "groups": [
         {
-            "prev_ver": 520093700,
+            "prev_ver": 520159234,
             "name": "Audio",
             "uuid": "7a9d5176-7658-4a56-b64e-97825b3f272c",
             "id": "group",
@@ -707,6 +708,7 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
             "private_settings": {}
         }
     ],
@@ -735,13 +737,17 @@
     ],
     "transitions": [],
     "saved_projectors": [],
+    "canvases": [],
     "current_transition": "Cut",
     "transition_duration": 300,
     "preview_locked": false,
     "scaling_enabled": false,
-    "scaling_level": 0,
+    "scaling_level": -7,
     "scaling_off_x": 0.0,
     "scaling_off_y": 0.0,
+    "virtual-camera": {
+        "type2": 3
+    },
     "modules": {
         "scripts-tool": [],
         "output-timer": {

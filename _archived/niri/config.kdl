@@ -21,8 +21,10 @@ input {
             variant "colemak_dh"
         }
 
-        // Enable numlock on startup, omitting this setting disables it.
-        numlock
+        // repeat-delay 600
+        // repeat-rate 25
+        // track-layout "global"
+        numlock // Enable numlock on startup
     }
 
     // Libinput
@@ -67,36 +69,36 @@ input {
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
-/-output "eDP-1" {
-    // Uncomment this line to disable this output.
-    // off
-
-    // Resolution and, optionally, refresh rate of the output.
-    // The format is "<width>x<height>" or "<width>x<height>@<refresh rate>".
-    // If the refresh rate is omitted, niri will pick the highest refresh rate
-    // for the resolution.
-    // If the mode is omitted altogether or is invalid, niri will pick one automatically.
-    // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "1920x1080@120.030"
-
-    // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 2
-
-    // Transform allows to rotate the output counter-clockwise, valid values are:
-    // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
-    transform "normal"
-
-    // Position of the output in the global coordinate space.
-    // This affects directional monitor actions like "focus-monitor-left", and cursor movement.
-    // The cursor can only move between directly adjacent outputs.
-    // Output scale and rotation has to be taken into account for positioning:
-    // outputs are sized in logical, or scaled, pixels.
-    // For example, a 3840×2160 output with scale 2.0 will have a logical size of 1920×1080,
-    // so to put another output directly adjacent to it on the right, set its x to 1920.
-    // If the position is unset or results in an overlap, the output is instead placed
-    // automatically.
-    position x=1280 y=0
-}
+// /-output "eDP-1" {
+//     // Uncomment this line to disable this output.
+//     // off
+//
+//     // Resolution and, optionally, refresh rate of the output.
+//     // The format is "<width>x<height>" or "<width>x<height>@<refresh rate>".
+//     // If the refresh rate is omitted, niri will pick the highest refresh rate
+//     // for the resolution.
+//     // If the mode is omitted altogether or is invalid, niri will pick one automatically.
+//     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
+//     mode "1920x1080@120.030"
+//
+//     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
+//     scale 2
+//
+//     // Transform allows to rotate the output counter-clockwise, valid values are:
+//     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
+//     transform "normal"
+//
+//     // Position of the output in the global coordinate space.
+//     // This affects directional monitor actions like "focus-monitor-left", and cursor movement.
+//     // The cursor can only move between directly adjacent outputs.
+//     // Output scale and rotation has to be taken into account for positioning:
+//     // outputs are sized in logical, or scaled, pixels.
+//     // For example, a 3840×2160 output with scale 2.0 will have a logical size of 1920×1080,
+//     // so to put another output directly adjacent to it on the right, set its x to 1920.
+//     // If the position is unset or results in an overlap, the output is instead placed
+//     // automatically.
+//     position x=1280 y=0
+// }
 // }}}
 
 // Layout {{{
@@ -104,16 +106,17 @@ input {
 layout {
     gaps 16
     center-focused-column "always"
+    always-center-single-column
     // default-column-display "tabbed"
     // preset-window-heights { }
-    default-column-width { proportion 0.5; }
+    // default-column-width { proportion 0.5; }
     // default-column-width { proportion 0.5; }
     background-color "#333333"
 
-    preset-column-widths {
-        proportion 0.5
-        proportion 1.0
-    }
+    // preset-column-widths {
+    //     proportion 0.5
+    //     proportion 0.5
+    // }
 
     // Focus ring {{{
     focus-ring {
@@ -359,7 +362,7 @@ binds {
     // }}}
 
     // Overview {{{
-    Mod+O repeat=false { toggle-overview; }
+    Mod+u repeat=false { toggle-overview; }
     // }}}
 
     // Quit {{{
@@ -443,8 +446,6 @@ binds {
     // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
     // ...
     // }}}
-
-
 
 
 

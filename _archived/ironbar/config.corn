@@ -1,0 +1,24 @@
+let {
+    $workspaces = {
+        type = "workspaces"
+    }
+
+    $focused = {
+        type = "focused"
+    }
+
+    $clock = { type = "clock" }
+
+
+    $left = [ $workspaces ]
+    $right = [ $clock ]
+}
+
+in {
+    anchor_to_edges = true
+    position = "top"
+    icon_theme = "Paper"
+
+    start = $left
+    end = $right
+}
