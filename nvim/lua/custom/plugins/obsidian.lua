@@ -4,7 +4,17 @@
 return {
   "obsidian-nvim/obsidian.nvim",
   version = "*",
-  ft = "markdown",
+  lazy = true,
+  cmd = "Obsidian",
+  -- ft = "markdown",
+  -- keys = {
+  --   -- Keys {{{
+  --   { "<leader>ob", "<cmd>Obsidian backlinks<CR>", desc = "Backlinks" },
+  --   { "<leader>ol", "<cmd>Obsidian links<CR>", desc = "Links" },
+  --   { "<leader>ot", "<cmd>Obsidian toc<CR>", desc = "TOC" },
+  --   { "<leader>oc", "<cmd>Obsidian toggle_checkbox<CR>", desc = "Checkbox toggle" },
+  --   -- }}}
+  -- },
   ---@module 'obsidian'
   ---@type obsidian.config
   opts = {

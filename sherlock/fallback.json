@@ -213,7 +213,7 @@
         "name": "Weather",
         "type": "weather",
         "args": {
-            "location": "budapest",
+            "location": "Budapest",
             "update_interval": 300
         },
         "priority": 1,

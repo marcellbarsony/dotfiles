@@ -45,6 +45,13 @@ obs-studio/plugin_config/
 obs-studio/profiler_data/
 obs-studio/safe_mode
 
+# Obsidian
+obsidian/Cache
+obsidian/Code Cache
+obsidian/Cookies
+obsidian/DIPS
+obsidian/DIPS-wal
+
 # Pipewire (QPWgraph)
 rncbc.org/
 
