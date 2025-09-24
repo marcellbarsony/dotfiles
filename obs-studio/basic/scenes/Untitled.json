@@ -506,7 +506,7 @@
             "id": "pipewire_audio_output_capture",
             "versioned_id": "pipewire_audio_output_capture",
             "settings": {
-                "TargetName": "alsa_output.pci-0000_c3_00.1.HiFi__HDMI3__sink",
+                "TargetName": "alsa_output.usb-Conexant_Hi_Res_USB-C_AUDIO_000000000000-00.analog-stereo",
                 "TargetId": 0
             },
             "mixers": 255,

@@ -405,6 +405,9 @@ return {
         { "<leader>lS", group = "Symbols" },
         { "<leader>lR", group = "References" },
 
+        -- Obsidian
+        { "<leader>o", group = "Obsidian" },
+
         -- Persistence
         { "<leader>p", group = "Persistence" },
 
