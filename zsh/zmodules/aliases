@@ -1,3 +1,6 @@
+# Bluetoothclt
+alias bt="bluetoothctl"
+
 # Coreutils
 alias cls="clear"
 alias cp="cp -i"
