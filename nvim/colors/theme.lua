@@ -498,6 +498,7 @@ function theme.setup()
     ["@markup.raw.markdown_inline"]        = { link = "Function" },
     ["@markup.raw.vimdoc"]                 = { link = "Title"    },
     ["@markup.list.unchecked.markdown"]    = { fg = c.primary    },
+    ["@markup.quote.markdown"]             = { fg = c.fg         },
     -- }}}
 
     -- Rust {{{

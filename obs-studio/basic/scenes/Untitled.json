@@ -9,7 +9,7 @@
     "name": "Untitled",
     "sources": [
         {
-            "prev_ver": 520159234,
+            "prev_ver": 536870913,
             "name": "Screen",
             "uuid": "ed14b8ba-4bbc-40af-b7b2-3824596ece45",
             "id": "pipewire-screen-capture-source",
@@ -35,7 +35,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520159234,
+            "prev_ver": 536870913,
             "name": "Camera",
             "uuid": "e427a6cd-d343-4221-8005-c4bba1f833cb",
             "id": "v4l2_input",
@@ -64,7 +64,7 @@
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 520159234,
+                    "prev_ver": 536870913,
                     "name": "Crop/Pad",
                     "uuid": "2092dfd4-6978-4fb0-8da7-37edbed5bb5f",
                     "id": "crop_filter",
@@ -94,20 +94,75 @@
             ]
         },
         {
-            "prev_ver": 520159234,
+            "prev_ver": 536870913,
             "name": "Main",
             "uuid": "dbc969e6-ffd6-4537-a750-23a648c152ce",
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 17,
+                "id_counter": 25,
                 "custom_size": false,
                 "items": [
+                    {
+                        "name": "Audio Output Capture (PulseAudio)",
+                        "source_uuid": "a4133305-7415-43d8-8363-95316ec3cf20",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 20,
+                        "group_item_backup": true,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
                     {
                         "name": "Microphone",
                         "source_uuid": "de2480e9-9c6c-4c5d-a46a-0cf7755e4e19",
                         "visible": true,
-                        "locked": true,
+                        "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
                             "x": 1920.0,
@@ -328,7 +383,7 @@
                     {
                         "name": "Camera",
                         "source_uuid": "e427a6cd-d343-4221-8005-c4bba1f833cb",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -346,19 +401,19 @@
                         "id": 9,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 0.0,
+                            "x": 1920.0,
                             "y": 0.0
                         },
                         "pos_rel": {
-                            "x": -1.7777777910232544,
+                            "x": 1.7777777910232544,
                             "y": -1.0
                         },
                         "scale": {
-                            "x": 1.0,
+                            "x": -1.0,
                             "y": 1.0
                         },
                         "scale_rel": {
-                            "x": 1.0,
+                            "x": -1.0,
                             "y": 1.0
                         },
                         "bounds": {
@@ -409,14 +464,14 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520159234,
+            "prev_ver": 536870913,
             "name": "Microphone",
             "uuid": "de2480e9-9c6c-4c5d-a46a-0cf7755e4e19",
             "id": "pipewire_audio_input_capture",
             "versioned_id": "pipewire_audio_input_capture",
             "settings": {
-                "TargetName": "alsa_input.pci-0000_c3_00.6.HiFi__Mic1__source",
-                "TargetId": 0
+                "TargetName": "bluez_input.80:C3:BA:70:C8:30",
+                "TargetId": 4294967295
             },
             "mixers": 255,
             "sync": 0,
@@ -424,7 +479,7 @@
             "volume": 1.0,
             "balance": 0.5,
             "enabled": true,
-            "muted": true,
+            "muted": false,
             "push-to-mute": false,
             "push-to-mute-delay": 0,
             "push-to-talk": false,
@@ -441,7 +496,7 @@
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 520159234,
+                    "prev_ver": 536870913,
                     "name": "Noise Gate",
                     "uuid": "3c350c07-5c46-4814-b0e9-e2f1eba1ee07",
                     "id": "noise_gate_filter",
@@ -468,7 +523,7 @@
                     "private_settings": {}
                 },
                 {
-                    "prev_ver": 520159234,
+                    "prev_ver": 536870913,
                     "name": "Compressor",
                     "uuid": "52b142e9-3324-4726-8b88-58d5408aa04b",
                     "id": "compressor_filter",
@@ -500,13 +555,13 @@
             ]
         },
         {
-            "prev_ver": 520159234,
+            "prev_ver": 536870913,
             "name": "Desktop",
             "uuid": "7ae3e9c0-3baf-4a03-956b-240c667a404b",
             "id": "pipewire_audio_output_capture",
             "versioned_id": "pipewire_audio_output_capture",
             "settings": {
-                "TargetName": "alsa_output.usb-Conexant_Hi_Res_USB-C_AUDIO_000000000000-00.analog-stereo",
+                "TargetName": "bluez_output.80_C3_BA_70_C8_30.1",
                 "TargetId": 0
             },
             "mixers": 255,
@@ -532,7 +587,7 @@
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 520159234,
+                    "prev_ver": 536870913,
                     "name": "Compressor",
                     "uuid": "38c67227-a07e-48d6-8b7e-d5f0ffd4f55b",
                     "id": "compressor_filter",
@@ -561,11 +616,40 @@
                     "private_settings": {}
                 }
             ]
+        },
+        {
+            "prev_ver": 536870913,
+            "name": "Audio Output Capture (PulseAudio)",
+            "uuid": "a4133305-7415-43d8-8363-95316ec3cf20",
+            "id": "pulse_output_capture",
+            "versioned_id": "pulse_output_capture",
+            "settings": {},
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.unmute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
         }
     ],
     "groups": [
         {
-            "prev_ver": 520159234,
+            "prev_ver": 536870913,
             "name": "Audio",
             "uuid": "7a9d5176-7658-4a56-b64e-97825b3f272c",
             "id": "group",
@@ -577,10 +661,65 @@
                 "cy": 0,
                 "items": [
                     {
+                        "name": "Audio Output Capture (PulseAudio)",
+                        "source_uuid": "a4133305-7415-43d8-8363-95316ec3cf20",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 20,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
                         "name": "Microphone",
                         "source_uuid": "de2480e9-9c6c-4c5d-a46a-0cf7755e4e19",
                         "visible": true,
-                        "locked": true,
+                        "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
                             "x": 1920.0,
@@ -700,6 +839,8 @@
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "hotkeys": {
+                "libobs.show_scene_item.20": [],
+                "libobs.hide_scene_item.20": [],
                 "libobs.show_scene_item.12": [],
                 "libobs.hide_scene_item.12": [],
                 "libobs.show_scene_item.14": [],
