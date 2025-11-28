@@ -11,6 +11,11 @@
             "Alias": "@ecosia"
         },
         {
+            "Name": "Google",
+            "URL": "https://www.google.com/search?q=%s+before:2020&udm=14",
+            "Alias": "@google"
+        },
+        {
             "Name": "Qwant",
             "URL": "https://www.qwant.com/?q=%s",
             "Alias": "@qwant"

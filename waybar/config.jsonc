@@ -19,6 +19,7 @@
         "cpu",
         "memory",
         "wireplumber",
+        "bluetooth",
         "network",
         "battery",
         "clock"

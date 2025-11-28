@@ -42,7 +42,7 @@
 
     // Audio (Wireplumber) {{{
     "wireplumber": {
-        "format": "VOL {volume} ",
+        "format": "VOL {volume}",
         "format-muted": "MUT ",
         "on-click": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%+",
         "on-click-right": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%-",
@@ -51,6 +51,20 @@
         "scroll-step": 5.0,
         "tooltip": false,
         "tooltip-format": "{volume}"
+    },
+    // }}}
+
+    // Bluetooth {{{
+    "bluetooth": {
+        "format": "| BT {num_connections} ",
+        "format-disabled": "",
+        "on-click": "bluetoothctl power on",
+        "on-click-right": "bluetoothctl power off",
+        "tooltip": "true",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias} — {controller_address}\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias} — {device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias} ({device_battery_percentage}%) — {device_address} "
     },
     // }}}
 
