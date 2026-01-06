@@ -184,8 +184,8 @@
         <scaleImages>true</scaleImages>
         <iconSize>14</iconSize>
         <allowAppsInContainers>false</allowAppsInContainers>
-        <lookAndFeel>GTK+</lookAndFeel>
-        <lookAndFeelClass>com.sun.java.swing.plaf.gtk.GTKLookAndFeel</lookAndFeelClass>
+        <lookAndFeel>Flat Darcula</lookAndFeel>
+        <lookAndFeelClass>com.formdev.flatlaf.FlatDarculaLaf</lookAndFeelClass>
         <main>
             <request>
                 <httppanel>

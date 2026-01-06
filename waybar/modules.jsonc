@@ -56,12 +56,14 @@
 
     // Bluetooth {{{
     "bluetooth": {
-        "format": "| BT {num_connections} ",
+        "format": "| ᛒ {num_connections} ",
+        "format-on": "| ᛒ {num_connections} ",
+        "format-off": "| ᛒ - ",
         "format-disabled": "",
         "on-click": "bluetoothctl power on",
         "on-click-right": "bluetoothctl power off",
         "tooltip": "true",
-        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format": "{controller_alias}\t{controller_address} - Disabled",
         "tooltip-format-connected": "{controller_alias} — {controller_address}\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias} — {device_address}",
         "tooltip-format-enumerate-connected-battery": "{device_alias} ({device_battery_percentage}%) — {device_address} "

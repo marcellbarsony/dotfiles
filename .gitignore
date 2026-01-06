@@ -46,6 +46,7 @@ obs-studio/profiler_data/
 obs-studio/safe_mode
 
 # Obsidian
+obsidian/c01f064675588920.json
 obsidian/Cache/
 obsidian/Code Cache/
 obsidian/Cookies
@@ -57,6 +58,9 @@ obsidian/GPUCache/
 obsidian/IndexedDB/
 obsidian/Local Storage/
 obsidian/Network Persistent State
+obsidian/obsidian.log
+obsidian/obsidian-1.10.6.asar
+obsidian/Partitions/
 obsidian/Session Storage/
 obsidian/SharedStorage-wal
 obsidian/SingletonCookie
@@ -64,8 +68,6 @@ obsidian/SingletonLock
 obsidian/SingletonSocket
 obsidian/TransportSecurity
 obsidian/WebStorage/
-obsidian/c01f064675588920.json
-obsidian/obsidian.log
 
 # Pipewire (QPWgraph)
 rncbc.org/

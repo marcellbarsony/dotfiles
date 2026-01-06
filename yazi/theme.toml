@@ -5,8 +5,22 @@
 use = ""
 # }}}
 
-# Completion {{{
-[completion]
+# App {{{
+[app]
+overall = { bg = "#000000" }
+# }}}
+
+# Confirm {{{
+[confirm]
+body       = { fg = "white" }
+border     = { fg = "white" }
+title      = { fg = "white" }
+btn_yes    = { fg = "white" }
+btn_no     = { fg = "white" }
+# }}}
+
+# CMP {{{
+[cmp]
 border   = { fg = "blue" }
 active   = { reversed = true }
 inactive = {}
@@ -17,35 +31,26 @@ icon_folder  = ""
 icon_command = ""
 # }}}
 
-# Confirm {{{
-[confirm]
-border     = { fg = "white" }
-title      = { fg = "white" }
-conent     = { fg = "white" }
-btn_yes    = { fg = "white" }
-btn_no     = { fg = "white" }
-# }}}
-
 # Filetype {{{
 [filetype]
-rules = [
-    # Images
-    { mime = "image/*", fg = "white" },
-
-    # Media
-    { mime = "{audio,video}/*", fg = "white" },
-
-    # Archives
-    { mime = "application/*zip", fg = "white" },
-    { mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", fg = "white" },
-
-    # Documents
-    { mime = "application/{pdf,doc,rtf,vnd.*}", fg = "green" },
-
-    # Fallback
-    { name = "*", fg = "white" },
-    { name = "*/", fg = "white" }
-]
+# rules = [
+#     # Images
+#     { mime = "image/*", fg = "white" },
+#
+#     # Media
+#     { mime = "{audio,video}/*", fg = "white" },
+#
+#     # Archives
+#     { mime = "application/*zip", fg = "white" },
+#     { mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", fg = "white" },
+#
+#     # Documents
+#     { mime = "application/{pdf,doc,rtf,vnd.*}", fg = "green" },
+#
+#     # Fallback
+#     { name = "*", fg = "white" },
+#     { name = "*/", fg = "white" }
+# ]
 # }}}
 
 # Help {{{
@@ -62,11 +67,13 @@ icon_warn  = ""
 icon_error = ""
 # }}}
 
-# Icon {{{
-[icon]
-prepend_conds = [
-  { if = "dir", text = "", fg = "blue" }
-]
+# Indicator {{{
+[indicator]
+# current = { }
+# parent = { }
+preview = { fg = "white", underline = false }
+
+padding = { open = "█", close = "█" }
 # }}}
 
 # Input {{{
@@ -80,12 +87,17 @@ selected = { reversed = true }
 # Manager {{{
 [mgr]
 
-# Cwd
-cwd = { fg = "white" }
+# Border
+border_symbol = "│"
+border_style  = { fg = "darkgrey" }
 
-# Hovered
-hovered         = { reversed  = true  }
-preview_hovered = { underline = false }
+# Count
+count_copied   = { fg = "white", bg = "green" }
+count_cut      = { fg = "white", bg = "red" }
+count_selected = { fg = "white", bg = "yellow" }
+
+# CWD
+cwd = { fg = "white"}
 
 # Find
 find_keyword  = { fg = "yellow", bold = true, italic = false, underline = false }
@@ -97,27 +109,12 @@ marker_cut      = { fg = "lightred",    bg = "lightred"    }
 marker_marked   = { fg = "lightcyan",   bg = "lightcyan"   }
 marker_selected = { fg = "lightyellow", bg = "lightyellow" }
 
-# Tab
-tab_active   = { reversed = true }
-tab_inactive = {}
-tab_width    = 1
-
-# Count
-count_copied   = { fg = "white", bg = "green" }
-count_cut      = { fg = "white", bg = "red" }
-count_selected = { fg = "white", bg = "yellow" }
-
-# Border
-border_symbol = "│"
-border_style  = { fg = "darkgrey" }
-
 # Syntax highlighting
 syntect_theme = "/home/marci/.config/yazi/tmtheme/catppuccin-mocha.xml"
 # }}}
 
 # Mode {{{
 [mode]
-
 # Normal
 normal_main = { fg = "white", bg = "black", bold = true }
 normal_alt  = { fg = "white", bg = "black", bold = true }
@@ -143,13 +140,22 @@ title_error = { fg = "red" }
 
 # }}}
 
+# Spot {{{
+[spot]
+border   = { fg = "white" }
+title    = { fg = "white" }
+tbl_col  = { fg = "white" }
+tbl_cell = { fg = "white" }
+# }}}
+
 # Status {{{
 [status]
+
+# overall = { bg = "" }
 
 # Separator
 sep_left  = { open = "", close = "" }
 sep_right = { open = "", close = "" }
-sep_style = { fg = "white", bg = "white" }
 
 # Permissions
 perm_type  = { fg = "gray"  }
@@ -164,19 +170,9 @@ progress_normal = { fg = "white", bg = "black" }
 progress_error  = { fg = "red", bg = "black" }
 # }}}
 
-# Select {{{
-[select]
-border   = { fg = "blue" }
-active   = { fg = "magenta", bold = true }
-inactive = {}
-# }}}
+# Tabs {{{
+[tabs]
 
-# Spot {{{
-[spot]
-border   = { fg = "white" }
-title    = { fg = "white" }
-tbl_col  = { fg = "white" }
-tbl_cell = { fg = "white" }
 # }}}
 
 # Tasks {{{
