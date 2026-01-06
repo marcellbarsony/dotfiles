@@ -33,24 +33,25 @@ icon_command = ""
 
 # Filetype {{{
 [filetype]
-# rules = [
-#     # Images
-#     { mime = "image/*", fg = "white" },
-#
-#     # Media
-#     { mime = "{audio,video}/*", fg = "white" },
-#
-#     # Archives
-#     { mime = "application/*zip", fg = "white" },
-#     { mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", fg = "white" },
-#
-#     # Documents
-#     { mime = "application/{pdf,doc,rtf,vnd.*}", fg = "green" },
-#
-#     # Fallback
-#     { name = "*", fg = "white" },
-#     { name = "*/", fg = "white" }
-# ]
+rules = [
+    # Images
+    { mime = "image/*", fg = "white" },
+
+    # Media
+    { mime = "{audio,video}/*", fg = "white" },
+
+    # Archives
+    { mime = "application/*zip", fg = "white" },
+    { mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", fg = "white" },
+
+    # Documents
+    { mime = "application/{pdf,doc,rtf,vnd.*}", fg = "green" },
+
+    # Fallback
+    { name = "*", fg = "white" },
+    { name = "*/", fg = "white" },
+    { url = "*", fg = "white" },
+]
 # }}}
 
 # Help {{{
@@ -65,6 +66,18 @@ footer  = { fg = "white", bg = "black" }
 icon_info  = ""
 icon_warn  = ""
 icon_error = ""
+# }}}
+
+# Icon {{{
+[icon]
+prepend_conds = [
+    # Directories
+    { if = "dir",           text = "" , fg = "blue" },
+    # Files
+    { if = "!(dir | link)", text = "" },
+    # Symlinks
+    { if = "link",          text = "󱅸" },
+]
 # }}}
 
 # Indicator {{{
