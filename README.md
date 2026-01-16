@@ -1,1 +1,1 @@
-**The Chad Stack dotfiles**
+**Arch Linux Dotfiles**

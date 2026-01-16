@@ -3,13 +3,15 @@ if [[ "$(tty)" = "/dev/tty1" ]]; then
     Hyprland
     # qtile start -b wayland
 fi
-
-# TTY2 (X11)
+#
+# TTY2 (Wayland)
 if [[ "$(tty)" = "/dev/tty2" ]]; then
-    pgrep qtile || startx "${XDG_CONFIG_HOME}/x11/.xinitrc"
+    # Issue #1914
+    niri-session -l
 fi
 
-# TTY3 (Wayland)
+
+# TTY3 (X11)
 if [[ "$(tty)" = "/dev/tty3" ]]; then
-    niri-session
+    pgrep qtile || startx "${XDG_CONFIG_HOME}/x11/.xinitrc"
 fi

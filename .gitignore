@@ -59,7 +59,7 @@ obsidian/IndexedDB/
 obsidian/Local Storage/
 obsidian/Network Persistent State
 obsidian/obsidian.log
-obsidian/obsidian-1.10.6.asar
+obsidian/obsidian-*.asar
 obsidian/Partitions/
 obsidian/Session Storage/
 obsidian/SharedStorage-wal

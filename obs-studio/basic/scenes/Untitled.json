@@ -100,7 +100,7 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 25,
+                "id_counter": 26,
                 "custom_size": false,
                 "items": [
                     {
@@ -383,7 +383,7 @@
                     {
                         "name": "Camera",
                         "source_uuid": "e427a6cd-d343-4221-8005-c4bba1f833cb",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -883,7 +883,7 @@
     "transition_duration": 300,
     "preview_locked": false,
     "scaling_enabled": false,
-    "scaling_level": -12,
+    "scaling_level": -7,
     "scaling_off_x": 0.0,
     "scaling_off_y": 0.0,
     "virtual-camera": {

@@ -1,5 +1,3 @@
-include "/home/marci/.cache/matugen/colors.kdl"
-
 // Animations {{{
 animations {
     // off
@@ -8,6 +6,7 @@ animations {
 // }}}
 
 // Binds {{{
+// `niri msg action`
 binds {
     // Niri {{{
 
@@ -20,7 +19,6 @@ binds {
     // Quit (show confirmation dialog)
     Mod+Shift+Q { quit; }
     Ctrl+Alt+Delete { quit; }
-
 
     // Screenshot {{{
     // https://yalter.github.io/niri/Configuration%3A-Key-Bindings.html#screenshot-screenshot-screen-screenshot-window
@@ -72,30 +70,6 @@ binds {
     Mod+L hotkey-overlay-title="Run an Application: Hyprlock" { spawn "hyprlock"; }
     // }}}
 
-    // Column - Focus {{{
-    Mod+M       { focus-column-left; }
-    Mod+I       { focus-column-right; }
-
-    Mod+Home    { focus-column-first; }
-    Mod+End     { focus-column-last; }
-    // }}}
-
-    // Column - Move {{{
-
-    Mod+Shift+M     { move-column-left-or-to-monitor-left; }
-    Mod+Shift+I     { move-column-right-or-to-monitor-right; }
-
-    // Column - Move to first/last
-    // Mod+Ctrl+Home { move-column-to-first; }
-    // Mod+Ctrl+End  { move-column-to-last; }
-
-    // Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
-    // Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
-    // Mod+Ctrl+U         { move-column-to-workspace-down; }
-    // Mod+Ctrl+I         { move-column-to-workspace-up; } // Duplicate
-
-    // }}}
-
     // Column - Width {{{
     Mod+R { switch-preset-column-width; }
     // Mod+Shift+R { switch-preset-window-height; }
@@ -110,8 +84,8 @@ binds {
     // * adjust width as a percentage of screen width: "-10%" or "+10%"
     // Pixel sizes use logical, or scaled, pixels. I.e. on an output with scale 2.0,
     // set-column-width "100" will make the column occupy 200 physical screen pixels.
-    Alt+M { set-column-width "-10%"; }
-    Alt+I { set-column-width "+10%"; }
+    // Alt+M { set-column-width "-10%"; }
+    // Alt+I { set-column-width "+10%"; }
 
     // Finer height adjustments when in column with other windows.
     // Alt+N { set-window-height "-10%"; }
@@ -154,19 +128,12 @@ binds {
     // Mod+Shift+Space { switch-layout "prev"; }
     // }}}
 
-    // Monitor - Focus {{{
-    // Mod+Shift+Left  { focus-monitor-left; }
-    // Mod+Shift+Down  { focus-monitor-down; }
-    // Mod+Shift+Up    { focus-monitor-up; }
-    // Mod+Shift+Right { focus-monitor-right; }
-    Mod+Ctrl+M     { focus-monitor-left; }
-    Mod+Ctrl+N     { focus-monitor-down; }
-    Mod+Ctrl+E     { focus-monitor-up; }
-    Mod+Ctrl+I     { focus-monitor-right; }
+    // Monitor {{{
+    // Mod+P { power-on-monitors; }
+    // Mod+Shift+P { power-off-monitors; }
     // }}}
 
-    // Monitor - Power-off {{{
-    // Mod+Shift+P { power-off-monitors; }
+    // Monitor - Focus {{{
     // }}}
 
     // Scroll Bindings {{{
@@ -193,19 +160,46 @@ binds {
     Mod+Q { close-window; }
     // }}}
 
+    // Column {{{
+    // Toggle tabbed column display mode.
+    // Windows in this column will appear as vertical tabs,
+    // rather than stacked on top of each other.
+    // Mod+W { toggle-column-tabbed-display; }
+    // }}}
+
+    // Column - Focus {{{
+    Mod+Home    { focus-column-first; }
+    Mod+End     { focus-column-last; }
+    // }}}
+
+    // Column - Move {{{
+
+    // Column - Move to first/last
+    // Mod+Ctrl+Home { move-column-to-first; }
+    // Mod+Ctrl+End  { move-column-to-last; }
+
+    // Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
+    // Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
+    // Mod+Ctrl+U         { move-column-to-workspace-down; }
+    // Mod+Ctrl+I         { move-column-to-workspace-up; } // Duplicate
+
+    // }}}
+
+    // Window {{{
+    // Move the focused window between the floating and the tiling layout.
+    Mod+T       { toggle-window-floating; }
+    // Mod+Shift+T { switch-focus-between-floating-and-tiling; }
+    // }}}
+
     // Window - Focus {{{
     // Mod+N       { focus-window-down; }
     // Mod+E       { focus-window-up; }
 
     // Focus across workspaces
-    Mod+N       { focus-window-or-workspace-down; }
-    Mod+E       { focus-window-or-workspace-up; }
-    // }}}
-
-    // Window - Float {{{
-    // Move the focused window between the floating and the tiling layout.
-    Mod+T       { toggle-window-floating; }
-    // Mod+Shift+T { switch-focus-between-floating-and-tiling; }
+    // Mod+M       { focus-column-or-monitor-left; }
+    // Mod+N       { focus-window-or-monitor-down; }
+    // Mod+E       { focus-window-or-monitor-up; }
+    // Mod+I       { focus-column-or-monitor-right; }
     // }}}
 
     // Window - Move {{{
@@ -213,8 +207,8 @@ binds {
     // Mod+Shift+E     { move-window-up; }
 
     // Window - Move across workspaces
-    Mod+Shift+N     { move-window-down-or-to-workspace-down; }
-    Mod+Shift+E     { move-window-up-or-to-workspace-up; }
+    // Mod+Shift+N     { move-window-down-or-to-workspace-down; }
+    // Mod+Shift+E     { move-window-up-or-to-workspace-up; }
 
     // Alternatively, there are commands to move just a single window
     // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
@@ -222,7 +216,7 @@ binds {
     // ...
 
     // Alternatively, there are commands to move just a single window
-    Mod+Shift+Ctrl+M  { move-window-to-monitor-left; }
+    // Mod+Shift+Ctrl+M  { move-window-to-monitor-left; }
     // Mod+Shift+G  { move-window-to-monitor-up; }
     // Mod+Shift+G  { move-window-to-monitor-down; }
     // Mod+Shift+G  { move-window-to-monitor-down; }
@@ -261,48 +255,118 @@ binds {
     // Mod+Ctrl+1 { move-window-to-workspace 1; }
     // }}}
 
-    // Workspace - Move {{{
-    Alt+N         { move-workspace-down; }
-    Alt+E         { move-workspace-up; }
-
-    // Move workspace to another monitor
-    Alt+Shift+M { move-workspace-to-monitor-left; }
-    Alt+Shift+N { move-workspace-to-monitor-down; }
-    Alt+Shift+E { move-workspace-to-monitor-up; }
-    Alt+Shift+I { move-workspace-to-monitor-right; }
-    // ...
-    // }}}
-
     // Workspace - Focus {{{
-
-    // Mod+BracketRight     { focus-workspace-down; }
-    // Mod+BracketLeft      { focus-workspace-up; }
 
     // Current & previous
     // Mod+Tab { focus-workspace-previous; }
+    // }}}
+
+    // Workspace - Move {{{
+    // Alt+N         { move-workspace-down; }
+    // Alt+E         { move-workspace-up; }
+
+    // Move workspace to another monitor
+    Alt+Ctrl+M { move-workspace-to-monitor-left; }
+    Alt+Ctrl+N { move-workspace-to-monitor-down; }
+    Alt+Ctrl+E { move-workspace-to-monitor-up; }
+    Alt+Ctrl+I { move-workspace-to-monitor-right; }
+    // }}}
+
+
+
+    // Focus A {{{
+
+    // Move seamlessly between Monitors
+    // Use `Alt` for Workspaces
+
+    // Column & Window
+    Mod+M       { focus-column-or-monitor-left; }
+    Mod+N       { focus-window-or-monitor-down; }
+    Mod+E       { focus-window-or-monitor-up; }
+    Mod+I       { focus-column-or-monitor-right; }
+
+    // Workspace
+    Alt+N     { focus-workspace-down; }
+    Alt+E     { focus-workspace-up; }
+
+    // Monitor (not required in this setup)
+
+    // }}}
+
+    // Move A {{{
+    // Column & Window
+    Mod+Shift+M     { move-column-left-or-to-monitor-left; }
+    Mod+Shift+N     { spawn-sh "/home/marci/.config/niri/scripts/move-window-du.py -md"; }
+    Mod+Shift+E     { spawn-sh "/home/marci/.config/niri/scripts/move-window-du.py -mu"; }
+    Mod+Shift+I     { move-column-right-or-to-monitor-right; }
+
+    // Workspace
+    Alt+Shift+M     { move-workspace-to-monitor-left; }
+    Alt+Shift+N     { move-workspace-to-monitor-down; }
+    Alt+Shift+E     { move-workspace-to-monitor-up; }
+    Alt+Shift+I     { move-workspace-to-monitor-right; }
 
     // }}}
 
 
 
+    // // Focus B {{{
+    //
+    // // Move seamlessly between Workspaces
+    // // Use `Alt` for Monitors
+    //
+    // // Column & Window
+    // Mod+M { focus-window-down-or-column-left; }
+    // Mod+N { focus-window-or-workspace-down; }
+    // Mod+E { focus-window-or-workspace-up; }
+    // Mod+I { focus-window-down-or-column-right; }
+    //
+    // // Workspace
+    //
+    // // Monitor
+    // Mod+Alt+M     { focus-monitor-left; }
+    // Mod+Alt+N     { focus-monitor-down; }
+    // Mod+Alt+E     { focus-monitor-up; }
+    // Mod+Alt+I     { focus-monitor-right; }
+    //
+    // // }}}
+
+    // // Move B {{{
+    // // Column & Window
+    // // Mod+Shift+M     { move-column-left-or-to-monitor-left; }
+    // // Mod+Shift+N     { spawn-sh "/home/marci/.config/niri/scripts/move-window-du.py -md"; }
+    // // Mod+Shift+E     { spawn-sh "/home/marci/.config/niri/scripts/move-window-du.py -mu"; }
+    // // Mod+Shift+I     { move-column-right-or-to-monitor-right; }
+
+    //
+    // // Workspace
+    // Alt+Shift+M     { move-workspace-to-monitor-left; }
+    // Alt+Shift+N     { move-workspace-to-monitor-down; }
+    // Alt+Shift+E     { move-workspace-to-monitor-up; }
+    // Alt+Shift+I     { move-workspace-to-monitor-right; }
+    //
+    // // }}}
 
 
 
+}
+// }}}
 
+// Cursor {{{
+cursor {
+    // Hide the cursor
+    hide-after-inactive-ms 5000
+}
+// }}}
 
-
-
-
-    // Toggle tabbed column display mode.
-    // Windows in this column will appear as vertical tabs,
-    // rather than stacked on top of each other.
-    // Mod+W { toggle-column-tabbed-display; }
+// Hotkey Overlay {{{
+hotkey-overlay {
+    skip-at-startup
 }
 // }}}
 
 // Input {{{
 input {
-
     // Mod {{{
     mod-key "Super"
     // mod-key-nested "Alt"
@@ -488,70 +552,96 @@ layout {
 // }}}
 
 // Misc {{{
-
 // No client-side decorations
 prefer-no-csd
 
+// Screenshot
+screenshot-path "~/tmp/screenshots/%Y%m%d-%H%M%S.png"
 // }}}
 
 // Outputs {{{
 
-// Configure outputs by their name
+// Configure Outputs by their name
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
 // `niri msg outputs`
-output "eDP-1" {
-    // Disable output
-    off
-    mode "1920x1080@120.030"
-    transform "normal"
-}
 
-output "DP-7" {
-    mode "1920x1080@60.00000"
-    scale 1
-        transform "normal"
-        position x=960 y=0
-}
+// Laptop {{{
+// output "eDP-1" {
+//     // off
+//     mode "1920x1200@60.001"
+//     scale 1
+//         transform "normal"
+// }
+// }}}
 
-output "DP-8" {
-    mode "1920x1080@60.00000"
-    scale 1
-        transform "normal"
-        position x=0 y=1080
-}
+// Docked {{{
+// // Top
+// output "DP-7" {
+//     mode "1920x1080@60.00000"
+//     scale 1
+//         transform "normal"
+//         position x=960 y=0
+// }
+//
+// // Bottom-Left
+// output "DP-8" {
+//     mode "1920x1080@60.00000"
+//     scale 1
+//         transform "normal"
+//         position x=0 y=1080
+// }
+//
+// // Bottom-Right
+// output "DP-9" {
+//     mode "1920x1080@60.00000"
+//     scale 1
+//         transform "normal"
+//         position x=1920 y=1080
+// }
+// }}}
 
-
-output "DP-9" {
-    mode "1920x1080@60.00000"
-    scale 1
-        transform "normal"
-        position x=1920 y=1080
-}
 // }}}
 
 // Overview {{{
 overview {
     zoom 0.5
     backdrop-color "#222222"
+
+    // Shadow
+    // https://yalter.github.io/niri/Configuration%3A-Layout.html#shadow
+    workspace-shadow {
+        softness 3
+    }
+
 }
 // }}}
 
 // Startup {{{
-spawn-at-startup "waybar"
+spawn-at-startup "kanshi"
 spawn-at-startup "swww-daemon"
-// spawn-at-startup "kanshi"
-// }}}
+spawn-at-startup "xwayland-satellite"
 
-// Screenshot {{{
-screenshot-path "~/tmp/screenshots/%Y%m%d-%H%M%S.png"
+// Waybar
+// Add Waybar systemd unit to the Niri session
+// `systemctl --user add-wants niri.service waybar.service`
+// spawn-at-startup "waybar"
 // }}}
 
 // Window Rules {{{
-// Firefox picture-in-picture player as floating
+
+// Firefox: Picture-in-picture player as floating
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
 }
+
+// Firefox:  border width
+// https://yalter.github.io/niri/FAQ.html#why-does-firefox-or-thunderbird-have-1-px-smaller-border
+window-rule {
+    // geometry-corner-radius 12
+    clip-to-geometry true
+}
+
 
 window-rule {
     match app-id="ghostty"
@@ -559,23 +649,6 @@ window-rule {
     draw-border-with-background false
     opacity 0.95
 }
-
-// /-window-rule {
-//     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-//     match app-id=r#"^org\.gnome\.World\.Secrets$"#
-//
-//     block-out-from "screen-capture"
-//
-//     // Use this instead if you want them visible on third-party screenshot tools.
-//     // block-out-from "screencast"
-// }
-
-// // Example: enable rounded corners for all windows.
-// // (This example rule is commented out with a "/-" in front.)
-// /-window-rule {
-//     // geometry-corner-radius 12
-//     // clip-to-geometry true
-// }
 
 // }}}
 
