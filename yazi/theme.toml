@@ -186,7 +186,7 @@ progress_error  = { fg = "red", bg = "black" }
 # Tabs {{{
 [tabs]
 active = { fg = "white", bg = "darkgrey"}
-inactive = { fg = "white", bg = "black"}
+inactive = { fg = "grey", bg = "black"}
 sep_inner = { open = "", close = ""}
 sep_outer = { open = "", close = ""}
 # }}}
