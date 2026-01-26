@@ -44,5 +44,7 @@ alias update="sudo pacman -Syu"
 alias zap="-r ~/.config/ZAP"
 
 # Zellij
-alias z="zellij"
 alias zellij="zellij -l welcome"
+
+# Zoxide
+# alias z="zoxide"

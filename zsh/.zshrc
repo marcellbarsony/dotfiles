@@ -141,6 +141,10 @@ eval "$(fzf --zsh)"
 # fi
 # }}}
 
+# Zoxide {{{
+eval "$(zoxide init zsh)"
+# }}}
+
 # ZSH (Autocomplete) {{{
 if [[ -f ~/.local/src/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]]; then
     source ~/.local/src/zsh-autocomplete/zsh-autocomplete.plugin.zsh

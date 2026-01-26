@@ -1,78 +1,80 @@
-[default_apps]
-teams                   =   "teams-for-linux --enable-features=UseOzonePlatform --ozone-platform=wayland --url {meeting_url}"
-calendar_client         =   "thunderbird"
-terminal                =   "ghostty"
-browser                 =   "/usr/bin/firefox"
+# https://github.com/Skxxtz/sherlock/blob/main/docs/examples/config.toml
 
-[debug]
-try_suppress_errors     =   false
-try_suppress_warnings   =   false
-app_paths               =   ["~/.local/share/applications/"]
+[default_apps]
+teams = "teams-for-linux --enable-features=UseOzonePlatform --ozone-platform=wayland --url {meeting_url}"
+calendar_client = "thunderbird"
+terminal = "kitty"
+browser = "/opt/zen-browser-bin/zen-bin %u"
 
 [units]
-lengths                 =   "meter"
-weights                 =   "kg"
-volumes                 =   "l"
-temperatures            =   "C"
-currency                =   "eur"
+lengths = "meters"
+weights = "kg"
+volumes = "l"
+temperatures = "C"
+currency = "eur"
+
+[debug]
+try_suppress_errors = false
+try_suppress_warnings = false
+app_paths = []
 
 [appearance]
-width                   =   900
-height                  =   600
-gsk_renderer            =   "cairo"
-recolor_icons           =   false
-icon_paths              =   ["~/.config/sherlock/icons"]
-icon_size               =   22
-search_icon             =   true
-opacity                 =   1.0
+width = 900
+height = 600
+gsk_renderer = "cairo"
+icon_paths = ["testconfig/icons"]
+icon_size = 20
+use_base_css = false
+opacity = 0.9
+mod_key_ascii = ["⇧", "⇧", "⌘", "⌘", "⎇", "✦", "✦", "⌘"]
 
 [behavior]
-animate                 =   true
-use_xdg_data_dir_icons  =   false
+use_xdg_data_dir_icons = false
+animate = true
 
 [binds]
-up                      =   "control-e"
-down                    =   "control-n"
-left                    =   "control-m"
-right                   =   "control-i"
-context                 =   "control-c"
-modifier                =   "control"
-exec_inplace            =   "control-return"
+up = "control-m"
+down = "control-n"
+left = "control-e"
+right = "control-i"
+context = "control-c"
+modifier = "control"
+exec_inplace = "control-return"
 
 [files]
-actions                 =   "~/.config/sherlock/sherlock_actions.json"
-config                  =   "~/.config/sherlock/config.toml"
-css                     =   "~/.config/sherlock/style.css"
-fallback                =   "~/.config/sherlock/fallback.json"
-alias                   =   "~/.config/sherlock/sherlock_alias.json"
-ignore                  =   "~/.config/sherlock/sherlockignore"
-
-[caching]
-caching                 =   true
-cache                   =   "~/.cache/sherlock_desktop_cache.json"
+config = "/home/marci/.config/sherlock/config.toml"
+css = "/home/marci/.config/sherlock/main.css"
+fallback = "/home/user/.config/sherlock/fallback.json"
+alias = "/home/user/.config/sherlock/sherlock_alias.json"
+ignore = "/home/marci/.config/sherlock/sherlockignore"
+actions = "/home/user/.config/sherlock/sherlock_actions.json"
 
 [runtime]
-daemonize               =   false
-multi                   =   false
-center                  =   false
-photo_mode              =   false
-display_raw             =   false
+multi = false
+center = false
+photo_mode = false
+display_raw = false
+daemonize = false
+
+[caching]
+enable = true
+cache = "/home/user/.cache/sherlock/desktop_cache.bin"
 
 [expand]
-enable                  =   false
-edge                    =   "top"
-margin                  =   0
+enable = false
+edge = "top"
+margin = 0
 
 [backdrop]
-enable                  =   false
-opacity                 =   0.6
-edge                    =   "top"
+enable = true
+opacity = 0.6
+edge = "top"
 
 [status_bar]
-enable                  =   true
+enable = true
 
 [search_bar_icon]
-enable                  =   true
-icon                    =   "system-search-symbolic"
-icon_back               =   "go-previous-symbolic"
-size                    =   22
+enable = true
+icon = "system-search-symbolic"
+icon_back = "sherlock-back"
+size = 20

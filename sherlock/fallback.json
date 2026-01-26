@@ -1,238 +1,172 @@
 [
-    {
-        "name": "App Launcher",
-        "alias": "app",
-        "type": "app_launcher",
-        "args": {},
-        "priority": 3,
-        "home": true
+  {
+    "name": "Weather",
+    "alias": null,
+    "tag_start": null,
+    "tag_end": null,
+    "display_name": null,
+    "on_return": null,
+    "next_content": null,
+    "type": "weather",
+    "priority": 1.0,
+    "exit": true,
+    "shortcut": false,
+    "spawn_focus": false,
+    "async": true,
+    "home": "OnlyHome",
+    "args": {
+      "location": "budapest",
+      "update_interval": 60
     },
-    {
-        "name": "Bookmarks",
-        "alias": "",
-        "type": "command",
-        "args": {
-            "commands": {
-                "ChatGPT": {
-                    "icon": "chat-gpt",
-                    "exec": "xdg-open https://chatgpt.com &",
-                    "search_string": "chatgpt;ai;"
-                },
-                "Github": {
-                    "icon": "sherlock-github",
-                    "exec": "xdg-open https://github.com/skxxtz &",
-                    "search_string": "github;"
-                }
-            }
-        },
-        "priority": 3
+    "binds": null,
+    "actions": [
+      {
+        "name": "Show in Web",
+        "exec": "https://www.wttr.in/budapest",
+        "icon": "sherlock-link",
+        "method": "web_launcher",
+        "exit": true
+      }
+    ],
+    "add_actions": null
+  },
+  {
+    "name": "Spotify",
+    "alias": null,
+    "tag_start": null,
+    "tag_end": null,
+    "display_name": null,
+    "on_return": null,
+    "next_content": null,
+    "type": "audio_sink",
+    "priority": 1.0,
+    "exit": true,
+    "shortcut": true,
+    "spawn_focus": false,
+    "async": true,
+    "home": "OnlyHome",
+    "args": {},
+    "binds": [
+      {
+        "bind": "Return",
+        "callback": "playpause",
+        "exit": false
+      },
+      {
+        "bind": "l",
+        "callback": "next",
+        "exit": false
+      },
+      {
+        "bind": "h",
+        "callback": "previous",
+        "exit": false
+      }
+    ],
+    "actions": [
+      {
+        "name": "Skip",
+        "exec": null,
+        "icon": "media-seek-forward",
+        "method": "inner.next",
+        "exit": false
+      },
+      {
+        "name": "Previous",
+        "exec": null,
+        "icon": "media-seek-backward",
+        "method": "inner.previous",
+        "exit": false
+      }
+    ],
+    "add_actions": null
+  },
+  {
+    "name": "Calculator",
+    "alias": null,
+    "tag_start": null,
+    "tag_end": null,
+    "display_name": null,
+    "on_return": "copy",
+    "next_content": null,
+    "type": "calculation",
+    "priority": 1.0,
+    "exit": true,
+    "shortcut": true,
+    "spawn_focus": true,
+    "async": false,
+    "home": "Search",
+    "args": {
+      "capabilities": [
+        "calc.math",
+        "calc.units"
+      ]
     },
-    {
-        "name": "Calculator",
-        "type": "calculation",
-        "args": {
-            "capabilities": [
-                "calc.math",
-                "calc.units"
-            ]
-        },
-        "priority": 1
+    "binds": null,
+    "actions": null,
+    "add_actions": null
+  },
+  {
+    "name": "App Launcher",
+    "alias": "app",
+    "tag_start": null,
+    "tag_end": null,
+    "display_name": null,
+    "on_return": null,
+    "next_content": null,
+    "type": "app_launcher",
+    "priority": 3.0,
+    "exit": true,
+    "shortcut": true,
+    "spawn_focus": true,
+    "async": false,
+    "home": "Home",
+    "args": {},
+    "binds": null,
+    "actions": null,
+    "add_actions": null
+  },
+  {
+    "name": "Kill Process",
+    "alias": "kill",
+    "tag_start": null,
+    "tag_end": null,
+    "display_name": null,
+    "on_return": null,
+    "next_content": null,
+    "type": "process",
+    "priority": 0.0,
+    "exit": true,
+    "shortcut": true,
+    "spawn_focus": true,
+    "async": false,
+    "home": "Search",
+    "args": {},
+    "binds": null,
+    "actions": null,
+    "add_actions": null
+  },
+  {
+    "name": "Web Search",
+    "alias": "gg",
+    "tag_start": "{keyword}",
+    "tag_end": null,
+    "display_name": "Google Search",
+    "on_return": null,
+    "next_content": null,
+    "type": "web_launcher",
+    "priority": 100.0,
+    "exit": true,
+    "shortcut": true,
+    "spawn_focus": true,
+    "async": false,
+    "home": "Search",
+    "args": {
+      "icon": "google",
+      "search_engine": "google"
     },
-    {
-        "name": "Categories",
-        "alias": "cat",
-        "type": "categories",
-        "args": {
-            "Kill Processes": {
-                "icon": "sherlock-process", 
-                "icon_class": "reactive", 
-                "exec": "kill", 
-                "search_string": "terminate;kill;process"
-                },
-            "Power Menu": {
-                "icon": "battery-full-symbolic",
-                "icon_class": "reactive", 
-                "exec": "pm", 
-                "search_string": "powermenu;"
-                }
-        },
-        "priority": 3,
-        "home": true
-    },
-    {
-        "name": "Clipboard",
-        "type": "clipboard-execution",
-        "args": {},
-        "priority": 1,
-        "home": true
-    },
-    {
-        "name": "Network Management",
-        "alias": "nm",
-        "type": "command",
-        "args": {
-            "commands": {
-                "Connect": {
-                    "icon": "network-connect",
-                    "exec": "nmcli device connect wlp0s20f3 &",
-                    "search_string": "wifi;home"
-                },
-                "Disconnect": {
-                    "icon": "network-connect",
-                    "exec": "nmcli device disconnect wlp0s20f3 &",
-                    "search_string": "wifi;home"
-                }
-            }
-        },
-        "priority": 4
-    },
-    {
-        "name": "OBS Studio",
-        "alias": "obs",
-        "type": "command",
-        "args": {
-            "commands": {
-                "Start Recording": {
-                    "icon": "sherlock-record",
-                    "exec": "obs --startrecording &",
-                    "search_string": "recording;start recording;startrecording;obs studio;"
-                }
-            }
-        },
-        "priority": 5
-    },
-    {
-        "name": "Power Management",
-        "alias": "pm",
-        "type": "command",
-        "args": {
-            "commands": {
-                "Shutdown": {
-                    "icon": "system-shutdown",
-                    "exec": "poweroff",
-                    "search_string": "Poweroff;Shutdown"
-                },
-                "Sleep": {
-                    "icon": "system-suspend",
-                    "exec": "systemctl suspend",
-                    "search_string": "Sleep;"
-                },
-                "Logout": {
-                    "icon": "system-lock-screen",
-                    "exec": "hyprctl dispatch exit",
-                    "search_string": "Lock Screen;"
-                },
-                "Lock": {
-                    "icon": "system-lock-screen",
-                    "exec": "hyprlock",
-                    "search_string": "Lock Screen;"
-                },
-                "Reboot": {
-                    "icon": "system-reboot",
-                    "exec": "reboot",
-                    "search_string": "reboot"
-                }
-            }
-        },
-        "priority": 4
-    },
-    {
-        "name": "Search - YouTube",
-        "display_name": "Youtube Search",
-        "tag_start": "{keyword}",
-        "alias": "yt",
-        "type": "web_launcher",
-        "args": {
-            "search_engine": "https://www.youtube.com/results?search_query={keyword}",
-            "icon": "sherlock-youtube"
-        },
-        "priority": 0
-    },
-    {
-        "name": "Spotify",
-        "type": "audio_sink",
-        "args": {},
-        "async": true,
-        "priority": 2,
-        "home": true,
-        "spawn_focus": true
-    },
-    {
-        "name": "Spotify",
-        "alias": "sp",
-        "type": "command",
-        "args": {
-            "commands": {
-                "Play-Pause": {
-                    "icon": "network-connect",
-                    "exec": "playerctl -p spotify play-pause",
-                    "search_string": "toggle"
-                },
-                "Next": {
-                    "icon": "network-connect",
-                    "exec": "playerctl -p spotify next",
-                    "search_string": "next"
-                },
-                "Previous": {
-                    "icon": "network-connect",
-                    "exec": "playerctl -p spotify previous",
-                    "search_string": "prev"
-                }
-            }
-        },
-        "priority": 4
-    },
-    {
-        "name": "Teams Event",
-        "type": "teams_event",
-        "args": {
-            "icon": "teams",
-            "date_date": "now",
-            "event_start": "-5 minutes",
-            "event_end": "+15 minutes"
-        },
-        "priority": 1,
-        "home": true
-    },
-    {
-        "name": "Utilities",
-        "alias": "",
-        "type": "command",
-        "args": {
-            "commands": {
-                "Color Picker": {
-                    "icon": "colorgrab",
-                    "exec": "hyprpicker -a &",
-                    "search_string": "colorpicker"
-                }
-            }
-        },
-        "priority": 5
-    },
-    {
-        "name": "Weather",
-        "type": "weather",
-        "args": {
-            "location": "Budapest",
-            "update_interval": 300
-        },
-        "priority": 1,
-        "home": true,
-        "only_home": true,
-        "async": true,
-        "shortcut": false,
-        "spawn_focus": false
-    },
-    {
-        "name": "Web (StartPage)",
-        "display_name": "Search",
-        "tag_start": "{keyword}",
-        "alias": "sp",
-        "type": "web_launcher",
-        "args": {
-            "earch_engine": "https://www.startpage.com/sp/search?q={keyword}",
-            "icon": "sherlock-startpage"
-        },
-        "priority": 100
-    }
+    "binds": null,
+    "actions": null,
+    "add_actions": null
+  }
 ]

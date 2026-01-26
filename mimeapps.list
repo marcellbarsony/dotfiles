@@ -1,5 +1,6 @@
 [Default Applications]
 audio/*=vlc.desktop
+text/*=nvim.desktop
 video/*=vlc.desktop
 image/gif=firefox.desktop
 image/jpeg=firefox.desktop
