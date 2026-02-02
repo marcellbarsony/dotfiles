@@ -27,80 +27,7 @@ Actions:
           Toggle fullscreen on the focused window
   toggle-windowed-fullscreen
           Toggle windowed (fake) fullscreen on the focused window
-  focus-window
-          Focus a window by id
-  focus-window-in-column
-          Focus a window in the focused column by index
-  focus-window-previous
-          Focus the previously focused window
-  focus-column-left
-          Focus the column to the left
-  focus-column-right
-          Focus the column to the right
-  focus-column-first
-          Focus the first column
-  focus-column-last
-          Focus the last column
-  focus-column-right-or-first
-          Focus the next column to the right, looping if at end
-  focus-column-left-or-last
-          Focus the next column to the left, looping if at start
-  focus-column
-          Focus a column by index
-  focus-window-or-monitor-up
-          Focus the window or the monitor above
-  focus-window-or-monitor-down
-          Focus the window or the monitor below
-  focus-column-or-monitor-left
-          Focus the column or the monitor to the left
-  focus-column-or-monitor-right
-          Focus the column or the monitor to the right
-  focus-window-down
-          Focus the window below
-  focus-window-up
-          Focus the window above
-  focus-window-down-or-column-left
-          Focus the window below or the column to the left
-  focus-window-down-or-column-right
-          Focus the window below or the column to the right
-  focus-window-up-or-column-left
-          Focus the window above or the column to the left
-  focus-window-up-or-column-right
-          Focus the window above or the column to the right
-  focus-window-or-workspace-down
-          Focus the window or the workspace below
-  focus-window-or-workspace-up
-          Focus the window or the workspace above
-  focus-window-top
-          Focus the topmost window
-  focus-window-bottom
-          Focus the bottommost window
-  focus-window-down-or-top
-          Focus the window below or the topmost window
-  focus-window-up-or-bottom
           Focus the window above or the bottommost window
-  move-column-left
-          Move the focused column to the left
-  move-column-right
-          Move the focused column to the right
-  move-column-to-first
-          Move the focused column to the start of the workspace
-  move-column-to-last
-          Move the focused column to the end of the workspace
-  move-column-left-or-to-monitor-left
-          Move the focused column to the left or to the monitor to the left
-  move-column-right-or-to-monitor-right
-          Move the focused column to the right or to the monitor to the right
-  move-column-to-index
-          Move the focused column to a specific index on its workspace
-  move-window-down
-          Move the focused window down in a column
-  move-window-up
-          Move the focused window up in a column
-  move-window-down-or-to-workspace-down
-          Move the focused window down in a column or to the workspace below
-  move-window-up-or-to-workspace-up
-          Move the focused window up in a column or to the workspace above
   consume-or-expel-window-left
           Consume or expel the focused window left
   consume-or-expel-window-right
@@ -123,78 +50,10 @@ Actions:
           Center the focused window on the screen
   center-visible-columns
           Center all fully visible columns on the screen
-  focus-workspace-down
-          Focus the workspace below
-  focus-workspace-up
-          Focus the workspace above
-  focus-workspace
-          Focus a workspace by reference (index or name)
-  focus-workspace-previous
-          Focus the previous workspace
-  move-window-to-workspace-down
-          Move the focused window to the workspace below
-  move-window-to-workspace-up
-          Move the focused window to the workspace above
-  move-window-to-workspace
-          Move the focused window to a workspace by reference (index or name)
-  move-column-to-workspace-down
-          Move the focused column to the workspace below
-  move-column-to-workspace-up
-          Move the focused column to the workspace above
-  move-column-to-workspace
-          Move the focused column to a workspace by reference (index or name)
-  move-workspace-down
-          Move the focused workspace down
-  move-workspace-up
-          Move the focused workspace up
-  move-workspace-to-index
-          Move the focused workspace to a specific index on its monitor
   set-workspace-name
           Set the name of the focused workspace
   unset-workspace-name
           Unset the name of the focused workspace
-  focus-monitor-left
-          Focus the monitor to the left
-  focus-monitor-right
-          Focus the monitor to the right
-  focus-monitor-down
-          Focus the monitor below
-  focus-monitor-up
-          Focus the monitor above
-  focus-monitor-previous
-          Focus the previous monitor
-  focus-monitor-next
-          Focus the next monitor
-  focus-monitor
-          Focus a monitor by name
-  move-window-to-monitor-left
-          Move the focused window to the monitor to the left
-  move-window-to-monitor-right
-          Move the focused window to the monitor to the right
-  move-window-to-monitor-down
-          Move the focused window to the monitor below
-  move-window-to-monitor-up
-          Move the focused window to the monitor above
-  move-window-to-monitor-previous
-          Move the focused window to the previous monitor
-  move-window-to-monitor-next
-          Move the focused window to the next monitor
-  move-window-to-monitor
-          Move the focused window to a specific monitor
-  move-column-to-monitor-left
-          Move the focused column to the monitor to the left
-  move-column-to-monitor-right
-          Move the focused column to the monitor to the right
-  move-column-to-monitor-down
-          Move the focused column to the monitor below
-  move-column-to-monitor-up
-          Move the focused column to the monitor above
-  move-column-to-monitor-previous
-          Move the focused column to the previous monitor
-  move-column-to-monitor-next
-          Move the focused column to the next monitor
-  move-column-to-monitor
-          Move the focused column to a specific monitor
   set-window-width
           Change the width of the focused window
   set-window-height
@@ -225,20 +84,6 @@ Actions:
           Switch between keyboard layouts
   show-hotkey-overlay
           Show the hotkey overlay
-  move-workspace-to-monitor-left
-          Move the focused workspace to the monitor to the left
-  move-workspace-to-monitor-right
-          Move the focused workspace to the monitor to the right
-  move-workspace-to-monitor-down
-          Move the focused workspace to the monitor below
-  move-workspace-to-monitor-up
-          Move the focused workspace to the monitor above
-  move-workspace-to-monitor-previous
-          Move the focused workspace to the previous monitor
-  move-workspace-to-monitor-next
-          Move the focused workspace to the next monitor
-  move-workspace-to-monitor
-          Move the focused workspace to a specific monitor
   toggle-debug-tint
           Toggle a debug tint on windows
   debug-toggle-opaque-regions
@@ -283,3 +128,62 @@ Actions:
           Reload the config file
   help
           Print this message or the help of the given subcommand(s)
+
+
+
+
+# Focus
+
+Mod+M focus-window-or-monitor-up
+Mod+N focus-window-or-monitor-down
+Mod+E focus-column-or-monitor-left
+Mod+I focus-column-or-monitor-right
+
+focus-window-down-or-column-left
+focus-window-down-or-column-right
+focus-window-up-or-column-left
+focus-window-up-or-column-right
+focus-window-or-workspace-down
+focus-window-or-workspace-up
+
+Mod+Ctrl focus-workspace-down
+Mod+Ctrl focus-workspace-up
+
+Alt+M focus-monitor-left
+Alt+N focus-monitor-right
+Alt+E focus-monitor-down
+Alt+I focus-monitor-up
+
+# Move
+
+Mod+Shift+M move-column-left-or-to-monitor-left
+Mod+Shift+N move-column-right-or-to-monitor-right
+Mod+Shift+E move-window-down-or-to-workspace-down
+Mod+Shift+I move-window-up-or-to-workspace-up
+
+move-window-to-workspace-down
+move-window-to-workspace-up
+move-workspace-down
+move-workspace-up
+
+move-window-to-monitor-left
+move-window-to-monitor-right
+move-window-to-monitor-down
+move-window-to-monitor-up
+move-window-to-monitor-previous
+move-window-to-monitor-next
+move-window-to-monitor
+move-column-to-monitor-left
+move-column-to-monitor-right
+move-column-to-monitor-down
+move-column-to-monitor-up
+move-column-to-monitor-previous
+move-column-to-monitor-next
+move-column-to-monitor
+
+## Move Workspace
+
+Alt+Ctrl+M move-workspace-to-monitor-left
+Alt+Ctrl+N move-workspace-to-monitor-right
+Alt+Ctrl+E move-workspace-to-monitor-down
+Alt+Ctrl+I move-workspace-to-monitor-up

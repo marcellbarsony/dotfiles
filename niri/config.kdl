@@ -60,8 +60,8 @@ binds {
     // App Launch {{{
     Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+B hotkey-overlay-title="Run an Application: Firefox" { spawn "firefox"; }
-    // Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn "sh" "-c" "pkill rofi || rofi -show drun"; }
-    Mod+D hotkey-overlay-title="Run an Application: Sherlock" { spawn "sherlock"; }
+    Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn "sh" "-c" "pkill rofi || rofi -show drun"; }
+    // Mod+D hotkey-overlay-title="Run an Application: Sherlock" { spawn "sherlock"; }
     Mod+L hotkey-overlay-title="Run an Application: Hyprlock" { spawn "hyprlock"; }
     // }}}
 
@@ -254,7 +254,7 @@ binds {
     Mod+Q { close-window; }
 
     // Move the focused window between the floating and the tiling layout.
-    // Mod+T       { toggle-window-floating; }
+    Mod+T       { toggle-window-floating; }
 
     // Focus between floating and tiling
     // Mod+Shift+T { switch-focus-between-floating-and-tiling; }
@@ -660,10 +660,12 @@ spawn-at-startup "swww-daemon"
 
 // Firefox
 window-rule {
-    match app-id="firefox$"
+    match app-id="firefox"
     // Fix border width
     // https://yalter.github.io/niri/FAQ.html#why-does-firefox-or-thunderbird-have-1-px-smaller-border
     clip-to-geometry true
+    open-maximized false
+    open-floating false
 }
 
 

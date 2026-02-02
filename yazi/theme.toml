@@ -45,12 +45,12 @@ rules = [
     { mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", fg = "white" },
 
     # Documents
-    { mime = "application/{pdf,doc,rtf,vnd.*}", fg = "green" },
+    { mime = "application/{pdf,doc,rtf,vnd.*}", fg = "white" },
 
     # Fallback
-    { name = "*", fg = "white" },
+    { name = "*",  fg = "white" },
     { name = "*/", fg = "white" },
-    { url = "*", fg = "white" },
+    { url = "*",   fg = "white" },
 ]
 # }}}
 
@@ -70,13 +70,69 @@ icon_error = ""
 
 # Icon {{{
 [icon]
-prepend_conds = [
+dirs = [
+    { name = ".cfg",      text = "", fg = "grey" },
+    { name = ".conf",     text = "", fg = "grey" },
+    { name = ".config",   text = "", fg = "grey" },
+    { name = ".git",      text = "", fg = "grey" },
+    { name = ".github",   text = "", fg = "grey" },
+    { name = ".npm",      text = "", fg = "grey" },
+    { name = ".ssh",      text = "󰢬", fg = "grey" },
+    { name = "git",       text = "", fg = "grey" },
+    { name = "Desktop",   text = "", fg = "grey" },
+    { name = "Documents", text = "", fg = "grey" },
+    { name = "Downloads", text = "󰉍", fg = "grey" },
+    { name = "Movies",    text = "", fg = "grey" },
+    { name = "Music",     text = "", fg = "grey" },
+    { name = "Pictures",  text = "󰉏", fg = "grey" },
+    { name = "Public",    text = "", fg = "grey" },
+    { name = "Videos",    text = "", fg = "grey" },
+]
+conds = [
     # Directories
-    { if = "dir",           text = "" , fg = "blue" },
+    { if = "dir",           text = "" , fg = "grey" },
     # Files
     { if = "!(dir | link)", text = "" },
     # Symlinks
     { if = "link",          text = "󱅸" },
+]
+exts = [
+    # Archive
+    { name = "tar",  text = "󰛫", fg = "yellow" },
+    { name = "zip",  text = "󰛫", fg = "yellow" },
+    { name = "old",  text = "󱋡", fg = "yellow" },
+    # Config
+    { name = "cfg",  text = "", fg = "gray" },
+    { name = "conf",  text = "", fg = "gray" },
+    { name = "config",  text = "", fg = "gray" },
+    { name = "qpwgraph",  text = "", fg = "gray" },
+    # Copy
+    { name = "copy",  text = "󰈢", fg = "white" },
+    # Database
+    { name = "db",  text = "", fg = "gray" },
+    # Documents
+    { name = "pdf",  text = "", fg = "white" },
+    { name = "odt",  text = "", fg = "white" },
+    # Image
+    { name = "jpg", text = "󰈟", fg = "magenta" },
+    { name = "png", text = "󰈟", fg = "magenta" },
+    { name = "webp", text = "󰈟", fg = "magenta" },
+    # Keys
+    { name = "pub",  text = "󱆄", fg = "white" },
+    # Programming
+    { name = "ini",  text = "", fg = "gray" },
+    { name = "py",  text = "", fg = "yellow" },
+    { name = "sh",  text = "󰈮", fg = "gray" },
+    # Temporary
+    { name = "tmp",  text = "", fg = "white" },
+    { name = "temp",  text = "", fg = "white" },
+    # Text
+    { name = "txt",  text = "󰈙", fg = "white" },
+    { name = "md",  text = "󰈙", fg = "white" },
+    # Video
+    { name = "mp4", text = "󰈫", fg = "yellow" },
+    { name = "mkv", text = "󰈫", fg = "yellow" },
+    { name = "ts",  text = "󰈫", fg = "yellow" },
 ]
 # }}}
 
