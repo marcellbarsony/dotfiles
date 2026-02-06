@@ -101,6 +101,8 @@ exts = [
     { name = "tar",  text = "󰛫", fg = "yellow" },
     { name = "zip",  text = "󰛫", fg = "yellow" },
     { name = "old",  text = "󱋡", fg = "yellow" },
+    # Canva
+    { name = "canvas",  text = "󰻫", fg = "white" },
     # Config
     { name = "cfg",  text = "", fg = "gray" },
     { name = "conf",  text = "", fg = "gray" },
@@ -120,9 +122,12 @@ exts = [
     # Keys
     { name = "pub",  text = "󱆄", fg = "white" },
     # Programming
+    { name = "c",  text = "", fg = "blue" },
     { name = "ini",  text = "", fg = "gray" },
+    { name = "lua",  text = "", fg = "blue" },
     { name = "py",  text = "", fg = "yellow" },
     { name = "sh",  text = "󰈮", fg = "gray" },
+    { name = "toml",  text = "", fg = "red" },
     # Temporary
     { name = "tmp",  text = "", fg = "white" },
     { name = "temp",  text = "", fg = "white" },
