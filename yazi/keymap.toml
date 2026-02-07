@@ -61,15 +61,17 @@ keymap = [
     { on = [ "d" ],         run = "remove --permanently",        desc = "Delete" },
     { on = [ "D" ],         run = "remove",                      desc = "Trash" },
     { on = [ "a" ],         run = "create",                      desc = "Create" },
-    { on = [ "r" ],         run = "rename --cursor=before_ext",  desc = "Rename" },
+    { on = [ "r", "r" ],         run = "rename --cursor=before_ext",  desc = "Rename" },
+    { on = [ "r", "R" ],         run = "rename --empty=stem --cursor=start",  desc = "Rename [Empty stem]" },
+    { on = [ "r", "a" ],         run = "rename --empty=all", desc = "Rename [All]" },
     { on = [ ";" ],         run = "shell --interactive",         desc = "Shell" },
     { on = [ ":" ],         run = "shell --interactive --block", desc = "Shell [Block]" },
     { on = [ "." ],         run = "hidden toggle",               desc = "Hidden" },
     { on = [ "s" ],         run = "search fd",                   desc = "Search File" },
     { on = [ "S" ],         run = "search rg",                   desc = "Search Content" },
     { on = [ "<C-s>" ],     run = "search none",                 desc = "Search [Cancel]" },
-    { on = [ "z" ],         run = "plugin zoxide",               desc = "Jump [zoxide]" },
-    { on = [ "Z" ],         run = "plugin fzf",                  desc = "Jump [fzf]" },
+    # { on = [ "z" ],         run = "plugin zoxide",               desc = "Jump [zoxide]" },
+    # { on = [ "Z" ],         run = "plugin fzf",                  desc = "Jump [fzf]" },
     # }}}
 
     # Linemode {{{
@@ -137,6 +139,15 @@ keymap = [
 
     # Tasks {{{
     { on = [ "w" ], run = "tasks_show", desc = "Tasks manager" },
+    # }}}
+
+    # Zip {{{
+    { on = [ "z", "a" ], run = "shell 'zip -j .zip %h' --cursor=7 --interactive", desc = "Zip [Archive]" },
+    { on = [ "z", "e" ], run = "shell 'unzip %h' --cursor=8 --interactive", desc = "Zip [Extract]" },
+
+    # 7-Zip
+    { on = [ "Z", "a" ], run = "shell '7z a .7z %h' --cursor=5 --interactive", desc = "7z [Archive]" },
+    { on = [ "Z", "e" ], run = "shell '7z x %h' --cursor=8 --interactive", desc = "7z [Extract]" },
     # }}}
 
     # Goto {{{
