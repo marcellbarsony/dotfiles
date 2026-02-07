@@ -133,14 +133,13 @@ binds {
     // }}}
 
     // Expand & Fullscreen & Maximize {{{
-    Mod+F { maximize-column; }
-    Mod+Shift+F { fullscreen-window; }
+    Mod+F { fullscreen-window; }
+    Mod+Alt+F { maximize-column; }
     Mod+Ctrl+F { expand-column-to-available-width; }
 
     // Windowed fullscreen
     //https://github.com/YaLTeR/niri/wiki/Fullscreen-and-Maximize#windowed-fullscreen
-    Mod+Alt+F { toggle-windowed-fullscreen; }
-    // toggle-windowed-fullscreen
+    Mod+Shift+F { toggle-windowed-fullscreen; }
 
     // }}}
 
@@ -254,7 +253,7 @@ binds {
     Mod+Q { close-window; }
 
     // Move the focused window between the floating and the tiling layout.
-    Mod+T       { toggle-window-floating; }
+    Mod+T { toggle-window-floating; }
 
     // Focus between floating and tiling
     // Mod+Shift+T { switch-focus-between-floating-and-tiling; }
@@ -469,8 +468,8 @@ layer-rule {
 layout {
     gaps 12
     center-focused-column "never"
-    always-center-single-column
-    // default-column-display "tabbed"
+    // always-center-single-column
+    default-column-display "tabbed" // normal/tabbed
     background-color "transparent"
     // preset-window-heights { }
 
@@ -478,8 +477,8 @@ layout {
     border {
         off
         width 2
-        active-color "#ffc87f"
-        inactive-color "#505050"
+        active-color "#ff0000"
+        inactive-color "#ff0000"
         urgent-color "#9b0000"
         // active-gradient from="#ffbb66" to="#ffc880" angle=45 relative-to="workspace-view"
         // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
@@ -490,7 +489,7 @@ layout {
 
     // Default Width
     // https://yalter.github.io/niri/Configuration%3A-Layout.html#default-column-width
-    default-column-width { }
+    default-column-width { proportion 1.0; }
 
     // Preset Width
     // Width preset with `switch-preset-column-width` (Mod+R)
@@ -508,8 +507,11 @@ layout {
     // https://yalter.github.io/niri/Configuration%3A-Layout.html#focus-ring-and-border
     focus-ring {
         width 2
-        active-color "#eeeeee"
-        inactive-color "#505050"
+        // active-color "#eeeeee"
+        // inactive-color "#303030"
+        active-gradient from="#FFFFFF" to="#AAAAAA" angle=120
+        inactive-gradient from="#000000" to="#000000" angle=45 relative-to="workspace-view"
+        urgent-gradient from="#800" to="#a33" angle=45
     }
     // }}}
 
@@ -554,7 +556,7 @@ layout {
         offset x=0 y=5
 
         // You can also change the shadow color and opacity.
-        color "#0007"
+        color "#ff0000"
     }
     // }}}
 
@@ -668,7 +670,6 @@ window-rule {
     open-floating false
 }
 
-
 // Firefox - Picture-in-picture player as floating
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
@@ -693,17 +694,17 @@ window-rule {
     default-column-width { proportion 1.00; }
 }
 
-// VirtualBox Machine
-window-rule {
-    match app-id="VirtualBox Machine"
-    default-column-width { proportion 1.00; }
-}
-
-// VirtualBox Manager
-window-rule {
-    match app-id="VirtualBox Manager"
-    default-column-width { proportion 1.00; }
-}
+// // VirtualBox Machine
+// window-rule {
+//     match app-id="VirtualBox Machine"
+//     default-column-width { proportion 1.00; }
+// }
+//
+// // VirtualBox Manager
+// window-rule {
+//     match app-id="VirtualBox Manager"
+//     default-column-width { proportion 1.00; }
+// }
 
 // }}}
 
