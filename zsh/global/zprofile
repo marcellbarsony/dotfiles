@@ -1,13 +1,13 @@
 # TTY1 (Wayland)
 if [[ "$(tty)" = "/dev/tty1" ]]; then
-    Hyprland
-    # qtile start -b wayland
-fi
-#
-# TTY2 (Wayland)
-if [[ "$(tty)" = "/dev/tty2" ]]; then
     # Issue #1914
     niri-session -l
+fi
+
+# TTY2 (Wayland)
+if [[ "$(tty)" = "/dev/tty2" ]]; then
+    Hyprland
+    # qtile start -b wayland
 fi
 
 

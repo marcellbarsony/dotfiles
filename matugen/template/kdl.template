@@ -3,9 +3,14 @@ layout {
         active-gradient from="{{colors.primary.default.hex}}" to="{{colors.on_primary.default.hex}}" angle=160
     }
     insert-hint {
-        on
         gradient from="{{colors.primary.default.hex}}" to="{{colors.on_primary.default.hex}}" angle=160
     }
 }
 
 
+recent-windows {
+    highlight {
+        active-color "{{colors.primary.default.hex}}ff"
+        urgent-color "ff0000ff"
+    }
+}

@@ -1,16 +1,11 @@
 // Include
 include "animations.kdl"
 include "binds.kdl"
+include "gestures.kdl"
 include "input.kdl"
 include "layout.kdl"
 include "layer-rules.kdl"
 include "misc.kdl"
 include "outputs.kdl"
-include "window-rules.kdl"
 include "recent-windows.kdl"
-
-// Workspaces {{{
-workspace "spotify" {
-    open-on-output "PNP(BNQ) BenQ RL2755 N7F05437SL0"
-}
-// }}}
+include "window-rules.kdl"

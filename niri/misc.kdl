@@ -1,6 +1,11 @@
 // Misc
 // https://yalter.github.io/niri/Configuration:-Miscellaneous.html
 
+// Client-Side Decorations {{{
+// https://yalter.github.io/niri/Configuration:-Miscellaneous.html#prefer-no-csd
+prefer-no-csd
+// }}}
+
 // Clipboard {{{
 // https://yalter.github.io/niri/Configuration:-Miscellaneous.html#clipboard
 clipboard {
@@ -24,9 +29,12 @@ environment {
 }
 // }}}
 
-// Client-Side Decorations {{{
-// https://yalter.github.io/niri/Configuration:-Miscellaneous.html#prefer-no-csd
-prefer-no-csd
+// Hotkey Overlay {{{
+// https://yalter.github.io/niri/Configuration:-Miscellaneous.html#hotkey-overlay
+hotkey-overlay {
+    skip-at-startup
+    hide-not-bound
+}
 // }}}
 
 // Overview {{{

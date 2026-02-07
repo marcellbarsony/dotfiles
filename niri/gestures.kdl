@@ -1,0 +1,35 @@
+// Gestures
+// https://yalter.github.io/niri/Configuration:-Gestures.html
+
+gestures {
+
+    // DnD Edge-View Scroll {{{
+    // https://yalter.github.io/niri/Configuration%3A-Gestures.html#dnd-edge-view-scroll
+    dnd-edge-view-scroll {
+        trigger-width 30
+        delay-ms 100
+        max-speed 1500
+    }
+    // }}}
+
+    // DnD Edge-Workspace Switch {{{
+    // https://yalter.github.io/niri/Configuration:-Gestures.html#dnd-edge-workspace-switch
+    dnd-edge-workspace-switch {
+        trigger-height 50
+        delay-ms 100
+        max-speed 1500
+    }
+    // }}}
+
+    // Hot Corners {{{
+    // https://yalter.github.io/niri/Configuration:-Gestures.html#hot-corners
+    hot-corners {
+        // off
+        top-left
+        // top-right
+        // bottom-left
+        // bottom-right
+    }
+    // }}}
+
+}

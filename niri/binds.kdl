@@ -2,6 +2,7 @@
 // https://yalter.github.io/niri/Configuration:-Key-Bindings.html
 // `niri msg action`
 
+// Binds {{{
 binds {
 
     // Niri {{{
@@ -64,7 +65,7 @@ binds {
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
     // rather than stacked on top of each other.
-    // Mod+J { toggle-column-tabbed-display; }
+    Mod+J { toggle-column-tabbed-display; }
     // }}}
 
     // Column - Focus {{{
@@ -74,22 +75,18 @@ binds {
 
     // Column - Move {{{
 
-    // Column - Move to first/last
     // Mod+Ctrl+Home { move-column-to-first; }
     // Mod+Ctrl+End  { move-column-to-last; }
 
-    // Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
-    // Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
-    // Mod+Ctrl+U         { move-column-to-workspace-down; }
-    // Mod+Ctrl+I         { move-column-to-workspace-up; } // Duplicate
+    // Mod+Alt+Ctrl+U     { move-column-to-workspace-down; }
+    // Mod+Alt+Ctrl+I         { move-column-to-workspace-up; }
 
     // }}}
 
     // Column - Width {{{
     Mod+R { switch-preset-column-width; }
-    // Mod+Shift+R { switch-preset-window-height; }
+    Mod+Shift+R { switch-preset-window-height; }
     // Mod+Ctrl+R { reset-window-height; }
-
 
     // Finer width adjustments.
     // This command can also:
@@ -99,20 +96,20 @@ binds {
     // * adjust width as a percentage of screen width: "-10%" or "+10%"
     // Pixel sizes use logical, or scaled, pixels. I.e. on an output with scale 2.0,
     // set-column-width "100" will make the column occupy 200 physical screen pixels.
-    // Alt+M { set-column-width "-10%"; }
-    // Alt+I { set-column-width "+10%"; }
+    // Alt+j { set-column-width "-25%"; }
+    // Alt+y { set-column-width "+25%"; }
 
     // Finer height adjustments when in column with other windows.
-    // Alt+N { set-window-height "-10%"; }
-    // Alt+E { set-window-height "+10%"; }
+    // Alt+l { set-window-height "-25%"; }
+    // Alt+u { set-window-height "+25%"; }
     // }}}
 
     // Column - Consume/Expel {{{
     // The following binds move the focused window in and out of a column.
     // If the window is alone, they will consume it into the nearby column to the side.
     // If the window is already in a column, they will expel it out.
-    // Mod+Alt+M   { consume-or-expel-window-left; }
-    // Mod+Alt+I   { consume-or-expel-window-right; }
+    Mod+Ctrl+M   { consume-or-expel-window-left; }
+    Mod+Ctrl+I   { consume-or-expel-window-right; }
 
     // Consume one window from the right to the bottom of the focused column.
     // Mod+Comma  { consume-window-into-column; }
@@ -336,11 +333,5 @@ binds {
     // Alt+Ctrl+I { move-workspace-to-monitor-right; }
     // }}}
 
-}
-
-// Hotkey Overlay {{{
-hotkey-overlay {
-    skip-at-startup
-    hide-not-bound
 }
 // }}}
