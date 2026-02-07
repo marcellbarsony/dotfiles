@@ -33,7 +33,7 @@ prefer-no-csd
 // https://yalter.github.io/niri/Configuration:-Miscellaneous.html#overview
 overview {
     zoom 0.5
-    backdrop-color "#222222"
+    // backdrop-color "#222222"
 
     // Shadow
     // https://yalter.github.io/niri/Configuration:-Miscellaneous.html#workspace-shadow

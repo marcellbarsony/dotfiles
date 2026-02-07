@@ -1,6 +1,3 @@
-// Include Colors
-include "/home/marci/.cache/matugen/colors.kdl"
-
 // Include
 include "animations.kdl"
 include "binds.kdl"

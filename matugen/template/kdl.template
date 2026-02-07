@@ -1,10 +1,11 @@
 layout {
-    // Focus ring
-    // https://yalter.github.io/niri/Configuration%3A-Layout.html#focus-ring-and-border
     focus-ring {
-        width 2
-        active-gradient from="{{colors.primary.default.hex}}" to="{{colors.on_primary.default.hex}}" angle=120
-        inactive-gradient from="#000000" to="#000000" angle=45 relative-to="workspace-view"
-        urgent-gradient from="#800" to="#a33" angle=45
+        active-gradient from="{{colors.primary.default.hex}}" to="{{colors.on_primary.default.hex}}" angle=160
+    }
+    insert-hint {
+        on
+        gradient from="{{colors.primary.default.hex}}" to="{{colors.on_primary.default.hex}}" angle=160
     }
 }
+
+

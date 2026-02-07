@@ -1,6 +1,9 @@
 // Layout
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 
+// Include Colors
+include "/home/marci/.cache/matugen/colors.kdl"
+
 layout {
     gaps 12
     center-focused-column "never"
@@ -8,6 +11,16 @@ layout {
     default-column-display "tabbed" // normal/tabbed
     background-color "transparent"
     // preset-window-heights { }
+
+    // Focus Ring {{{
+    // https://yalter.github.io/niri/Configuration:-Layout.html#focus-ring-and-border
+    focus-ring {
+        width 2
+        inactive-gradient from="#000000" to="#000000" angle=45 relative-to="workspace-view"
+        urgent-gradient from="#800" to="#a33" angle=45
+        // Focus Ring color is imported from Matugen
+    }
+    // }}}
 
     // Border {{{
     border {
@@ -24,12 +37,12 @@ layout {
     // Column Width {{{
 
     // Default Width
-    // https://yalter.github.io/niri/Configuration%3A-Layout.html#default-column-width
+    // https://yalter.github.io/niri/Configuration:-Layout.html#default-column-width
     default-column-width { proportion 1.0; }
 
     // Preset Width
     // Width preset with `switch-preset-column-width` (Mod+R)
-    // https://yalter.github.io/niri/Configuration%3A-Layout.html#preset-column-widths
+    // https://yalter.github.io/niri/Configuration:-Layout.html#preset-column-widths
     preset-column-widths {
         proportion 0.33
         proportion 0.5
@@ -39,22 +52,10 @@ layout {
 
     // }}}
 
-    // Focus ring {{{
-    // https://yalter.github.io/niri/Configuration%3A-Layout.html#focus-ring-and-border
-    // focus-ring {
-    //     width 2
-    //     // active-color "#eeeeee"
-    //     // inactive-color "#303030"
-    //     active-gradient from="#FFFFFF" to="#AAAAAA" angle=120
-    //     inactive-gradient from="#000000" to="#000000" angle=45 relative-to="workspace-view"
-    //     urgent-gradient from="#800" to="#a33" angle=45
-    // }
-    // }}}
-
     // Insert Hint {{{
     insert-hint {
         on
-        gradient from="#FF000050" to="#0000FF50" angle=45 relative-to="workspace-view"
+        // Color is imported from Matugen
     }
     // }}}
 
@@ -70,13 +71,13 @@ layout {
         // radius. It has to assume that windows have square corners, leading to
         // shadow artifacts inside the CSD rounded corners. This setting fixes
         // those artifacts.
-        // 
+        //
         // However, instead you may want to set prefer-no-csd and/or
         // geometry-corner-radius. Then, niri will know the corner radius and
         // draw the shadow correctly, without having to draw it behind the
         // window. These will also remove client-side shadows if the window
         // draws any.
-        // 
+        //
         // draw-behind-window true
 
         // You can change how shadows look. The values below are in logical
