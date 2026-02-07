@@ -56,11 +56,6 @@ setopt hist_find_no_dups
 eval "$(starship init zsh)"
 # }}}
 
-# Pywal {{{
-# (cat ~/.cache/wal/sequences &) # Terminal
-# source ~/.cache/wal/colors-tty.sh # TTY
-# }}}
-
 # VI mode {{{
 bindkey -v
 # export KEYTIMEOUT=1 # Conflicts with Autocomplete

@@ -236,7 +236,7 @@ perm_type  = { fg = "gray"  }
 perm_read  = { fg = "white" }
 perm_write = { fg = "white" }
 perm_exec  = { fg = "white" }
-perm_sep   = { fg = "white" }
+perm_sep   = { fg = "gray" }
 
 # Progress
 progress_label  = { bold = true }
