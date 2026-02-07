@@ -1,0 +1,11 @@
+// Layer Rules
+// https://yalter.github.io/niri/Configuration%3A-Layer-Rules.html
+// `niri msg layers`
+
+layer-rule {
+    // Overview: Use awww (swww) as backdrop
+    // https://yalter.github.io/niri/Overview.html#backdrop-customization
+    match namespace="^swww-daemon$"
+    place-within-backdrop true
+
+}

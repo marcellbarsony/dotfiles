@@ -1,0 +1,112 @@
+// Layout
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
+
+layout {
+    gaps 12
+    center-focused-column "never"
+    // always-center-single-column
+    default-column-display "tabbed" // normal/tabbed
+    background-color "transparent"
+    // preset-window-heights { }
+
+    // Border {{{
+    border {
+        off
+        width 2
+        active-color "#ff0000"
+        inactive-color "#ff0000"
+        urgent-color "#9b0000"
+        // active-gradient from="#ffbb66" to="#ffc880" angle=45 relative-to="workspace-view"
+        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+    }
+    // }}}
+
+    // Column Width {{{
+
+    // Default Width
+    // https://yalter.github.io/niri/Configuration%3A-Layout.html#default-column-width
+    default-column-width { proportion 1.0; }
+
+    // Preset Width
+    // Width preset with `switch-preset-column-width` (Mod+R)
+    // https://yalter.github.io/niri/Configuration%3A-Layout.html#preset-column-widths
+    preset-column-widths {
+        proportion 0.33
+        proportion 0.5
+        proportion 0.66
+        proportion 1.0
+    }
+
+    // }}}
+
+    // Focus ring {{{
+    // https://yalter.github.io/niri/Configuration%3A-Layout.html#focus-ring-and-border
+    // focus-ring {
+    //     width 2
+    //     // active-color "#eeeeee"
+    //     // inactive-color "#303030"
+    //     active-gradient from="#FFFFFF" to="#AAAAAA" angle=120
+    //     inactive-gradient from="#000000" to="#000000" angle=45 relative-to="workspace-view"
+    //     urgent-gradient from="#800" to="#a33" angle=45
+    // }
+    // }}}
+
+    // Insert Hint {{{
+    insert-hint {
+        on
+        gradient from="#FF000050" to="#0000FF50" angle=45 relative-to="workspace-view"
+    }
+    // }}}
+
+    // Shadow {{{
+    shadow {
+        // Uncomment the next line to enable shadows.
+        // on
+
+        // By default, the shadow draws only around its window, and not behind it.
+        // Uncomment this setting to make the shadow draw behind its window.
+        //
+        // Note that niri has no way of knowing about the CSD window corner
+        // radius. It has to assume that windows have square corners, leading to
+        // shadow artifacts inside the CSD rounded corners. This setting fixes
+        // those artifacts.
+        // 
+        // However, instead you may want to set prefer-no-csd and/or
+        // geometry-corner-radius. Then, niri will know the corner radius and
+        // draw the shadow correctly, without having to draw it behind the
+        // window. These will also remove client-side shadows if the window
+        // draws any.
+        // 
+        // draw-behind-window true
+
+        // You can change how shadows look. The values below are in logical
+        // pixels and match the CSS box-shadow properties.
+
+        // Softness controls the shadow blur radius.
+        softness 30
+
+        // Spread expands the shadow.
+        spread 5
+
+        // Offset moves the shadow relative to the window.
+        offset x=0 y=5
+
+        // You can also change the shadow color and opacity.
+        color "#ff0000"
+    }
+    // }}}
+
+    // Struts {{{
+    // Struts shrink the area occupied by windows, similarly to layer-shell panels.
+    // You can think of them as a kind of outer gaps. They are set in logical pixels.
+    // Left and right struts will cause the next window to the side to always be visible.
+    // Top and bottom struts will simply add outer gaps in addition to the area occupied by
+    // layer-shell panels and regular gaps.
+    struts {
+        // left 64
+        // right 64
+        // top 64
+        // bottom 64
+    }
+    // }}}
+}

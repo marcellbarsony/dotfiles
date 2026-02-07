@@ -1,0 +1,346 @@
+// Binds
+// https://yalter.github.io/niri/Configuration:-Key-Bindings.html
+// `niri msg action`
+
+binds {
+
+    // Niri {{{
+
+    // Hotkey Help (Mod-Shift-/, Mod-?)
+    Mod+Shift+Slash { show-hotkey-overlay; }
+
+    // Overview
+    Mod+U repeat=false { toggle-overview; }
+
+    // Quit (show confirmation dialog)
+    // Mod+Shift+Q { quit; }
+    Ctrl+Alt+Delete { quit; }
+
+    // // Shortcut inhibiting {{{
+    // // Applications such as remote-desktop clients and software KVM switches may
+    // // request that niri stops processing the keyboard shortcuts defined here
+    // // so they may, for example, forward the key presses as-is to a remote machine.
+    // // It's a good idea to bind an escape hatch to toggle the inhibitor,
+    // // so a buggy application can't hold your session hostage.
+    // //
+    // // The allow-inhibiting=false property can be applied to other binds as well,
+    // // which ensures niri always processes them, even when an inhibitor is active.
+    // Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+    // // }}}
+
+    // // Touchpad - Scroll {{{
+    // // Similarly, you can bind touchpad scroll "ticks".
+    // // Touchpad scrolling is continuous, so for these binds it is split into
+    // // discrete intervals.
+    // // These binds are also affected by touchpad's natural-scroll, so these
+    // // example binds are "inverted", since we have natural-scroll enabled for
+    // // touchpads by default.
+    // // Mod+TouchpadScrollDown { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02+"; }
+    // // Mod+TouchpadScrollUp   { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02-"; }
+    // // }}}
+
+    // Volume (PipeWire & WirePlumber) {{{
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
+    XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+    XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+    // }}}
+
+    // Wallpaper {{{
+    Mod+W { spawn "~/.config/hypr/scripts/wallpaper.py"; }
+    // }}}
+
+    // }}}
+
+    // App Launch {{{
+    Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
+    Mod+B hotkey-overlay-title="Run an Application: Firefox" { spawn "firefox"; }
+    Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn "sh" "-c" "pkill rofi || rofi -show drun"; }
+    // Mod+D hotkey-overlay-title="Run an Application: Sherlock" { spawn "sherlock"; }
+    Mod+L hotkey-overlay-title="Run an Application: Hyprlock" { spawn "hyprlock"; }
+    // }}}
+
+    // Column {{{
+    // Toggle tabbed column display mode.
+    // Windows in this column will appear as vertical tabs,
+    // rather than stacked on top of each other.
+    // Mod+J { toggle-column-tabbed-display; }
+    // }}}
+
+    // Column - Focus {{{
+    Mod+Home    { focus-column-first; }
+    Mod+End     { focus-column-last; }
+    // }}}
+
+    // Column - Move {{{
+
+    // Column - Move to first/last
+    // Mod+Ctrl+Home { move-column-to-first; }
+    // Mod+Ctrl+End  { move-column-to-last; }
+
+    // Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
+    // Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
+    // Mod+Ctrl+U         { move-column-to-workspace-down; }
+    // Mod+Ctrl+I         { move-column-to-workspace-up; } // Duplicate
+
+    // }}}
+
+    // Column - Width {{{
+    Mod+R { switch-preset-column-width; }
+    // Mod+Shift+R { switch-preset-window-height; }
+    // Mod+Ctrl+R { reset-window-height; }
+
+
+    // Finer width adjustments.
+    // This command can also:
+    // * set width in pixels: "1000"
+    // * adjust width in pixels: "-5" or "+5"
+    // * set width as a percentage of screen width: "25%"
+    // * adjust width as a percentage of screen width: "-10%" or "+10%"
+    // Pixel sizes use logical, or scaled, pixels. I.e. on an output with scale 2.0,
+    // set-column-width "100" will make the column occupy 200 physical screen pixels.
+    // Alt+M { set-column-width "-10%"; }
+    // Alt+I { set-column-width "+10%"; }
+
+    // Finer height adjustments when in column with other windows.
+    // Alt+N { set-window-height "-10%"; }
+    // Alt+E { set-window-height "+10%"; }
+    // }}}
+
+    // Column - Consume/Expel {{{
+    // The following binds move the focused window in and out of a column.
+    // If the window is alone, they will consume it into the nearby column to the side.
+    // If the window is already in a column, they will expel it out.
+    // Mod+Alt+M   { consume-or-expel-window-left; }
+    // Mod+Alt+I   { consume-or-expel-window-right; }
+
+    // Consume one window from the right to the bottom of the focused column.
+    // Mod+Comma  { consume-window-into-column; }
+    // Expel the bottom window from the focused column to the right.
+    // Mod+Period { expel-window-from-column; }
+    // }}}
+
+    // Column - Center {{{
+    // Mod+C { center-column; }
+
+    // Center all fully visible columns on screen.
+    // Mod+Ctrl+C { center-visible-columns; }
+    // }}}
+
+    // Expand & Fullscreen & Maximize {{{
+    Mod+F { fullscreen-window; }
+    Mod+Alt+F { maximize-column; }
+    Mod+Ctrl+F { expand-column-to-available-width; }
+
+    // Windowed fullscreen
+    //https://github.com/YaLTeR/niri/wiki/Fullscreen-and-Maximize#windowed-fullscreen
+    Mod+Shift+F { toggle-windowed-fullscreen; }
+
+    // }}}
+
+    // Layouts - Switch {{{
+    // Actions to switch layouts.
+    // Note: if you uncomment these, make sure you do NOT have
+    // a matching layout switch hotkey configured in xkb options above.
+    // Having both at once on the same hotkey will break the switching,
+    // since it will switch twice upon pressing the hotkey (once by xkb, once by niri).
+    // Mod+Space       { switch-layout "next"; }
+    // Mod+Shift+Space { switch-layout "prev"; }
+    // }}}
+
+    // Monitor {{{
+    // Mod+P { power-on-monitors; }
+    // Mod+Shift+P { power-off-monitors; }
+    // }}}
+
+    // Monitor - Focus {{{
+    // }}}
+
+    // Scroll Bindings {{{
+    // https://yalter.github.io/niri/Configuration%3A-Key-Bindings.html#scroll-bindings
+    Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
+    Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
+    Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
+
+    Mod+WheelScrollRight      { focus-column-right; }
+    Mod+WheelScrollLeft       { focus-column-left; }
+    Mod+Ctrl+WheelScrollRight { move-column-right; }
+    Mod+Ctrl+WheelScrollLeft  { move-column-left; }
+
+    // Usually scrolling up and down with Shift in applications results in
+    // horizontal scrolling; these binds replicate that.
+    Mod+Shift+WheelScrollDown      { focus-column-right; }
+    Mod+Shift+WheelScrollUp        { focus-column-left; }
+    Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
+    Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
+    // }}}
+
+    // Focus {{{
+
+    // Move seamlessly between Workspaces
+    // Use `Alt` for Monitors
+
+    // Column & Window
+    Mod+M { focus-window-down-or-column-left; }
+    Mod+N { focus-window-or-workspace-down; }
+    Mod+E { focus-window-or-workspace-up; }
+    Mod+I { focus-window-down-or-column-right; }
+
+    // Workspace
+
+    // Monitor
+    Alt+M { focus-monitor-left; }
+    Alt+N { focus-monitor-down; }
+    Alt+E { focus-monitor-up; }
+    Alt+I { focus-monitor-right; }
+
+    // // Focus B {{{
+    //
+    // // Move seamlessly between Monitors
+    // // Use `Alt` for Workspaces
+    //
+    // // Column & Window
+    // Mod+M       { focus-column-or-monitor-left; }
+    // Mod+N       { focus-window-or-monitor-down; }
+    // Mod+E       { focus-window-or-monitor-up; }
+    // Mod+I       { focus-column-or-monitor-right; }
+    //
+    // // Workspace
+    // Alt+N     { focus-workspace-down; }
+    // Alt+E     { focus-workspace-up; }
+    //
+    // // Monitor (not required in this setup)
+    //
+    // // }}}
+
+    // }}}
+
+    // Move {{{
+
+    // Column & Window
+    Mod+Shift+M     { move-column-left-or-to-monitor-left; }
+    Mod+Shift+N     { move-window-down-or-to-workspace-down; }
+    Mod+Shift+E     { move-window-up-or-to-workspace-up; }
+    Mod+Shift+I     { move-column-right-or-to-monitor-right; }
+    // Mod+Shift+N     { spawn-sh "/home/marci/.config/niri/src/move-window-du.py -md"; }
+    // Mod+Shift+E     { spawn-sh "/home/marci/.config/niri/src/move-window-du.py -mu"; }
+
+    Alt+Shift+M     { move-window-to-monitor-left; }
+    Alt+Shift+N     { move-window-to-monitor-down; }
+    Alt+Shift+E     { move-window-to-monitor-up; }
+    Alt+Shift+I     { move-window-to-monitor-right; }
+
+    // Workspace
+    Alt+Ctrl+M     { move-workspace-to-monitor-left; }
+    Alt+Ctrl+N     { move-workspace-to-monitor-down; }
+    Alt+Ctrl+E     { move-workspace-to-monitor-up; }
+    Alt+Ctrl+I     { move-workspace-to-monitor-right; }
+
+    Mod+Ctrl+N     { move-workspace-down; }
+    Mod+Ctrl+E     { move-workspace-up; }
+
+    // }}}
+
+    // Window {{{
+
+    // Close
+    Mod+Q { close-window; }
+
+    // Move the focused window between the floating and the tiling layout.
+    Mod+T { toggle-window-floating; }
+
+    // Focus between floating and tiling
+    // Mod+Shift+T { switch-focus-between-floating-and-tiling; }
+
+    // }}}
+
+    // Window - Focus {{{
+    // Mod+N       { focus-window-down; }
+    // Mod+E       { focus-window-up; }
+
+    // Focus across workspaces
+    // Mod+M       { focus-column-or-monitor-left; }
+    // Mod+N       { focus-window-or-monitor-down; }
+    // Mod+E       { focus-window-or-monitor-up; }
+    // Mod+I       { focus-column-or-monitor-right; }
+    // }}}
+
+    // Window - Move {{{
+    // Mod+Shift+N     { move-window-down; }
+    // Mod+Shift+E     { move-window-up; }
+
+    // Window - Move across workspaces
+    // Mod+Shift+N     { move-window-down-or-to-workspace-down; }
+    // Mod+Shift+E     { move-window-up-or-to-workspace-up; }
+
+    // Alternatively, there are commands to move just a single window
+    // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
+    // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
+    // ...
+
+    // Alternatively, there are commands to move just a single window
+    // Mod+Shift+Ctrl+M  { move-window-to-monitor-left; }
+    // Mod+Shift+G  { move-window-to-monitor-up; }
+    // Mod+Shift+G  { move-window-to-monitor-down; }
+    // Mod+Shift+G  { move-window-to-monitor-down; }
+    // ...
+    // }}}
+
+    // Workspace {{{
+    // You can refer to workspaces by index. However, keep in mind that
+    // niri is a dynamic workspace system, so these commands are kind of
+    // "best effort". Trying to refer to a workspace index bigger than
+    // the current workspace count will instead refer to the bottommost
+    // (empty) workspace.
+    //
+    // For example, with 2 workspaces + 1 empty, indices 3, 4, 5 and so on
+    // will all refer to the 3rd workspace.
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+    Mod+Ctrl+1 { move-column-to-workspace 1; }
+    Mod+Ctrl+2 { move-column-to-workspace 2; }
+    Mod+Ctrl+3 { move-column-to-workspace 3; }
+    Mod+Ctrl+4 { move-column-to-workspace 4; }
+    Mod+Ctrl+5 { move-column-to-workspace 5; }
+    Mod+Ctrl+6 { move-column-to-workspace 6; }
+    Mod+Ctrl+7 { move-column-to-workspace 7; }
+    Mod+Ctrl+8 { move-column-to-workspace 8; }
+    Mod+Ctrl+9 { move-column-to-workspace 9; }
+
+    // Alternatively, there are commands to move just a single window:
+    // Mod+Ctrl+1 { move-window-to-workspace 1; }
+    // }}}
+
+    // Workspace - Focus {{{
+
+    // Current & previous
+    // Mod+Tab { focus-workspace-previous; }
+    // }}}
+
+    // Workspace - Move {{{
+    // Alt+N         { move-workspace-down; }
+    // Alt+E         { move-workspace-up; }
+
+    // Move workspace to another monitor
+    // Alt+Ctrl+M { move-workspace-to-monitor-left; }
+    // Alt+Ctrl+N { move-workspace-to-monitor-down; }
+    // Alt+Ctrl+E { move-workspace-to-monitor-up; }
+    // Alt+Ctrl+I { move-workspace-to-monitor-right; }
+    // }}}
+
+}
+
+// Hotkey Overlay {{{
+hotkey-overlay {
+    skip-at-startup
+    hide-not-bound
+}
+// }}}

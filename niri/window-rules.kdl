@@ -1,0 +1,54 @@
+// Window Rules
+// https://yalter.github.io/niri/Configuration:-Window-Rules.html
+
+// Get Window Properties
+// `niri msg pick-window`
+
+// Firefox {{{
+window-rule {
+    match app-id="firefox"
+    // Fix border width
+    // https://yalter.github.io/niri/FAQ.html#why-does-firefox-or-thunderbird-have-1-px-smaller-border
+    clip-to-geometry true
+    open-maximized false
+    open-floating false
+}
+
+// Picture-in-picture player as floating
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+// }}}
+
+// Ghostty {{{
+window-rule {
+    match app-id="ghostty"
+    default-column-width { proportion 1.00; }
+    draw-border-with-background false
+    opacity 0.95
+}
+// }}}
+
+// Spotify {{{
+window-rule {
+    match app-id="spotify"
+    open-on-workspace "spotify"
+    default-column-width { proportion 1.00; }
+}
+// }}}
+
+// VirtualBox Machine {{{
+
+// window-rule {
+//     match app-id="VirtualBox Machine"
+//     default-column-width { proportion 1.00; }
+// }
+//
+// // VirtualBox Manager
+// window-rule {
+//     match app-id="VirtualBox Manager"
+//     default-column-width { proportion 1.00; }
+// }
+
+// }}}

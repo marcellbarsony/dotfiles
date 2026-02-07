@@ -1,0 +1,67 @@
+// Misc
+// https://yalter.github.io/niri/Configuration:-Miscellaneous.html
+
+// Clipboard {{{
+// https://yalter.github.io/niri/Configuration:-Miscellaneous.html#clipboard
+clipboard {
+    // disable-primary
+}
+// }}}
+
+// Cursor {{{
+// https://yalter.github.io/niri/Configuration:-Miscellaneous.html#cursor
+cursor {
+    hide-after-inactive-ms 5000
+    xcursor-size 10
+}
+// }}}
+
+// Environment {{{
+// https://yalter.github.io/niri/Configuration:-Miscellaneous.html#environment
+environment {
+    QT_QPA_PLATFORM "wayland"
+    // DISPLAY null
+}
+// }}}
+
+// Client-Side Decorations {{{
+// https://yalter.github.io/niri/Configuration:-Miscellaneous.html#prefer-no-csd
+prefer-no-csd
+// }}}
+
+// Overview {{{
+// https://yalter.github.io/niri/Configuration:-Miscellaneous.html#overview
+overview {
+    zoom 0.5
+    backdrop-color "#222222"
+
+    // Shadow
+    // https://yalter.github.io/niri/Configuration:-Miscellaneous.html#workspace-shadow
+    workspace-shadow {
+        softness 100
+        spread 20
+        offset x=20 y=20
+        color "#000000ff"
+    }
+
+}
+// }}}
+
+// Screenshot {{{
+// https://yalter.github.io/niri/Configuration:-Miscellaneous.html#screenshot-path
+screenshot-path "~/tmp/screenshots/%Y%m%d-%H%M%S.png"
+// }}}
+
+// Startup {{{
+// https://yalter.github.io/niri/Configuration:-Miscellaneous.html#spawn-at-startup
+
+spawn-at-startup "kanshi"
+spawn-at-startup "swww-daemon"
+// spawn-at-startup "xwayland-satellite"
+
+// Waybar
+// Add Waybar systemd unit to the Niri session
+// `systemctl --user add-wants niri.service waybar.service`
+// spawn-at-startup "waybar"
+
+// }}}
