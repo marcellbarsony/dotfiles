@@ -147,7 +147,7 @@ keymap = [
 
     # 7-Zip
     { on = [ "Z", "a" ], run = "shell '7z a .7z %h' --cursor=5 --interactive", desc = "7z [Archive]" },
-    { on = [ "Z", "e" ], run = "shell '7z x %h' --cursor=8 --interactive", desc = "7z [Extract]" },
+    { on = [ "Z", "x" ], run = "shell '7z x %h' --cursor=7 --interactive", desc = "7z [Extract]" },
     # }}}
 
     # Goto {{{

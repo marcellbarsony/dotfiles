@@ -10,6 +10,16 @@ window-rule {
     open-fullscreen false
 }
 
+// Floating {{{
+window-rule {
+    match app-id=r#"org.gnome.Nautilus"#
+
+    default-column-width { fixed 1280; }
+    default-window-height { fixed 720; }
+    open-floating true
+}
+// }}}
+
 // Firefox {{{
 window-rule {
     match app-id="firefox"
@@ -30,15 +40,23 @@ window-rule {
 // Ghostty {{{
 window-rule {
     match app-id="ghostty"
-    // default-column-width { proportion 1.00; }
     draw-border-with-background false
     opacity 0.95
 }
 // }}}
 
+// OBS {{{
+window-rule {
+    match app-id=r#"com.obsproject.Studio$"# title="^Settings$"
+    default-column-width { fixed 1280; }
+    default-window-height { fixed 720; }
+    open-floating true
+}
+// }}}
+
 // Spotify {{{
 window-rule {
-    match app-id="spotify"
+    match app-id=r#"spotify"#
     open-on-output "PNP(BNQ) BenQ RL2755 N7F05437SL0"
 }
 
@@ -56,14 +74,9 @@ window-rule {
 // }}}
 
 // VirtualBox Machine {{{
-// window-rule {
-//     match app-id="VirtualBox Machine"
-//     default-column-width { proportion 1.00; }
-// }
-//
-// // VirtualBox Manager
-// window-rule {
-//     match app-id="VirtualBox Manager"
-//     default-column-width { proportion 1.00; }
-// }
+window-rule {
+    match app-id=r#"VirtualBox$"# title=".*- Settings$"
+    open-floating true
+    default-floating-position x=232 y=232 relative-to="top"
+}
 // }}}

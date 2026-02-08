@@ -5,35 +5,25 @@
 include "/home/marci/.cache/matugen/colors.kdl"
 
 // Optional Include
-// https://yalter.github.io/niri/Configuration%3A-Include.html#optional-includes
+// https://yalter.github.io/niri/Configuration:-Include.html#optional-includes
 // include opitonal=true "/home/marci/.cache/matugen/colors.kdl"
 
 layout {
-    gaps 12
-    center-focused-column "never"
-    default-column-display "normal"
+    // Background Color {{{
+    // https://niri-wm.github.io/niri/Configuration:-Layout.html#background-color
     background-color "transparent"
-
-    // Focus Ring {{{
-    // https://yalter.github.io/niri/Configuration:-Layout.html#focus-ring-and-border
-    focus-ring {
-        width 2
-        inactive-color "#222222"
-        urgent-gradient from="#800" to="#a33" angle=45
-        // Focus Ring color is imported from Matugen
-    }
     // }}}
 
     // Border {{{
+    // https://niri-wm.github.io/niri/Configuration:-Layout.html#focus-ring-and-border
     border {
         off
-        width 2
-        active-color "#ff0000"
-        inactive-color "#ff0000"
-        urgent-color "#9b0000"
-        // active-gradient from="#ffbb66" to="#ffc880" angle=45 relative-to="workspace-view"
-        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
     }
+    // }}}
+
+    // Center Focused Column {{{
+    // https://niri-wm.github.io/niri/Configuration:-Layout.html#center-focused-column
+    center-focused-column "never"
     // }}}
 
     // Column Width {{{
@@ -53,14 +43,36 @@ layout {
     }
     // }}}
 
+    // Default Column Display {{{
+    // https://niri-wm.github.io/niri/Configuration:-Layout.html#default-column-display
+    default-column-display "normal"
+    // }}}
+
+    // Focus Ring {{{
+    // https://yalter.github.io/niri/Configuration:-Layout.html#focus-ring-and-border
+    focus-ring {
+        width 2
+        inactive-color "#222222"
+        urgent-gradient from="#800" to="#a33" angle=45
+        // active-color imported from Matugen
+    }
+    // }}}
+
+    // Gaps {{{
+    // https://niri-wm.github.io/niri/Configuration:-Layout.html#gaps
+    gaps 12
+    // }}}
+
     // Insert Hint {{{
+    // https://niri-wm.github.io/niri/Configuration:-Layout.html#insert-hint
     insert-hint {
         on
-        // Color is imported from Matugen
+        // color is imported from Matugen
     }
     // }}}
 
     // Shadow {{{
+    // https://niri-wm.github.io/niri/Configuration:-Layout.html#shadow
     shadow {
         off
         draw-behind-window false
@@ -72,11 +84,7 @@ layout {
     // }}}
 
     // Struts {{{
-    // Struts shrink the area occupied by windows, similarly to layer-shell panels.
-    // You can think of them as a kind of outer gaps. They are set in logical pixels.
-    // Left and right struts will cause the next window to the side to always be visible.
-    // Top and bottom struts will simply add outer gaps in addition to the area occupied by
-    // layer-shell panels and regular gaps.
+    // https://niri-wm.github.io/niri/Configuration:-Layout.html#struts
     struts {
         // left 64
         // right 64
@@ -86,7 +94,7 @@ layout {
     // }}}
 
     // Tab indicator {{{
-    // https://yalter.github.io/niri/Configuration%3A-Layout.html#tab-indicator
+    // https://yalter.github.io/niri/Configuration:-Layout.html#tab-indicator
     tab-indicator {
 
     }

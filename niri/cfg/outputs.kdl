@@ -1,10 +1,10 @@
 // Outputs
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
 
 // WARNING: Unused config
 // Outputs are configured via Kanshi
 
-// Configure Outputs by their name
-// https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
+// Configure Outputs {{{
 // `niri msg outputs`
 
 // Laptop {{{
@@ -40,4 +40,6 @@
 //         transform "normal"
 //         position x=1920 y=1080
 // }
+// }}}
+
 // }}}

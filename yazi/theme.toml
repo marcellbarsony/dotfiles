@@ -98,8 +98,9 @@ conds = [
 ]
 exts = [
     # Archive
-    { name = "tar",  text = "󰛫", fg = "yellow" },
-    { name = "zip",  text = "󰛫", fg = "yellow" },
+    { name = "7z",  text = "", fg = "yellow" },
+    { name = "tar",  text = "", fg = "yellow" },
+    { name = "zip",  text = "", fg = "yellow" },
     { name = "old",  text = "󱋡", fg = "yellow" },
     # Canva
     { name = "canvas",  text = "󰻫", fg = "white" },
@@ -113,8 +114,11 @@ exts = [
     # Database
     { name = "db",  text = "", fg = "gray" },
     # Documents
+    { name = "docx",  text = "󰈬", fg = "blue" },
     { name = "pdf",  text = "", fg = "white" },
     { name = "odt",  text = "", fg = "white" },
+    { name = "xls",  text = "󰈛", fg = "green" },
+    { name = "xlsx",  text = "󰈛", fg = "green" },
     # Image
     { name = "jpg", text = "󰈟", fg = "magenta" },
     { name = "png", text = "󰈟", fg = "magenta" },
@@ -124,6 +128,7 @@ exts = [
     # Programming
     { name = "c",  text = "", fg = "blue" },
     { name = "ini",  text = "", fg = "gray" },
+    { name = "json",  text = "", fg = "yellow" },
     { name = "lua",  text = "", fg = "blue" },
     { name = "py",  text = "", fg = "yellow" },
     { name = "sh",  text = "󰈮", fg = "gray" },
@@ -134,6 +139,8 @@ exts = [
     # Text
     { name = "txt",  text = "󰈙", fg = "white" },
     { name = "md",  text = "󰈙", fg = "white" },
+    # VirtualBox
+    { name = "vbox",  text = "", fg = "white" },
     # Video
     { name = "mp4", text = "󰈫", fg = "yellow" },
     { name = "mkv", text = "󰈫", fg = "yellow" },

@@ -63,6 +63,21 @@ ls.add_snippets("markdown", {
   ),
   -- }}}
 
+  -- Checklist {{{
+  s( "checklist",
+    fmt(
+      "- [{}] {}",
+      {
+        c(1, {
+          t { " " },
+          t { "x" },
+        }),
+        i(2),
+      }
+    )
+  ),
+  -- }}}
+
   -- Table {{{
   s({ trig = "table(%d+)x(%d+)", regTrig = true }, {
     d(1, function(args, snip)

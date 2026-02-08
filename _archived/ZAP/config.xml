@@ -3,7 +3,7 @@
     <pscans version="5">
         <scanOnlyInScope>false</scanOnlyInScope>
         <scanFuzzerMessages>false</scanFuzzerMessages>
-        <threads>3</threads>
+        <threads>2</threads>
         <maxAlertsPerRule>0</maxAlertsPerRule>
         <maxBodySizeInBytes>0</maxBodySizeInBytes>
         <confirmRemoveAutoTagScanner>true</confirmRemoveAutoTagScanner>
@@ -160,38 +160,38 @@
             </scanner>
         </autoTagScanners>
     </pscans>
-    <version>20016001</version>
+    <version>20017000</version>
     <view>
         <locale>en_GB</locale>
-        <displayOption>0</displayOption>
+        <displayOption>1</displayOption>
         <messagePanelsPosition>
-            <lastSelectedPosition>TABS_SIDE_BY_SIDE</lastSelectedPosition>
+            <lastSelectedPosition>TAB_SIDE_BY_SIDE</lastSelectedPosition>
         </messagePanelsPosition>
         <showTabNames>true</showTabNames>
         <splashScreen>true</splashScreen>
         <processImages>0</processImages>
-        <brkPanelView>0</brkPanelView>
-        <showMainToolbar>1</showMainToolbar>
+        <brkPanelView>1</brkPanelView>
+        <showMainToolbar>0</showMainToolbar>
         <advancedview>1</advancedview>
         <askOnExit>1</askOnExit>
         <uiWmHandling>0</uiWmHandling>
         <outputTabsTimeStampsOption>false</outputTabsTimeStampsOption>
         <outputTabsTimeStampsFormat>yyyy-MM-dd HH:mm:ss</outputTabsTimeStampsFormat>
         <fontSize>-1</fontSize>
-        <fontName/>
+        <fontName> </fontName>
         <workPanelsFontSize>-1</workPanelsFontSize>
-        <workPanelsFontName/>
+        <workPanelsFontName> </workPanelsFontName>
         <scaleImages>true</scaleImages>
-        <iconSize>14</iconSize>
+        <iconSize>16</iconSize>
+        <lookAndFeel>Flat Dark</lookAndFeel>
+        <lookAndFeelClass>com.formdev.flatlaf.FlatDarkLaf</lookAndFeelClass>
         <allowAppsInContainers>false</allowAppsInContainers>
-        <lookAndFeel>Flat Darcula</lookAndFeel>
-        <lookAndFeelClass>com.formdev.flatlaf.FlatDarculaLaf</lookAndFeelClass>
         <main>
             <request>
                 <httppanel>
-                    <defaultcomponent>RequestSplit</defaultcomponent>
+                    <defaultcomponent>RequestAll</defaultcomponent>
                     <components>
-                        <dividerLocation>131</dividerLocation>
+                        <dividerLocation>203</dividerLocation>
                         <split>
                             <header>
                                 <defaultview>HttpRequestHeaderSyntaxTextView</defaultview>
@@ -316,7 +316,7 @@
                                 </HttpPanelSyntaxHighlightTextView>
                             </views>
                         </websocket>
-                        <dividerLocation>131</dividerLocation>
+                        <dividerLocation>203</dividerLocation>
                         <split>
                             <header>
                                 <defaultview>HttpPanelSyntaxHighlightTextView</defaultview>
@@ -368,7 +368,7 @@
                 <httppanel>
                     <defaultcomponent>RequestSplit</defaultcomponent>
                     <components>
-                        <dividerLocation>236</dividerLocation>
+                        <dividerLocation>203</dividerLocation>
                         <split>
                             <header>
                                 <defaultview>HttpRequestHeaderSyntaxTextView</defaultview>
@@ -540,387 +540,32 @@
                 </httppanel>
             </response>
         </break>
-        <mode>standard</mode>
-        <requesterpanel>
-            <verticalDividerLocation>-1</verticalDividerLocation>
-            <horizontalDividerLocation>802</horizontalDividerLocation>
-            <selectedlayout>2</selectedlayout>
-            <request>
-                <httppanel>
-                    <defaultcomponent>RequestSplit</defaultcomponent>
-                    <components>
-                        <dividerLocation>131</dividerLocation>
-                        <split>
-                            <header>
-                                <defaultview>HttpRequestHeaderSyntaxTextView</defaultview>
-                                <views>
-                                    <HttpPanelSyntaxHighlightTextView>
-                                        <aa>true</aa>
-                                        <linenumbers>false</linenumbers>
-                                        <wordwrap>true</wordwrap>
-                                        <highlightline>false</highlightline>
-                                        <fadehighlightline>false</fadehighlightline>
-                                        <whitespaces>false</whitespaces>
-                                        <newlines>false</newlines>
-                                        <markoccurrences>false</markoccurrences>
-                                        <roundedselection>false</roundedselection>
-                                        <bracketmatch>false</bracketmatch>
-                                        <animatedbracketmatch>false</animatedbracketmatch>
-                                    </HttpPanelSyntaxHighlightTextView>
-                                </views>
-                            </header>
-                            <body>
-                                <defaultview>HttpRequestBodySyntaxTextView</defaultview>
-                                <views>
-                                    <HttpPanelSyntaxHighlightTextView>
-                                        <aa>true</aa>
-                                        <linenumbers>false</linenumbers>
-                                        <codefolding>false</codefolding>
-                                        <wordwrap>true</wordwrap>
-                                        <highlightline>false</highlightline>
-                                        <fadehighlightline>false</fadehighlightline>
-                                        <whitespaces>false</whitespaces>
-                                        <newlines>false</newlines>
-                                        <markoccurrences>false</markoccurrences>
-                                        <roundedselection>false</roundedselection>
-                                        <bracketmatch>false</bracketmatch>
-                                        <animatedbracketmatch>false</animatedbracketmatch>
-                                        <syntax>
-                                            <autodetect>true</autodetect>
-                                        </syntax>
-                                    </HttpPanelSyntaxHighlightTextView>
-                                </views>
-                            </body>
-                        </split>
-                        <all>
-                            <defaultview>HttpRequestSyntaxTextView</defaultview>
-                            <views>
-                                <HttpPanelSyntaxHighlightTextView>
-                                    <aa>true</aa>
-                                    <linenumbers>false</linenumbers>
-                                    <wordwrap>true</wordwrap>
-                                    <highlightline>false</highlightline>
-                                    <fadehighlightline>false</fadehighlightline>
-                                    <whitespaces>false</whitespaces>
-                                    <newlines>false</newlines>
-                                    <markoccurrences>false</markoccurrences>
-                                    <roundedselection>false</roundedselection>
-                                    <bracketmatch>false</bracketmatch>
-                                    <animatedbracketmatch>false</animatedbracketmatch>
-                                </HttpPanelSyntaxHighlightTextView>
-                            </views>
-                        </all>
-                        <websocket>
-                            <defaultview>WebSocketSyntaxHighlightTextView</defaultview>
-                            <views>
-                                <HttpPanelSyntaxHighlightTextView>
-                                    <aa>true</aa>
-                                    <linenumbers>false</linenumbers>
-                                    <wordwrap>true</wordwrap>
-                                    <highlightline>false</highlightline>
-                                    <fadehighlightline>false</fadehighlightline>
-                                    <whitespaces>false</whitespaces>
-                                    <newlines>false</newlines>
-                                    <markoccurrences>false</markoccurrences>
-                                    <roundedselection>false</roundedselection>
-                                    <bracketmatch>false</bracketmatch>
-                                    <animatedbracketmatch>false</animatedbracketmatch>
-                                </HttpPanelSyntaxHighlightTextView>
-                            </views>
-                        </websocket>
-                    </components>
-                </httppanel>
-            </request>
-            <response>
-                <httppanel>
-                    <defaultcomponent>ResponseSplit</defaultcomponent>
-                    <components>
-                        <all>
-                            <defaultview>HttpPanelSyntaxHighlightTextView</defaultview>
-                            <views>
-                                <HttpPanelSyntaxHighlightTextView>
-                                    <aa>true</aa>
-                                    <linenumbers>false</linenumbers>
-                                    <wordwrap>true</wordwrap>
-                                    <highlightline>false</highlightline>
-                                    <fadehighlightline>false</fadehighlightline>
-                                    <whitespaces>false</whitespaces>
-                                    <newlines>false</newlines>
-                                    <markoccurrences>false</markoccurrences>
-                                    <roundedselection>false</roundedselection>
-                                    <bracketmatch>false</bracketmatch>
-                                    <animatedbracketmatch>false</animatedbracketmatch>
-                                    <syntax>
-                                        <autodetect>true</autodetect>
-                                    </syntax>
-                                </HttpPanelSyntaxHighlightTextView>
-                            </views>
-                        </all>
-                        <websocket>
-                            <defaultview>WebSocketSyntaxHighlightTextView</defaultview>
-                            <views>
-                                <HttpPanelSyntaxHighlightTextView>
-                                    <aa>true</aa>
-                                    <linenumbers>false</linenumbers>
-                                    <wordwrap>true</wordwrap>
-                                    <highlightline>false</highlightline>
-                                    <fadehighlightline>false</fadehighlightline>
-                                    <whitespaces>false</whitespaces>
-                                    <newlines>false</newlines>
-                                    <markoccurrences>false</markoccurrences>
-                                    <roundedselection>false</roundedselection>
-                                    <bracketmatch>false</bracketmatch>
-                                    <animatedbracketmatch>false</animatedbracketmatch>
-                                </HttpPanelSyntaxHighlightTextView>
-                            </views>
-                        </websocket>
-                        <dividerLocation>152</dividerLocation>
-                        <split>
-                            <header>
-                                <defaultview>HttpPanelSyntaxHighlightTextView</defaultview>
-                                <views>
-                                    <HttpPanelSyntaxHighlightTextView>
-                                        <aa>true</aa>
-                                        <linenumbers>false</linenumbers>
-                                        <wordwrap>true</wordwrap>
-                                        <highlightline>false</highlightline>
-                                        <fadehighlightline>false</fadehighlightline>
-                                        <whitespaces>false</whitespaces>
-                                        <newlines>false</newlines>
-                                        <markoccurrences>false</markoccurrences>
-                                        <roundedselection>false</roundedselection>
-                                        <bracketmatch>false</bracketmatch>
-                                        <animatedbracketmatch>false</animatedbracketmatch>
-                                    </HttpPanelSyntaxHighlightTextView>
-                                </views>
-                            </header>
-                            <body>
-                                <defaultview>HttpPanelSyntaxHighlightTextView</defaultview>
-                                <views>
-                                    <HttpPanelSyntaxHighlightTextView>
-                                        <aa>true</aa>
-                                        <linenumbers>false</linenumbers>
-                                        <codefolding>false</codefolding>
-                                        <wordwrap>true</wordwrap>
-                                        <highlightline>false</highlightline>
-                                        <fadehighlightline>false</fadehighlightline>
-                                        <whitespaces>false</whitespaces>
-                                        <newlines>false</newlines>
-                                        <markoccurrences>false</markoccurrences>
-                                        <roundedselection>false</roundedselection>
-                                        <bracketmatch>false</bracketmatch>
-                                        <animatedbracketmatch>false</animatedbracketmatch>
-                                        <syntax>
-                                            <autodetect>true</autodetect>
-                                        </syntax>
-                                    </HttpPanelSyntaxHighlightTextView>
-                                </views>
-                            </body>
-                        </split>
-                    </components>
-                </httppanel>
-            </response>
-        </requesterpanel>
         <tab>
             <pin>
-                <QuickStart>false</QuickStart>
+                <Scripts>true</Scripts>
+                <ClientMap>true</ClientMap>
+                <AJAXSpider>true</AJAXSpider>
+                <ActiveScan>true</ActiveScan>
+                <Breakpoints>true</Breakpoints>
+                <Fuzzer>true</Fuzzer>
+                <Spider>true</Spider>
+                <WebSockets>true</WebSockets>
             </pin>
         </tab>
-        <manual>
-            <verticalDividerLocation>-1</verticalDividerLocation>
-            <horizontalDividerLocation>-1</horizontalDividerLocation>
-            <selectedlayout>0</selectedlayout>
-            <request>
-                <httppanel>
-                    <defaultcomponent>RequestSplit</defaultcomponent>
-                    <components>
-                        <dividerLocation>204</dividerLocation>
-                        <split>
-                            <header>
-                                <defaultview>HttpRequestHeaderSyntaxTextView</defaultview>
-                                <views>
-                                    <HttpPanelSyntaxHighlightTextView>
-                                        <aa>true</aa>
-                                        <linenumbers>false</linenumbers>
-                                        <wordwrap>true</wordwrap>
-                                        <highlightline>false</highlightline>
-                                        <fadehighlightline>false</fadehighlightline>
-                                        <whitespaces>false</whitespaces>
-                                        <newlines>false</newlines>
-                                        <markoccurrences>false</markoccurrences>
-                                        <roundedselection>false</roundedselection>
-                                        <bracketmatch>false</bracketmatch>
-                                        <animatedbracketmatch>false</animatedbracketmatch>
-                                    </HttpPanelSyntaxHighlightTextView>
-                                </views>
-                            </header>
-                            <body>
-                                <defaultview>HttpRequestBodySyntaxTextView</defaultview>
-                                <views>
-                                    <HttpPanelSyntaxHighlightTextView>
-                                        <aa>true</aa>
-                                        <linenumbers>false</linenumbers>
-                                        <codefolding>false</codefolding>
-                                        <wordwrap>true</wordwrap>
-                                        <highlightline>false</highlightline>
-                                        <fadehighlightline>false</fadehighlightline>
-                                        <whitespaces>false</whitespaces>
-                                        <newlines>false</newlines>
-                                        <markoccurrences>false</markoccurrences>
-                                        <roundedselection>false</roundedselection>
-                                        <bracketmatch>false</bracketmatch>
-                                        <animatedbracketmatch>false</animatedbracketmatch>
-                                        <syntax>
-                                            <autodetect>true</autodetect>
-                                        </syntax>
-                                    </HttpPanelSyntaxHighlightTextView>
-                                </views>
-                            </body>
-                        </split>
-                        <all>
-                            <defaultview>HttpRequestSyntaxTextView</defaultview>
-                            <views>
-                                <HttpPanelSyntaxHighlightTextView>
-                                    <aa>true</aa>
-                                    <linenumbers>false</linenumbers>
-                                    <wordwrap>true</wordwrap>
-                                    <highlightline>false</highlightline>
-                                    <fadehighlightline>false</fadehighlightline>
-                                    <whitespaces>false</whitespaces>
-                                    <newlines>false</newlines>
-                                    <markoccurrences>false</markoccurrences>
-                                    <roundedselection>false</roundedselection>
-                                    <bracketmatch>false</bracketmatch>
-                                    <animatedbracketmatch>false</animatedbracketmatch>
-                                </HttpPanelSyntaxHighlightTextView>
-                            </views>
-                        </all>
-                        <websocket>
-                            <defaultview>WebSocketSyntaxHighlightTextView</defaultview>
-                            <views>
-                                <HttpPanelSyntaxHighlightTextView>
-                                    <aa>true</aa>
-                                    <linenumbers>false</linenumbers>
-                                    <wordwrap>true</wordwrap>
-                                    <highlightline>false</highlightline>
-                                    <fadehighlightline>false</fadehighlightline>
-                                    <whitespaces>false</whitespaces>
-                                    <newlines>false</newlines>
-                                    <markoccurrences>false</markoccurrences>
-                                    <roundedselection>false</roundedselection>
-                                    <bracketmatch>false</bracketmatch>
-                                    <animatedbracketmatch>false</animatedbracketmatch>
-                                </HttpPanelSyntaxHighlightTextView>
-                            </views>
-                        </websocket>
-                    </components>
-                </httppanel>
-            </request>
-            <response>
-                <httppanel>
-                    <defaultcomponent>ResponseSplit</defaultcomponent>
-                    <components>
-                        <all>
-                            <defaultview>HttpPanelSyntaxHighlightTextView</defaultview>
-                            <views>
-                                <HttpPanelSyntaxHighlightTextView>
-                                    <aa>true</aa>
-                                    <linenumbers>false</linenumbers>
-                                    <wordwrap>true</wordwrap>
-                                    <highlightline>false</highlightline>
-                                    <fadehighlightline>false</fadehighlightline>
-                                    <whitespaces>false</whitespaces>
-                                    <newlines>false</newlines>
-                                    <markoccurrences>false</markoccurrences>
-                                    <roundedselection>false</roundedselection>
-                                    <bracketmatch>false</bracketmatch>
-                                    <animatedbracketmatch>false</animatedbracketmatch>
-                                    <syntax>
-                                        <autodetect>true</autodetect>
-                                    </syntax>
-                                </HttpPanelSyntaxHighlightTextView>
-                            </views>
-                        </all>
-                        <websocket>
-                            <defaultview>WebSocketSyntaxHighlightTextView</defaultview>
-                            <views>
-                                <HttpPanelSyntaxHighlightTextView>
-                                    <aa>true</aa>
-                                    <linenumbers>false</linenumbers>
-                                    <wordwrap>true</wordwrap>
-                                    <highlightline>false</highlightline>
-                                    <fadehighlightline>false</fadehighlightline>
-                                    <whitespaces>false</whitespaces>
-                                    <newlines>false</newlines>
-                                    <markoccurrences>false</markoccurrences>
-                                    <roundedselection>false</roundedselection>
-                                    <bracketmatch>false</bracketmatch>
-                                    <animatedbracketmatch>false</animatedbracketmatch>
-                                </HttpPanelSyntaxHighlightTextView>
-                            </views>
-                        </websocket>
-                        <dividerLocation>225</dividerLocation>
-                        <split>
-                            <header>
-                                <defaultview>HttpPanelSyntaxHighlightTextView</defaultview>
-                                <views>
-                                    <HttpPanelSyntaxHighlightTextView>
-                                        <aa>true</aa>
-                                        <linenumbers>false</linenumbers>
-                                        <wordwrap>true</wordwrap>
-                                        <highlightline>false</highlightline>
-                                        <fadehighlightline>false</fadehighlightline>
-                                        <whitespaces>false</whitespaces>
-                                        <newlines>false</newlines>
-                                        <markoccurrences>false</markoccurrences>
-                                        <roundedselection>false</roundedselection>
-                                        <bracketmatch>false</bracketmatch>
-                                        <animatedbracketmatch>false</animatedbracketmatch>
-                                    </HttpPanelSyntaxHighlightTextView>
-                                </views>
-                            </header>
-                            <body>
-                                <defaultview>HttpPanelSyntaxHighlightTextView</defaultview>
-                                <views>
-                                    <HttpPanelSyntaxHighlightTextView>
-                                        <aa>true</aa>
-                                        <linenumbers>false</linenumbers>
-                                        <codefolding>false</codefolding>
-                                        <wordwrap>true</wordwrap>
-                                        <highlightline>false</highlightline>
-                                        <fadehighlightline>false</fadehighlightline>
-                                        <whitespaces>false</whitespaces>
-                                        <newlines>false</newlines>
-                                        <markoccurrences>false</markoccurrences>
-                                        <roundedselection>false</roundedselection>
-                                        <bracketmatch>false</bracketmatch>
-                                        <animatedbracketmatch>false</animatedbracketmatch>
-                                        <syntax>
-                                            <autodetect>true</autodetect>
-                                        </syntax>
-                                    </HttpPanelSyntaxHighlightTextView>
-                                </views>
-                            </body>
-                        </split>
-                    </components>
-                </httppanel>
-            </response>
-        </manual>
     </view>
     <reveal version="1">
         <enabled>false</enabled>
     </reveal>
     <breakpoints>
-        <inScopeOnly>false</inScopeOnly>
-        <showIgnoreRequestsButtons>false</showIgnoreRequestsButtons>
+        <inScopeOnly>true</inScopeOnly>
+        <showIgnoreRequestsButtons>true</showIgnoreRequestsButtons>
         <buttonMode>1</buttonMode>
         <javaScriptUrlRegex>.*\.js.*</javaScriptUrlRegex>
         <cssAndFontsUrlRegex>.*\.(?:css|woff|woff2|ttf).*</cssAndFontsUrlRegex>
         <multimediaUrlRegex>.*\.(?:png|gif|jpg|jpeg|svg|mp4|mp3|webm|webp|ico).*</multimediaUrlRegex>
-        <alwaysOnTop>false</alwaysOnTop>
     </breakpoints>
     <bruteforce version="1">
-        <threadPerHost>6</threadPerHost>
+        <threadPerHost>4</threadPerHost>
         <recursive>true</recursive>
         <defaultFile/>
         <browsefileswithoutextension>false</browsefileswithoutextension>
@@ -942,28 +587,12 @@
             </codeStyle>
         </console>
         <scripts>
-            <name>Application Error Scanner</name>
+            <name>Username Idor Scanner</name>
             <description/>
             <engine>Graal.js</engine>
             <type>websocketpassive</type>
             <enabled>true</enabled>
-            <file>/home/kali/.ZAP/scripts/scripts/websocketpassive/Application Error Scanner.js</file>
-        </scripts>
-        <scripts>
-            <name>Base64 Disclosure</name>
-            <description/>
-            <engine>Graal.js</engine>
-            <type>websocketpassive</type>
-            <enabled>true</enabled>
-            <file>/home/kali/.ZAP/scripts/scripts/websocketpassive/Base64 Disclosure.js</file>
-        </scripts>
-        <scripts>
-            <name>Email Disclosure</name>
-            <description/>
-            <engine>Graal.js</engine>
-            <type>websocketpassive</type>
-            <enabled>true</enabled>
-            <file>/home/kali/.ZAP/scripts/scripts/websocketpassive/Email Disclosure.js</file>
+            <file>/home/kali/.ZAP/scripts/scripts/websocketpassive/Username Idor Scanner.js</file>
         </scripts>
         <scripts>
             <name>XML Comments Disclosure</name>
@@ -974,12 +603,20 @@
             <file>/home/kali/.ZAP/scripts/scripts/websocketpassive/XML Comments Disclosure.js</file>
         </scripts>
         <scripts>
-            <name>Debug Error Disclosure</name>
+            <name>Email Disclosure</name>
             <description/>
             <engine>Graal.js</engine>
             <type>websocketpassive</type>
             <enabled>true</enabled>
-            <file>/home/kali/.ZAP/scripts/scripts/websocketpassive/Debug Error Disclosure.js</file>
+            <file>/home/kali/.ZAP/scripts/scripts/websocketpassive/Email Disclosure.js</file>
+        </scripts>
+        <scripts>
+            <name>Application Error Scanner</name>
+            <description/>
+            <engine>Graal.js</engine>
+            <type>websocketpassive</type>
+            <enabled>true</enabled>
+            <file>/home/kali/.ZAP/scripts/scripts/websocketpassive/Application Error Scanner.js</file>
         </scripts>
         <scripts>
             <name>PII Disclosure</name>
@@ -990,20 +627,28 @@
             <file>/home/kali/.ZAP/scripts/scripts/websocketpassive/PII Disclosure.js</file>
         </scripts>
         <scripts>
+            <name>Debug Error Disclosure</name>
+            <description/>
+            <engine>Graal.js</engine>
+            <type>websocketpassive</type>
+            <enabled>true</enabled>
+            <file>/home/kali/.ZAP/scripts/scripts/websocketpassive/Debug Error Disclosure.js</file>
+        </scripts>
+        <scripts>
+            <name>Base64 Disclosure</name>
+            <description/>
+            <engine>Graal.js</engine>
+            <type>websocketpassive</type>
+            <enabled>true</enabled>
+            <file>/home/kali/.ZAP/scripts/scripts/websocketpassive/Base64 Disclosure.js</file>
+        </scripts>
+        <scripts>
             <name>Private IP Disclosure</name>
             <description/>
             <engine>Graal.js</engine>
             <type>websocketpassive</type>
             <enabled>true</enabled>
             <file>/home/kali/.ZAP/scripts/scripts/websocketpassive/Private IP Disclosure.js</file>
-        </scripts>
-        <scripts>
-            <name>Username Idor Scanner</name>
-            <description/>
-            <engine>Graal.js</engine>
-            <type>websocketpassive</type>
-            <enabled>true</enabled>
-            <file>/home/kali/.ZAP/scripts/scripts/websocketpassive/Username Idor Scanner.js</file>
         </scripts>
         <confRemdir>true</confRemdir>
         <enableScriptsFromDirs>false</enableScriptsFromDirs>
@@ -1023,12 +668,12 @@
     <requester version="2">
         <autoFocus>true</autoFocus>
     </requester>
-    <ajaxSpider version="6">
+    <ajaxSpider version="7">
         <enableExtensions>false</enableExtensions>
         <clickElemsOnce>true</clickElemsOnce>
         <clickDefaultElems>true</clickDefaultElems>
         <randomInputs>true</randomInputs>
-        <numberOfBrowsers>3</numberOfBrowsers>
+        <numberOfBrowsers>2</numberOfBrowsers>
         <maxCrawlDepth>10</maxCrawlDepth>
         <maxCrawlStates>0</maxCrawlStates>
         <maxDuration>60</maxDuration>
@@ -1037,6 +682,8 @@
         <confirmRemoveElem>true</confirmRemoveElem>
         <browserId>firefox-headless</browserId>
         <confirmRemoveAllowedResource>true</confirmRemoveAllowedResource>
+        <scopeCheck>STRICT</scopeCheck>
+        <logoutAvoidance>false</logoutAvoidance>
         <elems>
             <elem>
                 <name>a</name>
@@ -1189,19 +836,18 @@
     <selenium version="3">
         <chromeDriver>/home/kali/.ZAP/webdriver/linux/64/chromedriver</chromeDriver>
         <firefoxDriver>/home/kali/.ZAP/webdriver/linux/64/geckodriver</firefoxDriver>
-        <firefoxProfile>zap-client-profile</firefoxProfile>
         <confirmRemoveBrowserArg>true</confirmRemoveBrowserArg>
     </selenium>
     <callhome version="1">
         <tel>
-            <uuid>abd00076-a90e-4f35-ac06-6e322c291775</uuid>
+            <uuid>03a17d2a-3d6d-485b-b148-33b03a27dd65</uuid>
             <enabled>true</enabled>
         </tel>
     </callhome>
     <network>
         <serverCertificates version="1">
             <rootCa>
-                <ks>MIIMSgIBAzCCC_QGCSqGSIb3DQEHAaCCC-UEggvhMIIL3TCCBcQGCSqGSIb3DQEHAaCCBbUEggWxMIIFrTCCBakGCyqGSIb3DQEMCgECoIIFQDCCBTwwZgYJKoZIhvcNAQUNMFkwOAYJKoZIhvcNAQUMMCsEFPAHieMGuAeooNUonaeCWRg9LpDmAgInEAIBIDAMBggqhkiG9w0CCQUAMB0GCWCGSAFlAwQBKgQQDRKPE4-P1CYYw_vbp-NqvQSCBNCIguymUa1_xyc0MbXM8CCOGPXkGA45MZyeNlB2p6filIM1Jd5xCzVnRImvB3nD40Ij-mC9R-uIcL1Gh8fQgyFZODcJHJBZicZrC9g14PBev9MLemKUIieANwZij1taTIa3RpwK2ydyKr-ypIayE6IOj8DzvbXatCFFq9uSm8QW8ev_ZUQFy07Jz39IXo6I6vI1aDyb61UTMpIVf-AASymtOdEZCxXXmSMljvOrRiasQbnnH9fefYOEUPQarsO1g-qvG1ZfW14QH1WEvIKwr3TGURUEb1dr1loNjCaSSfr2WfrNpFPtmuFrbr9Lny-3V4oKtrQuzHntONNgURxEj9sG8BLuXv5UbjLOJ66b9HP95UoMBzhkCHq5jDmjJHaSVJEhXLugmmDX9AvwRctPibWTyTI-BO2TWcVcE93vqWPB4QExID17-jrQiSRtMWQWxzmFjJojSLHuqMpLQ7LRRyZvRk9EfdQFnWb4Tee0VjnFpPxZISJel-PU_19K7i-VzcmG5gqGIvyoATSZ90XjlcKYCuZDJSMrYfdBXeDekrC6Cf21Nc1ebxX5WWxcI5s45KpplLiNQhl6uVCvj3SRZpOUmEgSkZPdSYHFTpWmMSJYKLCFhiI-syBOcNDHXmhgkWhu-boqgIKTHSnCnY979eSU9CtpwH7Fw2TV6WEsREm5-QeQWlGlj-ku-xv9I_Bz5UDW2bB-hSifZkNfMxk9Ub63vcqBHt5angL_Y15U1PA6Dl5Chw55pkpiWamCr3yZsZBhuT9BWBmSYchHvIkjA4GzVyQ3yA7Vqp5x_n82fhCGW32oPTC8HrQ4MKQNLza18qdrQdTvw6BZN0LQVHq2kYHApWiEDs7RAAyDFkjOUhXEX3wi54LEO-xuGL3LhBDlLplzsZ-zUwdSbkfrzKqQajNQfmidtYHUIBkrEbQ-b-g4p0TghJHGJJ9MARQDpJA0cdZ3-WugC2iUjHf1oscMthS87LGdXVucDzLiXrRVVfITB_xkh_Su6aUt0KeyiWLFpmQ_hBPqUwai5XiVLRLGnMxtFWTs8uUVjmc0D0ax0fp2ISHq1Ba2J27yhMmLGomymnxE3fpQSZbpPkHtZK4NtVi3MWnhiqu4D5DsHuSLjGjiQsFP32eC6YnodJBuoTaoVAzWZtCGKIQYOaPJjq8oIto_gPlL4NI6h1hHZZtqK9F-tSwAFd2OjVq963hh549LZ25kj3kWow-WMJqkXkzjlwrsC6MiuKR6d-13ByDCSJZLBWD0CBACAs64adL_3RcVFuUJKV5mVnZFwVeLCTC19n-8u22SBrbGuWRJipsZnlUgj7mxFL3YPWgOd5WTf_WGhIJ0UyMI4J62Azb0Oiqsu8E11SsA58GXcN-gPCmuK6-2xI6bwL555c-QEVu19M1brVDZBWJDCSQKSpe4oahgo89Q_fR7wW_f9dkDd18DpbH_54tpLDOjkl0YEM67ehU8kGbxH70In2I8Y1pCPOK7EMTlZrx0FFOrLUr3RqlOls8zCTR3W-u4cMZaq79chlyBRCcyStHXNgNuSz8rtrtC9FMJzErJAVix7vTkVNItiAuppM_s_Lv5MQ5siKROmbYLENGb2Bi2IKiP9409OhkHqypWZKP6z8VHQyLLmjxPu_ubUTFWMDEGCSqGSIb3DQEJFDEkHiIAbwB3AGEAcwBwAF8AegBhAHAAXwByAG8AbwB0AF8AYwBhMCEGCSqGSIb3DQEJFTEUBBJUaW1lIDE3NjQyODk5OTA3NTgwggYRBgkqhkiG9w0BBwagggYCMIIF_gIBADCCBfcGCSqGSIb3DQEHATBmBgkqhkiG9w0BBQ0wWTA4BgkqhkiG9w0BBQwwKwQUdbz8DyzJGHEbifG5QSAWzNO-J4wCAicQAgEgMAwGCCqGSIb3DQIJBQAwHQYJYIZIAWUDBAEqBBBYgWkoH9uUB4-aQfy8tYCWgIIFgJxzHtNoVqxxT3BHwL9VEmW7c-tte3YgzfAStU1qnbdnW0OPQBwaSpWcJNW_3iDPp_K7ZvuzkmASAltAPFOmP0DkDhliCXp32NIK6x6QM1BoeVEJVn8QNLJEC7Mvb3GYE2WVBd4BOAkIW2Plof6N0pEPQOw0w4jcB4Zxxrs5lvI2GrXcH2EwM6w--yDNEA3hyiO_PSneD74mCvNGgLGVkX2WIOkLMY-KgxIG9xH5jwh1rMtawPZ_THYlPJVgdHAPk_5O3J94GQ5N2a37ECk91RdYr9LNuAHKkaMTUjBPEO79cWlifNVOzgkfJHy_yjyxWolhOQ1IrRlr4l7dzIgBl8mvAm3ug6aG0FB0f2kHDuvsjZfElHLZnmRVWSaAvftgQ4pNQVpjkebgAUCdd5BOZlxpJvStNhdQHXGzMXwBENC8IHfZEkuFK4G-k80hxyOva39ryrnq267nyXhSHvi89BNTIzebbQ5klfnUQKZzMszL9XHem9j55sl-dhnFv9sSAxZE3RObV_Kcy2GJalURlq-FVWhvwzIUf56C_L-9ZDn5w4NIKsI0lo7gxHzDPi0fqHch4B18_ts_NWlfC2Sq8RVtOTSDkzolnAaCZxDxlf9l15wViRmzKzPrtIhL9aprFl7G4gXpWcvxgV8WVukIy0qwBdTZJVrVR0a4gbXT-K6F8GPUwkYFfDaeZUfN7wiQRSR0EkX2m_eXrhwhsJHo1JaZpxlkRrIqo-3BBrGjmByvn5mKPcvOBCd4oSpY052P0M9kEOauw_Lk2g1_-spjKWjmYTyS1j3Hsf-nE0RcHD_LR7LWwJMB2PdQdw5G3ogoB0TzNrAVuseuAZuCV_iVfnBwZzgbooK4RjfB5IB__dJnIIYX2lKZxBiuyhmIDTC5g2dn93RruVJZvMqns9G3vMxV-9SXQH68dnwTkiRimqFsnykDEYS2pG2AHl_WUnnJbZ69DxFq6hOvveBdYZ0j1mvfnnZSB-3AinA4HBqd0RvMVOOorMLFy2DLsGMQwbVEeXW9WzRiTMQ0cnKVObkGK69JMgGrtuCRkiNWkOIWYP6ar_O94QwohsOWkgOVcj2jEOVwoZ9DMN04s2rywcmcf_PzBPMhxHf9DmpTV8N6jmygrBfk8c7jpVD_qMV8i9JkqhKntOTMfhv3WTndOCGx58fo5tLQsk9uMOmds-RuMy86OG84tmDkIm2ediGYz9BC16jHGf2n-caBM78JneL1w8jUdtat1sEWpO_1k-POViKZWEYQKqJMVpRdEFF6wEP-EIZbnaGV_lLOnYmhHaN9rWsesrFcMIb9JXYAsFPuMXIq7kYvcybJJ3qD1d7M0ESkbZE7OyG5qYf9afGB88687sSqs8PO4suAxQGTrEbbgKtfziEmfawIa7VpVQIGlhL1bDHlP6j_uCGDmIhEkXSRJjNJ1MEGUPoJoSUMeQ8HL-VLB-r7mLcNss27NGoOmmYoW0Uly-7hvcAmIJ7YNMKuQHm67dZkyvRiIpWJHAmeoGIlAe9vuLvIbIpMfPTksxlbQHEIEoyMSW-ktR9QhGa7ywqXng0ZnCH3Q7QPg_B3ShESSgfaCEm0nW-VuUwmb8LysUgBRZCNXR4Rp7ouef6fQ3hwyt9QVRYq6_k_PO6NbQSH4U8uQ8oiVx5M_O4evjHY6MG6X4j46UT-nTyq62tfioPTHFcYJuQqZUXyjPGqLGrYN0zMbk8f9B78fM61sulkr7Izb6M72dg8-5EeVYltQDStbZ-D-wCfY86d3ECupEPmXU4EquSBMhV-jO4RZsFdUbbQsD4U6eGpEYAhcAY6amU8A8-Tj_6l-NfexJ72pMZuqVxc6nsfvGLEylQWs0hY7Z1qt6ctmYT5TLXincbeBVYwTTAxMA0GCWCGSAFlAwQCAQUABCBdn68HBSxhO13H9XEn1ERXpsws06qUvPJAHl44LiUqIQQUJrZIGv6qJ4RNWoNdvmJM-BEAe1ACAicQ</ks>
+                <ks>MIIMSgIBAzCCC_QGCSqGSIb3DQEHAaCCC-UEggvhMIIL3TCCBcQGCSqGSIb3DQEHAaCCBbUEggWxMIIFrTCCBakGCyqGSIb3DQEMCgECoIIFQDCCBTwwZgYJKoZIhvcNAQUNMFkwOAYJKoZIhvcNAQUMMCsEFKM5012SZ3OcBpRxWfYdJZIyRfddAgInEAIBIDAMBggqhkiG9w0CCQUAMB0GCWCGSAFlAwQBKgQQM-clv_PhCcwGRddR5beIBwSCBNDYr5UHyjm2gLN5RqKsbpRdPt0XOtS-SXGM6dB0b7KwDz46r4JbcnNtXAY8EIK8Dcn3-M28NKpXbtLfOwjMz0FB8A2GGXiFbbZDWAb01CrpOPGOuXybpkOe4gxRL86rrXRPr3NIerKCOL5mfHrHvG1vE2wnTz92cTlUuefZ4VjsQQbh93spiXGvUx9gxZX0H5pajAJnlOOfD3gre-QFljPmI8mdgv5HdVSLVxEgjvXMVG8QylpodI48Mfr66xfSGpvFAurtvajElg3SETrlZSJvILRxFvoSrXyuUsHAAyI4eDPAW-KG4YGhHLyLAUGYkJUvp8bMUZ0tXH59iEie9JPgmWX_hpAHrVYBo5YKNzgAahWFtRe_7ZHy6IJz7d2fzAs9bB8EzUpRd5j7HlbZp2N2OjL3YNZKQYgfN3qBwiqDLjiHjBXhS352yhQuVU9plTmkQFcOBTtvwLTlDSf6vU9cUDBJYKxlO3-UceEgoVXNXcC_Ird1Dct50vYd_WW1R5FR0GiKYvr3ujY7Ub04m0wR5rdDGipyyXrCXCqlG-8d0Mil2Ub903xOgCeoCCtEkt00jUmz5-AvCxv7lyfcScnpwrr6ne8QmQH5EdeVv2iZuSaNxwWwrb-UpnT0o8Cl5caRdowxNn4eUBn4s6AlEPAaPeKWdc3tbHCemohO1tc6kSb1AxBngA0120WGiVCsXFlR9ct_clgXDlbvTF7lgnYjwWYS_iPLvBwhyYWfF8JgloPfR8c6X7a5ogPZtD9-g-y7w86wnCG6HQQAkdtou79e5NW3zwSeYPtCZYRCgzMefuWomb8aEgOcmBKHvecuE59elOy5542V416AgBiBiRv6t2tCqQKqAfMDMBsSIuttCqjBJnFZaTJRVmPfY41sY7iw9VVgt_kWEd-OOwkkG-W8LjTlpBwZfIXH0gEjoa3XyTqZgpGZ36TencxRKebZ2X9KA3UXrwASlg_OzfeFHN8ZZFn4mkfgxyJWUr7ilHds_6MXdHrgOK5X0zChH9HVKZ4e4hfaHki8TZc1yNz4IMtHzz8dfhaasfEJdEa4QlTv9LzJqlA33PA1TnJWDyxqx-3--bj1hacGUqy1yJb8J_AtguvsDSlaE4P3ZJPuB8MFET2paL4zAcLPOvliWQgsIsNix9WGrX1X3XfoeaLGoa5bIhU12Pg-8APCvB9SHrwd5M2EFwz3xzkKoVcC12EB-KFMnI4mNzNQPRyOlIe6Xpzs4aCmgajv3GPlRMdVRwsIPqSUVaF_Xd85aoI-0QvO7i4mGqxGJEgn1pz070jvoiky2tUMVNBD816D5EReoxeNJ8X8B-IlFze8FEasluhVoTy-bxcGXrS4R8nn_Dbk7wJbvPOnIkFksBIzUDXrMQqxnCSVuKO4Aekp8VNEYAqyzrxWc8aIlD0ro3UcgDyJtiPgRwcj901EgTAFsFcufC8KRj9kTDv808UFC8raeIvvD3acEOxzAw669ByN4JpEcHgczukM0MIx7PppPzh9DUFrECTNlQc_Bte8AYlCxMDMundqcfu4uN0m55eMu0owP53gqcog5CJ81jBxJ2NhGqDWQahzt0RRUZLuFnqDqxS6Alw2luKPeyS5iv8MZIztF4JWtdNT77EWV8R7yPXvge46wzFWMDEGCSqGSIb3DQEJFDEkHiIAbwB3AGEAcwBwAF8AegBhAHAAXwByAG8AbwB0AF8AYwBhMCEGCSqGSIb3DQEJFTEUBBJUaW1lIDE3NzA1ODAyNjI4NzMwggYRBgkqhkiG9w0BBwagggYCMIIF_gIBADCCBfcGCSqGSIb3DQEHATBmBgkqhkiG9w0BBQ0wWTA4BgkqhkiG9w0BBQwwKwQUBUmZOwGbHXgzNW2KKCCwpYq1zzMCAicQAgEgMAwGCCqGSIb3DQIJBQAwHQYJYIZIAWUDBAEqBBCdToaplqweVp6JOXNSvuuZgIIFgPdmRE8akFEJi4-x_gKc6vVGHFOMOvFny9nhLxjahh7ouoegftOWrCy2SFlfQ5oAAKHpXRVMrTgbMziYUCHRbK5kzgMyy59rp8JAKBnEL9yX1OOaUHcxNIse6iI1bKwtOgGUHjQV8OjjauLuDNtylMCysEyBDgJELAWhpCyzmoMMJa0EyYyUXLw-NQWn2CJwW3UsqE6ReNdeBurwU2vUirVOCSsqdcoY5Ueh8RzRFkn-z8vNwYRBvfLbsCrnGbsXQDJd67pQucIhFpDNt6dHcZsF21UfVkNCBtpEeiotO-u1Ig-r3T-hqzWXT0YQhp2-RzWbuV1icDxR0aGKXhBjb3hPOnJh__b6ba2q7VoZkSlmAKJWFAKo94IYY4rSFlycY2CVyWGWr_T3Vy4muwqZFZko1gnuyOxYscjSLzBAPNbBo3M7MnKIIOGsFpm7fNWDTza5C-uALUM3iJIDw5fUyudfW50Who8uZL5qh9uN_yozqh4xi45_YeNw2IB0XUM6J8h6oT4oktxl1QEkR_FSR2kWMrmQ1pVs87ijeGAM3mF8eRKc3dpieIm9PBpcjvOMll01s0BBifuiqsrSLeIlfj7TNzoPL0aoN5YFCVxEFmXkML1AyKMvVY17vzH5JXr7Mnic-9zMxXNrbJrT0W20a7OI8JTekJCWRx5EUz25iBgeYJ8avwwydt_AJPGOjg2BceNGXcYXNzTn95K554Gv0x6EgUef_0SOuMKUXwIZ-X2VTEE2jlRIv-E5MoBKO8xaS-4kWRW_IqL0K70OCVImmJ4XzyiYMY_d1x5pGfbIWMTUxOIYG71qLuXPd3Ny4HNTFCGW0tlr2hvjo6uxnrCCNaIkPsY1Z4xxcScYpv3ZYlqFORTXbnpGlR3mVR7Kq7dBYvljHox7asgIgvIAANMD2rgf9BOhX22zcJPuTOMV3CUAmfEERV3za9ejNRoKOQS5O9Cu5i1ZmG1tep0ZbFOYONWTIET-R_oHaY6Eq3zD6O_W-WSKAlN-C3Ve2o6yHhMLoHgDJUk-xpJdjOeD78Sbi4SN1FB2ZhKNmjBbLIfiEnOiQhCDLGGJmsJTx4ghows109AAwKbowvGa_m32kLXyN88OsSTZ9oQRMWtj4fhVXireNHVX3iJodfAMopsthmIqsRsUOIWrhXiGvoyxBT0rVYfNP0YB7jFTntkYLd8dgwRtjHwBuWRttcqQ120Vo55FR_MB-XbvkpBy9o7tAlR0mXr1bKcuKGwptuCAUHM2D_ThO-WB-qxleWK8Xm6-ldx8L6IGWRxQgObKmoX13Xwc4secLJsSDqWfaZ4oHG7GoeS1TNlb5R9sGW9IwdJQu5MCuC6OI_nD9e9VPvcXJoiaovSl7k0BN9LxBJeYHRziVCeYdI0_yQFSbgyIV24Wsx-3rhLl6Yo2fCoCIG2-Nojzlz74dexdx2UBA4ybrOn0AhSyUeryxgenDPQUmOtamRIOgVgmJZVuJPbIb1nvM7rYmWXyGBR9kqlWzSOWgIQM9TBLr627F_FmrmZ2Cn2PLPu0qhpu1obtd6U5Cv0dqkJddYEQJauUXMfYNKJ29SiUHHurisfNWzFQNurv30pbsC4yzgbZWy8TlhS6Il3d3AQQy1w8NHSn3SsDba12S46lxttLVhlPPRLFnOoW_AJhV8pOoZQGCVqSMd8APF8jbIznJuZqFb0YvqUZ4hgxbCh9l8HkL4DmrIaAdtKmbkxKEvIR_79LiyO8PmWLykkXyePg6ymOse2rmuTKT1kF_nyXXzc_uHgznUiGu-mUvmbXmdQ7jiTYz_hPIilyjUxn6I9VVCGAzLDDvY1lBdTiBYnA7uLC9FaL_gELwJaTvN67XV0CKo9fMyc5ouXJ25U8dMLewcswTTAxMA0GCWCGSAFlAwQCAQUABCDtYRugScIWalhpQRlnsaLHNLlqnJMgcJGljzkV48ec2AQUx5gDbqg-vdBQlxyqkDy0jsm1m4ACAicQ</ks>
                 <certValidityDays>365</certValidityDays>
             </rootCa>
             <server>
@@ -1212,6 +858,872 @@
         <localServers version="1">
             <mainProxy>
                 <enabled>true</enabled>
-                <proxy
-
-
+                <proxy>true</proxy>
+                <api>true</api>
+                <address>localhost</address>
+                <port>8080</port>
+                <alpn>
+                    <enabled>true</enabled>
+                    <protocols>
+                        <protocol>http/1.1</protocol>
+                        <protocol>h2</protocol>
+                    </protocols>
+                </alpn>
+                <behindNat>false</behindNat>
+                <removeAcceptEncoding>true</removeAcceptEncoding>
+                <decodeResponse>true</decodeResponse>
+                <tlsProtocols>
+                    <protocol>TLSv1.2</protocol>
+                    <protocol>TLSv1.3</protocol>
+                </tlsProtocols>
+            </mainProxy>
+            <servers>
+                <confirmRemove>true</confirmRemove>
+            </servers>
+            <aliases>
+                <confirmRemove>true</confirmRemove>
+            </aliases>
+            <passThroughs>
+                <confirmRemove>true</confirmRemove>
+            </passThroughs>
+        </localServers>
+        <ratelimit version="1"/>
+        <globalExclusions version="2">
+            <exclusions>
+                <confirmRemove>true</confirmRemove>
+                <exclusion>
+                    <name>Extension - Image (ends with .extension)</name>
+                    <value>(?i)^.*\.(?:gif|jpe?g|png|ico|icns|bmp|svg|webp)$</value>
+                    <enabled>false</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>Extension - Audio/Video (ends with .extension)</name>
+                    <value>(?i)^.*\.(?:mp[34]|mpe?g|m4[ap]|aac|avi|mov|wmv|og[gav]|webm)$</value>
+                    <enabled>false</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>Extension - PDF &amp; Office (ends with .extension)</name>
+                    <value>(?i)^.*\.(?:pdf|docx?|xlsx?|pptx?)$</value>
+                    <enabled>false</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>Extension - Stylesheet, JavaScript (ends with .extension)</name>
+                    <value>(?i)^.*\.(?:css|js)$</value>
+                    <enabled>false</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>Extension - Flash &amp; related (ends with .extension)</name>
+                    <value>(?i)^.*\.(?:sw[fa]|flv)$</value>
+                    <enabled>false</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>ExtParam - Image (extension plus ?params=values)</name>
+                    <value>(?i)^[^\?]*\.(?:gif|jpe?g|png|ico|icns|bmp|svg|webp)\?.*$</value>
+                    <enabled>false</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>ExtParam - Audio/Video (extension plus ?params=values)</name>
+                    <value>(?i)^[^\?]*\.(?:mp[34]|mpe?g|m4[ap]|aac|avi|mov|wmv|og[gav]|webm)\?.*$</value>
+                    <enabled>false</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>ExtParam - PDF &amp; Office (extension plus ?params=values)</name>
+                    <value>(?i)^[^\?]*\.(?:pdf|docx?|xlsx?|pptx?)\?.*$</value>
+                    <enabled>false</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>ExtParam - Stylesheet, JavaScript (extension plus ?params=values)</name>
+                    <value>(?i)^[^\?]*\.(?:css|js)\?.*$</value>
+                    <enabled>false</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>ExtParam - Flash &amp; related (extension plus ?params=values)</name>
+                    <value>(?i)^[^\?]*\.(?:sw[fa]|flv)\?.*$</value>
+                    <enabled>false</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>ExtParam - .NET axd resources (SR/WR.axd?d=)</name>
+                    <value>(?i)^[^\?]*/(?:WebResource|ScriptResource)\.axd\?d=.*$</value>
+                    <enabled>false</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>Site - Bing API queries</name>
+                    <value>(?i)^https?://api\.bing\.com/qsml\.aspx?query=.*$</value>
+                    <enabled>false</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>Site - Google malware detector updates</name>
+                    <value>(?i)^https?://(?:safebrowsing-cache|sb-ssl|sb|safebrowsing).*\.(?:google|googleapis)\.com/.*$</value>
+                    <enabled>true</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>Site - Lastpass manager</name>
+                    <value>(?i)^https?://(?:[^/])*\.?lastpass\.com</value>
+                    <enabled>false</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>Site - Firefox browser updates</name>
+                    <value>(?i)^https?://(?:.*addons|aus[0-9])\.mozilla\.(?:org|net|com)/.*$</value>
+                    <enabled>true</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>Site - Firefox extensions phoning home</name>
+                    <value>(?i)^https?://(?:[^/])*\.?(?:getfoxyproxy\.org|getfirebug\.com|noscript\.net)</value>
+                    <enabled>false</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>Site - Microsoft Windows updates</name>
+                    <value>(?i)^https?://(?:.*update\.microsoft|.*\.windowsupdate)\.com/.*$</value>
+                    <enabled>true</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>Site - Google Chrome extension updates</name>
+                    <value>(?i)^https?://clients2\.google\.com/service/update2/crx.*$</value>
+                    <enabled>true</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>Site - Firefox captive portal detection</name>
+                    <value>(?i)^https?://detectportal\.firefox\.com.*$</value>
+                    <enabled>true</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>Site - Google Analytics</name>
+                    <value>(?i)^https?://www\.google-analytics\.com.*$</value>
+                    <enabled>false</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>Site - Firefox h264 codec download</name>
+                    <value>(?i)^https?://ciscobinary\.openh264\.org.*$</value>
+                    <enabled>false</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>Site - Fonts CDNs such as fonts.gstatic.com, etc.</name>
+                    <value>(?i)^https?://fonts.*$</value>
+                    <enabled>false</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>Site - Mozilla CDN (requests such as getpocket)</name>
+                    <value>(?i)^https?://.*\.cdn\.mozilla\.(?:com|org|net)/.*$</value>
+                    <enabled>true</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>Site - Firefox browser telemetry</name>
+                    <value>(?i)^https?://.*\.telemetry\.mozilla\.(?:com|org|net)/.*$</value>
+                    <enabled>true</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>Site - Adblockplus updates and notifications</name>
+                    <value>(?i)^https?://.*\.adblockplus\.org.*$</value>
+                    <enabled>false</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>Site - Firefox services</name>
+                    <value>(?i)^https?://.*\.services\.mozilla\.com.*$</value>
+                    <enabled>true</enabled>
+                </exclusion>
+                <exclusion>
+                    <name>Site - Google updates</name>
+                    <value>(?i)^https?://.*\.gvt1\.com.*$</value>
+                    <enabled>true</enabled>
+                </exclusion>
+            </exclusions>
+        </globalExclusions>
+        <connection version="6">
+            <defaultUserAgent>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36</defaultUserAgent>
+            <timeoutInSecs>20</timeoutInSecs>
+            <useGlobalHttpState>false</useGlobalHttpState>
+            <dnsTtlSuccessfulQueries>30</dnsTtlSuccessfulQueries>
+            <httpProxy>
+                <enabled>false</enabled>
+                <authEnabled>false</authEnabled>
+                <storePass>true</storePass>
+                <password/>
+            </httpProxy>
+            <socksProxy>
+                <enabled>false</enabled>
+            </socksProxy>
+            <tlsProtocols>
+                <protocol>TLSv1.2</protocol>
+                <protocol>TLSv1.3</protocol>
+            </tlsProtocols>
+        </connection>
+        <clientCertificates version="1">
+            <pkcs12>
+                <file/>
+                <password/>
+                <index>0</index>
+                <store>false</store>
+            </pkcs12>
+            <pkcs11>
+                <useSli>false</useSli>
+            </pkcs11>
+            <use>false</use>
+        </clientCertificates>
+    </network>
+    <rules>
+        <common>
+            <sleep>15</sleep>
+        </common>
+        <csrf>
+            <ignorelist/>
+            <ignore>
+                <attname/>
+                <attvalue/>
+            </ignore>
+        </csrf>
+        <cookie>
+            <ignorelist/>
+        </cookie>
+        <domains>
+            <trusted/>
+        </domains>
+        <domxss>
+            <browserid/>
+        </domxss>
+    </rules>
+    <fuzz version="2">
+        <defaultThreadsPerFuzzer>4</defaultThreadsPerFuzzer>
+        <defaultFuzzDelayInMs>0</defaultFuzzDelayInMs>
+        <customFuzzerLastSelectedDirectory/>
+        <isCustomDefaultCategory>true</isCustomDefaultCategory>
+    </fuzz>
+    <formhandler version="1">
+        <confirmRemoveField>true</confirmRemoveField>
+        <fields>
+            <field>
+                <fieldId>color</fieldId>
+                <value>#ffffff</value>
+                <enabled>true</enabled>
+                <regex>false</regex>
+            </field>
+            <field>
+                <fieldId>email</fieldId>
+                <value>zaproxy@example.com</value>
+                <enabled>true</enabled>
+                <regex>false</regex>
+            </field>
+            <field>
+                <fieldId>name</fieldId>
+                <value>ZAP</value>
+                <enabled>true</enabled>
+                <regex>false</regex>
+            </field>
+            <field>
+                <fieldId>password</fieldId>
+                <value>ZAP</value>
+                <enabled>true</enabled>
+                <regex>false</regex>
+            </field>
+            <field>
+                <fieldId>phone</fieldId>
+                <value>9999999999</value>
+                <enabled>true</enabled>
+                <regex>false</regex>
+            </field>
+            <field>
+                <fieldId>url</fieldId>
+                <value>https://zap.example.com</value>
+                <enabled>true</enabled>
+                <regex>false</regex>
+            </field>
+            <field>
+                <fieldId>(?i)_?back[-_]?(?:link|uri|url)?</fieldId>
+                <value>https://zap.example.com</value>
+                <enabled>true</enabled>
+                <regex>true</regex>
+            </field>
+            <field>
+                <fieldId>(?i)_?bg[-_]?colou?r</fieldId>
+                <value>#FFFFFF</value>
+                <enabled>true</enabled>
+                <regex>true</regex>
+            </field>
+            <field>
+                <fieldId>(?i)_?query|find|keyword</fieldId>
+                <value>ZAP</value>
+                <enabled>true</enabled>
+                <regex>true</regex>
+            </field>
+            <field>
+                <fieldId>(?i)_?search[-_]?(?:term|word|param|parameter|string|text|value|keyword|query)?</fieldId>
+                <value>ZAP</value>
+                <enabled>true</enabled>
+                <regex>true</regex>
+            </field>
+            <field>
+                <fieldId>(?i)_?amount|amt|count|qty|quantity</fieldId>
+                <value>3</value>
+                <enabled>true</enabled>
+                <regex>true</regex>
+            </field>
+            <field>
+                <fieldId>(?i)_?lang|language</fieldId>
+                <value>en</value>
+                <enabled>true</enabled>
+                <regex>true</regex>
+            </field>
+            <field>
+                <fieldId>(?i)_?locale[-_]?(?:code)?</fieldId>
+                <value>en-US</value>
+                <enabled>true</enabled>
+                <regex>true</regex>
+            </field>
+            <field>
+                <fieldId>(?i)_?(?:comment|subject|summary)?</fieldId>
+                <value>Zaproxy dolore alias impedit expedita quisquam.</value>
+                <enabled>true</enabled>
+                <regex>true</regex>
+            </field>
+            <field>
+                <fieldId>(?i)_?(?:description|message|(?:email|post)?[-_]?content)?</fieldId>
+                <value>Zaproxy alias impedit expedita quisquam pariatur exercitationem. Nemo rerum eveniet dolores rem quia dignissimos.</value>
+                <enabled>true</enabled>
+                <regex>true</regex>
+            </field>
+            <field>
+                <fieldId>(?i)_?state</fieldId>
+                <value>Oklahoma</value>
+                <enabled>true</enabled>
+                <regex>true</regex>
+            </field>
+            <field>
+                <fieldId>(?i)_?city</fieldId>
+                <value>East Romaineburgh</value>
+                <enabled>true</enabled>
+                <regex>true</regex>
+            </field>
+            <field>
+                <fieldId>(?i)_?address[_-]?1?</fieldId>
+                <value>688 Zaproxy Ridge</value>
+                <enabled>true</enabled>
+                <regex>true</regex>
+            </field>
+            <field>
+                <fieldId>(?i)_?address[_-]?2</fieldId>
+                <value>Suite 473</value>
+                <enabled>true</enabled>
+                <regex>true</regex>
+            </field>
+        </fields>
+    </formhandler>
+    <replacer version="1">
+        <confirmRemoveToken>true</confirmRemoveToken>
+        <full_list>
+            <description>Remove CSP</description>
+            <url/>
+            <enabled>false</enabled>
+            <matchtype>RESP_HEADER</matchtype>
+            <matchstr>Content-Security-Policy</matchstr>
+            <regex>false</regex>
+            <replacement/>
+            <extraprocessing>false</extraprocessing>
+            <initiators/>
+        </full_list>
+        <full_list>
+            <description>Remove HSTS</description>
+            <url/>
+            <enabled>false</enabled>
+            <matchtype>RESP_HEADER</matchtype>
+            <matchstr>Strict-Transport-Security</matchstr>
+            <regex>false</regex>
+            <replacement/>
+            <extraprocessing>false</extraprocessing>
+            <initiators/>
+        </full_list>
+        <full_list>
+            <description>Replace User-Agent with shellshock attack</description>
+            <url/>
+            <enabled>false</enabled>
+            <matchtype>REQ_HEADER</matchtype>
+            <matchstr>User-Agent</matchstr>
+            <regex>false</regex>
+            <replacement>() {:;}; /bin/cat /etc/passwd</replacement>
+            <extraprocessing>false</extraprocessing>
+            <initiators/>
+        </full_list>
+        <full_list>
+            <description>Disable Report-To or Report-Uri (CSP, etc)</description>
+            <url/>
+            <enabled>false</enabled>
+            <matchtype>RESP_HEADER_STR</matchtype>
+            <matchstr>(?i)report-(?:to|uri)</matchstr>
+            <regex>true</regex>
+            <replacement>report-disabled</replacement>
+            <extraprocessing>false</extraprocessing>
+            <initiators/>
+        </full_list>
+        <full_list>
+            <description>Require non-cached response (Modified)</description>
+            <url/>
+            <enabled>false</enabled>
+            <matchtype>REQ_HEADER</matchtype>
+            <matchstr>if-modified-since</matchstr>
+            <regex>false</regex>
+            <replacement/>
+            <extraprocessing>false</extraprocessing>
+            <initiators/>
+        </full_list>
+        <full_list>
+            <description>Require non-cached response (Match)</description>
+            <url/>
+            <enabled>false</enabled>
+            <matchtype>REQ_HEADER</matchtype>
+            <matchstr>if-none-match</matchstr>
+            <regex>false</regex>
+            <replacement/>
+            <extraprocessing>false</extraprocessing>
+            <initiators/>
+        </full_list>
+    </replacer>
+    <client version="1">
+        <pscanEnabled>true</pscanEnabled>
+    </client>
+    <oast version="1">
+        <boast version="2">
+            <pollingFrequency>60</pollingFrequency>
+            <uri>https://odiss.eu:2096/events</uri>
+        </boast>
+        <callback version="1"/>
+        <interactsh version="1">
+            <pollingFrequency>60</pollingFrequency>
+            <serverUrl/>
+            <authToken/>
+        </interactsh>
+        <activeScanService>None</activeScanService>
+        <usePermanentDatabase>true</usePermanentDatabase>
+        <daysToKeepRecords>45</daysToKeepRecords>
+    </oast>
+    <spider version="3">
+        <thread>4</thread>
+        <maxDepth>5</maxDepth>
+        <maxDuration>0</maxDuration>
+        <maxChildren>0</maxChildren>
+        <maxParseSizeBytes>2621440</maxParseSizeBytes>
+        <confirmRemoveDomainAlwaysInScope>true</confirmRemoveDomainAlwaysInScope>
+        <acceptCookies>true</acceptCookies>
+        <processform>true</processform>
+        <postform>true</postform>
+        <parseComments>true</parseComments>
+        <parseRobotsTxt>true</parseRobotsTxt>
+        <parseSitemapXml>true</parseSitemapXml>
+        <parseSVNentries>false</parseSVNentries>
+        <parseGit>false</parseGit>
+        <parseDsStore>false</parseDsStore>
+        <handleParameters>USE_ALL</handleParameters>
+        <handleODataParameters>false</handleODataParameters>
+        <logoutAvoidance>false</logoutAvoidance>
+        <irrelevantParameters>
+            <confirmRemove>true</confirmRemove>
+            <irrelevantParameter>
+                <name>utm_.*</name>
+                <regex>true</regex>
+                <enabled>true</enabled>
+            </irrelevantParameter>
+        </irrelevantParameters>
+    </spider>
+    <hud version="4">
+        <newChangelog>true</newChangelog>
+        <tutorialUpdates>History</tutorialUpdates>
+        <tutorialUpdates>Comments</tutorialUpdates>
+        <tutorialUpdates>ToggleScript</tutorialUpdates>
+        <enabledForDesktop>true</enabledForDesktop>
+        <enabledForDaemon>false</enabledForDaemon>
+        <dir>/home/kali/.ZAP/hud</dir>
+        <inScopeOnly>true</inScopeOnly>
+        <enableOnDomainMsgs>true</enableOnDomainMsgs>
+        <showWelcomeScreen>false</showWelcomeScreen>
+        <removeCsp>true</removeCsp>
+        <tutorialSkipTasks>false</tutorialSkipTasks>
+        <devMode>false</devMode>
+    </hud>
+    <insights version="1">
+        <exitAuto>true</exitAuto>
+        <msgLow>5</msgLow>
+        <msgHigh>50</msgHigh>
+        <memLow>80</memLow>
+        <memHigh>95</memHigh>
+        <slow>256</slow>
+    </insights>
+    <globalalertfilter version="1">
+        <confirmRemoveFilter>true</confirmRemoveFilter>
+    </globalalertfilter>
+    <graphql version="2">
+        <queryGenEnabled>true</queryGenEnabled>
+        <maxQueryDepth>5</maxQueryDepth>
+        <lenientMaxQueryDepth>true</lenientMaxQueryDepth>
+        <maxAdditionalQueryDepth>5</maxAdditionalQueryDepth>
+        <maxArgsDepth>5</maxArgsDepth>
+        <optionalArgs>true</optionalArgs>
+        <argsType>BOTH</argsType>
+        <querySplitType>LEAF</querySplitType>
+        <requestMethod>POST_JSON</requestMethod>
+    </graphql>
+    <quickstart version="1">
+        <clearedNews>55</clearedNews>
+        <launch>
+            <startPage>ZAP</startPage>
+        </launch>
+    </quickstart>
+    <database>
+        <newsession>3</newsession>
+        <newsessionprompt>true</newsessionprompt>
+        <compact>false</compact>
+        <request>
+            <bodysize>16777216</bodysize>
+        </request>
+        <response>
+            <bodysize>16777216</bodysize>
+        </response>
+        <recoverylog>true</recoverylog>
+    </database>
+    <start>
+        <dayLastChecked>2026-02-08</dayLastChecked>
+        <checkForUpdates>true</checkForUpdates>
+        <downloadNewRelease>false</downloadNewRelease>
+        <checkAddonUpdates>true</checkAddonUpdates>
+        <installAddonUpdates>false</installAddonUpdates>
+        <installScannerRules>false</installScannerRules>
+        <reportReleaseAddons>false</reportReleaseAddons>
+        <reportBetaAddons>false</reportBetaAddons>
+        <reportAlphaAddons>false</reportAlphaAddons>
+        <downloadDir>/home/kali/.ZAP/plugin</downloadDir>
+    </start>
+    <api>
+        <key>monp01lsjbvj0kvne40fe00iqp</key>
+        <enabled>true</enabled>
+        <uienabled>true</uienabled>
+        <secure>false</secure>
+        <filexfer>false</filexfer>
+        <disablekey>false</disablekey>
+        <incerrordetails>false</incerrordetails>
+        <autofillkey>false</autofillkey>
+        <enablejsonp>false</enablejsonp>
+        <reportpermerrors>false</reportpermerrors>
+        <nokeyforsafeops>false</nokeyforsafeops>
+        <addrs>
+            <confirmRemoveAddr>true</confirmRemoveAddr>
+            <addr>
+                <name>127.0.0.1</name>
+                <regex>false</regex>
+                <enabled>true</enabled>
+            </addr>
+            <addr>
+                <name>localhost</name>
+                <regex>false</regex>
+                <enabled>true</enabled>
+            </addr>
+            <addr>
+                <name>zap</name>
+                <regex>false</regex>
+                <enabled>true</enabled>
+            </addr>
+            <addr>
+                <name>0:0:0:0:0:0:0:1</name>
+                <regex>false</regex>
+                <enabled>true</enabled>
+            </addr>
+        </addrs>
+    </api>
+    <alert>
+        <overridesFilename/>
+    </alert>
+    <scanner>
+        <hostPerScan>2</hostPerScan>
+        <threadPerHost>4</threadPerHost>
+        <delayInMs>0</delayInMs>
+        <maxResults>1000</maxResults>
+        <maxRuleDurationInMins>0</maxRuleDurationInMins>
+        <maxScanDurationInMins>0</maxScanDurationInMins>
+        <maxAlertsPerRule>0</maxAlertsPerRule>
+        <pluginHeader>false</pluginHeader>
+        <antiCSRF>true</antiCSRF>
+        <excludeAntiCsrfTokens>true</excludeAntiCsrfTokens>
+        <attackPrompt>true</attackPrompt>
+        <attackRescan>true</attackRescan>
+        <attackOnStart>false</attackOnStart>
+        <chartTimeInMins>10</chartTimeInMins>
+        <addQueryParam>false</addQueryParam>
+        <injectable>35</injectable>
+        <scanNullJsonValues>false</scanNullJsonValues>
+        <enabledRPC>191</enabledRPC>
+        <excludedParameters>
+            <name>(?i)ASP.NET_SessionId</name>
+            <type>-1</type>
+            <url>*</url>
+        </excludedParameters>
+        <excludedParameters>
+            <name>(?i)ASPSESSIONID.*</name>
+            <type>-1</type>
+            <url>*</url>
+        </excludedParameters>
+        <excludedParameters>
+            <name>(?i)PHPSESSID</name>
+            <type>-1</type>
+            <url>*</url>
+        </excludedParameters>
+        <excludedParameters>
+            <name>(?i)SITESERVER</name>
+            <type>-1</type>
+            <url>*</url>
+        </excludedParameters>
+        <excludedParameters>
+            <name>(?i)sessid</name>
+            <type>-1</type>
+            <url>*</url>
+        </excludedParameters>
+        <excludedParameters>
+            <name>__VIEWSTATE</name>
+            <type>2</type>
+            <url>*</url>
+        </excludedParameters>
+        <excludedParameters>
+            <name>__EVENTVALIDATION</name>
+            <type>2</type>
+            <url>*</url>
+        </excludedParameters>
+        <excludedParameters>
+            <name>__EVENTTARGET</name>
+            <type>2</type>
+            <url>*</url>
+        </excludedParameters>
+        <excludedParameters>
+            <name>__EVENTARGUMENT</name>
+            <type>2</type>
+            <url>*</url>
+        </excludedParameters>
+        <excludedParameters>
+            <name>javax.faces.ViewState</name>
+            <type>2</type>
+            <url>*</url>
+        </excludedParameters>
+        <excludedParameters>
+            <name>(?i)jsessionid</name>
+            <type>-1</type>
+            <url>*</url>
+        </excludedParameters>
+        <excludedParameters>
+            <name>cfid</name>
+            <type>4</type>
+            <url>*</url>
+        </excludedParameters>
+        <excludedParameters>
+            <name>cftoken</name>
+            <type>4</type>
+            <url>*</url>
+        </excludedParameters>
+    </scanner>
+    <invoke>
+        <confirmRemoveApp>true</confirmRemoveApp>
+    </invoke>
+    <anticsrf>
+        <confirmRemoveToken>true</confirmRemoveToken>
+        <partialMatchingEnabled>true</partialMatchingEnabled>
+        <tokens>
+            <token>
+                <name>anticsrf</name>
+                <enabled>true</enabled>
+            </token>
+            <token>
+                <name>CSRFToken</name>
+                <enabled>true</enabled>
+            </token>
+            <token>
+                <name>__RequestVerificationToken</name>
+                <enabled>true</enabled>
+            </token>
+            <token>
+                <name>csrfmiddlewaretoken</name>
+                <enabled>true</enabled>
+            </token>
+            <token>
+                <name>authenticity_token</name>
+                <enabled>true</enabled>
+            </token>
+            <token>
+                <name>OWASP_CSRFTOKEN</name>
+                <enabled>true</enabled>
+            </token>
+            <token>
+                <name>anoncsrf</name>
+                <enabled>true</enabled>
+            </token>
+            <token>
+                <name>csrf_token</name>
+                <enabled>true</enabled>
+            </token>
+            <token>
+                <name>_csrf</name>
+                <enabled>true</enabled>
+            </token>
+            <token>
+                <name>_csrfSecret</name>
+                <enabled>true</enabled>
+            </token>
+            <token>
+                <name>__csrf_magic</name>
+                <enabled>true</enabled>
+            </token>
+            <token>
+                <name>CSRF</name>
+                <enabled>true</enabled>
+            </token>
+            <token>
+                <name>_token</name>
+                <enabled>true</enabled>
+            </token>
+            <token>
+                <name>_csrf_token</name>
+                <enabled>true</enabled>
+            </token>
+            <token>
+                <name>_csrfToken</name>
+                <enabled>true</enabled>
+            </token>
+        </tokens>
+    </anticsrf>
+    <httpsessions>
+        <proxyOnly>false</proxyOnly>
+        <confirmRemoveToken>true</confirmRemoveToken>
+        <tokens>
+            <token>
+                <name>asp.net_sessionid</name>
+                <enabled>true</enabled>
+            </token>
+            <token>
+                <name>aspsessionid</name>
+                <enabled>true</enabled>
+            </token>
+            <token>
+                <name>siteserver</name>
+                <enabled>true</enabled>
+            </token>
+            <token>
+                <name>cfid</name>
+                <enabled>true</enabled>
+            </token>
+            <token>
+                <name>cftoken</name>
+                <enabled>true</enabled>
+            </token>
+            <token>
+                <name>jsessionid</name>
+                <enabled>true</enabled>
+            </token>
+            <token>
+                <name>phpsessid</name>
+                <enabled>true</enabled>
+            </token>
+            <token>
+                <name>sessid</name>
+                <enabled>true</enabled>
+            </token>
+            <token>
+                <name>sid</name>
+                <enabled>true</enabled>
+            </token>
+            <token>
+                <name>viewstate</name>
+                <enabled>true</enabled>
+            </token>
+            <token>
+                <name>zenid</name>
+                <enabled>true</enabled>
+            </token>
+        </tokens>
+    </httpsessions>
+    <zest>
+        <incResponses>true</incResponses>
+        <ignoreHeaders>Accept</ignoreHeaders>
+        <ignoreHeaders>accept-encoding</ignoreHeaders>
+        <ignoreHeaders>Accept-Language</ignoreHeaders>
+        <ignoreHeaders>cache-control</ignoreHeaders>
+        <ignoreHeaders>connection</ignoreHeaders>
+        <ignoreHeaders>cookie</ignoreHeaders>
+        <ignoreHeaders>Host</ignoreHeaders>
+        <ignoreHeaders>if-modified-since</ignoreHeaders>
+        <ignoreHeaders>if-none-match</ignoreHeaders>
+        <ignoreHeaders>location</ignoreHeaders>
+        <ignoreHeaders>pragma</ignoreHeaders>
+        <ignoreHeaders>referer</ignoreHeaders>
+        <ignoreHeaders>set-cookie</ignoreHeaders>
+        <ignoreHeaders>set-cookie2</ignoreHeaders>
+        <ignoreHeaders>user-agent</ignoreHeaders>
+        <scriptFormat>JSON</scriptFormat>
+    </zest>
+    <websocket>
+        <forwardAll>false</forwardAll>
+        <breakOnAll>false</breakOnAll>
+        <breakOnPingPong>false</breakOnPingPong>
+    </websocket>
+    <stats>
+        <inmemory>true</inmemory>
+        <statsd>
+            <host/>
+        </statsd>
+    </stats>
+    <automation>
+        <last>
+            <open>false</open>
+        </last>
+    </automation>
+    <ColumnConfiguration_HistoryTableColumn>
+        <ColumnName>ID</ColumnName>
+        <ColumnIndex>0</ColumnIndex>
+        <ColumnModelIndex>0</ColumnModelIndex>
+    </ColumnConfiguration_HistoryTableColumn>
+    <ColumnConfiguration_HistoryTableColumn>
+        <ColumnName>Source</ColumnName>
+        <ColumnIndex>1</ColumnIndex>
+        <ColumnModelIndex>1</ColumnModelIndex>
+    </ColumnConfiguration_HistoryTableColumn>
+    <ColumnConfiguration_HistoryTableColumn>
+        <ColumnName>Req. Timestamp</ColumnName>
+        <ColumnIndex>2</ColumnIndex>
+        <ColumnModelIndex>2</ColumnModelIndex>
+    </ColumnConfiguration_HistoryTableColumn>
+    <ColumnConfiguration_HistoryTableColumn>
+        <ColumnName>Method</ColumnName>
+        <ColumnIndex>3</ColumnIndex>
+        <ColumnModelIndex>4</ColumnModelIndex>
+    </ColumnConfiguration_HistoryTableColumn>
+    <ColumnConfiguration_HistoryTableColumn>
+        <ColumnName>URL</ColumnName>
+        <ColumnIndex>4</ColumnIndex>
+        <ColumnModelIndex>5</ColumnModelIndex>
+    </ColumnConfiguration_HistoryTableColumn>
+    <ColumnConfiguration_HistoryTableColumn>
+        <ColumnName>Code</ColumnName>
+        <ColumnIndex>5</ColumnIndex>
+        <ColumnModelIndex>8</ColumnModelIndex>
+    </ColumnConfiguration_HistoryTableColumn>
+    <ColumnConfiguration_HistoryTableColumn>
+        <ColumnName>Reason</ColumnName>
+        <ColumnIndex>6</ColumnIndex>
+        <ColumnModelIndex>9</ColumnModelIndex>
+    </ColumnConfiguration_HistoryTableColumn>
+    <ColumnConfiguration_HistoryTableColumn>
+        <ColumnName>RTT</ColumnName>
+        <ColumnIndex>7</ColumnIndex>
+        <ColumnModelIndex>10</ColumnModelIndex>
+    </ColumnConfiguration_HistoryTableColumn>
+    <ColumnConfiguration_HistoryTableColumn>
+        <ColumnName>Size Resp. Body</ColumnName>
+        <ColumnIndex>8</ColumnIndex>
+        <ColumnModelIndex>14</ColumnModelIndex>
+    </ColumnConfiguration_HistoryTableColumn>
+    <ColumnConfiguration_HistoryTableColumn>
+        <ColumnName>Highest Alert</ColumnName>
+        <ColumnIndex>9</ColumnIndex>
+        <ColumnModelIndex>15</ColumnModelIndex>
+    </ColumnConfiguration_HistoryTableColumn>
+    <ColumnConfiguration_HistoryTableColumn>
+        <ColumnName>Note</ColumnName>
+        <ColumnIndex>10</ColumnIndex>
+        <ColumnModelIndex>16</ColumnModelIndex>
+    </ColumnConfiguration_HistoryTableColumn>
+    <ColumnConfiguration_HistoryTableColumn>
+        <ColumnName>Tags</ColumnName>
+        <ColumnIndex>11</ColumnIndex>
+        <ColumnModelIndex>17</ColumnModelIndex>
+    </ColumnConfiguration_HistoryTableColumn>
+</config>
