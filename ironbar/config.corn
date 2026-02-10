@@ -1,0 +1,66 @@
+let {
+    // Battery
+    $battery = {
+        type = "battery"
+        format = "{percentage}%"
+        thresholds.warning = 20
+        thresholds.critical = 5
+        show_icon = false
+        show_label = false
+        icon_size = 0
+    }
+
+    // Bluetooth
+    $bluetooth = {
+        type = "bluetooth"
+        format.enabled = " On"
+        popup.max_height.devices = 5
+    }
+
+    // Clock
+    $clock = {
+        type = "clock"
+        format = "%I:%M"
+        on_mouse_enter = "ironbar var set clock_state true"
+        on_mouse_exit = "ironbar var set clock_state false"
+    }
+    $clock_extra = {
+        type = "clock"
+        format = "%A %d/%m/%Y"
+        show_if = "#clock_state"
+    }
+
+    // Network Manager
+    $network_manager = {
+        type = "network_manager"
+        icon_size = 32
+    }
+
+    // Volume
+    $volume = {
+        type = "volume"
+        format = " {percentage}"
+        sink_slider_orientation = "horizontal"
+        on_click_left = "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%+"
+        on_click_right = "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%-"
+        on_scroll_up = "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%+"
+        on_scroll_down = "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 10%-"
+        smooth_scroll_speed = 10.0
+        disable_popup = true
+    }
+
+    // Workspaces
+    $workspaces = {
+        type = "workspaces"
+    }
+
+} in {
+
+    position = "top"
+    height = 20
+
+    start = [ $workspaces ]
+    center = [ ]
+    end = [ $volume $bluetooth $battery $clock_extra $clock ]
+
+}

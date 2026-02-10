@@ -1,0 +1,86 @@
+@import '../../.cache/matugen/colors.css';
+
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Hack", "SourceHanSansJP", monospace;
+    font-size: 14px;
+    /* padding: 0 0px; */
+}
+
+/* Background {{{*/
+.background {
+    background: rgba(0, 0, 0, 0.5);
+}
+/* }}} */
+
+/* Clock {{{*/
+.clock {
+    background: rgba(0, 0, 0, 0);
+    background-color: @primary_container;
+    color: @primary;
+    padding: 0 10px;
+}
+/* }}} */
+
+/* Bluetooth {{{*/
+.bluetooth {
+    background: rgba(0, 0, 0, 0);
+    color: @primary;
+    padding: 0 10px;
+}
+
+.popup-bluetooth {
+    background: rgba(0, 0, 0, 0.0);
+    padding: 30px 30px;
+}
+
+.popup-bluetooth .header .switch {
+    background-color: @primary;
+}
+
+/* Devices Box */
+.popup-bluetooth .devices {
+    padding: 10px 10px;
+    color: white;
+    min-height: 10em;
+}
+
+/* Devices Box */
+.popup-bluetooth .devices .box {
+}
+
+/* Devices */
+.popup-bluetooth .devices .box .device {
+    color: white;
+    padding: 10px 10px;
+}
+
+/* Switch */
+.popup-bluetooth .devices .box .device .switch {
+    background-color: @primary;
+}
+/* }}} */
+
+.volume {
+    background: rgba(0, 0, 0, 0);
+    color: @primary;
+    padding: 0 10px;
+}
+
+/* Workspaces {{{*/
+.workspaces .item {
+    background: rgba(0, 0, 0, 0);
+    color: @primary;
+}
+
+.workspaces .item.focused {
+    background-color: @primary;
+    color: black;
+}
+/* }}} */
+
+.popup-volume .apps-box {
+    background-color: red;
+}

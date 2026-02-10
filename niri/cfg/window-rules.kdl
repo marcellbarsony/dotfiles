@@ -6,8 +6,10 @@
 
 window-rule {
     default-column-width { proportion 1.0; }
-    open-maximized-to-edges false
+    open-floating false
     open-fullscreen false
+    open-maximized false
+    open-maximized-to-edges false
 }
 
 // Floating {{{
@@ -23,16 +25,16 @@ window-rule {
 // Firefox {{{
 window-rule {
     match app-id="firefox"
+
     // Fix border width
     // https://yalter.github.io/niri/FAQ.html#why-does-firefox-or-thunderbird-have-1-px-smaller-border
     clip-to-geometry true
-    open-maximized false
-    open-floating false
 }
 
 // Picture-in-Picture
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+
     open-floating true
 }
 // }}}
@@ -41,15 +43,26 @@ window-rule {
 window-rule {
     match app-id="ghostty"
     draw-border-with-background false
-    opacity 0.95
 }
 // }}}
 
 // OBS {{{
 window-rule {
+    match app-id=r#"com.obsproject.Studio$"# title="^Filters for.*$"
+    match app-id=r#"com.obsproject.Studio$"# title="^Properties for.*$"
     match app-id=r#"com.obsproject.Studio$"# title="^Settings$"
+    match app-id=r#"com.obsproject.Studio$"# title="^Virtual Camera$"
+
     default-column-width { fixed 1280; }
     default-window-height { fixed 720; }
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"com.obsproject.Studio$"# title="^Add Scene$"
+
+    default-column-width { fixed 700; }
+    default-window-height { fixed 120; }
     open-floating true
 }
 // }}}
@@ -57,16 +70,18 @@ window-rule {
 // Spotify {{{
 window-rule {
     match app-id=r#"spotify"#
+
     open-on-output "PNP(BNQ) BenQ RL2755 N7F05437SL0"
 }
 
 // Picture-in-Picture
 window-rule {
     match app-id="chromium-browser"
-    open-floating true
+
     default-column-width { fixed 300; }
     default-window-height { fixed 300; }
     default-floating-position x=50 y=50 relative-to="bottom-right"
+    open-floating true
 
     // Pinned/sticky/show on all workspaces floating windows #932
     // https://github.com/YaLTeR/niri/issues/932
@@ -76,7 +91,18 @@ window-rule {
 // VirtualBox Machine {{{
 window-rule {
     match app-id=r#"VirtualBox$"# title=".*- Settings$"
+
+    default-floating-position x=300 y=300 relative-to="top"
     open-floating true
-    default-floating-position x=232 y=232 relative-to="top"
+}
+// }}}
+
+// XDG Desktop Portal Gnome {{{
+window-rule {
+    match app-id=r#"xdg-desktop-portal-gnome"# title="^Share Screen$"
+
+    default-column-width { fixed 1280; }
+    default-window-height { fixed 720; }
+    open-floating true
 }
 // }}}

@@ -88,20 +88,10 @@ binds {
     Mod+Shift+R { switch-preset-window-height; }
     // Mod+Ctrl+R { reset-window-height; }
 
-    // Finer width adjustments.
-    // This command can also:
-    // * set width in pixels: "1000"
-    // * adjust width in pixels: "-5" or "+5"
-    // * set width as a percentage of screen width: "25%"
-    // * adjust width as a percentage of screen width: "-10%" or "+10%"
-    // Pixel sizes use logical, or scaled, pixels. I.e. on an output with scale 2.0,
-    // set-column-width "100" will make the column occupy 200 physical screen pixels.
-    // Alt+j { set-column-width "-25%"; }
-    // Alt+y { set-column-width "+25%"; }
-
-    // Finer height adjustments when in column with other windows.
-    // Alt+l { set-window-height "-25%"; }
-    // Alt+u { set-window-height "+25%"; }
+    Alt+j { set-column-width "-10%"; }
+    Alt+y { set-column-width "+10%"; }
+    Alt+l { set-window-height "+10%"; }
+    Alt+u { set-window-height "-10%"; }
     // }}}
 
     // Column - Consume/Expel {{{
@@ -115,6 +105,10 @@ binds {
     // Mod+Comma  { consume-window-into-column; }
     // Expel the bottom window from the focused column to the right.
     // Mod+Period { expel-window-from-column; }
+    // }}}
+
+    // Clipboard {{{
+    Mod+V   { spawn-sh "cliphist list | head -n 100 | rofi -dmenu | cliphist decode | wl-copy"; }
     // }}}
 
     // Column - Center {{{
