@@ -9,7 +9,7 @@ prefer-no-csd
 // Clipboard {{{
 // https://yalter.github.io/niri/Configuration:-Miscellaneous.html#clipboard
 clipboard {
-    // disable-primary
+    disable-primary
 }
 // }}}
 

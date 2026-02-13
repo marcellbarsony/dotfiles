@@ -58,6 +58,18 @@ def color_scheme(background: str):
         sys.exit(1)
 # }}}
 
+# Ironbar style fix {{{
+# Hot reload css files imported in style.css #468
+# https://github.com/JakeStanger/ironbar/issues/468
+def ironbar():
+    cmd = "ironbar style load-css ~/.cache/matugen/colors.css"
+    try:
+        subprocess.run(cmd, shell=True, check=True, stdout=subprocess.PIPE)
+    except subprocess.CalledProcessError as err:
+        print(":: [-] :: Ironbar CSS hotload fix ::", err)
+        sys.exit(1)
+# }}}
+
 # Cache {{{
 def cache(path: str, file: str):
     if os.path.exists(path):
@@ -90,6 +102,8 @@ if __name__ == "__main__":
     transition = random_transition()
     set_background(background, transition)
     color_scheme(background)
+    ironbar()
+
 
     # Cache {{{
     cache_dir = f"/home/{USER}/.cache/backgrounds"

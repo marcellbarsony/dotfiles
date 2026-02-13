@@ -16,32 +16,48 @@ window#waybar {
     color: @primary;
 }
 
-/* Workspaces {{{ */
+#workspaces {
+  background-color: transparent;
+  color: #B5B2A9;
+  border: none;
+  padding: 2px 6px;
+  margin: 0px;
+}
+
 #workspaces button {
-    background-color: transparent;
-    color: @primary;
-    padding: 0 3px;
+  color: #B5B2A9;
 }
 
-#workspaces button.empty {
-    background-color: transparent;
-    color: gray;
+#workspaces button.active{
+  background-color: #B5B2A9;
+  color: #111111;
 }
-
-#workspaces button.visible {
-    background-color: transparent;
-}
-
-#workspaces button.active {
-    color: black;
-    background-color: @primary;
-}
-
-#workspaces button:hover {
-    background: @on_secondary;
-    border-top: transparent;
-    color: white;
-}
+/* Workspaces {{{ */
+/* #workspaces button { */
+/*     background-color: transparent; */
+/*     color: @primary; */
+/*     padding: 0 3px; */
+/* } */
+/**/
+/* #workspaces button.empty { */
+/*     background-color: transparent; */
+/*     color: gray; */
+/* } */
+/**/
+/* #workspaces button.visible { */
+/*     background-color: transparent; */
+/* } */
+/**/
+/* #workspaces button.active { */
+/*     color: black; */
+/*     background-color: @primary; */
+/* } */
+/**/
+/* #workspaces button:hover { */
+/*     background: @on_secondary; */
+/*     border-top: transparent; */
+/*     color: white; */
+/* } */
 /* }}} */
 
 /* Widgets {{{ */

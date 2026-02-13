@@ -6,15 +6,16 @@ return {
   version = "*",
   lazy = true,
   cmd = "Obsidian",
-  -- ft = "markdown",
-  -- keys = {
-  --   -- Keys {{{
-  --   { "<leader>ob", "<cmd>Obsidian backlinks<CR>", desc = "Backlinks" },
-  --   { "<leader>ol", "<cmd>Obsidian links<CR>", desc = "Links" },
-  --   { "<leader>ot", "<cmd>Obsidian toc<CR>", desc = "TOC" },
-  --   { "<leader>oc", "<cmd>Obsidian toggle_checkbox<CR>", desc = "Checkbox toggle" },
-  --   -- }}}
-  -- },
+  ft = "markdown",
+  keys = {
+    -- Keys {{{
+    { "<leader>ob", "<cmd>Obsidian backlinks<CR>", desc = "Backlinks" },
+    { "<leader>ol", "<cmd>Obsidian links<CR>", desc = "Links" },
+    { "<leader>ot", "<cmd>Obsidian toc<CR>", desc = "TOC" },
+    { "<leader>oc", "<cmd>Obsidian check<CR>", desc = "Check" },
+    { "<leader>of", "<cmd>Obsidian follow_link<CR>", desc = "Follow Link" },
+    -- }}}
+  },
   ---@module 'obsidian'
   ---@type obsidian.config
   opts = {

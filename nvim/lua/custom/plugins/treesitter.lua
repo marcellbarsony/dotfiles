@@ -27,6 +27,7 @@ return {
         ensure_installed = {
           "bash",
           "c",
+          "corn",
           "diff",
           "html",
           "javascript",

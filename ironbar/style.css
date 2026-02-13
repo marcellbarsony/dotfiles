@@ -1,6 +1,5 @@
 @import '../../.cache/matugen/colors.css';
 
-
 * {
     border: none;
     border-radius: 0;
@@ -69,6 +68,23 @@
     padding: 0 10px;
 }
 
+.script {
+    background: rgba(0, 0, 0, 0);
+    color: @primary;
+    padding: 0 10px;
+}
+
+
+.sysinfo {
+    background: rgba(0, 0, 0, 0);
+    color: @primary;
+}
+
+.sysinfo .item {
+    padding: 0 5px;
+}
+
+
 /* Workspaces {{{*/
 .workspaces .item {
     background: rgba(0, 0, 0, 0);
@@ -80,7 +96,3 @@
     color: black;
 }
 /* }}} */
-
-.popup-volume .apps-box {
-    background-color: red;
-}

@@ -68,6 +68,7 @@ rules = [
     { url = "*.out",    use = "edit" },
     { url = "*.sh",     use = "edit" },
     { url = "*.py",     use = "edit" },
+    { url = "*.php",    use = "edit" },
     { url = "*.rs",     use = "edit" },
     { url = "*.ron",    use = "edit" },
     { url = "*.scss",   use = "edit" },

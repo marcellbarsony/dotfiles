@@ -1,13 +1,11 @@
 let {
     // Battery
     $battery = {
-        type = "battery"
-        format = "{percentage}%"
-        thresholds.warning = 20
-        thresholds.critical = 5
-        show_icon = false
-        show_label = false
-        icon_size = 0
+        type = "script"
+        mode = "poll"
+        name = "battery"
+        interval = 5000
+        cmd = "~/.config/ironbar/src/battery.sh"
     }
 
     // Bluetooth
@@ -36,6 +34,22 @@ let {
         icon_size = 32
     }
 
+    // Systeminfo
+    $sysinfo = {
+        type = "sys_info"
+        interval.memory = 10
+        interval.cpu = 10
+        interval.disks = 300
+        interval.networks = 10
+
+        format = [
+            " {cpu_percent:2}%"
+            "RAM {memory_used:2}%"
+            // "󰓢 {net_down:wlp1s0} / {net_up:wlp1s0} Mbps"
+            // "󰥔 {uptime}"
+        ]
+    }
+
     // Volume
     $volume = {
         type = "volume"
@@ -61,6 +75,13 @@ let {
 
     start = [ $workspaces ]
     center = [ ]
-    end = [ $volume $bluetooth $battery $clock_extra $clock ]
+    end = [
+        $volume
+        $battery
+        $bluetooth
+        $sysinfo
+        $clock_extra
+        $clock
+    ]
 
 }

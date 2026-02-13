@@ -35,11 +35,12 @@ format = 'took [$duration]($style) '
 
 # Directory {{{
 [directory]
+read_only = ' '
+read_only_style = 'bold red'
+style = 'bold white'
 truncation_symbol = '../'
 truncation_length = 3
 truncate_to_repo = false
-read_only = ' '
-read_only_style = 'red'
 # }}}
 
 # GIT Branch {{{
