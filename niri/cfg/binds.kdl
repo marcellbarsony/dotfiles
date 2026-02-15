@@ -2,7 +2,6 @@
 // https://yalter.github.io/niri/Configuration:-Key-Bindings.html
 // `niri msg action`
 
-// Binds {{{
 binds {
 
     // Niri {{{
@@ -332,4 +331,3 @@ binds {
     // }}}
 
 }
-// }}}

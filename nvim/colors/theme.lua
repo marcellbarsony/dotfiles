@@ -1,6 +1,14 @@
 -- Colorscheme
 -- `:h colorscheme`
 
+-- Autocommand: Set colorscheme on `SIGUSR1`
+vim.cmd("colorscheme theme")
+vim.api.nvim_create_autocmd("Signal", {
+    pattern = "SIGUSR1",
+    command = "colorscheme theme",
+})
+
+-- Import colors
 local c = dofile(os.getenv("HOME") .. "/.cache/matugen/colors.lua")
 
 local theme = {}

@@ -9,6 +9,7 @@ include "/home/marci/.cache/matugen/colors.kdl"
 // include opitonal=true "/home/marci/.cache/matugen/colors.kdl"
 
 layout {
+
     // Background Color {{{
     // https://niri-wm.github.io/niri/Configuration:-Layout.html#background-color
     background-color "transparent"
@@ -38,7 +39,7 @@ layout {
     preset-column-widths {
         proportion 0.33
         proportion 0.5
-        proportion 0.66
+        proportion 0.67
         proportion 1.0
     }
     // }}}
@@ -109,4 +110,5 @@ layout {
         proportion 1.0
     }
     // }}}
+
 }

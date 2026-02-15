@@ -142,12 +142,14 @@ keymap = [
     # }}}
 
     # Zip {{{
-    { on = [ "z", "a" ], run = "shell 'zip -j .zip %h' --cursor=7 --interactive", desc = "Zip [Archive]" },
-    { on = [ "z", "e" ], run = "shell 'unzip %h' --cursor=8 --interactive", desc = "Zip [Extract]" },
 
     # 7-Zip
-    { on = [ "Z", "a" ], run = "shell '7z a .7z %h' --cursor=5 --interactive", desc = "7z [Archive]" },
-    { on = [ "Z", "x" ], run = "shell '7z x %h' --cursor=7 --interactive", desc = "7z [Extract]" },
+    { on = [ "z", "a" ], run = "shell '7z a .7z %h' --cursor=5 --interactive", desc = "7z [Archive]" },
+    { on = [ "z", "x" ], run = "shell '7z x %h' --cursor=7 --interactive", desc = "7z [Extract]" },
+
+    # Zip
+    # { on = [ "z", "a" ], run = "shell 'zip -j .zip %h' --cursor=7 --interactive", desc = "Zip [Archive]" },
+    # { on = [ "z", "e" ], run = "shell 'unzip %h' --cursor=8 --interactive", desc = "Zip [Extract]" },
     # }}}
 
     # Goto {{{
