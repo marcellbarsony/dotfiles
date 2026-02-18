@@ -1,13 +1,6 @@
 -- Colorscheme
 -- `:h colorscheme`
 
--- Autocommand: Set colorscheme on `SIGUSR1`
-vim.cmd("colorscheme theme")
-vim.api.nvim_create_autocmd("Signal", {
-    pattern = "SIGUSR1",
-    command = "colorscheme theme",
-})
-
 -- Import colors
 local c = dofile(os.getenv("HOME") .. "/.cache/matugen/colors.lua")
 
@@ -179,9 +172,11 @@ function theme.setup()
     -- WinBar   = "StatusLine" ,   -- window bar
     -- WinBarNC = "StatusLineNC",  -- window bar in inactive windows
     -- }}}
+
     -- }}}
 
     -- Plugins {{{
+
     -- CMP {{{
     CmpItemAbbrMatch      = { fg = c.fg,      bold = true },
     CmpItemAbbrMatchFuzzy = { fg = c.primary, bold = true },
@@ -301,6 +296,7 @@ function theme.setup()
     YaziBorder = { bg = c.bg },
     YaziFloat  = { bg = c.bg },
     -- }}}
+
     -- }}}
 
     -- Syntax {{{
@@ -364,9 +360,11 @@ function theme.setup()
     hyprVariable     = { link = "Variable" },
     hyprString       = { link = "String"   },
     -- }}}
+
     -- }}}
 
     -- Treesitter {{{
+
     -- Treesitter base {{{
     ["@boolean"]                    = { link = "Boolean"     },
     ["@character"]                  = { link = "Character"   },
@@ -488,9 +486,11 @@ function theme.setup()
     -- Treesitter - Toml {{{
     ["@string.special.toml"] = { link = "String" },
     -- }}}
+
     -- }}}
 
     -- LSP {{{
+
     -- Lua {{{
     ["@lsp.type.function.lua"] = { link = "Function" },
     ["@lsp.type.property.lua"] = { link = "Property" },
@@ -532,6 +532,7 @@ function theme.setup()
     ["@lsp.typemod.struct.defaultLibrary.rust"] = { link = "Type"     },
     ["@lsp.typemod.variable.mutable.rust"]      = { link = "Variable" },
     -- }}}
+
     -- }}}
   }
 

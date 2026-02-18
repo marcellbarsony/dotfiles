@@ -5,6 +5,27 @@
 local A = vim.api
 local group = A.nvim_create_augroup("AuGroup", { clear = true })
 
+
+-- Colorscheme {{{
+vim.cmd("colorscheme theme")
+A.nvim_create_autocmd("Signal", {
+  desc = "Reload colorscheme on `SIGUSR1`",
+  group = group,
+  pattern = "SIGUSR1",
+  command = "colorscheme theme",
+})
+-- }}}
+
+-- Comments {{{
+vim.api.nvim_create_autocmd("FileType", {
+  desc = "Don't continue commenting on new line",
+  group = vim.api.nvim_create_augroup("no_auto_comment", {}),
+  callback = function()
+    vim.opt_local.formatoptions:remove({ "c", "r", "o" })
+  end,
+})
+-- }}}
+
 -- Filetype [Custom] {{{
 vim.filetype.add({
   extension = {
@@ -60,6 +81,30 @@ A.nvim_create_autocmd("BufEnter", {
 })
 -- }}}
 
+-- Restore position {{{
+vim.api.nvim_create_autocmd("BufReadPost", {
+  desc = "Restore cursor position from previous session",
+  callback = function(args)
+    local mark = vim.api.nvim_buf_get_mark(args.buf, '"')
+    local line_count = vim.api.nvim_buf_line_count(args.buf)
+    if mark[1] > 0 and mark[1] <= line_count then
+      vim.api.nvim_win_set_cursor(0, mark)
+      -- defer centering slightly so it's applied after render
+      vim.schedule(function()
+        vim.cmd("normal! zz")
+      end)
+    end
+  end,
+})
+-- }}}
+
+-- Splits {{{
+vim.api.nvim_create_autocmd("VimResized", {
+  desc = "Resize splits automatically on window resize",
+  command = "wincmd =",
+})
+-- }}}
+
 -- Yank {{{
 A.nvim_create_autocmd("TextYankPost", {
   desc= "Highlight region on yank",
@@ -68,4 +113,43 @@ A.nvim_create_autocmd("TextYankPost", {
     vim.highlight.on_yank({ higroup = "Visual", timeout = 200 })
   end
 })
+-- }}}
+
+-- Inactive {{{
+
+-- Highlight References {{{
+-- vim.api.nvim_create_autocmd("CursorMoved", {
+--   group = vim.api.nvim_create_augroup("LspReferenceHighlight", { clear = true }),
+--   desc = "Highlight references under cursor",
+--   callback = function()
+--     -- Only if the cursor is not in INSERT mode
+--     if vim.fn.mode() ~= "i" then
+--       local clients = vim.lsp.get_clients({ bufnr = 0 })
+--       local supports_highlight = false
+--       for _, client in ipairs(clients) do
+--         if client.server_capabilities.documentHighlightProvider then
+--           supports_highlight = true
+--           break -- Found a supporting client, no need to check others
+--         end
+--       end
+--
+--       -- Proceed on active LSP and supported feature
+--       if supports_highlight then
+--         vim.lsp.buf.clear_references()
+--         vim.lsp.buf.document_highlight()
+--       end
+--     end
+--   end,
+-- })
+--
+-- -- Clear Highlights
+-- vim.api.nvim_create_autocmd("CursorMovedI", {
+--   group = "LspReferenceHighlight",
+--   desc = "Clear highlights when entering INSERT mode",
+--   callback = function()
+--     vim.lsp.buf.clear_references()
+--   end,
+-- })
+-- }}}
+
 -- }}}

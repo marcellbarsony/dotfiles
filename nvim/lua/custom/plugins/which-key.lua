@@ -409,6 +409,7 @@ return {
 
         -- Obsidian
         { "<leader>o", group = "Obsidian" },
+        { "<leader>ol", group = "Links" },
 
         -- Persistence
         { "<leader>p", group = "Persistence" },

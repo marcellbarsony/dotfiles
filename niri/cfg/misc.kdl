@@ -65,12 +65,10 @@ screenshot-path "~/tmp/screenshots/%Y%m%d-%H%M%S.png"
 
 spawn-at-startup "kanshi"
 spawn-at-startup "swww-daemon"
-spawn-at-startup "wl-paste --type text --watch cliphist store"  // Cliphist: text data only
-spawn-at-startup "wl-paste --type image --watch cliphist store" // Cliphist: image data only
+spawn-at-startup "sh -c 'wl-paste --watch clipvault store --ignore-pattern '^<meta http-equiv=' >'"
 
 // Waybar
 // Add Waybar systemd unit to the Niri session
 // `systemctl --user add-wants niri.service waybar.service`
-// spawn-at-startup "waybar"
 
 // }}}

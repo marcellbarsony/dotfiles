@@ -24,8 +24,8 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: black;
     background-color: @primary;
+    color: black;
 }
 
 #workspaces button.empty {
@@ -38,7 +38,7 @@ window#waybar {
 }
 
 #workspaces button:hover {
-    background: @on_secondary;
+    background: @primary_container;
     border-top: transparent;
     color: white;
 }

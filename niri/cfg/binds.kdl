@@ -107,7 +107,13 @@ binds {
     // }}}
 
     // Clipboard {{{
-    Mod+V   { spawn-sh "cliphist list | head -n 100 | rofi -dmenu | cliphist decode | wl-copy"; }
+
+    // Clipvault + Rofi [Image preview]
+    Mod+V   { spawn-sh "rofi -modi clipboard:/home/marci/.config/niri/src/rofi.sh -show clipboard -show-icons"; }
+
+    // Clipvault + Rofi
+    // Mod+V   { spawn-sh "clipvault list | head -n 100 | rofi -dmenu -display-columns 2 | clipvault get | wl-copy"; }
+
     // }}}
 
     // Column - Center {{{
