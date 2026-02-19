@@ -4,4 +4,18 @@
 animations {
     on
     slowdown 1.0
+
+    // Overview
+    // https://niri-wm.github.io/niri/Configuration:-Animations.html#overview-open-close
+    overview-open-close {
+        duration-ms 200
+        curve "ease-out-cubic"
+    }
+
+    // Screenshot UI
+    // https://niri-wm.github.io/niri/Configuration:-Animations.html#screenshot-ui-open
+    screenshot-ui-open {
+        duration-ms 300
+        curve "ease-out-cubic"
+    }
 }

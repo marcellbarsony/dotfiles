@@ -105,6 +105,18 @@ vim.api.nvim_create_autocmd("VimResized", {
 })
 -- }}}
 
+-- Whitespace {{{
+-- Remove trailing whitespace on save while preserving cursor position
+vim.api.nvim_create_autocmd({ 'BufWritePre' }, {
+  pattern = { '*' },
+  callback = function()
+    local save_cursor = vim.fn.getpos('.')
+    vim.cmd([[%s/\s\+$//e]])
+    vim.fn.setpos('.', save_cursor)
+  end
+})
+-- }}}
+
 -- Yank {{{
 A.nvim_create_autocmd("TextYankPost", {
   desc= "Highlight region on yank",

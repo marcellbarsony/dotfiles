@@ -15,6 +15,7 @@ window-rule {
 // Floating {{{
 window-rule {
     match app-id=r#"org.gnome.Nautilus"#
+    match app-id=r#"Pinentry-gtk"#
 
     default-column-width { fixed 1280; }
     default-window-height { fixed 720; }
@@ -63,6 +64,16 @@ window-rule {
 
     default-column-width { fixed 700; }
     default-window-height { fixed 120; }
+    open-floating true
+}
+// }}}
+
+// Pinentry-gtk {{{
+window-rule {
+    match app-id=r#"Pinentry-gtk"#
+
+    default-column-width { fixed 550; }
+    default-window-height { fixed 150; }
     open-floating true
 }
 // }}}

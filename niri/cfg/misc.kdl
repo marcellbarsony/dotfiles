@@ -65,7 +65,8 @@ screenshot-path "~/tmp/screenshots/%Y%m%d-%H%M%S.png"
 
 spawn-at-startup "kanshi"
 spawn-at-startup "swww-daemon"
-spawn-at-startup "sh -c 'wl-paste --watch clipvault store --ignore-pattern '^<meta http-equiv=' >'"
+
+spawn-sh-at-startup "wl-paste --watch clipvault store --ignore-pattern '^<meta http-equiv='"
 
 // Waybar
 // Add Waybar systemd unit to the Niri session
