@@ -6,7 +6,7 @@ keymap = [
     { on = [ "<Esc>" ], run = "escape",             desc = "Exit/Clear/Cancel" },
     { on = [ "<C-[>" ], run = "escape",             desc = "Exit/Clear/Cancel" },
     { on = [ "q" ],     run = "quit",               desc = "Exit" },
-    { on = [ "Q" ],     run = "quit --no-cwd-file", desc = "Exit [no cwd]" },
+    { on = [ "Q" ],     run = "quit --no-cwd-file", desc = "Exit [No cwd]" },
     { on = [ "<C-i>" ], run = "spot",               desc = "File Information" },
     { on = [ "<C-q>" ], run = "close",              desc = "Quit/Close Tab" },
     { on = [ "<C-z>" ], run = "suspend",            desc = "Suspend" },
@@ -138,7 +138,7 @@ keymap = [
     # }}}
 
     # Tasks {{{
-    { on = [ "w" ], run = "tasks_show", desc = "Tasks manager" },
+    { on = [ "w" ], run = "tasks:show", desc = "Task manager" },
     # }}}
 
     # Zip {{{
@@ -170,18 +170,18 @@ keymap = [
 # Task {{{
 [tasks]
 keymap = [
-    { on = [ "<Esc>" ], run = "close", desc = "Task manager [Hide]" },
-    { on = [ "<C-q>" ], run = "close", desc = "Task manager [Hide]" },
-    { on = [ "w" ],     run = "close", desc = "Task manager [Hide]" },
+    { on = [ "<Enter>" ], run = "inspect", desc = "Task [Inspect]" },
+    { on = [ "x" ],       run = "cancel",  desc = "Task [Cancel]" },
+
+    { on = [ "<Esc>" ], run = "close", desc = "Task Manager [Hide]" },
+    { on = [ "<C-q>" ], run = "close", desc = "Task Manager [Hide]" },
+    { on = [ "w" ],     run = "close", desc = "Task Manager [Hide]" },
 
     { on = [ "k" ], run = "arrow -1", desc = "Cursor [Move Up]" },
     { on = [ "j" ], run = "arrow 1",  desc = "Cursor [Move Down]" },
 
     { on = [ "<Up>" ],   run = "arrow -1", desc = "Cursor [Move Up]" },
     { on = [ "<Down>" ], run = "arrow 1",  desc = "Cursor [Move Down]" },
-
-    { on = [ "<Enter>" ], run = "inspect", desc = "Task [Inspect]" },
-    { on = [ "x" ],       run = "cancel",  desc = "Task [Cancel]" },
 
     { on = [ "~" ], run = "help", desc = "Help" }
 ]

@@ -2,10 +2,26 @@
 // https://yalter.github.io/niri/Configuration%3A-Layer-Rules.html
 // `niri msg layers`
 
+// Launcher {{{
 layer-rule {
-    // Overview: Use awww (swww) as backdrop
+    match namespace="rofi"
+    shadow {
+        on
+        draw-behind-window true
+        softness 50
+        spread 10
+        offset x=1 y=1
+        color "#000000ff"
+    }
+    geometry-corner-radius 10
+}
+// }}}
+
+// Overview {{{
+layer-rule {
+    // Use awww (swww) as backdrop
     // https://yalter.github.io/niri/Overview.html#backdrop-customization
     match namespace="^swww-daemon$"
     place-within-backdrop true
-
 }
+// }}}

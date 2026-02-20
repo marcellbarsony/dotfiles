@@ -25,10 +25,10 @@ gestures {
     // https://yalter.github.io/niri/Configuration:-Gestures.html#hot-corners
     hot-corners {
         // off
-        top-left
+        // top-left
         // top-right
         // bottom-left
-        // bottom-right
+        bottom-right
     }
     // }}}
 

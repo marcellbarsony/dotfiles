@@ -16,6 +16,7 @@ window-rule {
 window-rule {
     match app-id=r#"org.gnome.Nautilus"#
     match app-id=r#"Pinentry-gtk"#
+    match app-id=r#"firefox$"# title=".*— Mozilla Firefox$"
 
     default-column-width { fixed 1280; }
     default-window-height { fixed 720; }
@@ -35,7 +36,6 @@ window-rule {
 // Picture-in-Picture
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-
     open-floating true
 }
 // }}}
@@ -49,8 +49,7 @@ window-rule {
 
 // OBS {{{
 window-rule {
-    match app-id=r#"com.obsproject.Studio$"# title="^Filters for.*$"
-    match app-id=r#"com.obsproject.Studio$"# title="^Properties for.*$"
+    match app-id=r#"com.obsproject.Studio$"# title="^(Filters|Properties) for.*$"
     match app-id=r#"com.obsproject.Studio$"# title="^Settings$"
     match app-id=r#"com.obsproject.Studio$"# title="^Virtual Camera$"
 

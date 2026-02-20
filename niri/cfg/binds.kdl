@@ -188,6 +188,8 @@ binds {
     Mod+I { focus-window-down-or-column-right; }
 
     // Workspace
+    // Alt+Tab       { focus-workspace-down; }
+    // Alt+Shift+Tab { focus-workspace-up; }
 
     // Monitor
     Alt+M { focus-monitor-left; }
